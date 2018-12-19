@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.40.1" />
+
+
+<title>The beauty of Optimal Transport - Hugo Cisneros - Personal webpage</title>
+<meta property="og:title" content="The beauty of Optimal Transport - Hugo Cisneros - Personal webpage">
+
+
+
+  
+
+
+
+
+
+
+<link rel="stylesheet" href="http://hugcis.github.io/css/main.css" media="all">
+<link rel="stylesheet" href="http://hugcis.github.io/css/fonts.css">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="http://hugcis.github.io/" class="nav-logo">
+    <img src="http://hugcis.github.io/img/logo.png"
+         width="50"
+         height="50"
+         alt="Logo">
+
+  </a>
+  <a href="http://hugcis.github.io/" class="nav-title"><b>Hugo Cisneros - Personal webpage</b></a>
+  <ul class="nav-links">
+    
+    <li><a href="/about/">About</a></li>
+    
+    <li><a href="/resume/cv.pdf">Resume</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+  <article class="article">
+    <h1 class="article-title">The beauty of Optimal Transport</h1>
+    
+    <span class="article-date">2018-12-07</span>
+    
+
+    <div class="article-content">
+      <h1 id="a-simple-problem-">A simple problem ?</h1>
+
+<p>Let's start at the beggining: what is Optimal transport ?</p>
+
+<p>It all begins with <a href="https://en.wikipedia.org/wiki/Gaspard_Monge">Gaspard Monge</a>, reading his <em>mémoire</em> in
+front of eminent people (including <a href="https://en.wikipedia.org/wiki/Marquis_de_Condorcet">Condorcet</a>) from
+the French <em>Académie Royale des Sciences</em> in 1776. Monge's problem could be explained as follows:</p>
+
+<blockquote>
+<p>Given two excavations <span  class="math">\(D_1\)</span> and <span  class="math">\(D_2\)</span>, a cost of moving a unit of mass of earth from any point
+of <span  class="math">\(D_1\)</span> to any point of <span  class="math">\(D_2\)</span>,</p>
+
+<p><strong>What is the cheapest way to move the mass from <span  class="math">\(D_1\)</span> to <span  class="math">\(D_2\)</span></strong> ?</p>
+</blockquote>
+
+<p>Turns out, the answer is not at all simple. Monge didn't solve it in his <em>mémoire</em>, although he did lay
+the foundations of modern optimal transport theory.</p>
+
+<p>But let's move to the problem.</p>
+
+<p>In it's simplest form, it can be viewed as an assignment problem: among all configurations, which one is
+the best ?</p>
+
+<p>In other words, if we write <span  class="math">\(\mathbf{C}_{i,j}\)</span> the cost of moving an element from <span  class="math">\(i\)</span> to <span  class="math">\(j\)</span>. The quantity we want
+to minimize is <span  class="math">\(\sum_i \mathbf{C}_{i,\sigma(i)}\)</span>, where <span  class="math">\(\sigma\)</span> is a <em>permutation</em> of</p>
+
+<figure>
+<img>
+<object type="image/svg+xml" data="../img/monge.svg" width="inherit">
+ <param name="src" value="../img/monge.svg">
+</object>
+</img>
+<figcaption>
+      <h4>Is this the best way to move the blue squares from a mound to the other ? Probably not.</h4>
+</figcaption>
+</figure>
+
+<p><em>This post was largely inspired by <a href="http://www.gpeyre.com/">Gabriel Peyré</a> and
+<a href="http://marcocuturi.net/">Marco Cuturi</a>'s excellent book about Computational Optimal
+Transport, available <a href="optimaltransport.github.io/">for free</a></em>.</p>
+
+    </div>
+
+    <ul class="article-taxonomy">
+      
+
+      
+  </article>
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="http://hugcis.github.io/index.xml" type="application/rss+xml" target="_blank"><i class="fa fa-rss"></i> RSS feed</a>
+          </li>
+          <li>
+            <a href="https://github.com/mobybit/hugo-natrium-theme"><i class="fa fa-github"></i> Code</a>
+          </li>
+          <li>
+            <a href="http://hugcis.github.io/site-notice">Site notice</a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+
+  </body>
+</html>
+

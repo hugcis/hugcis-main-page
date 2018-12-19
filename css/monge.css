@@ -1,0 +1,193 @@
+@-webkit-keyframes turnempty {
+    0% { fill: #5486BD; opacity: 1;}
+    35% { fill: #5486BD; opacity: 1;}
+    40% { fill: #FFFFFF; opacity: 0.54;}
+    70% { fill: #FFFFFF; opacity: 0.44;}
+    100% { fill: #FFFFFF; opacity: 0.34;}
+}
+@-moz-keyframes turnempty {
+    0% { fill: #5486BD; opacity: 1;}
+    35% { fill: #5486BD; opacity: 1;}
+    40% { fill: #FFFFFF; opacity: 0.54;}
+    70% { fill: #FFFFFF; opacity: 0.44;}
+    100% { fill: #FFFFFF; opacity: 0.34;}
+}
+@-o-keyframes turnempty {
+    0% { fill: #5486BD; opacity: 1;}
+    35% { fill: #5486BD; opacity: 1;}
+    40% { fill: #FFFFFF; opacity: 0.54;}
+    70% { fill: #FFFFFF; opacity: 0.44;}
+    100% { fill: #FFFFFF; opacity: 0.34;}
+}
+@keyframes turnempty {
+    0% { fill: #5486BD; opacity: 1;}
+    35% { fill: #5486BD; opacity: 1;}
+    40% { fill: #FFFFFF; opacity: 0.54;}
+    70% { fill: #FFFFFF; opacity: 0.44;}
+    100% { fill: #FFFFFF; opacity: 0.34;}
+}
+
+@-webkit-keyframes turnfill {
+    0% { fill: #FFFFFF; opacity: 0.34;}
+    35% { fill: #FFFFFF; opacity: 0.34;}
+    40% { fill: #5486BD; opacity: 1;}
+    70% { fill: #5486BD; opacity: 1;}
+    100% { fill: #5486BD; opacity: 1;}
+}
+@-moz-keyframes turnfill {
+    0% { fill: #FFFFFF; opacity: 0.34;}
+    35% { fill: #FFFFFF; opacity: 0.34;}
+    40% { fill: #5486BD; opacity: 1;}
+    70% { fill: #5486BD; opacity: 1;}
+    100% { fill: #5486BD; opacity: 1;}
+}
+@-o-keyframes turnfill {
+    0% { fill: #FFFFFF; opacity: 0.34;}
+    35% { fill: #FFFFFF; opacity: 0.34;}
+    40% { fill: #5486BD; opacity: 1;}
+    70% { fill: #5486BD; opacity: 1;}
+    100% { fill: #5486BD; opacity: 1;}
+}
+@keyframes turnfill {
+    0% { fill: #FFFFFF; opacity: 0.34;}
+    35% { fill: #FFFFFF; opacity: 0.34;}
+    40% { fill: #5486BD; opacity: 1;}
+    70% { fill: #5486BD; opacity: 1;}
+    100% { fill: #5486BD; opacity: 1;}
+}
+
+
+path#fill11 {
+    -webkit-animation: turnempty 15s 0.45s ease infinite;
+    -moz-animation: turnempty 15s 0.45s ease infinite;
+    -o-animation: turnempty 15s 0.45s ease infinite;
+    animation: turnempty 15s 0.45s ease infinite;
+}
+path#fill10 {
+    -webkit-animation: turnempty 15s 0.9s ease infinite;
+    -moz-animation: turnempty 15s 0.9s ease infinite;
+    -o-animation: turnempty 15s 0.9s ease infinite;
+    animation: turnempty 15s 0.9s ease infinite;
+}
+path#fill9 {
+    -webkit-animation: turnempty 15s 1.35s ease infinite;
+    -moz-animation: turnempty 15s 1.35s ease infinite;
+    -o-animation: turnempty 15s 1.35s ease infinite;
+    animation: turnempty 15s 1.35s ease infinite;
+}
+path#fill4 {
+    -webkit-animation: turnempty 15s 1.7s ease infinite;
+    -moz-animation: turnempty 15s 1.7s ease infinite;
+    -o-animation: turnempty 15s 1.7s ease infinite;
+    animation: turnempty 15s 1.7s ease infinite;
+}
+path#fill5 {
+    -webkit-animation: turnempty 15s 2.15s ease infinite;
+    -moz-animation: turnempty 15s 2.15s ease infinite;
+    -o-animation: turnempty 15s 2.15s ease infinite;
+    animation: turnempty 15s 2.15s ease infinite;
+}
+path#fill6 {
+    -webkit-animation: turnempty 15s 2.6s ease infinite;
+    -moz-animation: turnempty 15s 2.6s ease infinite;
+    -o-animation: turnempty 15s 2.6s ease infinite;
+    animation: turnempty 15s 2.6s ease infinite;
+}
+path#fill7 {
+    -webkit-animation: turnempty 15s 3.05s ease infinite;
+    -moz-animation: turnempty 15s 3.05s ease infinite;
+    -o-animation: turnempty 15s 3.05s ease infinite;
+    animation: turnempty 15s 3.05s ease infinite;
+}
+path#fill8 {
+    -webkit-animation: turnempty 15s 3.5s ease infinite;
+    -moz-animation: turnempty 15s 3.5s ease infinite;
+    -o-animation: turnempty 15s 3.5s ease infinite;
+    animation: turnempty 15s 3.5s ease infinite;
+}
+path#fill3 {
+    -webkit-animation: turnempty 15s 3.95s ease infinite;
+    -moz-animation: turnempty 15s 3.95s ease infinite;
+    -o-animation: turnempty 15s 3.95s ease infinite;
+    animation: turnempty 15s 3.95s ease infinite;
+}
+path#fill2 {
+    -webkit-animation: turnempty 15s 4.4s ease infinite;
+    -moz-animation: turnempty 15s 4.4s ease infinite;
+    -o-animation: turnempty 15s 4.4s ease infinite;
+    animation: turnempty 15s 4.4s ease infinite;
+}
+path#fill1 {
+    -webkit-animation: turnempty 15s 4.95s ease infinite;
+    -moz-animation: turnempty 15s 4.95s ease infinite;
+    -o-animation: turnempty 15s 4.95s ease infinite;
+    animation: turnempty 15s 4.95s ease infinite;
+}
+
+
+path#empty1 {
+    -webkit-animation: turnfill 15s 0.45s ease infinite;
+    -moz-animation: turnfill 15s 0.45s ease infinite;
+    -o-animation: turnfill 15s 0.45s ease infinite;
+    animation: turnfill 15s 0.45s ease infinite;
+}
+path#empty2 {
+    -webkit-animation: turnfill 15s 0.9s ease infinite;
+    -moz-animation: turnfill 15s 0.9s ease infinite;
+    -o-animation: turnfill 15s 0.9s ease infinite;
+    animation: turnfill 15s 0.9s ease infinite;
+}
+path#empty3 {
+    -webkit-animation: turnfill 15s 1.35s ease infinite;
+    -moz-animation: turnfill 15s 1.35s ease infinite;
+    -o-animation: turnfill 15s 1.35s ease infinite;
+    animation: turnfill 15s 1.35s ease infinite;
+}
+path#empty4 {
+    -webkit-animation: turnfill 15s 1.7s ease infinite;
+    -moz-animation: turnfill 15s 1.7s ease infinite;
+    -o-animation: turnfill 15s 1.7s ease infinite;
+    animation: turnfill 15s 1.7s ease infinite;
+}
+path#empty6 {
+    -webkit-animation: turnfill 15s 2.15s ease infinite;
+    -moz-animation: turnfill 15s 2.15s ease infinite;
+    -o-animation: turnfill 15s 2.15s ease infinite;
+    animation: turnfill 15s 2.15s ease infinite;
+}
+path#empty5 {
+    -webkit-animation: turnfill 15s 2.6s ease infinite;
+    -moz-animation: turnfill 15s 2.6s ease infinite;
+    -o-animation: turnfill 15s 2.6s ease infinite;
+    animation: turnfill 15s 2.6s ease infinite;
+}
+path#empty7 {
+    -webkit-animation: turnfill 15s 3.05s ease infinite;
+    -moz-animation: turnfill 15s 3.05s ease infinite;
+    -o-animation: turnfill 15s 3.05s ease infinite;
+    animation: turnfill 15s 3.05s ease infinite;
+}
+path#empty8 {
+    -webkit-animation: turnfill 15s 3.5s ease infinite;
+    -moz-animation: turnfill 15s 3.5s ease infinite;
+    -o-animation: turnfill 15s 3.5s ease infinite;
+    animation: turnfill 15s 3.5s ease infinite;
+}
+path#empty9 {
+    -webkit-animation: turnfill 15s 3.95s ease infinite;
+    -moz-animation: turnfill 15s 3.95s ease infinite;
+    -o-animation: turnfill 15s 3.95s ease infinite;
+    animation: turnfill 15s 3.95s ease infinite;
+}
+path#empty10 {
+    -webkit-animation: turnfill 15s 4.4s ease infinite;
+    -moz-animation: turnfill 15s 4.4s ease infinite;
+    -o-animation: turnfill 15s 4.4s ease infinite;
+    animation: turnfill 15s 4.4s ease infinite;
+}
+path#empty11 {
+    -webkit-animation: turnfill 15s 4.95s ease infinite;
+    -moz-animation: turnfill 15s 4.95s ease infinite;
+    -o-animation: turnfill 15s 4.95s ease infinite;
+    animation: turnfill 15s 4.95s ease infinite;
+}
