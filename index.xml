@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugo Cisneros - Personal website</title>
-    <link>https://hugcis.github.io/</link>
+    <link>https://hugocisneros.com/</link>
     <description>Recent content on Hugo Cisneros - Personal website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-        <atom:link href="https://hugcis.github.io/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://hugocisneros.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     

@@ -3,20 +3,20 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://hugcis.github.io/</loc>
+    <loc>https://hugocisneros.com/</loc>
   </url>
   
   <url>
-    <loc>https://hugcis.github.io/blog/</loc>
+    <loc>https://hugocisneros.com/blog/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://hugcis.github.io/categories/</loc>
+    <loc>https://hugocisneros.com/categories/</loc>
   </url>
   
   <url>
-    <loc>https://hugcis.github.io/tags/</loc>
+    <loc>https://hugocisneros.com/tags/</loc>
   </url>
   
 </urlset>
