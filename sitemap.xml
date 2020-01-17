@@ -4,11 +4,17 @@
     
     <url>
         <loc>https://hugocisneros.com/</loc>
+        <lastmod>2019-12-07T23:20:20+01:00</lastmod>
     </url>
     
     <url>
         <loc>https://hugocisneros.com/blog/</loc>
-        <priority>0</priority>
+        <lastmod>2019-12-07T23:20:20+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/blog/optimal-transport/</loc>
+        <lastmod>2019-12-07T23:20:20+01:00</lastmod>
     </url>
     
     <url>
