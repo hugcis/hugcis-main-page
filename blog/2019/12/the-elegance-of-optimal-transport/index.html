@@ -11,7 +11,8 @@
 page</title>
 <meta property="og:title" content=
 "The Elegance of Optimal Transport - Hugo Cisneros - Personal page">
-<meta property="og:image" content="/img/monge1.svg">
+<meta property="og:image" content=
+"map[alt:Simple optimal transport example with two points name:/img/monge1.svg]">
 <meta property="og:url" content=
 "https://hugocisneros.com/blog/2019/12/the-elegance-of-optimal-transport/">
 <meta property="og:description" content=
@@ -19,7 +20,7 @@ page</title>
 <meta name="Description" property="description" content=
 "An introduction to optimal transport theory">
 <link rel="stylesheet" href=
-"https://hugocisneros.com/css/main.min.9c79dadef23e9b45aa7f3a06d2d8ad31ea4ba870bee40c20ba6d3b41a02c5b4a.css"
+"https://hugocisneros.com/css/main.min.88064d3840e67ae48875dce247d22350f8616a5b9a3d082e0d5edb0738b04373.css"
 media="all">
 <link rel="apple-touch-icon" sizes="180x180" href=
 "/apple-touch-icon.png">
@@ -39,8 +40,8 @@ media="all">
      }
  };
 </script>
-<script type="text/javascript" rel="dns-prefetch" id=
-"MathJax-script" async src=
+<script type="text/javascript" rel="preconnect" id="MathJax-script"
+async src=
 "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script async src=
 "https://www.googletagmanager.com/gtag/js?id=UA-156169911-1"></script>
@@ -90,16 +91,15 @@ Monge's problem could be explained in simple terms as follows:</p>
 <blockquote>
 <p>Given two excavations $D_1$ and $D_2$, a cost of moving a unit
 of mass of dirt from any point of $D_1$ to any point of $D_2$,</p>
-<center><b>What is the cheapest way to move the mass from $D_1$ to
-$D_2$ ?</b></center>
+<div class="center"><b>What is the cheapest way to move the mass
+from $D_1$ to $D_2$ ?</b></div>
 </blockquote>
 <p>It turns out, the answer is far from simple. Monge didn't solve
 it in his <em>mémoire</em>, although he did lay the foundations of
 modern optimal transport theory.</p>
 <figure class="center"><object type="image/svg+xml" alt=
-"Excavation animation" data="/img/monge.svg" width=
-"inherit"><param name="src" value="/img/monge.svg" alt=
-"Excavation animation"></object>
+"Excavation animation" data="/img/monge.svg"><param name="src"
+value="/img/monge.svg" alt="Excavation animation"></object>
 <figcaption>
 <h4>Is this the best (most efficient) way to move the blue squares
 from a mound to the other? Probably not: there are 39,916,800
@@ -117,7 +117,7 @@ quite restrictive since we can only work with two sets of the same
 total size, but it is already incredibly hard to solve.</p>
 <p>Each set (the above “excavations”) can be represented as a
 histogram (or vector) $\mathbf{a}$ that belongs to the probability
-simplex</p>
+simplex — the vectors which components sum to 1:</p>
 <p>\[ \mathbf{a} \in \left\{ x = (x_1, …, x_N) \in \mathbb{R}^N :
 \sum_{i=1}^N x_i = 1 \right\} \]</p>
 <p>If we write $\mathbf{C}_{i,j} $ the cost of moving an element
@@ -158,10 +158,10 @@ histograms, we obtain the Monge problem. In this problem,
 <strong>several points $x_i$ can map to the same $y_j$</strong> and
 their weights are summed.</p>
 <p>In that case, the mapping between inputs and outputs is no
-longer a permutation, but a surjective map $T$:</p>
-<p>If points $x_1, …, x_n$ have weights $\mathbf{a} = (a_1, …,
-a_n)$ and points $y_1, …, y_m$ have weights $\mathbf{b} = (b_1, …,
-b_m)$, $T$ must verify:</p>
+longer a permutation, but a surjective map $T$. If points $x_1, …,
+x_n$ have weights $\mathbf{a} = (a_1, …, a_n)$ and points $y_1, …,
+y_m$ have weights $\mathbf{b} = (b_1, …, b_m)$, $T$ must
+verify:</p>
 <p>\[ \forall j \in \{1, … m\},\quad b_j = \sum_{i:T(x_i) = y_j}
 a_i \]</p>
 <figure class="center"><img src="/img/monge2.svg" alt=
@@ -186,7 +186,7 @@ pieces, this is called <strong><em>mass
 splitting</em></strong>.</p>
 <p>This new formulation is much more adapted to some real world
 situations, for instance <strong>logistic problems</strong>. Frank
-L. Hitchcock stated the a version of this problem in <a href=
+L. Hitchcock stated a version of this problem in <a href=
 "#hitchcock">[4]</a> as follows</p>
 <blockquote>
 <p>When several factories supply a product to a number of cities we
@@ -228,8 +228,14 @@ way, and it reads:</p>
 a <a href=
 "https://en.wikipedia.org/wiki/Linear_programming"><strong>linear
 program</strong></a>, where the constraints are a set of $m+n$
-equality constraints (or $2(m+n)$ inequalities). These constraints
+equality constraints — or $2(m+n)$ inequalities, which are
+contained in the admissible set of solutions. These constraints
 define a convex polytope.</p>
+<p>This is good news, because we have moved from the dreadful realm
+of combinatorics to the comfortable world of convex optimization.
+Optimization over a matrix space might sound hard but it is usually
+much simpler than searching among a set of possible
+assignments.</p>
 <p>I will not go into the details of the tools used to solve this
 problem because they are widely used and taught in optimization and
 operations research courses. You will find a detailed explanation
@@ -238,10 +244,11 @@ tools to solve the OT problem, such as dual ascent methods or the
 Auction algorithm in <a href="#computational">[1]</a>.</p>
 <h2 id="regularized-optimal-transport">Regularized optimal
 transport</h2>
-<p>Linear programs are not easy to solve, and the algorithms
-mentioned above have mostly polynomial complexities with exponents
-larger than 2, and sometimes exponential worst-case
-complexities.</p>
+<p>This is great, we have transformed our exponentially hard to
+solve problem in a solvable one! Unforfotunately, this is
+<em>still</em> not easy to solve, and the algorithms mentioned
+above have mostly polynomial complexities with exponents larger
+than 2, and sometimes exponential worst-case complexities.</p>
 <h3 id="entropic-regularization">Entropic regularization</h3>
 <p>Regularizing optimal transport was proposed in <a href=
 "#wilson">[4]</a>. It is a method for approximating solutions to
@@ -282,11 +289,19 @@ updates</strong>:</p>
 \dfrac{\mathbf{b}}{\mathbf{K}^{T}\mathbf{u}^{(\ell + 1)}} \]</p>
 <p>Although this algorithm likely appeared at the beginning of the
 20th century, the proof of its convergence is attributed to
-Sinkhorn <a href="#sinkhorn">[5]</a>. Regularized OT and Sinkhorn's
-algorithms received renewed attention in the machine learning and
-data science community following a paper from Marco Cuturi in 2013
-<a href="#cuturi">[6]</a> that showed that Sinkhorn's updates were
-an <strong>efficient and scalable</strong> approximation to OT that
+Sinkhorn <a href="#sinkhorn">[5]</a>. The algorithm not only
+converges, but it does at a <strong>linear rate</strong>. Don't get
+fooled by the name, it is fast! This means it exists a certain
+factor $\mu \in [0, 1]$ and constant $C$, such that the solution
+$\mathbf{u}^*$ of iterates $\mathbf{u}^{(\ell)}$ is approached at
+the speed of a geometric progression</p>
+<p>\[ \left|\mathbf{u}^{(\ell)} - \mathbf{u}^* \right| = C\mu^\ell
+\]</p>
+<p>Regularized OT and Sinkhorn's algorithms received renewed
+attention in the machine learning and data science community
+following a paper from Marco Cuturi in 2013 <a href=
+"#cuturi">[6]</a> that showed that Sinkhorn's updates were an
+<strong>efficient and scalable</strong> approximation to OT that
 can be easily <strong>parallelized</strong>, for instance on
 GPUs.</p>
 <h2 id=
