@@ -1,9 +1,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hugo Cisneros - Personal website</title>
+    <title>Hugo Cisneros - Personal page</title>
     <link>https://hugocisneros.com/</link>
-    <description>Recent content on Hugo Cisneros - Personal website</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content on Hugo Cisneros - Personal page</description>
+    
     <language>en-us</language>
     
     <atom:link href="https://hugocisneros.com/index.xml" rel="self" type="application/rss+xml" />
@@ -11,13 +11,16 @@
     
     
     <item>
-      <title>Blog</title>
-      <link>https://hugocisneros.com/blog/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://hugocisneros.com/blog/</guid>
-      <description>Hugo&#39;s blog homepage</description>
+      <title>The Elegance of Optimal Transport</title>
+      <link>https://hugocisneros.com/blog/2019/12/the-elegance-of-optimal-transport/</link>
+      <pubDate>Sat, 07 Dec 2019 23:20:20 +0100</pubDate>
+      <guid>https://hugocisneros.com/blog/2019/12/the-elegance-of-optimal-transport/</guid>
+      <description>This post was largely inspired by Gabriel Peyré and Marco Cuturi&amp;lsquo;s excellent book about Computational Optimal Transport, available for free, (arXiv link, ref: [1]).
+A simple problem? Let&#39;s start at the beginning: what is Optimal transport (OT)?
+It all begins with Gaspard Monge, reading his mémoire [2] in front of eminent scientists and engineers of the time (including Condorcet) from the French Académie Royale des Sciences in 1776. Monge&#39;s problem could be explained in simple terms as follows:</description>
     </item>
+    
+    
     
     
   </channel>
