@@ -164,7 +164,8 @@ verify:</p>
 <p>\[ \forall j \in \{1, … m\},\quad b_j = \sum_{i:T(x_i) = y_j}
 a_i \]</p>
 <figure class="center"><img src="/img/monge2.svg" alt=
-"Monge problem illustration" width="200">
+"Monge problem illustration. Optimal transport between asymmetric histograms"
+width="200">
 <figcaption>
 <h4>Monge problem</h4>
 </figcaption>
@@ -195,18 +196,19 @@ particular city will vary according to which factory supplies it,
 and will also vary from city to city.</p>
 </blockquote>
 <figure class="center"><img src="/img/logistic.svg" alt=
-"Logistic problem" width="300">
+"Logistic problem illustration. Factories with different supply capacities have to deliver goods to cities with various demands."
+width="300">
 <figcaption>
 <h4>Factories with different supply capacities have to deliver
 goods to cities with various demands.</h4>
 </figcaption>
 </figure>
-<p>To reflect this change, we modify our formulation slightly, by
-replacing the permutation $\sigma$ by a coupling matrix $\mathbf{P}
-= \mathbf{P}_ {ij} \in \mathbb{R}_ {+}^{n\times m}$. In the example
-above, each $\mathbf{P}_{ij}$ would be the weight of the arrow from
-factory $i$ to city $j$. Admissible coupling for our problem can
-therefore be written as</p>
+<p>To reflect this change, we modify our previous formulation
+slightly, by replacing the permutation $\sigma$ by a coupling
+matrix $\mathbf{P} = \mathbf{P}_ {ij} \in \mathbb{R}_ {+}^{n\times
+m}$. In the example above, each $\mathbf{P}_{ij}$ would be the
+weight of the arrow from factory $i$ to city $j$. Admissible
+coupling for our problem can therefore be written as</p>
 <p>\[ \mathbf{U}(\mathbf{a}, \mathbf{b}) = \left\{\mathbf{P} \in
 \mathbb{R}_{+}^{n \times m}: \mathbf{P}\mathbb{1}_m = \mathbf{a}
 \text{ and } \mathbf{P}^\text{T}\mathbb{1}_n = \mathbf{b} \right\}
@@ -231,10 +233,10 @@ equality constraints — or $2(m+n)$ inequalities, which are
 contained in the admissible set of solutions. These constraints
 define a convex polytope.</p>
 <p>This is good news, because we have moved from the dreadful realm
-of combinatorics to the comfortable world of convex optimization.
-Optimization over a matrix space might sound hard but it is usually
-much simpler than searching among a set of possible
-assignments.</p>
+of <strong>combinatorics</strong> to the comfortable world of
+<strong>convex optimization</strong>. Optimization over a matrix
+space might sound hard but it is usually much simpler than
+searching among a set of possible assignments.</p>
 <p>I will not go into the details of the tools used to solve this
 problem because they are widely used and taught in optimization and
 operations research courses. You will find a detailed explanation
@@ -244,15 +246,17 @@ Auction algorithm in <a href="#computational">[1]</a>.</p>
 <h2 id="regularized-optimal-transport">Regularized optimal
 transport</h2>
 <p>This is great, we have transformed our exponentially hard to
-solve problem in a solvable one! Unforfotunately, this is
-<em>still</em> not easy to solve, and the algorithms mentioned
-above have mostly polynomial complexities with exponents larger
-than 2, and sometimes exponential worst-case complexities.</p>
+solve problem in a much more pleasant looking one! Unfortunately,
+this is <em>still</em> not easy to solve, and the algorithms
+mentioned above have mostly polynomial complexities with exponents
+larger than 2, and sometimes exponential worst-case
+complexities.</p>
 <h3 id="entropic-regularization">Entropic regularization</h3>
 <p>Regularizing optimal transport was proposed in <a href=
 "#wilson">[4]</a>. It is a method for approximating solutions to
-the optimal transport problem by adding a term to the objective
-function.</p>
+the optimal transport problem by adding a regularizing term to the
+objective function. This forces the solution to satisfy a number of
+constraints, making the problem easier to solve.</p>
 <p>The <strong>entropy of a coupling matrix</strong> $\mathbf{P}$
 is defined as</p>
 <p>\[ \mathbf{H}(\mathbf{P}) = - \sum_{i,j}
@@ -277,11 +281,11 @@ unknown scaling variables. This is a really big improvement,
 because we now have an <strong>explicit formula</strong> for an
 optimal coupling.</p>
 <h3 id="sinkhorns-algorithm">Sinkhorn's algorithm</h3>
-<p>The problem is know as the matrix scaling problem: we are trying
-to find two scaling vectors that when multiplied with $\mathbf{K}$
-give $\mathbf{P}$. This can be achieved by alternatively updating
-$\mathbf{u}$ and $\mathbf{v}$ with <strong>Sinkhorn's algorithm
-updates</strong>:</p>
+<p>The problem is known as the matrix scaling problem: we are
+trying to find two scaling vectors that when multiplied with
+$\mathbf{K}$ give $\mathbf{P}$. This can be achieved by
+alternatively updating $\mathbf{u}$ and $\mathbf{v}$ with
+<strong>Sinkhorn's algorithm updates</strong>:</p>
 <p>\[ \mathbf{u}^{(\ell+1)} =
 \dfrac{\mathbf{a}}{\mathbf{Kv}^{(\ell)}}\ \text{and} \
 \mathbf{v}^{(\ell + 1)} =
@@ -289,8 +293,8 @@ updates</strong>:</p>
 <p>Although this algorithm likely appeared at the beginning of the
 20th century, the proof of its convergence is attributed to
 Sinkhorn <a href="#sinkhorn">[5]</a>. The algorithm not only
-converges, but it does at a <strong>linear rate</strong>. Don't get
-fooled by the name, it is fast! This means it exists a certain
+converges, but it does so at a <strong>linear rate</strong>. Don't
+get fooled by the name, it is fast! This means it exists a certain
 factor $\mu \in [0, 1]$ and constant $C$, such that the solution
 $\mathbf{u}^*$ of iterates $\mathbf{u}^{(\ell)}$ is approached at
 the speed of a geometric progression</p>
@@ -360,8 +364,9 @@ enable it in some settings, unlocking very interesting
 applications.</p>
 <p>For example in <a href="#solomon">[9]</a>, the authors are able
 to compute <strong>Wasserstein barycenters</strong> between 2D or
-3D shapes. This is a intermediate shape, equidistant from a
-weighted set of starting shapes with a very natural looking “mass
+3D shapes. This barycenter is a intermediate shape, equidistant
+from a weighted set of starting shapes — where the distance is the
+Wasserstein distance — with a very natural looking “mass
 displacement” resembling interpolation. The figure below is from
 this paper.</p>
 <figure class="center"><img src="/img/cowducktorus.jpg" alt=
@@ -388,9 +393,11 @@ Distances implementation</h4>
 post only aims at introducing the concept and is already long
 enough. The theory and mathematics are beautiful and get very
 advanced the deeper you go with this subject (see e.g. <a href=
-"#villani">[10]</a>). If you are interested in getting started
-learning about it, I suggest you check Gabriel Peyré and Marco
-Cuturi's book <a href=
+"#villani">[10]</a>). There is a lot of ongoing research into the
+theory and applications of optimal transport, especially in the
+machine learning community. If you are interested in getting
+started learning about it, I suggest you check Gabriel Peyré and
+Marco Cuturi's book <a href=
 "https://optimaltransport.github.io/book/"><em>Computational
 optimal transport</em></a>. It gives a very interesting overview of
 optimal transport and its applications. It can be read at different
