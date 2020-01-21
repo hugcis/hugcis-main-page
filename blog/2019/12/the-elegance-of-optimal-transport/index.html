@@ -5,13 +5,14 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content=
-"width=device-width, initial-scale=1.0">
-
+"width=device-width,initial-scale=1.0,minimum-scale=1">
 <title>The Elegance of Optimal Transport - Hugo Cisneros - Personal
 page</title>
 <meta property="og:title" content=
 "The Elegance of Optimal Transport - Hugo Cisneros - Personal page">
-<meta property="og:image" content="/img/monge1.svg">
+<meta property="og:type" content="article">
+<meta property="og:image" content=
+"https:/hugocisneros.com/img/monge1.svg">
 <meta property="og:url" content=
 "https://hugocisneros.com/blog/2019/12/the-elegance-of-optimal-transport/">
 <meta property="og:description" content=
@@ -19,7 +20,7 @@ page</title>
 <meta name="Description" property="description" content=
 "An introduction to optimal transport theory. From the roots of optimal transport and steps that made the problem easier to solve to modern applications in data science and machine learning like Wasserstein GANs.">
 <link rel="stylesheet" href=
-"https://hugocisneros.com/css/main.min.88064d3840e67ae48875dce247d22350f8616a5b9a3d082e0d5edb0738b04373.css"
+"https://hugocisneros.com/css/main.min.e3ce9143d23f82172cd0eaf3b33db5265d780d8632b41d4118509a0f512f41f4.css"
 media="all">
 <link rel="apple-touch-icon" sizes="180x180" href=
 "/apple-touch-icon.png">
@@ -65,11 +66,19 @@ async src=
 </nav>
 </header>
 <main class="content" role="main">
-<article class="article">
+<article class="article" itemprop="mainEntity" itemscope itemtype=
+"http://schema.org/BlogPosting">
 <div class="title-container">
-<h1 class="article-title">The Elegance of Optimal Transport</h1>
-<span class="article-date">2019-12-07</span></div>
-<div class="article-content">
+<h1 class="article-title" itemprop="name">The Elegance of Optimal
+Transport</h1>
+<b><i itemprop="headline" class="article-headline">An introduction
+to optimal transport theory.</i></b>
+<div class="article-subtitle"><span class="article-date" itemprop=
+"datePublished" content=
+"2019-12-07T23:20:20+0100">2019-12-07</span> <span class=
+"article-author" itemprop="author">Hugo Cisneros</span></div>
+</div>
+<div class="article-content" itemprop="articleBody">
 <p><em>This post was largely inspired by <a href=
 "https://www.gpeyre.com/">Gabriel Peyré</a> and <a href=
 "https://marcocuturi.net/">Marco Cuturi</a>‘s excellent book about
@@ -96,9 +105,11 @@ from $D_1$ to $D_2$ ?</b></div>
 <p>It turns out, the answer is far from simple. Monge didn't solve
 it in his <em>mémoire</em>, although he did lay the foundations of
 modern optimal transport theory.</p>
-<figure class="center"><object type="image/svg+xml" alt=
-"Excavation animation" data="/img/monge.svg"><param name="src"
-value="/img/monge.svg" alt="Excavation animation"></object>
+<figure itemprop="image" itemscope itemtype=
+"http://schema.org/ImageObject" class="center"><object type=
+"image/svg+xml" alt="Excavation animation" data=
+"/img/monge.svg"><param itemprop="url" name="src" value=
+"/img/monge.svg" alt="Excavation animation"></object>
 <figcaption>
 <h4>Is this the best (most efficient) way to move the blue squares
 from a mound to the other? Probably not: there are 39,916,800
@@ -143,10 +154,13 @@ solutions.</p>
 unique</strong>, as shown in the example below where 2 elements are
 mapped to 2 others that form together the four corners of a 2D
 square with sides of size 1.</p>
-<figure class="center"><img src="/img/monge1.svg" alt=
-"Non-uniqueness of solution illustration" width="200">
+<figure class="center" itemprop="image" itemscope itemtype=
+"http://schema.org/ImageObject"><img itemprop="contentUrl" src=
+"/img/monge1.svg" alt="Non-uniqueness of solution illustration"
+width="200">
 <figcaption>
-<h4>Non-unique assignment. The other solution is dashed.</h4>
+<h4 itemprop="name">Non-unique assignment. The other solution is
+dashed.</h4>
 </figcaption>
 </figure>
 <h3 id="working-with-asymmetric-histograms-the-monge-problem">
@@ -163,11 +177,13 @@ y_m$ have weights $\mathbf{b} = (b_1, …, b_m)$, $T$ must
 verify:</p>
 <p>\[ \forall j \in \{1, … m\},\quad b_j = \sum_{i:T(x_i) = y_j}
 a_i \]</p>
-<figure class="center"><img src="/img/monge2.svg" alt=
+<figure class="center" itemprop="image" itemscope itemtype=
+"http://schema.org/ImageObject"><img itemprop="contentUrl" src=
+"/img/monge2.svg" alt=
 "Monge problem illustration. Optimal transport between asymmetric histograms"
 width="200">
 <figcaption>
-<h4>Monge problem</h4>
+<h4 itemprop="name">Monge problem</h4>
 </figcaption>
 </figure>
 <p>With this formulation, we cannot work if the mass conservation
@@ -195,12 +211,14 @@ rates and other matters the cost of a ton of product to a
 particular city will vary according to which factory supplies it,
 and will also vary from city to city.</p>
 </blockquote>
-<figure class="center"><img src="/img/logistic.svg" alt=
+<figure class="center" itemprop="image" itemscope itemtype=
+"http://schema.org/ImageObject"><img itemprop="contentUrl" src=
+"/img/logistic.svg" alt=
 "Logistic problem illustration. Factories with different supply capacities have to deliver goods to cities with various demands."
 width="300">
 <figcaption>
-<h4>Factories with different supply capacities have to deliver
-goods to cities with various demands.</h4>
+<h4 itemprop="name">Factories with different supply capacities have
+to deliver goods to cities with various demands.</h4>
 </figcaption>
 </figure>
 <p>To reflect this change, we modify our previous formulation
@@ -327,11 +345,13 @@ Semantic scholar), Wasserstein Generative Adversarial Networks
 (WGANs) are a good illustration of optimal transport ideas going
 mainstream — although the fact that it is a paper about GANs might
 account more for those citations than the maths.</p>
-<figure class="center"><img src="/img/bar_plot.svg" alt=
+<figure class="center" itemprop="image" itemscope itemtype=
+"http://schema.org/ImageObject"><img itemprop="contentUrl" src=
+"/img/bar_plot.svg" alt=
 "Bar plot of mentions of optimal transport in NeurIPS papers">
 <figcaption>
-<h4>Mentions of "wasserstein" and "optimal transport" in NeurIPS
-paper titles over time</h4>
+<h4 itemprop="name">Mentions of "wasserstein" and "optimal
+transport" in NeurIPS paper titles over time</h4>
 </figcaption>
 </figure>
 <h3 id="wasserstein-distances">Wasserstein distances</h3>
@@ -369,10 +389,13 @@ from a weighted set of starting shapes — where the distance is the
 Wasserstein distance — with a very natural looking “mass
 displacement” resembling interpolation. The figure below is from
 this paper.</p>
-<figure class="center"><img src="/img/cowducktorus.jpg" alt=
+<figure class="center" itemprop="image" itemscope itemtype=
+"http://schema.org/ImageObject"><img itemprop="contentUrl" src=
+"/img/cowducktorus.jpg" alt=
 "Interpolation between a cow, a duck and a torus 3D shapes">
 <figcaption>
-<h4>Interpolation between a cow, a duck and a torus</h4>
+<h4 itemprop="name">Interpolation between a cow, a duck and a
+torus</h4>
 </figcaption>
 </figure>
 <p>The below animation illustrates this interpolation process. You
@@ -445,6 +468,9 @@ New. (2008).</li>
 </ol>
 </div>
 </div>
+<div class="article-date-modified">Last modified <span itemprop=
+"dateModified" content=
+"2020-01-21T15:42:48+0100">2020-01-21</span></div>
 </article>
 </main>
 <footer class="footer">
