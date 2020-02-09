@@ -21,7 +21,7 @@ page</title>
 <meta property="keywords" content=
 "Optimal transport, Data science, Theory">
 <link rel="stylesheet" href=
-"https://hugocisneros.com/css/main.min.72bb7072e0de8884408bb6de58315ae69b1f90fdb9c600191144e17d413dcd24.css"
+"https://hugocisneros.com/css/main.min.95a7663c4bcf73edc8095715504d7e1e831d2237cae7b1c1d8dd93e7bf8691e7.css"
 media="all">
 <link rel="apple-touch-icon" sizes="180x180" href=
 "/apple-touch-icon.png">
@@ -78,7 +78,10 @@ to optimal transport theory.</i></b>
 <div class="article-subtitle"><span class="article-date" itemprop=
 "datePublished" content=
 "2019-12-07T23:20:20+0100">2019-12-07</span> <span class=
-"article-author" itemprop="author">Hugo Cisneros</span></div>
+"article-author" itemprop="author" itemscope itemtype=
+"http://schema.org/Person"><span itemprop="name">Hugo
+Cisneros</span></span></div>
+<div>Reading time: 9 minutes.</div>
 </div>
 <div class="article-content" itemprop="articleBody">
 <p><em>This post was largely inspired by <a href=
@@ -89,7 +92,7 @@ Computational Optimal Transport, available <a href=
 "https://arxiv.org/abs/1803.00567">arXiv link</a>, ref: <a href=
 "#computational">[1]</a>)</em>.</p>
 <h2 id="a-simple-problem">A simple problem?</h2>
-<p>Let's start at the beginning: what is Optimal transport
+<p>Let’s start at the beginning: what is Optimal transport
 (OT)?</p>
 <p>It all begins with <a href=
 "https://en.wikipedia.org/wiki/Gaspard_Monge">Gaspard Monge</a>,
@@ -97,14 +100,14 @@ reading his <em>mémoire</em> <a href="#monge">[2]</a> in front of
 eminent scientists and engineers of the time (including <a href=
 "https://en.wikipedia.org/wiki/Marquis_de_Condorcet">Condorcet</a>)
 from the French <em>Académie Royale des Sciences</em> in 1776.
-Monge's problem could be explained in simple terms as follows:</p>
+Monge’s problem could be explained in simple terms as follows:</p>
 <blockquote>
 <p>Given two excavations $D_1$ and $D_2$, a cost of moving a unit
 of mass of dirt from any point of $D_1$ to any point of $D_2$,</p>
 <div class="center"><b>What is the cheapest way to move the mass
 from $D_1$ to $D_2$ ?</b></div>
 </blockquote>
-<p>It turns out, the answer is far from simple. Monge didn't solve
+<p>It turns out, the answer is far from simple. Monge didn’t solve
 it in his <em>mémoire</em>, although he did lay the foundations of
 modern optimal transport theory.</p>
 <figure itemprop="image" itemscope itemtype=
@@ -118,12 +121,12 @@ from a mound to the other? Probably not: there are 39,916,800
 possible ways to do it.</h4>
 </figcaption>
 </figure>
-<p>But let's move to the problem.</p>
+<p>But let’s move to the problem.</p>
 <h2 id="discrete-optimal-transport">Discrete Optimal Transport</h2>
 <p>The easiest way to think of the problem is in terms of atomic
 items.</p>
 <h3 id="assignment-problem">Assignment problem</h3>
-<p>In it's simplest form, it can be viewed as an assignment
+<p>In it’s simplest form, it can be viewed as an assignment
 problem: among all configurations, which one is the best? This
 quite restrictive since we can only work with two sets of the same
 total size, but it is already incredibly hard to solve.</p>
@@ -300,12 +303,12 @@ _{i,j}}{\varepsilon}}$ and $\mathbf{u}$ and $\mathbf{v}$ are
 unknown scaling variables. This is a really big improvement,
 because we now have an <strong>explicit formula</strong> for an
 optimal coupling.</p>
-<h3 id="sinkhorns-algorithm">Sinkhorn's algorithm</h3>
+<h3 id="sinkhorns-algorithm">Sinkhorn’s algorithm</h3>
 <p>The problem is known as the matrix scaling problem: we are
 trying to find two scaling vectors that when multiplied with
 $\mathbf{K}$ give $\mathbf{P}$. This can be achieved by
 alternatively updating $\mathbf{u}$ and $\mathbf{v}$ with
-<strong>Sinkhorn's algorithm updates</strong>:</p>
+<strong>Sinkhorn’s algorithm updates</strong>:</p>
 <p>\[ \mathbf{u}^{(\ell+1)} =
 \dfrac{\mathbf{a}}{\mathbf{Kv}^{(\ell)}}\ \text{and} \
 \mathbf{v}^{(\ell + 1)} =
@@ -313,17 +316,17 @@ alternatively updating $\mathbf{u}$ and $\mathbf{v}$ with
 <p>Although this algorithm likely appeared at the beginning of the
 20th century, the proof of its convergence is attributed to
 Sinkhorn <a href="#sinkhorn">[5]</a>. The algorithm not only
-converges, but it does so at a <strong>linear rate</strong>. Don't
+converges, but it does so at a <strong>linear rate</strong>. Don’t
 get fooled by the name, it is fast! This means it exists a certain
 factor $\mu \in [0, 1]$ and constant $C$, such that the solution
 $\mathbf{u}^*$ of iterates $\mathbf{u}^{(\ell)}$ is approached at
 the speed of a geometric progression</p>
 <p>\[ \left|\mathbf{u}^{(\ell)} - \mathbf{u}^* \right| = C\mu^\ell
 \]</p>
-<p>Regularized OT and Sinkhorn's algorithms received renewed
+<p>Regularized OT and Sinkhorn’s algorithms received renewed
 attention in the machine learning and data science community
 following a paper from Marco Cuturi in 2013 <a href=
-"#cuturi">[6]</a> that showed that Sinkhorn's updates were an
+"#cuturi">[6]</a> that showed that Sinkhorn’s updates were an
 <strong>efficient and scalable</strong> approximation to OT that
 can be easily <strong>parallelized</strong>, for instance on
 GPUs.</p>
@@ -368,7 +371,7 @@ machine learning and data science, because of its ability to use a
 ground metric between bins and transform it into a metric between
 histograms of such bins. <a href=
 "https://en.wikipedia.org/wiki/Earth_mover%27s_distance"><strong>Earth
-mover's distance</strong></a> is a particular example of $W_1$ with
+mover’s distance</strong></a> is a particular example of $W_1$ with
 the Euclidean distance in $\mathbb{R}^d$.</p>
 <h3 id="wasserstein-gans">Wasserstein GANs</h3>
 <p>WGANs <a href="#gans">[8]</a> uses the Wasserstein distance in
@@ -422,7 +425,7 @@ advanced the deeper you go with this subject (see e.g. <a href=
 theory and applications of optimal transport, especially in the
 machine learning community. If you are interested in getting
 started learning about it, I suggest you check Gabriel Peyré and
-Marco Cuturi's book <a href=
+Marco Cuturi’s book <a href=
 "https://optimaltransport.github.io/book/"><em>Computational
 optimal transport</em></a>. It gives a very interesting overview of
 optimal transport and its applications. It can be read at different
@@ -433,12 +436,14 @@ theory behind it.</p>
 </div>
 <ul class="article-taxonomy">
 <li><a href="/tags/optimal-transport"><span class=
-"tag-item"><img class="tag-logo" src="/img/tag.svg">Optimal
+"tag-item"><img class="tag-logo" src="/img/tag.svg" alt=
+"Logo of a tag: indicates that a tag item follows.">Optimal
 transport</span></a> <a href="/tags/data-science"><span class=
-"tag-item"><img class="tag-logo" src="/img/tag.svg">Data
+"tag-item"><img class="tag-logo" src="/img/tag.svg" alt=
+"Logo of a tag: indicates that a tag item follows.">Data
 science</span></a> <a href="/tags/theory"><span class=
-"tag-item"><img class="tag-logo" src=
-"/img/tag.svg">Theory</span></a></li>
+"tag-item"><img class="tag-logo" src="/img/tag.svg" alt=
+"Logo of a tag: indicates that a tag item follows.">Theory</span></a></li>
 </ul>
 <hr>
 <div class="references">

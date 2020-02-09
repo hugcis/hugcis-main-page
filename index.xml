@@ -16,8 +16,8 @@
       <pubDate>Sat, 07 Dec 2019 23:20:20 +0100</pubDate>
       <guid>https://hugocisneros.com/blog/2019/12/the-elegance-of-optimal-transport/</guid>
       <description>This post was largely inspired by Gabriel Peyré and Marco Cuturi&amp;lsquo;s excellent book about Computational Optimal Transport, available for free, (arXiv link, ref: [1]).
-A simple problem? Let&#39;s start at the beginning: what is Optimal transport (OT)?
-It all begins with Gaspard Monge, reading his mémoire [2] in front of eminent scientists and engineers of the time (including Condorcet) from the French Académie Royale des Sciences in 1776. Monge&#39;s problem could be explained in simple terms as follows:</description>
+A simple problem? Let&amp;rsquo;s start at the beginning: what is Optimal transport (OT)?
+It all begins with Gaspard Monge, reading his mémoire [2] in front of eminent scientists and engineers of the time (including Condorcet) from the French Académie Royale des Sciences in 1776. Monge&amp;rsquo;s problem could be explained in simple terms as follows:</description>
     </item>
     
     
