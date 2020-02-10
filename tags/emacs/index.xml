@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Emacs on Hugo Cisneros - Personal page</title>
+    <link>https://hugocisneros.com/tags/emacs/</link>
+    <description>Recent content in Emacs on Hugo Cisneros - Personal page</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 04 Feb 2020 08:35:20 +0100</lastBuildDate>
+    
+	<atom:link href="https://hugocisneros.com/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Org-Clock Export as Charts</title>
+      <link>https://hugocisneros.com/blog/2020/02/org-clock-export-as-charts/</link>
+      <pubDate>Tue, 04 Feb 2020 08:35:20 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/blog/2020/02/org-clock-export-as-charts/</guid>
+      <description>Managing my time I really like Emacs. I won&amp;rsquo;t go into a tribute to this piece of software, many have done it before. I also really like org-mode, and I&amp;rsquo;m not the only one (see here, here and there). One of the cool feature of org-mode is clocking. It allows you to indicate that which TODO you are working on and progressively build up a detailed account of the way you are spending your time.</description>
+    </item>
+    
+  </channel>
+</rss>

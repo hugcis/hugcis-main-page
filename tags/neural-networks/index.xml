@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Neural networks on Hugo Cisneros - Personal page</title>
+    <link>https://hugocisneros.com/tags/neural-networks/</link>
+    <description>Recent content in Neural networks on Hugo Cisneros - Personal page</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 14 Jan 2020 09:17:29 +0100</lastBuildDate>
+    
+	<atom:link href="https://hugocisneros.com/tags/neural-networks/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Neural Architecture Search</title>
+      <link>https://hugocisneros.com/blog/2020/01/neural-architecture-search/</link>
+      <pubDate>Tue, 14 Jan 2020 09:17:29 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/blog/2020/01/neural-architecture-search/</guid>
+      <description>Neural Architecture Search (NAS) is a relatively new but already successful and productive subfield of machine learning, usually seen as part of Deep Learning. It is also often thought of as part of AutoML (see [1]). AutoML corresponds to finding ways of automating some of the most tedious aspect of machine learning and data science. It includes hyperparameter search, feature engineering and model selection among a growing catalog of battle tested algorithms as well as experimental models.</description>
+    </item>
+    
+  </channel>
+</rss>
