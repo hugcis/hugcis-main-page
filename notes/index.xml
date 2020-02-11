@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Notes on Hugo Cisneros - Personal page</title>
+    <link>https://hugocisneros.com/notes/</link>
+    <description>Recent content in Notes on Hugo Cisneros - Personal page</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 10 Feb 2020 21:33:13 +0100</lastBuildDate>
+    
+	<atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://hugocisneros.com/notes/20200210213313/</link>
+      <pubDate>Mon, 10 Feb 2020 21:33:13 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/20200210213313/</guid>
+      <description>What is complexity?: The question is very much too vast to be answered in a written piece smaller than a whole book. I am planning on dedicating an entire post about measuring complexity with a range of metrics that people have come up with in the past. A big question I&amp;rsquo;m asking myself is: &amp;ldquo;How much does complexity depend on subjectivity and the observer?&amp;rdquo;</description>
+    </item>
+    
+  </channel>
+</rss>
