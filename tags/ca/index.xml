@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CA on Hugo Cisneros - Personal page</title>
+    <link>https://hugocisneros.com/tags/ca/</link>
+    <description>Recent content in CA on Hugo Cisneros - Personal page</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 12 Feb 2020 10:33:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://hugocisneros.com/tags/ca/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://hugocisneros.com/notes/20200212103300/</link>
+      <pubDate>Wed, 12 Feb 2020 10:33:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/20200212103300/</guid>
+      <description>Some cellular automata have a characteristic &amp;ldquo;blob-preserving&amp;rdquo; behavior where parts of the space get organized in large blobs. This behavior is very similar to an application of local median. See this twitter link for an animated example.</description>
+    </item>
+    
+  </channel>
+</rss>

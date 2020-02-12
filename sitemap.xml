@@ -3,17 +3,27 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
     
     <url>
+        <loc>https://hugocisneros.com/notes/20200212103300/</loc>
+        <lastmod>2020-02-12T10:33:00+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/tags/ca/</loc>
+        <lastmod>2020-02-12T10:33:00+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/tags/</loc>
+        <lastmod>2020-02-12T10:33:00+01:00</lastmod>
+    </url>
+    
+    <url>
         <loc>https://hugocisneros.com/notes/20200210213313/</loc>
         <lastmod>2020-02-11T14:32:41+01:00</lastmod>
     </url>
     
     <url>
         <loc>https://hugocisneros.com/tags/complexity/</loc>
-        <lastmod>2020-02-11T14:32:41+01:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/tags/</loc>
         <lastmod>2020-02-11T14:32:41+01:00</lastmod>
     </url>
     
