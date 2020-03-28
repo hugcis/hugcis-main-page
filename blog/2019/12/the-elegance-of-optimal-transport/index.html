@@ -24,7 +24,7 @@ page</title>
 <meta property="keywords" content=
 "Optimal transport, Data science, Theory">
 <link rel="stylesheet" href=
-"https://hugocisneros.com/css/main.min.8381c96bdb4d3d933c3288f84ad31b5586f6b86aa70bcac87f03c33454800410.css"
+"https://hugocisneros.com/css/main.min.a40a4b4f3be57cafa0a799f34263b26679d87c1456d11db1da8c0cb45b0f724c.css"
 media="all" type="text/css">
 <link rel="apple-touch-icon" sizes="180x180" href=
 "/apple-touch-icon.png">
@@ -44,7 +44,7 @@ media="all" type="text/css">
 <script>
  MathJax = {
      tex: {
-         inlineMath: [['$','$']]
+         inlineMath: [['$','$'], ['\\(', '\\)']]
      }
  };
 </script>
@@ -106,10 +106,10 @@ Monge’s problem could be explained in simple terms as follows:</p>
 <blockquote>
 <p>Given two excavations $D_1$ and $D_2$, a cost of moving a unit
 of mass of dirt from any point of $D_1$ to any point of $D_2$,</p>
-<div class="center"><b>What is the cheapest way to move the mass
-from $D_1$ to $D_2$ ?</b></div>
+<div class="center"><b>What is the cheapest way to move mass from
+$D_1$ to $D_2$ ?</b></div>
 </blockquote>
-<p>It turns out, the answer is far from simple. Monge didn’t solve
+<p>The answer is far from simple, it turns out. Monge didn’t solve
 it in his <em>mémoire</em>, although he did lay the foundations of
 modern optimal transport theory.</p>
 <figure itemprop="image" itemscope itemtype=
@@ -128,10 +128,11 @@ possible ways to do it.</h4>
 <p>The easiest way to think of the problem is in terms of atomic
 items.</p>
 <h3 id="assignment-problem">Assignment problem</h3>
-<p>In it’s simplest form, it can be viewed as an assignment
-problem: among all configurations, which one is the best? This
+<p>In its simplest form, it can be viewed as an assignment problem:
+among all configurations, which one is the best? This is already
 quite restrictive since we can only work with two sets of the same
-total size, but it is already incredibly hard to solve.</p>
+total size, but this simple version is incredibly hard to
+solve.</p>
 <p>Each set (the above “excavations”) can be represented as a
 histogram (or vector) $\mathbf{a}$ that belongs to the probability
 simplex — the vectors which components sum to 1:</p>
@@ -157,7 +158,7 @@ $N!$ possible solutions to this problem, which makes it very
 difficult to solve when $N$ grows large: e.g, with a histogram of
 size 20, there are already $2.43\times10^{18}$ possible
 solutions.</p>
-<p>It is interesting to note that the assignment is <strong>not
+<p>It is interesting to note that this assignment is <strong>not
 unique</strong>, as shown in the example below where 2 elements are
 mapped to 2 others that form together the four corners of a 2D
 square with sides of size 1.</p>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+
+<meta charset="utf-8">
+<meta name="viewport" content=
+"width=device-width,initial-scale=1.0,minimum-scale=1">
+<title>Complexity - Hugo Cisneros - Personal page</title>
+<meta property="og:title" content=
+"Complexity - Hugo Cisneros - Personal page">
+<meta property="og:type" content="article">
+<meta property="og:image" content="/img/main.jpeg">
+<meta property="og:url" content=
+"https://hugocisneros.com/notes/20200301192936_complexity/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@cisne_hug">
+<meta name="twitter:creator" content="@cisne_hug">
+<link rel="stylesheet" href=
+"https://hugocisneros.com/css/main.min.a40a4b4f3be57cafa0a799f34263b26679d87c1456d11db1da8c0cb45b0f724c.css"
+media="all" type="text/css">
+<link rel="apple-touch-icon" sizes="180x180" href=
+"/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href=
+"/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href=
+"/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color=
+"#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<link rel="webmention" href=
+"https://webmention.io/hugocisneros.com/webmention">
+<link rel="pingback" href=
+"https://webmention.io/hugocisneros.com/xmlrpc">
+</head>
+<body>
+<div class="wrapper">
+<header class="header">
+<nav class="nav">
+<div class="nav-main"><a href="https://hugocisneros.com/" class=
+"nav-title">Hugo Cisneros - Personal page</a></div>
+<ul class="nav-links">
+<li><a href="/about/">About</a></li>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/other/">Other</a></li>
+<li><a href="/resume/cv.pdf">Resume</a></li>
+</ul>
+</nav>
+</header>
+<script>
+ MathJax = {
+     tex: {
+         inlineMath: [['$','$'], ['\\(', '\\)']]
+     }
+ };
+</script> 
+<script type="text/javascript" rel="preconnect" id="MathJax-script"
+async src=
+"https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<main class="content" role="main">
+<article class="article h-entry" itemprop="mainEntity" itemscope
+itemtype="http://schema.org/BlogPosting">
+<div class="single-note note-container">
+<h1 class="article-title p-name" itemprop="name">Complexity</h1>
+<div class="article-content e-content p-name" itemprop=
+"articleBody">
+<dl>
+<dt>resources</dt>
+<dd><a href=
+"https://www.cs.brandeis.edu/~pablo/thesis/html/node9.html">Page of
+Pablo Funes’ PhD thesis</a></dd>
+</dl>
+<h2 id="what-is-complexity">What is complexity?</h2>
+<p><strong>What is complexity?</strong>: The question is very much
+too vast to be answered in something smaller than a whole book. I
+am planning on dedicating an entire post about measuring complexity
+with a range of metrics that people have come up with in the past.
+A big question I’m asking myself is: “How much does complexity
+depend on subjectivity and the observer?”</p>
+<p>Complexity is about studying systems and models which components
+interact in multiple ways and according to local rules. This very
+general framework is often called <a href=
+"/notes/20200302174825_complex_systems/">complex systems</a>.</p>
+<p>Complexity has various meanings depending on the fields and
+therefore can be applied to a wide range of systems.</p>
+<p>However, its lack of clear definition makes it difficult to
+measure and estimate. The concept of complexity is hard to study in
+practice for a given system.</p>
+<h3 id="complex-systems--20200302174825-complex-systems-dot-md">
+<a href="/notes/20200302174825_complex_systems/">Complex
+systems</a></h3>
+<p>Complex systems are systems made of many components that
+interact together. They usually exhibit behaviors that can be
+labeled as complex.</p>
+<h3 id=
+"emergence--20200301200824-emergence-dot-md--and-self-organization--20200302174839-self-organization-dot-md">
+<a href="/notes/20200301200824_emergence/">Emergence</a> and
+<a href=
+"/notes/20200302174839_self_organization/">self-organization</a></h3>
+<p>The study of complexity is often linked to the study of
+emergence and self-organization. They terms often refer to the
+spontaneous apparition of complex structures in a system made of
+simpler components.</p>
+<h3 id="features-of-a-complex-process">Features of a complex
+process</h3>
+<p>From <a id="f970157f9e8952041a28b20a5d066a32" href=
+"#grassbergerRandomnessInformationComplexity1989">(Grassberger,
+1989)</a></p>
+<ul>
+<li>Between disorder and order. Hard to describe and not just
+random structures.</li>
+<li>Often involve <em>hierarchies</em></li>
+<li>Feeback loops, for example from lower levels of the
+hierarchy.</li>
+<li>Higher-level concepts arise without being put in
+explicitely.</li>
+<li>Complex systems are composed of many parts with strong and
+<strong>non-trivial correlations</strong> between these parts. Are
+they spontaneous or do they need to be encoded? (GOL glider gun vs.
+spontaneous spaceships in some rules)</li>
+<li>Correlations between the object and its environment. Examples:
+complexity of DNA exists because of its correlation with the
+reading machinery, and the protein building machinery, etc. up to
+the whole organism.</li>
+<li>It has <em>meaning</em>, meaning that only some of the features
+of the system are essentials, and one can create a compressed on
+more “intelligent” description. Therefore this could be related to
+<em>compressibility</em>.</li>
+</ul>
+<h2 id="complexity-metrics">Complexity metrics</h2>
+<p>To study the complexity of various systems, researchers have
+come up with various metrics. They are based on several principles
+such as <a href=
+"/notes/20200302174634_information_theory/">information theory</a>
+or <a href=
+"/notes/20200302174626_algorithmic_information_theory/">algorithmic
+information theory</a>. Many of these metrics are described in
+<a id="f970157f9e8952041a28b20a5d066a32" href=
+"#grassbergerRandomnessInformationComplexity1989">(Grassberger,
+1989)</a>.</p>
+<h3 id="shannon-entropy-and-kolmogorov-complexity">Shannon entropy
+and Kolmogorov Complexity</h3>
+<p>The paper <a id="50776678194779f57fafb630227ad1a4" href=
+"#grunwaldShannonInformationKolmogorov">(Grunwald & Vitanyi, )</a>
+is a great description and analysis of two of the most important
+<a href="/notes/20200301192936_complexity/">complexity
+measures</a>:</p>
+<ul>
+<li><a href="/notes/20200308141605-entropy/">Shannon
+entropy</a></li>
+<li><a href=
+"/notes/20200303161448_kolmogorov_complexity/">Kolmogorov
+complexity</a></li>
+</ul>
+<h3 id="information-theoretic-metrics">Information-theoretic
+metrics</h3>
+<h4 id="shannon-information">Shannon information</h4>
+<p><a id="b8ee9b18b5f5440a2a0acd78d6e63482" href=
+"#shannonMathematicalTheoryCommunication1975">(Shannon & Weaver,
+1975)</a> For a discrete random variable \(X\) with outcomes
+\(x_i\), \(P(X=x_i) = P_i\), the <strong>entropy</strong> or
+<strong>uncertainty function</strong> of \(X\) is defined as \[
+H(X) = -\sum_{i=1}^{N} P_i \log P_i \]</p>
+<p>Entropy is always positive, and is maximized when the
+uncertainty is maximal, that is when \(P_1 = P_2 = … = P_N =
+\frac{1}{N}\) entropy in that case is \(\log N\).</p>
+<p>Interpretations:</p>
+<ul>
+<li>\(H\) measures uncertainty of a process (or the average number
+of yes/no answers one needs to specify the value of \(i\)).</li>
+<li>Average information received by an observer when reading the
+outcomes of \(X\).</li>
+</ul>
+<p>If we encode the random variable \(X\) with an erroneous
+encoding \(P_i’\), the resulting code length is \(\sum P_i \log
+\frac{1}{P_i’}\). The difference between this encoding and the
+optimal encoding is the <a href=
+"/notes/20200303144351_kullback_leibler_divergence/">Kullback-Leibler
+divergence</a>.</p>
+<h4 id="shannon-entropy-for-a-sequence">Shannon entropy for a
+sequence</h4>
+<p>In the case of a sequence of symbols $s_1, …, s_i, …$, following
+a translation invariant distribution (for any \(n\) and \(k\),
+\(P(s_1s_2…s_n) = P(s_{1+k}s_{2+k}…s_{n+k})\)).</p>
+<p>We can define the block entropy of the $n$-tuple random variable
+\(S=(S_1…S_n)\) like above \[ H_n = \sum_{s_1…s_n} P(s_1…s_n) \log
+P(s_1…s_n) \]</p>
+<p>Then, we can define the average length of the description per
+symbol of the sequence as \[ h =\lim_{n \rightarrow \infty} h_n \]
+\[ h_n =H_{n+1} - H_n \]</p>
+<p>\(h\) is called by Shannon the entropy of the source emitting
+the sequence, or entropy of the sequence.</p>
+<h3 id="ait-based-metrics">AIT based metrics</h3>
+<p>For a <a href=
+"/notes/20200302191410_turing_completeness/">universal computer</a>
+\(U\) the algorithmic information of \(S\) relative to \(U\) is
+defined as the length of the shortest program that yields \(S\) on
+\(U\). \[ C_U(S) = \min_{Prog_U(S)} \text{Len}[Prog_U(S)] \]</p>
+<p>This quantity is called algorithmic information, or <a href=
+"/notes/20200303161448_kolmogorov_complexity/">Kolmogorov-Solomonoff-Chaitin
+complexity</a>.</p>
+<h3 id="compression-based-metrics">Compression-based metrics</h3>
+<p>It is not possible for a given sequence to estimate reliably its
+algorithmic information, because we cannot know if we have found
+the shortest description. A solution is to restrict the encoding
+method, and <a href=
+"/notes/20200303163017_lempel_ziv_welch_algorithm/">LZW</a>
+complexity is one of them <a id="757b331f473fdbcd9dfe20b8cb5ba1a6"
+href="#lempelComplexityFiniteSequences1976">(Lempel & Ziv,
+1976)</a>.</p>
+<h3 id="others">Others</h3>
+<ul>
+<li><a href="/notes/20200305144401_epsilon_machines/">Epsilon
+machines</a>.</li>
+</ul>
+<h2 id="complexity-growth-in-living-systems">Complexity growth in
+living systems</h2>
+<p>Complexity doesn’t have to grow in living systems. And believing
+that living organisms evolve towards greater complexity is a common
+fallacy in the study of biological <a href=
+"/notes/20200301192607_evolution/">evolution</a>.</p>
+<ul>
+<li>First, living systems do not evolve in
+<strong>response</strong> to environmental changes, and Earth’s
+history has shown that going extinct is for instance a much more
+common response to environmental changes. Species survive
+environmental changes because they happen to have some parts of its
+population with an evolutionary advantage compared to other
+species.</li>
+<li>According to some, complexity therefore does not necessarily
+increase in living organisms that evolve, because the path to
+survival to environmental change might actually be a decrease in
+complexity (e.g number of bones in the jaw see <a href=
+"https://www.scientificamerican.com/article/is-the-human-race-evolvin/">
+this link</a>). This is not the opinion supported by many older
+works as explained in <a id="9534ed58e1e02b2c0de8f228f3084ba3"
+href="#mcsheaComplexityEvolutionWhat1991">(McShea, 1991)</a> .</li>
+</ul>
+<h1 id="bibliography">Bibliography</h1>
+<p><a id="grassbergerRandomnessInformationComplexity1989" target=
+"_blank">Grassberger, P., <em>Randomness, Information, and
+Complexity</em>, In , Proceedings of the 5th {{Mexican School}} on
+{{Statistical Physics}} (pp. ) (1989). : .</a> <a href=
+"#f970157f9e8952041a28b20a5d066a32">↩</a></p>
+<p><a id="grunwaldShannonInformationKolmogorov" target=
+"_blank">Grunwald, P., & Vitanyi, P., <em>Shannon Information and
+Kolmogorov Complexity</em>, , <em>()</em>, 51 ().</a> <a href=
+"#50776678194779f57fafb630227ad1a4">↩</a></p>
+<p><a id="shannonMathematicalTheoryCommunication1975" target=
+"_blank">Shannon, C. E., & Weaver, W., <em>The mathematical theory
+of communication</em> (1975), {Urbana}: {University of Illinois
+Press}.</a> <a href="#b8ee9b18b5f5440a2a0acd78d6e63482">↩</a></p>
+<p><a id="lempelComplexityFiniteSequences1976" target=
+"_blank">Lempel, A., & Ziv, J., <em>On the Complexity of Finite
+Sequences</em>, IEEE Transactions on Information Theory,
+<em>22(1)</em>, 75–81 (1976).</a> <a href=
+"http://dx.doi.org/10.1109/TIT.1976.1055501">http://dx.doi.org/10.1109/TIT.1976.1055501</a>
+<a href="#757b331f473fdbcd9dfe20b8cb5ba1a6">↩</a></p>
+<p><a id="mcsheaComplexityEvolutionWhat1991" target=
+"_blank">McShea, D. W., <em>Complexity and evolution: What
+everybody knows</em>, Biology & Philosophy, <em>6(3)</em>, 303–324
+(1991).</a> <a href=
+"http://dx.doi.org/10.1007/BF00132234">http://dx.doi.org/10.1007/BF00132234</a>
+<a href="#9534ed58e1e02b2c0de8f228f3084ba3">↩</a></p>
+<h2 id="backlinks">Backlinks</h2>
+<ul>
+<li><a href=
+"/notes/20200307161827-algorithmic_probability/">Algorithmic
+probability</a></li>
+<li><a href=
+"/notes/20200303161448_kolmogorov_complexity/">Kolmogorov
+complexity</a></li>
+<li><a href=
+"/notes/20200309215544-minimum_description_length/">Minimum
+description length</a></li>
+<li><a href="/notes/20200301192936_complexity/">Complexity</a></li>
+<li><a href=
+"/notes/20200301204253_compression/">Compression</a></li>
+<li><a href=
+"/notes/20200323100700-the_architecture_of_complexity/">The
+architecture of complexity</a></li>
+<li><a href="/notes/20200301192434_cellular_automata/">Cellular
+automata</a></li>
+<li><a href=
+"/notes/20200303163017_lempel_ziv_welch_algorithm/">Lempel-Ziv-Welch
+algorithm</a></li>
+<li><a href=
+"/notes/20200301192144_open_ended_evolution/">Open-ended
+Evolution</a></li>
+</ul>
+</div>
+<div class="note-footer">Last changed <a class="u-url" href=
+"https://hugocisneros.com/notes/20200301192936_complexity/"><time itemprop="datePublished"
+class="dt-published" datetime=
+"2020-03-27T18:45:25+0100">27/03/2020</time></a> | authored by
+<a href="https://hugocisneros.com/" rel="author" class=
+"p-author h-card" itemprop="author" itemscope itemtype=
+"http://schema.org/Person"><span itemprop="name">Hugo
+Cisneros</span></a></div>
+</div>
+</article>
+<br>
+<a href="/notes#20200301192936_complexity"><b>← Back to
+Notes</b></a>
+<hr></main>
+<footer class="footer">
+<ul class="footer-links">
+<li><a href="/blog/index.xml" type="application/rss+xml" target=
+"_blank">Blog RSS feed</a></li>
+<li><a href=
+"https://github.com/hugcis/natrium-custom">Code</a></li>
+</ul>
+</footer>
+</div>
+</body>
+</html>

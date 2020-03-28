@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+
+<meta charset="utf-8">
+<meta name="viewport" content=
+"width=device-width,initial-scale=1.0,minimum-scale=1">
+<title>Cellular automata - Hugo Cisneros - Personal page</title>
+<meta property="og:title" content=
+"Cellular automata - Hugo Cisneros - Personal page">
+<meta property="og:type" content="article">
+<meta property="og:image" content="/img/main.jpeg">
+<meta property="og:url" content=
+"https://hugocisneros.com/notes/20200301192434_cellular_automata/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@cisne_hug">
+<meta name="twitter:creator" content="@cisne_hug">
+<link rel="stylesheet" href=
+"https://hugocisneros.com/css/main.min.a40a4b4f3be57cafa0a799f34263b26679d87c1456d11db1da8c0cb45b0f724c.css"
+media="all" type="text/css">
+<link rel="apple-touch-icon" sizes="180x180" href=
+"/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href=
+"/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href=
+"/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color=
+"#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<link rel="webmention" href=
+"https://webmention.io/hugocisneros.com/webmention">
+<link rel="pingback" href=
+"https://webmention.io/hugocisneros.com/xmlrpc">
+</head>
+<body>
+<div class="wrapper">
+<header class="header">
+<nav class="nav">
+<div class="nav-main"><a href="https://hugocisneros.com/" class=
+"nav-title">Hugo Cisneros - Personal page</a></div>
+<ul class="nav-links">
+<li><a href="/about/">About</a></li>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/other/">Other</a></li>
+<li><a href="/resume/cv.pdf">Resume</a></li>
+</ul>
+</nav>
+</header>
+<script>
+ MathJax = {
+     tex: {
+         inlineMath: [['$','$'], ['\\(', '\\)']]
+     }
+ };
+</script> 
+<script type="text/javascript" rel="preconnect" id="MathJax-script"
+async src=
+"https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<main class="content" role="main">
+<article class="article h-entry" itemprop="mainEntity" itemscope
+itemtype="http://schema.org/BlogPosting">
+<div class="single-note note-container">
+<h1 class="article-title p-name" itemprop="name">Cellular
+automata</h1>
+<div class="article-content e-content p-name" itemprop=
+"articleBody">
+<dl>
+<dt>tags</dt>
+<dd><a href="/notes/20200301200824_emergence/">emergence</a>,
+<a href="/notes/20200301200841_chaos/">chaos</a>, <a href=
+"/notes/20200301201821_artificial_intelligence/">artificial
+intelligence</a></dd>
+</dl>
+<h2 id="evolution-and-cas">Evolution and CAs</h2>
+<p>Why would things <a href=
+"/notes/20200301192607_evolution/">evolve</a> in a CA? I was
+running interesting CAs for several 100s of thousands of steps
+recently and realized that I did not really know what I would be
+expecting to happen in one of those without any input from outside.
+Could it be that, by just pure luck, some things start to evolve in
+it? That some species or <em>life-like forms</em> emerge?</p>
+<p>If this is even possible, what are the odds of this happening?
+Was it how it worked in our case (earth)? Did just random particle
+interactions in a large soup gave rise to a complete miracle? So
+far from my experiment I have seen complex previously unseen
+structures emerge during an automaton evolution, but this has never
+gone farther than just a few big structures appearing and not
+staying this way. I believe it is a bias to think that those
+structures would have been suited to keep evolving because their
+brittleness did not let them survive. Therefore the (unpractical)
+way forward might be to let those things run and see what happens,
+where the “surviving” would be the ones left after all this.</p>
+<p>I’m wondering whether some kind of external input to those small
+“universe” could help give rise to more complex behavior. Because I
+am starting to think that even with the most efficient system
+possible, the probability of seeing a <a href=
+"/notes/20200301192936_complexity/">complex structure</a> appearing
+decreases somewhat exponentially with the <em>complexity</em> of
+the structure (or according to a power law).</p>
+<p>Obviously I have no idea about all this and this is just based
+on speculation. But I’ve yet to see reasonable evidence that we can
+run a CA for a large number of time steps without any kind of input
+and see this increase in complexity happen by itself. Maybe the key
+would be to help it? But is it even possible?</p>
+<h3 id="playing-god-with-cellular-automata">Playing god with
+cellular automata</h3>
+<p>Added: <span class="timestamp-wrapper"><span class=
+"timestamp">[2020-02-26 Wed 15:33]</span></span></p>
+<p>I believe an exciting part of working on spontaneous emergence,
+artificial evolution, and cellular automata is the fact that it
+really feels like playing god with a <em>microverse</em>. Some
+relevant recent pop-cultures examples include:</p>
+<ul>
+<li>
+<p>Rick and morty <a href=
+"https://rickandmorty.fandom.com/wiki/The%5FRicks%5FMust%5FBe%5FCrazy">
+Season 2 Episode 6: The Ricks Must Be Crazy</a></p>
+</li>
+<li>
+<p>Love, Death & Robot <a href=
+"https://en.wikipedia.org/wiki/Love,%5FDeath%5F%26%5FRobots#Episodes">
+Episode 16: Ice Age</a></p>
+<p>Each one of those cellular automaton is a universe, with is laws
+of physics (update rule) and initial big bang-like configuration
+(the initial state). Most combinations of the laws of physics are
+not stable and create a completely disordered system, but some rare
+configurations give rise to large structures sifting through space
+and exhibit highly non-trivial macro behavior (2-3 cells wide up to
+several 100s of cells-wide). Many of these structures interact in
+different ways, some create siblings and children structures while
+other get destroyed very quickly.</p>
+<p>This transition from randomness to order could be seen in the
+case of our universe as the 4 physical forces pulling together
+particles into bigger and bigger structures which form a large
+system with a lot of emptiness and some localized structures. In
+this analogy, our planet and even our galaxy are just a microscopic
+ripple on of those giant structures, but what if we could make this
+kind of ripple happen in a much smaller universe, with much simpler
+laws? This is more or less what we are trying to achieve with
+cellular automata.</p>
+<p>Obviously starting from scratch is hard, and it might not be
+necessary to let this <em>microverse</em> evolve in a closed way
+without interacting with it somehow.</p>
+</li>
+</ul>
+<h2 id="coarse-graining-ca">Coarse-graining CA</h2>
+<p>Added: <span class="timestamp-wrapper"><span class=
+"timestamp">[2020-02-21 Fri 10:48]</span></span></p>
+<p>I am very attracted to this idea of coarse graining CAs. This is
+reminiscent of physical systems where the inner working of a system
+are mostly opaque to an observer and we only see a complex
+macro-behavior. In the case of CAs this might be the key to
+overcoming this problem of seemingly impossible increase of
+complexity beyond a certain point if we keep looking at individual
+cells. This also allows an external observer to understand a
+comlpex behavior happening in billions of cells visually. It can be
+done with <a href=
+"/notes/20200301200248_autoencoders/">autoencoders</a>.</p>
+<h2 id=
+"cellular-automata-and-reaction-diffusion--20200302111831-reaction-diffusion-dot-md--systems">
+Cellular automata and <a href=
+"/notes/20200302111831_reaction_diffusion/">reaction-diffusion</a>
+systems</h2>
+<p>Added: <span class="timestamp-wrapper"><span class=
+"timestamp">[2020-02-26 Wed 10:52]</span></span></p>
+<p>I just realized that cellular automata and reaction-diffusion
+systems are strongly related. This might be a well known fact but
+it seemed particularly striking when looking at the following image
+from <a id="1b843574876b0429c1d05e1428f7b42b" href=
+"#manukyanLivingMesoscopicCellular2017a">(Manukyan et al.,
+2017)</a> it seems clear that there is a continum between the two
+models.</p>
+<figure><img src="./img/ca_reaction_diffusion.jpg"></figure>
+<h2 id=
+"cellular-automata-as-cnn--20200302110556-convolutional-neural-networks-dot-md--s">
+Cellular automata as <a href=
+"/notes/20200302110556_convolutional_neural_networks/">CNN</a>s</h2>
+<p>Added: <span class="timestamp-wrapper"><span class=
+"timestamp">[2020-03-02 Mon 11:09]</span></span></p>
+<p>Cellular automata can easily be represented as CNNs. This
+relation has already been investigated in <a id=
+"feab210e96cd376dff269508ad415b85" href=
+"#gilpinCellularAutomataConvolutional2018">(Gilpin, 2018)</a> or
+<a id="b71c53b928ac63b5999b34d6c7621b33" href=
+"#mordvintsevGrowingNeuralCellular2020">(Mordvintsev et al.,
+2020)</a> for instance. This idea has advantages and drawbacks:</p>
+<ul>
+<li>Computational cost of using floating points operations is
+higher than discrete operations.</li>
+<li>Discrete operations can lead to exponential growth of the
+number of possible configurations and update rules in a CA.</li>
+<li>The use of floating point operations is mainly there to be able
+to compute gradients for gradient based optimization. This is
+against a <em>non-supervised</em> philosophy I am trying to work
+on.</li>
+<li>Ultimately computations in a computer are discrete and
+Mordvintsev et al. eventually use quantization to discretize the
+CA, resulting in an approximation of a discrete automaton.</li>
+</ul>
+<h2 id=
+"cellular-automata-in-image-processing--20200305194144-computer-vision-dot-md">
+Cellular automata in <a href=
+"/notes/20200305194144-computer_vision/">Image processing</a></h2>
+<p>Papers about using cellular automata in image processing <a id=
+"21fd79b1cbc2adad7aa9ab4242f973fa" href=
+"#selvapeterCellularAutomataImage2009">(Selvapeter & Wim Hordijk,
+2009)</a><a>,</a> <a id="45aa9a0bc8fe3b0fc110b5cb92b84a3e" href=
+"#wongthanavasuCellularAutomataPattern2013">(Wongthanavasu &
+Ponkaew, 2013)</a></p>
+<p>Some cellular automata have a characteristic “blob-preserving”
+behavior where parts of the space get organized in large blobs.
+This behavior is very similar to an application of <a href=
+"https://en.wikipedia.org/wiki/Median%5Ffilter">local median</a>.
+See this <a href=
+"https://twitter.com/gabrielpeyre/status/987233288187150338">twitter
+link</a> for an animated example.</p>
+<h2 id="ca-as-regular-languages">CA as regular languages</h2>
+<blockquote>
+<p>From <a id="503425f3f76268db675ebba9298de60d" href=
+"#hansonComputationalMechanicsCellular1997">(Hanson & Crutchfield,
+1997)</a>:</p>
+<p><a href="/notes/20200324162136-finite_state_machines/">Finite
+state machines</a> are appropriate for investigating pattern
+dynamics of CAs for a number of reasons, among which we may note
+the following:</p>
+<ul>
+<li>FAs encompass the full range of behavior types from periodic to
+complex to random;</li>
+<li>Characterization of patterns using FAs makes possible a
+definition of pattern complexity which is both natural and
+computable in practice;</li>
+<li>Ensemble evolution in the space of regular languages is closed
+under the CA rule;</li>
+<li>The CA update rule is itself an FST;</li>
+<li>Automated inference techniques exist for reconstructing FAs
+from experimental data</li>
+</ul>
+</blockquote>
+<h1 id="bibliography">Bibliography</h1>
+<p><a id="manukyanLivingMesoscopicCellular2017a" target=
+"_blank">Manukyan, L., Montandon, S. A., Fofonjka, A., Smirnov, S.,
+& Milinkovitch, M. C., <em>A living mesoscopic cellular automaton
+made of skin scales</em>, Nature, <em>544(7649)</em>, 173–179
+(2017).</a> <a href=
+"http://dx.doi.org/10.1038/nature22031">http://dx.doi.org/10.1038/nature22031</a>
+<a href="#1b843574876b0429c1d05e1428f7b42b">↩</a></p>
+<p><a id="gilpinCellularAutomataConvolutional2018" target=
+"_blank">Gilpin, W., <em>Cellular automata as convolutional neural
+networks</em>, arXiv:1809.02942 [cond-mat, physics:nlin,
+physics:physics], <em>()</em>, (2018).</a> <a href=
+"#feab210e96cd376dff269508ad415b85">↩</a></p>
+<p><a id="mordvintsevGrowingNeuralCellular2020" target=
+"_blank">Mordvintsev, A., Randazzo, E., Niklasson, E., & Levin, M.,
+<em>Growing Neural Cellular Automata</em>, Distill, <em>5(2)</em>,
+23 (2020).</a> <a href=
+"http://dx.doi.org/10.23915/distill.00023">http://dx.doi.org/10.23915/distill.00023</a>
+<a href="#b71c53b928ac63b5999b34d6c7621b33">↩</a></p>
+<p><a id="selvapeterCellularAutomataImage2009" target=
+"_blank">Selvapeter, P. J., & Wim Hordijk, <em>Cellular automata
+for image noise filtering</em>, In , 2009 {{World Congress}} on
+{{Nature}} & {{Biologically Inspired Computing}} ({{NaBIC}}) (pp.
+193–197) (2009). {Coimbatore, India}: {IEEE}.</a> <a href=
+"#21fd79b1cbc2adad7aa9ab4242f973fa">↩</a></p>
+<p><a id="wongthanavasuCellularAutomataPattern2013" target=
+"_blank">Wongthanavasu, S., & Ponkaew, J., <em>Cellular Automata
+for Pattern Recognition</em>, In A. Salcido (Eds.), Emerging
+{{Applications}} of {{Cellular Automata}} (pp. ) (2013). :
+{InTech}.</a> <a href="#45aa9a0bc8fe3b0fc110b5cb92b84a3e">↩</a></p>
+<p><a id="hansonComputationalMechanicsCellular1997" target=
+"_blank">Hanson, J. E., & Crutchfield, J. P., <em>Computational
+mechanics of cellular automata: An example</em>, Physica D:
+Nonlinear Phenomena, <em>103(1)</em>, 169–189 (1997).</a> <a href=
+"http://dx.doi.org/10.1016/S0167-2789(96)00259-X">http://dx.doi.org/10.1016/S0167-2789(96)00259-X</a>
+<a href="#503425f3f76268db675ebba9298de60d">↩</a></p>
+<h2 id="backlinks">Backlinks</h2>
+<ul>
+<li><a href=
+"/notes/20200302191410_turing_completeness/">Turing-completeness</a></li>
+<li><a href="/notes/20200301202542_boltzmann_brain/">Boltzmann
+brain</a></li>
+<li><a href=
+"/notes/20200301192144_open_ended_evolution/">Open-ended
+Evolution</a></li>
+</ul>
+</div>
+<div class="note-footer">Last changed <a class="u-url" href=
+"https://hugocisneros.com/notes/20200301192434_cellular_automata/"><time itemprop="datePublished"
+class="dt-published" datetime=
+"2020-03-27T18:45:25+0100">27/03/2020</time></a> | authored by
+<a href="https://hugocisneros.com/" rel="author" class=
+"p-author h-card" itemprop="author" itemscope itemtype=
+"http://schema.org/Person"><span itemprop="name">Hugo
+Cisneros</span></a></div>
+</div>
+</article>
+<br>
+<a href="/notes#20200301192434_cellular_automata"><b>← Back to
+Notes</b></a>
+<hr></main>
+<footer class="footer">
+<ul class="footer-links">
+<li><a href="/blog/index.xml" type="application/rss+xml" target=
+"_blank">Blog RSS feed</a></li>
+<li><a href=
+"https://github.com/hugcis/natrium-custom">Code</a></li>
+</ul>
+</footer>
+</div>
+</body>
+</html>

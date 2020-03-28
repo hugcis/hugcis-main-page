@@ -11,21 +11,97 @@
     
     
     <item>
-      <title></title>
-      <link>https://hugocisneros.com/notes/20200212103300/</link>
-      <pubDate>Wed, 12 Feb 2020 10:33:00 +0100</pubDate>
+      <title>Algorithmic Information theory</title>
+      <link>https://hugocisneros.com/notes/20200302174626_algorithmic_information_theory/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://hugocisneros.com/notes/20200212103300/</guid>
-      <description>Some cellular automata have a characteristic &amp;ldquo;blob-preserving&amp;rdquo; behavior where parts of the space get organized in large blobs. This behavior is very similar to an application of local median. See this twitter link for an animated example.</description>
+      <guid>https://hugocisneros.com/notes/20200302174626_algorithmic_information_theory/</guid>
+      <description>Backlinks  Halting probability Algorithmic probability Kolmogorov complexity Minimum description length Complexity  </description>
     </item>
     
     <item>
-      <title></title>
-      <link>https://hugocisneros.com/notes/20200210213313/</link>
-      <pubDate>Mon, 10 Feb 2020 21:33:13 +0100</pubDate>
+      <title>Algorithmic probability</title>
+      <link>https://hugocisneros.com/notes/20200307161827-algorithmic_probability/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://hugocisneros.com/notes/20200210213313/</guid>
-      <description>What is complexity?: The question is very much too vast to be answered in a written piece smaller than a whole book. I am planning on dedicating an entire post about measuring complexity with a range of metrics that people have come up with in the past. A big question I&amp;rsquo;m asking myself is: &amp;ldquo;How much does complexity depend on subjectivity and the observer?&amp;rdquo;</description>
+      <guid>https://hugocisneros.com/notes/20200307161827-algorithmic_probability/</guid>
+      <description> tags complexity, algorithmic information theory  </description>
+    </item>
+    
+    <item>
+      <title>Artificial Intelligence</title>
+      <link>https://hugocisneros.com/notes/20200301201821_artificial_intelligence/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/20200301201821_artificial_intelligence/</guid>
+      <description>Backlinks  Machine learning Compression Cellular automata Open-ended Evolution  </description>
+    </item>
+    
+    <item>
+      <title>Artificial life</title>
+      <link>https://hugocisneros.com/notes/20200301203351_artificial_life/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/20200301203351_artificial_life/</guid>
+      <description>Backlinks  Evolution Open-ended Evolution  </description>
+    </item>
+    
+    <item>
+      <title>Autoencoders</title>
+      <link>https://hugocisneros.com/notes/20200301200248_autoencoders/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/20200301200248_autoencoders/</guid>
+      <description>tags neural networks, data representation  Autoencoders and PCA Added: [2020-02-25 Tue 21:21]
+The relation between Autoencoders and PCA is strong. In particular, a very small autoencoder with only linear activations seems intuitively very close to PCA decomposition. (Bourlard &amp;amp; Kamp, 1988) gives an interesting analysis of the uselessness of the activation functions in the encoding layers of an autoencoder when there is no activations in the output layers. In that case, autoencoding is closely related to a sinigular value decomposition of the input data.</description>
+    </item>
+    
+    <item>
+      <title>Berry&#39;s paradox</title>
+      <link>https://hugocisneros.com/notes/20200306223742-berry_s_paradox/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/20200306223742-berry_s_paradox/</guid>
+      <description>Berry&amp;rsquo;s paradox is a sentence of the form &amp;ldquo;The smallest positive integer not definable in under sixty letters&amp;rdquo; (a phrase with fifty-seven letters).
+An argument very similar to Berry&amp;rsquo;s paradox is used in the proof of uncomputability of Kolmogorov complexity.
+Resolution An interesting study and resolution of Berry&amp;rsquo;s paradox</description>
+    </item>
+    
+    <item>
+      <title>Boltzmann brain</title>
+      <link>https://hugocisneros.com/notes/20200301202542_boltzmann_brain/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/20200301202542_boltzmann_brain/</guid>
+      <description>tags physics, statistical physics  Boltzmann brain Added: [2020-02-24 Mon 14:17]
+Boltzmann brain is an interesting concept offered initially in response to one of Ludwig Boltzmann&amp;rsquo;s explanation for the low-entropy state of the Universe. He hypothesized that even a fully random universe would fluctuate towards lower-entropy states. The issue is that many phenomenon such as evolved life on Earth are so far from equilibrium they are extremely unlikely to have happened.</description>
+    </item>
+    
+    <item>
+      <title>C</title>
+      <link>https://hugocisneros.com/notes/20200309083200-c/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/20200309083200-c/</guid>
+      <description> tags programming language  </description>
+    </item>
+    
+    <item>
+      <title>Cellular automata</title>
+      <link>https://hugocisneros.com/notes/20200301192434_cellular_automata/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/20200301192434_cellular_automata/</guid>
+      <description>tags emergence, chaos, artificial intelligence  Evolution and CAs Why would things evolve in a CA? I was running interesting CAs for several 100s of thousands of steps recently and realized that I did not really know what I would be expecting to happen in one of those without any input from outside. Could it be that, by just pure luck, some things start to evolve in it? That some species or life-like forms emerge?</description>
+    </item>
+    
+    <item>
+      <title>Chaos</title>
+      <link>https://hugocisneros.com/notes/20200301200841_chaos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/20200301200841_chaos/</guid>
+      <description>Backlinks  Cellular automata  </description>
     </item>
     
   </channel>
