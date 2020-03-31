@@ -20,7 +20,7 @@
 <meta name="twitter:site" content="@cisne_hug">
 <meta name="twitter:creator" content="@cisne_hug">
 <link rel="stylesheet" href=
-"https://hugocisneros.com/css/main.min.a40a4b4f3be57cafa0a799f34263b26679d87c1456d11db1da8c0cb45b0f724c.css"
+"https://hugocisneros.com/css/main.min.4f329886c557f10950f8b8c3ec6b56b5b4af342ab1b6295e49e7c8c9b627985b.css"
 media="all" type="text/css">
 <link rel="apple-touch-icon" sizes="180x180" href=
 "/apple-touch-icon.png">
@@ -52,360 +52,650 @@ media="all" type="text/css">
 </ul>
 </nav>
 </header>
+<script src="https://d3js.org/d3.v5.min.js"></script> 
+<script src="/js/graph.js"></script>
 <main class="content h-feed">
 <h1 class="p-name">Notes</h1>
-<p>This is a collection of notes about several topics I’m
-interested in at the moment and I feel I have things to say about.
-This content will not be structured, sourced or checked like a blog
-post might be. I use it mainly as a way of remembering things I
-think about while going through the filter of posting in public
-that might help me think twice about what I say. Also, someone
-might someday react to something I said and engage in an
-interesting debate or simply correct some of my mistakes?</p>
+<p>This is a collection of notes about several topics I’m either
+interested in — or working on — at the moment or I feel I have
+things to say about.</p>
+<p>This content is automatically generated from my <a href=
+"https://org-roam.readthedocs.io/">org-roam</a> notes. The
+generation process is inspired from <a href=
+"https://github.com/jethrokuan/">jethrokuan</a>‘s <a href=
+"https://braindump.jethro.dev/">braindump</a>. It uses <a href=
+"https://ox-hugo.scripter.co/">ox-hugo</a> and <a href=
+"https://github.com/jethrokuan/org-ref-ox-hugo">org-ref-ox-hugo</a>
+for citation management.</p>
+<p>I use it as a way of remembering things while going through the
+filter of posting in public that might help me think twice about
+what I say and make sure I understand.</p>
+<hr>
 <hr>
 <div class="note_list_container" itemscope itemtype=
-"http://schema.org/Blog"><input type="text" id="search_input"
-onkeyup="search_function()" placeholder="Search for notes...">
+"http://schema.org/Blog">
+<h2><label>Search for notes...</label></h2>
+<label><input type="text" id="search_input" onkeyup=
+"search_function()" placeholder="Search for notes..."></label>
 <ul class="note_list" id="note_list">
+<li class="single-note h-entry" id=
+"20200330105209-adversarial_examples"><a class="u-url" href=
+"https://hugocisneros.com/notes/20200330105209-adversarial_examples/"
+title="Adversarial examples">
+<h3 class="single-note-title">Adversarial examples</h3>
+</a></li>
 <li class="single-note h-entry" id=
 "20200302174626_algorithmic_information_theory"><a class="u-url"
 href=
-"https://hugocisneros.com/notes/20200302174626_algorithmic_information_theory/">
-<h3>Algorithmic Information theory</h3>
+"https://hugocisneros.com/notes/20200302174626_algorithmic_information_theory/"
+title="Algorithmic Information theory">
+<h3 class="single-note-title">Algorithmic Information theory</h3>
 </a></li>
 <li class="single-note h-entry" id=
 "20200307161827-algorithmic_probability"><a class="u-url" href=
-"https://hugocisneros.com/notes/20200307161827-algorithmic_probability/">
-<h3>Algorithmic probability</h3>
+"https://hugocisneros.com/notes/20200307161827-algorithmic_probability/"
+title="Algorithmic probability">
+<h3 class="single-note-title">Algorithmic probability</h3>
 </a></li>
 <li class="single-note h-entry" id=
 "20200301201821_artificial_intelligence"><a class="u-url" href=
-"https://hugocisneros.com/notes/20200301201821_artificial_intelligence/">
-<h3>Artificial Intelligence</h3>
+"https://hugocisneros.com/notes/20200301201821_artificial_intelligence/"
+title="Artificial Intelligence">
+<h3 class="single-note-title">Artificial Intelligence</h3>
 </a></li>
 <li class="single-note h-entry" id=
 "20200301203351_artificial_life"><a class="u-url" href=
-"https://hugocisneros.com/notes/20200301203351_artificial_life/">
-<h3>Artificial life</h3>
+"https://hugocisneros.com/notes/20200301203351_artificial_life/"
+title="Artificial life">
+<h3 class="single-note-title">Artificial life</h3>
 </a></li>
 <li class="single-note h-entry" id="20200301200248_autoencoders">
 <a class="u-url" href=
-"https://hugocisneros.com/notes/20200301200248_autoencoders/">
-<h3>Autoencoders</h3>
+"https://hugocisneros.com/notes/20200301200248_autoencoders/"
+title="Autoencoders">
+<h3 class="single-note-title">Autoencoders</h3>
 </a></li>
 <li class="single-note h-entry" id=
 "20200306223742-berry_s_paradox"><a class="u-url" href=
-"https://hugocisneros.com/notes/20200306223742-berry_s_paradox/">
-<h3>Berry's paradox</h3>
+"https://hugocisneros.com/notes/20200306223742-berry_s_paradox/"
+title="Berry's paradox">
+<h3 class="single-note-title">Berry's paradox</h3>
 </a></li>
 <li class="single-note h-entry" id=
 "20200301202542_boltzmann_brain"><a class="u-url" href=
-"https://hugocisneros.com/notes/20200301202542_boltzmann_brain/">
-<h3>Boltzmann brain</h3>
+"https://hugocisneros.com/notes/20200301202542_boltzmann_brain/"
+title="Boltzmann brain">
+<h3 class="single-note-title">Boltzmann brain</h3>
 </a></li>
 <li class="single-note h-entry" id="20200309083200-c"><a class=
-"u-url" href="https://hugocisneros.com/notes/20200309083200-c/">
-<h3>C</h3>
+"u-url" href="https://hugocisneros.com/notes/20200309083200-c/"
+title="C">
+<h3 class="single-note-title">C</h3>
 </a></li>
 <li class="single-note h-entry" id=
 "20200301192434_cellular_automata"><a class="u-url" href=
-"https://hugocisneros.com/notes/20200301192434_cellular_automata/">
-<h3>Cellular automata</h3>
+"https://hugocisneros.com/notes/20200301192434_cellular_automata/"
+title="Cellular automata">
+<h3 class="single-note-title">Cellular automata</h3>
 </a></li>
 <li class="single-note h-entry" id="20200301200841_chaos"><a class=
-"u-url" href=
-"https://hugocisneros.com/notes/20200301200841_chaos/">
-<h3>Chaos</h3>
+"u-url" href="https://hugocisneros.com/notes/20200301200841_chaos/"
+title="Chaos">
+<h3 class="single-note-title">Chaos</h3>
 </a></li>
 <li class="single-note h-entry" id=
 "20200309201505-church_turing_thesis"><a class="u-url" href=
-"https://hugocisneros.com/notes/20200309201505-church_turing_thesis/">
-<h3>Church-Turing thesis</h3>
+"https://hugocisneros.com/notes/20200309201505-church_turing_thesis/"
+title="Church-Turing thesis">
+<h3 class="single-note-title">Church-Turing thesis</h3>
 </a></li>
 <li class="single-note h-entry" id="20200301195652_coding">
 <a class="u-url" href=
-"https://hugocisneros.com/notes/20200301195652_coding/">
-<h3>Coding</h3>
+"https://hugocisneros.com/notes/20200301195652_coding/" title=
+"Coding">
+<h3 class="single-note-title">Coding</h3>
 </a></li>
 <li class="single-note h-entry" id=
 "20200326095416-combinatory_logic"><a class="u-url" href=
-"https://hugocisneros.com/notes/20200326095416-combinatory_logic/">
-<h3>Combinatory logic</h3>
+"https://hugocisneros.com/notes/20200326095416-combinatory_logic/"
+title="Combinatory logic">
+<h3 class="single-note-title">Combinatory logic</h3>
 </a></li>
 <li class="single-note h-entry" id=
 "20200302174825_complex_systems"><a class="u-url" href=
-"https://hugocisneros.com/notes/20200302174825_complex_systems/">
-<h3>Complex Systems</h3>
+"https://hugocisneros.com/notes/20200302174825_complex_systems/"
+title="Complex Systems">
+<h3 class="single-note-title">Complex Systems</h3>
 </a></li>
 <li class="single-note h-entry" id="20200301192936_complexity">
 <a class="u-url" href=
-"https://hugocisneros.com/notes/20200301192936_complexity/">
-<h3>Complexity</h3>
+"https://hugocisneros.com/notes/20200301192936_complexity/" title=
+"Complexity">
+<h3 class="single-note-title">Complexity</h3>
+</a></li>
+<li class="single-note h-entry" id=
+"20200330163905-complexity_of_cellular_automata"><a class="u-url"
+href=
+"https://hugocisneros.com/notes/20200330163905-complexity_of_cellular_automata/"
+title="Complexity of cellular automata">
+<h3 class="single-note-title">Complexity of cellular automata</h3>
 </a></li>
 <li class="single-note h-entry" id="20200301204253_compression">
 <a class="u-url" href=
-"https://hugocisneros.com/notes/20200301204253_compression/">
-<h3>Compression</h3>
+"https://hugocisneros.com/notes/20200301204253_compression/" title=
+"Compression">
+<h3 class="single-note-title">Compression</h3>
 </a></li>
 <li class="single-note h-entry" id=
 "20200306221256-computability_theory"><a class="u-url" href=
-"https://hugocisneros.com/notes/20200306221256-computability_theory/">
-<h3>Computability theory</h3>
+"https://hugocisneros.com/notes/20200306221256-computability_theory/"
+title="Computability theory">
+<h3 class="single-note-title">Computability theory</h3>
 </a></li>
 <li class="single-note h-entry" id=
 "20200305194144-computer_vision"><a class="u-url" href=
-"https://hugocisneros.com/notes/20200305194144-computer_vision/">
-<h3>Computer vision</h3>
+"https://hugocisneros.com/notes/20200305194144-computer_vision/"
+title="Computer vision">
+<h3 class="single-note-title">Computer vision</h3>
 </a></li>
 <li class="single-note h-entry" id=
 "20200302110556_convolutional_neural_networks"><a class="u-url"
 href=
-"https://hugocisneros.com/notes/20200302110556_convolutional_neural_networks/">
-<h3>convolutional neural networks</h3>
+"https://hugocisneros.com/notes/20200302110556_convolutional_neural_networks/"
+title="Convolutional neural networks">
+<h3 class="single-note-title">Convolutional neural networks</h3>
 </a></li>
 <li class="single-note h-entry" id=
 "20200301200414_data_representation"><a class="u-url" href=
-"https://hugocisneros.com/notes/20200301200414_data_representation/">
-<h3>Data representation</h3>
+"https://hugocisneros.com/notes/20200301200414_data_representation/"
+title="Data representation">
+<h3 class="single-note-title">Data representation</h3>
 </a></li>
 <li class="single-note h-entry" id=
 "20200312122526-decentralization"><a class="u-url" href=
-"https://hugocisneros.com/notes/20200312122526-decentralization/">
-<h3>Decentralization</h3>
+"https://hugocisneros.com/notes/20200312122526-decentralization/"
+title="Decentralization">
+<h3 class="single-note-title">Decentralization</h3>
 </a></li>
 <li class="single-note h-entry" id=
 "20200312122604-economic_liberalism"><a class="u-url" href=
-"https://hugocisneros.com/notes/20200312122604-economic_liberalism/">
-<h3>Economic liberalism</h3>
+"https://hugocisneros.com/notes/20200312122604-economic_liberalism/"
+title="Economic liberalism">
+<h3 class="single-note-title">Economic liberalism</h3>
 </a></li>
 <li class="single-note h-entry" id="20200312122619-economics">
 <a class="u-url" href=
-"https://hugocisneros.com/notes/20200312122619-economics/">
-<h3>Economics</h3>
+"https://hugocisneros.com/notes/20200312122619-economics/" title=
+"Economics">
+<h3 class="single-note-title">Economics</h3>
+</a></li>
+<li class="single-note h-entry" id=
+"20200330150814-elementary_cellular_automata"><a class="u-url"
+href="https://hugocisneros.com/notes/20200330150814-elementary_cellular_automata/"
+title="Elementary cellular automata">
+<h3 class="single-note-title">Elementary cellular automata</h3>
 </a></li>
 <li class="single-note h-entry" id="20200301200824_emergence">
 <a class="u-url" href=
-"https://hugocisneros.com/notes/20200301200824_emergence/">
-<h3>Emergence</h3>
+"https://hugocisneros.com/notes/20200301200824_emergence/" title=
+"Emergence">
+<h3 class="single-note-title">Emergence</h3>
 </a></li>
 <li class="single-note h-entry" id="20200308141605-entropy">
 <a class="u-url" href=
-"https://hugocisneros.com/notes/20200308141605-entropy/">
-<h3>Entropy</h3>
+"https://hugocisneros.com/notes/20200308141605-entropy/" title=
+"Entropy">
+<h3 class="single-note-title">Entropy</h3>
 </a></li>
 <li class="single-note h-entry" id=
 "20200305144401_epsilon_machines"><a class="u-url" href=
-"https://hugocisneros.com/notes/20200305144401_epsilon_machines/">
-<h3>Epsilon machines</h3>
+"https://hugocisneros.com/notes/20200305144401_epsilon_machines/"
+title="Epsilon machines">
+<h3 class="single-note-title">Epsilon machines</h3>
 </a></li>
 <li class="single-note h-entry" id="20200301195531_evaluating_nlp">
 <a class="u-url" href=
-"https://hugocisneros.com/notes/20200301195531_evaluating_nlp/">
-<h3>Evaluating nlp</h3>
+"https://hugocisneros.com/notes/20200301195531_evaluating_nlp/"
+title="Evaluating nlp">
+<h3 class="single-note-title">Evaluating nlp</h3>
 </a></li>
 <li class="single-note h-entry" id="20200301192607_evolution">
 <a class="u-url" href=
-"https://hugocisneros.com/notes/20200301192607_evolution/">
-<h3>Evolution</h3>
+"https://hugocisneros.com/notes/20200301192607_evolution/" title=
+"Evolution">
+<h3 class="single-note-title">Evolution</h3>
 </a></li>
 <li class="single-note h-entry" id=
 "20200324162136-finite_state_machines"><a class="u-url" href=
-"https://hugocisneros.com/notes/20200324162136-finite_state_machines/">
-<h3>Finite state machines</h3>
+"https://hugocisneros.com/notes/20200324162136-finite_state_machines/"
+title="Finite state machines">
+<h3 class="single-note-title">Finite state machines</h3>
 </a></li>
 <li class="single-note h-entry" id=
 "20200302104952_genetic_algorithm"><a class="u-url" href=
-"https://hugocisneros.com/notes/20200302104952_genetic_algorithm/">
-<h3>Genetic algorithm</h3>
+"https://hugocisneros.com/notes/20200302104952_genetic_algorithm/"
+title="Genetic algorithm">
+<h3 class="single-note-title">Genetic algorithm</h3>
 </a></li>
 <li class="single-note h-entry" id=
 "20200310085049-godel_s_theorem"><a class="u-url" href=
-"https://hugocisneros.com/notes/20200310085049-godel_s_theorem/">
-<h3>Gödel's theorem</h3>
+"https://hugocisneros.com/notes/20200310085049-godel_s_theorem/"
+title="Gödel's theorem">
+<h3 class="single-note-title">Gödel's theorem</h3>
 </a></li>
 <li class="single-note h-entry" id=
 "20200307161958-halting_probability"><a class="u-url" href=
-"https://hugocisneros.com/notes/20200307161958-halting_probability/">
-<h3>Halting probability</h3>
+"https://hugocisneros.com/notes/20200307161958-halting_probability/"
+title="Halting probability">
+<h3 class="single-note-title">Halting probability</h3>
 </a></li>
 <li class="single-note h-entry" id=
 "20200310085721-halting_problem"><a class="u-url" href=
-"https://hugocisneros.com/notes/20200310085721-halting_problem/">
-<h3>Halting problem</h3>
+"https://hugocisneros.com/notes/20200310085721-halting_problem/"
+title="Halting problem">
+<h3 class="single-note-title">Halting problem</h3>
 </a></li>
 <li class="single-note h-entry" id="20200326095744-haskell_curry">
 <a class="u-url" href=
-"https://hugocisneros.com/notes/20200326095744-haskell_curry/">
-<h3>Haskell Curry</h3>
+"https://hugocisneros.com/notes/20200326095744-haskell_curry/"
+title="Haskell Curry">
+<h3 class="single-note-title">Haskell Curry</h3>
 </a></li>
 <li class="single-note h-entry" id=
 "20200302174634_information_theory"><a class="u-url" href=
-"https://hugocisneros.com/notes/20200302174634_information_theory/">
-<h3>Information theory</h3>
+"https://hugocisneros.com/notes/20200302174634_information_theory/"
+title="Information theory">
+<h3 class="single-note-title">Information theory</h3>
 </a></li>
 <li class="single-note h-entry" id=
 "20200326095736-john_von_neumann"><a class="u-url" href=
-"https://hugocisneros.com/notes/20200326095736-john_von_neumann/">
-<h3>John Von Neumann</h3>
+"https://hugocisneros.com/notes/20200326095736-john_von_neumann/"
+title="John Von Neumann">
+<h3 class="single-note-title">John Von Neumann</h3>
 </a></li>
 <li class="single-note h-entry" id=
 "20200303161448_kolmogorov_complexity"><a class="u-url" href=
-"https://hugocisneros.com/notes/20200303161448_kolmogorov_complexity/">
-<h3>Kolmogorov complexity</h3>
+"https://hugocisneros.com/notes/20200303161448_kolmogorov_complexity/"
+title="Kolmogorov complexity">
+<h3 class="single-note-title">Kolmogorov complexity</h3>
+</a></li>
+<li class="single-note h-entry" id="20200330224234-konrad_zuse">
+<a class="u-url" href=
+"https://hugocisneros.com/notes/20200330224234-konrad_zuse/" title=
+"Konrad Zuse">
+<h3 class="single-note-title">Konrad Zuse</h3>
 </a></li>
 <li class="single-note h-entry" id=
 "20200303144351_kullback_leibler_divergence"><a class="u-url" href=
-"https://hugocisneros.com/notes/20200303144351_kullback_leibler_divergence/">
-<h3>Kullback-leibler divergence</h3>
+"https://hugocisneros.com/notes/20200303144351_kullback_leibler_divergence/"
+title="Kullback-leibler divergence">
+<h3 class="single-note-title">Kullback-leibler divergence</h3>
 </a></li>
 <li class="single-note h-entry" id=
 "20200302192248_lambda_calculus"><a class="u-url" href=
-"https://hugocisneros.com/notes/20200302192248_lambda_calculus/">
-<h3>Lambda calculus</h3>
+"https://hugocisneros.com/notes/20200302192248_lambda_calculus/"
+title="Lambda calculus">
+<h3 class="single-note-title">Lambda calculus</h3>
 </a></li>
 <li class="single-note h-entry" id="20200301221715_language">
 <a class="u-url" href=
-"https://hugocisneros.com/notes/20200301221715_language/">
-<h3>Language</h3>
+"https://hugocisneros.com/notes/20200301221715_language/" title=
+"Language">
+<h3 class="single-note-title">Language</h3>
 </a></li>
 <li class="single-note h-entry" id=
 "20200303163017_lempel_ziv_welch_algorithm"><a class="u-url" href=
-"https://hugocisneros.com/notes/20200303163017_lempel_ziv_welch_algorithm/">
-<h3>Lempel-Ziv-Welch algorithm</h3>
+"https://hugocisneros.com/notes/20200303163017_lempel_ziv_welch_algorithm/"
+title="Lempel-Ziv-Welch algorithm">
+<h3 class="single-note-title">Lempel-Ziv-Welch algorithm</h3>
 </a></li>
 <li class="single-note h-entry" id="20200301203409_life"><a class=
-"u-url" href="https://hugocisneros.com/notes/20200301203409_life/">
-<h3>Life</h3>
+"u-url" href="https://hugocisneros.com/notes/20200301203409_life/"
+title="Life">
+<h3 class="single-note-title">Life</h3>
 </a></li>
 <li class="single-note h-entry" id="20200310085514-logic"><a class=
-"u-url" href=
-"https://hugocisneros.com/notes/20200310085514-logic/">
-<h3>Logic</h3>
+"u-url" href="https://hugocisneros.com/notes/20200310085514-logic/"
+title="Logic">
+<h3 class="single-note-title">Logic</h3>
 </a></li>
 <li class="single-note h-entry" id=
 "20200301201527_machine_learning"><a class="u-url" href=
-"https://hugocisneros.com/notes/20200301201527_machine_learning/">
-<h3>Machine learning</h3>
+"https://hugocisneros.com/notes/20200301201527_machine_learning/"
+title="Machine learning">
+<h3 class="single-note-title">Machine learning</h3>
 </a></li>
 <li class="single-note h-entry" id=
 "20200309215544-minimum_description_length"><a class="u-url" href=
-"https://hugocisneros.com/notes/20200309215544-minimum_description_length/">
-<h3>Minimum description length</h3>
+"https://hugocisneros.com/notes/20200309215544-minimum_description_length/"
+title="Minimum description length">
+<h3 class="single-note-title">Minimum description length</h3>
 </a></li>
 <li class="single-note h-entry" id="20200324162745-morphogenesis">
 <a class="u-url" href=
-"https://hugocisneros.com/notes/20200324162745-morphogenesis/">
-<h3>Morphogenesis</h3>
+"https://hugocisneros.com/notes/20200324162745-morphogenesis/"
+title="Morphogenesis">
+<h3 class="single-note-title">Morphogenesis</h3>
 </a></li>
 <li class="single-note h-entry" id="20200302110215_neat"><a class=
-"u-url" href="https://hugocisneros.com/notes/20200302110215_neat/">
-<h3>NEAT</h3>
+"u-url" href="https://hugocisneros.com/notes/20200302110215_neat/"
+title="NEAT">
+<h3 class="single-note-title">NEAT</h3>
 </a></li>
 <li class="single-note h-entry" id=
 "20200302104848_neural_architecture_search"><a class="u-url" href=
-"https://hugocisneros.com/notes/20200302104848_neural_architecture_search/">
-<h3>Neural architecture search</h3>
+"https://hugocisneros.com/notes/20200302104848_neural_architecture_search/"
+title="Neural architecture search">
+<h3 class="single-note-title">Neural architecture search</h3>
 </a></li>
 <li class="single-note h-entry" id=
 "20200301200320_neural_networks"><a class="u-url" href=
-"https://hugocisneros.com/notes/20200301200320_neural_networks/">
-<h3>Neural networks</h3>
+"https://hugocisneros.com/notes/20200301200320_neural_networks/"
+title="Neural networks">
+<h3 class="single-note-title">Neural networks</h3>
 </a></li>
 <li class="single-note h-entry" id="20200301195553_nlp"><a class=
-"u-url" href="https://hugocisneros.com/notes/20200301195553_nlp/">
-<h3>NLP</h3>
+"u-url" href="https://hugocisneros.com/notes/20200301195553_nlp/"
+title="NLP">
+<h3 class="single-note-title">NLP</h3>
+</a></li>
+<li class="single-note h-entry" id=
+"beckhamadversarialmixupresynthesis2019"><a class="u-url" href=
+"https://hugocisneros.com/notes/beckhamadversarialmixupresynthesis2019/"
+title=
+"Notes on: Beckham, C., Honari, S., Verma, V., Lamb, A., Ghadiri, F., Hjelm, R. D., Bengio, Y., … (2019): On Adversarial Mixup Resynthesis">
+<h3 class="single-note-title">Beckham, C., Honari, S., Verma, V.,
+Lamb, A., Ghadiri, F., Hjelm, R. D., Bengio, Y., … (2019): On
+Adversarial Mixup Resynthesis</h3>
+</a></li>
+<li class="single-note h-entry" id=
+"cluneaigasaigeneratingalgorithms2019"><a class="u-url" href=
+"https://hugocisneros.com/notes/cluneaigasaigeneratingalgorithms2019/"
+title=
+"Notes on: Clune, J. (2019): AI-GAs: AI-generating algorithms, an alternate paradigm for producing general artificial intelligence">
+<h3 class="single-note-title">Clune, J. (2019): AI-GAs:
+AI-generating algorithms, an alternate paradigm for producing
+general artificial intelligence</h3>
+</a></li>
+<li class="single-note h-entry" id=
+"khalifapcgrlproceduralcontent2020"><a class="u-url" href=
+"https://hugocisneros.com/notes/khalifapcgrlproceduralcontent2020/"
+title=
+"Notes on: Khalifa, A., Bontrager, P., Earle, S., &amp; Togelius, J. (2020): PCGRL: Procedural Content Generation via Reinforcement Learning">
+<h3 class="single-note-title">Khalifa, A., Bontrager, P., Earle,
+S., & Togelius, J. (2020): PCGRL: Procedural Content Generation via
+Reinforcement Learning</h3>
+</a></li>
+<li class="single-note h-entry" id=
+"kruszewskicombinatorychemistrysimple2020"><a class="u-url" href=
+"https://hugocisneros.com/notes/kruszewskicombinatorychemistrysimple2020/"
+title=
+"Notes on: Kruszewski, G., &amp; Mikolov, T. (2020): Combinatory Chemistry: Towards a Simple Model of Emergent Evolution">
+<h3 class="single-note-title">Kruszewski, G., & Mikolov, T. (2020):
+Combinatory Chemistry: Towards a Simple Model of Emergent
+Evolution</h3>
+</a></li>
+<li class="single-note h-entry" id=
+"maziarkamoleculeattentiontransformer2020"><a class="u-url" href=
+"https://hugocisneros.com/notes/maziarkamoleculeattentiontransformer2020/"
+title=
+"Notes on: Maziarka, Ł., Danel, T., Mucha, S., Rataj, K., Tabor, J., &amp; Jastrzębski, S. (2020): Molecule Attention Transformer">
+<h3 class="single-note-title">Maziarka, Ł., Danel, T., Mucha, S.,
+Rataj, K., Tabor, J., & Jastrzębski, S. (2020): Molecule Attention
+Transformer</h3>
+</a></li>
+<li class="single-note h-entry" id=
+"mcsheacomplexityevolutionwhat1991"><a class="u-url" href=
+"https://hugocisneros.com/notes/mcsheacomplexityevolutionwhat1991/"
+title=
+"Notes on: McShea, D. W. (1991): Complexity and evolution: What everybody knows">
+<h3 class="single-note-title">McShea, D. W. (1991): Complexity and
+evolution: What everybody knows</h3>
+</a></li>
+<li class="single-note h-entry" id=
+"millerevolvingselfrepairingselfregulating2004"><a class="u-url"
+href=
+"https://hugocisneros.com/notes/millerevolvingselfrepairingselfregulating2004/"
+title=
+"Notes on: Miller, J. F. (2004): Evolving a self-repairing, self-regulating, French flag organism">
+<h3 class="single-note-title">Miller, J. F. (2004): Evolving a
+self-repairing, self-regulating, French flag organism</h3>
+</a></li>
+<li class="single-note h-entry" id=
+"mordvintsevgrowingneuralcellular2020"><a class="u-url" href=
+"https://hugocisneros.com/notes/mordvintsevgrowingneuralcellular2020/"
+title=
+"Notes on: Mordvintsev, A., Randazzo, E., Niklasson, E., &amp; Levin, M. (2020): Growing Neural Cellular Automata">
+<h3 class="single-note-title">Mordvintsev, A., Randazzo, E.,
+Niklasson, E., & Levin, M. (2020): Growing Neural Cellular
+Automata</h3>
+</a></li>
+<li class="single-note h-entry" id=
+"nehanivevolutionasynchronouscellular2003"><a class="u-url" href=
+"https://hugocisneros.com/notes/nehanivevolutionasynchronouscellular2003/"
+title=
+"Notes on: Nehaniv, C. L. (2003): Evolution in asynchronous cellular automata">
+<h3 class="single-note-title">Nehaniv, C. L. (2003): Evolution in
+asynchronous cellular automata</h3>
+</a></li>
+<li class="single-note h-entry" id=
+"phamefficientneuralarchitecture2018"><a class="u-url" href=
+"https://hugocisneros.com/notes/phamefficientneuralarchitecture2018/"
+title=
+"Notes on: Pham, H., Guan, M. Y., Zoph, B., Le, Q. V., &amp; Dean, J. (2018): Efficient Neural Architecture Search via Parameter Sharing">
+<h3 class="single-note-title">Pham, H., Guan, M. Y., Zoph, B., Le,
+Q. V., & Dean, J. (2018): Efficient Neural Architecture Search via
+Parameter Sharing</h3>
+</a></li>
+<li class="single-note h-entry" id=
+"sayamaseekingopenendedevolution2011"><a class="u-url" href=
+"https://hugocisneros.com/notes/sayamaseekingopenendedevolution2011/"
+title=
+"Notes on: Sayama, H. (2011): Seeking open-ended evolution in Swarm Chemistry">
+<h3 class="single-note-title">Sayama, H. (2011): Seeking open-ended
+evolution in Swarm Chemistry</h3>
+</a></li>
+<li class="single-note h-entry" id=
+"schmidhubercomputerscientistview1999"><a class="u-url" href=
+"https://hugocisneros.com/notes/schmidhubercomputerscientistview1999/"
+title=
+"Notes on: Schmidhuber, J. (1999): A Computer Scientist's View of Life, the Universe, and Everything">
+<h3 class="single-note-title">Schmidhuber, J. (1999): A Computer
+Scientist's View of Life, the Universe, and Everything</h3>
+</a></li>
+<li class="single-note h-entry" id=
+"simonarchitecturecomplexity1962"><a class="u-url" href=
+"https://hugocisneros.com/notes/simonarchitecturecomplexity1962/"
+title=
+"Notes on: Simon, H. A. (1962): The Architecture of Complexity">
+<h3 class="single-note-title">Simon, H. A. (1962): The Architecture
+of Complexity</h3>
+</a></li>
+<li class="single-note h-entry" id=
+"stanleyevolvingneuralnetworks2002"><a class="u-url" href=
+"https://hugocisneros.com/notes/stanleyevolvingneuralnetworks2002/"
+title=
+"Notes on: Stanley, K. O., &amp; Miikkulainen, R. (2002): Evolving Neural Networks through Augmenting Topologies">
+<h3 class="single-note-title">Stanley, K. O., & Miikkulainen, R.
+(2002): Evolving Neural Networks through Augmenting Topologies</h3>
+</a></li>
+<li class="single-note h-entry" id=
+"voelkerlegendrememoryunits2019"><a class="u-url" href=
+"https://hugocisneros.com/notes/voelkerlegendrememoryunits2019/"
+title=
+"Notes on: Voelker, A., Kajić, I., &amp; Eliasmith, C. (2019): Legendre Memory Units: Continuous-Time Representation in Recurrent Neural Networks">
+<h3 class="single-note-title">Voelker, A., Kajić, I., & Eliasmith,
+C. (2019): Legendre Memory Units: Continuous-Time Representation in
+Recurrent Neural Networks</h3>
+</a></li>
+<li class="single-note h-entry" id=
+"wangpoetopenendedcoevolution2019"><a class="u-url" href=
+"https://hugocisneros.com/notes/wangpoetopenendedcoevolution2019/"
+title=
+"Notes on: Wang, R., Lehman, J., Clune, J., &amp; Stanley, K. O. (2019): POET: open-ended coevolution of environments and their optimized solutions">
+<h3 class="single-note-title">Wang, R., Lehman, J., Clune, J., &
+Stanley, K. O. (2019): POET: open-ended coevolution of environments
+and their optimized solutions</h3>
+</a></li>
+<li class="single-note h-entry" id=
+"wierstramodelingsystemsinternal2005"><a class="u-url" href=
+"https://hugocisneros.com/notes/wierstramodelingsystemsinternal2005/"
+title=
+"Notes on: Wierstra, D., Gomez, F. J., &amp; Schmidhuber, J. (2005): Modeling systems with internal state using evolino">
+<h3 class="single-note-title">Wierstra, D., Gomez, F. J., &
+Schmidhuber, J. (2005): Modeling systems with internal state using
+evolino</h3>
+</a></li>
+<li class="single-note h-entry" id=
+"zophneuralarchitecturesearch2017"><a class="u-url" href=
+"https://hugocisneros.com/notes/zophneuralarchitecturesearch2017/"
+title=
+"Notes on: Zoph, B., &amp; Le, Q. V. (2017): Neural Architecture Search with Reinforcement Learning">
+<h3 class="single-note-title">Zoph, B., & Le, Q. V. (2017): Neural
+Architecture Search with Reinforcement Learning</h3>
+</a></li>
+<li class="single-note h-entry" id=
+"zophlearningtransferablearchitectures2018"><a class="u-url" href=
+"https://hugocisneros.com/notes/zophlearningtransferablearchitectures2018/"
+title=
+"Notes on: Zoph, B., Vasudevan, V., Shlens, J., &amp; Le, Q. V. (2018): Learning Transferable Architectures for Scalable Image Recognition">
+<h3 class="single-note-title">Zoph, B., Vasudevan, V., Shlens, J.,
+& Le, Q. V. (2018): Learning Transferable Architectures for
+Scalable Image Recognition</h3>
 </a></li>
 <li class="single-note h-entry" id=
 "20200324095905-ontogeny_recapitulates_phylogeny"><a class="u-url"
 href=
-"https://hugocisneros.com/notes/20200324095905-ontogeny_recapitulates_phylogeny/">
-<h3>Ontogeny recapitulates phylogeny</h3>
+"https://hugocisneros.com/notes/20200324095905-ontogeny_recapitulates_phylogeny/"
+title="Ontogeny recapitulates phylogeny">
+<h3 class="single-note-title">Ontogeny recapitulates phylogeny</h3>
 </a></li>
 <li class="single-note h-entry" id=
 "20200301192144_open_ended_evolution"><a class="u-url" href=
-"https://hugocisneros.com/notes/20200301192144_open_ended_evolution/">
-<h3>Open-ended Evolution</h3>
+"https://hugocisneros.com/notes/20200301192144_open_ended_evolution/"
+title="Open-ended Evolution">
+<h3 class="single-note-title">Open-ended Evolution</h3>
+</a></li>
+<li class="single-note h-entry" id=
+"20200330105011-optimal_transport"><a class="u-url" href=
+"https://hugocisneros.com/notes/20200330105011-optimal_transport/"
+title="Optimal transport">
+<h3 class="single-note-title">Optimal transport</h3>
+</a></li>
+<li class="single-note h-entry" id="20200330224214-philosophy">
+<a class="u-url" href=
+"https://hugocisneros.com/notes/20200330224214-philosophy/" title=
+"Philosophy">
+<h3 class="single-note-title">Philosophy</h3>
 </a></li>
 <li class="single-note h-entry" id="20200301202612_physics">
 <a class="u-url" href=
-"https://hugocisneros.com/notes/20200301202612_physics/">
-<h3>Physics</h3>
+"https://hugocisneros.com/notes/20200301202612_physics/" title=
+"Physics">
+<h3 class="single-note-title">Physics</h3>
 </a></li>
 <li class="single-note h-entry" id=
 "20200302192225_programming_languages"><a class="u-url" href=
-"https://hugocisneros.com/notes/20200302192225_programming_languages/">
-<h3>Programming languages</h3>
+"https://hugocisneros.com/notes/20200302192225_programming_languages/"
+title="Programming languages">
+<h3 class="single-note-title">Programming languages</h3>
 </a></li>
 <li class="single-note h-entry" id="20200301195634_python">
 <a class="u-url" href=
-"https://hugocisneros.com/notes/20200301195634_python/">
-<h3>Python</h3>
+"https://hugocisneros.com/notes/20200301195634_python/" title=
+"Python">
+<h3 class="single-note-title">Python</h3>
 </a></li>
 <li class="single-note h-entry" id=
 "20200302111831_reaction_diffusion"><a class="u-url" href=
-"https://hugocisneros.com/notes/20200302111831_reaction_diffusion/">
-<h3>Reaction-diffusion</h3>
+"https://hugocisneros.com/notes/20200302111831_reaction_diffusion/"
+title="Reaction-diffusion">
+<h3 class="single-note-title">Reaction-diffusion</h3>
 </a></li>
 <li class="single-note h-entry" id=
 "20200302104940_reinforcement_learning"><a class="u-url" href=
-"https://hugocisneros.com/notes/20200302104940_reinforcement_learning/">
-<h3>Reinforcement learning</h3>
+"https://hugocisneros.com/notes/20200302104940_reinforcement_learning/"
+title="Reinforcement learning">
+<h3 class="single-note-title">Reinforcement learning</h3>
 </a></li>
 <li class="single-note h-entry" id="20200310083437-rna_world">
 <a class="u-url" href=
-"https://hugocisneros.com/notes/20200310083437-rna_world/">
-<h3>RNA-world</h3>
+"https://hugocisneros.com/notes/20200310083437-rna_world/" title=
+"RNA-world">
+<h3 class="single-note-title">RNA-world</h3>
 </a></li>
 <li class="single-note h-entry" id="20200302105033_search">
 <a class="u-url" href=
-"https://hugocisneros.com/notes/20200302105033_search/">
-<h3>Search</h3>
+"https://hugocisneros.com/notes/20200302105033_search/" title=
+"Search">
+<h3 class="single-note-title">Search</h3>
 </a></li>
 <li class="single-note h-entry" id=
 "20200302174839_self_organization"><a class="u-url" href=
-"https://hugocisneros.com/notes/20200302174839_self_organization/">
-<h3>Self-organization</h3>
+"https://hugocisneros.com/notes/20200302174839_self_organization/"
+title="Self-organization">
+<h3 class="single-note-title">Self-organization</h3>
+</a></li>
+<li class="single-note h-entry" id="20200331225748-sir_model">
+<a class="u-url" href=
+"https://hugocisneros.com/notes/20200331225748-sir_model/" title=
+"SIR model">
+<h3 class="single-note-title">SIR model</h3>
 </a></li>
 <li class="single-note h-entry" id=
 "20200301202620_statistical_physics"><a class="u-url" href=
-"https://hugocisneros.com/notes/20200301202620_statistical_physics/">
-<h3>statistical physics</h3>
+"https://hugocisneros.com/notes/20200301202620_statistical_physics/"
+title="Statistical physics">
+<h3 class="single-note-title">Statistical physics</h3>
 </a></li>
 <li class="single-note h-entry" id=
 "20200323100700-the_architecture_of_complexity"><a class="u-url"
 href=
-"https://hugocisneros.com/notes/20200323100700-the_architecture_of_complexity/">
-<h3>The architecture of complexity</h3>
+"https://hugocisneros.com/notes/20200323100700-the_architecture_of_complexity/"
+title="The architecture of complexity">
+<h3 class="single-note-title">The architecture of complexity</h3>
 </a></li>
 <li class="single-note h-entry" id=
 "20200310083136-the_end_of_the_rna_world_is_near_biochemists_argue">
 <a class="u-url" href=
-"https://hugocisneros.com/notes/20200310083136-the_end_of_the_rna_world_is_near_biochemists_argue/">
-<h3>The End of the RNA World Is Near, Biochemists Argue</h3>
+"https://hugocisneros.com/notes/20200310083136-the_end_of_the_rna_world_is_near_biochemists_argue/"
+title="The End of the RNA World Is Near, Biochemists Argue">
+<h3 class="single-note-title">The End of the RNA World Is Near,
+Biochemists Argue</h3>
 </a></li>
 <li class="single-note h-entry" id=
 "20200324162158-theory_of_computation"><a class="u-url" href=
-"https://hugocisneros.com/notes/20200324162158-theory_of_computation/">
-<h3>Theory of computation</h3>
+"https://hugocisneros.com/notes/20200324162158-theory_of_computation/"
+title="Theory of computation">
+<h3 class="single-note-title">Theory of computation</h3>
 </a></li>
 <li class="single-note h-entry" id="20200306221143-turing_degree">
 <a class="u-url" href=
-"https://hugocisneros.com/notes/20200306221143-turing_degree/">
-<h3>Turing degree</h3>
+"https://hugocisneros.com/notes/20200306221143-turing_degree/"
+title="Turing degree">
+<h3 class="single-note-title">Turing degree</h3>
 </a></li>
 <li class="single-note h-entry" id="20200302191951_turing_machine">
 <a class="u-url" href=
-"https://hugocisneros.com/notes/20200302191951_turing_machine/">
-<h3>Turing Machine</h3>
+"https://hugocisneros.com/notes/20200302191951_turing_machine/"
+title="Turing Machine">
+<h3 class="single-note-title">Turing Machine</h3>
 </a></li>
 <li class="single-note h-entry" id=
 "20200302191410_turing_completeness"><a class="u-url" href=
-"https://hugocisneros.com/notes/20200302191410_turing_completeness/">
-<h3>Turing-completeness</h3>
+"https://hugocisneros.com/notes/20200302191410_turing_completeness/"
+title="Turing-completeness">
+<h3 class="single-note-title">Turing-completeness</h3>
+</a></li>
+<li class="single-note h-entry" id="20200330224045-zuse_s_thesis">
+<a class="u-url" href=
+"https://hugocisneros.com/notes/20200330224045-zuse_s_thesis/"
+title="Zuse's thesis">
+<h3 class="single-note-title">Zuse's thesis</h3>
 </a></li>
 </ul>
 </div>
-</main>
+<hr></main>
 <script>
  function search_function() {
      

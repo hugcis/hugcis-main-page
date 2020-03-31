@@ -18,7 +18,7 @@ page</title>
 <meta name="twitter:site" content="@cisne_hug">
 <meta name="twitter:creator" content="@cisne_hug">
 <link rel="stylesheet" href=
-"https://hugocisneros.com/css/main.min.a40a4b4f3be57cafa0a799f34263b26679d87c1456d11db1da8c0cb45b0f724c.css"
+"https://hugocisneros.com/css/main.min.4f329886c557f10950f8b8c3ec6b56b5b4af342ab1b6295e49e7c8c9b627985b.css"
 media="all" type="text/css">
 <link rel="apple-touch-icon" sizes="180x180" href=
 "/apple-touch-icon.png">
@@ -70,8 +70,8 @@ algorithm</h1>
 "articleBody">
 <dl>
 <dt>tags</dt>
-<dd><a href="/notes/20200301204253_compression/">compression</a>,
-<a href="/notes/20200301192936_complexity/">complexity</a></dd>
+<dd><a href="/notes/20200301204253_compression/">Compression</a>,
+<a href="/notes/20200301192936_complexity/">Complexity</a></dd>
 <dt>papers</dt>
 <dd><a id="757b331f473fdbcd9dfe20b8cb5ba1a6" href=
 "#lempelComplexityFiniteSequences1976">(Lempel & Ziv,
@@ -96,10 +96,11 @@ LZ77 <a id="537103244f27dbdbe85b23857414a348" href=
 LZ78 <a id="1af418603c6a51fb635cc02b8c55eea4" href=
 "#zivCompressionIndividualSequences1978">(Ziv & Lempel, 1978)</a>.
 Those last two are the basis of many well known and widely used
-compression utilities such as GIF, <code>compress</code> (LZW
-<a id="c0548a738d91c79be6e2b01ac7140ce7" href=
-"#welchTechniqueHighPerformanceData1984">(Welch, 1984)</a> ) or
-DEFLATE, gzip (LZSS <a id="7bc1b88d3957848af867036d1c2b9856" href=
+compression utilities such as <code>GIF</code>,
+<code>compress</code> (LZW <a id="c0548a738d91c79be6e2b01ac7140ce7"
+href="#welchTechniqueHighPerformanceData1984">(Welch, 1984)</a> )
+or <code>DEFLATE</code>, <code>gzip</code> (LZSS <a id=
+"7bc1b88d3957848af867036d1c2b9856" href=
 "#storerDataCompressionTextual1982">(Storer & Szymanski,
 1982)</a>), etc.</p>
 <h2 id="description">Description</h2>
@@ -112,7 +113,7 @@ encoding allows a unique decoding of the original sequence. When
 encoding <strong>or</strong> decoding the string the same
 dictionary of words is built. For sequences with string
 repetitions, the length of each new word increases fast and the
-numbers of needed pairs to encode increases less.</p>
+numbers of needed pairs to encode increases very slowly.</p>
 <div class="highlight">
 <pre style=
 "color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
@@ -165,7 +166,7 @@ Information Theory, <em>24(5)</em>, 530–536 (1978).</a> <a href=
 "http://dx.doi.org/10.1109/TIT.1978.1055934">http://dx.doi.org/10.1109/TIT.1978.1055934</a>
 <a href="#1af418603c6a51fb635cc02b8c55eea4">↩</a></p>
 <p><a id="welchTechniqueHighPerformanceData1984" target=
-"_blank">Welch, <em>A Technique for High-Performance Data
+"_blank">Welch, , <em>A Technique for High-Performance Data
 Compression</em>, Computer, <em>17(6)</em>, 8–19 (1984).</a>
 <a href=
 "http://dx.doi.org/10.1109/MC.1984.1659158">http://dx.doi.org/10.1109/MC.1984.1659158</a>
@@ -184,7 +185,7 @@ substitution</em>, Journal of the ACM (JACM), <em>29(4)</em>,
 <div class="note-footer">Last changed <a class="u-url" href=
 "https://hugocisneros.com/notes/20200303163017_lempel_ziv_welch_algorithm/">
 <time itemprop="datePublished" class="dt-published" datetime=
-"2020-03-27T18:45:25+0100">27/03/2020</time></a> | authored by
+"2020-03-31T15:19:33+0200">31/03/2020</time></a> | authored by
 <a href="https://hugocisneros.com/" rel="author" class=
 "p-author h-card" itemprop="author" itemscope itemtype=
 "http://schema.org/Person"><span itemprop="name">Hugo
