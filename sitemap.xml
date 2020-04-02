@@ -98,6 +98,10 @@
     </url>
     
     <url>
+        <loc>https://hugocisneros.com/notes/20200401090344-c/</loc>
+    </url>
+    
+    <url>
         <loc>https://hugocisneros.com/notes/20200301192434_cellular_automata/</loc>
         <lastmod>2020-03-31T23:31:49+02:00</lastmod>
     </url>
@@ -240,6 +244,14 @@
     <url>
         <loc>https://hugocisneros.com/notes/20200302174634_information_theory/</loc>
         <lastmod>2020-03-27T18:45:25+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/20200401090607-java/</loc>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/20200401090415-javascript/</loc>
     </url>
     
     <url>
@@ -475,6 +487,18 @@
     <url>
         <loc>https://hugocisneros.com/notes/20200310083437-rna_world/</loc>
         <lastmod>2020-03-27T18:45:25+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/20200401090600-ruby/</loc>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/20200401090424-rust/</loc>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/20200401090613-scala/</loc>
     </url>
     
     <url>
