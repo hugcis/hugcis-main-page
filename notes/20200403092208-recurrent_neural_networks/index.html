@@ -6,15 +6,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content=
 "width=device-width,initial-scale=1.0,minimum-scale=1">
-<title>Notes on: Pham, H., Guan, M. Y., Zoph, B., Le, Q. V., &
-Dean, J. (2018): Efficient Neural Architecture Search via Parameter
-Sharing - Hugo Cisneros - Personal page</title>
+<title>Recurrent neural networks - Hugo Cisneros - Personal
+page</title>
 <meta property="og:title" content=
-"Notes on: Pham, H., Guan, M. Y., Zoph, B., Le, Q. V., &amp; Dean, J. (2018): Efficient Neural Architecture Search via Parameter Sharing - Hugo Cisneros - Personal page">
+"Recurrent neural networks - Hugo Cisneros - Personal page">
 <meta property="og:type" content="article">
 <meta property="og:image" content="/img/main.jpeg">
 <meta property="og:url" content=
-"https://hugocisneros.com/notes/phamefficientneuralarchitecture2018/">
+"https://hugocisneros.com/notes/20200403092208-recurrent_neural_networks/">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@cisne_hug">
 <meta name="twitter:creator" content="@cisne_hug">
@@ -65,54 +64,35 @@ async src=
 <article class="article h-entry" itemprop="mainEntity" itemscope
 itemtype="http://schema.org/BlogPosting">
 <div class="single-note note-container">
-<h1 class="article-title p-name" itemprop="name">Pham, H., Guan, M.
-Y., Zoph, B., Le, Q. V., & Dean, J. (2018): Efficient Neural
-Architecture Search via Parameter Sharing</h1>
+<h1 class="article-title p-name" itemprop="name">Recurrent neural
+networks</h1>
 <div class="article-content e-content p-name" itemprop=
 "articleBody">
 <dl>
-<dt>source</dt>
-<dd><a id="fec97e39a1f34b9aa84ee30e76ef1fd0" href=
-"#phamEfficientNeuralArchitecture2018">(Pham et al., 2018)</a></dd>
+<dt>tags</dt>
+<dd><a href="/notes/20200301201527_machine_learning/">Machine
+learning</a></dd>
 </dl>
-<h2 id="summary">Summary</h2>
-<p>Like other papers, the controller is a RNN that generates each
-part of the architecture in sequence. The main contribution of this
-paper is to introduce parameter sharing in child models. For, this,
-it represents all possible architectures in a single DAG of
-operations and share weights between same operations. They explain
-how to design a RNN cell with their model, a convolutional network
-(and convolutional cell to build a CNN) and how to train. Training
-is done in two alternating steps: - Train paramters for a fixed
-policy: gradient are estimated by sampling architectures and
-averaage the gradients for each of them (apparently works when
-sampling only 1 architecture). - Train the policy (controller
-parameters) The authors present results on text and vision
-tasks.</p>
-<h2 id="comments">Comments</h2>
-<p>This approach seems more interesting than before, because the
-weight sharing gives a significant speedup. The task are however
-rather small compared to SOTA in 2018.</p>
-<h1 id="bibliography">Bibliography</h1>
-<p><a id="phamEfficientNeuralArchitecture2018" target=
-"_blank">Pham, H., Guan, M. Y., Zoph, B., Le, Q. V., & Dean, J.,
-<em>Efficient Neural Architecture Search via Parameter
-Sharing</em>, arXiv:1802.03268 [cs, stat], <em>()</em>, (2018).</a>
-<a href="#fec97e39a1f34b9aa84ee30e76ef1fd0">↩</a></p>
+<h2 id="backlinks">Backlinks</h2>
+<ul>
+<li><a href="/notes/wierstramodelingsystemsinternal2005/">Notes on:
+Wierstra, D., Gomez, F. J., & Schmidhuber, J. (2005): Modeling
+systems with internal state using evolino</a></li>
+</ul>
 </div>
 <div class="note-footer">Last changed <a class="u-url" href=
-"https://hugocisneros.com/notes/phamefficientneuralarchitecture2018/">
+"https://hugocisneros.com/notes/20200403092208-recurrent_neural_networks/">
 <time itemprop="datePublished" class="dt-published" datetime=
-"2020-03-31T23:31:49+0200">31/03/2020</time></a> | authored by
-<a href="https://hugocisneros.com/" rel="author" class=
-"p-author h-card" itemprop="author" itemscope itemtype=
+"0001-01-01T00:00:00Z">01/01/0001</time></a> | authored by <a href=
+"https://hugocisneros.com/" rel="author" class="p-author h-card"
+itemprop="author" itemscope itemtype=
 "http://schema.org/Person"><span itemprop="name">Hugo
 Cisneros</span></a></div>
 </div>
 </article>
 <br>
-<a href="/notes#phamefficientneuralarchitecture2018"><b>← Back to
-Notes</b></a>
+<a href="/notes#20200403092208-recurrent_neural_networks"><b>← Back
+to Notes</b></a>
 <hr></main>
 <footer class="footer">
 <ul class="footer-links">

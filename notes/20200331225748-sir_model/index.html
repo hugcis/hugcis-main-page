@@ -17,7 +17,7 @@
 <meta name="twitter:site" content="@cisne_hug">
 <meta name="twitter:creator" content="@cisne_hug">
 <link rel="stylesheet" href=
-"https://hugocisneros.com/css/main.min.41786faddf905bbf9e73937717b1839d191bb76bebec294aa88b8e08405c2d31.css"
+"https://hugocisneros.com/css/main.min.4ef04a239f7c0567f4c168c786dc2a84242f05ede7b5f6a00e2d55219466071b.css"
 media="all" type="text/css">
 <link rel="apple-touch-icon" sizes="180x180" href=
 "/apple-touch-icon.png">
@@ -34,6 +34,16 @@ media="all" type="text/css">
 "https://webmention.io/hugocisneros.com/webmention">
 <link rel="pingback" href=
 "https://webmention.io/hugocisneros.com/xmlrpc">
+<script>
+ MathJax = {
+     tex: {
+         inlineMath: [['$','$'], ['\\(', '\\)']]
+     }
+ };
+</script>
+<script type="text/javascript" rel="preconnect" id="MathJax-script"
+async src=
+"https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 <div class="wrapper">
@@ -49,16 +59,6 @@ media="all" type="text/css">
 </ul>
 </nav>
 </header>
-<script>
- MathJax = {
-     tex: {
-         inlineMath: [['$','$'], ['\\(', '\\)']]
-     }
- };
-</script> 
-<script type="text/javascript" rel="preconnect" id="MathJax-script"
-async src=
-"https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <main class="content" role="main">
 <article class="article h-entry" itemprop="mainEntity" itemscope
 itemtype="http://schema.org/BlogPosting">
@@ -73,12 +73,14 @@ itemtype="http://schema.org/BlogPosting">
 Wikipedia</a></dd>
 </dl>
 <h2 id="simplest-form">Simplest form</h2>
-<p>For a population \(N\), the evolution of \(S\) the number of
-susceptible persons, \(I\) the number of infected and \(R\) the
-number of recovered persons is governed by the following system of
-differential equations. \[ \frac{dS}{dt} = - \frac{\beta I S}{N} \]
-\[ \frac{dI}{dt} = \frac{\beta I S }{N}- \gamma I \] \[
-\frac{dR}{dt} = \gamma I \]</p>
+<p>The SIR model is defined for a population \(N\), \(S\) the
+number of susceptible persons, \(I\) the number of infected people
+and \(R\) the number of poeple who have recovered. The following
+system of differential equations governs the evolution of those
+three variables:</p>
+<p>\[ \frac{dS}{dt} = - \frac{\beta I S}{N} \] \[ \frac{dI}{dt} =
+\frac{\beta I S }{N}- \gamma I \] \[ \frac{dR}{dt} = \gamma I
+\]</p>
 <p>The basic reproduction number \(R_0\) is defined by \[ R_0 =
 \frac{\beta}{\gamma} \]</p>
 </div>

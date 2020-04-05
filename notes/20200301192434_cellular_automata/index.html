@@ -17,7 +17,7 @@
 <meta name="twitter:site" content="@cisne_hug">
 <meta name="twitter:creator" content="@cisne_hug">
 <link rel="stylesheet" href=
-"https://hugocisneros.com/css/main.min.41786faddf905bbf9e73937717b1839d191bb76bebec294aa88b8e08405c2d31.css"
+"https://hugocisneros.com/css/main.min.4ef04a239f7c0567f4c168c786dc2a84242f05ede7b5f6a00e2d55219466071b.css"
 media="all" type="text/css">
 <link rel="apple-touch-icon" sizes="180x180" href=
 "/apple-touch-icon.png">
@@ -34,6 +34,16 @@ media="all" type="text/css">
 "https://webmention.io/hugocisneros.com/webmention">
 <link rel="pingback" href=
 "https://webmention.io/hugocisneros.com/xmlrpc">
+<script>
+ MathJax = {
+     tex: {
+         inlineMath: [['$','$'], ['\\(', '\\)']]
+     }
+ };
+</script>
+<script type="text/javascript" rel="preconnect" id="MathJax-script"
+async src=
+"https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 <div class="wrapper">
@@ -49,16 +59,6 @@ media="all" type="text/css">
 </ul>
 </nav>
 </header>
-<script>
- MathJax = {
-     tex: {
-         inlineMath: [['$','$'], ['\\(', '\\)']]
-     }
- };
-</script> 
-<script type="text/javascript" rel="preconnect" id="MathJax-script"
-async src=
-"https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <main class="content" role="main">
 <article class="article h-entry" itemprop="mainEntity" itemscope
 itemtype="http://schema.org/BlogPosting">
@@ -73,7 +73,155 @@ automata</h1>
 <a href="/notes/20200301200841_chaos/">Chaos</a>, <a href=
 "/notes/20200301201821_artificial_intelligence/">Artificial
 intelligence</a></dd>
+<dt>resources</dt>
+<dd><a id="73ea3e268fb9bda24b549dc45c43b924" href=
+"#wolframNewKindScience2002">(Wolfram, 2002)</a></dd>
 </dl>
+<h2 id="definition">Definition</h2>
+<p>A cellular automaton is a computational model defined with
+respect to a regular grid of individual elements (called
+<em>cells</em>). Each of those cells can be in one of a finite
+number of states — <em>alive</em> or <em>dead</em>, \(\{1, 2,
+3\}\), etc.</p>
+<p>A cellular automaton’s evolution is simulated in discrete
+timesteps. At each new timestep, cells are updated according to a
+local <strong>evolution rule</strong>. The rule is a table or
+function mapping every possible state of a cell and their local
+neighborhoods to a new state.</p>
+<h2 id=
+"cellular-automata-as-cnn--20200302110556-convolutional-neural-networks-dot-md--s">
+Cellular automata as <a href=
+"/notes/20200302110556_convolutional_neural_networks/">CNN</a>s</h2>
+<p>Cellular automata can easily be represented as Convolutional
+Neural Networks (CNNs). This relation has already been investigated
+in <a id="feab210e96cd376dff269508ad415b85" href=
+"#gilpinCellularAutomataConvolutional2018">(Gilpin, 2018)</a> or
+<a id="b71c53b928ac63b5999b34d6c7621b33" href=
+"#mordvintsevGrowingNeuralCellular2020">(Mordvintsev et al.,
+2020)</a> for instance. This idea has advantages and drawbacks:</p>
+<ul>
+<li>Computational cost of using floating points operations is
+higher than discrete operations.</li>
+<li>Discrete operations can lead to exponential growth of the
+number of possible configurations and update rules in a CA. This is
+why rules aren’t represented as bijective tables matching
+neighborhoods to states anymore in <a id=
+"b71c53b928ac63b5999b34d6c7621b33" href=
+"#mordvintsevGrowingNeuralCellular2020">(Mordvintsev et al.,
+2020)</a>.</li>
+<li>The use of floating point operations is mainly there to be able
+to compute gradients for gradient based optimization. This is
+against a <em>non-supervised</em> philosophy I am trying to work
+on. Training cellular automata is basically re-implementing a
+“recurrent convolutional neural network”: this might lead to
+interesting models but isn’t exploiting all the potential of those
+computational models</li>
+<li>Ultimately computations in a computer are discrete and
+Mordvintsev et al. eventually use quantization to discretize the
+CA, resulting in an approximation of a discrete automaton.</li>
+</ul>
+<h2 id=
+"cellular-automata-and-reaction-diffusion--20200302111831-reaction-diffusion-dot-md--systems">
+Cellular automata and <a href=
+"/notes/20200302111831_reaction_diffusion/">reaction-diffusion</a>
+systems</h2>
+<p>I just realized that cellular automata and reaction-diffusion
+systems are strongly related. This might be a well known fact but
+it seemed particularly striking when looking at the following image
+from <a id="1b843574876b0429c1d05e1428f7b42b" href=
+"#manukyanLivingMesoscopicCellular2017a">(Manukyan et al.,
+2017)</a> it seems clear that there is a continuum between the two
+models.</p>
+<figure><img src="/img/ca_reaction_diffusion.jpg"></figure>
+<h2 id=
+"cellular-automata-in-image-processing--20200305194144-computer-vision-dot-md">
+Cellular automata in <a href=
+"/notes/20200305194144-computer_vision/">Image processing</a></h2>
+<p>Papers about using cellular automata in image processing <a id=
+"21fd79b1cbc2adad7aa9ab4242f973fa" href=
+"#selvapeterCellularAutomataImage2009">(Selvapeter & Wim Hordijk,
+2009)</a><a>,</a> <a id="45aa9a0bc8fe3b0fc110b5cb92b84a3e" href=
+"#wongthanavasuCellularAutomataPattern2013">(Wongthanavasu &
+Ponkaew, 2013)</a></p>
+<p>Some cellular automata have a characteristic “blob-preserving”
+behavior where parts of the space get organized in large blobs.
+This behavior is very similar to an application of <a href=
+"https://en.wikipedia.org/wiki/Median%5Ffilter">local median</a>.
+See this <a href=
+"https://twitter.com/gabrielpeyre/status/987233288187150338">twitter
+link</a> for an animated example.</p>
+<h2 id="coarse-graining-ca">Coarse-graining CA</h2>
+<p>I am very attracted to this idea of coarse graining CAs. This is
+reminiscent of physical systems where the inner working of a system
+are mostly opaque to an observer and we only see a complex
+macro-behavior. In the case of CAs this might be the key to
+overcoming this problem of seemingly impossible increase of
+complexity beyond a certain point if we keep looking at individual
+cells. This also allows an external observer to understand a
+complex behavior happening in billions of cells visually. It can be
+done with <a href=
+"/notes/20200301200248_autoencoders/">autoencoders</a>.</p>
+<h2 id="ca-as-regular-languages">CA as regular languages</h2>
+<blockquote>
+<p>From <a id="503425f3f76268db675ebba9298de60d" href=
+"#hansonComputationalMechanicsCellular1997">(Hanson & Crutchfield,
+1997)</a>:</p>
+<p><a href="/notes/20200324162136-finite_state_machines/">Finite
+state machines</a> are appropriate for investigating pattern
+dynamics of CAs for a number of reasons, among which we may note
+the following:</p>
+<ul>
+<li>FAs encompass the full range of behavior types from periodic to
+complex to random;</li>
+<li>Characterization of patterns using FAs makes possible a
+definition of pattern complexity which is both natural and
+computable in practice;</li>
+<li>Ensemble evolution in the space of regular languages is closed
+under the CA rule;</li>
+<li>The CA update rule is itself an FST;</li>
+<li>Automated inference techniques exist for reconstructing FAs
+from experimental data</li>
+</ul>
+</blockquote>
+<h1 id="bibliography">Bibliography</h1>
+<p><a id="wolframNewKindScience2002" target="_blank">Wolfram, S.,
+<em>A new kind of science</em> (2002), Champaign, IL: Wolfram
+Media.</a> <a href="#73ea3e268fb9bda24b549dc45c43b924">↩</a></p>
+<p><a id="gilpinCellularAutomataConvolutional2018" target=
+"_blank">Gilpin, W., <em>Cellular automata as convolutional neural
+networks</em>, arXiv:1809.02942 [cond-mat, physics:nlin,
+physics:physics], <em>()</em>, (2018).</a> <a href=
+"#feab210e96cd376dff269508ad415b85">↩</a></p>
+<p><a id="mordvintsevGrowingNeuralCellular2020" target=
+"_blank">Mordvintsev, A., Randazzo, E., Niklasson, E., & Levin, M.,
+<em>Growing Neural Cellular Automata</em>, Distill, <em>5(2)</em>,
+23 (2020).</a> <a href=
+"http://dx.doi.org/10.23915/distill.00023">http://dx.doi.org/10.23915/distill.00023</a>
+<a href="#b71c53b928ac63b5999b34d6c7621b33">↩</a></p>
+<p><a id="manukyanLivingMesoscopicCellular2017a" target=
+"_blank">Manukyan, L., Montandon, S. A., Fofonjka, A., Smirnov, S.,
+& Milinkovitch, M. C., <em>A living mesoscopic cellular automaton
+made of skin scales</em>, Nature, <em>544(7649)</em>, 173–179
+(2017).</a> <a href=
+"http://dx.doi.org/10.1038/nature22031">http://dx.doi.org/10.1038/nature22031</a>
+<a href="#1b843574876b0429c1d05e1428f7b42b">↩</a></p>
+<p><a id="selvapeterCellularAutomataImage2009" target=
+"_blank">Selvapeter, P. J., & Wim Hordijk, <em>Cellular automata
+for image noise filtering</em>, In , 2009 {{World Congress}} on
+{{Nature}} & {{Biologically Inspired Computing}} ({{NaBIC}}) (pp.
+193–197) (2009). Coimbatore, India: IEEE.</a> <a href=
+"#21fd79b1cbc2adad7aa9ab4242f973fa">↩</a></p>
+<p><a id="wongthanavasuCellularAutomataPattern2013" target=
+"_blank">Wongthanavasu, S., & Ponkaew, J., <em>Cellular Automata
+for Pattern Recognition</em>, In A. Salcido (Eds.), Emerging
+{{Applications}} of {{Cellular Automata} (pp. ) (2013). :
+InTech.</a> <a href="#45aa9a0bc8fe3b0fc110b5cb92b84a3e">↩</a></p>
+<p><a id="hansonComputationalMechanicsCellular1997" target=
+"_blank">Hanson, J. E., & Crutchfield, J. P., <em>Computational
+mechanics of cellular automata: An example</em>, Physica D:
+Nonlinear Phenomena, <em>103(1)</em>, 169–189 (1997).</a> <a href=
+"http://dx.doi.org/10.1016/S0167-2789(96)00259-X">http://dx.doi.org/10.1016/S0167-2789(96)00259-X</a>
+<a href="#503425f3f76268db675ebba9298de60d">↩</a></p>
 <h2 id="evolution-and-cas">Evolution and CAs</h2>
 <p>Why would things <a href=
 "/notes/20200301192607_evolution/">evolve</a> in a CA? I was
@@ -144,143 +292,14 @@ without interacting with it somehow.</p>
 "/notes/20200330224045-zuse_s_thesis/">Zuse’s thesis</a>, and is an
 interesting argument for the universe being a computer simulation —
 and even a CA.</p>
-<h2 id="coarse-graining-ca">Coarse-graining CA</h2>
-<p>I am very attracted to this idea of coarse graining CAs. This is
-reminiscent of physical systems where the inner working of a system
-are mostly opaque to an observer and we only see a complex
-macro-behavior. In the case of CAs this might be the key to
-overcoming this problem of seemingly impossible increase of
-complexity beyond a certain point if we keep looking at individual
-cells. This also allows an external observer to understand a
-complex behavior happening in billions of cells visually. It can be
-done with <a href=
-"/notes/20200301200248_autoencoders/">autoencoders</a>.</p>
-<h2 id=
-"cellular-automata-and-reaction-diffusion--20200302111831-reaction-diffusion-dot-md--systems">
-Cellular automata and <a href=
-"/notes/20200302111831_reaction_diffusion/">reaction-diffusion</a>
-systems</h2>
-<p>I just realized that cellular automata and reaction-diffusion
-systems are strongly related. This might be a well known fact but
-it seemed particularly striking when looking at the following image
-from <a id="1b843574876b0429c1d05e1428f7b42b" href=
-"#manukyanLivingMesoscopicCellular2017a">(Manukyan et al.,
-2017)</a> it seems clear that there is a continuum between the two
-models.</p>
-<figure><img src="/img/ca_reaction_diffusion.jpg"></figure>
-<h2 id=
-"cellular-automata-as-cnn--20200302110556-convolutional-neural-networks-dot-md--s">
-Cellular automata as <a href=
-"/notes/20200302110556_convolutional_neural_networks/">CNN</a>s</h2>
-<p>Cellular automata can easily be represented as CNNs. This
-relation has already been investigated in <a id=
-"feab210e96cd376dff269508ad415b85" href=
-"#gilpinCellularAutomataConvolutional2018">(Gilpin, 2018)</a> or
-<a id="b71c53b928ac63b5999b34d6c7621b33" href=
-"#mordvintsevGrowingNeuralCellular2020">(Mordvintsev et al.,
-2020)</a> for instance. This idea has advantages and drawbacks:</p>
-<ul>
-<li>Computational cost of using floating points operations is
-higher than discrete operations.</li>
-<li>Discrete operations can lead to exponential growth of the
-number of possible configurations and update rules in a CA.</li>
-<li>The use of floating point operations is mainly there to be able
-to compute gradients for gradient based optimization. This is
-against a <em>non-supervised</em> philosophy I am trying to work
-on.</li>
-<li>Ultimately computations in a computer are discrete and
-Mordvintsev et al. eventually use quantization to discretize the
-CA, resulting in an approximation of a discrete automaton.</li>
-</ul>
-<h2 id=
-"cellular-automata-in-image-processing--20200305194144-computer-vision-dot-md">
-Cellular automata in <a href=
-"/notes/20200305194144-computer_vision/">Image processing</a></h2>
-<p>Papers about using cellular automata in image processing <a id=
-"21fd79b1cbc2adad7aa9ab4242f973fa" href=
-"#selvapeterCellularAutomataImage2009">(Selvapeter & Wim Hordijk,
-2009)</a><a>,</a> <a id="45aa9a0bc8fe3b0fc110b5cb92b84a3e" href=
-"#wongthanavasuCellularAutomataPattern2013">(Wongthanavasu &
-Ponkaew, 2013)</a></p>
-<p>Some cellular automata have a characteristic “blob-preserving”
-behavior where parts of the space get organized in large blobs.
-This behavior is very similar to an application of <a href=
-"https://en.wikipedia.org/wiki/Median%5Ffilter">local median</a>.
-See this <a href=
-"https://twitter.com/gabrielpeyre/status/987233288187150338">twitter
-link</a> for an animated example.</p>
-<h2 id="ca-as-regular-languages">CA as regular languages</h2>
-<blockquote>
-<p>From <a id="503425f3f76268db675ebba9298de60d" href=
-"#hansonComputationalMechanicsCellular1997">(Hanson & Crutchfield,
-1997)</a>:</p>
-<p><a href="/notes/20200324162136-finite_state_machines/">Finite
-state machines</a> are appropriate for investigating pattern
-dynamics of CAs for a number of reasons, among which we may note
-the following:</p>
-<ul>
-<li>FAs encompass the full range of behavior types from periodic to
-complex to random;</li>
-<li>Characterization of patterns using FAs makes possible a
-definition of pattern complexity which is both natural and
-computable in practice;</li>
-<li>Ensemble evolution in the space of regular languages is closed
-under the CA rule;</li>
-<li>The CA update rule is itself an FST;</li>
-<li>Automated inference techniques exist for reconstructing FAs
-from experimental data</li>
-</ul>
-</blockquote>
-<h1 id="bibliography">Bibliography</h1>
-<p><a id="manukyanLivingMesoscopicCellular2017a" target=
-"_blank">Manukyan, L., Montandon, S. A., Fofonjka, A., Smirnov, S.,
-& Milinkovitch, M. C., <em>A living mesoscopic cellular automaton
-made of skin scales</em>, Nature, <em>544(7649)</em>, 173–179
-(2017).</a> <a href=
-"http://dx.doi.org/10.1038/nature22031">http://dx.doi.org/10.1038/nature22031</a>
-<a href="#1b843574876b0429c1d05e1428f7b42b">↩</a></p>
-<p><a id="gilpinCellularAutomataConvolutional2018" target=
-"_blank">Gilpin, W., <em>Cellular automata as convolutional neural
-networks</em>, arXiv:1809.02942 [cond-mat, physics:nlin,
-physics:physics], <em>()</em>, (2018).</a> <a href=
-"#feab210e96cd376dff269508ad415b85">↩</a></p>
-<p><a id="mordvintsevGrowingNeuralCellular2020" target=
-"_blank">Mordvintsev, A., Randazzo, E., Niklasson, E., & Levin, M.,
-<em>Growing Neural Cellular Automata</em>, Distill, <em>5(2)</em>,
-23 (2020).</a> <a href=
-"http://dx.doi.org/10.23915/distill.00023">http://dx.doi.org/10.23915/distill.00023</a>
-<a href="#b71c53b928ac63b5999b34d6c7621b33">↩</a></p>
-<p><a id="selvapeterCellularAutomataImage2009" target=
-"_blank">Selvapeter, P. J., & Wim Hordijk, <em>Cellular automata
-for image noise filtering</em>, In , 2009 {{World Congress}} on
-{{Nature}} & {{Biologically Inspired Computing}} ({{NaBIC}}) (pp.
-193–197) (2009). Coimbatore, India: IEEE.</a> <a href=
-"#21fd79b1cbc2adad7aa9ab4242f973fa">↩</a></p>
-<p><a id="wongthanavasuCellularAutomataPattern2013" target=
-"_blank">Wongthanavasu, S., & Ponkaew, J., <em>Cellular Automata
-for Pattern Recognition</em>, In A. Salcido (Eds.), Emerging
-{{Applications}} of {{Cellular Automata} (pp. ) (2013). :
-InTech.</a> <a href="#45aa9a0bc8fe3b0fc110b5cb92b84a3e">↩</a></p>
-<p><a id="hansonComputationalMechanicsCellular1997" target=
-"_blank">Hanson, J. E., & Crutchfield, J. P., <em>Computational
-mechanics of cellular automata: An example</em>, Physica D:
-Nonlinear Phenomena, <em>103(1)</em>, 169–189 (1997).</a> <a href=
-"http://dx.doi.org/10.1016/S0167-2789(96)00259-X">http://dx.doi.org/10.1016/S0167-2789(96)00259-X</a>
-<a href="#503425f3f76268db675ebba9298de60d">↩</a></p>
 <h2 id="backlinks">Backlinks</h2>
 <ul>
 <li><a href=
 "/notes/20200302191410_turing_completeness/">Turing-completeness</a></li>
 <li><a href="/notes/20200301202542_boltzmann_brain/">Boltzmann
 brain</a></li>
-<li><a href=
-"/notes/20200301192144_open_ended_evolution/">Open-ended
-Evolution</a></li>
 <li><a href="/notes/20200330224234-konrad_zuse/">Konrad
 Zuse</a></li>
-<li><a href=
-"/notes/20200330150814-elementary_cellular_automata/">Elementary
-cellular automata</a></li>
 <li><a href=
 "/notes/millerevolvingselfrepairingselfregulating2004/">Notes on:
 Miller, J. F. (2004): Evolving a self-repairing, self-regulating,
@@ -295,12 +314,18 @@ on: Mordvintsev, A., Randazzo, E., Niklasson, E., & Levin, M.
 <li><a href=
 "/notes/20200330163905-complexity_of_cellular_automata/">Complexity
 of cellular automata</a></li>
+<li><a href=
+"/notes/20200301192144_open_ended_evolution/">Open-ended
+Evolution</a></li>
+<li><a href=
+"/notes/20200330150814-elementary_cellular_automata/">Elementary
+cellular automata</a></li>
 </ul>
 </div>
 <div class="note-footer">Last changed <a class="u-url" href=
 "https://hugocisneros.com/notes/20200301192434_cellular_automata/"><time itemprop="datePublished"
 class="dt-published" datetime=
-"2020-03-31T23:31:49+0200">31/03/2020</time></a> | authored by
+"2020-04-02T18:57:35+0200">02/04/2020</time></a> | authored by
 <a href="https://hugocisneros.com/" rel="author" class=
 "p-author h-card" itemprop="author" itemscope itemtype=
 "http://schema.org/Person"><span itemprop="name">Hugo

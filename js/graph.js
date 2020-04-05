@@ -1,7 +1,7 @@
 d3.json("/js/graph.json").then(function(data) {
     height = 600;
     width = 1000;
-    radius = 8;
+    radius = 9;
     color = () => {
         const scale = d3.scaleOrdinal(d3.schemeCategory10);
         return d => scale(d.group);
@@ -36,14 +36,18 @@ d3.json("/js/graph.json").then(function(data) {
         nde = d3.select(g[i]);
         nde.attr("fill", "#999")
             .attr("r", radius * 1.3);
+
         d3.selectAll("text")
             .filter('#' + CSS.escape(g[i].id))
             .style("display", "block");
 
         d3.selectAll("line")
+            // .transition(t)
             .attr("stroke-width", 1);
+
         d3.selectAll("line")
             .filter((l, idx) => l.source.index == i || l.target.index == i)
+            // .transition(t)
             .attr("stroke-width", 5);
     };
 
@@ -51,19 +55,25 @@ d3.json("/js/graph.json").then(function(data) {
         nde = d3.select(g[i]);
         nde.attr("fill", color)
             .attr("r", radius);
+
         d3.selectAll("text")
             .filter('#' + CSS.escape(g[i].id))
             .style("display", "none");
+
     };
 
     const links = data.links.map(d => Object.create(d));
     const nodes = data.nodes.map(d => Object.create(d));
+
     const simulation = d3.forceSimulation(nodes)
           .force("link", d3.forceLink(links).id(d => d.id))
           .force("charge", d3.forceManyBody().strength(-70))
           .force("x", d3.forceX(width / 2))
           .force("y", d3.forceY(height / 2));
-          // .force("center", d3.forceCenter(width / 2, height / 2));
+
+    // const t = d3.transition()
+          // .duration(10)
+          // .ease(d3.easeCubic);
 
     const svg = d3.select("svg")
           .attr('max-width', '60%')
@@ -76,6 +86,7 @@ d3.json("/js/graph.json").then(function(data) {
           .selectAll("line")
           .data(links)
           .join("line")
+          .attr("marker-end", "url(#head)")
           .attr("stroke-width", 1);
 
     const node = svg.append("g")

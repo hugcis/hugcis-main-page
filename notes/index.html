@@ -20,7 +20,7 @@
 <meta name="twitter:site" content="@cisne_hug">
 <meta name="twitter:creator" content="@cisne_hug">
 <link rel="stylesheet" href=
-"https://hugocisneros.com/css/main.min.41786faddf905bbf9e73937717b1839d191bb76bebec294aa88b8e08405c2d31.css"
+"https://hugocisneros.com/css/main.min.4ef04a239f7c0567f4c168c786dc2a84242f05ede7b5f6a00e2d55219466071b.css"
 media="all" type="text/css">
 <link rel="apple-touch-icon" sizes="180x180" href=
 "/apple-touch-icon.png">
@@ -37,6 +37,16 @@ media="all" type="text/css">
 "https://webmention.io/hugocisneros.com/webmention">
 <link rel="pingback" href=
 "https://webmention.io/hugocisneros.com/xmlrpc">
+<script>
+ MathJax = {
+     tex: {
+         inlineMath: [['$','$'], ['\\(', '\\)']]
+     }
+ };
+</script>
+<script type="text/javascript" rel="preconnect" id="MathJax-script"
+async src=
+"https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://d3js.org/d3.v5.min.js"></script>
 <script src="/js/graph.js"></script>
 </head>
@@ -74,9 +84,12 @@ what I say and make sure I understand.</p>
 <svg>
 <defs>
 <filter x="0" y="0" width="1" height="1" id="solid">
-<feflood flood-color="#f7f7f7"></feflood>
+<feflood flood-color="#f7f7f7" flood-opacity="0.9"></feflood>
 <fecomposite in="SourceGraphic" operator="xor"></fecomposite>
 </filter>
+<marker id='head' orient='auto' markerwidth='2' markerheight='4'
+refx='0.1' refy='2'>
+<path d='M0,0 V4 L2,2 Z' fill='black'></path></marker>
 </defs>
 <rect width="100%" height="100%" fill="#f2f2f2"></rect></svg>
 <hr>
@@ -289,6 +302,12 @@ title="Finite state machines">
 "https://hugocisneros.com/notes/20200302104952_genetic_algorithm/"
 title="Genetic algorithm">
 <h3 class="single-note-title">Genetic algorithm</h3>
+</a></li>
+<li class="single-note h-entry" id=
+"20200402190009-gradient_descent"><a class="u-url" href=
+"https://hugocisneros.com/notes/20200402190009-gradient_descent/"
+title="Gradient descent">
+<h3 class="single-note-title">Gradient descent</h3>
 </a></li>
 <li class="single-note h-entry" id=
 "20200310085049-godel_s_theorem"><a class="u-url" href=
@@ -601,6 +620,15 @@ title="Open-ended Evolution">
 <h3 class="single-note-title">Open-ended Evolution</h3>
 </a></li>
 <li class="single-note h-entry" id=
+"20200405163153-open_endedness_the_last_grand_challenge_you_ve_never_heard_of">
+<a class="u-url" href=
+"https://hugocisneros.com/notes/20200405163153-open_endedness_the_last_grand_challenge_you_ve_never_heard_of/"
+title=
+"Open-endedness: The last grand challenge you’ve never heard of">
+<h3 class="single-note-title">Open-endedness: The last grand
+challenge you’ve never heard of</h3>
+</a></li>
+<li class="single-note h-entry" id=
 "20200330105011-optimal_transport"><a class="u-url" href=
 "https://hugocisneros.com/notes/20200330105011-optimal_transport/"
 title="Optimal transport">
@@ -635,6 +663,12 @@ title="Programming languages">
 "https://hugocisneros.com/notes/20200302111831_reaction_diffusion/"
 title="Reaction-diffusion">
 <h3 class="single-note-title">Reaction-diffusion</h3>
+</a></li>
+<li class="single-note h-entry" id=
+"20200403092208-recurrent_neural_networks"><a class="u-url" href=
+"https://hugocisneros.com/notes/20200403092208-recurrent_neural_networks/"
+title="Recurrent neural networks">
+<h3 class="single-note-title">Recurrent neural networks</h3>
 </a></li>
 <li class="single-note h-entry" id=
 "20200302104940_reinforcement_learning"><a class="u-url" href=

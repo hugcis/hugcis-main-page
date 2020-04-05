@@ -94,16 +94,17 @@
     
     <url>
         <loc>https://hugocisneros.com/notes/20200309083200-c/</loc>
-        <lastmod>2020-03-27T18:45:25+01:00</lastmod>
+        <lastmod>2020-04-02T18:57:35+02:00</lastmod>
     </url>
     
     <url>
         <loc>https://hugocisneros.com/notes/20200401090344-c/</loc>
+        <lastmod>2020-04-02T18:57:35+02:00</lastmod>
     </url>
     
     <url>
         <loc>https://hugocisneros.com/notes/20200301192434_cellular_automata/</loc>
-        <lastmod>2020-03-31T23:31:49+02:00</lastmod>
+        <lastmod>2020-04-02T18:57:35+02:00</lastmod>
     </url>
     
     <url>
@@ -118,7 +119,7 @@
     
     <url>
         <loc>https://hugocisneros.com/notes/20200301195652_coding/</loc>
-        <lastmod>2020-03-27T18:45:25+01:00</lastmod>
+        <lastmod>2020-04-02T18:57:35+02:00</lastmod>
     </url>
     
     <url>
@@ -133,7 +134,7 @@
     
     <url>
         <loc>https://hugocisneros.com/notes/20200301192936_complexity/</loc>
-        <lastmod>2020-03-31T23:31:49+02:00</lastmod>
+        <lastmod>2020-04-02T18:57:35+02:00</lastmod>
     </url>
     
     <url>
@@ -213,12 +214,16 @@
     
     <url>
         <loc>https://hugocisneros.com/notes/20200324162136-finite_state_machines/</loc>
-        <lastmod>2020-03-27T18:45:25+01:00</lastmod>
+        <lastmod>2020-04-02T18:57:35+02:00</lastmod>
     </url>
     
     <url>
         <loc>https://hugocisneros.com/notes/20200302104952_genetic_algorithm/</loc>
-        <lastmod>2020-03-27T18:45:25+01:00</lastmod>
+        <lastmod>2020-04-02T18:57:35+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/20200402190009-gradient_descent/</loc>
     </url>
     
     <url>
@@ -248,10 +253,12 @@
     
     <url>
         <loc>https://hugocisneros.com/notes/20200401090607-java/</loc>
+        <lastmod>2020-04-02T18:57:35+02:00</lastmod>
     </url>
     
     <url>
         <loc>https://hugocisneros.com/notes/20200401090415-javascript/</loc>
+        <lastmod>2020-04-02T18:57:35+02:00</lastmod>
     </url>
     
     <url>
@@ -321,12 +328,12 @@
     
     <url>
         <loc>https://hugocisneros.com/notes/20200302104848_neural_architecture_search/</loc>
-        <lastmod>2020-03-31T23:31:49+02:00</lastmod>
+        <lastmod>2020-04-02T18:57:35+02:00</lastmod>
     </url>
     
     <url>
         <loc>https://hugocisneros.com/notes/20200301200320_neural_networks/</loc>
-        <lastmod>2020-03-31T23:31:49+02:00</lastmod>
+        <lastmod>2020-04-02T18:57:35+02:00</lastmod>
     </url>
     
     <url>
@@ -336,7 +343,7 @@
     
     <url>
         <loc>https://hugocisneros.com/notes/</loc>
-        <lastmod>2020-03-31T15:19:33+02:00</lastmod>
+        <lastmod>2020-04-02T18:57:35+02:00</lastmod>
     </url>
     
     <url>
@@ -406,7 +413,7 @@
     
     <url>
         <loc>https://hugocisneros.com/notes/stanleyevolvingneuralnetworks2002/</loc>
-        <lastmod>2020-03-31T23:31:49+02:00</lastmod>
+        <lastmod>2020-04-02T18:57:35+02:00</lastmod>
     </url>
     
     <url>
@@ -445,6 +452,10 @@
     </url>
     
     <url>
+        <loc>https://hugocisneros.com/notes/20200405163153-open_endedness_the_last_grand_challenge_you_ve_never_heard_of/</loc>
+    </url>
+    
+    <url>
         <loc>https://hugocisneros.com/notes/20200330105011-optimal_transport/</loc>
         <lastmod>2020-03-31T15:19:33+02:00</lastmod>
     </url>
@@ -466,17 +477,21 @@
     
     <url>
         <loc>https://hugocisneros.com/notes/20200302192225_programming_languages/</loc>
-        <lastmod>2020-03-31T23:31:49+02:00</lastmod>
+        <lastmod>2020-04-02T18:57:35+02:00</lastmod>
     </url>
     
     <url>
         <loc>https://hugocisneros.com/notes/20200301195634_python/</loc>
-        <lastmod>2020-03-31T23:31:49+02:00</lastmod>
+        <lastmod>2020-04-02T18:57:35+02:00</lastmod>
     </url>
     
     <url>
         <loc>https://hugocisneros.com/notes/20200302111831_reaction_diffusion/</loc>
         <lastmod>2020-03-27T18:45:25+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/20200403092208-recurrent_neural_networks/</loc>
     </url>
     
     <url>
@@ -491,14 +506,17 @@
     
     <url>
         <loc>https://hugocisneros.com/notes/20200401090600-ruby/</loc>
+        <lastmod>2020-04-02T18:57:35+02:00</lastmod>
     </url>
     
     <url>
         <loc>https://hugocisneros.com/notes/20200401090424-rust/</loc>
+        <lastmod>2020-04-02T18:57:35+02:00</lastmod>
     </url>
     
     <url>
         <loc>https://hugocisneros.com/notes/20200401090613-scala/</loc>
+        <lastmod>2020-04-02T18:57:35+02:00</lastmod>
     </url>
     
     <url>
