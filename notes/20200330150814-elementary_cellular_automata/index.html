@@ -18,7 +18,7 @@ page</title>
 <meta name="twitter:site" content="@cisne_hug">
 <meta name="twitter:creator" content="@cisne_hug">
 <link rel="stylesheet" href=
-"https://hugocisneros.com/css/main.min.4ef04a239f7c0567f4c168c786dc2a84242f05ede7b5f6a00e2d55219466071b.css"
+"https://hugocisneros.com/css/main.min.e2d615099509df7d10a3b94c8b12afd67b07f25a1830878f1970f64db3845720.css"
 media="all" type="text/css">
 <link rel="apple-touch-icon" sizes="180x180" href=
 "/apple-touch-icon.png">
@@ -95,15 +95,55 @@ behavior emerge. Wolfram constructed a classification of those
 behavior, known as Wolfram’s classification <a id=
 "73ea3e268fb9bda24b549dc45c43b924" href=
 "#wolframNewKindScience2002">(Wolfram, 2002)</a>.</p>
+<h2 id="simple-implementation">Simple implementation</h2>
+<p>In Python, taking advantage of Numpy’s array manipulation. This
+implementation is much faster than loping through elements of the
+grid to update them, but uses more memory.</p>
+<div class="highlight">
+<pre style=
+"color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<code class="language-python" data-lang="python">N = <span style=
+"color:#3677a9">100</span>
+rule = <span style="color:#3677a9">54</span> <span style=
+"color:#999;font-style:italic"># Rule code</span>
+rule_list = <span style=
+"color:#24909d">bin</span>(rule)[<span style=
+"color:#3677a9">2</span>:]
+<span style=
+"color:#999;font-style:italic"># Zero padding of the rule</span>
+rule_list = [<span style="color:#3677a9">0</span>] * (<span style=
+"color:#3677a9">8</span> - <span style=
+"color:#24909d">len</span>(rule_list)) + [<span style=
+"color:#24909d">int</span>(i) <span style=
+"color:#6ab825;font-weight:bold">for</span> i <span style=
+"color:#6ab825;font-weight:bold">in</span> rule_list]
+<span style=
+"color:#999;font-style:italic"># Convert to array and reverse the list</span>
+rule_array = np.array(rule_list[::-<span style=
+"color:#3677a9">1</span>])
+
+init = np.random.randint(<span style=
+"color:#3677a9">2</span>, size=N)
+next_step = rule[np.roll(init, <span style=
+"color:#3677a9">1</span>) + <span style=
+"color:#3677a9">2</span> * init + <span style=
+"color:#3677a9">4</span> * np.roll(init, -<span style=
+"color:#3677a9">1</span>)]
+</code></pre></div>
 <h1 id="bibliography">Bibliography</h1>
 <p><a id="wolframNewKindScience2002" target="_blank">Wolfram, S.,
-<em>A new kind of science</em> (2002), Champaign, IL: Wolfram
-Media.</a> <a href="#73ea3e268fb9bda24b549dc45c43b924">↩</a></p>
+<em>A new kind of science</em> (2002), {Champaign, IL}: {Wolfram
+Media}.</a> <a href="#73ea3e268fb9bda24b549dc45c43b924">↩</a></p>
+<h2 id="backlinks">Backlinks</h2>
+<ul>
+<li><a href="/notes/20200301192434_cellular_automata/">Cellular
+automata</a></li>
+</ul>
 </div>
 <div class="note-footer">Last changed <a class="u-url" href=
 "https://hugocisneros.com/notes/20200330150814-elementary_cellular_automata/">
 <time itemprop="datePublished" class="dt-published" datetime=
-"2020-03-31T15:19:33+0200">31/03/2020</time></a> | authored by
+"2020-04-12T15:13:36+0200">12/04/2020</time></a> | authored by
 <a href="https://hugocisneros.com/" rel="author" class=
 "p-author h-card" itemprop="author" itemscope itemtype=
 "http://schema.org/Person"><span itemprop="name">Hugo

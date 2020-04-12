@@ -24,7 +24,7 @@ page</title>
 <meta property="keywords" content=
 "Optimal transport, Data science, Theory">
 <link rel="stylesheet" href=
-"https://hugocisneros.com/css/main.min.4ef04a239f7c0567f4c168c786dc2a84242f05ede7b5f6a00e2d55219466071b.css"
+"https://hugocisneros.com/css/main.min.e2d615099509df7d10a3b94c8b12afd67b07f25a1830878f1970f64db3845720.css"
 media="all" type="text/css">
 <link rel="apple-touch-icon" sizes="180x180" href=
 "/apple-touch-icon.png">
@@ -89,8 +89,8 @@ Cisneros</span></a></div>
 <p><em>This post was largely inspired by <a href=
 "https://www.gpeyre.com/">Gabriel Peyré</a> and <a href=
 "https://marcocuturi.net/">Marco Cuturi</a>‘s excellent book about
-Computational Optimal Transport, available <a href=
-"https://optimaltransport.github.io/">for free</a>, (<a href=
+Computational Optimal Transport, which is <a href=
+"https://optimaltransport.github.io/">free</a>, (<a href=
 "https://arxiv.org/abs/1803.00567">arXiv link</a>, ref: <a href=
 "#computational">[1]</a>)</em>.</p>
 <h2 id="a-simple-problem">A simple problem?</h2>
@@ -99,17 +99,20 @@ Computational Optimal Transport, available <a href=
 <p>It all begins with <a href=
 "https://en.wikipedia.org/wiki/Gaspard_Monge">Gaspard Monge</a>,
 reading his <em>mémoire</em> <a href="#monge">[2]</a> in front of
-eminent scientists and engineers of the time (including <a href=
-"https://en.wikipedia.org/wiki/Marquis_de_Condorcet">Condorcet</a>)
-from the French <em>Académie Royale des Sciences</em> in 1776.
-Monge’s problem could be explained in simple terms as follows:</p>
+eminent scientists and engineers of the time — including famous
+Enlightenment philosopher <a href=
+"https://en.wikipedia.org/wiki/Marquis_de_Condorcet">Condorcet</a>
+— at the French <em>Académie Royale des Sciences</em> in 1776.</p>
+<p>The memoir is in french, and is probably not relevant to someone
+interested about modern optimal transport. However, Monge’s problem
+could be explained in simple terms as follows:</p>
 <blockquote>
 <p>Given two excavations $D_1$ and $D_2$, a cost of moving a unit
 of mass of dirt from any point of $D_1$ to any point of $D_2$,</p>
 <div class="center"><b>What is the cheapest way to move mass from
 $D_1$ to $D_2$ ?</b></div>
 </blockquote>
-<p>The answer is far from simple, it turns out. Monge didn’t solve
+<p>The answer is far from simple it turns out. Monge didn’t solve
 it in his <em>mémoire</em>, although he did lay the foundations of
 modern optimal transport theory.</p>
 <figure itemprop="image" itemscope itemtype=
@@ -123,15 +126,15 @@ from a mound to the other? Probably not: there are 39,916,800
 possible ways to do it.</h4>
 </figcaption>
 </figure>
-<p>But let’s move to the problem.</p>
+<p>Let’s move to the problem.</p>
 <h2 id="discrete-optimal-transport">Discrete Optimal Transport</h2>
 <p>The easiest way to think of the problem is in terms of atomic
 items.</p>
 <h3 id="assignment-problem">Assignment problem</h3>
-<p>In its simplest form, it can be viewed as an assignment problem:
+<p>In its simplest form it can be viewed as an assignment problem:
 among all configurations, which one is the best? This is already
-quite restrictive since we can only work with two sets of the same
-total size, but this simple version is incredibly hard to
+quite restrictive, because we can only work with two sets of the
+same total size. However, this simple version is incredibly hard to
 solve.</p>
 <p>Each set (the above “excavations”) can be represented as a
 histogram (or vector) $\mathbf{a}$ that belongs to the probability
@@ -141,9 +144,9 @@ simplex — the vectors which components sum to 1:</p>
 <p>If we write $\mathbf{C}_{i,j} $ the cost of moving an element
 from $i$ to $j$, the quantity we want to minimize is $\sum_{i}
 \mathbf{C}_{i,\sigma(i)}$ , where $\sigma$ is a
-<strong>permutation</strong> of the set $\{1, …, N\}$ that
-represents the assignment of bin $i$ of the first histogram to an
-output position $j$ in the second histogram.</p>
+<strong>permutation</strong> of the set $\{1, …, N\}$. This
+permutation represents an assignment of bin $i$ of the first
+histogram to output positions $j$ in the second histogram.</p>
 <p>In this form, optimal transport is fundamentally
 <strong>combinatorial</strong>, and might be summarized like
 so:</p>
@@ -341,9 +344,9 @@ problems</h2>
 possibilities that optimal transport has to offer. Wasserstein
 distances (more on this <a href="#wasserstein-distances">here</a>)
 can be used as a loss function, leveraging <strong>physical and
-geometrical ideas</strong> — such as mass displacement, ground
-cost, etc. — that are more natural than information based
-divergence between probability measures (such as <a href=
+geometric ideas</strong> — such as mass displacement, ground cost,
+etc. — that are more natural than information based divergence
+between probability measures (such as <a href=
 "https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence">
 Kullback-Leibler divergence</a>). This excitement is illustrated by
 the <strong>number of papers accepted at NeurIPS</strong>
@@ -489,7 +492,7 @@ New. (2008).</li>
 </div>
 <div class="article-date-modified">Last modified <span itemprop=
 "dateModified" content=
-"2020-03-30T15:19:29+0200">30/03/2020</span></div>
+"2020-04-12T14:37:50+0200">12/04/2020</span></div>
 </article>
 </main>
 <footer class="footer">

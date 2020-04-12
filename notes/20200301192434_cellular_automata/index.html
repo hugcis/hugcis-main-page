@@ -17,7 +17,7 @@
 <meta name="twitter:site" content="@cisne_hug">
 <meta name="twitter:creator" content="@cisne_hug">
 <link rel="stylesheet" href=
-"https://hugocisneros.com/css/main.min.4ef04a239f7c0567f4c168c786dc2a84242f05ede7b5f6a00e2d55219466071b.css"
+"https://hugocisneros.com/css/main.min.e2d615099509df7d10a3b94c8b12afd67b07f25a1830878f1970f64db3845720.css"
 media="all" type="text/css">
 <link rel="apple-touch-icon" sizes="180x180" href=
 "/apple-touch-icon.png">
@@ -74,7 +74,9 @@ automata</h1>
 "/notes/20200301201821_artificial_intelligence/">Artificial
 intelligence</a></dd>
 <dt>resources</dt>
-<dd><a id="73ea3e268fb9bda24b549dc45c43b924" href=
+<dd><a href=
+"https://en.wikipedia.org/wiki/Cellular%5Fautomaton">Wikipedia</a>,
+<a id="73ea3e268fb9bda24b549dc45c43b924" href=
 "#wolframNewKindScience2002">(Wolfram, 2002)</a></dd>
 </dl>
 <h2 id="definition">Definition</h2>
@@ -88,6 +90,18 @@ timesteps. At each new timestep, cells are updated according to a
 local <strong>evolution rule</strong>. The rule is a table or
 function mapping every possible state of a cell and their local
 neighborhoods to a new state.</p>
+<p>There are multiple ways to define the topology of the grid,
+rules, local neighborhoods and simulation steps. Some well known
+types of automata are listed below</p>
+<h3 id="elementary-cellular-automata">Elementary cellular
+automata</h3>
+<p>Cellular automata on 1D grids, with two states and neighborhood
+radius 1 (middle cell + one cell on each side) are called <a href=
+"/notes/20200330150814-elementary_cellular_automata/">Elementary
+cellular automata</a> — or ECA.</p>
+<h3 id="reversible-cellular-automata">Reversible cellular
+automata</h3>
+<h3 id="cyclic-cellular-automata">Cyclic cellular automata</h3>
 <h2 id=
 "cellular-automata-as-cnn--20200302110556-convolutional-neural-networks-dot-md--s">
 Cellular automata as <a href=
@@ -183,45 +197,6 @@ under the CA rule;</li>
 from experimental data</li>
 </ul>
 </blockquote>
-<h1 id="bibliography">Bibliography</h1>
-<p><a id="wolframNewKindScience2002" target="_blank">Wolfram, S.,
-<em>A new kind of science</em> (2002), Champaign, IL: Wolfram
-Media.</a> <a href="#73ea3e268fb9bda24b549dc45c43b924">↩</a></p>
-<p><a id="gilpinCellularAutomataConvolutional2018" target=
-"_blank">Gilpin, W., <em>Cellular automata as convolutional neural
-networks</em>, arXiv:1809.02942 [cond-mat, physics:nlin,
-physics:physics], <em>()</em>, (2018).</a> <a href=
-"#feab210e96cd376dff269508ad415b85">↩</a></p>
-<p><a id="mordvintsevGrowingNeuralCellular2020" target=
-"_blank">Mordvintsev, A., Randazzo, E., Niklasson, E., & Levin, M.,
-<em>Growing Neural Cellular Automata</em>, Distill, <em>5(2)</em>,
-23 (2020).</a> <a href=
-"http://dx.doi.org/10.23915/distill.00023">http://dx.doi.org/10.23915/distill.00023</a>
-<a href="#b71c53b928ac63b5999b34d6c7621b33">↩</a></p>
-<p><a id="manukyanLivingMesoscopicCellular2017a" target=
-"_blank">Manukyan, L., Montandon, S. A., Fofonjka, A., Smirnov, S.,
-& Milinkovitch, M. C., <em>A living mesoscopic cellular automaton
-made of skin scales</em>, Nature, <em>544(7649)</em>, 173–179
-(2017).</a> <a href=
-"http://dx.doi.org/10.1038/nature22031">http://dx.doi.org/10.1038/nature22031</a>
-<a href="#1b843574876b0429c1d05e1428f7b42b">↩</a></p>
-<p><a id="selvapeterCellularAutomataImage2009" target=
-"_blank">Selvapeter, P. J., & Wim Hordijk, <em>Cellular automata
-for image noise filtering</em>, In , 2009 {{World Congress}} on
-{{Nature}} & {{Biologically Inspired Computing}} ({{NaBIC}}) (pp.
-193–197) (2009). Coimbatore, India: IEEE.</a> <a href=
-"#21fd79b1cbc2adad7aa9ab4242f973fa">↩</a></p>
-<p><a id="wongthanavasuCellularAutomataPattern2013" target=
-"_blank">Wongthanavasu, S., & Ponkaew, J., <em>Cellular Automata
-for Pattern Recognition</em>, In A. Salcido (Eds.), Emerging
-{{Applications}} of {{Cellular Automata} (pp. ) (2013). :
-InTech.</a> <a href="#45aa9a0bc8fe3b0fc110b5cb92b84a3e">↩</a></p>
-<p><a id="hansonComputationalMechanicsCellular1997" target=
-"_blank">Hanson, J. E., & Crutchfield, J. P., <em>Computational
-mechanics of cellular automata: An example</em>, Physica D:
-Nonlinear Phenomena, <em>103(1)</em>, 169–189 (1997).</a> <a href=
-"http://dx.doi.org/10.1016/S0167-2789(96)00259-X">http://dx.doi.org/10.1016/S0167-2789(96)00259-X</a>
-<a href="#503425f3f76268db675ebba9298de60d">↩</a></p>
 <h2 id="evolution-and-cas">Evolution and CAs</h2>
 <p>Why would things <a href=
 "/notes/20200301192607_evolution/">evolve</a> in a CA? I was
@@ -292,14 +267,55 @@ without interacting with it somehow.</p>
 "/notes/20200330224045-zuse_s_thesis/">Zuse’s thesis</a>, and is an
 interesting argument for the universe being a computer simulation —
 and even a CA.</p>
+<h1 id="bibliography">Bibliography</h1>
+<p><a id="wolframNewKindScience2002" target="_blank">Wolfram, S.,
+<em>A new kind of science</em> (2002), {Champaign, IL}: {Wolfram
+Media}.</a> <a href="#73ea3e268fb9bda24b549dc45c43b924">↩</a></p>
+<p><a id="gilpinCellularAutomataConvolutional2018" target=
+"_blank">Gilpin, W., <em>Cellular automata as convolutional neural
+networks</em>, arXiv:1809.02942 [cond-mat, physics:nlin,
+physics:physics], <em>()</em>, (2018).</a> <a href=
+"#feab210e96cd376dff269508ad415b85">↩</a></p>
+<p><a id="mordvintsevGrowingNeuralCellular2020" target=
+"_blank">Mordvintsev, A., Randazzo, E., Niklasson, E., & Levin, M.,
+<em>Growing Neural Cellular Automata</em>, Distill, <em>5(2)</em>,
+23 (2020).</a> <a href=
+"http://dx.doi.org/10.23915/distill.00023">http://dx.doi.org/10.23915/distill.00023</a>
+<a href="#b71c53b928ac63b5999b34d6c7621b33">↩</a></p>
+<p><a id="manukyanLivingMesoscopicCellular2017a" target=
+"_blank">Manukyan, L., Montandon, S. A., Fofonjka, A., Smirnov, S.,
+& Milinkovitch, M. C., <em>A living mesoscopic cellular automaton
+made of skin scales</em>, Nature, <em>544(7649)</em>, 173–179
+(2017).</a> <a href=
+"http://dx.doi.org/10.1038/nature22031">http://dx.doi.org/10.1038/nature22031</a>
+<a href="#1b843574876b0429c1d05e1428f7b42b">↩</a></p>
+<p><a id="selvapeterCellularAutomataImage2009" target=
+"_blank">Selvapeter, P. J., & Wim Hordijk, <em>Cellular automata
+for image noise filtering</em>, In , 2009 {{World Congress}} on
+{{Nature}} & {{Biologically Inspired Computing}} ({{NaBIC}}) (pp.
+193–197) (2009). {Coimbatore, India}: {IEEE}.</a> <a href=
+"#21fd79b1cbc2adad7aa9ab4242f973fa">↩</a></p>
+<p><a id="wongthanavasuCellularAutomataPattern2013" target=
+"_blank">Wongthanavasu, S., & Ponkaew, J., <em>Cellular Automata
+for Pattern Recognition</em>, In A. Salcido (Eds.), Emerging
+{{Applications}} of {{Cellular Automata}} (pp. ) (2013). :
+{InTech}.</a> <a href="#45aa9a0bc8fe3b0fc110b5cb92b84a3e">↩</a></p>
+<p><a id="hansonComputationalMechanicsCellular1997" target=
+"_blank">Hanson, J. E., & Crutchfield, J. P., <em>Computational
+mechanics of cellular automata: An example</em>, Physica D:
+Nonlinear Phenomena, <em>103(1)</em>, 169–189 (1997).</a> <a href=
+"http://dx.doi.org/10.1016/S0167-2789(96)00259-X">http://dx.doi.org/10.1016/S0167-2789(96)00259-X</a>
+<a href="#503425f3f76268db675ebba9298de60d">↩</a></p>
 <h2 id="backlinks">Backlinks</h2>
 <ul>
-<li><a href=
-"/notes/20200302191410_turing_completeness/">Turing-completeness</a></li>
-<li><a href="/notes/20200301202542_boltzmann_brain/">Boltzmann
-brain</a></li>
 <li><a href="/notes/20200330224234-konrad_zuse/">Konrad
 Zuse</a></li>
+<li><a href=
+"/notes/20200330150814-elementary_cellular_automata/">Elementary
+cellular automata</a></li>
+<li><a href=
+"/notes/20200301192144_open_ended_evolution/">Open-ended
+Evolution</a></li>
 <li><a href=
 "/notes/millerevolvingselfrepairingselfregulating2004/">Notes on:
 Miller, J. F. (2004): Evolving a self-repairing, self-regulating,
@@ -312,20 +328,18 @@ automata</a></li>
 on: Mordvintsev, A., Randazzo, E., Niklasson, E., & Levin, M.
 (2020): Growing Neural Cellular Automata</a></li>
 <li><a href=
+"/notes/20200302191410_turing_completeness/">Turing-completeness</a></li>
+<li><a href=
 "/notes/20200330163905-complexity_of_cellular_automata/">Complexity
 of cellular automata</a></li>
-<li><a href=
-"/notes/20200301192144_open_ended_evolution/">Open-ended
-Evolution</a></li>
-<li><a href=
-"/notes/20200330150814-elementary_cellular_automata/">Elementary
-cellular automata</a></li>
+<li><a href="/notes/20200301202542_boltzmann_brain/">Boltzmann
+brain</a></li>
 </ul>
 </div>
 <div class="note-footer">Last changed <a class="u-url" href=
 "https://hugocisneros.com/notes/20200301192434_cellular_automata/"><time itemprop="datePublished"
 class="dt-published" datetime=
-"2020-04-02T18:57:35+0200">02/04/2020</time></a> | authored by
+"2020-04-12T15:13:36+0200">12/04/2020</time></a> | authored by
 <a href="https://hugocisneros.com/" rel="author" class=
 "p-author h-card" itemprop="author" itemscope itemtype=
 "http://schema.org/Person"><span itemprop="name">Hugo
