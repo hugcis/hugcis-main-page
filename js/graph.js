@@ -1,6 +1,6 @@
 d3.json("/js/graph.json").then(function(data) {
-    height = 600;
-    width = 1000;
+    height = 800;
+    width = 1300;
     radius = 9;
     color = () => {
         const scale = d3.scaleOrdinal(d3.schemeCategory10);
@@ -67,7 +67,8 @@ d3.json("/js/graph.json").then(function(data) {
 
     const simulation = d3.forceSimulation(nodes)
           .force("link", d3.forceLink(links).id(d => d.id))
-          .force("charge", d3.forceManyBody().strength(-70))
+          .force("charge", d3.forceManyBody()
+                 .strength(-100))
           .force("x", d3.forceX(width / 2))
           .force("y", d3.forceY(height / 2));
 
