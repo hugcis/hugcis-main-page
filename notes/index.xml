@@ -11,6 +11,15 @@
     
     
     <item>
+      <title>Abelian sandpile model</title>
+      <link>https://hugocisneros.com/notes/20200507101434-abelian_sandpile_model/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/20200507101434-abelian_sandpile_model/</guid>
+      <description> tags Cellular automata  </description>
+    </item>
+    
+    <item>
       <title>Adversarial examples</title>
       <link>https://hugocisneros.com/notes/20200330105209-adversarial_examples/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -43,7 +52,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hugocisneros.com/notes/20200301201821_artificial_intelligence/</guid>
-      <description>Backlinks  Notes on: Clune, J. (2019): AI-GAs: AI-generating algorithms, an alternate paradigm for producing general artificial intelligence Open-ended Evolution Cellular automata Machine learning Compression Open-endedness: The last grand challenge you’ve never heard of  </description>
+      <description>Backlinks  Notes on: Clune, J. (2019): AI-GAs: AI-generating algorithms, an alternate paradigm for producing general artificial intelligence Open-ended Evolution Machine learning Compression Open-endedness: The last grand challenge you’ve never heard of Notes on: Anderson, P. W. (1972): More Is Different Cellular automata  </description>
     </item>
     
     <item>
@@ -52,7 +61,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hugocisneros.com/notes/20200301203351_artificial_life/</guid>
-      <description>Backlinks  Notes on: Kruszewski, G., &amp;amp; Mikolov, T. (2020): Combinatory Chemistry: Towards a Simple Model of Emergent Evolution Open-ended Evolution Evolution  </description>
+      <description>Backlinks  Notes on: Kruszewski, G., &amp;amp; Mikolov, T. (2020): Combinatory Chemistry: Towards a Simple Model of Emergent Evolution Open-ended Evolution Evolution Notes on: Anderson, P. W. (1972): More Is Different  </description>
     </item>
     
     <item>
@@ -63,6 +72,15 @@
       <guid>https://hugocisneros.com/notes/20200301200248_autoencoders/</guid>
       <description>tags Neural networks, Data representation  Autoencoders and PCA Added: [2020-02-25 Tue 21:21]
 The relation between Autoencoders and PCA is strong. In particular, a very small autoencoder with only linear activations seems intuitively very close to PCA decomposition. (Bourlard &amp;amp; Kamp, 1988) gives an interesting analysis of the uselessness of the activation functions in the encoding layers of an autoencoder when there is no activations in the output layers. In that case, autoencoding is closely related to a sinigular value decomposition of the input data.</description>
+    </item>
+    
+    <item>
+      <title>Backward RNN</title>
+      <link>https://hugocisneros.com/notes/20200506180851-backward_rnn/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/20200506180851-backward_rnn/</guid>
+      <description>tags Recurrent neural networks  Regular RNNs process input in sequence. When applied to a language modeling task, one tries to predict a word given the previous ones. For example, with the sentence The quick brown fox jumps over the lazy, a classical RNN will initialize and internal state \(s_0\) and process each word in sequence, starting from The and updating its internal state with each new word in order to make a final prediction.</description>
     </item>
     
     <item>
@@ -82,25 +100,7 @@ Resolution An interesting study and resolution of Berry&amp;rsquo;s paradox</des
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hugocisneros.com/notes/20200301202542_boltzmann_brain/</guid>
-      <description>tags physics, statistical physics  Boltzmann brain Boltzmann brain is an interesting concept offered initially in response to one of Ludwig Boltzmann&amp;rsquo;s explanation for the low-entropy state of the Universe. He hypothesized that even a fully random universe would fluctuate towards lower-entropy states. The issue is that many phenomena such as evolved life on Earth are so far from equilibrium it looks like they were extremely unlikely to have happened.</description>
-    </item>
-    
-    <item>
-      <title>C</title>
-      <link>https://hugocisneros.com/notes/20200309083200-c/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/20200309083200-c/</guid>
-      <description> tags Programming language  Backlinks  Programming languages  </description>
-    </item>
-    
-    <item>
-      <title>C&#43;&#43;</title>
-      <link>https://hugocisneros.com/notes/20200401090344-c/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/20200401090344-c/</guid>
-      <description> tags Programming language, Coding  Backlinks  Programming languages  </description>
+      <description>tags Physics, Statistical physics  Boltzmann brain Boltzmann brain is an interesting concept offered initially in response to one of Ludwig Boltzmann&amp;rsquo;s explanation for the low-entropy state of the Universe. He hypothesized that even a fully random universe would fluctuate towards lower-entropy states. The issue is that many phenomena such as evolved life on Earth are so far from equilibrium it looks like they were extremely unlikely to have happened.</description>
     </item>
     
   </channel>
