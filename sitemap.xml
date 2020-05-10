@@ -34,6 +34,7 @@
     
     <url>
         <loc>https://hugocisneros.com/notes/20200507101434-abelian_sandpile_model/</loc>
+        <lastmod>2020-05-10T19:26:04+02:00</lastmod>
     </url>
     
     <url>
@@ -58,12 +59,12 @@
     
     <url>
         <loc>https://hugocisneros.com/notes/20200301201821_artificial_intelligence/</loc>
-        <lastmod>2020-05-04T17:03:32+02:00</lastmod>
+        <lastmod>2020-05-10T19:26:04+02:00</lastmod>
     </url>
     
     <url>
         <loc>https://hugocisneros.com/notes/20200301203351_artificial_life/</loc>
-        <lastmod>2020-05-04T17:03:32+02:00</lastmod>
+        <lastmod>2020-05-10T19:26:04+02:00</lastmod>
     </url>
     
     <url>
@@ -73,6 +74,7 @@
     
     <url>
         <loc>https://hugocisneros.com/notes/20200506180851-backward_rnn/</loc>
+        <lastmod>2020-05-10T19:26:04+02:00</lastmod>
     </url>
     
     <url>
@@ -92,7 +94,7 @@
     
     <url>
         <loc>https://hugocisneros.com/notes/20200301202542_boltzmann_brain/</loc>
-        <lastmod>2020-04-26T19:03:10+02:00</lastmod>
+        <lastmod>2020-05-10T19:26:04+02:00</lastmod>
     </url>
     
     <url>
@@ -117,7 +119,7 @@
     
     <url>
         <loc>https://hugocisneros.com/notes/20200301192434_cellular_automata/</loc>
-        <lastmod>2020-05-04T17:03:32+02:00</lastmod>
+        <lastmod>2020-05-10T19:26:04+02:00</lastmod>
     </url>
     
     <url>
@@ -142,7 +144,7 @@
     
     <url>
         <loc>https://hugocisneros.com/notes/20200301195652_coding/</loc>
-        <lastmod>2020-05-04T17:03:32+02:00</lastmod>
+        <lastmod>2020-05-10T19:26:04+02:00</lastmod>
     </url>
     
     <url>
@@ -157,7 +159,7 @@
     
     <url>
         <loc>https://hugocisneros.com/notes/20200301192936_complexity/</loc>
-        <lastmod>2020-05-04T17:03:32+02:00</lastmod>
+        <lastmod>2020-05-10T19:26:04+02:00</lastmod>
     </url>
     
     <url>
@@ -172,7 +174,7 @@
     
     <url>
         <loc>https://hugocisneros.com/notes/20200306221256-computability_theory/</loc>
-        <lastmod>2020-05-04T17:03:32+02:00</lastmod>
+        <lastmod>2020-05-10T19:26:04+02:00</lastmod>
     </url>
     
     <url>
@@ -182,7 +184,7 @@
     
     <url>
         <loc>https://hugocisneros.com/notes/20200305194144-computer_vision/</loc>
-        <lastmod>2020-05-04T17:03:32+02:00</lastmod>
+        <lastmod>2020-05-10T19:26:04+02:00</lastmod>
     </url>
     
     <url>
@@ -227,7 +229,7 @@
     
     <url>
         <loc>https://hugocisneros.com/notes/20200330150814-elementary_cellular_automata/</loc>
-        <lastmod>2020-04-26T19:03:10+02:00</lastmod>
+        <lastmod>2020-05-10T19:26:04+02:00</lastmod>
     </url>
     
     <url>
@@ -242,7 +244,7 @@
     
     <url>
         <loc>https://hugocisneros.com/notes/20200301200824_emergence/</loc>
-        <lastmod>2020-05-04T17:03:32+02:00</lastmod>
+        <lastmod>2020-05-10T19:26:04+02:00</lastmod>
     </url>
     
     <url>
@@ -257,12 +259,12 @@
     
     <url>
         <loc>https://hugocisneros.com/notes/20200301195531_evaluating_nlp/</loc>
-        <lastmod>2020-03-30T15:19:29+02:00</lastmod>
+        <lastmod>2020-05-10T19:26:04+02:00</lastmod>
     </url>
     
     <url>
         <loc>https://hugocisneros.com/notes/20200301192607_evolution/</loc>
-        <lastmod>2020-05-04T17:03:32+02:00</lastmod>
+        <lastmod>2020-05-10T19:26:04+02:00</lastmod>
     </url>
     
     <url>
@@ -297,7 +299,7 @@
     
     <url>
         <loc>https://hugocisneros.com/notes/20200310085721-halting_problem/</loc>
-        <lastmod>2020-03-27T18:45:25+01:00</lastmod>
+        <lastmod>2020-05-10T19:26:04+02:00</lastmod>
     </url>
     
     <url>
@@ -392,7 +394,12 @@
     
     <url>
         <loc>https://hugocisneros.com/notes/20200301201527_machine_learning/</loc>
-        <lastmod>2020-05-04T17:03:32+02:00</lastmod>
+        <lastmod>2020-05-10T19:26:04+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/20200510174940-marvin_minsky/</loc>
+        <lastmod>2020-05-10T19:26:04+02:00</lastmod>
     </url>
     
     <url>
@@ -442,7 +449,7 @@
     
     <url>
         <loc>https://hugocisneros.com/notes/20200301195553_nlp/</loc>
-        <lastmod>2020-04-12T15:13:36+02:00</lastmod>
+        <lastmod>2020-05-10T19:26:04+02:00</lastmod>
     </url>
     
     <url>
@@ -572,7 +579,7 @@
     
     <url>
         <loc>https://hugocisneros.com/notes/20200301192144_open_ended_evolution/</loc>
-        <lastmod>2020-05-04T17:03:32+02:00</lastmod>
+        <lastmod>2020-05-10T19:26:04+02:00</lastmod>
     </url>
     
     <url>
@@ -587,7 +594,7 @@
     
     <url>
         <loc>https://hugocisneros.com/other/</loc>
-        <lastmod>2020-02-19T14:03:57+01:00</lastmod>
+        <lastmod>2020-05-10T19:26:04+02:00</lastmod>
     </url>
     
     <url>
@@ -597,12 +604,12 @@
     
     <url>
         <loc>https://hugocisneros.com/notes/20200301202612_physics/</loc>
-        <lastmod>2020-05-04T17:03:32+02:00</lastmod>
+        <lastmod>2020-05-10T19:26:04+02:00</lastmod>
     </url>
     
     <url>
         <loc>https://hugocisneros.com/notes/20200302192225_programming_languages/</loc>
-        <lastmod>2020-05-04T17:03:32+02:00</lastmod>
+        <lastmod>2020-05-10T19:26:04+02:00</lastmod>
     </url>
     
     <url>
@@ -622,7 +629,7 @@
     
     <url>
         <loc>https://hugocisneros.com/notes/20200403092208-recurrent_neural_networks/</loc>
-        <lastmod>2020-05-04T17:03:32+02:00</lastmod>
+        <lastmod>2020-05-10T19:26:04+02:00</lastmod>
     </url>
     
     <url>
@@ -632,7 +639,7 @@
     
     <url>
         <loc>https://hugocisneros.com/notes/20200413083049-reservoir_computing/</loc>
-        <lastmod>2020-04-17T14:05:19+02:00</lastmod>
+        <lastmod>2020-05-10T19:26:04+02:00</lastmod>
     </url>
     
     <url>
@@ -717,12 +724,17 @@
     
     <url>
         <loc>https://hugocisneros.com/notes/20200302191951_turing_machine/</loc>
-        <lastmod>2020-03-27T18:45:25+01:00</lastmod>
+        <lastmod>2020-05-10T19:26:04+02:00</lastmod>
     </url>
     
     <url>
         <loc>https://hugocisneros.com/notes/20200302191410_turing_completeness/</loc>
         <lastmod>2020-04-26T19:03:10+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/20200510174729-why_programming_is_a_good_medium/</loc>
+        <lastmod>2020-05-10T19:26:04+02:00</lastmod>
     </url>
     
     <url>
@@ -737,7 +749,7 @@
     
     <url>
         <loc>https://hugocisneros.com/notes/20200330224045-zuse_s_thesis/</loc>
-        <lastmod>2020-05-04T17:03:32+02:00</lastmod>
+        <lastmod>2020-05-10T19:26:04+02:00</lastmod>
     </url>
     
 </urlset>
