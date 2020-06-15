@@ -17,7 +17,7 @@
 <meta name="twitter:site" content="@cisne_hug">
 <meta name="twitter:creator" content="@cisne_hug">
 <link rel="stylesheet" href=
-"https://hugocisneros.com/css/main.min.505682b0909fca6544f4d7f3a4271b33732c92b9b1ddc854819790c9402579c5.css"
+"https://hugocisneros.com/css/main.min.225df4138d62ea6c207723534ffc7547431b5e2a03ecae7ce85f57edcedbb870.css"
 media="all" type="text/css">
 <link rel="apple-touch-icon" sizes="180x180" href=
 "/apple-touch-icon.png">
@@ -80,6 +80,21 @@ a = np.random.randrange(<span style=
 "color:#3677a9">10</span>)
 one_hot_a = np.eye(<span style="color:#3677a9">5</span>)[a]
 </code></pre></div>
+<h3 id="side-output-for-jupyter-notebooks">Side-output for jupyter
+notebooks</h3>
+<p>Insert the following block in a notebook cell and execute as
+code (From <a href=
+"https://twitter.com/jrking0/status/1199704651085430785">Twitter</a>).
+This will put the output of each cell on the side of the code.</p>
+<pre><code class="language-nil" data-lang="nil">%%html
+&lt;style&gt;
+#notebook-container {width: 100%; background-color: #EEE}
+.code_cell {flex-direction: row !important;}
+.code_cell .output_wrapper {width: 50%;background-color: #FFF}
+.code_cell .input {width: 50%;background-color: #FFF}
+&lt;/style&gt;
+</code></pre>
+<p>Convert the code cell to markdown to cancel.</p>
 <h2 id="backlinks">Backlinks</h2>
 <ul>
 <li><a href=
@@ -92,7 +107,7 @@ state machines</a></li>
 <div class="note-footer">Last changed <a class="u-url" href=
 "https://hugocisneros.com/notes/20200301195634_python/"><time itemprop="datePublished"
 class="dt-published" datetime=
-"2020-04-12T15:13:36+0200">12/04/2020</time></a> | authored by
+"2020-06-03T10:05:28+0200">03/06/2020</time></a> | authored by
 <a href="https://hugocisneros.com/" rel="author" class=
 "p-author h-card" itemprop="author" itemscope itemtype=
 "http://schema.org/Person"><span itemprop="name">Hugo

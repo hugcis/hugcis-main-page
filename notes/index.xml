@@ -25,7 +25,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hugocisneros.com/notes/20200330105209-adversarial_examples/</guid>
-      <description> tags Machine learning, Neural networks  Adversarial examples in Reinforcement learning </description>
+      <description> tags Machine learning, Neural networks  Adversarial examples in Reinforcement learning Backlinks  Talk: Artificial Intelligence: A Guide for Thinking Humans  </description>
     </item>
     
     <item>
@@ -34,7 +34,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hugocisneros.com/notes/20200302174626_algorithmic_information_theory/</guid>
-      <description>Backlinks  Complexity Kolmogorov complexity Algorithmic probability Halting probability Minimum description length  </description>
+      <description>Backlinks  Halting probability Minimum description length Complexity Algorithmic probability Kolmogorov complexity  </description>
     </item>
     
     <item>
@@ -47,12 +47,32 @@
     </item>
     
     <item>
+      <title>Amorphous computing</title>
+      <link>https://hugocisneros.com/notes/20200601101902-amorphous_computing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/20200601101902-amorphous_computing/</guid>
+      <description>tags Unconventional computing papers (Abelson et al., 2000) resources Wikipedia   From (Abelson et al., 2000):
+A colony of cells cooperates to form a multicellular organism under the direction of a genetic program shared by the members of the colony. A swarm of bees cooperates to construct a hive. Humans group together to build towns, cities, and nations.
+ Amorphous computing was coined by Abelson, Knight, Sussman et al.</description>
+    </item>
+    
+    <item>
+      <title>Applied maths</title>
+      <link>https://hugocisneros.com/notes/20200522164116-applied_maths/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/20200522164116-applied_maths/</guid>
+      <description> tags Mathematics  Backlinks  SIR model Image processing Optimal transport Statistics  </description>
+    </item>
+    
+    <item>
       <title>Artificial Intelligence</title>
       <link>https://hugocisneros.com/notes/20200301201821_artificial_intelligence/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hugocisneros.com/notes/20200301201821_artificial_intelligence/</guid>
-      <description>Backlinks  Notes on: Clune, J. (2019): AI-GAs: AI-generating algorithms, an alternate paradigm for producing general artificial intelligence Open-ended Evolution Machine learning Compression Open-endedness: The last grand challenge you’ve never heard of Notes on: Anderson, P. W. (1972): More Is Different Cellular automata Why programming is a good medium for expressing poorly understood and sloppily-formulated ideas  </description>
+      <description>Backlinks  Open-endedness: The last grand challenge you’ve never heard of Open-ended Evolution Talk: Artificial Intelligence: A Guide for Thinking Humans Notes on: Clune, J. (2019): AI-GAs: AI-generating algorithms, an alternate paradigm for producing general artificial intelligence Notes on: Anderson, P. W. (1972): More Is Different Cellular automata Why programming is a good medium for expressing poorly understood and sloppily-formulated ideas Machine learning Compression  </description>
     </item>
     
     <item>
@@ -61,7 +81,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hugocisneros.com/notes/20200301203351_artificial_life/</guid>
-      <description>Backlinks  Notes on: Kruszewski, G., &amp;amp; Mikolov, T. (2020): Combinatory Chemistry: Towards a Simple Model of Emergent Evolution Open-ended Evolution Evolution Notes on: Anderson, P. W. (1972): More Is Different  </description>
+      <description>Backlinks  Open-ended Evolution Notes on: Kruszewski, G., &amp;amp; Mikolov, T. (2020): Combinatory Chemistry: Towards a Simple Model of Emergent Evolution Notes on: Anderson, P. W. (1972): More Is Different Evolution  </description>
     </item>
     
     <item>
@@ -75,32 +95,13 @@ The relation between Autoencoders and PCA is strong. In particular, a very small
     </item>
     
     <item>
-      <title>Backward RNN</title>
-      <link>https://hugocisneros.com/notes/20200506180851-backward_rnn/</link>
+      <title>Automated discovery in complex systems</title>
+      <link>https://hugocisneros.com/notes/20200515110824-automated_discovery_in_complex_systems/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://hugocisneros.com/notes/20200506180851-backward_rnn/</guid>
-      <description>tags Recurrent neural networks  Regular RNNs process input in sequence. When applied to a language modeling task, one tries to predict a word given the previous ones. For example, with the sentence The quick brown fox jumps over the lazy, a classical RNN will initialize and internal state \(s_0\) and process each word in sequence, starting from The and updating its internal state with each new word in order to make a final prediction.</description>
-    </item>
-    
-    <item>
-      <title>Berry&#39;s paradox</title>
-      <link>https://hugocisneros.com/notes/20200306223742-berry_s_paradox/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/20200306223742-berry_s_paradox/</guid>
-      <description>Berry&amp;rsquo;s paradox is a sentence of the form &amp;ldquo;The smallest positive integer not definable in under sixty letters&amp;rdquo; (a phrase with fifty-seven letters).
-An argument very similar to Berry&amp;rsquo;s paradox is used in the proof of uncomputability of Kolmogorov complexity.
-Resolution An interesting study and resolution of Berry&amp;rsquo;s paradox</description>
-    </item>
-    
-    <item>
-      <title>Boltzmann brain</title>
-      <link>https://hugocisneros.com/notes/20200301202542_boltzmann_brain/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/20200301202542_boltzmann_brain/</guid>
-      <description>tags Physics, Statistical physics  Boltzmann brain Boltzmann brain is an interesting concept offered initially in response to one of Ludwig Boltzmann&amp;rsquo;s explanation for the low-entropy state of the Universe. He hypothesized that even a fully random universe would fluctuate towards lower-entropy states. The issue is that many phenomena such as evolved life on Earth are so far from equilibrium it looks like they were extremely unlikely to have happened.</description>
+      <guid>https://hugocisneros.com/notes/20200515110824-automated_discovery_in_complex_systems/</guid>
+      <description>tags Complex Systems  Evolutionary algorithms and CAs Evolutionary algorithms have been used to find Cellular automata rules with specific behavior (Mitchell et al., 1996), (Sapin et al., 2003) . The objective is to optimize a fitness function (majority of cells, presence of gliders and periodic patterns, etc.).
+Bibliography Mitchell, M., Road, H. P., Das, R., &amp;amp; Box, P. O., Evolving Cellular Automata with Genetic Algorithms: A Review of Recent Work, In , Proceedings of the {{First International Conference}} on {{Evolutionary Computation}} and {{Its Applications}} (pp.</description>
     </item>
     
   </channel>

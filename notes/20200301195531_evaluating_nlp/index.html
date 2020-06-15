@@ -6,9 +6,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content=
 "width=device-width,initial-scale=1.0,minimum-scale=1">
-<title>Evaluating nlp - Hugo Cisneros - Personal page</title>
+<title>Evaluating NLP - Hugo Cisneros - Personal page</title>
 <meta property="og:title" content=
-"Evaluating nlp - Hugo Cisneros - Personal page">
+"Evaluating NLP - Hugo Cisneros - Personal page">
 <meta property="og:type" content="article">
 <meta property="og:image" content="/img/main.jpeg">
 <meta property="og:url" content=
@@ -17,7 +17,7 @@
 <meta name="twitter:site" content="@cisne_hug">
 <meta name="twitter:creator" content="@cisne_hug">
 <link rel="stylesheet" href=
-"https://hugocisneros.com/css/main.min.505682b0909fca6544f4d7f3a4271b33732c92b9b1ddc854819790c9402579c5.css"
+"https://hugocisneros.com/css/main.min.225df4138d62ea6c207723534ffc7547431b5e2a03ecae7ce85f57edcedbb870.css"
 media="all" type="text/css">
 <link rel="apple-touch-icon" sizes="180x180" href=
 "/apple-touch-icon.png">
@@ -54,13 +54,51 @@ media="all" type="text/css">
 itemtype="http://schema.org/BlogPosting">
 <div class="single-note note-container">
 <h1 class="article-title p-name" itemprop="name">Evaluating
-nlp</h1>
+NLP</h1>
 <div class="article-content e-content p-name" itemprop=
 "articleBody">
 <dl>
 <dt>tags</dt>
-<dd><a href="/notes/20200301195553_nlp/">nlp</a></dd>
+<dd><a href="/notes/20200301195553_nlp/">NLP</a></dd>
 </dl>
+<h2 id="language-model-evaluation">Language model evaluation</h2>
+<h3 id="perplexity">Perplexity</h3>
+<p>For a given word sequence \(\mathbf{w} = (w_1, …, w_n)\),
+perplexity (PPL) is defined \[ PPL = 2^{-\frac{1}{n} \sum_{i=1}^n
+\log_2 P(w_i |&nbsp;w_{i-1} … w_1 )} \] It can be seen as the
+cross-entropy between an empirical distribution of test words and
+the predicted conditional word distribution. A language model that
+would encode each word with an average 8 bits has a perplexity of
+256 (\(2^8\)).</p>
+<p>It is often used as an evaluation of language models, probably
+for two main reasons:</p>
+<ul>
+<li>Because it yields an easier to remember and reason about number
+than the average bits per word value (easier to compare 155 and 128
+than 7.27 bits and 7 bits).</li>
+<li>Because a language model with the lowest possible perplexity
+would be the closest to the “true” model that generated the
+data.</li>
+</ul>
+<p>Because of its connection with entropy, there is also a clear
+connection between perplexity and <a href=
+"/notes/20200301204253_compression/">compression</a>, and finding
+the best language model for a given task is equivalent to finding
+the best compressor for the data <a id=
+"aaac52c8b41d8081a8c4e13f84fdd63b" href=
+"#mahoneyTextCompressionTest1999">(Mahoney, 1999)</a>.</p>
+<p>Perplexity is the dominant metric for Language model evaluation.
+However, it has a few drawbacks:</p>
+<ul>
+<li>Perplexity is computed assuming perfect history, which might
+not always be the case when using previously generated data to
+generate a new word.</li>
+<li>Perplexity improvements can be misleading, since a fixed
+perplexity improvement is exponentially harder the closest it is to
+zero. Therefore, it is advantageous to report a sub-optimal
+baseline to maximize the value of perplexity improvement, while the
+actual entropy improvement might be small.</li>
+</ul>
 <h2 id="winograd-schema-challenge">Winograd Schema Challenge</h2>
 <p>This challenge <a id="11fd6750e5ad7386be32d98e71617c92" href=
 "#levesqueWinogradSchemaChallenge">(Levesque et al., )</a>, part of
@@ -71,16 +109,43 @@ contextual knowledge of the things being talked about. To me this
 is a very hard challenge that we are nowhere near solving. GPT-2’s
 70% accuracy on this task is impressive but still doesn’t convince
 me we are on the right track of solving it.</p>
+<p>Example:</p>
+<pre><code class="language-nil" data-lang=
+"nil">I poured water from the bottle into the cup until it was full.
+</code></pre>
+<p>It is not sufficient to learn this sentence structure because
+when we change only a word the meaning changes significantly.</p>
+<pre><code class="language-nil" data-lang=
+"nil">I poured water from the bottle into the cup until it was empty.
+</code></pre>
+<p>If a machine solves this ambiguous reference, can we say that it
+has learned some meaningful concept about a bottle or a cup?</p>
+<blockquote>
+<p>When AI can’t determine what ‘it’ refers to in a sentence, it’s
+hard to believe that it will take over the world.</p>
+<p>Oren Etzioni, Allen Institute for AI</p>
+</blockquote>
 <h1 id="bibliography">Bibliography</h1>
+<p><a id="mahoneyTextCompressionTest1999" target="_blank">Mahoney,
+M. V., <em>Text Compression as a Test for Artificial
+Intelligence</em>, In , Proceedings of {{AAAI}}-1999 (pp. 3)
+(1999). : .</a> <a href=
+"#aaac52c8b41d8081a8c4e13f84fdd63b">↩</a></p>
 <p><a id="levesqueWinogradSchemaChallenge" target=
 "_blank">Levesque, H., Davis, E., & Morgenstern, L., <em>The
 Winograd Schema Challenge</em>, , <em>()</em>, 10 ().</a> <a href=
 "#11fd6750e5ad7386be32d98e71617c92">↩</a></p>
+<h2 id="backlinks">Backlinks</h2>
+<ul>
+<li><a href=
+"/notes/20200520085337-talk_artificial_intelligence_a_guide_for_thinking_humans/">
+Talk: Artificial Intelligence: A Guide for Thinking Humans</a></li>
+</ul>
 </div>
 <div class="note-footer">Last changed <a class="u-url" href=
 "https://hugocisneros.com/notes/20200301195531_evaluating_nlp/"><time itemprop="datePublished"
 class="dt-published" datetime=
-"2020-05-10T19:26:04+0200">10/05/2020</time></a> | authored by
+"2020-06-03T10:05:28+0200">03/06/2020</time></a> | authored by
 <a href="https://hugocisneros.com/" rel="author" class=
 "p-author h-card" itemprop="author" itemscope itemtype=
 "http://schema.org/Person"><span itemprop="name">Hugo

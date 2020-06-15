@@ -1,6 +1,6 @@
 d3.json("/js/graph.json").then(function(data) {
-    height = 800;
-    width = 1300;
+    height = 900;
+    width = 1500;
     radius = d => {
         return 8 + .6 * d3.selectAll("line")
             .filter((l, idx) =>
@@ -68,7 +68,7 @@ d3.json("/js/graph.json").then(function(data) {
     const simulation = d3.forceSimulation(nodes)
           .force("link", d3.forceLink(links).id(d => d.id))
           .force("charge", d3.forceManyBody()
-                 .strength(-120))
+                 .strength(-180))
           .force("x", d3.forceX(width / 2))
           .force("y", d3.forceY(height / 2));
 
@@ -92,7 +92,8 @@ d3.json("/js/graph.json").then(function(data) {
           .join("a")
           .attr("xlink:href", d => {
               it = d.id.split('/');
-              return "./" + it[it.length-1].replace(/\.org/g, "") + "/";
+              return "./" +
+                  it[it.length-1].replace(/\.org/g, "").toLowerCase() + "/";
           })
           .append("circle")
           .attr("id", d => d.id)
@@ -150,5 +151,5 @@ d3.json("/js/graph.json").then(function(data) {
             .attr("y", d => d.y);
     });
 
-
+    sort_list_of_items();
 });
