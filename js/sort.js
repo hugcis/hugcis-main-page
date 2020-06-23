@@ -48,6 +48,7 @@ function sort_list_of_items(type) {
         ul.sort(sort_by_name);
     }
     else if (type == "latest") {
+        ul.sort(sort_by_name);
         ul.sort(sort_by_date);
     }
     var parent = document.getElementById("note_list");

@@ -19,7 +19,7 @@ Self-Organizing Systems - Hugo Cisneros - Personal page</title>
 <meta name="twitter:site" content="@cisne_hug">
 <meta name="twitter:creator" content="@cisne_hug">
 <link rel="stylesheet" href=
-"https://hugocisneros.com/css/main.min.0885aad8c32fe6eabb41bca3487be9d023cbe924fc993d000b8b3554e42d2eb9.css"
+"https://hugocisneros.com/css/main.min.0d0b64fbc6fda4b4de531fc4e8857fdba3200c718684a3a96c9f36bb816bf520.css"
 media="all" type="text/css">
 <link rel="apple-touch-icon" sizes="180x180" href=
 "/apple-touch-icon.png">
@@ -70,7 +70,7 @@ Discovery of Diverse Patterns in Self-Organizing Systems</h1>
 <p>The authors address the problem of automated discovery of
 diverse self-organized patterns in high-dimensional and complex
 game-of-life types of dynamical systems. They conduct experiments
-on <a href="/notes/20200515090154-lenia/">Lenia</a>.</p>
+on <a href="/notes/lenia/">Lenia</a>.</p>
 <p>Their goal is to use an IMGEP algorithm to represent interesting
 patterns and discover them.</p>
 <h3 id="problem-setting">Problem setting</h3>
@@ -94,17 +94,18 @@ simulate the corresponding experiment, and observation \(o\).
 of \(\mathcal{T}\).</p>
 <h4 id="goal-space">Goal space</h4>
 <p>The goal-space is learned online during the procedure with a
-<a href="/notes/20200301200248_autoencoders/">VAE</a>. Every \(K\)
-epochs, the VAE is trained on all the history of observations.
-Importance sampling (50% from the \(K\) last iterations / 50% from
-the rest of the history) is used for training of the VAE.</p>
+<a href="/notes/autoencoders/">variational autoencoders</a>. Every
+\(K\) epochs, the VAE is trained on all the history of
+observations. Importance sampling (50% from the \(K\) last
+iterations / 50% from the rest of the history) is used for training
+of the VAE.</p>
 <h4 id="parameter-sampling">Parameter sampling</h4>
 <p>Parameters are sampled by selecting from the history which
 outcome is the closest to the sampled goal.</p>
 <h4 id="parameter-space">Parameter space</h4>
 <p>The mapping between parameters and observations is also
 approximated by the model. For this, <a href=
-"/notes/20200515155933-cppn/">CPPNs</a> are used.</p>
+"/notes/cppn/">CPPN</a>s are used.</p>
 <h4 id="history">History</h4>
 <p>The history is initialized with \(N_{init}\) observations and
 each new observation is added.</p>
@@ -142,8 +143,8 @@ the model.</p>
 <p>Lenia is a fun model but has a lot of moving part and
 parameters. It would have liked to see how this method does with
 “simpler” models such as <a href=
-"/notes/20200330150814-elementary_cellular_automata/">ECA</a> or 2D
-<a href="/notes/20200301192434_cellular_automata/">CA</a>s.</p>
+"/notes/elementary_cellular_automata/">ECA</a> or 2D <a href=
+"/notes/cellular_automata/">Cellular automata</a>.</p>
 <h1 id="bibliography">Bibliography</h1>
 <p><a id="reinkeIntrinsicallyMotivatedDiscovery2020" target=
 "_blank">Reinke, C., Etcheverry, M., & Oudeyer, P.,
@@ -155,7 +156,7 @@ Self-Organizing Systems</em>, arXiv:1908.06663 [cs, stat],
 <div class="note-footer">Last changed <a class="u-url" href=
 "https://hugocisneros.com/notes/reinkeintrinsicallymotivateddiscovery2020/">
 <time itemprop="datePublished" class="dt-published" datetime=
-"2020-06-03T10:05:28+0200">03/06/2020</time></a> | authored by
+"2020-06-23T09:16:58+0200">23/06/2020</time></a> | authored by
 <a href="https://hugocisneros.com/" rel="author" class=
 "p-author h-card" itemprop="author" itemscope itemtype=
 "http://schema.org/Person"><span itemprop="name">Hugo

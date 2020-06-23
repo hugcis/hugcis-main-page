@@ -1,6 +1,6 @@
 d3.json("/js/graph.json").then(function(data) {
-    height = 900;
-    width = 1500;
+    height = 1000;
+    width = 1600;
     radius = d => {
         return 8 + .6 * d3.selectAll("line")
             .filter((l, idx) =>
