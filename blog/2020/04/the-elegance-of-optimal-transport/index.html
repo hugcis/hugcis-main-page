@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+
+<meta charset="utf-8">
+<meta name="viewport" content=
+"width=device-width,initial-scale=1.0,minimum-scale=1">
+<title>The Elegance of Optimal Transport - Hugo Cisneros - Personal
+page</title>
+<meta property="og:title" content=
+"The Elegance of Optimal Transport - Hugo Cisneros - Personal page">
+<meta property="og:type" content="article">
+<meta property="og:image" content="/img/monge1.svg">
+<meta property="og:url" content=
+"https://hugocisneros.com/blog/2020/04/the-elegance-of-optimal-transport/">
+<meta property="og:description" content=
+"An introduction to optimal transport theory. From the roots of optimal transport and steps that made the problem easier to solve to modern applications in data science and machine learning like Wasserstein GANs.">
+<meta name="Description" property="description" content=
+"An introduction to optimal transport theory. From the roots of optimal transport and steps that made the problem easier to solve to modern applications in data science and machine learning like Wasserstein GANs.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@cisne_hug">
+<meta name="twitter:creator" content="@cisne_hug">
+<meta property="keywords" content=
+"Optimal transport, Data science, Theory">
+<link rel="stylesheet" href=
+"https://hugocisneros.com/css/main.min.1e91286954b19572cdf1b302b0cb8dfd2dee59c7df472ddc48084b4b91ec2f8d.css"
+media="all" type="text/css">
+<link rel="apple-touch-icon" sizes="180x180" href=
+"/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href=
+"/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href=
+"/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color=
+"#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<link rel="webmention" href=
+"https://webmention.io/hugocisneros.com/webmention">
+<link rel="pingback" href=
+"https://webmention.io/hugocisneros.com/xmlrpc">
+</head>
+<body>
+<div class="wrapper">
+<header class="header">
+<nav class="nav">
+<div class="nav-main"><a href="https://hugocisneros.com/" class=
+"nav-title">Hugo Cisneros - Personal page</a></div>
+<ul class="nav-links">
+<li><a href="/about/">About</a></li>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/other/">Other</a></li>
+<li><a href="/resume/cv.pdf">Resume</a></li>
+</ul>
+</nav>
+</header>
+<main class="content" role="main">
+<article class="article h-entry" itemprop="mainEntity" itemscope
+itemtype="http://schema.org/BlogPosting">
+<div class="title-container">
+<h1 class="article-title p-name" itemprop="name">The Elegance of
+Optimal Transport</h1>
+<b><i itemprop="headline" class="article-headline p-summary">An
+introduction to optimal transport theory.</i></b>
+<div class="article-subtitle"><a class="article-date u-url" href=
+"https://hugocisneros.com/blog/2020/04/the-elegance-of-optimal-transport/">
+<time itemprop="datePublished" class="dt-published" datetime=
+"2020-04-12T14:37:50+0200" content=
+"2020-04-12T14:37:50+0200">12/04/2020</time></a> <a class=
+"article-author p-author h-card" rel="author" href=
+"https://hugocisneros.com/" itemprop="author" itemscope itemtype=
+"http://schema.org/Person"><span itemprop="name">Hugo
+Cisneros</span></a></div>
+<div>Reading time: 10 minutes.</div>
+</div>
+<div class="article-content e-content" itemprop="articleBody">
+<p><em>This post was largely inspired by <a href=
+"https://www.gpeyre.com/">Gabriel Peyré</a> and <a href=
+"https://marcocuturi.net/">Marco Cuturi</a>‘s excellent book about
+Computational Optimal Transport, which is <a href=
+"https://optimaltransport.github.io/">free</a>, (<a href=
+"https://arxiv.org/abs/1803.00567">arXiv link</a>, ref: <a href=
+"#computational">[1]</a>)</em>.</p>
+<h2 id="a-simple-problem">A simple problem?</h2>
+<p>Let’s start at the beginning: what is Optimal transport
+(OT)?</p>
+<p>It all begins with <a href=
+"https://en.wikipedia.org/wiki/Gaspard_Monge">Gaspard Monge</a>,
+reading his <em>mémoire</em> <a href="#monge">[2]</a> in front of
+eminent scientists and engineers of the time — including famous
+Enlightenment philosopher <a href=
+"https://en.wikipedia.org/wiki/Marquis_de_Condorcet">Condorcet</a>
+— at the French <em>Académie Royale des Sciences</em> in 1776.</p>
+<p>The memoir is in french, and is probably not relevant to someone
+interested about modern optimal transport. However, Monge’s problem
+could be explained in simple terms as follows:</p>
+<blockquote>
+<p>Given two excavations $D_1$ and $D_2$, a cost of moving a unit
+of mass of dirt from any point of $D_1$ to any point of $D_2$,</p>
+<div class="center"><b>What is the cheapest way to move mass from
+$D_1$ to $D_2$ ?</b></div>
+</blockquote>
+<p>The answer is far from simple it turns out. Monge didn’t solve
+it in his <em>mémoire</em>, although he did lay the foundations of
+modern optimal transport theory.</p>
+<figure itemprop="image" itemscope itemtype=
+"http://schema.org/ImageObject" class="center"><object type=
+"image/svg+xml" alt="Excavation animation" data=
+"/img/monge.svg"><param itemprop="url" name="src" value=
+"/img/monge.svg" alt="Excavation animation"></object>
+<figcaption>
+<h4>Is this the best (most efficient) way to move the blue squares
+from a mound to the other? Probably not: there are 39,916,800
+possible ways to do it.</h4>
+</figcaption>
+</figure>
+<p>Let’s move to the problem.</p>
+<h2 id="discrete-optimal-transport">Discrete Optimal Transport</h2>
+<p>The easiest way to think of the problem is in terms of atomic
+items.</p>
+<h3 id="assignment-problem">Assignment problem</h3>
+<p>In its simplest form it can be viewed as an assignment problem:
+among all configurations, which one is the best? This is already
+quite restrictive, because we can only work with two sets of the
+same total size. However, this simple version is incredibly hard to
+solve.</p>
+<p>Each set (the above “excavations”) can be represented as a
+histogram (or vector) $\mathbf{a}$ that belongs to the probability
+simplex — the vectors which components sum to 1:</p>
+<p>\[ \mathbf{a} \in \left\{ x = (x_1, …, x_N) \in \mathbb{R}^N :
+\sum_{i=1}^N x_i = 1 \right\} \]</p>
+<p>If we write $\mathbf{C}_{i,j} $ the cost of moving an element
+from $i$ to $j$, the quantity we want to minimize is $\sum_{i}
+\mathbf{C}_{i,\sigma(i)}$ , where $\sigma$ is a
+<strong>permutation</strong> of the set $\{1, …, N\}$. This
+permutation represents an assignment of bin $i$ of the first
+histogram to output positions $j$ in the second histogram.</p>
+<p>In this form, optimal transport is fundamentally
+<strong>combinatorial</strong>, and might be summarized like
+so:</p>
+<blockquote>
+<p><em>How can we assign every element $i$ of $\{1, …, N\}$ to
+elements $j$ of $\{1, …, N\}$ so as to minimize the cumulative cost
+of this assignment?</em></p>
+</blockquote>
+<p>The result of this search is called the <strong>optimal
+assignment</strong>. As you may already know, there are exactly
+$N!$ possible solutions to this problem, which makes it very
+difficult to solve when $N$ grows large: e.g, with a histogram of
+size 20, there are already $2.43\times10^{18}$ possible
+solutions.</p>
+<p>It is interesting to note that this assignment is <strong>not
+unique</strong>, as shown in the example below where 2 elements are
+mapped to 2 others that form together the four corners of a 2D
+square with sides of size 1.</p>
+<figure class="center" itemprop="image" itemscope itemtype=
+"http://schema.org/ImageObject"><img itemprop="url" src=
+"/img/monge1.svg" alt="Non-uniqueness of solution illustration"
+width="200">
+<figcaption>
+<h4 itemprop="name">Non-unique assignment. The other solution is
+dashed.</h4>
+</figcaption>
+</figure>
+<h3 id="working-with-asymmetric-histograms-the-monge-problem">
+Working with asymmetric histograms: the Monge Problem</h3>
+<p>Using two equally sized histograms is a very strong limitation.
+By extending the above definition to a slightly larger family of
+histograms, we obtain the Monge problem. In this problem,
+<strong>several points $x_i$ can map to the same $y_j$</strong> and
+their weights are summed.</p>
+<p>In that case, the mapping between inputs and outputs is no
+longer a permutation, but a surjective map $T$. If points $x_1, …,
+x_n$ have weights $\mathbf{a} = (a_1, …, a_n)$ and points $y_1, …,
+y_m$ have weights $\mathbf{b} = (b_1, …, b_m)$, $T$ must
+verify:</p>
+<p>\[ \forall j \in \{1, … m\},\quad b_j = \sum_{i:T(x_i) = y_j}
+a_i \]</p>
+<figure class="center" itemprop="image" itemscope itemtype=
+"http://schema.org/ImageObject"><img itemprop="url" src=
+"/img/monge2.svg" alt=
+"Monge problem illustration. Optimal transport between asymmetric histograms"
+width="200">
+<figcaption>
+<h4 itemprop="name">Monge problem</h4>
+</figcaption>
+</figure>
+<p>With this formulation, we cannot work if the mass conservation
+constraint is not satisfied. It is also not easier to solve because
+we are still assigning elements $x_i$ to elements $y_j$.</p>
+<h3 id="kantorovitch-relaxation">Kantorovitch relaxation</h3>
+<p>Even with the above extension, this formulation of the optimal
+transport problem is still too constrained to be practically useful
+in many cases. In 1942, <a href=
+"https://en.wikipedia.org/wiki/Leonid_Kantorovich">Leonid
+Kantorovitch</a> <a href="#kantorovitch">[3]</a> introduced another
+key idea, which is to relax the deterministic portion of
+transportation. Source points $x_i$ no longer have to map to a
+single target point and can be <em>fragmented</em> into smaller
+pieces, this is called <strong><em>mass
+splitting</em></strong>.</p>
+<p>This new formulation is much more adapted to some real world
+situations, for instance <strong>logistic problems</strong>. Frank
+L. Hitchcock stated a version of this problem in <a href=
+"#hitchcock">[4]</a> as follows</p>
+<blockquote>
+<p>When several factories supply a product to a number of cities we
+desire the least costly manner of distribution. Due to freight
+rates and other matters the cost of a ton of product to a
+particular city will vary according to which factory supplies it,
+and will also vary from city to city.</p>
+</blockquote>
+<figure class="center" itemprop="image" itemscope itemtype=
+"http://schema.org/ImageObject"><img itemprop="url" src=
+"/img/logistic.svg" alt=
+"Logistic problem illustration. Factories with different supply capacities have to deliver goods to cities with various demands."
+width="300">
+<figcaption>
+<h4 itemprop="name">Factories with different supply capacities have
+to deliver goods to cities with various demands.</h4>
+</figcaption>
+</figure>
+<p>To reflect this change, we modify our previous formulation
+slightly, by replacing the permutation $\sigma$ by a coupling
+matrix $\mathbf{P} = \mathbf{P}_ {ij} \in \mathbb{R}_ {+}^{n\times
+m}$. In the example above, each $\mathbf{P}_{ij}$ would be the
+weight of the arrow from factory $i$ to city $j$. Admissible
+coupling for our problem can therefore be written as</p>
+<p>\[ \mathbf{U}(\mathbf{a}, \mathbf{b}) = \left\{\mathbf{P} \in
+\mathbb{R}_{+}^{n \times m}: \mathbf{P}\mathbb{1}_m = \mathbf{a}
+\text{ and } \mathbf{P}^\text{T}\mathbb{1}_n = \mathbf{b} \right\}
+\]</p>
+<p>This new formulation, contrary to the Monge formulation, is
+<strong>symmetric</strong>. This means that we can reverse the
+irreversible mapping of the problem above, because if $\mathbf{P}
+\in \mathbf{U}(\mathbf{a}, \mathbf{b})$, then
+$\mathbf{P}^{\text{T}} \in \mathbf{U}(\mathbf{b}, \mathbf{a})$.</p>
+<p>We can now formulate the problem in a mathematically cleaner
+way, and it reads:</p>
+<p>\[ L_\mathbf{C}(\mathbf{a}, \mathbf{b}) =
+\min_{\mathbf{P}\in\mathbf{U}(\mathbf{b}, \mathbf{a})} \sum_{i,j}
+\mathbf{C}_{i,j}\mathbf{P}_{i,j} =
+\min_{\mathbf{P}\in\mathbf{U}(\mathbf{b}, \mathbf{a})} \langle
+\mathbf{C}, \mathbf{P} \rangle \]</p>
+<p>If you are familiar with optimization, you might have recognized
+a <a href=
+"https://en.wikipedia.org/wiki/Linear_programming"><strong>linear
+program</strong></a>, where the constraints are a set of $m+n$
+equality constraints — or $2(m+n)$ inequalities, which are
+contained in the admissible set of solutions. These constraints
+define a convex polytope.</p>
+<p>This is good news, because we have moved from the dreadful realm
+of <strong>combinatorics</strong> to the comfortable world of
+<strong>convex optimization</strong>. Optimization over a matrix
+space might sound hard but it is usually much simpler than
+searching among a set of possible assignments.</p>
+<p>I will not go into the details of the tools used to solve this
+problem because they are widely used and taught in optimization and
+operations research courses. You will find a detailed explanation
+of the <strong>simplex algorithm</strong>, and other algorithmic
+tools to solve the OT problem, such as dual ascent methods or the
+Auction algorithm in <a href="#computational">[1]</a>.</p>
+<h2 id="regularized-optimal-transport">Regularized optimal
+transport</h2>
+<p>This is great, we have transformed our exponentially hard to
+solve problem in a much more pleasant looking one! Unfortunately,
+this is <em>still</em> not easy to solve, and the algorithms
+mentioned above have mostly polynomial complexities with exponents
+larger than 2, and sometimes exponential worst-case
+complexities.</p>
+<h3 id="entropic-regularization">Entropic regularization</h3>
+<p>Regularizing optimal transport was proposed in <a href=
+"#wilson">[4]</a>. It is a method for approximating solutions to
+the optimal transport problem by adding a regularizing term to the
+objective function. This forces the solution to satisfy a number of
+constraints, making the problem easier to solve.</p>
+<p>The <strong>entropy of a coupling matrix</strong> $\mathbf{P}$
+is defined as</p>
+<p>\[ \mathbf{H}(\mathbf{P}) = - \sum_{i,j}
+\mathbf{P_{i,j}}(\log(\mathbf{P}_{i,j}) - 1) \]</p>
+<p>and the objective function for two histograms $\mathbf{a}$ and
+$\mathbf{b}$ now reads</p>
+<p>\[ L^{\varepsilon}_\mathbf{C}(\mathbf{a}, \mathbf{b}) = \min
+_{\mathbf{P} \in \mathbf{U}(\mathbf{a), \mathbf{b}})} \langle
+\mathbf{P}, \mathbf{C} \rangle - \varepsilon \mathbf{H}
+(\mathbf{P}) \]</p>
+<p>This addition makes the objective function an
+<strong>$\varepsilon$-strongly convex function</strong>. There is
+therefore a unique optimal solution $\mathbf{P}$. It can be shown
+that the solution to this regularized problem has the following
+form:</p>
+<p>\[ \forall (i,j) \in \{1,…,n\}\times \{1, …, m\},\quad
+\mathbf{P}_ {i,j} = \mathbf{u}_ i \mathbf{K} _{i,j} \mathbf{v}_j
+\]</p>
+<p>where $\mathbf{K}_{i,j} = e^{-\frac{\mathbf{C}
+_{i,j}}{\varepsilon}}$ and $\mathbf{u}$ and $\mathbf{v}$ are
+unknown scaling variables. This is a really big improvement,
+because we now have an <strong>explicit formula</strong> for an
+optimal coupling.</p>
+<h3 id="sinkhorns-algorithm">Sinkhorn’s algorithm</h3>
+<p>The problem is known as the matrix scaling problem: we are
+trying to find two scaling vectors that when multiplied with
+$\mathbf{K}$ give $\mathbf{P}$. This can be achieved by
+alternatively updating $\mathbf{u}$ and $\mathbf{v}$ with
+<strong>Sinkhorn’s algorithm updates</strong>:</p>
+<p>\[ \mathbf{u}^{(\ell+1)} =
+\dfrac{\mathbf{a}}{\mathbf{Kv}^{(\ell)}}\ \text{and} \
+\mathbf{v}^{(\ell + 1)} =
+\dfrac{\mathbf{b}}{\mathbf{K}^{T}\mathbf{u}^{(\ell + 1)}} \]</p>
+<p>Although this algorithm likely appeared at the beginning of the
+20th century, the proof of its convergence is attributed to
+Sinkhorn <a href="#sinkhorn">[5]</a>. The algorithm not only
+converges, but it does so at a <strong>linear rate</strong>. Don’t
+get fooled by the name, it is fast! This means it exists a certain
+factor $\mu \in [0, 1]$ and constant $C$, such that the solution
+$\mathbf{u}^*$ of iterates $\mathbf{u}^{(\ell)}$ is approached at
+the speed of a geometric progression</p>
+<p>\[ \left|\mathbf{u}^{(\ell)} - \mathbf{u}^* \right| = C\mu^\ell
+\]</p>
+<p>Regularized OT and Sinkhorn’s algorithms received renewed
+attention in the machine learning and data science community
+following a paper from Marco Cuturi in 2013 <a href=
+"#cuturi">[6]</a> that showed that Sinkhorn’s updates were an
+<strong>efficient and scalable</strong> approximation to OT that
+can be easily <strong>parallelized</strong>, for instance on
+GPUs.</p>
+<h2 id=
+"going-further-wasserstein-distances-wgans-variational-problems">
+Going further: Wasserstein distances, WGANs, Variational
+problems</h2>
+<p>The machine learning community is getting excited by the
+possibilities that optimal transport has to offer. Wasserstein
+distances (more on this <a href="#wasserstein-distances">here</a>)
+can be used as a loss function, leveraging <strong>physical and
+geometric ideas</strong> — such as mass displacement, ground cost,
+etc. — that are more natural than information based divergence
+between probability measures (such as <a href=
+"https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence">
+Kullback-Leibler divergence</a>). This excitement is illustrated by
+the <strong>number of papers accepted at NeurIPS</strong>
+mentioning the concept.</p>
+<p>With more than a thousands citation in 2018-2019 (according to
+Semantic scholar), Wasserstein Generative Adversarial Networks
+(WGANs) are a good illustration of optimal transport ideas going
+mainstream — although the fact that it is a paper about GANs might
+account more for those citations than the maths.</p>
+<figure class="center" itemprop="image" itemscope itemtype=
+"http://schema.org/ImageObject"><img itemprop="url" src=
+"/img/bar_plot.svg" alt=
+"Bar plot of mentions of optimal transport in NeurIPS papers">
+<figcaption>
+<h4 itemprop="name">Mentions of "wasserstein" and "optimal
+transport" in NeurIPS paper titles over time</h4>
+</figcaption>
+</figure>
+<h3 id="wasserstein-distances">Wasserstein distances</h3>
+<p>In the case where the cost function corresponds to a distance —
+like most examples above, the solution to the optimal transport
+problem for two measures (or histograms here) is a distance called
+<strong>Wasserstein distance</strong>. Formally, it is written</p>
+<p>\[ W_p(\mathbf{a}, \mathbf{b}) = L _{\mathbf{D}^p}(\mathbf{a},
+\mathbf{b})^{1/p} \]</p>
+<p>This is the form of OT that has had the most applications in
+machine learning and data science, because of its ability to use a
+ground metric between bins and transform it into a metric between
+histograms of such bins. <a href=
+"https://en.wikipedia.org/wiki/Earth_mover%27s_distance"><strong>Earth
+mover’s distance</strong></a> is a particular example of $W_1$ with
+the Euclidean distance in $\mathbb{R}^d$.</p>
+<h3 id="wasserstein-gans">Wasserstein GANs</h3>
+<p>WGANs <a href="#gans">[8]</a> uses the Wasserstein distance in
+GAN training, instead of the <a href=
+"https://en.wikipedia.org/wiki/Jensen%E2%80%93Shannon_divergence">Jensen-Shannon
+divergence</a>. This results in improved stability and converging
+loss, and the added benefit that for applications such as computer
+vision, this loss should correspond better with image qualities
+because of the properties of OT.</p>
+<h3 id="variational-problems">Variational problems</h3>
+<p>When using Wasserstein distances as a loss function, the main
+technical challenge lies in <strong>differentiating it
+efficiently</strong>. Many algorithmic and mathematical tricks
+enable it in some settings, unlocking very interesting
+applications.</p>
+<p>For example in <a href="#solomon">[9]</a>, the authors are able
+to compute <strong>Wasserstein barycenters</strong> between 2D or
+3D shapes. This barycenter is a intermediate shape, equidistant
+from a weighted set of starting shapes — where the distance is the
+Wasserstein distance — with a very natural looking “mass
+displacement” resembling interpolation. The figure below is from
+this paper.</p>
+<figure class="center" itemprop="image" itemscope itemtype=
+"http://schema.org/ImageObject"><img itemprop="url" src=
+"/img/cowducktorus.jpg" alt=
+"Interpolation between a cow, a duck and a torus 3D shapes">
+<figcaption>
+<h4 itemprop="name">Interpolation between a cow, a duck and a
+torus</h4>
+</figcaption>
+</figure>
+<p>The below animation illustrates this interpolation process. You
+can see parts of the shapes that get split and merged to fit the
+other shape in a smooth and natural-looking way.</p>
+<figure class="center"><video width="200" alt=
+"Smooth transitions between shapes" autoplay="" loop="" muted=""
+playsinline=""><source src="/img/wass.webm" type="video/webm">
+<source src="/img/wass.mp4" type="video/mp4"></video>
+<figcaption>
+<h4>Smooth transitions between shapes, computed with <a href=
+"https://pot.readthedocs.io/">POT</a>'s Convolutional Wasserstein
+Distances implementation</h4>
+</figcaption>
+</figure>
+<h2 id="conclusion">Conclusion</h2>
+<p>There is a lot more to say about optimal transport, but this
+post only aims at introducing the concept and is already long
+enough. The theory and mathematics are beautiful and get very
+advanced the deeper you go with this subject (see e.g. <a href=
+"#villani">[10]</a>). There is a lot of ongoing research into the
+theory and applications of optimal transport, especially in the
+machine learning community. If you are interested in getting
+started learning about it, I suggest you check Gabriel Peyré and
+Marco Cuturi’s book <a href=
+"https://optimaltransport.github.io/book/"><em>Computational
+optimal transport</em></a>. It gives a very interesting overview of
+optimal transport and its applications. It can be read at different
+levels of mathematical complexity depending on your level of
+comfort. It is particularly adapted to data science and machine
+learning people who wish to learn more about the subject and the
+theory behind it.</p>
+</div>
+<ul class="article-taxonomy">
+<li><a href="/tags/optimal-transport"><span class=
+"tag-item"><img class="tag-logo" src="/img/tag.svg" alt=
+"Logo of a tag: indicates that a tag item follows.">Optimal
+transport</span></a> <a href="/tags/data-science"><span class=
+"tag-item"><img class="tag-logo" src="/img/tag.svg" alt=
+"Logo of a tag: indicates that a tag item follows.">Data
+science</span></a> <a href="/tags/theory"><span class=
+"tag-item"><img class="tag-logo" src="/img/tag.svg" alt=
+"Logo of a tag: indicates that a tag item follows.">Theory</span></a></li>
+</ul>
+<hr>
+<div class="references">
+<h3>References</h3>
+<div class="references-list">
+<ol>
+<li id="computational"><b>Gabriel Peyré and Marco Cuturi</b>.
+Computational optimal transport. Foundations and Trends® in Machine
+Learning, 11(5-6), 355-607.</li>
+<li id="monge"><b>Gaspard Monge</b>. Mémoire sur la théorie des
+déblais et des remblais (in french). Histoire de l’Académie Royale
+des Sciences, pages 666–704, 1781.</li>
+<li id="kantorovitch"><b>Leonid Kantorovich</b>. On the transfer of
+masses (in russian). Doklady Akademii Nauk, 37(2):227–229,
+1942.</li>
+<li id="hitchcock"><b>Frank L. Hitchcock</b>. (1941), The
+Distribution of a Product from Several Sources to Numerous
+Localities, Journal of Mathematics and Physics, 20.</li>
+<li id="wilson"><b>Wilson, A.B.</b>. Use of entropy maximizing
+models in theory of trip distribution, mode split and route split
+(1969).</li>
+<li id="sinkhorn"><b>Richard Sinkhorn</b>. A relationship between
+arbitrary positive matrices and doubly stochastic matrices. Annals
+of Mathematical Statististics, 35:876–879, 1964.</li>
+<li id="cuturi"><b>Marco Cuturi</b>. Sinkhorn distances: lightspeed
+computation of optimal transport. In Advances in Neural Information
+Processing Systems 26, pages 2292–2300, 2013.</li>
+<li id="gans"><b>Arjovsky, M., Chintala, S. and Bottou, L.</b>.
+Wasserstein generative adversarial networks. In International
+conference on machine learning (pp. 214-223). 2017, July.</li>
+<li id="solomon"><b>Justin Solomon, Fernando de Goes, Gabriel
+Peyré, Marco Cuturi, Adrian Butscher, Andy Nguyen, Tao Du, and
+Leonidas Guibas</b>. 2015. Convolutional wasserstein distances:
+efficient optimal transportation on geometric domains. ACM Trans.
+Graph. 34, 4, Article 66 (July 2015), 11 pages.</li>
+<li id="villani"><b>Villani, Cédric</b>. Optimal Transport: Old and
+New. (2008).</li>
+</ol>
+</div>
+</div>
+<div class="article-date-modified">Last modified <span itemprop=
+"dateModified" content=
+"2020-04-12T14:37:50+0200">12/04/2020</span></div>
+</article>
+</main>
+<footer class="footer">
+<ul class="footer-links">
+<li><a href="/blog/index.xml" type="application/rss+xml" target=
+"_blank">Blog RSS feed</a></li>
+<li><a href=
+"https://github.com/hugcis/natrium-custom">Code</a></li>
+</ul>
+</footer>
+</div>
+<script>
+ MathJax = {
+     tex: {
+         inlineMath: [['$','$'], ['\\(', '\\)']]
+     }
+ };
+</script> 
+<script type="text/javascript" rel="preconnect" id="MathJax-script"
+async src=
+"https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>

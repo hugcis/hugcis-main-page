@@ -6,102 +6,109 @@
     <description>Recent content in Notes on Hugo Cisneros - Personal page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Sat, 20 Jun 2020 19:06:49 +0200</lastBuildDate>
     
 	<atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Abelian sandpile model</title>
-      <link>https://hugocisneros.com/notes/abelian_sandpile_model/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>Notes on: Katharopoulos, A., Vyas, A., Pappas, N., &amp; Fleuret, F. (2020): Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention</title>
+      <link>https://hugocisneros.com/notes/katharopoulostransformersarernns2020/</link>
+      <pubDate>Tue, 30 Jun 2020 23:00:00 +0200</pubDate>
       
-      <guid>https://hugocisneros.com/notes/abelian_sandpile_model/</guid>
-      <description> tags Cellular automata  </description>
+      <guid>https://hugocisneros.com/notes/katharopoulostransformersarernns2020/</guid>
+      <description>tags Transformers, RNN source (Katharopoulos et al., 2020)  Summary Transformers have traditionally been described as different models from RNNs. This is because instead of processing the sequence one token at a time, transformers use attention to process all elements simultaneously.
+The paper introduces an interesting new formulation, replacing the softmax attention with a feature map-based dot product.
+This new formulation yields better time and memory complexity as well as a model that is casual and autoregressive (similar to RNNs).</description>
     </item>
     
     <item>
-      <title>Adversarial examples</title>
-      <link>https://hugocisneros.com/notes/adversarial_examples/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>Attention</title>
+      <link>https://hugocisneros.com/notes/attention/</link>
+      <pubDate>Tue, 30 Jun 2020 15:16:00 +0200</pubDate>
       
-      <guid>https://hugocisneros.com/notes/adversarial_examples/</guid>
-      <description> tags Machine learning, Neural networks  Adversarial examples in Reinforcement learning Backlinks  Talk: Artificial Intelligence: A Guide for Thinking Humans  </description>
+      <guid>https://hugocisneros.com/notes/attention/</guid>
+      <description>tags Neural networks  Self-attention is a weighted average of all input elements from a sequence, with a weight proportional to a similarity score between representations. The input \(x \in \mathbb{R}^{L \times F}\) is projected by matrices \(W_Q \in \mathbb{R}^{F \times D}\), \(W_K \in \mathbb{R}^{F\times D}\) and \(W_V \in \mathbb{R}^{F\times M}\) to representations \(Q\) (queries), \(K\) (keys) and \(V\) (values).
+\[ Q = xW_Q\] \[ K = xW_K\] \[ V = xW_V\]</description>
     </item>
     
     <item>
-      <title>Algorithmic Information theory</title>
-      <link>https://hugocisneros.com/notes/algorithmic_information_theory/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>C&#43;&#43;</title>
+      <link>https://hugocisneros.com/notes/c/</link>
+      <pubDate>Tue, 30 Jun 2020 13:30:00 +0200</pubDate>
       
-      <guid>https://hugocisneros.com/notes/algorithmic_information_theory/</guid>
-      <description>Backlinks  Kolmogorov complexity Algorithmic probability Minimum description length Halting probability Complexity metrics  </description>
+      <guid>https://hugocisneros.com/notes/c/</guid>
+      <description> tags Programming languages, Coding  Backlinks  Programming languages  </description>
     </item>
     
     <item>
-      <title>Algorithmic probability</title>
-      <link>https://hugocisneros.com/notes/algorithmic_probability/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>NEAT</title>
+      <link>https://hugocisneros.com/notes/neat/</link>
+      <pubDate>Tue, 30 Jun 2020 13:12:00 +0200</pubDate>
       
-      <guid>https://hugocisneros.com/notes/algorithmic_probability/</guid>
-      <description> tags Complexity, Algorithmic Information theory  </description>
+      <guid>https://hugocisneros.com/notes/neat/</guid>
+      <description>Backlinks  Neural architecture search  </description>
     </item>
     
     <item>
-      <title>Amorphous computing</title>
-      <link>https://hugocisneros.com/notes/amorphous_computing/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>Notes on: Horowitz, J. M., &amp; England, J. L. (2017): Spontaneous fine-tuning to environment in many-species chemical reaction networks</title>
+      <link>https://hugocisneros.com/notes/horowitzspontaneousfinetuningenvironment2017/</link>
+      <pubDate>Mon, 29 Jun 2020 18:39:00 +0200</pubDate>
       
-      <guid>https://hugocisneros.com/notes/amorphous_computing/</guid>
-      <description>tags Unconventional computing papers (Abelson et al., 2000) resources Wikipedia   From (Abelson et al., 2000):
-A colony of cells cooperates to form a multicellular organism under the direction of a genetic program shared by the members of the colony. A swarm of bees cooperates to construct a hive. Humans group together to build towns, cities, and nations.
- Amorphous computing was coined by Abelson, Knight, Sussman et al.</description>
+      <guid>https://hugocisneros.com/notes/horowitzspontaneousfinetuningenvironment2017/</guid>
+      <description>source (Horowitz &amp;amp; England, 2017)  TODO Summary TODO Comments Bibliography Horowitz, J. M., &amp;amp; England, J. L., Spontaneous fine-tuning to environment in many-species chemical reaction networks, Proceedings of the National Academy of Sciences, 114(29), 7565–7570 (2017). http://dx.doi.org/10.1073/pnas.1700617114 ↩</description>
     </item>
     
     <item>
-      <title>Applied maths</title>
-      <link>https://hugocisneros.com/notes/applied_maths/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>Chemical reaction network</title>
+      <link>https://hugocisneros.com/notes/chemical_reaction_network/</link>
+      <pubDate>Mon, 29 Jun 2020 17:46:00 +0200</pubDate>
       
-      <guid>https://hugocisneros.com/notes/applied_maths/</guid>
-      <description> tags Mathematics  Backlinks  Image processing Statistics Optimal transport SIR model Cryptography  </description>
+      <guid>https://hugocisneros.com/notes/chemical_reaction_network/</guid>
+      <description></description>
     </item>
     
     <item>
-      <title>Artificial Intelligence</title>
-      <link>https://hugocisneros.com/notes/artificial_intelligence/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>Implicit neural representations</title>
+      <link>https://hugocisneros.com/notes/implicit_neural_representations/</link>
+      <pubDate>Mon, 29 Jun 2020 16:35:00 +0200</pubDate>
       
-      <guid>https://hugocisneros.com/notes/artificial_intelligence/</guid>
-      <description>Backlinks  Machine learning Talk: Artificial Intelligence: A Guide for Thinking Humans Cellular automata Open-ended Evolution Why programming is a good medium for expressing poorly understood and sloppily-formulated ideas Open-endedness: The last grand challenge you’ve never heard of Compression Notes on: Anderson, P. W. (1972): More Is Different Notes on: Clune, J. (2019): AI-GAs: AI-generating algorithms, an alternate paradigm for producing general artificial intelligence  </description>
+      <guid>https://hugocisneros.com/notes/implicit_neural_representations/</guid>
+      <description>tags Data representation, Neural networks  Implicit neural representations is about parameterizing a continuous differentiable signal with a neural network. The signal is encoded within the neural network, providing a possibly more compact representation.
+Applications of these learned representations range from simple compression, to 3D scene reconstruction from 2D images, semantic information inference, etc.
+CPPN is an early example of a implicit neural representation implementation mainly used for pattern generation .</description>
     </item>
     
     <item>
-      <title>Artificial life</title>
-      <link>https://hugocisneros.com/notes/artificial_life/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>Alternative learning mechanisms</title>
+      <link>https://hugocisneros.com/notes/alternative_learning_mechanisms/</link>
+      <pubDate>Sun, 28 Jun 2020 19:21:00 +0200</pubDate>
       
-      <guid>https://hugocisneros.com/notes/artificial_life/</guid>
-      <description>Backlinks  Open-ended Evolution Evolution Notes on: Anderson, P. W. (1972): More Is Different Notes on: Kruszewski, G., &amp;amp; Mikolov, T. (2020): Combinatory Chemistry: Towards a Simple Model of Emergent Evolution  </description>
+      <guid>https://hugocisneros.com/notes/alternative_learning_mechanisms/</guid>
+      <description>tags Machine learning Many people, including Geoffrey Hinton, have raised concerns about the back-propagation algorithm and the fact that it&amp;rsquo;s likely not a promising way to achieve Artificial Intelligence (see this Axios blog post).
+  Alternative mechanisms for learning have been and are currently studied to try and approach the learning problem in a more effective way.
+Direct feedback alignment (N\okland, 2016)
+Bibliography N\okland, Arild, Direct Feedback Alignment Provides Learning in Deep Neural Networks, arXiv:1609.</description>
     </item>
     
     <item>
-      <title>Autoencoders</title>
-      <link>https://hugocisneros.com/notes/autoencoders/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>Kerberos</title>
+      <link>https://hugocisneros.com/notes/kerberos/</link>
+      <pubDate>Sun, 28 Jun 2020 16:19:00 +0200</pubDate>
       
-      <guid>https://hugocisneros.com/notes/autoencoders/</guid>
-      <description>tags Neural networks, Data representation  Autoencoders and PCA Added: [2020-02-25 Tue 21:21]
-The relation between Autoencoders and PCA is strong. In particular, a very small autoencoder with only linear activations seems intuitively very close to PCA decomposition. (Bourlard &amp;amp; Kamp, 1988) gives an interesting analysis of the uselessness of the activation functions in the encoding layers of an autoencoder when there is no activations in the output layers. In that case, autoencoding is closely related to a sinigular value decomposition of the input data.</description>
+      <guid>https://hugocisneros.com/notes/kerberos/</guid>
+      <description>tags Network authentication, Cryptography resources Main page, Computerphile video  Kerberos is a centralized authentication protocol that uses Symmetric encryption as its main way of ensuring Online privacy on a network with a trusted central entity (e.g. a corporate network).
+A central server must have long term keys for every user on the network. It uses these keys to securely issue session keys with other devices on the network thanks to a Ticket-granting server (TGS).</description>
     </item>
     
     <item>
-      <title>Automated discovery in complex systems</title>
-      <link>https://hugocisneros.com/notes/automated_discovery_in_complex_systems/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>Network authentication</title>
+      <link>https://hugocisneros.com/notes/network_authentication/</link>
+      <pubDate>Sun, 28 Jun 2020 16:18:00 +0200</pubDate>
       
-      <guid>https://hugocisneros.com/notes/automated_discovery_in_complex_systems/</guid>
-      <description>tags Complex Systems  Evolutionary algorithms and CAs Evolutionary algorithms have been used to find Cellular automata rules with specific behavior (Mitchell et al., 1996), (Sapin et al., 2003) . The objective is to optimize a fitness function (majority of cells, presence of gliders and periodic patterns, etc.).
-Bibliography Mitchell, M., Road, H. P., Das, R., &amp;amp; Box, P. O., Evolving Cellular Automata with Genetic Algorithms: A Review of Recent Work, In , Proceedings of the {{First International Conference}} on {{Evolutionary Computation}} and {{Its Applications}} (pp.</description>
+      <guid>https://hugocisneros.com/notes/network_authentication/</guid>
+      <description>Protocols Password authentication This is one of the simplest authentication method. The idea is just to send a pair (username, password) to the server. It is obviously vulnerable to man-in-the-middle attacks.
+Kerberos Backlinks  Kerberos  </description>
     </item>
     
   </channel>

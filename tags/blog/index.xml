@@ -6,6 +6,7 @@
     <description>Recent content in Blog on Hugo Cisneros - Personal page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Fri, 07 Feb 2020 08:09:31 +0100</lastBuildDate>
     
 	<atom:link href="https://hugocisneros.com/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     
@@ -13,7 +14,7 @@
     <item>
       <title>Blog</title>
       <link>https://hugocisneros.com/blog/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 07 Feb 2020 08:09:31 +0100</pubDate>
       
       <guid>https://hugocisneros.com/blog/</guid>
       <description>Browse tags </description>
