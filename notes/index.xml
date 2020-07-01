@@ -12,6 +12,18 @@
     
     
     <item>
+      <title>Turing completeness of cellular automata</title>
+      <link>https://hugocisneros.com/notes/turing_completeness_of_cellular_automata/</link>
+      <pubDate>Wed, 01 Jul 2020 14:25:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/turing_completeness_of_cellular_automata/</guid>
+      <description> tags Cellular automata, Turing-completeness  Rule 110 Elementary cellular automaton rule 110 is universal (Cook, 2004).
+Game of Life Conway&amp;rsquo;s Game of Life has also been show to be Turing-complete. Gliders can be used to implement logic gates.
+Bibliography Cook, M., Universality in Elementary Cellular Automata, Complex Systems, (), 40 (2004).  ↩
+Backlinks  Turing-completeness  </description>
+    </item>
+    
+    <item>
       <title>Notes on: Katharopoulos, A., Vyas, A., Pappas, N., &amp; Fleuret, F. (2020): Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention</title>
       <link>https://hugocisneros.com/notes/katharopoulostransformersarernns2020/</link>
       <pubDate>Wed, 01 Jul 2020 09:31:00 +0200</pubDate>
@@ -98,16 +110,6 @@ CPPN is an early example of a implicit neural representation implementation main
   Alternative mechanisms for learning have been and are currently studied to try and approach the learning problem in a more effective way.
 Direct feedback alignment (N\okland, 2016)
 Bibliography N\okland, Arild, Direct Feedback Alignment Provides Learning in Deep Neural Networks, arXiv:1609.</description>
-    </item>
-    
-    <item>
-      <title>Kerberos</title>
-      <link>https://hugocisneros.com/notes/kerberos/</link>
-      <pubDate>Sun, 28 Jun 2020 16:19:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/kerberos/</guid>
-      <description>tags Network authentication, Cryptography resources Main page, Computerphile video  Kerberos is a centralized authentication protocol that uses Symmetric encryption as its main way of ensuring Online privacy on a network with a trusted central entity (e.g. a corporate network).
-A central server must have long term keys for every user on the network. It uses these keys to securely issue session keys with other devices on the network thanks to a Ticket-granting server (TGS).</description>
     </item>
     
   </channel>
