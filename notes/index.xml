@@ -14,12 +14,21 @@
     <item>
       <title>Notes on: Katharopoulos, A., Vyas, A., Pappas, N., &amp; Fleuret, F. (2020): Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention</title>
       <link>https://hugocisneros.com/notes/katharopoulostransformersarernns2020/</link>
-      <pubDate>Tue, 30 Jun 2020 23:00:00 +0200</pubDate>
+      <pubDate>Wed, 01 Jul 2020 09:31:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/katharopoulostransformersarernns2020/</guid>
-      <description>tags Transformers, RNN source (Katharopoulos et al., 2020)  Summary Transformers have traditionally been described as different models from RNNs. This is because instead of processing the sequence one token at a time, transformers use attention to process all elements simultaneously.
+      <description>tags Transformers, RNN source (Katharopoulos et al., 2020)  Summary Transformers have traditionally been described as different models from RNNs. This is because instead of processing the sequence one token at a time, Transformers use attention to process all elements simultaneously.
 The paper introduces an interesting new formulation, replacing the softmax attention with a feature map-based dot product.
 This new formulation yields better time and memory complexity as well as a model that is casual and autoregressive (similar to RNNs).</description>
+    </item>
+    
+    <item>
+      <title>Kernel Methods</title>
+      <link>https://hugocisneros.com/notes/kernel_methods/</link>
+      <pubDate>Wed, 01 Jul 2020 08:14:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/kernel_methods/</guid>
+      <description> tags Machine learning  Backlinks  Notes on: Katharopoulos, A., Vyas, A., Pappas, N., &amp;amp; Fleuret, F. (2020): Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention  </description>
     </item>
     
     <item>
@@ -99,16 +108,6 @@ Bibliography N\okland, Arild, Direct Feedback Alignment Provides Learning in Dee
       <guid>https://hugocisneros.com/notes/kerberos/</guid>
       <description>tags Network authentication, Cryptography resources Main page, Computerphile video  Kerberos is a centralized authentication protocol that uses Symmetric encryption as its main way of ensuring Online privacy on a network with a trusted central entity (e.g. a corporate network).
 A central server must have long term keys for every user on the network. It uses these keys to securely issue session keys with other devices on the network thanks to a Ticket-granting server (TGS).</description>
-    </item>
-    
-    <item>
-      <title>Network authentication</title>
-      <link>https://hugocisneros.com/notes/network_authentication/</link>
-      <pubDate>Sun, 28 Jun 2020 16:18:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/network_authentication/</guid>
-      <description>Protocols Password authentication This is one of the simplest authentication method. The idea is just to send a pair (username, password) to the server. It is obviously vulnerable to man-in-the-middle attacks.
-Kerberos Backlinks  Kerberos  </description>
     </item>
     
   </channel>

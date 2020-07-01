@@ -16,6 +16,10 @@ page</title>
 <meta property="og:image" content="/img/main.jpeg">
 <meta property="og:url" content=
 "https://hugocisneros.com/notes/katharopoulostransformersarernns2020/">
+<meta property="og:description" content=
+"Notes about Katharopoulos, A., Vyas, A., Pappas, N., &amp; Fleuret, F. (2020): Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention">
+<meta name="Description" property="description" content=
+"Notes about Katharopoulos, A., Vyas, A., Pappas, N., &amp; Fleuret, F. (2020): Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@cisne_hug">
 <meta name="twitter:creator" content="@cisne_hug">
@@ -75,15 +79,15 @@ Fast Autoregressive Transformers with Linear Attention</h1>
 traditionally been described as different models from <a href=
 "/notes/recurrent_neural_networks/">RNNs</a>. This is because
 instead of processing the sequence one token at a time,
-transformers use <a href="/notes/attention/">attention</a> to
+Transformers use <a href="/notes/attention/">attention</a> to
 process all elements simultaneously.</p>
 <p>The paper introduces an interesting new formulation, replacing
 the softmax attention with a feature map-based dot product.</p>
 <p>This new formulation yields better time and memory complexity as
 well as a model that is casual and autoregressive (similar to
 RNNs).</p>
-<p>A transformer applied on sequence \(x\) is presented as a
-composition of multiple transformer layers \(T_l\), with</p>
+<p>A Transformer applied on sequence \(x\) is presented as a
+composition of multiple Transformer layers \(T_l\), with</p>
 <p>\[ T_l(x) = f_l(A_l(x) + x) \]</p>
 <p>Function \(f_l\) is applied to each component independently,
 while attention \(A_l\) is applied to the whole input sequence.</p>
@@ -98,17 +102,52 @@ matrices is written</p>
 <p>\[ V’_i = \dfrac{\sum_{j = 1}^N \text{sim}(Q_i, K_j)
 V_j}{\sum_{j = 1}^N \text{sim}(Q_i, K_j)} \]</p>
 <h3 id="linearizing-attention">Linearizing attention</h3>
-<p>In particular, all kernels \(k(x, y) = \langle\phi(x),
-\phi(y)\rangle_\mathcal{S} : \mathbb{R}^{2\times F} \rightarrow
-\mathbb{R}_+\) can be used as a similarity function, changing the
-equation above to</p>
+<p>In particular, all <a href="/notes/kernel_methods/">kernels</a>
+\(k(x, y) = \langle\phi(x), \phi(y)\rangle_\mathcal{S} :
+\mathbb{R}^{2\times F} \rightarrow \mathbb{R}_+\) can be used as a
+similarity function, changing the equation above to</p>
 <p>\[ V’_i = \dfrac{\phi(Q_i)^T \sum_{j = 1}^N \phi(K_j) V_j^T}{
 \phi(Q_i)^T \sum_{j = 1}^N \phi(K_j)}.\]</p>
 <p>Because the right term of the numerator and denominator above
 does not depend on \(i\), it can be computed once for all sequence,
 and time and memory complexity become \(\mathcal{O}(N)\).</p>
-<h2 id="comments"><span class="org-todo todo TODO">TODO</span>
-Comments</h2>
+<h3 id="masking-for-autoregressive-models">Masking for
+autoregressive models</h3>
+<p>By replacing \(N\) by \(i\) in the expression above, one readily
+obtains a formulation of the Transformer function which only
+depends on previous tokens. This is used to train <a href=
+"/notes/language_modeling/">language models</a> in particular,
+because the prediction of a token can only depend on the previous
+tokens.</p>
+<h3 id="transformers-are-rnns">Transformers are RNNs</h3>
+<p>By rewriting the main kernel formulation of a Transformer above,
+one sees how it can actually be seen as a RNN. Timesteps of the
+recurrence are denoted as subscripts.</p>
+<p>\begin{equation} \begin{aligned} & s_0 = 0, z_0 = 0 \\\<br>
+& s_i = s_{i-1} + \phi(x_i W_K) (x_i W_V)^T \\\<br>
+& z_i = z_{i-1} + \phi(x_i W_K) \\\<br>
+& y_i = f_l \left( \dfrac{\phi(x_i W_Q)^T s_i}{\phi(x_i W_Q)^T z_i}
++ x_i \right) \end{aligned} \label{eq:rnn} \end{equation}</p>
+<p>The resulting RNN has two hidden states, namely the attention
+memory \(s\) and the normalizer memory \(z\).</p>
+<h2 id="comments">Comments</h2>
+<p>The parallel between RNNs and Transformer models is clearly made
+in this paper. I believe this is significant because it give
+insights into why Transformers might be better at language modeling
+than RNN-based models.</p>
+<p>It would seem from this new formulation that they aren’t better
+than RNNs but the choice of update function (in eq. \eqref{eq:rnn})
+they are equivalent to is superior.</p>
+<p>Another possibility is that RNNs and Transformers have always
+had the same potential. The hype might have fuelled more effort
+into making Transformers models work better and have thus widened
+the performance gap between the two otherwise equivalent models.
+Recent research into RNN models also seems to have favored a few
+dominant models (standard RNN, LSTM and GRU) and might have slowed
+the discovery of other, more effective cells.</p>
+<p>Experiments in the paper only demonstrate the performance of
+their new model on small tasks and I would like to see how this
+holds up for language modeling.</p>
 <h1 id="bibliography">Bibliography</h1>
 <p><a id="katharopoulosTransformersAreRNNs2020" target=
 "_blank">Katharopoulos, A., Vyas, A., Pappas, N., & Fleuret, Fran\c
@@ -120,7 +159,7 @@ with Linear Attention</em>, arXiv:2006.16236 [cs, stat],
 <div class="note-footer">Last changed <a class="u-url" href=
 "https://hugocisneros.com/notes/katharopoulostransformersarernns2020/">
 <time itemprop="datePublished" class="dt-published" datetime=
-"2020-06-30T23:00:00+0200">30/06/2020</time></a> | authored by
+"2020-07-01T09:31:00+0200">01/07/2020</time></a> | authored by
 <a href="https://hugocisneros.com/" rel="author" class=
 "p-author h-card" itemprop="author" itemscope itemtype=
 "http://schema.org/Person"><span itemprop="name">Hugo
@@ -143,7 +182,8 @@ Notes</b></a>
 <script>
  MathJax = {
      tex: {
-         inlineMath: [['$','$'], ['\\(', '\\)']]
+         inlineMath: [['$','$'], ['\\(', '\\)']],
+         tags: 'ams'
      }
  };
 </script> 
