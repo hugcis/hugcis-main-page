@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+
+<meta charset="utf-8">
+<meta name="viewport" content=
+"width=device-width,initial-scale=1.0,minimum-scale=1">
+<title>Make - Hugo Cisneros - Personal page</title>
+<meta property="og:title" content=
+"Make - Hugo Cisneros - Personal page">
+<meta property="og:type" content="article">
+<meta property="og:image" content="/img/main.jpeg">
+<meta property="og:url" content=
+"https://hugocisneros.com/notes/make/">
+<meta property="og:description" content="Notes about Make">
+<meta name="Description" property="description" content=
+"Notes about Make">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@cisne_hug">
+<meta name="twitter:creator" content="@cisne_hug">
+<link rel="stylesheet" href=
+"https://hugocisneros.com/css/main.min.49a178b6a182a13a256ca7e09069d804e8578b4b3ff071f060fa3ea637de481e.css"
+media="all" type="text/css">
+<link rel="apple-touch-icon" sizes="180x180" href=
+"/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href=
+"/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href=
+"/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color=
+"#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<link rel="webmention" href=
+"https://webmention.io/hugocisneros.com/webmention">
+<link rel="pingback" href=
+"https://webmention.io/hugocisneros.com/xmlrpc">
+</head>
+<body>
+<div class="wrapper">
+<header class="header">
+<nav class="nav">
+<div class="nav-main"><a href="https://hugocisneros.com/" class=
+"nav-title">Hugo Cisneros - Personal page</a></div>
+<ul class="nav-links">
+<li><a href="/about/">About</a></li>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/other/">Other</a></li>
+<li><a href="/resume/cv.pdf">Resume</a></li>
+</ul>
+</nav>
+</header>
+<main class="content" role="main">
+<article class="article h-entry" itemprop="mainEntity" itemscope
+itemtype="http://schema.org/BlogPosting">
+<div class="single-note note-container">
+<h1 class="article-title p-name" itemprop="name">Make</h1>
+<div class="article-content e-content p-name" itemprop=
+"articleBody">
+<dl>
+<dt>tags</dt>
+<dd><a href="/notes/coding/">Coding</a></dd>
+</dl>
+<p>Make is a build automation tool.</p>
+<h2 id="don-t-deal-with-tabs">Don’t deal with tabs</h2>
+<p>I have been annoyed with tabs in Makefiles many times. Some
+editors or copy-pasting functions automatically convert tabs to
+space and vice-versa and this can break your Makefile.</p>
+<p>With GNU Make 4.0 or later, it is possible to set the prefix to
+some other fixed token. To use <code>&gt;</code> as a prefix, put
+this at the beginning of your Makefile:</p>
+<div class="highlight">
+<pre style=
+"color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<code class="language-makefile" data-lang="makefile"><span style=
+"color:#a61717;background-color:#e3d2d2">ifeq</span> <span style=
+"color:#a61717;background-color:#e3d2d2">(</span><span style=
+"color:#6ab825;font-weight:bold">$(</span><span style=
+"color:#40ffff">origin</span> .<span style=
+"color:#40ffff">RECIPEPREFIX</span><span style=
+"color:#6ab825;font-weight:bold">)</span><span style=
+"color:#a61717;background-color:#e3d2d2">,</span> <span style=
+"color:#a61717;background-color:#e3d2d2">undefined)</span>
+  <span style=
+"color:#6ab825;font-weight:bold">$(</span><span style="color:#40ffff">error</span> "<span style="color:#40ffff">This</span> <span style="color:#40ffff">Make</span> <span style="color:#40ffff">does</span> <span style="color:#40ffff">not</span> <span style="color:#40ffff">support</span> .<span style="color:#40ffff">RECIPEPREFIX</span>. \
+    <span style="color:#40ffff">Please</span> <span style=
+"color:#40ffff">use</span> <span style=
+"color:#40ffff">GNU</span> <span style=
+"color:#40ffff">Make</span> 4.0 <span style=
+"color:#40ffff">or</span> <span style=
+"color:#40ffff">later</span>"<span style=
+"color:#6ab825;font-weight:bold">)</span>
+<span style="color:#a61717;background-color:#e3d2d2">endif</span>
+<span style="color:#40ffff">.RECIPEPREFIX</span> = &gt;
+</code></pre></div>
+<h2 id="document-a-make-file-for-a-user">Document a make file for a
+user</h2>
+<p>Large Makefiles with lots of recipes can be overwhelming for
+someone trying your software for the first time. Many conventions
+exist about which standard recipes should be there, but it is also
+efficient to document them. This can be done by adding the
+following recipe to the Makefile (which will be run by default, to
+change this behavior, remove the first line):</p>
+<div class="highlight">
+<pre style=
+"color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<code class="language-makefile" data-lang="makefile"><span style=
+"color:#40ffff">.DEFAULT_GOAL</span> := <span style=
+"color:#24909d">help</span>
+<span style="color:#447fcf">.PHONY</span>: help
+
+<span style="color:#447fcf">help</span>:
+  @grep -E <span style=
+"color:#ed9d13">'^[a-zA-Z0-9_-]+:.*?## .*$$'</span> <span style=
+"color:#6ab825;font-weight:bold">$(</span>MAKEFILE_LIST<span style=
+"color:#6ab825;font-weight:bold">)</span> <span style=
+"color:#ed9d13">\
+</span>  | sed -n <span style=
+"color:#ed9d13">'s/^\(.*\): \(.*\)##\(.*\)/\1|\3/p'</span> <span style="color:#ed9d13">\
+</span>  | column -t  -s <span style="color:#ed9d13">'|'</span>
+</code></pre></div>
+</div>
+<div class="note-footer">Last changed <a class="u-url" href=
+"https://hugocisneros.com/notes/make/"><time itemprop=
+"datePublished" class="dt-published" datetime=
+"2020-07-01T20:43:05+0200">01/07/2020</time></a> | authored by
+<a href="https://hugocisneros.com/" rel="author" class=
+"p-author h-card" itemprop="author" itemscope itemtype=
+"http://schema.org/Person"><span itemprop="name">Hugo
+Cisneros</span></a></div>
+</div>
+</article>
+<br>
+<a href="/notes#make"><b>← Back to Notes</b></a>
+<hr></main>
+<footer class="footer">
+<ul class="footer-links">
+<li><a href="/blog/index.xml" type="application/rss+xml" target=
+"_blank">Blog RSS feed</a></li>
+<li><a href=
+"https://github.com/hugcis/natrium-custom">Code</a></li>
+</ul>
+</footer>
+</div>
+<script>
+ MathJax = {
+     tex: {
+         inlineMath: [['$','$'], ['\\(', '\\)']],
+         tags: 'ams'
+     }
+ };
+</script> 
+<script type="text/javascript" rel="preconnect" id="MathJax-script"
+async src=
+"https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>

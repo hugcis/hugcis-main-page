@@ -12,104 +12,95 @@
     
     
     <item>
-      <title>Turing completeness of cellular automata</title>
-      <link>https://hugocisneros.com/notes/turing_completeness_of_cellular_automata/</link>
-      <pubDate>Wed, 01 Jul 2020 14:25:00 +0200</pubDate>
+      <title>Abelian sandpile model</title>
+      <link>https://hugocisneros.com/notes/abelian_sandpile_model/</link>
+      <pubDate>Wed, 01 Jul 2020 20:43:05 +0200</pubDate>
       
-      <guid>https://hugocisneros.com/notes/turing_completeness_of_cellular_automata/</guid>
-      <description> tags Cellular automata, Turing-completeness  Rule 110 Elementary cellular automaton rule 110 is universal (Cook, 2004).
-Game of Life Conway&amp;rsquo;s Game of Life has also been show to be Turing-complete. Gliders can be used to implement logic gates.
-Bibliography Cook, M., Universality in Elementary Cellular Automata, Complex Systems, (), 40 (2004).  ↩
-Backlinks  Turing-completeness  </description>
+      <guid>https://hugocisneros.com/notes/abelian_sandpile_model/</guid>
+      <description> tags Cellular automata  </description>
     </item>
     
     <item>
-      <title>Notes on: Katharopoulos, A., Vyas, A., Pappas, N., &amp; Fleuret, F. (2020): Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention</title>
-      <link>https://hugocisneros.com/notes/katharopoulostransformersarernns2020/</link>
-      <pubDate>Wed, 01 Jul 2020 09:31:00 +0200</pubDate>
+      <title>Adversarial examples</title>
+      <link>https://hugocisneros.com/notes/adversarial_examples/</link>
+      <pubDate>Wed, 01 Jul 2020 20:43:05 +0200</pubDate>
       
-      <guid>https://hugocisneros.com/notes/katharopoulostransformersarernns2020/</guid>
-      <description>tags Transformers, RNN source (Katharopoulos et al., 2020)  Summary Transformers have traditionally been described as different models from RNNs. This is because instead of processing the sequence one token at a time, Transformers use attention to process all elements simultaneously.
-The paper introduces an interesting new formulation, replacing the softmax attention with a feature map-based dot product.
-This new formulation yields better time and memory complexity as well as a model that is casual and autoregressive (similar to RNNs).</description>
+      <guid>https://hugocisneros.com/notes/adversarial_examples/</guid>
+      <description> tags Machine learning, Neural networks  Adversarial examples in Reinforcement learning Backlinks  Talk: Artificial Intelligence: A Guide for Thinking Humans  </description>
     </item>
     
     <item>
-      <title>Kernel Methods</title>
-      <link>https://hugocisneros.com/notes/kernel_methods/</link>
-      <pubDate>Wed, 01 Jul 2020 08:14:00 +0200</pubDate>
+      <title>Algorithmic Information theory</title>
+      <link>https://hugocisneros.com/notes/algorithmic_information_theory/</link>
+      <pubDate>Wed, 01 Jul 2020 20:43:05 +0200</pubDate>
       
-      <guid>https://hugocisneros.com/notes/kernel_methods/</guid>
-      <description> tags Machine learning  Backlinks  Notes on: Katharopoulos, A., Vyas, A., Pappas, N., &amp;amp; Fleuret, F. (2020): Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention  </description>
+      <guid>https://hugocisneros.com/notes/algorithmic_information_theory/</guid>
+      <description>Backlinks  Minimum description length Kolmogorov complexity Algorithmic probability Complexity metrics Halting probability  </description>
     </item>
     
     <item>
-      <title>Attention</title>
-      <link>https://hugocisneros.com/notes/attention/</link>
-      <pubDate>Tue, 30 Jun 2020 15:16:00 +0200</pubDate>
+      <title>Algorithmic probability</title>
+      <link>https://hugocisneros.com/notes/algorithmic_probability/</link>
+      <pubDate>Wed, 01 Jul 2020 20:43:05 +0200</pubDate>
       
-      <guid>https://hugocisneros.com/notes/attention/</guid>
-      <description>tags Neural networks  Self-attention is a weighted average of all input elements from a sequence, with a weight proportional to a similarity score between representations. The input \(x \in \mathbb{R}^{L \times F}\) is projected by matrices \(W_Q \in \mathbb{R}^{F \times D}\), \(W_K \in \mathbb{R}^{F\times D}\) and \(W_V \in \mathbb{R}^{F\times M}\) to representations \(Q\) (queries), \(K\) (keys) and \(V\) (values).
-\[ Q = xW_Q\] \[ K = xW_K\] \[ V = xW_V\]</description>
+      <guid>https://hugocisneros.com/notes/algorithmic_probability/</guid>
+      <description> tags Complexity, Algorithmic Information theory  </description>
     </item>
     
     <item>
-      <title>C&#43;&#43;</title>
-      <link>https://hugocisneros.com/notes/c/</link>
-      <pubDate>Tue, 30 Jun 2020 13:30:00 +0200</pubDate>
+      <title>Applied maths</title>
+      <link>https://hugocisneros.com/notes/applied_maths/</link>
+      <pubDate>Wed, 01 Jul 2020 20:43:05 +0200</pubDate>
       
-      <guid>https://hugocisneros.com/notes/c/</guid>
-      <description> tags Programming languages, Coding  Backlinks  Programming languages  </description>
+      <guid>https://hugocisneros.com/notes/applied_maths/</guid>
+      <description> tags Mathematics  Backlinks  SIR model Statistics Optimal transport Image processing Cryptography  </description>
     </item>
     
     <item>
-      <title>NEAT</title>
-      <link>https://hugocisneros.com/notes/neat/</link>
-      <pubDate>Tue, 30 Jun 2020 13:12:00 +0200</pubDate>
+      <title>Artificial Intelligence</title>
+      <link>https://hugocisneros.com/notes/artificial_intelligence/</link>
+      <pubDate>Wed, 01 Jul 2020 20:43:05 +0200</pubDate>
       
-      <guid>https://hugocisneros.com/notes/neat/</guid>
-      <description>Backlinks  Neural architecture search  </description>
+      <guid>https://hugocisneros.com/notes/artificial_intelligence/</guid>
+      <description>Backlinks  Notes on: Anderson, P. W. (1972): More Is Different NLP Open-ended Evolution Machine learning Compression Notes on: Clune, J. (2019): AI-GAs: AI-generating algorithms, an alternate paradigm for producing general artificial intelligence Talk: Artificial Intelligence: A Guide for Thinking Humans Why programming is a good medium for expressing poorly understood and sloppily-formulated ideas Open-endedness: The last grand challenge you’ve never heard of Cellular automata Alternative learning mechanisms  </description>
     </item>
     
     <item>
-      <title>Notes on: Horowitz, J. M., &amp; England, J. L. (2017): Spontaneous fine-tuning to environment in many-species chemical reaction networks</title>
-      <link>https://hugocisneros.com/notes/horowitzspontaneousfinetuningenvironment2017/</link>
-      <pubDate>Mon, 29 Jun 2020 18:39:00 +0200</pubDate>
+      <title>Artificial life</title>
+      <link>https://hugocisneros.com/notes/artificial_life/</link>
+      <pubDate>Wed, 01 Jul 2020 20:43:05 +0200</pubDate>
       
-      <guid>https://hugocisneros.com/notes/horowitzspontaneousfinetuningenvironment2017/</guid>
-      <description>source (Horowitz &amp;amp; England, 2017)  TODO Summary TODO Comments Bibliography Horowitz, J. M., &amp;amp; England, J. L., Spontaneous fine-tuning to environment in many-species chemical reaction networks, Proceedings of the National Academy of Sciences, 114(29), 7565–7570 (2017). http://dx.doi.org/10.1073/pnas.1700617114 ↩</description>
+      <guid>https://hugocisneros.com/notes/artificial_life/</guid>
+      <description>Backlinks  Notes on: Anderson, P. W. (1972): More Is Different Open-ended Evolution Notes on: Kruszewski, G., &amp;amp; Mikolov, T. (2020): Combinatory Chemistry: Towards a Simple Model of Emergent Evolution Evolution  </description>
     </item>
     
     <item>
-      <title>Chemical reaction network</title>
-      <link>https://hugocisneros.com/notes/chemical_reaction_network/</link>
-      <pubDate>Mon, 29 Jun 2020 17:46:00 +0200</pubDate>
+      <title>Autoencoders</title>
+      <link>https://hugocisneros.com/notes/autoencoders/</link>
+      <pubDate>Wed, 01 Jul 2020 20:43:05 +0200</pubDate>
       
-      <guid>https://hugocisneros.com/notes/chemical_reaction_network/</guid>
-      <description></description>
+      <guid>https://hugocisneros.com/notes/autoencoders/</guid>
+      <description>tags Neural networks, Data representation  Autoencoders and PCA Added: [2020-02-25 Tue 21:21]
+The relation between Autoencoders and PCA is strong. In particular, a very small autoencoder with only linear activations seems intuitively very close to PCA decomposition. (Bourlard &amp;amp; Kamp, 1988) gives an interesting analysis of the uselessness of the activation functions in the encoding layers of an autoencoder when there is no activations in the output layers. In that case, autoencoding is closely related to a sinigular value decomposition of the input data.</description>
     </item>
     
     <item>
-      <title>Implicit neural representations</title>
-      <link>https://hugocisneros.com/notes/implicit_neural_representations/</link>
-      <pubDate>Mon, 29 Jun 2020 16:35:00 +0200</pubDate>
+      <title>Automated discovery in complex systems</title>
+      <link>https://hugocisneros.com/notes/automated_discovery_in_complex_systems/</link>
+      <pubDate>Wed, 01 Jul 2020 20:43:05 +0200</pubDate>
       
-      <guid>https://hugocisneros.com/notes/implicit_neural_representations/</guid>
-      <description>tags Data representation, Neural networks  Implicit neural representations is about parameterizing a continuous differentiable signal with a neural network. The signal is encoded within the neural network, providing a possibly more compact representation.
-Applications of these learned representations range from simple compression, to 3D scene reconstruction from 2D images, semantic information inference, etc.
-CPPN is an early example of a implicit neural representation implementation mainly used for pattern generation .</description>
+      <guid>https://hugocisneros.com/notes/automated_discovery_in_complex_systems/</guid>
+      <description>tags Complex Systems  Evolutionary algorithms and CAs Evolutionary algorithms have been used to find Cellular automata rules with specific behavior (Mitchell et al., 1996), (Sapin et al., 2003) . The objective is to optimize a fitness function (majority of cells, presence of gliders and periodic patterns, etc.).
+Bibliography Mitchell, M., Road, H. P., Das, R., &amp;amp; Box, P. O., Evolving Cellular Automata with Genetic Algorithms: A Review of Recent Work, In , Proceedings of the {{First International Conference}} on {{Evolutionary Computation}} and {{Its Applications} (pp.</description>
     </item>
     
     <item>
-      <title>Alternative learning mechanisms</title>
-      <link>https://hugocisneros.com/notes/alternative_learning_mechanisms/</link>
-      <pubDate>Sun, 28 Jun 2020 19:21:00 +0200</pubDate>
+      <title>Backward RNN</title>
+      <link>https://hugocisneros.com/notes/backward_rnn/</link>
+      <pubDate>Wed, 01 Jul 2020 20:43:05 +0200</pubDate>
       
-      <guid>https://hugocisneros.com/notes/alternative_learning_mechanisms/</guid>
-      <description>tags Machine learning Many people, including Geoffrey Hinton, have raised concerns about the back-propagation algorithm and the fact that it&amp;rsquo;s likely not a promising way to achieve Artificial Intelligence (see this Axios blog post).
-  Alternative mechanisms for learning have been and are currently studied to try and approach the learning problem in a more effective way.
-Direct feedback alignment (N\okland, 2016)
-Bibliography N\okland, Arild, Direct Feedback Alignment Provides Learning in Deep Neural Networks, arXiv:1609.</description>
+      <guid>https://hugocisneros.com/notes/backward_rnn/</guid>
+      <description>tags Recurrent neural networks  Regular RNNs process input in sequence. When applied to a language modeling task, one tries to predict a word given the previous ones. For example, with the sentence The quick brown fox jumps over the lazy, a classical RNN will initialize and internal state \(s_0\) and process each word in sequence, starting from The and updating its internal state with each new word in order to make a final prediction.</description>
     </item>
     
   </channel>
