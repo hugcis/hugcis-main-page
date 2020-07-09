@@ -6,101 +6,106 @@
     <description>Recent content in Notes on Hugo Cisneros - Personal page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 20 Jun 2020 19:06:49 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 09 Jul 2020 14:31:00 +0200</lastBuildDate>
     
 	<atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Abelian sandpile model</title>
-      <link>https://hugocisneros.com/notes/abelian_sandpile_model/</link>
-      <pubDate>Wed, 01 Jul 2020 20:43:05 +0200</pubDate>
+      <title>Reinforcement learning</title>
+      <link>https://hugocisneros.com/notes/reinforcement_learning/</link>
+      <pubDate>Thu, 09 Jul 2020 14:31:00 +0200</pubDate>
       
-      <guid>https://hugocisneros.com/notes/abelian_sandpile_model/</guid>
-      <description> tags Cellular automata  </description>
+      <guid>https://hugocisneros.com/notes/reinforcement_learning/</guid>
+      <description> tags Machine learning  Backlinks  Notes on: Khalifa, A., Bontrager, P., Earle, S., &amp;amp; Togelius, J. (2020): PCGRL: Procedural Content Generation via Reinforcement Learning Notes on: Wang, R., Lehman, J., Clune, J., &amp;amp; Stanley, K. O. (2019): POET: open-ended coevolution of environments and their optimized solutions Adversarial examples Neural architecture search  </description>
     </item>
     
     <item>
-      <title>Adversarial examples</title>
-      <link>https://hugocisneros.com/notes/adversarial_examples/</link>
-      <pubDate>Wed, 01 Jul 2020 20:43:05 +0200</pubDate>
+      <title>Reservoir computing</title>
+      <link>https://hugocisneros.com/notes/reservoir_computing/</link>
+      <pubDate>Thu, 09 Jul 2020 14:31:00 +0200</pubDate>
       
-      <guid>https://hugocisneros.com/notes/adversarial_examples/</guid>
-      <description> tags Machine learning, Neural networks  Adversarial examples in Reinforcement learning Backlinks  Talk: Artificial Intelligence: A Guide for Thinking Humans  </description>
+      <guid>https://hugocisneros.com/notes/reservoir_computing/</guid>
+      <description>tags Recurrent neural networks, Machine learning, Unconventional computing  Echo-state networks Reservoir computing with cellular automata Reservoir computing can use Cellular automata as the reservoir. (Yilmaz, 2014), (Mor&#39;an et al., 2018), (Babson et al., 2019)
+Bibliography Yilmaz, O., Reservoir Computing using Cellular Automata, arXiv:1410.0162 [cs], (), (2014).  ↩
+Mor&#39;an, Alejandro, Frasser, C. F., &amp;amp; Rossell&#39;o, Josep L., Reservoir Computing Hardware with Cellular Automata, arXiv:1806.04932 [nlin], (), (2018).  ↩</description>
     </item>
     
     <item>
-      <title>Algorithmic Information theory</title>
-      <link>https://hugocisneros.com/notes/algorithmic_information_theory/</link>
-      <pubDate>Wed, 01 Jul 2020 20:43:05 +0200</pubDate>
+      <title>Rice’s theorem</title>
+      <link>https://hugocisneros.com/notes/rice_s_theorem/</link>
+      <pubDate>Thu, 09 Jul 2020 14:31:00 +0200</pubDate>
       
-      <guid>https://hugocisneros.com/notes/algorithmic_information_theory/</guid>
-      <description>Backlinks  Minimum description length Kolmogorov complexity Algorithmic probability Complexity metrics Halting probability  </description>
+      <guid>https://hugocisneros.com/notes/rice_s_theorem/</guid>
+      <description>Backlinks  Surprisingly Turing-Complete  </description>
     </item>
     
     <item>
-      <title>Algorithmic probability</title>
-      <link>https://hugocisneros.com/notes/algorithmic_probability/</link>
-      <pubDate>Wed, 01 Jul 2020 20:43:05 +0200</pubDate>
+      <title>RNA-world</title>
+      <link>https://hugocisneros.com/notes/rna_world/</link>
+      <pubDate>Thu, 09 Jul 2020 14:31:00 +0200</pubDate>
       
-      <guid>https://hugocisneros.com/notes/algorithmic_probability/</guid>
-      <description> tags Complexity, Algorithmic Information theory  </description>
+      <guid>https://hugocisneros.com/notes/rna_world/</guid>
+      <description> tags Biological life  Backlinks  The End of the RNA World Is Near, Biochemists Argue  </description>
     </item>
     
     <item>
-      <title>Applied maths</title>
-      <link>https://hugocisneros.com/notes/applied_maths/</link>
-      <pubDate>Wed, 01 Jul 2020 20:43:05 +0200</pubDate>
+      <title>Rust</title>
+      <link>https://hugocisneros.com/notes/rust/</link>
+      <pubDate>Thu, 09 Jul 2020 14:31:00 +0200</pubDate>
       
-      <guid>https://hugocisneros.com/notes/applied_maths/</guid>
-      <description> tags Mathematics  Backlinks  SIR model Statistics Optimal transport Image processing Cryptography  </description>
+      <guid>https://hugocisneros.com/notes/rust/</guid>
+      <description> tags Programming languages, Coding  Backlinks  Finite state machines Programming languages  </description>
     </item>
     
     <item>
-      <title>Artificial Intelligence</title>
-      <link>https://hugocisneros.com/notes/artificial_intelligence/</link>
-      <pubDate>Wed, 01 Jul 2020 20:43:05 +0200</pubDate>
+      <title>Schmidhuber on Consciousness</title>
+      <link>https://hugocisneros.com/notes/schmidhuber_on_consciousness/</link>
+      <pubDate>Thu, 09 Jul 2020 14:30:00 +0200</pubDate>
       
-      <guid>https://hugocisneros.com/notes/artificial_intelligence/</guid>
-      <description>Backlinks  Notes on: Anderson, P. W. (1972): More Is Different NLP Open-ended Evolution Machine learning Compression Notes on: Clune, J. (2019): AI-GAs: AI-generating algorithms, an alternate paradigm for producing general artificial intelligence Talk: Artificial Intelligence: A Guide for Thinking Humans Why programming is a good medium for expressing poorly understood and sloppily-formulated ideas Open-endedness: The last grand challenge you’ve never heard of Cellular automata Alternative learning mechanisms  </description>
+      <guid>https://hugocisneros.com/notes/schmidhuber_on_consciousness/</guid>
+      <description>link Reddit comment  Karl Popper famously said: “All life is problem solving.” No theory of consciousness is necessary to define the objectives of a general problem solver. From an AGI point of view, consciousness is at best a by-product of a general problem solving procedure.
+I must admit that I am not a big fan of Tononi&amp;rsquo;s theory. The following may represent a simpler and more general view of consciousness.</description>
     </item>
     
     <item>
-      <title>Artificial life</title>
-      <link>https://hugocisneros.com/notes/artificial_life/</link>
-      <pubDate>Wed, 01 Jul 2020 20:43:05 +0200</pubDate>
+      <title>Search</title>
+      <link>https://hugocisneros.com/notes/search/</link>
+      <pubDate>Thu, 09 Jul 2020 14:30:00 +0200</pubDate>
       
-      <guid>https://hugocisneros.com/notes/artificial_life/</guid>
-      <description>Backlinks  Notes on: Anderson, P. W. (1972): More Is Different Open-ended Evolution Notes on: Kruszewski, G., &amp;amp; Mikolov, T. (2020): Combinatory Chemistry: Towards a Simple Model of Emergent Evolution Evolution  </description>
+      <guid>https://hugocisneros.com/notes/search/</guid>
+      <description>Backlinks  Genetic algorithms Neural architecture search  </description>
     </item>
     
     <item>
-      <title>Autoencoders</title>
-      <link>https://hugocisneros.com/notes/autoencoders/</link>
-      <pubDate>Wed, 01 Jul 2020 20:43:05 +0200</pubDate>
+      <title>Self-organization</title>
+      <link>https://hugocisneros.com/notes/self_organization/</link>
+      <pubDate>Thu, 09 Jul 2020 14:30:00 +0200</pubDate>
       
-      <guid>https://hugocisneros.com/notes/autoencoders/</guid>
-      <description>tags Neural networks, Data representation  Autoencoders and PCA Added: [2020-02-25 Tue 21:21]
-The relation between Autoencoders and PCA is strong. In particular, a very small autoencoder with only linear activations seems intuitively very close to PCA decomposition. (Bourlard &amp;amp; Kamp, 1988) gives an interesting analysis of the uselessness of the activation functions in the encoding layers of an autoencoder when there is no activations in the output layers. In that case, autoencoding is closely related to a sinigular value decomposition of the input data.</description>
+      <guid>https://hugocisneros.com/notes/self_organization/</guid>
+      <description>Self-organization is an emergent phenomenon
+Backlinks  Complexity  </description>
     </item>
     
     <item>
-      <title>Automated discovery in complex systems</title>
-      <link>https://hugocisneros.com/notes/automated_discovery_in_complex_systems/</link>
-      <pubDate>Wed, 01 Jul 2020 20:43:05 +0200</pubDate>
+      <title>SIR model</title>
+      <link>https://hugocisneros.com/notes/sir_model/</link>
+      <pubDate>Thu, 09 Jul 2020 14:29:00 +0200</pubDate>
       
-      <guid>https://hugocisneros.com/notes/automated_discovery_in_complex_systems/</guid>
-      <description>tags Complex Systems  Evolutionary algorithms and CAs Evolutionary algorithms have been used to find Cellular automata rules with specific behavior (Mitchell et al., 1996), (Sapin et al., 2003) . The objective is to optimize a fitness function (majority of cells, presence of gliders and periodic patterns, etc.).
-Bibliography Mitchell, M., Road, H. P., Das, R., &amp;amp; Box, P. O., Evolving Cellular Automata with Genetic Algorithms: A Review of Recent Work, In , Proceedings of the {{First International Conference}} on {{Evolutionary Computation}} and {{Its Applications} (pp.</description>
+      <guid>https://hugocisneros.com/notes/sir_model/</guid>
+      <description>tags Applied maths resources Wikipedia  Simplest form The SIR model is defined for a population \(N\), \(S\) the number of susceptible persons, \(I\) the number of infected people and \(R\) the number of poeple who have recovered. The following system of differential equations governs the evolution of those three variables:
+\[ \frac{dS}{dt} = - \frac{\beta I S}{N} \] \[ \frac{dI}{dt} = \frac{\beta I S }{N}- \gamma I \] \[ \frac{dR}{dt} = \gamma I \]</description>
     </item>
     
     <item>
-      <title>Backward RNN</title>
-      <link>https://hugocisneros.com/notes/backward_rnn/</link>
-      <pubDate>Wed, 01 Jul 2020 20:43:05 +0200</pubDate>
+      <title>Statistical complexity</title>
+      <link>https://hugocisneros.com/notes/statistical_complexity/</link>
+      <pubDate>Thu, 09 Jul 2020 14:29:00 +0200</pubDate>
       
-      <guid>https://hugocisneros.com/notes/backward_rnn/</guid>
-      <description>tags Recurrent neural networks  Regular RNNs process input in sequence. When applied to a language modeling task, one tries to predict a word given the previous ones. For example, with the sentence The quick brown fox jumps over the lazy, a classical RNN will initialize and internal state \(s_0\) and process each word in sequence, starting from The and updating its internal state with each new word in order to make a final prediction.</description>
+      <guid>https://hugocisneros.com/notes/statistical_complexity/</guid>
+      <description>tags Complexity metrics papers (Crutchfield &amp;amp; Young, 1989)  One interpretation of the statistical complexity is that it is the minimum amount of historical information required to make optimal forecasts of bits in \(x\) at the error rate \(h_\mu\).
+For periodic sequences, \(C_\mu(x) = 0\) and for ideal random sequences \(C_\mu(x) = 0\) too.
+Several researchers have tried to capture the properties of statistical complexity with practical alternatives. The resulting complexity metrics include:</description>
     </item>
     
   </channel>

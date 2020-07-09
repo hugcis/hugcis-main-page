@@ -32,11 +32,12 @@ function sort_by_name(a, b) {
 
 function sort_by_date(a, b) {
     db = new Date(b.children[0].children[0]
-                  .getElementsByTagName("span")[0].innerHTML);
+                  .getElementsByTagName("span")[0].innerHTML.trim());
     da = new Date(a.children[0].children[0]
-                  .getElementsByTagName("span")[0].innerHTML);
+                  .getElementsByTagName("span")[0].innerHTML.trim());
     return new Date(db) - new Date(da);
 }
+
 
 function sort_list_of_items(type) {
     var ul = document.getElementById("note_list").getElementsByTagName('li');
@@ -64,3 +65,17 @@ function sort_items() {
 }
 sorter.addEventListener("change", sort_items);
 sort_items();
+
+var selectOption = sorter.options[sorter.selectedIndex];
+var lastSelected = localStorage.getItem('select');
+
+if(lastSelected) {
+    sorter.value = lastSelected;
+    sort_items();
+}
+
+sorter.onchange = function () {
+    lastSelected = sorter.options[sorter.selectedIndex].value;
+    console.log(lastSelected);
+    localStorage.setItem('select', lastSelected);
+};

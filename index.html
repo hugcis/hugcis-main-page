@@ -20,7 +20,7 @@
 <meta name="twitter:site" content="@cisne_hug">
 <meta name="twitter:creator" content="@cisne_hug">
 <link rel="stylesheet" href=
-"https://hugocisneros.com/css/main.min.49a178b6a182a13a256ca7e09069d804e8578b4b3ff071f060fa3ea637de481e.css"
+"https://hugocisneros.com/css/main.min.09ba75009ac37877191541f27444e8270145acc4b2d3d9426f22f0fb43420b6e.css"
 media="all" type="text/css">
 <link rel="apple-touch-icon" sizes="180x180" href=
 "/apple-touch-icon.png">
@@ -166,8 +166,9 @@ SSCI</i></span>,
 <span>Introduces a new metric of increasing complexity for cellular
 automata and other systems.</span><br>
 <div class="pub-link-wrapper"><span class=
-"publication-link"><a itemprop="mainEntityOfPage" href=
-"https://ieeexplore.ieee.org/document/9002840">Main
+"publication-link"><a class="open-modal" data-target=
+"#open-modal-evolving-structures-in-complex-systems">Cite</a></span><span class="publication-link"><a itemprop="mainEntityOfPage"
+href="https://ieeexplore.ieee.org/document/9002840">Main
 URL</a></span><span class="publication-link"><a itemprop=
 "mainEntityOfPage" href="https://arxiv.org/abs/1911.01086">Paper on
 arXiv</a></span><span class="publication-link"><a itemprop=
@@ -177,7 +178,23 @@ href=
 "https://docs.google.com/presentation/d/1KmJvyKHKAeZvPPUGPVRdSEgyD8vUOoKhJtLZUCVxf7A/edit?usp=sharing">Slides</a></span></div>
 </div>
 </div>
-<hr></main>
+<hr>
+<div id="#open-modal-evolving-structures-in-complex-systems" class=
+"modal-window">
+<div><a id="#close-modal-evolving-structures-in-complex-systems"
+title="Close" class="modal-close">Close</a>
+<h3>Cite <i>Evolving Structures in Complex Systems</i></h3>
+<pre><code>@inproceedings{9002840,
+ author={H. {Cisneros} and J. {Sivic} and T. {Mikolov}},
+ booktitle={2019 IEEE Symposium Series on Computational Intelligence (SSCI)},
+ title={Evolving Structures in Complex Systems},
+ year={2019},
+ volume={},
+ number={},
+ pages={230-237},
+ }</code></pre></div>
+</div>
+</main>
 <footer class="footer">
 <ul class="footer-links">
 <li><a href="/blog/index.xml" type="application/rss+xml" target=
@@ -187,5 +204,38 @@ href=
 </ul>
 </footer>
 </div>
+<script>
+ 
+ function toggleModal(win) {
+     return ((event) => {
+         if (event.target.id.startsWith("#open-modal") || 
+             event.target.id.startsWith("#close-modal") || 
+             event.target.className == "open-modal") {
+             event.stopPropagation();
+             win.classList.toggle("closed")
+         }
+     });
+ }
+ var list = document.getElementsByClassName("open-modal");
+ for (let item of list) {
+     var id = item.attributes["data-target"].textContent;
+                 var modWin = document.getElementById(id);
+     var closeButton = document.getElementById(id.replace("open", "close"));
+
+           item.addEventListener('click', toggleModal(modWin));
+     closeButton.addEventListener('click', toggleModal(modWin));
+     modWin.addEventListener('click', toggleModal(modWin));
+ }
+</script>
+<script>
+
+btn.addEventListener("click", function() {
+    if (prefersDarkScheme.matches) {
+    document.body.classList.toggle("light-theme");
+    } else {
+    document.body.classList.toggle("dark-theme");
+    }
+});
+</script>
 </body>
 </html>

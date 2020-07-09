@@ -1,6 +1,7 @@
 d3.json("/js/graph.json").then(function(data) {
     height = 1000;
     width = 1600;
+    scale = 1.;
     radius = d => {
         return 8 + .6 * d3.selectAll("line")
             .filter((l, idx) =>
@@ -152,4 +153,25 @@ d3.json("/js/graph.json").then(function(data) {
     });
 
     sort_list_of_items();
+
+//     parent = d3.select("#main-graph");
+//     var zoom = d3.zoom()
+//         .scaleExtent([0.5, 8])
+//         .on("zoom", zoomed);
+
+//     parent.call(zoom);
+
+//     function zoomed() {
+//         node.attr("transform", d3.event.transform);
+//         link.attr("transform", d3.event.transform);
+//         label_background.attr("transform", d3.event.transform);
+//         label_text.attr("transform", d3.event.transform);
+//         scale = (d3.event.transform.k)? d3.event.transform.k: 1.;
+//     }
+
+//     function reset() {
+// 	      parent.transition()
+//             .duration(750)
+//             .call(zoom.transform, d3.zoomIdentity);
+//     }
 });
