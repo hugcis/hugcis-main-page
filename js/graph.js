@@ -1,14 +1,23 @@
 d3.json("/js/graph.json").then(function(data) {
-    height = 1000;
-    width = 1600;
+    height = 1200;
+    width = 1800;
     scale = 1.;
     radius = d => {
-        return 8 + .6 * d3.selectAll("line")
-            .filter((l, idx) =>
-                    l.source.index == d.index || l.target.index == d.index)
-            .data().length;
+        return 7 + 25 * Math.pow(d.centrality, 4/5);
     };
     color = "#ffffff";
+
+    num_colors = Math.max(...data.nodes.map(d => d.communityLabel)) + 1;
+    nodeColors = [];
+    for (i = 0; i < 360; i += (360 - 20) / num_colors) {
+        hue = i;
+        saturation = 90 + Math.random() * 10;
+        lightness = 40 + Math.random() * 10;
+        nodeColors.push(`hsl(${hue},${saturation}%,${lightness}%)`);
+    }
+    nodeColor = d => {
+        return nodeColors[d.communityLabel];
+    };
 
     drag = simulation => {
 
@@ -54,7 +63,7 @@ d3.json("/js/graph.json").then(function(data) {
 
     handleMouseOut = (d, i, g) => {
         nde = d3.select(g[i]);
-        nde.attr("fill", "#000")
+        nde.attr("fill", nodeColor)
             .attr("r", nde.attr("r") / 1.3);
 
         d3.selectAll("text")
@@ -99,8 +108,8 @@ d3.json("/js/graph.json").then(function(data) {
           .append("circle")
           .attr("id", d => d.id)
           .attr("r", radius)
-          .attr("fill", "#000")
-          .attr("stroke", "#fff")
+          .attr("fill", nodeColor)
+          .attr("stroke", "#000")
           .attr("stroke-width", 1.3)
           .on("mouseover", handleMouseOver)
           .on("mouseout", handleMouseOut)
@@ -115,7 +124,7 @@ d3.json("/js/graph.json").then(function(data) {
           .join("g");
 
     const label_background = label.append("text")
-          .style("font-size", "18px")
+          .style("font-size", "25px")
           .text(function (d) { return "  "+ d.label.replace(/"/g, '') + "  "; })
           .attr("dy", -25)
           .attr("id", d => d.id)
@@ -127,7 +136,7 @@ d3.json("/js/graph.json").then(function(data) {
 
     const label_text = label.append("text")
           .style("fill", "#222")
-          .style("font-size", "18px")
+          .style("font-size", "25px")
           .text(function (d) { return "  "+ d.label.replace(/"/g, '') + "  "; })
           .attr("dy", -25)
           .attr("id", d => d.id)
@@ -152,26 +161,5 @@ d3.json("/js/graph.json").then(function(data) {
             .attr("y", d => d.y);
     });
 
-    sort_list_of_items();
-
-//     parent = d3.select("#main-graph");
-//     var zoom = d3.zoom()
-//         .scaleExtent([0.5, 8])
-//         .on("zoom", zoomed);
-
-//     parent.call(zoom);
-
-//     function zoomed() {
-//         node.attr("transform", d3.event.transform);
-//         link.attr("transform", d3.event.transform);
-//         label_background.attr("transform", d3.event.transform);
-//         label_text.attr("transform", d3.event.transform);
-//         scale = (d3.event.transform.k)? d3.event.transform.k: 1.;
-//     }
-
-//     function reset() {
-// 	      parent.transition()
-//             .duration(750)
-//             .call(zoom.transform, d3.zoomIdentity);
-//     }
 });
+sort_items();

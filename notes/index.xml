@@ -6,106 +6,105 @@
     <description>Recent content in Notes on Hugo Cisneros - Personal page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 09 Jul 2020 14:31:00 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2020 18:45:00 +0200</lastBuildDate>
     
 	<atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Reinforcement learning</title>
-      <link>https://hugocisneros.com/notes/reinforcement_learning/</link>
-      <pubDate>Thu, 09 Jul 2020 14:31:00 +0200</pubDate>
+      <title>Notes on: Efficient Neural Architecture Search via Parameter Sharing by Pham, H., Guan, M. Y., Zoph, B., Le, Q. V., &amp; Dean, J. (2018)</title>
+      <link>https://hugocisneros.com/notes/phamefficientneuralarchitecture2018/</link>
+      <pubDate>Mon, 13 Jul 2020 18:45:00 +0200</pubDate>
       
-      <guid>https://hugocisneros.com/notes/reinforcement_learning/</guid>
-      <description> tags Machine learning  Backlinks  Notes on: Khalifa, A., Bontrager, P., Earle, S., &amp;amp; Togelius, J. (2020): PCGRL: Procedural Content Generation via Reinforcement Learning Notes on: Wang, R., Lehman, J., Clune, J., &amp;amp; Stanley, K. O. (2019): POET: open-ended coevolution of environments and their optimized solutions Adversarial examples Neural architecture search  </description>
+      <guid>https://hugocisneros.com/notes/phamefficientneuralarchitecture2018/</guid>
+      <description>source (Pham et al., 2018)  Summary Like other papers, the controller is a RNN that generates each part of the architecture in sequence. The main contribution of this paper is to introduce parameter sharing in child models. For, this, it represents all possible architectures in a single DAG of operations and share weights between same operations. They explain how to design a RNN cell with their model, a convolutional network (and convolutional cell to build a CNN) and how to train.</description>
     </item>
     
     <item>
-      <title>Reservoir computing</title>
-      <link>https://hugocisneros.com/notes/reservoir_computing/</link>
-      <pubDate>Thu, 09 Jul 2020 14:31:00 +0200</pubDate>
+      <title>Notes on: Intrinsically Motivated Discovery of Diverse Patterns in Self-Organizing Systems by Reinke, C., Etcheverry, M., &amp; Oudeyer, P. (2020)</title>
+      <link>https://hugocisneros.com/notes/reinkeintrinsicallymotivateddiscovery2020/</link>
+      <pubDate>Mon, 13 Jul 2020 18:45:00 +0200</pubDate>
       
-      <guid>https://hugocisneros.com/notes/reservoir_computing/</guid>
-      <description>tags Recurrent neural networks, Machine learning, Unconventional computing  Echo-state networks Reservoir computing with cellular automata Reservoir computing can use Cellular automata as the reservoir. (Yilmaz, 2014), (Mor&#39;an et al., 2018), (Babson et al., 2019)
-Bibliography Yilmaz, O., Reservoir Computing using Cellular Automata, arXiv:1410.0162 [cs], (), (2014).  ↩
-Mor&#39;an, Alejandro, Frasser, C. F., &amp;amp; Rossell&#39;o, Josep L., Reservoir Computing Hardware with Cellular Automata, arXiv:1806.04932 [nlin], (), (2018).  ↩</description>
+      <guid>https://hugocisneros.com/notes/reinkeintrinsicallymotivateddiscovery2020/</guid>
+      <description>source (Reinke et al., 2020)  Summary The authors address the problem of automated discovery of diverse self-organized patterns in high-dimensional and complex game-of-life types of dynamical systems. They conduct experiments on Lenia.
+Their goal is to use an IMGEP algorithm to represent interesting patterns and discover them.
+Problem setting Goal: With a budget of \(N\) experiments, maximize diversity of observations.
+Parameter space \(\Theta\) of available parameters \(\theta\). An observation space \(O\) of observations.</description>
     </item>
     
     <item>
-      <title>Rice’s theorem</title>
-      <link>https://hugocisneros.com/notes/rice_s_theorem/</link>
-      <pubDate>Thu, 09 Jul 2020 14:31:00 +0200</pubDate>
+      <title>Notes on: Seeking open-ended evolution in Swarm Chemistry by Sayama, H. (2011)</title>
+      <link>https://hugocisneros.com/notes/sayamaseekingopenendedevolution2011/</link>
+      <pubDate>Mon, 13 Jul 2020 18:45:00 +0200</pubDate>
       
-      <guid>https://hugocisneros.com/notes/rice_s_theorem/</guid>
-      <description>Backlinks  Surprisingly Turing-Complete  </description>
+      <guid>https://hugocisneros.com/notes/sayamaseekingopenendedevolution2011/</guid>
+      <description>tags Open-ended Evolution source (Sayama, 2011)  TODO Summary TODO Comments Bibliography Sayama, H., Seeking open-ended evolution in Swarm Chemistry, In , 2011 {{IEEE Symposium}} on {{Artificial Life}} ({{ALIFE}}) (pp. 186–193) (2011). Paris, France: IEEE. ↩</description>
     </item>
     
     <item>
-      <title>RNA-world</title>
-      <link>https://hugocisneros.com/notes/rna_world/</link>
-      <pubDate>Thu, 09 Jul 2020 14:31:00 +0200</pubDate>
+      <title>Notes on: A Computer Scientist&#39;s View of Life, the Universe, and Everything by Schmidhuber, J. (1999)</title>
+      <link>https://hugocisneros.com/notes/schmidhubercomputerscientistview1999/</link>
+      <pubDate>Mon, 13 Jul 2020 18:44:00 +0200</pubDate>
       
-      <guid>https://hugocisneros.com/notes/rna_world/</guid>
-      <description> tags Biological life  Backlinks  The End of the RNA World Is Near, Biochemists Argue  </description>
+      <guid>https://hugocisneros.com/notes/schmidhubercomputerscientistview1999/</guid>
+      <description>tags Zuse&amp;rsquo;s thesis source (Schmidhuber, 1999)  Summary Comments Bibliography Schmidhuber, J., A Computer Scientist&amp;rsquo;s View of Life, the Universe, and Everything, arXiv:quant-ph/9904050, (), (1999).  ↩</description>
     </item>
     
     <item>
-      <title>Rust</title>
-      <link>https://hugocisneros.com/notes/rust/</link>
-      <pubDate>Thu, 09 Jul 2020 14:31:00 +0200</pubDate>
+      <title>Notes on: Evolving Neural Networks through Augmenting Topologies by Stanley, K. O., &amp; Miikkulainen, R. (2002)</title>
+      <link>https://hugocisneros.com/notes/stanleyevolvingneuralnetworks2002/</link>
+      <pubDate>Mon, 13 Jul 2020 18:44:00 +0200</pubDate>
       
-      <guid>https://hugocisneros.com/notes/rust/</guid>
-      <description> tags Programming languages, Coding  Backlinks  Finite state machines Programming languages  </description>
+      <guid>https://hugocisneros.com/notes/stanleyevolvingneuralnetworks2002/</guid>
+      <description>tags Neural networks, Genetic algorithms, NAS source (Stanley &amp;amp; Miikkulainen, 2002)  Summary This is the main paper introducing the NEAT system. This system is a direct-encoding based way of dealing with neuroevolution (evolution of ANNs). The encoding is based on a genome sequentially specifying each of the connections between modules of the network. Several tickes are used to make it possible applying GA methods to evolve networks:
+ Historical tracking of genes to be able to align architectures and mate them.</description>
     </item>
     
     <item>
-      <title>Schmidhuber on Consciousness</title>
-      <link>https://hugocisneros.com/notes/schmidhuber_on_consciousness/</link>
-      <pubDate>Thu, 09 Jul 2020 14:30:00 +0200</pubDate>
+      <title>Notes on: The Architecture of Complexity by Simon, H. A. (1962)</title>
+      <link>https://hugocisneros.com/notes/simonarchitecturecomplexity1962/</link>
+      <pubDate>Mon, 13 Jul 2020 18:44:00 +0200</pubDate>
       
-      <guid>https://hugocisneros.com/notes/schmidhuber_on_consciousness/</guid>
-      <description>link Reddit comment  Karl Popper famously said: “All life is problem solving.” No theory of consciousness is necessary to define the objectives of a general problem solver. From an AGI point of view, consciousness is at best a by-product of a general problem solving procedure.
-I must admit that I am not a big fan of Tononi&amp;rsquo;s theory. The following may represent a simpler and more general view of consciousness.</description>
+      <guid>https://hugocisneros.com/notes/simonarchitecturecomplexity1962/</guid>
+      <description>tags Complexity, Complex Systems source (Simon, 1962)  Complex systems  In such systems, the whole is more than the sum of the parts, not in an ultimate, metaphysical sense, but in the important pragmatic sense that, given the properties of the parts and the laws of their interaction, it is not a trivial matter to infer the properties of the whole. In the face of complexity, an in-principle reductionist may be at the same time a pragmatic holist.</description>
     </item>
     
     <item>
-      <title>Search</title>
-      <link>https://hugocisneros.com/notes/search/</link>
-      <pubDate>Thu, 09 Jul 2020 14:30:00 +0200</pubDate>
+      <title>Notes on: Legendre Memory Units: Continuous-Time Representation in Recurrent Neural Networks by Voelker, A., Kajić, I., &amp; Eliasmith, C. (2019)</title>
+      <link>https://hugocisneros.com/notes/voelkerlegendrememoryunits2019/</link>
+      <pubDate>Mon, 13 Jul 2020 18:42:00 +0200</pubDate>
       
-      <guid>https://hugocisneros.com/notes/search/</guid>
-      <description>Backlinks  Genetic algorithms Neural architecture search  </description>
+      <guid>https://hugocisneros.com/notes/voelkerlegendrememoryunits2019/</guid>
+      <description>tags Recurrent neural networks source (Voelker et al., 2019)  Summary This paper introduces the LMU recurrent cell. This cell is based on a similar-ish idea from LSTM to maintain a memory hidden state. The main idea of the paper is to make this memory satisfy a set of first order ordinary differential equations. \begin{equation} θ \dot{m}(t) = Am(t) + Bu(t) \end{equation} This system has a solution which represents sliding windows of \(u\) via Legendre polynomials.</description>
     </item>
     
     <item>
-      <title>Self-organization</title>
-      <link>https://hugocisneros.com/notes/self_organization/</link>
-      <pubDate>Thu, 09 Jul 2020 14:30:00 +0200</pubDate>
+      <title>Notes on: Modeling systems with internal state using evolino by Wierstra, D., Gomez, F. J., &amp; Schmidhuber, J. (2005)</title>
+      <link>https://hugocisneros.com/notes/wierstramodelingsystemsinternal2005/</link>
+      <pubDate>Mon, 13 Jul 2020 18:41:00 +0200</pubDate>
       
-      <guid>https://hugocisneros.com/notes/self_organization/</guid>
-      <description>Self-organization is an emergent phenomenon
-Backlinks  Complexity  </description>
+      <guid>https://hugocisneros.com/notes/wierstramodelingsystemsinternal2005/</guid>
+      <description>tags Genetic algorithms, Recurrent neural networks source (Wierstra et al., 2005)  TODO Summary TODO Comments Bibliography Wierstra, D., Gomez, F. J., &amp;amp; Schmidhuber, J&amp;quot;urgen, Modeling systems with internal state using evolino, In , Proceedings of the 2005 Conference on {{Genetic}} and Evolutionary Computation - {{GECCO}} &amp;lsquo;05 (pp. 1795) (2005). {Washington DC, USA}: {ACM Press}. ↩</description>
     </item>
     
     <item>
-      <title>SIR model</title>
-      <link>https://hugocisneros.com/notes/sir_model/</link>
-      <pubDate>Thu, 09 Jul 2020 14:29:00 +0200</pubDate>
+      <title>Notes on: POET: open-ended coevolution of environments and their optimized solutions by Wang, R., Lehman, J., Clune, J., &amp; Stanley, K. O. (2019)</title>
+      <link>https://hugocisneros.com/notes/wangpoetopenendedcoevolution2019/</link>
+      <pubDate>Mon, 13 Jul 2020 18:41:00 +0200</pubDate>
       
-      <guid>https://hugocisneros.com/notes/sir_model/</guid>
-      <description>tags Applied maths resources Wikipedia  Simplest form The SIR model is defined for a population \(N\), \(S\) the number of susceptible persons, \(I\) the number of infected people and \(R\) the number of poeple who have recovered. The following system of differential equations governs the evolution of those three variables:
-\[ \frac{dS}{dt} = - \frac{\beta I S}{N} \] \[ \frac{dI}{dt} = \frac{\beta I S }{N}- \gamma I \] \[ \frac{dR}{dt} = \gamma I \]</description>
+      <guid>https://hugocisneros.com/notes/wangpoetopenendedcoevolution2019/</guid>
+      <description>tags Open-ended Evolution, Reinforcement learning source (Wang et al., 2019)  Summary This paper is about introducing the POET architecture. The core idea behind this framework is to build a system that can make agents learn complex behavior through joint evolution of agents and the environment. The better the agent, the more complex environment we can give it.
+There are 3 main components to the algorithm: an evolutionary strategy (ES) for the environment itself, resembling genetic algorithm, another ES for the agents (although these agents might also be trained with RL), and a transfer mechanism whereby agents trained in a particular environment can be trained on another one.</description>
     </item>
     
     <item>
-      <title>Statistical complexity</title>
-      <link>https://hugocisneros.com/notes/statistical_complexity/</link>
-      <pubDate>Thu, 09 Jul 2020 14:29:00 +0200</pubDate>
+      <title>Online privacy</title>
+      <link>https://hugocisneros.com/notes/online_privacy/</link>
+      <pubDate>Mon, 13 Jul 2020 18:40:00 +0200</pubDate>
       
-      <guid>https://hugocisneros.com/notes/statistical_complexity/</guid>
-      <description>tags Complexity metrics papers (Crutchfield &amp;amp; Young, 1989)  One interpretation of the statistical complexity is that it is the minimum amount of historical information required to make optimal forecasts of bits in \(x\) at the error rate \(h_\mu\).
-For periodic sequences, \(C_\mu(x) = 0\) and for ideal random sequences \(C_\mu(x) = 0\) too.
-Several researchers have tried to capture the properties of statistical complexity with practical alternatives. The resulting complexity metrics include:</description>
+      <guid>https://hugocisneros.com/notes/online_privacy/</guid>
+      <description>IP Addresses In (Mishra et al., 2020), the authors analyze a set of users&amp;rsquo; internet traffic for more than 100 days. They observed a little more than 11% of the 34,488 IP addresses they collected were present for more than a month. Many of them were reused throughout the whole experience, making long-term tracking of users possible.
+The study also shows that 93% of users had a unique fixed set of IP addresses during the whole experiment, making it easy to track them between home, work, etc.</description>
     </item>
     
   </channel>

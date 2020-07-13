@@ -21,7 +21,7 @@
 <meta name="twitter:site" content="@cisne_hug">
 <meta name="twitter:creator" content="@cisne_hug">
 <link rel="stylesheet" href=
-"https://hugocisneros.com/css/main.min.09ba75009ac37877191541f27444e8270145acc4b2d3d9426f22f0fb43420b6e.css"
+"https://hugocisneros.com/css/main.min.441eebc8829fa32ca1cc41ed23bc40ffdc668c3678d374d81e3bfc8123466c7c.css"
 media="all" type="text/css">
 <link rel="apple-touch-icon" sizes="180x180" href=
 "/apple-touch-icon.png">
@@ -78,10 +78,10 @@ a parameter \(\theta \in \mathbb{R}^d\) and write \(h: \mathcal{X}
 <p>\[ \hat{y} = f(x) = h(x, \theta) \]</p>
 <h2 id="objective">Objective</h2>
 <p>The goal is to find the above mapping such as to minimize an
-objective. For example, the objective can be the quadratic loss
-below: \[ R(f) = \mathbb{E}\left\{ \frac{1}{2}(y_{new} -
-f(x_{new}))^2 \right\}, \quad (y_{new}, x_{new}) \sim \mathbb{P}
-\]</p>
+objective. For example, the objective can be the expectation
+quadratic loss below: \[ R(f) = \mathbb{E}\left\{
+\frac{1}{2}(y_{new} - f(x_{new}))^2 \right\}, \quad (y_{new},
+x_{new}) \sim \mathbb{P} \]</p>
 <p>In general we write</p>
 <p>\[ R(f) = \mathbb{E}_\mathbb{P} \left[ \ell(y, f(x))
 \right]\]</p>
@@ -113,8 +113,9 @@ generalization guarantees.</p>
 <p>\[ R(f) = \mathbb{E}_\mathbb{P} \left[ \ell(y, f(x))
 \right]\]</p>
 <h3 id="usual-losses">Usual losses</h3>
-<p>Several losses are usually used in the two most common
-supervised learning settings:</p>
+<p>In general, the loss as the form \(\ell: \mathcal{Y} \times
+\mathcal{Y} \rightarrow \mathbb{R}\) Several losses are usually
+used in the two most common supervised learning settings:</p>
 <h4 id="regression">Regression</h4>
 <p>The quadratic loss is most often used: \[ \frac{1}{2} (y -
 f(x))^2 \]</p>
@@ -128,6 +129,12 @@ and we usually take \(\hat{y} = \text{sign}(f(x))\)</p>
 <li>Square loss \(\frac{1}{2}(1- y \cdot f(x))^2\)</li>
 <li>Logistic loss \(\log ( 1 + \exp (- y \cdot f(x)))\)</li>
 </ul>
+<h2 id="learning">Learning</h2>
+<p>A learning algorithm in the supervised setting can be reduced
+down to a mapping between the initial set of input/output pairs and
+a prediction function:</p>
+<p>\[ L: (\mathcal{X} \times \mathcal{Y})^n \rightarrow (f:
+\mathcal{X} \rightarrow \mathcal{Y}) \]</p>
 <h2 id="backlinks">Backlinks</h2>
 <ul>
 <li><a href="/notes/mean_field_theory_of_neural_networks/">Mean
@@ -137,7 +144,7 @@ field theory of neural networks (talk)</a></li>
 <div class="note-footer">Last changed <a class="u-url" href=
 "https://hugocisneros.com/notes/supervised_learning/"><time itemprop="datePublished"
 class="dt-published" datetime=
-"2020-07-09T12:31:00+0200">09/07/2020</time></a> | authored by
+"2020-07-09T17:29:00+0200">09/07/2020</time></a> | authored by
 <a href="https://hugocisneros.com/" rel="author" class=
 "p-author h-card" itemprop="author" itemscope itemtype=
 "http://schema.org/Person"><span itemprop="name">Hugo
