@@ -4,12 +4,362 @@
     
     <url>
         <loc>https://hugocisneros.com/</loc>
-        <lastmod>2020-07-13T18:45:00+02:00</lastmod>
+        <lastmod>2020-07-14T19:57:00+02:00</lastmod>
     </url>
     
     <url>
         <loc>https://hugocisneros.com/notes/</loc>
-        <lastmod>2020-07-13T18:45:00+02:00</lastmod>
+        <lastmod>2020-07-14T19:57:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/andersonmoredifferent1972/</loc>
+        <lastmod>2020-07-14T19:57:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/life/</loc>
+        <lastmod>2020-07-14T15:19:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/talk_alife_2020_keynote_michael_levin_robot_cancer/</loc>
+        <lastmod>2020-07-14T14:49:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/algorithmic_probability/</loc>
+        <lastmod>2020-07-14T08:34:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/applied_maths/</loc>
+        <lastmod>2020-07-14T08:34:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/automated_discovery_in_complex_systems/</loc>
+        <lastmod>2020-07-14T08:33:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/backward_rnn/</loc>
+        <lastmod>2020-07-14T08:33:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/berry_s_paradox/</loc>
+        <lastmod>2020-07-14T08:33:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/causal_inference/</loc>
+        <lastmod>2020-07-14T08:33:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/combinatory_logic/</loc>
+        <lastmod>2020-07-14T08:32:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/complexity_of_cellular_automata/</loc>
+        <lastmod>2020-07-14T08:32:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/compression/</loc>
+        <lastmod>2020-07-14T08:31:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/computability_theory/</loc>
+        <lastmod>2020-07-14T08:31:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/computer_security/</loc>
+        <lastmod>2020-07-14T08:31:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/computer_vision/</loc>
+        <lastmod>2020-07-14T08:31:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/conway_s_game_of_life/</loc>
+        <lastmod>2020-07-14T08:30:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/cppn/</loc>
+        <lastmod>2020-07-14T08:30:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/cryptography/</loc>
+        <lastmod>2020-07-14T08:30:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/economics/</loc>
+        <lastmod>2020-07-14T08:30:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/edge_detection/</loc>
+        <lastmod>2020-07-14T08:30:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/effective_measure_complexity/</loc>
+        <lastmod>2020-07-14T08:30:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/elisp/</loc>
+        <lastmod>2020-07-14T08:29:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/emacs/</loc>
+        <lastmod>2020-07-14T08:29:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/entropy/</loc>
+        <lastmod>2020-07-14T08:29:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/evaluating_nlp/</loc>
+        <lastmod>2020-07-14T08:29:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/epsilon_machines/</loc>
+        <lastmod>2020-07-14T08:28:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/gaussian_processes/</loc>
+        <lastmod>2020-07-14T08:28:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/godel_s_theorem/</loc>
+        <lastmod>2020-07-14T08:28:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/halting_problem/</loc>
+        <lastmod>2020-07-14T08:27:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/haskell_curry/</loc>
+        <lastmod>2020-07-14T08:27:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/image_processing/</loc>
+        <lastmod>2020-07-14T08:27:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/information_theory/</loc>
+        <lastmod>2020-07-14T08:27:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/java/</loc>
+        <lastmod>2020-07-14T08:27:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/javascript/</loc>
+        <lastmod>2020-07-14T08:27:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/jevons_paradox/</loc>
+        <lastmod>2020-07-14T08:26:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/john_von_neumann/</loc>
+        <lastmod>2020-07-14T08:26:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/kaya_identity/</loc>
+        <lastmod>2020-07-14T08:24:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/kolmogorov_complexity/</loc>
+        <lastmod>2020-07-14T08:24:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/konrad_zuse/</loc>
+        <lastmod>2020-07-14T08:24:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/lambda_calculus/</loc>
+        <lastmod>2020-07-14T08:23:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/language/</loc>
+        <lastmod>2020-07-14T08:22:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/lempel_ziv_welch_algorithm/</loc>
+        <lastmod>2020-07-14T08:22:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/lenia/</loc>
+        <lastmod>2020-07-14T08:22:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/logic/</loc>
+        <lastmod>2020-07-14T08:22:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/logical_depth/</loc>
+        <lastmod>2020-07-14T08:21:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/machine_learning/</loc>
+        <lastmod>2020-07-14T08:21:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/mathematics/</loc>
+        <lastmod>2020-07-14T08:21:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/mean_field_theory_of_neural_networks/</loc>
+        <lastmod>2020-07-14T08:21:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/minimum_description_length/</loc>
+        <lastmod>2020-07-14T08:20:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/morphogenesis/</loc>
+        <lastmod>2020-07-14T08:20:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/neural_network_training/</loc>
+        <lastmod>2020-07-14T08:20:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/beckhamadversarialmixupresynthesis2019/</loc>
+        <lastmod>2020-07-14T08:19:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/wangpoetopenendedcoevolution2019/</loc>
+        <lastmod>2020-07-14T08:05:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/katharopoulostransformersarernns2020/</loc>
+        <lastmod>2020-07-14T08:04:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/zophlearningtransferablearchitectures2018/</loc>
+        <lastmod>2020-07-14T08:03:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/yenetworkdeconvolution2020/</loc>
+        <lastmod>2020-07-14T08:03:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/khalifapcgrlproceduralcontent2020/</loc>
+        <lastmod>2020-07-14T08:03:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/maziarkamoleculeattentiontransformer2020/</loc>
+        <lastmod>2020-07-14T08:02:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/horowitzspontaneousfinetuningenvironment2017/</loc>
+        <lastmod>2020-07-14T08:02:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/mordvintsevgrowingneuralcellular2020/</loc>
+        <lastmod>2020-07-14T08:01:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/floreanoneuroevolutionarchitectureslearning2008/</loc>
+        <lastmod>2020-07-14T08:01:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/litransitionphenomenacellular1990/</loc>
+        <lastmod>2020-07-14T08:01:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/cluneaigasaigeneratingalgorithms2019/</loc>
+        <lastmod>2020-07-14T08:00:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/kruszewskicombinatorychemistrysimple2020/</loc>
+        <lastmod>2020-07-14T08:00:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/lehredevelopmentalmappingsphenotypic2003/</loc>
+        <lastmod>2020-07-14T08:00:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/millerevolvingselfrepairingselfregulating2004/</loc>
+        <lastmod>2020-07-14T08:00:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/gilpincellularautomataconvolutional2018/</loc>
+        <lastmod>2020-07-14T07:59:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/mcsheacomplexityevolutionwhat1991/</loc>
+        <lastmod>2020-07-14T07:59:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/zophneuralarchitecturesearch2017/</loc>
+        <lastmod>2020-07-14T07:59:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/nehanivevolutionasynchronouscellular2003/</loc>
+        <lastmod>2020-07-14T07:58:00+02:00</lastmod>
     </url>
     
     <url>
@@ -49,11 +399,6 @@
     
     <url>
         <loc>https://hugocisneros.com/notes/wierstramodelingsystemsinternal2005/</loc>
-        <lastmod>2020-07-13T18:41:00+02:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/wangpoetopenendedcoevolution2019/</loc>
         <lastmod>2020-07-13T18:41:00+02:00</lastmod>
     </url>
     
@@ -303,18 +648,18 @@
     </url>
     
     <url>
-        <loc>https://hugocisneros.com/notes/kruszewskicombinatorychemistrysimple2020/</loc>
-        <lastmod>2020-07-07T22:30:00+02:00</lastmod>
-    </url>
-    
-    <url>
         <loc>https://hugocisneros.com/notes/complexity_metrics/</loc>
         <lastmod>2020-07-07T22:29:00+02:00</lastmod>
     </url>
     
     <url>
-        <loc>https://hugocisneros.com/notes/andersonmoredifferent1972/</loc>
-        <lastmod>2020-07-07T10:23:00+02:00</lastmod>
+        <loc>https://hugocisneros.com/notes/artificial_intelligence/</loc>
+        <lastmod>2020-07-06T11:13:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/complex_systems/</loc>
+        <lastmod>2020-07-02T10:23:00+02:00</lastmod>
     </url>
     
     <url>
@@ -328,13 +673,98 @@
     </url>
     
     <url>
+        <loc>https://hugocisneros.com/notes/artificial_life/</loc>
+        <lastmod>2020-07-02T10:22:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/data_representation/</loc>
+        <lastmod>2020-07-02T10:22:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/evolution/</loc>
+        <lastmod>2020-07-02T10:22:00+02:00</lastmod>
+    </url>
+    
+    <url>
         <loc>https://hugocisneros.com/notes/neural_networks/</loc>
         <lastmod>2020-07-02T10:22:00+02:00</lastmod>
     </url>
     
     <url>
+        <loc>https://hugocisneros.com/notes/convolutional_neural_networks/</loc>
+        <lastmod>2020-07-02T10:21:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/downs_thomson_paradox/</loc>
+        <lastmod>2020-07-02T10:21:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/economic_liberalism/</loc>
+        <lastmod>2020-07-02T10:21:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/halting_probability/</loc>
+        <lastmod>2020-07-02T10:21:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/neural_architecture_search/</loc>
+        <lastmod>2020-07-02T10:21:00+02:00</lastmod>
+    </url>
+    
+    <url>
         <loc>https://hugocisneros.com/notes/why_sex_biologists_find_new_explanations/</loc>
         <lastmod>2020-07-02T10:21:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/algorithmic_information_theory/</loc>
+        <lastmod>2020-07-02T10:20:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/boltzmann_brain/</loc>
+        <lastmod>2020-07-02T10:20:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/chaos_computing/</loc>
+        <lastmod>2020-07-02T10:20:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/climate/</loc>
+        <lastmod>2020-07-02T10:20:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/combinatorics/</loc>
+        <lastmod>2020-07-02T10:20:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/genetic_algorithm/</loc>
+        <lastmod>2020-07-02T10:20:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/john_conway/</loc>
+        <lastmod>2020-07-02T10:20:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/marvin_minsky/</loc>
+        <lastmod>2020-07-02T10:20:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/neural_network_pruning/</loc>
+        <lastmod>2020-07-02T10:20:00+02:00</lastmod>
     </url>
     
     <url>
@@ -368,6 +798,41 @@
     </url>
     
     <url>
+        <loc>https://hugocisneros.com/notes/kullback_leibler_divergence/</loc>
+        <lastmod>2020-07-02T10:17:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/computing_in_cellular_automata/</loc>
+        <lastmod>2020-07-02T09:48:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/3_sat/</loc>
+        <lastmod>2020-07-02T09:46:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/hyperbolic_geometry/</loc>
+        <lastmod>2020-07-02T09:46:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/emergence/</loc>
+        <lastmod>2020-07-02T09:13:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/chaos/</loc>
+        <lastmod>2020-07-02T08:45:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/complexity/</loc>
+        <lastmod>2020-07-02T08:39:00+02:00</lastmod>
+    </url>
+    
+    <url>
         <loc>https://hugocisneros.com/notes/abelian_sandpile_model/</loc>
         <lastmod>2020-07-02T00:00:00+00:00</lastmod>
     </url>
@@ -393,11 +858,6 @@
     </url>
     
     <url>
-        <loc>https://hugocisneros.com/notes/katharopoulostransformersarernns2020/</loc>
-        <lastmod>2020-07-01T09:31:00+02:00</lastmod>
-    </url>
-    
-    <url>
         <loc>https://hugocisneros.com/notes/kernel_methods/</loc>
         <lastmod>2020-07-01T08:14:00+02:00</lastmod>
     </url>
@@ -410,11 +870,6 @@
     <url>
         <loc>https://hugocisneros.com/notes/neat/</loc>
         <lastmod>2020-06-30T13:12:00+02:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/horowitzspontaneousfinetuningenvironment2017/</loc>
-        <lastmod>2020-06-29T18:39:00+02:00</lastmod>
     </url>
     
     <url>
@@ -463,11 +918,6 @@
     </url>
     
     <url>
-        <loc>https://hugocisneros.com/notes/mordvintsevgrowingneuralcellular2020/</loc>
-        <lastmod>2020-06-26T11:28:00+02:00</lastmod>
-    </url>
-    
-    <url>
         <loc>https://hugocisneros.com/notes/philosophy/</loc>
         <lastmod>2020-06-26T11:28:00+02:00</lastmod>
     </url>
@@ -478,22 +928,7 @@
     </url>
     
     <url>
-        <loc>https://hugocisneros.com/notes/zophneuralarchitecturesearch2017/</loc>
-        <lastmod>2020-06-26T11:14:00+02:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/zophlearningtransferablearchitectures2018/</loc>
-        <lastmod>2020-06-26T11:14:00+02:00</lastmod>
-    </url>
-    
-    <url>
         <loc>https://hugocisneros.com/notes/cellular_automata_as_cnns/</loc>
-        <lastmod>2020-06-26T11:13:00+02:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/yenetworkdeconvolution2020/</loc>
         <lastmod>2020-06-26T11:13:00+02:00</lastmod>
     </url>
     
@@ -562,347 +997,11 @@
     </url>
     
     <url>
-        <loc>https://hugocisneros.com/notes/algorithmic_information_theory/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/algorithmic_probability/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/applied_maths/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/artificial_intelligence/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/artificial_life/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/automated_discovery_in_complex_systems/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/backward_rnn/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/berry_s_paradox/</loc>
-    </url>
-    
-    <url>
         <loc>https://hugocisneros.com/tags/blog/</loc>
     </url>
     
     <url>
-        <loc>https://hugocisneros.com/notes/boltzmann_brain/</loc>
-    </url>
-    
-    <url>
         <loc>https://hugocisneros.com/bookmarks/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/causal_inference/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/chaos/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/chaos_computing/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/climate/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/combinatorics/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/combinatory_logic/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/complex_systems/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/complexity/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/complexity_of_cellular_automata/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/compression/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/computability_theory/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/computer_security/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/computer_vision/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/computing_in_cellular_automata/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/convolutional_neural_networks/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/conway_s_game_of_life/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/cppn/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/cryptography/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/data_representation/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/downs_thomson_paradox/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/economic_liberalism/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/economics/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/edge_detection/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/effective_measure_complexity/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/elisp/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/emacs/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/emergence/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/entropy/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/epsilon_machines/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/evaluating_nlp/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/evolution/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/gaussian_processes/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/genetic_algorithm/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/godel_s_theorem/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/halting_probability/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/halting_problem/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/haskell_curry/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/image_processing/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/information_theory/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/java/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/javascript/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/jevons_paradox/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/john_conway/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/john_von_neumann/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/kaya_identity/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/kolmogorov_complexity/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/konrad_zuse/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/kullback_leibler_divergence/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/lambda_calculus/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/language/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/lempel_ziv_welch_algorithm/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/lenia/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/life/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/logic/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/logical_depth/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/machine_learning/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/marvin_minsky/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/mathematics/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/mean_field_theory_of_neural_networks/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/minimum_description_length/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/morphogenesis/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/neural_architecture_search/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/neural_network_pruning/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/neural_network_training/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/beckhamadversarialmixupresynthesis2019/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/cluneaigasaigeneratingalgorithms2019/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/floreanoneuroevolutionarchitectureslearning2008/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/gilpincellularautomataconvolutional2018/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/khalifapcgrlproceduralcontent2020/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/lehredevelopmentalmappingsphenotypic2003/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/litransitionphenomenacellular1990/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/maziarkamoleculeattentiontransformer2020/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/mcsheacomplexityevolutionwhat1991/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/millerevolvingselfrepairingselfregulating2004/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/nehanivevolutionasynchronouscellular2003/</loc>
     </url>
     
     <url>

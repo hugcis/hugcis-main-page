@@ -27,7 +27,8 @@ function sort_by_rad(a, b) {
 }
 
 function sort_by_name(a, b) {
-    return a.children[0].title.localeCompare(b.children[0].title);
+    return a.children[0].title.replace("Notes on: ", "")
+        .localeCompare(b.children[0].title.replace("Notes on: ", ""));
 }
 
 function sort_by_date(a, b) {
