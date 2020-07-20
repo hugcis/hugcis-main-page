@@ -160,6 +160,5 @@ d3.json("/js/graph.json").then(function(data) {
         label_background.attr("x", d => d.x)
             .attr("y", d => d.y);
     });
-
+    sort_items();
 });
-sort_items();

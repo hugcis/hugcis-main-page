@@ -23,7 +23,7 @@ Cornelia, … (2020) - Hugo Cisneros - Personal page</title>
 <meta name="twitter:site" content="@cisne_hug">
 <meta name="twitter:creator" content="@cisne_hug">
 <link rel="stylesheet" href=
-"https://hugocisneros.com/css/main.min.82e5f78aa8a24f525631eabc1cdf9b188c0f053fc8e44520ad2e8976155f02ce.css"
+"https://hugocisneros.com/css/main.min.8324355ba84ac36271760d7d82120b80ec389403d3ac9abe3abcd0e4598a6131.css"
 media="all" type="text/css">
 <link rel="apple-touch-icon" sizes="180x180" href=
 "/apple-touch-icon.png">
@@ -78,15 +78,16 @@ neural networks</a>, <a href=
 advertised as a way to remove pixel-wise and channel-wise
 correlation in deep neural networks.</p>
 <p>The authors base their new operator on the optimal configuration
-for \(L_2\) linear regression, where gradient descent converges in
-one single step if and only if:</p>
+for \(L_2\) linear regression, where <a href=
+"/notes/gradient_descent/">gradient descent</a> converges in one
+single step if and only if:</p>
 <p>\[ \frac{1}{N}X^t X = I \] where \(X\) is the feature matrix and
 \(N\) the number of samples.</p>
 <p>This means that input features should be normalized and
-uncorrelated for gradient descent to converge the fastest. This can
-be achieved, either by correcting the gradient with the Hessian
-matrix, or manipulating input features so as to normalize them and
-remove correlations.</p>
+uncorrelated for <a href="/notes/gradient_descent/">gradient
+descent</a> to converge the fastest. This can be achieved, either
+by correcting the gradient with the Hessian matrix, or manipulating
+input features so as to normalize them and remove correlations.</p>
 <p>An algorithm to construct this deconvolution operator is
 introduced. \(D \approx (Cov + \epsilon \cdot I) ^{-\frac{1}{2}}\),
 where \(Cov = \frac{1}{N}(X-\mu)^t (X-\mu)\).</p>
@@ -124,7 +125,7 @@ International {{Conference}} on {{Learning Representations} (pp.
 <div class="note-footer">Last changed <a class="u-url" href=
 "https://hugocisneros.com/notes/yenetworkdeconvolution2020/"><time itemprop="datePublished"
 class="dt-published" datetime=
-"2020-07-14T08:03:00+0200">14/07/2020</time></a> | authored by
+"2020-07-19T21:22:00+0200">19/07/2020</time></a> | authored by
 <a href="https://hugocisneros.com/" rel="author" class=
 "p-author h-card" itemprop="author" itemscope itemtype=
 "http://schema.org/Person"><span itemprop="name">Hugo
