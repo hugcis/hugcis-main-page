@@ -6,15 +6,44 @@
     <description>Recent content in Notes on Hugo Cisneros - Personal page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Jul 2020 14:25:00 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 20 Jul 2020 21:35:00 +0200</lastBuildDate>
     
 	<atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Autopoiesis</title>
+      <link>https://hugocisneros.com/notes/autopoiesis/</link>
+      <pubDate>Mon, 20 Jul 2020 21:35:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/autopoiesis/</guid>
+      <description> tags Life  </description>
+    </item>
+    
+    <item>
+      <title>Artificial intelligence test</title>
+      <link>https://hugocisneros.com/notes/artificial_intelligence_test/</link>
+      <pubDate>Mon, 20 Jul 2020 16:06:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/artificial_intelligence_test/</guid>
+      <description> tags Artificial Intelligence  Backlinks  Abstraction and Reasoning Corpus Evaluating NLP Bongard problems  </description>
+    </item>
+    
+    <item>
+      <title>Artificial life</title>
+      <link>https://hugocisneros.com/notes/artificial_life/</link>
+      <pubDate>Mon, 20 Jul 2020 16:03:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/artificial_life/</guid>
+      <description>Artificial life could be thought of as attempts at re-creating biological Life or other types of life. It uses different tools such as biology, physics, chemistry, computer science, etc.
+Creating artificial life seems like a possible way to create AI, since most living systems on Earth seem to exhibit some form of robust intelligent behavior.
+Backlinks  Evolution Open-ended Evolution Notes on: Combinatory Chemistry: Towards a Simple Model of Emergent Evolution by Kruszewski, G.</description>
+    </item>
+    
+    <item>
       <title>Notes on: The information theory of individuality by Krakauer, D., Bertschinger, N., Olbrich, E., Flack, J. C., &amp; Ay, N. (2020)</title>
       <link>https://hugocisneros.com/notes/krakauerinformationtheoryindividuality2020/</link>
-      <pubDate>Mon, 20 Jul 2020 14:25:00 +0200</pubDate>
+      <pubDate>Mon, 20 Jul 2020 16:00:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/krakauerinformationtheoryindividuality2020/</guid>
       <description>tags Information theory, Life source (Krakauer et al., 2020)  Summary This paper introduces an information theoretic definition of individuality for complex systems.
@@ -202,15 +231,6 @@ Line search Another common way to apply the gradient descent algorithm with non 
     </item>
     
     <item>
-      <title>Artificial intelligence test</title>
-      <link>https://hugocisneros.com/notes/artificial_intelligence_test/</link>
-      <pubDate>Fri, 17 Jul 2020 13:44:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/artificial_intelligence_test/</guid>
-      <description> tags Artificial Intelligence  </description>
-    </item>
-    
-    <item>
       <title>ALife Conference</title>
       <link>https://hugocisneros.com/notes/alife_conference/</link>
       <pubDate>Fri, 17 Jul 2020 10:59:00 +0200</pubDate>
@@ -228,15 +248,6 @@ Line search Another common way to apply the gradient descent algorithm with non 
       <description>tags Emergence, Biological life, ALife 2020  How do organisms store information and are able to pass it down through very profound structural changes (from a caterpillar to a butterfly, when cutting a flatworm in multiple pieces, etc.)?
 Embryogenesis is a reliable self-assembly. It relies on stem cell differentiation but that&amp;rsquo;s not enough: some tumor (Teratoma) are differentiated but don&amp;rsquo;t have the right 3D spatial organisation.
 Where is the large-scale pattern specified?</description>
-    </item>
-    
-    <item>
-      <title>Artificial life</title>
-      <link>https://hugocisneros.com/notes/artificial_life/</link>
-      <pubDate>Fri, 17 Jul 2020 10:58:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/artificial_life/</guid>
-      <description>Backlinks  Evolution Open-ended Evolution Notes on: Combinatory Chemistry: Towards a Simple Model of Emergent Evolution by Kruszewski, G., &amp;amp; Mikolov, T. (2020) Notes on: More Is Different by Anderson, P. W. (1972)  </description>
     </item>
     
     <item>
