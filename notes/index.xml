@@ -6,10 +6,222 @@
     <description>Recent content in Notes on Hugo Cisneros - Personal page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Jul 2020 21:35:00 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 26 Jul 2020 20:10:00 +0200</lastBuildDate>
     
 	<atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Boolean networks</title>
+      <link>https://hugocisneros.com/notes/boolean_networks/</link>
+      <pubDate>Sun, 26 Jul 2020 20:10:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/boolean_networks/</guid>
+      <description>tags Complex Systems  A generalization of Cellular automata Boolean networks could be seen as CA generalization with any topology (not necessarily 1D or 2D). In the standard model, each node of the network is assigned a rule randomly chosen from the \(2^{2^k}\) possible ones with K inputs.
+Like for cellular automata, cells (or nodes) don&amp;rsquo;t have to be in just two states (although the name Boolean no longer holds) and updates can be done either synchronously or asynchronously.</description>
+    </item>
+    
+    <item>
+      <title>NK model</title>
+      <link>https://hugocisneros.com/notes/nk_model/</link>
+      <pubDate>Sun, 26 Jul 2020 19:57:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/nk_model/</guid>
+      <description> tags Complex Systems  </description>
+    </item>
+    
+    <item>
+      <title>Talk: Alife 2020 keynote Luis Zaman - New Frontiers in Alife: What was old is new again</title>
+      <link>https://hugocisneros.com/notes/talk_alife_2020_keynote_luis_zaman_new_frontiers_in_alife_what_was_old_is_new_again/</link>
+      <pubDate>Sun, 26 Jul 2020 19:50:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/talk_alife_2020_keynote_luis_zaman_new_frontiers_in_alife_what_was_old_is_new_again/</guid>
+      <description>tags Artificial life, ALife 2020  This keynote is about this sub-community of ALife which is dedicated to constructing actual artificial systems that can exhibit Open-ended Evolution, and Life-like behavior.
+The first models that tried to construct ALife were probably Von Neumann&amp;rsquo;s self-reproducing CA and Langton&amp;rsquo;s loop. However, their main limitation was they were extremely brittle, which is why evolution did not really work in them.
+Zaman&amp;rsquo;s definition of evolution is</description>
+    </item>
+    
+    <item>
+      <title>Notes on: Evolved Open-Endedness, Not Open-Ended Evolution by Pattee, H. H., &amp; Sayama, H. (2019)</title>
+      <link>https://hugocisneros.com/notes/patteeevolvedopenendednessnot2019/</link>
+      <pubDate>Sun, 26 Jul 2020 19:24:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/patteeevolvedopenendednessnot2019/</guid>
+      <description>source (Pattee &amp;amp; Sayama, 2019)  Summary Evolution need not have been inherently open-ended in nature, because from a simple cell evolving in a complex self-organising environment new mechanisms might have been created by the organisms themself, effectively rendering them &amp;ldquo;more&amp;rdquo; open-ended. Symbolic languages are a striking example of this phenomenon: an open-ended descriptive power where the complexity of the environment is not limiting because language can refer itself recursively to build on its complexity.</description>
+    </item>
+    
+    <item>
+      <title>Open-ended Evolution</title>
+      <link>https://hugocisneros.com/notes/open_ended_evolution/</link>
+      <pubDate>Sun, 26 Jul 2020 19:24:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/open_ended_evolution/</guid>
+      <description>tags Evolution, Complexity, Artificial Intelligence resources Open-endedness: The last grand challenge you’ve never heard of  My idea of Open Ended evolution As part of my research, I have been thinking a lot about open-ended evolution and what this concept means to me. Although it is still early in my research journey, I will go into the process of writing down my thoughts about this very challenging concept in order to have material on which I will be able to reflect later and understand how my beliefs have changed.</description>
+    </item>
+    
+    <item>
+      <title>Co-evolution</title>
+      <link>https://hugocisneros.com/notes/co_evolution/</link>
+      <pubDate>Sun, 26 Jul 2020 19:21:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/co_evolution/</guid>
+      <description> tags Evolution  Backlinks  Talk: Alife 2020 keynote Luis Zaman - New Frontiers in Alife: What was old is new again  </description>
+    </item>
+    
+    <item>
+      <title>Assembly language</title>
+      <link>https://hugocisneros.com/notes/assembly_language/</link>
+      <pubDate>Sun, 26 Jul 2020 19:09:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/assembly_language/</guid>
+      <description> tags Programming languages  Backlinks  Talk: Alife 2020 keynote Luis Zaman - New Frontiers in Alife: What was old is new again  </description>
+    </item>
+    
+    <item>
+      <title>Von Neumann&#39;s self-reproducing CA</title>
+      <link>https://hugocisneros.com/notes/von_neumann_s_self_reproducing_ca/</link>
+      <pubDate>Sun, 26 Jul 2020 19:04:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/von_neumann_s_self_reproducing_ca/</guid>
+      <description> tags Cellular automata, John Von Neumann  Backlinks  Talk: Alife 2020 keynote Luis Zaman - New Frontiers in Alife: What was old is new again  </description>
+    </item>
+    
+    <item>
+      <title>ALife 2020</title>
+      <link>https://hugocisneros.com/notes/alife_2020/</link>
+      <pubDate>Sun, 26 Jul 2020 19:00:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/alife_2020/</guid>
+      <description>tags ALife Conference  Day 1 Tutorial - Functional programming for artificial life Tutorial - Visualization Principles and Techniques for Research in ALife Mike Levin - Keynote Lecture Day 2 Sara Walker, keynote Lecture About what life means and how it can be defined from the point of view of physics/information theory, etc.
+Melanie Mitchell, keynote Lecture This talk was very similar to another one I watched from Santa Fe Institute which promotes her book: Artificial Intelligence: A Guide for Thinking Humans.</description>
+    </item>
+    
+    <item>
+      <title>Talk: Alife 2020 keynote Michael Levin - Robot Cancer</title>
+      <link>https://hugocisneros.com/notes/talk_alife_2020_keynote_michael_levin_robot_cancer/</link>
+      <pubDate>Sun, 26 Jul 2020 18:42:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/talk_alife_2020_keynote_michael_levin_robot_cancer/</guid>
+      <description>tags Emergence, Biological life, ALife 2020  How do organisms store information and are able to pass it down through very profound structural changes (from a caterpillar to a butterfly, when cutting a flatworm in multiple pieces, etc.)?
+Embryogenesis is a reliable self-assembly. It relies on stem cell differentiation but that&amp;rsquo;s not enough: some tumor (Teratoma) are differentiated but don&amp;rsquo;t have the right 3D spatial organisation.
+Where is the large-scale pattern specified?</description>
+    </item>
+    
+    <item>
+      <title>Talk: Alife 2020 keynote Lee Cronin - A Top Down Chemically Embodied Artificial Life Computation</title>
+      <link>https://hugocisneros.com/notes/talk_alife_2020_keynote_lee_cronin_a_top_down_chemically_embodied_artificial_life_computation/</link>
+      <pubDate>Sun, 26 Jul 2020 18:27:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/talk_alife_2020_keynote_lee_cronin_a_top_down_chemically_embodied_artificial_life_computation/</guid>
+      <description>tags Life, ALife 2020  Complex molecules are bio-signatures, they are the sign of complex (evolutionary?) processes that have been going on.
+Assembly theory Exploring complexity: Lee is showing some theoretical idea about a complexity metric. Like many other metrics, he starts from the observation that neither entropy nor Kolmogorov complexity are suitable for considering the history of an object.
+Instead of thinking in terms of disorder or complexity, why not ask simply about &amp;ldquo;how has this object been assembled?</description>
+    </item>
+    
+    <item>
+      <title>Homomorphic encryption</title>
+      <link>https://hugocisneros.com/notes/fully_homomorphic_encryption/</link>
+      <pubDate>Sun, 26 Jul 2020 17:42:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/fully_homomorphic_encryption/</guid>
+      <description>tags Cryptography resources Vitalik Buterin&amp;rsquo;s blog  Principle The idea of homomorphic encryption is to encrypt data in such a way that, given a function \(f\) and a message to encrypt \(x\), \(\text{enc}(f(x)) = f(\text{enc}(x))\).
+This idea is similar in spirit to Privacy-preserving machine learning, or federated learning, where one wants to obfuscate data while still being able to use it in a learning model. Here, one considers arbitrary functions.</description>
+    </item>
+    
+    <item>
+      <title>Federated learning</title>
+      <link>https://hugocisneros.com/notes/federated_learning/</link>
+      <pubDate>Sun, 26 Jul 2020 17:37:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/federated_learning/</guid>
+      <description> tags Machine learning  Backlinks  Homomorphic encryption  </description>
+    </item>
+    
+    <item>
+      <title>Privacy-preserving machine learning</title>
+      <link>https://hugocisneros.com/notes/privacy_preserving_machine_learning/</link>
+      <pubDate>Sun, 26 Jul 2020 17:37:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/privacy_preserving_machine_learning/</guid>
+      <description> tags Machine learning, Online privacy  Backlinks  Homomorphic encryption  </description>
+    </item>
+    
+    <item>
+      <title>Christopher Langton</title>
+      <link>https://hugocisneros.com/notes/christopher_langton/</link>
+      <pubDate>Sat, 25 Jul 2020 22:36:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/christopher_langton/</guid>
+      <description> tags Artificial life, Complex Systems  Backlinks  Notes on: A new structurally dissolvable self-reproducing loop evolving in a simple cellular automata space by Sayama, H. (1999) Langton&amp;rsquo;s loop  </description>
+    </item>
+    
+    <item>
+      <title>Langton&#39;s loop</title>
+      <link>https://hugocisneros.com/notes/langton_s_loop/</link>
+      <pubDate>Sat, 25 Jul 2020 22:35:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/langton_s_loop/</guid>
+      <description> tags Christopher Langton, Cellular automata  Backlinks  Notes on: A new structurally dissolvable self-reproducing loop evolving in a simple cellular automata space by Sayama, H. (1999)  </description>
+    </item>
+    
+    <item>
+      <title>Notes on: A new structurally dissolvable self-reproducing loop evolving in a simple cellular automata space by Sayama, H. (1999)</title>
+      <link>https://hugocisneros.com/notes/sayamanewstructurallydissolvable1999/</link>
+      <pubDate>Sat, 25 Jul 2020 22:35:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/sayamanewstructurallydissolvable1999/</guid>
+      <description>source (Sayama, 1999) tags Cellular automata, Evolution  Summary This work presents a simple evolutionary system based on Langton&amp;lsquo;s self-reproducing loop. This is entirely done with a normal state-transition rule based CA. The initial structure of the loop was modified to catch variations. An interesting consequence of this system evolving is its natural tendency to evolve towards smaller loops despite no stochastic mutation being hard-coded.
+Bibliography Sayama, H., A new structurally dissolvable self-reproducing loop evolving in a simple cellular automata space, Artificial Life, 5(4), 343–365 (1999).</description>
+    </item>
+    
+    <item>
+      <title>Notes on: Evolution in asynchronous cellular automata by Nehaniv, C. L. (2003)</title>
+      <link>https://hugocisneros.com/notes/nehanivevolutionasynchronouscellular2003/</link>
+      <pubDate>Thu, 23 Jul 2020 10:41:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/nehanivevolutionasynchronouscellular2003/</guid>
+      <description>tags Cellular automata, Evolution source (Nehaniv, 2003)  Summary This paper proposes a general asynchronous extension of CA rules and show that they can be made equivalent to the original CA rule. Applying this extension to H. Sayama&amp;rsquo;s Evoloop cellular automaton (Sayama, 1999), the author creates the first asynchronous implementation of evolution of self-replicators.
+One hope formulated by the author is that asynchronicity could help achieve fault-tolerance and self-repair.</description>
+    </item>
+    
+    <item>
+      <title>Programming languages</title>
+      <link>https://hugocisneros.com/notes/programming_languages/</link>
+      <pubDate>Wed, 22 Jul 2020 15:10:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/programming_languages/</guid>
+      <description> tags Computer science  PL I use or have used:
+ Python C Programming language C++ Javascript Rust Scala Java Ruby ELisp Haskell  Backlinks  Scala Ruby Python Rust Lisp Turing-completeness C++ Javascript Java Haskell Functional programming  </description>
+    </item>
+    
+    <item>
+      <title>Functional programming</title>
+      <link>https://hugocisneros.com/notes/functional_programming/</link>
+      <pubDate>Wed, 22 Jul 2020 10:15:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/functional_programming/</guid>
+      <description> tags Computer science, Coding  Example of functional programming languages  Lisp Haskell  </description>
+    </item>
+    
+    <item>
+      <title>Haskell</title>
+      <link>https://hugocisneros.com/notes/haskell/</link>
+      <pubDate>Wed, 22 Jul 2020 10:14:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/haskell/</guid>
+      <description> tags Programming languages, Coding  </description>
+    </item>
+    
+    <item>
+      <title>Adaptive Computation Time</title>
+      <link>https://hugocisneros.com/notes/adaptive_computation_time/</link>
+      <pubDate>Tue, 21 Jul 2020 08:54:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/adaptive_computation_time/</guid>
+      <description>tags Neural networks, Algorithm  Adaptive computation time (ACT) was introduced in (Graves, 2017) as a way to make computations in RNN adaptive. The network learns how many computational steps to use before emitting an output.
+This is done by outputting an extra halting probability at each update step, and considering two timelines:
+ the input timeline which plays the role of an outer loop, at each of those step, a new input symbol is fed to the RNN.</description>
+    </item>
     
     <item>
       <title>Autopoiesis</title>
@@ -237,26 +449,6 @@ Line search Another common way to apply the gradient descent algorithm with non 
       
       <guid>https://hugocisneros.com/notes/alife_conference/</guid>
       <description> tags Artificial life  ALife 2020 Backlinks  ALife 2020  </description>
-    </item>
-    
-    <item>
-      <title>Talk: Alife 2020 keynote Michael Levin - Robot Cancer</title>
-      <link>https://hugocisneros.com/notes/talk_alife_2020_keynote_michael_levin_robot_cancer/</link>
-      <pubDate>Fri, 17 Jul 2020 10:59:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/talk_alife_2020_keynote_michael_levin_robot_cancer/</guid>
-      <description>tags Emergence, Biological life, ALife 2020  How do organisms store information and are able to pass it down through very profound structural changes (from a caterpillar to a butterfly, when cutting a flatworm in multiple pieces, etc.)?
-Embryogenesis is a reliable self-assembly. It relies on stem cell differentiation but that&amp;rsquo;s not enough: some tumor (Teratoma) are differentiated but don&amp;rsquo;t have the right 3D spatial organisation.
-Where is the large-scale pattern specified?</description>
-    </item>
-    
-    <item>
-      <title>ALife 2020</title>
-      <link>https://hugocisneros.com/notes/alife_2020/</link>
-      <pubDate>Fri, 17 Jul 2020 09:22:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/alife_2020/</guid>
-      <description> tags ALife Conference  Backlinks  ALife Conference  </description>
     </item>
     
     <item>
@@ -883,15 +1075,6 @@ Another experiment uses this exploration method to produce recurrent cell throug
     </item>
     
     <item>
-      <title>Notes on: Evolution in asynchronous cellular automata by Nehaniv, C. L. (2003)</title>
-      <link>https://hugocisneros.com/notes/nehanivevolutionasynchronouscellular2003/</link>
-      <pubDate>Tue, 14 Jul 2020 07:58:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/nehanivevolutionasynchronouscellular2003/</guid>
-      <description>tags Cellular automata, Evolution source (Nehaniv, 2003)  Summary Comments Bibliography Nehaniv, C. L., Evolution in asynchronous cellular automata, In , Proceedings of the Eighth International Conference on {{Artificial}} Life (pp. 65–73) (2003). : . ↩</description>
-    </item>
-    
-    <item>
       <title>Notes on: Efficient Neural Architecture Search via Parameter Sharing by Pham, H., Guan, M. Y., Zoph, B., Le, Q. V., &amp; Dean, J. (2018)</title>
       <link>https://hugocisneros.com/notes/phamefficientneuralarchitecture2018/</link>
       <pubDate>Mon, 13 Jul 2020 18:45:00 +0200</pubDate>
@@ -1056,15 +1239,6 @@ Backlinks  ELisp  </description>
     </item>
     
     <item>
-      <title>Open-ended Evolution</title>
-      <link>https://hugocisneros.com/notes/open_ended_evolution/</link>
-      <pubDate>Fri, 10 Jul 2020 10:05:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/open_ended_evolution/</guid>
-      <description>tags Evolution, Complexity, Artificial Intelligence resources Open-endedness: The last grand challenge you’ve never heard of  My idea of Open Ended evolution As part of my research, I have been thinking a lot about open-ended evolution and what this concept means to me. Although it is still early in my research journey, I will go into the process of writing down my thoughts about this very challenging concept in order to have material on which I will be able to reflect later and understand how my beliefs have changed.</description>
-    </item>
-    
-    <item>
       <title>Reaction-diffusion</title>
       <link>https://hugocisneros.com/notes/reaction_diffusion/</link>
       <pubDate>Fri, 10 Jul 2020 10:05:00 +0200</pubDate>
@@ -1129,16 +1303,6 @@ Hebbian learning The theory is sometimes summarized as &amp;ldquo;Cells that fir
       
       <guid>https://hugocisneros.com/notes/coding/</guid>
       <description> tags Computer science  Backlinks  Emacs Java Javascript Python Ruby Scala Make Why programming is a good medium for expressing poorly understood and sloppily-formulated ideas C++ Rust Algorithm  </description>
-    </item>
-    
-    <item>
-      <title>Programming languages</title>
-      <link>https://hugocisneros.com/notes/programming_languages/</link>
-      <pubDate>Fri, 10 Jul 2020 09:13:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/programming_languages/</guid>
-      <description> tags Computer science  PL I use or have used:
- Python C Programming language C++ Javascript Rust Scala Java Ruby ELisp  Backlinks  Lisp Java Javascript Python Ruby Scala Turing-completeness C++ Rust  </description>
     </item>
     
     <item>
