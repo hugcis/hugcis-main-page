@@ -6,10 +6,129 @@
     <description>Recent content in Notes on Hugo Cisneros - Personal page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 Jul 2020 20:10:00 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jul 2020 14:49:00 +0200</lastBuildDate>
     
 	<atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Notes on: An Integrated Perspective on the Constitutive and Interactive Dimensions of Autonomy by Beer, R. D. (2020)</title>
+      <link>https://hugocisneros.com/notes/beerintegratedperspectiveconstitutive2020/</link>
+      <pubDate>Mon, 27 Jul 2020 14:49:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/beerintegratedperspectiveconstitutive2020/</guid>
+      <description>tags Emergence, Life, Cellular automata source (Beer, 2020)  Summary Constitution: &amp;ldquo;How emergent individuals are put together and maintained&amp;rdquo; Interaction: &amp;ldquo;How emergent individuals as a whole engage with the environment&amp;rdquo;
+Use Conway&amp;rsquo;s Game of Life as a toy model where each cell and update rule is like the Physics of the universe and this physics gives rise to a simple chemistry which can in turn support self-sustaining networks of reactions and some form of biology.</description>
+    </item>
+    
+    <item>
+      <title>Notes on: Neural Architecture Search with Reinforcement Learning by Zoph, B., &amp; Le, Q. V. (2017)</title>
+      <link>https://hugocisneros.com/notes/zophneuralarchitecturesearch2017/</link>
+      <pubDate>Mon, 27 Jul 2020 14:19:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/zophneuralarchitecturesearch2017/</guid>
+      <description>tags NAS source (Zoph &amp;amp; Le, 2017)  Summary This paper introduces the idea of using a RNN controller system to generate the operations of a neural network. In a first setting the authors use this method to construct CNNs. The controller samples an architecture, the architecture is built and trained and the controller is rewarded with the maximum validation accuracy of the last 5 epochs cubed (??).
+Another experiment uses this exploration method to produce recurrent cell through a complicated model based on a tree of units, for each of which the controller samples an operation.</description>
+    </item>
+    
+    <item>
+      <title>Neural architecture search</title>
+      <link>https://hugocisneros.com/notes/neural_architecture_search/</link>
+      <pubDate>Mon, 27 Jul 2020 14:13:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/neural_architecture_search/</guid>
+      <description>tags Search, Neural networks  Neural architecture search (NAS) is a method for finding neural networks architectures. It is usually based on three main components:
+ Search space Type of network that can be built. Search strategy The approach for exploring the space. Performance estimation strategy The way the performance of a constructed neural network is evaluated (without actually building it or training/running it).  Reinforcement learning-based NAS The original idea was called Neural architecture search and is based on the use of a RNN as a controller and generator of architectures.</description>
+    </item>
+    
+    <item>
+      <title>ALife 2020</title>
+      <link>https://hugocisneros.com/notes/alife_2020/</link>
+      <pubDate>Mon, 27 Jul 2020 14:12:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/alife_2020/</guid>
+      <description>tags ALife Conference  Day 1 Tutorial - Functional programming for artificial life Tutorial - Visualization Principles and Techniques for Research in ALife Mike Levin - Keynote Lecture Day 2 Sara Walker, keynote Lecture About what life means and how it can be defined from the point of view of physics/information theory, etc.
+Melanie Mitchell, keynote Lecture This talk was very similar to another one I watched from Santa Fe Institute which promotes her book: Artificial Intelligence: A Guide for Thinking Humans.</description>
+    </item>
+    
+    <item>
+      <title>Noise</title>
+      <link>https://hugocisneros.com/notes/noise/</link>
+      <pubDate>Mon, 27 Jul 2020 14:03:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/noise/</guid>
+      <description> tags Statistics, Applied maths  Backlinks  ALife 2020  </description>
+    </item>
+    
+    <item>
+      <title>Notes on: Fast and stable MAP-Elites in noisy domains using deep grids by Flageat, M., &amp; Cully, A. (2020)</title>
+      <link>https://hugocisneros.com/notes/flageatfaststablemapelites2020/</link>
+      <pubDate>Mon, 27 Jul 2020 13:52:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/flageatfaststablemapelites2020/</guid>
+      <description>source (Flageat &amp;amp; Cully, 2020) tags ALife 2020, MAP-Elites, Quality diversity  Summary MAP-Elites can be problematic in face of uncertainty because:
+ individuals can be unexpectedly lucky the behavior space can be hard to estimate and result in misplacing individuals.  Some mitigation techniques have been explored, e.g in (Justesen et al., 2019) and this paper is about introducing another way of dealing with noisy domains without using sampling.</description>
+    </item>
+    
+    <item>
+      <title>MAP-Elites</title>
+      <link>https://hugocisneros.com/notes/map_elites/</link>
+      <pubDate>Mon, 27 Jul 2020 13:24:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/map_elites/</guid>
+      <description>tags Quality diversity, Reinforcement learning papers (Mouret &amp;amp; Clune, 2015), (Cully et al., 2015)  MAP-Elites are an example of QD algorithm. The behavior space is discretized in cells and during exploration, only the best &amp;ldquo;elite&amp;rdquo; for each cell is kept.
+Individuals are added to the grid if they:
+ fill an empty space are better than an existing elite  Bibliography Mouret, J., &amp;amp; Clune, J., Illuminating search spaces by mapping elites, arXiv:1504.</description>
+    </item>
+    
+    <item>
+      <title>Quality diversity</title>
+      <link>https://hugocisneros.com/notes/quality_diversity/</link>
+      <pubDate>Mon, 27 Jul 2020 12:21:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/quality_diversity/</guid>
+      <description>tags Evolution, Reinforcement learning papers (Pugh et al., 2016), (Cully &amp;amp; Demiris, 2017)  QD is about creating algorithms that favor diversity in searching the space. In QD, one needs to both:
+ Measure the quality of a solution Have a way to describe the effect of a solution  Solutions in QD have to be good in the two above ways.
+Bibliography Pugh, J. K., Soros, L. B., &amp;amp; Stanley, K.</description>
+    </item>
+    
+    <item>
+      <title>Notes on: Adapting to Unseen Environments through Explicit Representation of Context by Tutum, C., &amp; Miikkulainen, R. (2020)</title>
+      <link>https://hugocisneros.com/notes/tutumadaptingunseenenvironments2020/</link>
+      <pubDate>Mon, 27 Jul 2020 12:01:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/tutumadaptingunseenenvironments2020/</guid>
+      <description>source (Tutum &amp;amp; Miikkulainen, 2020) tags Meta-learning, Reinforcement learning, ALife 2020  Summary This work introduces the idea of Context-Skill networks for continuous RL tasks. Experiments are done on a Flappy bird like game.
+The authors use a LSTM as a context network to make part of the prediction and a feed-forward neural network as a skill network. They are able to demonstrate that in that game, better performances are achieved by using both networks compared to a single one.</description>
+    </item>
+    
+    <item>
+      <title>Notes on: Morphologically programming the interactions of V-shaped falling papers by Howison, T., Hughes, J., &amp; Iida, F. (2020)</title>
+      <link>https://hugocisneros.com/notes/howisonmorphologicallyprogramminginteractions2020/</link>
+      <pubDate>Mon, 27 Jul 2020 11:27:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/howisonmorphologicallyprogramminginteractions2020/</guid>
+      <description>source (Howison et al., 2020)  Summary Bibliography Howison, T., Hughes, J., &amp;amp; Iida, F., Morphologically programming the interactions of V-shaped falling papers, Artificial Life Conference Proceedings, 32(), 359–366 (2020). http://dx.doi.org/10.1162/isal_a_00306 ↩</description>
+    </item>
+    
+    <item>
+      <title>Notes on: Safe Reinforcement Learning through Meta-learned Instincts by Grbic, D., &amp; Risi, S. (2020)</title>
+      <link>https://hugocisneros.com/notes/grbicsafereinforcementlearning2020/</link>
+      <pubDate>Mon, 27 Jul 2020 11:26:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/grbicsafereinforcementlearning2020/</guid>
+      <description>source (Grbic &amp;amp; Risi, 2020) tags Meta-learning, Reinforcement learning, ALife 2020  Summary In RL an important goal is to find agents that can quickly adapt to changing environments while avoiding unsafe states. However, in deep RL, there is often noise added to explore the action space: this can lead to unsafe part of the state-action space.
+ Slide from the Alife talk   The meta-learning setting of MAML is adapted to RL, with a policy network learning the policy in a standard way and a &amp;ldquo;instinctual network&amp;rdquo; which is fixed for a group of tasks and modulates the regular policy with its own action vector.</description>
+    </item>
+    
+    <item>
+      <title>Meta-learning</title>
+      <link>https://hugocisneros.com/notes/meta_learning/</link>
+      <pubDate>Mon, 27 Jul 2020 11:06:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/meta_learning/</guid>
+      <description> tags Machine learning  </description>
+    </item>
     
     <item>
       <title>Boolean networks</title>
@@ -84,16 +203,6 @@ Zaman&amp;rsquo;s definition of evolution is</description>
       
       <guid>https://hugocisneros.com/notes/von_neumann_s_self_reproducing_ca/</guid>
       <description> tags Cellular automata, John Von Neumann  Backlinks  Talk: Alife 2020 keynote Luis Zaman - New Frontiers in Alife: What was old is new again  </description>
-    </item>
-    
-    <item>
-      <title>ALife 2020</title>
-      <link>https://hugocisneros.com/notes/alife_2020/</link>
-      <pubDate>Sun, 26 Jul 2020 19:00:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/alife_2020/</guid>
-      <description>tags ALife Conference  Day 1 Tutorial - Functional programming for artificial life Tutorial - Visualization Principles and Techniques for Research in ALife Mike Levin - Keynote Lecture Day 2 Sara Walker, keynote Lecture About what life means and how it can be defined from the point of view of physics/information theory, etc.
-Melanie Mitchell, keynote Lecture This talk was very similar to another one I watched from Santa Fe Institute which promotes her book: Artificial Intelligence: A Guide for Thinking Humans.</description>
     </item>
     
     <item>
@@ -1065,16 +1174,6 @@ Comments I am personally very interested by the paper since it is an interesting
     </item>
     
     <item>
-      <title>Notes on: Neural Architecture Search with Reinforcement Learning by Zoph, B., &amp; Le, Q. V. (2017)</title>
-      <link>https://hugocisneros.com/notes/zophneuralarchitecturesearch2017/</link>
-      <pubDate>Tue, 14 Jul 2020 07:59:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/zophneuralarchitecturesearch2017/</guid>
-      <description>tags NAS source (Zoph &amp;amp; Le, 2017)  Summary This paper introduces the idea of using a RNN controller system to generate the operations of a neural network. In a first setting the authors use this method to construct CNNs. The controller samples an architecture, the architecture is built and trained and the controller is rewarded with the maximum validation accuracy of the last 5 epochs cubed (??).
-Another experiment uses this exploration method to produce recurrent cell through a complicated model based on a tree of units, for each of which the controller samples an operation.</description>
-    </item>
-    
-    <item>
       <title>Notes on: Efficient Neural Architecture Search via Parameter Sharing by Pham, H., Guan, M. Y., Zoph, B., Le, Q. V., &amp; Dean, J. (2018)</title>
       <link>https://hugocisneros.com/notes/phamefficientneuralarchitecture2018/</link>
       <pubDate>Mon, 13 Jul 2020 18:45:00 +0200</pubDate>
@@ -1709,16 +1808,6 @@ In the case of Decentralization, an almost immediate effect is the decrease of p
       
       <guid>https://hugocisneros.com/notes/halting_probability/</guid>
       <description> tags Computability theory, Algorithmic Information theory, Halting problem  </description>
-    </item>
-    
-    <item>
-      <title>Neural architecture search</title>
-      <link>https://hugocisneros.com/notes/neural_architecture_search/</link>
-      <pubDate>Thu, 02 Jul 2020 10:21:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/neural_architecture_search/</guid>
-      <description>tags Search, Neural networks  Neural architecture search (NAS) is a method for finding neural networks architectures. It is usually based on three main components:
- Search space Type of network that can be built. Search strategy The approach for exploring the space. Performance estimation strategy The way the performance of a constructed neural network is evaluated (without actually building it or training/running it).  Reinforcement learning-based NAS The original idea was called Neural architecture search and is based on the use of a RNN as a controller and generator of architectures.</description>
     </item>
     
     <item>
