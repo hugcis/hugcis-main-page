@@ -6,10 +6,355 @@
     <description>Recent content in Notes on Hugo Cisneros - Personal page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Jul 2020 14:49:00 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 24 Aug 2020 16:26:00 +0200</lastBuildDate>
     
 	<atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Talk: The Importance of Open-Endedness in AI and Machine Learning</title>
+      <link>https://hugocisneros.com/notes/talk_the_importance_of_open_endedness_in_ai_and_machine_learning/</link>
+      <pubDate>Mon, 24 Aug 2020 16:26:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/talk_the_importance_of_open_endedness_in_ai_and_machine_learning/</guid>
+      <description>tags Open-ended Evolution, Artificial Intelligence speaker Kenneth Stanley source Youtube  Why should we care about open-endedness?  There is nothing you can point to that would be worth coming back to a billions year from now to see what happened. And yet, we are inside of such a system and such a system produced us.
+ Evolution is a seemingly open-ended process for which we only have access to a single run&amp;rsquo;s current and past results.</description>
+    </item>
+    
+    <item>
+      <title>Quality diversity</title>
+      <link>https://hugocisneros.com/notes/quality_diversity/</link>
+      <pubDate>Mon, 24 Aug 2020 16:11:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/quality_diversity/</guid>
+      <description>tags Evolution, Reinforcement learning, Search papers (Pugh et al., 2016), (Cully &amp;amp; Demiris, 2017)  QD is about creating algorithms that favor diversity in searching the space. In QD, one needs to both:
+ Measure the quality of a solution Have a way to describe the effect of a solution  Solutions in QD have to be good in the two above ways.
+QD is also a form of novelty search.</description>
+    </item>
+    
+    <item>
+      <title>Novelty search</title>
+      <link>https://hugocisneros.com/notes/novelty_search/</link>
+      <pubDate>Mon, 24 Aug 2020 16:10:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/novelty_search/</guid>
+      <description> tags Search  Backlinks  Talk: The Importance of Open-Endedness in AI and Machine Learning  </description>
+    </item>
+    
+    <item>
+      <title>Picbreeder</title>
+      <link>https://hugocisneros.com/notes/picbreeder/</link>
+      <pubDate>Mon, 24 Aug 2020 16:10:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/picbreeder/</guid>
+      <description> tags Search, Open-ended Evolution  Backlinks  Talk: The Importance of Open-Endedness in AI and Machine Learning  </description>
+    </item>
+    
+    <item>
+      <title>Article: Open-endedness: The last grand challenge you’ve never heard of</title>
+      <link>https://hugocisneros.com/notes/open_endedness_the_last_grand_challenge_you_ve_never_heard_of/</link>
+      <pubDate>Mon, 24 Aug 2020 12:09:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/open_endedness_the_last_grand_challenge_you_ve_never_heard_of/</guid>
+      <description> authors Kenneth Stanley tags Artificial Intelligence, Open-ended Evolution source Link  Backlinks  Open-ended Evolution  </description>
+    </item>
+    
+    <item>
+      <title>Kenneth Stanley</title>
+      <link>https://hugocisneros.com/notes/kenneth_stanley/</link>
+      <pubDate>Mon, 24 Aug 2020 12:04:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/kenneth_stanley/</guid>
+      <description>Ken Stanley is a researcher at OpenAI.
+Backlinks  Talk: The Importance of Open-Endedness in AI and Machine Learning  </description>
+    </item>
+    
+    <item>
+      <title>Article: Uncertain times</title>
+      <link>https://hugocisneros.com/notes/article_uncertain_times/</link>
+      <pubDate>Mon, 24 Aug 2020 11:13:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/article_uncertain_times/</guid>
+      <description>authors Melanie Mitchell, Jessica Flack source Aeon tags Complex Systems  This article is about adopting a complex systems-based view of societal phenomena. All human societies are a collective of individuals with coupled behaviors.
+As a result, large-scale society-wide information and local behaviors are coupled. This can be appealing, but also leads to surprising behavior. In complex systems, noise feeding back onto itself can lead to transitions to orderly states.</description>
+    </item>
+    
+    <item>
+      <title>Crosshatch automata</title>
+      <link>https://hugocisneros.com/notes/crosshatch_automata/</link>
+      <pubDate>Mon, 24 Aug 2020 10:33:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/crosshatch_automata/</guid>
+      <description> resources Medium article tags Cellular automata  </description>
+    </item>
+    
+    <item>
+      <title>Article: The Cartoon Picture of Magnets That Has Transformed Science</title>
+      <link>https://hugocisneros.com/notes/the_cartoon_picture_of_magnets_that_has_transformed_science/</link>
+      <pubDate>Mon, 24 Aug 2020 09:18:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/the_cartoon_picture_of_magnets_that_has_transformed_science/</guid>
+      <description>tags Ising model, Complex Systems source Quanta magazine  The Ising model is an example of very simply defined model that makes complex behavior emerge.
+Originally introduced by Wilhelm Lenz and his graduate student Ernst Ising, its purpose was to understand why magnets lose their attractive power when heated past a certain temperature. The model was first tried in 1D, where it fails to show that a magnet stays magnetized, and therefore abandoned.</description>
+    </item>
+    
+    <item>
+      <title>Article: The End of the RNA World Is Near, Biochemists Argue</title>
+      <link>https://hugocisneros.com/notes/the_end_of_the_rna_world_is_near_biochemists_argue/</link>
+      <pubDate>Mon, 24 Aug 2020 09:17:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/the_end_of_the_rna_world_is_near_biochemists_argue/</guid>
+      <description>source https://www.quantamagazine.org/the-end-of-the-rna-world-is-near-biochemists-argue-20171219/ tags Biological life  This article is about alternatives to the dominant RNA-world theories.
+Objections to RNA:
+ Crucial processes that we consider part of life could not have been carried out by a single polymer, and particularly not RNA. This is because these chemical reactions have rates ranging across 20 orders of magnitude. RNA cannot explain the emergence of genetic code. It would have been too long for RNA alone to find the mapping rules from 64 three nucleotide sequences to 20 amino acids.</description>
+    </item>
+    
+    <item>
+      <title>Article: What Is an Individual? Biology Seeks Clues in Information Theory.</title>
+      <link>https://hugocisneros.com/notes/what_is_an_individual_biology_seeks_clues_in_information_theory/</link>
+      <pubDate>Mon, 24 Aug 2020 09:17:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/what_is_an_individual_biology_seeks_clues_in_information_theory/</guid>
+      <description>tags Life resources (Krakauer et al., 2020) source Quanta Magazine   “In a way, [biology] is a science of individuality,” said Melanie Mitchell, a computer scientist at the Santa Fe Institute.
+And yet, the notion of what it means to be an individual often gets glossed over. “So far we have a concept of ‘individual’ that’s very much like the concept of ‘pile,’” said Maxwell Ramstead, a postdoctoral researcher at McGill University.</description>
+    </item>
+    
+    <item>
+      <title>Article: Why Sex? Biologists Find New Explanations</title>
+      <link>https://hugocisneros.com/notes/why_sex_biologists_find_new_explanations/</link>
+      <pubDate>Mon, 24 Aug 2020 09:17:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/why_sex_biologists_find_new_explanations/</guid>
+      <description> source Link tags Biological life, Evolution  </description>
+    </item>
+    
+    <item>
+      <title>Melanie Mitchell</title>
+      <link>https://hugocisneros.com/notes/melanie_mitchell/</link>
+      <pubDate>Mon, 24 Aug 2020 08:59:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/melanie_mitchell/</guid>
+      <description> resources Website  She has worked at the Santa Fe Institute and studies Complex Systems, Artificial Intelligence.
+Backlinks  What Is an Individual? Biology Seeks Clues in Information Theory.  </description>
+    </item>
+    
+    <item>
+      <title>Notes on: Diversity preservation in minimal criterion coevolution through resource limitation by Brant, J. C., &amp; Stanley, K. O. (2020)</title>
+      <link>https://hugocisneros.com/notes/brantdiversitypreservationminimal2020/</link>
+      <pubDate>Thu, 30 Jul 2020 08:53:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/brantdiversitypreservationminimal2020/</guid>
+      <description>source (Brant &amp;amp; Stanley, 2020) tags Co-evolution, Evolutionary algorithms  Summary Comments Bibliography Brant, J. C., &amp;amp; Stanley, K. O., Diversity preservation in minimal criterion coevolution through resource limitation, In , Proceedings of the 2020 {{Genetic}} and {{Evolutionary Computation Conference} (pp. 58–66) (2020). Canc&#39;un Mexico: ACM. ↩</description>
+    </item>
+    
+    <item>
+      <title>Notes on: Resilient Life: An Exploration of Perturbed Autopoietic Patterns in Conway&#39;s Game of Life by Cika, A., Cohen, E., Kruszewski, G., Seet, L., Steinmann, P., &amp; Yin, W. (2020)</title>
+      <link>https://hugocisneros.com/notes/cikaresilientlifeexploration2020/</link>
+      <pubDate>Wed, 29 Jul 2020 14:33:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/cikaresilientlifeexploration2020/</guid>
+      <description>tags ALife 2020, Cellular automata, Autopoiesis source (Cika et al., 2020)  Summary This paper is about the possible resistance of GoL patterns to perturbations and the structures that could enable this to happen. They also want to know if resilience is a universal property of computational systems.
+They test two types of resilience:
+ Additive (add one or two live cells to the pattern) Negative (&amp;ldquo;kill&amp;rdquo; one or two live cells from the pattern)  They use 3 metrics for resilience:</description>
+    </item>
+    
+    <item>
+      <title>Assembly theory</title>
+      <link>https://hugocisneros.com/notes/assembly_theory/</link>
+      <pubDate>Wed, 29 Jul 2020 14:27:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/assembly_theory/</guid>
+      <description>tags Complexity metrics papers (Marshall et al., 2019)  This complexity metric is based on ideas similar to Logical depth, where instead of just looking at the general process that led to the creation of an object, we also look at the number of elementary steps in that process.
+Bibliography Marshall, S. M., Moore, D. G., Murray, A. R. G., &amp;amp; Walker, S. I., Quantifying the pathways to life using assembly spaces, , (), 30 (2019).</description>
+    </item>
+    
+    <item>
+      <title>Statistical complexity</title>
+      <link>https://hugocisneros.com/notes/statistical_complexity/</link>
+      <pubDate>Wed, 29 Jul 2020 14:24:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/statistical_complexity/</guid>
+      <description>tags Complexity metrics papers (Crutchfield &amp;amp; Young, 1989)  One interpretation of the statistical complexity is that it is the minimum amount of historical information required to make optimal forecasts of bits in \(x\) at the error rate \(h_\mu\).
+For periodic sequences, \(C_\mu(x) = 0\) and for ideal random sequences \(C_\mu(x) = 0\) too.
+Several researchers have tried to capture the properties of statistical complexity with practical alternatives. The resulting complexity metrics include:</description>
+    </item>
+    
+    <item>
+      <title>Talk: Alife 2020 keynote Lee Cronin - A Top Down Chemically Embodied Artificial Life Computation</title>
+      <link>https://hugocisneros.com/notes/talk_alife_2020_keynote_lee_cronin_a_top_down_chemically_embodied_artificial_life_computation/</link>
+      <pubDate>Wed, 29 Jul 2020 14:24:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/talk_alife_2020_keynote_lee_cronin_a_top_down_chemically_embodied_artificial_life_computation/</guid>
+      <description>tags Life, ALife 2020  Complex molecules are bio-signatures, they are the sign of complex (evolutionary?) processes that have been going on.
+Assembly theory Exploring complexity: Lee is showing some theoretical idea about a complexity metric. Like many other metrics, he starts from the observation that neither entropy nor Kolmogorov complexity are suitable for considering the history of an object.
+Instead of thinking in terms of disorder or complexity, why not ask simply about &amp;ldquo;how has this object been assembled?</description>
+    </item>
+    
+    <item>
+      <title>ALife 2020</title>
+      <link>https://hugocisneros.com/notes/alife_2020/</link>
+      <pubDate>Wed, 29 Jul 2020 11:13:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/alife_2020/</guid>
+      <description>tags ALife Conference  Day 1 Tutorial - Functional programming for artificial life Tutorial - Visualization Principles and Techniques for Research in ALife Mike Levin - Keynote Lecture Day 2 Sara Walker, keynote Lecture About what life means and how it can be defined from the point of view of physics/information theory, etc.
+Melanie Mitchell, keynote Lecture This talk was very similar to another one I watched from Santa Fe Institute which promotes her book: Artificial Intelligence: A Guide for Thinking Humans.</description>
+    </item>
+    
+    <item>
+      <title>Urban science</title>
+      <link>https://hugocisneros.com/notes/urban_science/</link>
+      <pubDate>Wed, 29 Jul 2020 10:10:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/urban_science/</guid>
+      <description>Backlinks  Notes on: A model of urban evolution based on innovation diffusion by Raimbault, J. (2020)  </description>
+    </item>
+    
+    <item>
+      <title>Notes on: A model of urban evolution based on innovation diffusion by Raimbault, J. (2020)</title>
+      <link>https://hugocisneros.com/notes/raimbaultmodelurbanevolution2020/</link>
+      <pubDate>Wed, 29 Jul 2020 10:09:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/raimbaultmodelurbanevolution2020/</guid>
+      <description>source (Raimbault, 2020) tags ALife 2020, Complex Systems, Evolution, Urban science  Summary This paper studies the concept of innovation diffusion and how this could be seen as a way cities evolve.
+Modeling this enables finding that global integration of cities (fully connected city graph on a territory) is not optimal for efficiently diffusing innovation that can spontaneously appear in any city.
+I am interested in taking an ALife inspired approach to studying cities, as it can show cities as they could be.</description>
+    </item>
+    
+    <item>
+      <title>Kullback-leibler divergence</title>
+      <link>https://hugocisneros.com/notes/kullback_leibler_divergence/</link>
+      <pubDate>Tue, 28 Jul 2020 17:37:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/kullback_leibler_divergence/</guid>
+      <description>tags Applied maths  Definition The KL divergence is not symmetric. For \(P, Q\) defined on the same probability space \(\mathcal{X}\), KL of \(Q\) from \(P\) is \[ KL(P, Q) = \sum_{x \in \mathcal{X}} P(x) \log\left( \frac{P(x)}{Q(x)} \right) \]
+It has two main interpretations:
+ It is the information gain from using the right probability distribution \(P\) instead of \(Q\) or the amount of information lost by approximating \(P\) with \(Q\).</description>
+    </item>
+    
+    <item>
+      <title>Fractional calculus</title>
+      <link>https://hugocisneros.com/notes/fractional_calculus/</link>
+      <pubDate>Tue, 28 Jul 2020 17:29:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/fractional_calculus/</guid>
+      <description> tags Mathematics resources Wikipedia  </description>
+    </item>
+    
+    <item>
+      <title>Word vectors</title>
+      <link>https://hugocisneros.com/notes/word_vectors/</link>
+      <pubDate>Tue, 28 Jul 2020 17:08:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/word_vectors/</guid>
+      <description>tags NLP  Definition Word vectors are abstract representation of words embedded in a dense space.
+They are closely related to Language modeling, since the implicit representation a language model builds for prediction can often be used as a word (or sentence) vector.
+Usage Word vectors can encode interesting information, such as semantic similarity between words. This can help for text classification tasks as it may be easier to learn a mapping between this intermediate space and a result rather than between the space of one-hot encoded words/sentences.</description>
+    </item>
+    
+    <item>
+      <title>Notes on: Information-Theoretic Probing with Minimum Description Length by Voita, E., &amp; Titov, I. (2020)</title>
+      <link>https://hugocisneros.com/notes/voitainformationtheoreticprobingminimum2020/</link>
+      <pubDate>Tue, 28 Jul 2020 16:58:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/voitainformationtheoreticprobingminimum2020/</guid>
+      <description>tags Evaluating NLP, Transformers, Minimum description length source (Voita &amp;amp; Titov, 2020)  TODO Summary TODO Comments Bibliography Voita, E., &amp;amp; Titov, I., Information-Theoretic Probing with Minimum Description Length, arXiv:2003.12298 [cs], (), (2020).  ↩</description>
+    </item>
+    
+    <item>
+      <title>Talk: Alife 2020 keynote Sara Walker - The Natural History of Information</title>
+      <link>https://hugocisneros.com/notes/talk_alife_2020_keynote_sara_walker_the_natural_history_of_information/</link>
+      <pubDate>Tue, 28 Jul 2020 15:04:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/talk_alife_2020_keynote_sara_walker_the_natural_history_of_information/</guid>
+      <description>tags Life  The problem of defining life Definitions of life have always been elusive.
+ Life does not exist.
+ &amp;mdash; Andrew Ellington (American Chemical Society 2012).
+ as one focuses experimentally on any of the &amp;lsquo;defining&amp;rsquo; properties of &amp;lsquo;life&amp;rsquo;, the sharp boundary seems to blur, splitting into finer and finer sub-divisions
+ &amp;mdash; Jack Szostak (J. Biomolecular Struc. Dyn. 29.4 (2012) : 599-600.)
+When looking at matter down to the chemical level, it&amp;rsquo;s hard to tell what is fundamentally different between living and non-living matter.</description>
+    </item>
+    
+    <item>
+      <title>Life</title>
+      <link>https://hugocisneros.com/notes/life/</link>
+      <pubDate>Tue, 28 Jul 2020 14:20:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/life/</guid>
+      <description>From Sara Walker&amp;rsquo;s keynote at Alife 2020: The Natural History of Information:
+ Life is a process whereby information structures matter across space and time.
+ Why should life be an emergent process? An answer from (Krakauer et al., 2020):
+ The fact that physics and chemistry are universal—ongoing in stars, solar systems, and galaxies—whereas to the best of our knowledge biology is exclusively a property of earth, supports the view that life is emergent.</description>
+    </item>
+    
+    <item>
+      <title>PCA</title>
+      <link>https://hugocisneros.com/notes/pca/</link>
+      <pubDate>Tue, 28 Jul 2020 09:54:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/pca/</guid>
+      <description> tags Data representation  </description>
+    </item>
+    
+    <item>
+      <title>Graham scan</title>
+      <link>https://hugocisneros.com/notes/graham_scan/</link>
+      <pubDate>Mon, 27 Jul 2020 22:28:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/graham_scan/</guid>
+      <description>tags Algorithm  Graham scan is an algorithm to find the convex hull of a set of points in 2D. It runs with a time complexity of \(\mathcal{O}(n\log n)\).
+The algorithm is relatively simple. It starts by selecting the point with lowest $y$-coordinate. At each step of the algorithm, remaining points are sorted by increasing order of the angle they and the last added point make. Then, if this new point is</description>
+    </item>
+    
+    <item>
+      <title>Notes on: Reservoir Computing in Artificial Spin Ice by Jensen, J. H., &amp; Tufte, G. (2020)</title>
+      <link>https://hugocisneros.com/notes/jensenreservoircomputingartificial2020/</link>
+      <pubDate>Mon, 27 Jul 2020 19:59:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/jensenreservoircomputingartificial2020/</guid>
+      <description>source (Jensen &amp;amp; Tufte, 2020) tags Reservoir computing, Complex Systems  Summary This talk is about artificial spin ice. This model is based on a grid of coupled magnets that can be controlled with a magnetic field. The geometry of that grid can very greatly the kind of behavior one may observe in such systems.
+The authors want to use the spin ice model for reservoir computing. They measure useful quantities such as kernel quality \(K\) (ability to separate inputs) and generalization capabilities \(G\) (how similar inputs yield similar results).</description>
+    </item>
+    
+    <item>
+      <title>Complex Systems</title>
+      <link>https://hugocisneros.com/notes/complex_systems/</link>
+      <pubDate>Mon, 27 Jul 2020 16:46:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/complex_systems/</guid>
+      <description>Bottomless wonders spring from simple rules, which are repeated without end.
+ &amp;mdash; Mandelbrot, ~1980
+Example of complex systems  The economy (Anderson &amp;amp; Evolutionary Paths of the Global Economy Workshop, 1996)  Bibliography , The economy as an evolving complex system: the proceedings of the Evolutionary Paths of the Global Economy Workshop, held September, 1987 in Santa Fe, New Mexico (1996), Reading, Mass.: Addison-Wesley Publ. Co. ↩
+Backlinks  Complexity Chemical reaction network Ising model The Cartoon Picture of Magnets That Has Transformed Science Notes on: The Architecture of Complexity by Simon, H.</description>
+    </item>
+    
+    <item>
+      <title>Compilation</title>
+      <link>https://hugocisneros.com/notes/compilation/</link>
+      <pubDate>Mon, 27 Jul 2020 15:29:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/compilation/</guid>
+      <description> tags Computer science  Some compiled languages  C Programming language Rust C++  Backlinks  Program synthesis  </description>
+    </item>
+    
+    <item>
+      <title>Program synthesis</title>
+      <link>https://hugocisneros.com/notes/program_synthesis/</link>
+      <pubDate>Mon, 27 Jul 2020 15:28:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/program_synthesis/</guid>
+      <description>tags Computer science, Coding  Program synthesis is the task of writing programs automatically for a given tasks. This is widely considered a very hard problem in the general case, as the computational languages we manipulate as human are hard to manipulate &amp;ldquo;smoothly&amp;rdquo;.
+Compilation is a type of program synthesis where both the source language and the target language are well defined. A compiler is written for a given source language/target language pair and is therefore doing well specified program synthesis.</description>
+    </item>
+    
+    <item>
+      <title>Epistasis</title>
+      <link>https://hugocisneros.com/notes/epistasis/</link>
+      <pubDate>Mon, 27 Jul 2020 15:14:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/epistasis/</guid>
+      <description>Epistasis is about interactions between mutations in an evolving systems.
+ No epistasis corresponds to mutation effects &amp;ldquo;stacking&amp;rdquo; without any particular kind of interaction. Positive epistasis happens when the combined effect of the two mutations is more positive than the sum of their contributions. Negative epistasis is the same principle with negative effects.   Cancer is an example negative epistasis where the addition of a lot of mutations is needed to obtain a cancerous cell.</description>
+    </item>
     
     <item>
       <title>Notes on: An Integrated Perspective on the Constitutive and Interactive Dimensions of Autonomy by Beer, R. D. (2020)</title>
@@ -42,16 +387,6 @@ Another experiment uses this exploration method to produce recurrent cell throug
     </item>
     
     <item>
-      <title>ALife 2020</title>
-      <link>https://hugocisneros.com/notes/alife_2020/</link>
-      <pubDate>Mon, 27 Jul 2020 14:12:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/alife_2020/</guid>
-      <description>tags ALife Conference  Day 1 Tutorial - Functional programming for artificial life Tutorial - Visualization Principles and Techniques for Research in ALife Mike Levin - Keynote Lecture Day 2 Sara Walker, keynote Lecture About what life means and how it can be defined from the point of view of physics/information theory, etc.
-Melanie Mitchell, keynote Lecture This talk was very similar to another one I watched from Santa Fe Institute which promotes her book: Artificial Intelligence: A Guide for Thinking Humans.</description>
-    </item>
-    
-    <item>
       <title>Noise</title>
       <link>https://hugocisneros.com/notes/noise/</link>
       <pubDate>Mon, 27 Jul 2020 14:03:00 +0200</pubDate>
@@ -79,17 +414,6 @@ Melanie Mitchell, keynote Lecture This talk was very similar to another one I wa
       <description>tags Quality diversity, Reinforcement learning papers (Mouret &amp;amp; Clune, 2015), (Cully et al., 2015)  MAP-Elites are an example of QD algorithm. The behavior space is discretized in cells and during exploration, only the best &amp;ldquo;elite&amp;rdquo; for each cell is kept.
 Individuals are added to the grid if they:
  fill an empty space are better than an existing elite  Bibliography Mouret, J., &amp;amp; Clune, J., Illuminating search spaces by mapping elites, arXiv:1504.</description>
-    </item>
-    
-    <item>
-      <title>Quality diversity</title>
-      <link>https://hugocisneros.com/notes/quality_diversity/</link>
-      <pubDate>Mon, 27 Jul 2020 12:21:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/quality_diversity/</guid>
-      <description>tags Evolution, Reinforcement learning papers (Pugh et al., 2016), (Cully &amp;amp; Demiris, 2017)  QD is about creating algorithms that favor diversity in searching the space. In QD, one needs to both:
- Measure the quality of a solution Have a way to describe the effect of a solution  Solutions in QD have to be good in the two above ways.
-Bibliography Pugh, J. K., Soros, L. B., &amp;amp; Stanley, K.</description>
     </item>
     
     <item>
@@ -214,17 +538,6 @@ Zaman&amp;rsquo;s definition of evolution is</description>
       <description>tags Emergence, Biological life, ALife 2020  How do organisms store information and are able to pass it down through very profound structural changes (from a caterpillar to a butterfly, when cutting a flatworm in multiple pieces, etc.)?
 Embryogenesis is a reliable self-assembly. It relies on stem cell differentiation but that&amp;rsquo;s not enough: some tumor (Teratoma) are differentiated but don&amp;rsquo;t have the right 3D spatial organisation.
 Where is the large-scale pattern specified?</description>
-    </item>
-    
-    <item>
-      <title>Talk: Alife 2020 keynote Lee Cronin - A Top Down Chemically Embodied Artificial Life Computation</title>
-      <link>https://hugocisneros.com/notes/talk_alife_2020_keynote_lee_cronin_a_top_down_chemically_embodied_artificial_life_computation/</link>
-      <pubDate>Sun, 26 Jul 2020 18:27:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/talk_alife_2020_keynote_lee_cronin_a_top_down_chemically_embodied_artificial_life_computation/</guid>
-      <description>tags Life, ALife 2020  Complex molecules are bio-signatures, they are the sign of complex (evolutionary?) processes that have been going on.
-Assembly theory Exploring complexity: Lee is showing some theoretical idea about a complexity metric. Like many other metrics, he starts from the observation that neither entropy nor Kolmogorov complexity are suitable for considering the history of an object.
-Instead of thinking in terms of disorder or complexity, why not ask simply about &amp;ldquo;how has this object been assembled?</description>
     </item>
     
     <item>
@@ -403,18 +716,6 @@ Backlinks  Notes on: Intrinsically Motivated Discovery of Diverse Patterns in Se
     </item>
     
     <item>
-      <title>Life</title>
-      <link>https://hugocisneros.com/notes/life/</link>
-      <pubDate>Mon, 20 Jul 2020 08:23:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/life/</guid>
-      <description>From Sara Walker&amp;rsquo;s keynote at Alife 2020: The Natural History of Information:
- Life is a process whereby information structures matter across space and time.
- Why should life be an emergent process? An answer from (Krakauer et al., ):
- The fact that physics and chemistry are universal—ongoing in stars, solar systems, and galaxies—whereas to the best of our knowledge biology is exclusively a property of earth, supports the view that life is emergent.</description>
-    </item>
-    
-    <item>
       <title>Machine learning</title>
       <link>https://hugocisneros.com/notes/machine_learning/</link>
       <pubDate>Mon, 20 Jul 2020 08:20:00 +0200</pubDate>
@@ -433,26 +734,6 @@ Examples of such functions include:
       <guid>https://hugocisneros.com/notes/artificial_intelligence/</guid>
       <description>Creating artificial intelligence through evolution If we take an evolutionary approach to the creation of AI, we may run into some problems. Of course, it is an extremely appealing idea, as it has been proven to work in our &amp;ldquo;Earth experiment&amp;rdquo;. Somehow, life and intelligent behavior has emerged from the synergy between the emergence of so-called living systems, Darwinian evolution and interactions with the environment.
 However a pressing issue is: Is there any shortcut in this approach?</description>
-    </item>
-    
-    <item>
-      <title>What Is an Individual? Biology Seeks Clues in Information Theory.</title>
-      <link>https://hugocisneros.com/notes/what_is_an_individual_biology_seeks_clues_in_information_theory/</link>
-      <pubDate>Mon, 20 Jul 2020 08:10:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/what_is_an_individual_biology_seeks_clues_in_information_theory/</guid>
-      <description>tags Life resources (Krakauer et al., 2020) source Quanta Magazine   “In a way, [biology] is a science of individuality,” said Melanie Mitchell, a computer scientist at the Santa Fe Institute.
-And yet, the notion of what it means to be an individual often gets glossed over. “So far we have a concept of ‘individual’ that’s very much like the concept of ‘pile,’” said Maxwell Ramstead, a postdoctoral researcher at McGill University.</description>
-    </item>
-    
-    <item>
-      <title>Melanie Mitchell</title>
-      <link>https://hugocisneros.com/notes/melanie_mitchell/</link>
-      <pubDate>Sun, 19 Jul 2020 22:31:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/melanie_mitchell/</guid>
-      <description>She has worked at the Santa Fe Institute.
-Backlinks  What Is an Individual? Biology Seeks Clues in Information Theory.  </description>
     </item>
     
     <item>
@@ -1523,17 +1804,6 @@ Backlinks  Complexity  </description>
     </item>
     
     <item>
-      <title>Statistical complexity</title>
-      <link>https://hugocisneros.com/notes/statistical_complexity/</link>
-      <pubDate>Thu, 09 Jul 2020 14:29:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/statistical_complexity/</guid>
-      <description>tags Complexity metrics papers (Crutchfield &amp;amp; Young, 1989)  One interpretation of the statistical complexity is that it is the minimum amount of historical information required to make optimal forecasts of bits in \(x\) at the error rate \(h_\mu\).
-For periodic sequences, \(C_\mu(x) = 0\) and for ideal random sequences \(C_\mu(x) = 0\) too.
-Several researchers have tried to capture the properties of statistical complexity with practical alternatives. The resulting complexity metrics include:</description>
-    </item>
-    
-    <item>
       <title>Statistical physics</title>
       <link>https://hugocisneros.com/notes/statistical_physics/</link>
       <pubDate>Thu, 09 Jul 2020 14:29:00 +0200</pubDate>
@@ -1612,17 +1882,6 @@ Goal is to cover many combinatorial problems, TSP multi-cut, etc.
     </item>
     
     <item>
-      <title>The End of the RNA World Is Near, Biochemists Argue</title>
-      <link>https://hugocisneros.com/notes/the_end_of_the_rna_world_is_near_biochemists_argue/</link>
-      <pubDate>Thu, 09 Jul 2020 12:42:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/the_end_of_the_rna_world_is_near_biochemists_argue/</guid>
-      <description>source https://www.quantamagazine.org/the-end-of-the-rna-world-is-near-biochemists-argue-20171219/ tags Biological life  This article is about alternatives to the dominant RNA-world theories.
-Objections to RNA:
- Crucial processes that we consider part of life could not have been carried out by a single polymer, and particularly not RNA. This is because these chemical reactions have rates ranging across 20 orders of magnitude. RNA cannot explain the emergence of genetic code. It would have been too long for RNA alone to find the mapping rules from 64 three nucleotide sequences to 20 amino acids.</description>
-    </item>
-    
-    <item>
       <title>The Lottery ticket hypothesis</title>
       <link>https://hugocisneros.com/notes/the_lottery_ticket_hypothesis/</link>
       <pubDate>Thu, 09 Jul 2020 12:42:00 +0200</pubDate>
@@ -1693,16 +1952,6 @@ Two layer neural network Even simple neural network models are very difficult to
     </item>
     
     <item>
-      <title>Graham scan</title>
-      <link>https://hugocisneros.com/notes/graham_scan/</link>
-      <pubDate>Thu, 09 Jul 2020 11:08:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/graham_scan/</guid>
-      <description>Graham scan is an algorithm to find the convex hull of a set of points in 2D. It runs with a time complexity of \(\mathcal{O}(n\log n)\).
-The algorithm is relatively simple. It starts by selecting the point with lowest $y$-coordinate. At each step of the algorithm, remaining points are sorted by increasing order of the angle they and the last added point make. Then, if this new point is a</description>
-    </item>
-    
-    <item>
       <title>Complexity metrics</title>
       <link>https://hugocisneros.com/notes/complexity_metrics/</link>
       <pubDate>Tue, 07 Jul 2020 22:29:00 +0200</pubDate>
@@ -1711,16 +1960,6 @@ The algorithm is relatively simple. It starts by selecting the point with lowest
       <description>tags Complexity  To study the complexity of various systems, researchers have come up with various metrics. They are based on several principles such as Information theory or Algorithmic Information theory. Many of these metrics are described in (Grassberger, 1989).
 Shannon entropy and Kolmogorov Complexity The paper (Grunwald &amp;amp; Vitanyi, ) is a great description and analysis of two of the most important Complexity metrics:
  Shannon entropy Kolmogorov complexity  Information-theoretic metrics  Shannon entropy  AIT based metrics For a Universal computer \(U\) the algorithmic information of \(S\) relative to \(U\) is defined as the length of the shortest program that yields \(S\) on \(U\).</description>
-    </item>
-    
-    <item>
-      <title>Complex Systems</title>
-      <link>https://hugocisneros.com/notes/complex_systems/</link>
-      <pubDate>Thu, 02 Jul 2020 10:23:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/complex_systems/</guid>
-      <description>Example of complex systems  The economy (Anderson &amp;amp; Evolutionary Paths of the Global Economy Workshop, 1996)  Bibliography , The economy as an evolving complex system: the proceedings of the Evolutionary Paths of the Global Economy Workshop, held September, 1987 in Santa Fe, New Mexico (1996), Reading, Mass.: Addison-Wesley Publ. Co. ↩
-Backlinks  Complexity Automated discovery in complex systems Chemical reaction network Ising model The Cartoon Picture of Magnets That Has Transformed Science Notes on: The Architecture of Complexity by Simon, H.</description>
     </item>
     
     <item>
@@ -1811,15 +2050,6 @@ In the case of Decentralization, an almost immediate effect is the decrease of p
     </item>
     
     <item>
-      <title>Why Sex? Biologists Find New Explanations</title>
-      <link>https://hugocisneros.com/notes/why_sex_biologists_find_new_explanations/</link>
-      <pubDate>Thu, 02 Jul 2020 10:21:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/why_sex_biologists_find_new_explanations/</guid>
-      <description> source Link tags Biological life, Evolution  </description>
-    </item>
-    
-    <item>
       <title>Algorithmic Information theory</title>
       <link>https://hugocisneros.com/notes/algorithmic_information_theory/</link>
       <pubDate>Thu, 02 Jul 2020 10:20:00 +0200</pubDate>
@@ -1903,15 +2133,6 @@ Hassibi, B., &amp;amp; Stork, D. G., Second order derivatives for network prunin
     </item>
     
     <item>
-      <title>Open-endedness: The last grand challenge you’ve never heard of</title>
-      <link>https://hugocisneros.com/notes/open_endedness_the_last_grand_challenge_you_ve_never_heard_of/</link>
-      <pubDate>Thu, 02 Jul 2020 10:20:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/open_endedness_the_last_grand_challenge_you_ve_never_heard_of/</guid>
-      <description> tags Artificial Intelligence, Open-ended Evolution source Link  Backlinks  Open-ended Evolution  </description>
-    </item>
-    
-    <item>
       <title>Optimization</title>
       <link>https://hugocisneros.com/notes/optimization/</link>
       <pubDate>Thu, 02 Jul 2020 10:20:00 +0200</pubDate>
@@ -1956,17 +2177,6 @@ import numpy as np a = np.random.randrange(5, size=10) one_hot_a = np.eye(5)[a] 
       
       <guid>https://hugocisneros.com/notes/adversarial_examples/</guid>
       <description> tags Machine learning, Neural networks  Adversarial examples in Reinforcement learning Backlinks  Talk: Artificial Intelligence: A Guide for Thinking Humans  </description>
-    </item>
-    
-    <item>
-      <title>Kullback-leibler divergence</title>
-      <link>https://hugocisneros.com/notes/kullback_leibler_divergence/</link>
-      <pubDate>Thu, 02 Jul 2020 10:17:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/kullback_leibler_divergence/</guid>
-      <description>The KL divergence is not symmetric. For \(P, Q\) defined on the same probability space \(\mathcal{X}\), KL of \(Q\) from \(P\) is \[ KL(P, Q) = \sum_{x \in \mathcal{X}} P(x) \log\left( \frac{P(x)}{Q(x)} \right) \]
-It has two main interpretations:
- It is the information gain from using the right probability distribution \(P\) instead of \(Q\) or the amount of information lost by approximating \(P\) with \(Q\). The average difference in code length for a sequence following \(P\) and using a code optimized for \(Q\) to encode it.</description>
     </item>
     
     <item>
@@ -2254,16 +2464,6 @@ A colony of cells cooperates to form a multicellular organism under the directio
       
       <guid>https://hugocisneros.com/notes/ising_model/</guid>
       <description> tags Complex Systems, Physics  Backlinks  The Cartoon Picture of Magnets That Has Transformed Science  </description>
-    </item>
-    
-    <item>
-      <title>The Cartoon Picture of Magnets That Has Transformed Science</title>
-      <link>https://hugocisneros.com/notes/the_cartoon_picture_of_magnets_that_has_transformed_science/</link>
-      <pubDate>Fri, 26 Jun 2020 11:12:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/the_cartoon_picture_of_magnets_that_has_transformed_science/</guid>
-      <description>tags Ising model, Complex Systems source Quanta magazine  The Ising model is an example of very simply defined model that makes complex behavior emerge.
-Originally introduced by Wilhelm Lenz and his graduate student Ernst Ising, its purpose was to understand why magnets lose their attractive power when heated past a certain temperature. The model was first tried in 1D, where it fails to show that a magnet stays magnetized, and therefore abandoned.</description>
     </item>
     
     <item>
