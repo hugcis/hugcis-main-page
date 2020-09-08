@@ -6,10 +6,68 @@
     <description>Recent content in Notes on Hugo Cisneros - Personal page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 24 Aug 2020 16:26:00 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 07 Sep 2020 10:30:00 +0200</lastBuildDate>
     
 	<atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Fast Marching method</title>
+      <link>https://hugocisneros.com/notes/fast_marching_method/</link>
+      <pubDate>Mon, 07 Sep 2020 10:30:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/fast_marching_method/</guid>
+      <description>tags Applied maths, Algorithm  The fast marching method can be seen as a way to improve the metric issue with Dijkstra&amp;rsquo;s algorithm (which actually computes the \(\ell_1\) distance on a grid). The graph update is replaced with the Eikonal equation resolution in the FM method. This reduces the bias of using a grid and converges towards the underlying geodesic distance when the grid step size tends towards 0.</description>
+    </item>
+    
+    <item>
+      <title>Dijkstra&#39;s algorithm</title>
+      <link>https://hugocisneros.com/notes/dijkstra_s_algorithm/</link>
+      <pubDate>Mon, 07 Sep 2020 10:28:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/dijkstra_s_algorithm/</guid>
+      <description> tags Applied maths, Algorithm  Backlinks  Fast Marching method  </description>
+    </item>
+    
+    <item>
+      <title>Notes on: Hopfield Networks is All You Need by Ramsauer, H., Schäfl, B., Lehner, J., Seidl, P., Widrich, M., Gruber, L., Holzleitner, M., … (2020)</title>
+      <link>https://hugocisneros.com/notes/ramsauerhopfieldnetworksall2020/</link>
+      <pubDate>Wed, 02 Sep 2020 10:19:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/ramsauerhopfieldnetworksall2020/</guid>
+      <description>tags Hopfield Networks, Attention source ramsauerHopfieldNetworksAll2020 resources Blog post  TODO Summary TODO Comments Bibliography [ramsauerHopfieldNetworksAll2020] Ramsauer, Sch&amp;quot;afl, Lehner, Seidl, Widrich, Gruber, Holzleitner, Pavlovi&#39;c, Sandve, Greiff, Kreil, Kopp, Klambauer, Brandstetter &amp;amp; Hochreiter, Hopfield Networks Is All You Need, arXiv:2008.02217 [cs, stat], (2020). ↩</description>
+    </item>
+    
+    <item>
+      <title>Hilbert curve indexing</title>
+      <link>https://hugocisneros.com/notes/hilbert_curve_indexing/</link>
+      <pubDate>Wed, 02 Sep 2020 09:47:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/hilbert_curve_indexing/</guid>
+      <description>tags Coding  Hilbert curves can be used for an interesting trick involving 2D arrays indexing. Because of the way the Hilbert curve traverses the 2D space, indexing a 2D array this way can be a more cache-friendly solution when frequently accessing neighbors of an array element.
+ Hilbert curve with different number of iterations   C implementation from Wikipedia to convert (x,y) coordinates to linear ones and vice versa:</description>
+    </item>
+    
+    <item>
+      <title>Hopfield Networks</title>
+      <link>https://hugocisneros.com/notes/hopfield_networks/</link>
+      <pubDate>Tue, 01 Sep 2020 09:32:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/hopfield_networks/</guid>
+      <description>tags Neural networks  Hopfield networks are a kind of recurrent neural network with binary threshold nodes.
+Definition Nodes have indexes \(i \in \{1, \cdots, n\}\) and are in state \(s_i \in \{-1, 1\}\). Nodes have connections between them, characterized by a weight \(w_{ij}\). Each node also has an associated threshold \(\theta_i\) such that
+\begin{equation*} s_i \leftarrow \begin{cases} +1 &amp;amp; \text{if}\ \sum_j w_{ij} s_j \geq \theta_i, \\\
+-1 &amp;amp; \text{otherwise}.</description>
+    </item>
+    
+    <item>
+      <title>Search</title>
+      <link>https://hugocisneros.com/notes/search/</link>
+      <pubDate>Tue, 25 Aug 2020 17:06:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/search/</guid>
+      <description>Backlinks  Genetic algorithms Neural architecture search Picbreeder Novelty search Quality diversity  </description>
+    </item>
     
     <item>
       <title>Talk: The Importance of Open-Endedness in AI and Machine Learning</title>
@@ -38,7 +96,7 @@ QD is also a form of novelty search.</description>
       <pubDate>Mon, 24 Aug 2020 16:10:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/novelty_search/</guid>
-      <description> tags Search  Backlinks  Talk: The Importance of Open-Endedness in AI and Machine Learning  </description>
+      <description> tags Search  Backlinks  Quality diversity Talk: The Importance of Open-Endedness in AI and Machine Learning  </description>
     </item>
     
     <item>
@@ -135,7 +193,7 @@ And yet, the notion of what it means to be an individual often gets glossed over
       
       <guid>https://hugocisneros.com/notes/melanie_mitchell/</guid>
       <description> resources Website  She has worked at the Santa Fe Institute and studies Complex Systems, Artificial Intelligence.
-Backlinks  What Is an Individual? Biology Seeks Clues in Information Theory.  </description>
+Backlinks  Article: What Is an Individual? Biology Seeks Clues in Information Theory. Article: Uncertain times  </description>
     </item>
     
     <item>
@@ -470,7 +528,7 @@ Like for cellular automata, cells (or nodes) don&amp;rsquo;t have to be in just 
       <pubDate>Sun, 26 Jul 2020 19:57:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/nk_model/</guid>
-      <description> tags Complex Systems  </description>
+      <description> tags Complex Systems  Backlinks  ALife 2020  </description>
     </item>
     
     <item>
@@ -613,7 +671,7 @@ One hope formulated by the author is that asynchronicity could help achieve faul
       
       <guid>https://hugocisneros.com/notes/programming_languages/</guid>
       <description> tags Computer science  PL I use or have used:
- Python C Programming language C++ Javascript Rust Scala Java Ruby ELisp Haskell  Backlinks  Scala Ruby Python Rust Lisp Turing-completeness C++ Javascript Java Haskell Functional programming  </description>
+ Python C Programming language C++ Javascript Rust Scala Java Ruby ELisp Haskell  Backlinks  Scala Ruby Python Rust Lisp Turing-completeness C++ Javascript Java Haskell Functional programming Assembly language  </description>
     </item>
     
     <item>
@@ -640,7 +698,7 @@ One hope formulated by the author is that asynchronicity could help achieve faul
       <pubDate>Tue, 21 Jul 2020 08:54:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/adaptive_computation_time/</guid>
-      <description>tags Neural networks, Algorithm  Adaptive computation time (ACT) was introduced in (Graves, 2017) as a way to make computations in RNN adaptive. The network learns how many computational steps to use before emitting an output.
+      <description>tags Neural networks, Algorithm  Adaptive computation time (ACT) was introduced in gravesAdaptiveComputationTime2017 as a way to make computations in RNN adaptive. The network learns how many computational steps to use before emitting an output.
 This is done by outputting an extra halting probability at each update step, and considering two timelines:
  the input timeline which plays the role of an outer loop, at each of those step, a new input symbol is fed to the RNN.</description>
     </item>
@@ -671,7 +729,7 @@ This is done by outputting an extra halting probability at each update step, and
       <guid>https://hugocisneros.com/notes/artificial_life/</guid>
       <description>Artificial life could be thought of as attempts at re-creating biological Life or other types of life. It uses different tools such as biology, physics, chemistry, computer science, etc.
 Creating artificial life seems like a possible way to create AI, since most living systems on Earth seem to exhibit some form of robust intelligent behavior.
-Backlinks  Evolution Open-ended Evolution Notes on: Combinatory Chemistry: Towards a Simple Model of Emergent Evolution by Kruszewski, G.</description>
+Backlinks  Evolution Notes on: Combinatory Chemistry: Towards a Simple Model of Emergent Evolution by Kruszewski, G.</description>
     </item>
     
     <item>
@@ -711,7 +769,7 @@ One interesting advantage of this system is the possibility to measure the compl
       <pubDate>Mon, 20 Jul 2020 13:47:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/lenia/</guid>
-      <description> tags Cellular automata papers (Chan, ), (Chan, )  Lenia is a continuous cellular automaton. It is sometimes referred to as a &amp;ldquo;continuous Conway&amp;rsquo;s Game of Life&amp;quot;.
+      <description> tags Cellular automata papers chanLeniaBiologyArtificial2019a,chanLeniaExpandedUniverse2020  Lenia is a continuous cellular automaton. It is sometimes referred to as a &amp;ldquo;continuous Conway&amp;rsquo;s Game of Life&amp;quot;.
 Backlinks  Notes on: Intrinsically Motivated Discovery of Diverse Patterns in Self-Organizing Systems by Reinke, C., Etcheverry, M., &amp;amp; Oudeyer, P. (2020)  </description>
     </item>
     
@@ -1107,7 +1165,7 @@ Backlinks  Complexity metrics  </description>
       <description> tags Logic resources Stanford encyclopedia of Philosophy  First incompleteness theorem Any consistent formal system F within which a certain amount of elementary arithmetic can be carried out is incomplete; i.e., there are statements of the language of F which can neither be proved nor disproved in F.
 Panu Raatikainen
    This theorem was followed by several closely related theorems, such as Turing&amp;rsquo;s Halting problem
-Backlinks  The End of the RNA World Is Near, Biochemists Argue Surprisingly Turing-Complete  </description>
+Backlinks  Surprisingly Turing-Complete Article: The End of the RNA World Is Near, Biochemists Argue  </description>
     </item>
     
     <item>
@@ -1775,15 +1833,6 @@ I must admit that I am not a big fan of Tononi&amp;rsquo;s theory. The following
     </item>
     
     <item>
-      <title>Search</title>
-      <link>https://hugocisneros.com/notes/search/</link>
-      <pubDate>Thu, 09 Jul 2020 14:30:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/search/</guid>
-      <description>Backlinks  Genetic algorithms Neural architecture search  </description>
-    </item>
-    
-    <item>
       <title>Self-organization</title>
       <link>https://hugocisneros.com/notes/self_organization/</link>
       <pubDate>Thu, 09 Jul 2020 14:30:00 +0200</pubDate>
@@ -1963,6 +2012,17 @@ Shannon entropy and Kolmogorov Complexity The paper (Grunwald &amp;amp; Vitanyi,
     </item>
     
     <item>
+      <title>Neural networks</title>
+      <link>https://hugocisneros.com/notes/neural_networks/</link>
+      <pubDate>Tue, 07 Jul 2020 18:32:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/neural_networks/</guid>
+      <description>tags Machine learning  Two-layers neural network Mathematically, a simple two-layers neural network with relu non-linearities can be written like below. For an input vector \(x \in \mathbb{R}^D\), \(\mathbf{a} = (a_1, \cdots, a_N)\in \mathbb{R}^M\) are the output weights, \(\mathbf{b} = (b_1, \cdots, b_N)\in \mathbb{R}^D\) are the input weights
+\[ h(x) = \frac{1}{m} \sum_{i=1}^m a_i \max\{ b_i^\top x,0\}, \]
+Backlinks  Neural network pruning Attention Convolutional neural networks Data representation Cellular neural networks Gradient descent for wide two-layer neural networks – I : Global convergence Implicit neural representations Generative adversarial networks Talk: Artificial Intelligence: A Guide for Thinking Humans Adversarial examples Recurrent neural networks Transformers Variational autoencoders Autoencoders The Lottery ticket hypothesis Notes on: Evolving Neural Networks through Augmenting Topologies by Stanley, K.</description>
+    </item>
+    
+    <item>
       <title>Optimal transport</title>
       <link>https://hugocisneros.com/notes/optimal_transport/</link>
       <pubDate>Thu, 02 Jul 2020 10:23:00 +0200</pubDate>
@@ -1988,7 +2048,7 @@ Shannon entropy and Kolmogorov Complexity The paper (Grunwald &amp;amp; Vitanyi,
       <guid>https://hugocisneros.com/notes/data_representation/</guid>
       <description> tags Machine learning  Data representation is about finding compact representation of high dimensional data (such as images, videos, 3D shapes, etc.)
 Several methods have been developed for this purpose such as PCA, Neural networks-based representation, Autoencoders.
-Backlinks  Implicit neural representations Autoencoders  </description>
+Backlinks  Implicit neural representations Autoencoders PCA  </description>
     </item>
     
     <item>
@@ -1997,18 +2057,7 @@ Backlinks  Implicit neural representations Autoencoders  </description>
       <pubDate>Thu, 02 Jul 2020 10:22:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/evolution/</guid>
-      <description>tags Artificial life, Life  Backlinks  Boltzmann brain Why Sex? Biologists Find New Explanations Neural architecture search Complexity Cellular automata Artificial Intelligence Open-ended Evolution Ontogeny recapitulates phylogeny Notes on: The Architecture of Complexity by Simon, H. A. (1962) Notes on: Evolution in asynchronous cellular automata by Nehaniv, C. L. (2003) Notes on: Complexity and evolution: What everybody knows by McShea, D. W. (1991) Notes on: AI-GAs: AI-generating algorithms, an alternate paradigm for producing general artificial intelligence by Clune, J.</description>
-    </item>
-    
-    <item>
-      <title>Neural networks</title>
-      <link>https://hugocisneros.com/notes/neural_networks/</link>
-      <pubDate>Thu, 02 Jul 2020 10:22:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/neural_networks/</guid>
-      <description>tags Machine learning  Two-layers neural network Mathematically, a simple two-layers neural network with relu non-linearities can be written like below. For an input vector \(x \in \mathbb{R}^D\), \(\mathbf{a} = (a_1, \cdots, a_N)\in \mathbb{R}^M\) are the output weights, \(\mathbf{b} = (b_1, \cdots, b_N)\in \mathbb{R}^D\) are the input weights
-\[ h(x) = \frac{1}{m} \sum_{i=1}^m a_i \max\{ b_i^\top x,0\}, \]
-Backlinks  CPPN The Lottery ticket hypothesis Autoencoders Neural network training Mean field theory of neural networks (talk) Compression Notes on: Stanley, K.</description>
+      <description>tags Artificial life, Life  Backlinks  Boltzmann brain Complexity Cellular automata Ontogeny recapitulates phylogeny Notes on: The Architecture of Complexity by Simon, H. A. (1962) Notes on: Complexity and evolution: What everybody knows by McShea, D. W. (1991) Notes on: AI-GAs: AI-generating algorithms, an alternate paradigm for producing general artificial intelligence by Clune, J. (2019) Artificial Intelligence Avida Tierra Notes on: The information theory of individuality by Krakauer, D.</description>
     </item>
     
     <item>
@@ -2017,7 +2066,7 @@ Backlinks  CPPN The Lottery ticket hypothesis Autoencoders Neural network traini
       <pubDate>Thu, 02 Jul 2020 10:21:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/convolutional_neural_networks/</guid>
-      <description> tags Neural networks  Backlinks  Talk: Artificial Intelligence: A Guide for Thinking Humans Cellular automata as CNNs Notes on: Network Deconvolution by Ye, C., Evanusa, M., He, H., Mitrokhin, A., Goldstein, T., Yorke, J. A., Fermuller, Cornelia, … (2020)  </description>
+      <description> tags Neural networks  Backlinks  Talk: Artificial Intelligence: A Guide for Thinking Humans Cellular automata as CNNs Notes on: Network Deconvolution by Ye, C., Evanusa, M., He, H., Mitrokhin, A., Goldstein, T., Yorke, J. A., Fermuller, Cornelia, … (2020) Notes on: Neural Architecture Search with Reinforcement Learning by Zoph, B., &amp;amp; Le, Q. V. (2017)  </description>
     </item>
     
     <item>
@@ -2101,7 +2150,7 @@ In the case of Decentralization, an almost immediate effect is the decrease of p
       
       <guid>https://hugocisneros.com/notes/genetic_algorithm/</guid>
       <description>Genetic algorithms are mostly used as optimization algorithms for Search problems, where usual optimization techniques such as gradient-based ones aren&amp;rsquo;t very effective.
-Backlinks  Neural architecture search Automated discovery in complex systems Computing in cellular automata CPPN Notes on: Modeling systems with internal state using evolino by Wierstra, D., Gomez, F. J., &amp;amp; Schmidhuber, J. (2005) Notes on: Evolving Neural Networks through Augmenting Topologies by Stanley, K. O., &amp;amp; Miikkulainen, R.</description>
+Backlinks  Computing in cellular automata Notes on: Modeling systems with internal state using evolino by Wierstra, D., Gomez, F. J., &amp;amp; Schmidhuber, J. (2005) Notes on: Evolving Neural Networks through Augmenting Topologies by Stanley, K. O., &amp;amp; Miikkulainen, R. (2002) CPPN Automated discovery in complex systems Notes on: AI-GAs: AI-generating algorithms, an alternate paradigm for producing general artificial intelligence by Clune, J.</description>
     </item>
     
     <item>
@@ -2128,8 +2177,9 @@ Backlinks  Neural architecture search Automated discovery in complex systems Com
       <pubDate>Thu, 02 Jul 2020 10:20:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/neural_network_pruning/</guid>
-      <description>tags Neural networks papers (LeCun et al., 1990), (Hassibi &amp;amp; Stork, 1993), (Han et al., 2015), (Li et al., 2016)  Bibliography LeCun, Y., Denker, J. S., &amp;amp; Solla, S. A., Optimal Brain Damage, In , Advances in Neural Information Processing Systems (pp. 598–605) (1990). : . ↩
-Hassibi, B., &amp;amp; Stork, D. G., Second order derivatives for network pruning: Optimal brain surgeon, In , Advances in Neural Information Processing Systems (pp.</description>
+      <description>tags Neural networks papers lecunOptimalBrainDamage1990,hassibiSecondOrderDerivatives1993,hanLearningBothWeights2015,liPruningFiltersEfficient2016  Bibliography [lecunOptimalBrainDamage1990] LeCun, Denker &amp;amp; Solla, Optimal Brain Damage, 598-605, in in: Advances in Neural Information Processing Systems, edited by (1990) ↩
+[hassibiSecondOrderDerivatives1993] Hassibi &amp;amp; Stork, Second Order Derivatives for Network Pruning: Optimal Brain Surgeon, 164-171, in in: Advances in Neural Information Processing Systems, edited by (1993) ↩
+[hanLearningBothWeights2015] Han, Pool, Tran &amp;amp; Dally, Learning Both Weights and Connections for Efficient Neural Network, 1135-1143, in in: Advances in Neural Information Processing Systems, edited by (2015) ↩</description>
     </item>
     
     <item>
@@ -2274,9 +2324,9 @@ Backlinks  Turing-completeness  </description>
       <pubDate>Wed, 01 Jul 2020 14:20:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/cellular_automata_as_regular_languages/</guid>
-      <description>tags Cellular automata, Finite state machines  From (Hanson &amp;amp; Crutchfield, 1997):
+      <description>tags Cellular automata, Finite state machines  From hansonComputationalMechanicsCellular1997:
  Finite state machines are appropriate for investigating pattern dynamics of CAs for a number of reasons, among which we may note the following:
- FAs encompass the full range of behavior types from periodic to complex to random; Characterization of patterns using FAs makes possible a definition of pattern complexity which is both natural and computable in practice; Ensemble evolution in the space of regular languages is closed under the CA rule; The CA update rule is itself an FST; Automated inference techniques exist for reconstructing FAs from experimental data   Bibliography Hanson, J.</description>
+ FAs encompass the full range of behavior types from periodic to complex to random; Characterization of patterns using FAs makes possible a definition of pattern complexity which is both natural and computable in practice; Ensemble evolution in the space of regular languages is closed under the CA rule; The CA update rule is itself an FST; Automated inference techniques exist for reconstructing FAs from experimental data   Bibliography [hansonComputationalMechanicsCellular1997] Hanson &amp;amp; Crutchfield, Computational Mechanics of Cellular Automata: An Example, Physica D: Nonlinear Phenomena, 103(1), 169-189 (1997).</description>
     </item>
     
     <item>
@@ -2290,22 +2340,22 @@ Chua, L., &amp;amp; Yang, L., Cellular neural networks: theory, IEEE Transaction
     </item>
     
     <item>
+      <title>Attention</title>
+      <link>https://hugocisneros.com/notes/attention/</link>
+      <pubDate>Wed, 01 Jul 2020 08:18:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/attention/</guid>
+      <description>tags Neural networks  Self-attention is a weighted average of all input elements from a sequence, with a weight proportional to a similarity score between representations. The input \(x \in \mathbb{R}^{L \times F}\) is projected by matrices \(W_Q \in \mathbb{R}^{F \times D}\), \(W_K \in \mathbb{R}^{F\times D}\) and \(W_V \in \mathbb{R}^{F\times M}\) to representations \(Q\) (queries), \(K\) (keys) and \(V\) (values).
+\[ Q = xW_Q\] \[ K = xW_K\] \[ V = xW_V\]</description>
+    </item>
+    
+    <item>
       <title>Kernel Methods</title>
       <link>https://hugocisneros.com/notes/kernel_methods/</link>
       <pubDate>Wed, 01 Jul 2020 08:14:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/kernel_methods/</guid>
       <description> tags Machine learning  Backlinks  Notes on: Katharopoulos, A., Vyas, A., Pappas, N., &amp;amp; Fleuret, F. (2020): Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention  </description>
-    </item>
-    
-    <item>
-      <title>Attention</title>
-      <link>https://hugocisneros.com/notes/attention/</link>
-      <pubDate>Tue, 30 Jun 2020 15:16:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/attention/</guid>
-      <description>tags Neural networks  Self-attention is a weighted average of all input elements from a sequence, with a weight proportional to a similarity score between representations. The input \(x \in \mathbb{R}^{L \times F}\) is projected by matrices \(W_Q \in \mathbb{R}^{F \times D}\), \(W_K \in \mathbb{R}^{F\times D}\) and \(W_V \in \mathbb{R}^{F\times M}\) to representations \(Q\) (queries), \(K\) (keys) and \(V\) (values).
-\[ Q = xW_Q\] \[ K = xW_K\] \[ V = xW_V\]</description>
     </item>
     
     <item>
@@ -2392,9 +2442,9 @@ Backlinks  Language modeling Notes on: Katharopoulos, A., Vyas, A., Pappas, N., 
       <pubDate>Sun, 28 Jun 2020 10:07:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/language_modeling/</guid>
-      <description>tags NLP  LM with RNNs. Different models have been studied, starting from the initial Recurrent neural network based language model (Mikolov et al., 2011).
-LSTM were then used with more success than previous models (Zaremba et al., 2015).
-LM with Transformers Language modeling and Compression Text generation Language models can be used to generate text from a prompt or starting sentence. This is the kind of examples that made models like GPT-2 and GPT-3 famous, because of their ability to generate long sequences of apparently coherent text (Radford et al.</description>
+      <description>tags NLP  LM with RNNs. Different models have been studied, starting from the initial Recurrent neural network based language model mikolovRecurrentNeuralNetwork2011.
+LSTM were then used with more success than previous models zarembaRecurrentNeuralNetwork2015.
+LM with Transformers Language modeling and Compression Text generation Language models can be used to generate text from a prompt or starting sentence. This is the kind of examples that made models like GPT-2 and GPT-3 famous, because of their ability to generate long sequences of apparently coherent text radfordLanguageModelsAre2019,brownLanguageModelsAre2020.</description>
     </item>
     
     <item>
@@ -2403,8 +2453,8 @@ LM with Transformers Language modeling and Compression Text generation Language 
       <pubDate>Sun, 28 Jun 2020 10:07:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/nlp/</guid>
-      <description> tags Machine learning, Language  NLP is about creating algorithms that can manipulate and use language. It is often thought that having functioning NLP algorithms that provably &amp;ldquo;understand&amp;rdquo; language would be equivalent to reaching human-level Artificial Intelligence.
-Tasks Language modeling Text classification Question answering Backlinks  Text classification Language modeling Evaluating NLP  </description>
+      <description>tags Machine learning, Language  NLP is about creating algorithms that can manipulate and use language. It is often thought that having functioning NLP algorithms that provably &amp;ldquo;understand&amp;rdquo; language would be equivalent to reaching human-level Artificial Intelligence.
+Tasks Language modeling Text classification Question answering Backlinks  Language modeling Transformers Text classification Notes on: Climbing towards NLU: On Meaning, Form, and Understanding in the Age of Data by Bender, E. M.</description>
     </item>
     
     <item>
@@ -2452,9 +2502,9 @@ Backlinks  NLP  </description>
       <pubDate>Fri, 26 Jun 2020 11:12:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/amorphous_computing/</guid>
-      <description>tags Unconventional computing papers (Abelson et al., 2000) resources Wikipedia, CSAIL&amp;rsquo;s website   From (Abelson et al., 2000):
+      <description>tags Unconventional computing papers abelsonAmorphousComputing2000 resources Wikipedia, CSAIL&amp;rsquo;s website   From abelsonAmorphousComputing2000:
 A colony of cells cooperates to form a multicellular organism under the direction of a genetic program shared by the members of the colony. A swarm of bees cooperates to construct a hive. Humans group together to build towns, cities, and nations.
- Amorphous computing was coined by Abelson, Knight, Sussman et al.</description>
+ Amorphous computing was coined by Abelson, Knight, Sussman et al. It refers to computational systems composed of a large number of identical parallel devices (processors) with limited computational capacity.</description>
     </item>
     
     <item>

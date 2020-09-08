@@ -1,73 +1,85 @@
 d3.json("/js/graph.json").then(function(data) {
-    height = 1200;
-    width = 1800;
+    height = 1300;
+    width = 1900;
     scale = 1.;
     radius = d => {
-        return 7 + 25 * Math.pow(d.centrality, 4/5);
+        if (!d.radius) {
+            d.radius = 10 + 25 * Math.pow(d.centrality, 4/5);
+        }
+        return d.radius;
     };
     color = "#ffffff";
 
     num_colors = Math.max(...data.nodes.map(d => d.communityLabel)) + 1;
-    nodeColors = [];
-    for (i = 0; i < 360; i += (360 - 20) / num_colors) {
-        hue = i;
-        saturation = 90 + Math.random() * 10;
-        lightness = 40 + Math.random() * 10;
-        nodeColors.push(`hsl(${hue},${saturation}%,${lightness}%)`);
-    }
+    angleArr = [...Array(num_colors).keys()].map(x => 2 * Math.PI * x / num_colors);
+    centersx = angleArr.map(x => Math.cos(Math.PI + x));
+    centersy = angleArr.map(x => Math.sin(Math.PI + x));
+    nodeColors = [
+        '#C98914',
+        '#C55F1A',
+        '#4189AD',
+        '#007500',
+        '#968674',
+        '#5E998A',
+    ];
     nodeColor = d => {
         return nodeColors[d.communityLabel];
     };
 
     drag = simulation => {
-
-        function dragstarted(d) {
-            if (!d3.event.active) simulation.alphaTarget(0.3).restart();
-            d.fx = d.x;
-            d.fy = d.y;
+        function dragsubject(event) {
+            return simulation.find(event.x, event.y);
         }
 
-        function dragged(d) {
-            d.fx = d3.event.x;
-            d.fy = d3.event.y;
+        function dragstarted(event) {
+            if (!event.active) simulation.alphaTarget(0.3).restart();
+            event.subject.fx = event.subject.x;
+            event.subject.fy = event.subject.y;        }
+
+        function dragged(event) {
+            event.subject.fx = event.x;
+            event.subject.fy = event.y;
         }
 
-        function dragended(d) {
-            if (!d3.event.active) simulation.alphaTarget(0);
-            d.fx = null;
-            d.fy = null;
+        function dragended(event) {
+            if (!event.active) simulation.alphaTarget(0);
+            event.subject.fx = null;
+            event.subject.fy = null;
         }
 
         return d3.drag()
+            .subject(dragsubject)
             .on("start", dragstarted)
             .on("drag", dragged)
             .on("end", dragended);
     };
 
-    handleMouseOver = (d, i, g) => {
-        nde = d3.select(g[i]);
+    handleMouseOver = (d, i) => {
+        nde = d3.select(d.currentTarget);
         nde.attr("fill", "#999")
             .attr("r", nde.attr("r") * 1.3);
 
         d3.selectAll("text")
-            .filter('#' + CSS.escape(g[i].id))
+            .filter('#' + CSS.escape(d.currentTarget.id))
             .style("display", "block");
 
         d3.selectAll("line")
             .attr("stroke-width", 1);
 
         d3.selectAll("line")
-            .filter((l, idx) => l.source.index == i || l.target.index == i)
+            .filter((l, idx) =>
+                    l.source.index == i.index ||
+                    l.target.index == i.index)
             .attr("stroke-width", 5);
     };
 
-    handleMouseOut = (d, i, g) => {
-        nde = d3.select(g[i]);
+    handleMouseOut = (d, i) => {
+        nde = d3.select(d.currentTarget);
         nde.attr("fill", nodeColor)
             .attr("r", nde.attr("r") / 1.3);
 
         d3.selectAll("text")
-            .filter('#' + CSS.escape(g[i].id))
+            .filter('#' + CSS.escape(d.currentTarget.id))
             .style("display", "none");
 
     };
@@ -78,9 +90,16 @@ d3.json("/js/graph.json").then(function(data) {
     const simulation = d3.forceSimulation(nodes)
           .force("link", d3.forceLink(links).id(d => d.id))
           .force("charge", d3.forceManyBody()
-                 .strength(-180))
-          .force("x", d3.forceX(width / 2))
-          .force("y", d3.forceY(height / 2));
+                 .strength(-190))
+          .force('collision', d3.forceCollide().radius(d => radius(d) + 3))
+          .force('x', d3.forceX().x(function(d) {
+              return width / 2 +  (width / 5) * centersx[d.communityLabel];
+          }))
+          .force('y', d3.forceY().y(function(d) {
+              return height / 2 +  (height / 12) * centersy[d.communityLabel];
+          }));
+          // .force("x", d3.forceX(width / 2))
+          // .force("y", d3.forceY(height / 2));
 
     const svg = d3.select("svg")
           .attr('max-width', '60%')

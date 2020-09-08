@@ -4,12 +4,42 @@
     
     <url>
         <loc>https://hugocisneros.com/</loc>
-        <lastmod>2020-08-24T16:26:00+02:00</lastmod>
+        <lastmod>2020-09-07T10:30:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/fast_marching_method/</loc>
+        <lastmod>2020-09-07T10:30:00+02:00</lastmod>
     </url>
     
     <url>
         <loc>https://hugocisneros.com/notes/</loc>
-        <lastmod>2020-08-24T16:26:00+02:00</lastmod>
+        <lastmod>2020-09-07T10:30:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/dijkstra_s_algorithm/</loc>
+        <lastmod>2020-09-07T10:28:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/ramsauerhopfieldnetworksall2020/</loc>
+        <lastmod>2020-09-02T10:19:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/hilbert_curve_indexing/</loc>
+        <lastmod>2020-09-02T09:47:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/hopfield_networks/</loc>
+        <lastmod>2020-09-01T09:32:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/search/</loc>
+        <lastmod>2020-08-25T17:06:00+02:00</lastmod>
     </url>
     
     <url>
@@ -913,11 +943,6 @@
     </url>
     
     <url>
-        <loc>https://hugocisneros.com/notes/search/</loc>
-        <lastmod>2020-07-09T14:30:00+02:00</lastmod>
-    </url>
-    
-    <url>
         <loc>https://hugocisneros.com/notes/self_organization/</loc>
         <lastmod>2020-07-09T14:30:00+02:00</lastmod>
     </url>
@@ -1008,6 +1033,11 @@
     </url>
     
     <url>
+        <loc>https://hugocisneros.com/notes/neural_networks/</loc>
+        <lastmod>2020-07-07T18:32:00+02:00</lastmod>
+    </url>
+    
+    <url>
         <loc>https://hugocisneros.com/notes/optimal_transport/</loc>
         <lastmod>2020-07-02T10:23:00+02:00</lastmod>
     </url>
@@ -1024,11 +1054,6 @@
     
     <url>
         <loc>https://hugocisneros.com/notes/evolution/</loc>
-        <lastmod>2020-07-02T10:22:00+02:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/neural_networks/</loc>
         <lastmod>2020-07-02T10:22:00+02:00</lastmod>
     </url>
     
@@ -1178,13 +1203,13 @@
     </url>
     
     <url>
-        <loc>https://hugocisneros.com/notes/kernel_methods/</loc>
-        <lastmod>2020-07-01T08:14:00+02:00</lastmod>
+        <loc>https://hugocisneros.com/notes/attention/</loc>
+        <lastmod>2020-07-01T08:18:00+02:00</lastmod>
     </url>
     
     <url>
-        <loc>https://hugocisneros.com/notes/attention/</loc>
-        <lastmod>2020-06-30T15:16:00+02:00</lastmod>
+        <loc>https://hugocisneros.com/notes/kernel_methods/</loc>
+        <lastmod>2020-07-01T08:14:00+02:00</lastmod>
     </url>
     
     <url>
