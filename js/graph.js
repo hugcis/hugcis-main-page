@@ -4,7 +4,7 @@ d3.json("/js/graph.json").then(function(data) {
     scale = 1.;
     radius = d => {
         if (!d.radius) {
-            d.radius = 10 + 25 * Math.pow(d.centrality, 4/5);
+            d.radius = 11 + 24 * Math.pow(d.centrality, 4/5);
         }
         return d.radius;
     };
@@ -22,6 +22,7 @@ d3.json("/js/graph.json").then(function(data) {
         '#968674',
         '#5E998A',
     ];
+
     nodeColor = d => {
         return nodeColors[d.communityLabel];
     };
@@ -57,7 +58,7 @@ d3.json("/js/graph.json").then(function(data) {
     handleMouseOver = (d, i) => {
         nde = d3.select(d.currentTarget);
         nde.attr("fill", "#999")
-            .attr("r", nde.attr("r") * 1.3);
+            .attr("r", nde.attr("r") * 1.4);
 
         d3.selectAll("text")
             .filter('#' + CSS.escape(d.currentTarget.id))
@@ -70,13 +71,13 @@ d3.json("/js/graph.json").then(function(data) {
             .filter((l, idx) =>
                     l.source.index == i.index ||
                     l.target.index == i.index)
-            .attr("stroke-width", 5);
+            .attr("stroke-width", 8);
     };
 
     handleMouseOut = (d, i) => {
         nde = d3.select(d.currentTarget);
         nde.attr("fill", nodeColor)
-            .attr("r", nde.attr("r") / 1.3);
+            .attr("r", nde.attr("r") / 1.4);
 
         d3.selectAll("text")
             .filter('#' + CSS.escape(d.currentTarget.id))
@@ -87,19 +88,19 @@ d3.json("/js/graph.json").then(function(data) {
     const links = data.links.map(d => Object.create(d));
     const nodes = data.nodes.map(d => Object.create(d));
 
-    const simulation = d3.forceSimulation(nodes)
+
+    simulation = d3.forceSimulation(nodes)
+        .velocityDecay(0.3)
           .force("link", d3.forceLink(links).id(d => d.id))
           .force("charge", d3.forceManyBody()
                  .strength(-190))
-          .force('collision', d3.forceCollide().radius(d => radius(d) + 3))
+          .force('collision', d3.forceCollide().radius(d => radius(d) + 4))
           .force('x', d3.forceX().x(function(d) {
               return width / 2 +  (width / 5) * centersx[d.communityLabel];
           }))
           .force('y', d3.forceY().y(function(d) {
               return height / 2 +  (height / 12) * centersy[d.communityLabel];
           }));
-          // .force("x", d3.forceX(width / 2))
-          // .force("y", d3.forceY(height / 2));
 
     const svg = d3.select("svg")
           .attr('max-width', '60%')
@@ -112,8 +113,9 @@ d3.json("/js/graph.json").then(function(data) {
           .selectAll("line")
           .data(links)
           .join("line")
-          .attr("marker-end", "url(#head)")
+          .attr("stroke-dasharray", d => (d.predicted? "5,5": "0,0"))
           .attr("stroke-width", 1);
+
 
     const node = svg.append("g")
           .selectAll("circle")
@@ -164,6 +166,8 @@ d3.json("/js/graph.json").then(function(data) {
           .style("pointer-events", "none")
           .style("alignment-baseline", "middle");
 
+    sort_items();
+
     simulation.on("tick", () => {
         link.attr("x1", d => d.source.x)
             .attr("y1", d => d.source.y)
@@ -179,5 +183,4 @@ d3.json("/js/graph.json").then(function(data) {
         label_background.attr("x", d => d.x)
             .attr("y", d => d.y);
     });
-    sort_items();
 });

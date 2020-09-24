@@ -49,7 +49,7 @@ media="all" type="text/css">
 <ul class="nav-links">
 <li><a href="/about/">About</a></li>
 <li><a href="/blog/">Blog</a></li>
-<li><a href="/other/">Other</a></li>
+<li><a href="/notes/">Notes</a></li>
 <li><a href="/resume/cv.pdf">Resume</a></li>
 </ul>
 </nav>
@@ -85,21 +85,17 @@ processed locally in parallel</strong>.</p>
 <h2 id="relevant-literature">Relevant literature</h2>
 <p>Cellular automata can easily be represented as Convolutional
 Neural Networks (CNNs). This relation has already been investigated
-in <a id="feab210e96cd376dff269508ad415b85" href=
-"#gilpinCellularAutomataConvolutional2018">(Gilpin, 2018)</a> or
-<a id="b71c53b928ac63b5999b34d6c7621b33" href=
-"#mordvintsevGrowingNeuralCellular2020">(Mordvintsev et al.,
-2020)</a> for instance. This idea has advantages and drawbacks:</p>
+in (<a href="#orgf306abd">Gilpin 2018</a>) or (<a href=
+"#orgdac932b">Mordvintsev et al. 2020</a>) for instance. This idea
+has advantages and drawbacks:</p>
 <ul>
 <li>Computational cost of using floating points operations is
 higher than discrete operations.</li>
 <li>Discrete operations can lead to exponential growth of the
 number of possible configurations and update rules in a CA. This is
 why rules aren’t represented as bijective tables matching
-neighborhoods to states anymore in <a id=
-"b71c53b928ac63b5999b34d6c7621b33" href=
-"#mordvintsevGrowingNeuralCellular2020">(Mordvintsev et al.,
-2020)</a>.</li>
+neighborhoods to states anymore in (<a href=
+"#orgdac932b">Mordvintsev et al. 2020</a>).</li>
 <li>The use of floating point operations is mainly there to be able
 to compute gradients for gradient based optimization. This is
 against a <em>non-supervised</em> philosophy I am trying to work
@@ -120,26 +116,21 @@ back to the network at each step. A simple <a href=
 "/notes/elementary_cellular_automata/">ECA</a> rule such as rule
 110 is easily implemented in this type of convolutional neural
 network, hence Turing-completeness.</p>
-<h1 id="bibliography">Bibliography</h1>
-<p><a id="gilpinCellularAutomataConvolutional2018" target=
-"_blank">Gilpin, W., <em>Cellular automata as convolutional neural
-networks</em>, arXiv:1809.02942 [cond-mat, physics:nlin,
-physics:physics], <em>()</em>, (2018).</a> <a href=
-"#feab210e96cd376dff269508ad415b85">↩</a></p>
-<p><a id="mordvintsevGrowingNeuralCellular2020" target=
-"_blank">Mordvintsev, A., Randazzo, E., Niklasson, E., & Levin, M.,
-<em>Growing Neural Cellular Automata</em>, Distill, <em>5(2)</em>,
-23 (2020).</a> <a href=
-"http://dx.doi.org/10.23915/distill.00023">http://dx.doi.org/10.23915/distill.00023</a>
-<a href="#b71c53b928ac63b5999b34d6c7621b33">↩</a></p>
+<h2 id="bibliography">Bibliography</h2>
+<p><a id="orgf306abd"></a>Gilpin, William. 2018. “Cellular Automata
+as Convolutional Neural Networks.” <em>arXiv:1809.02942 [Cond-Mat,
+Physics:Nlin, Physics:Physics]</em>, September.</p>
+<p><a id="orgdac932b"></a>Mordvintsev, Alexander, Ettore Randazzo,
+Eyvind Niklasson, and Michael Levin. 2020. “Growing Neural Cellular
+Automata.” <em>Distill</em> 5 (2):e23.</p>
 <h2 id="backlinks">Backlinks</h2>
 <ul>
 <li><a href="/notes/mordvintsevgrowingneuralcellular2020/">Notes
-on: Mordvintsev, A., Randazzo, E., Niklasson, E., & Levin, M.
-(2020): Growing Neural Cellular Automata</a></li>
+on: Growing Neural Cellular Automata by Mordvintsev, A., Randazzo,
+E., Niklasson, E., & Levin, M. (2020)</a></li>
 <li><a href="/notes/gilpincellularautomataconvolutional2018/">Notes
-on: Gilpin, W. (2018): Cellular automata as convolutional neural
-networks</a></li>
+on: Cellular automata as convolutional neural networks by Gilpin,
+W. (2018)</a></li>
 </ul>
 </div>
 <div class="note-footer">Last changed <a class="u-url" href=

@@ -49,7 +49,7 @@ media="all" type="text/css">
 <ul class="nav-links">
 <li><a href="/about/">About</a></li>
 <li><a href="/blog/">Blog</a></li>
-<li><a href="/other/">Other</a></li>
+<li><a href="/notes/">Notes</a></li>
 <li><a href="/resume/cv.pdf">Resume</a></li>
 </ul>
 </nav>
@@ -88,68 +88,41 @@ learning</a>-based NAS</h2>
 based on the use of a <a href=
 "/notes/recurrent_neural_networks/">RNN</a> as a controller and
 generator of architectures. The search-space is pre-defined and
-explored in a rigid way. <sup id=
-"a283bf303d6337f87e8d4efeb5df8b7d"><a href=
-"#zophNeuralArchitectureSearch2017" title=
-"Zoph \&amp; Le, Neural {{Architecture Search}} with {{Reinforcement Learning}}, {arXiv:1611.01578 [cs]}, v(), (2017).">
-zophNeuralArchitectureSearch2017</a></sup>.</p>
+explored in a rigid way. (<a href="#org6cfcdb3">Zoph and Le
+2017</a>).</p>
 <p>The process of generating architectures from the first article
 was extremely lengthy and replaced later by a more constrained
-search. <sup id="dbba5c99b9c751b32b6e58174c2800ab"><a href=
-"#zophLearningTransferableArchitectures2018" title=
-"Zoph, Vasudevan, Shlens \&amp; Le, Learning {{Transferable Architectures}} for {{Scalable Image Recognition}}, {arXiv:1707.07012 [cs, stat]}, v(), (2018).">
-zophLearningTransferableArchitectures2018</a></sup>.</p>
+search. (<a href="#orgc91fec6">Zoph et al. 2018</a>).</p>
 <p>Recent ideas include the use of parameter sharing across
 architectures because the main bottleneck of previous techniques
 was essentially in the training of each child model. This results
-in significant speedup of RL-based NAS. <sup id=
-"fec97e39a1f34b9aa84ee30e76ef1fd0"><a href=
-"#phamEfficientNeuralArchitecture2018" title=
-"Pham, Guan, Zoph, Le \&amp; Dean, Efficient {{Neural Architecture Search}} via {{Parameter Sharing}}, {arXiv:1802.03268 [cs, stat]}, v(), (2018).">
-phamEfficientNeuralArchitecture2018</a></sup></p>
+in significant speedup of RL-based NAS. (<a href="#orgde862f9">Pham
+et al. 2018</a>)</p>
 <h2 id="neuroevolution">Neuroevolution</h2>
 <p>This field is more focused on <a href=
 "/notes/evolution/">evolution</a> neural network through
 evolutionary methods such as e.g <a href=
 "/notes/genetic_algorithm/">genetic algorithms</a>. One of the main
 work that made that field popular is <a href=
-"/notes/neat/">NEAT</a> <sup id=
-"9af7b8b9640ea8d7a87a4d4e9ed0b9c5"><a href=
-"#stanleyEvolvingNeuralNetworks2002" title=
-"Stanley \&amp; Miikkulainen, Evolving {{Neural Networks}} through {{Augmenting Topologies}}, {Evolutionary Computation}, v(2), 99--127 (2002).">
-stanleyEvolvingNeuralNetworks2002</a></sup>.</p>
-<h1 id="bibliography">Bibliography</h1>
-<p><a id=
-"zophNeuralArchitectureSearch2017"></a>[zophNeuralArchitectureSearch2017]
-Zoph & Le, Neural Architecture Search with Reinforcement Learning,
-<i>arXiv:1611.01578 [cs]</i>, (2017). <a href=
-"#a283bf303d6337f87e8d4efeb5df8b7d">↩</a></p>
-<p><a id=
-"zophLearningTransferableArchitectures2018"></a>[zophLearningTransferableArchitectures2018]
-Zoph, Vasudevan, Shlens & Le, Learning Transferable Architectures
-for Scalable Image Recognition, <i>arXiv:1707.07012 [cs, stat]</i>,
-(2018). <a href="#dbba5c99b9c751b32b6e58174c2800ab">↩</a></p>
-<p><a id=
-"phamEfficientNeuralArchitecture2018"></a>[phamEfficientNeuralArchitecture2018]
-Pham, Guan, Zoph, Le & Dean, Efficient Neural Architecture Search
-via Parameter Sharing, <i>arXiv:1802.03268 [cs, stat]</i>, (2018).
-<a href="#fec97e39a1f34b9aa84ee30e76ef1fd0">↩</a></p>
-<p><a id=
-"stanleyEvolvingNeuralNetworks2002"></a>[stanleyEvolvingNeuralNetworks2002]
-Stanley & Miikkulainen, Evolving Neural Networks through Augmenting
-Topologies, <i>Evolutionary Computation</i>, <b>10(2)</b>, 99-127
-(2002). <a href=
-"http://dx.doi.org/10.1162/106365602320169811">doi</a>. <a href=
-"#9af7b8b9640ea8d7a87a4d4e9ed0b9c5">↩</a></p>
+"/notes/neat/">NEAT</a> (<a href="#org677562f">Stanley and
+Miikkulainen 2002</a>).</p>
+<h2 id="bibliography">Bibliography</h2>
+<p><a id="orgde862f9"></a>Pham, Hieu, Melody Y. Guan, Barret Zoph,
+Quoc V. Le, and Jeff Dean. 2018. “Efficient Neural Architecture
+Search via Parameter Sharing.” <em>arXiv:1802.03268 [Cs,
+Stat]</em>, February.</p>
+<p><a id="org677562f"></a>Stanley, Kenneth O., and Risto
+Miikkulainen. 2002. “Evolving Neural Networks Through Augmenting
+Topologies.” <em>Evolutionary Computation</em> 10 (2):99–127.</p>
+<p><a id="orgc91fec6"></a>Zoph, Barret, Vijay Vasudevan, Jonathon
+Shlens, and Quoc V. Le. 2018. “Learning Transferable Architectures
+for Scalable Image Recognition.” <em>arXiv:1707.07012 [Cs,
+Stat]</em>, April.</p>
+<p><a id="org6cfcdb3"></a>Zoph, Barret, and Quoc V. Le. 2017.
+“Neural Architecture Search with Reinforcement Learning.”
+<em>arXiv:1611.01578 [Cs]</em>, February.</p>
 <h2 id="backlinks">Backlinks</h2>
 <ul>
-<li><a href="/notes/stanleyevolvingneuralnetworks2002/">Notes on:
-Evolving Neural Networks through Augmenting Topologies by Stanley,
-K. O., & Miikkulainen, R. (2002)</a></li>
-<li><a href=
-"/notes/floreanoneuroevolutionarchitectureslearning2008/">Notes on:
-Neuroevolution: from architectures to learning by Floreano, D.,
-Dürr, P., & Mattiussi, C. (2008)</a></li>
 <li><a href=
 "/notes/zophlearningtransferablearchitectures2018/">Notes on:
 Learning Transferable Architectures for Scalable Image Recognition
@@ -157,6 +130,13 @@ by Zoph, B., Vasudevan, V., Shlens, J., & Le, Q. V. (2018)</a></li>
 <li><a href="/notes/zophneuralarchitecturesearch2017/">Notes on:
 Neural Architecture Search with Reinforcement Learning by Zoph, B.,
 & Le, Q. V. (2017)</a></li>
+<li><a href=
+"/notes/floreanoneuroevolutionarchitectureslearning2008/">Notes on:
+Neuroevolution: from architectures to learning by Floreano, D.,
+Dürr, P., & Mattiussi, C. (2008)</a></li>
+<li><a href="/notes/stanleyevolvingneuralnetworks2002/">Notes on:
+Evolving Neural Networks through Augmenting Topologies by Stanley,
+K. O., & Miikkulainen, R. (2002)</a></li>
 </ul>
 </div>
 <div class="note-footer">Last changed <a class="u-url" href=

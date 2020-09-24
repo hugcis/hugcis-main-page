@@ -50,7 +50,7 @@ media="all" type="text/css">
 <ul class="nav-links">
 <li><a href="/about/">About</a></li>
 <li><a href="/blog/">Blog</a></li>
-<li><a href="/other/">Other</a></li>
+<li><a href="/notes/">Notes</a></li>
 <li><a href="/resume/cv.pdf">Resume</a></li>
 </ul>
 </nav>
@@ -71,8 +71,7 @@ Intelligence</a>, <a href="/notes/genetic_algorithm/">Genetic
 algorithms</a>, <a href="/notes/open_ended_evolution/">Open-ended
 Evolution</a></dd>
 <dt>source</dt>
-<dd><a id="ca9d719fa7b58447d483bf77871ba6f2" href=
-"#cluneAIGAsAIgeneratingAlgorithms2019">(Clune, 2019)</a></dd>
+<dd>(<a href="#org43dcbaf">Clune 2019</a>)</dd>
 </dl>
 <h2 id="summary">Summary</h2>
 <p>We are nowadays more or less approaching the design of <a href=
@@ -100,12 +99,10 @@ fastest at learning a range of tasks.</p>
 <p>Another idea is to use RNN (Turing complete) trained via an
 outer loop optimization algorithm to be the most sample-efficient
 learning algorithm and use it then to train other models. This has
-been done in <a id="f15b91fb193804e00afcf44881bafada" href=
-"#wangLearningReinforcementLearn2017">(Wang et al., 2017)</a> and
-<a id="e3852e7d43e6b47d417e8caa6bdeca0f" href=
-"#duanRLFastReinforcement2016">(Duan et al., 2016)</a> in the
-context of Reinforcement learning, with policy gradients as the
-outer loop (in nature this would be the role of evolution).</p>
+been done in (<a href="#org2c62b50">Wang et al. 2017</a>) and
+(<a href="#org730db5b">Duan et al. 2016</a>) in the context of
+Reinforcement learning, with policy gradients as the outer loop (in
+nature this would be the role of evolution).</p>
 <p>The main question with meta-learning is: what tasks should the
 meta-learner learn on ? The author argues that can be learned
 too.</p>
@@ -161,22 +158,19 @@ these solutions don’t seem very promising to me , because the very
 system the author thinks could be generating this endless variety
 of environments is still undefined and remains the hardest part of
 the problem.</p>
-<h1 id="bibliography">Bibliography</h1>
-<p><a id="cluneAIGAsAIgeneratingAlgorithms2019" target=
-"_blank">Clune, J., <em>AI-GAs: AI-generating algorithms, an
-alternate paradigm for producing general artificial
-intelligence</em>, arXiv:1905.10985 [cs], <em>()</em>, (2019).</a>
-<a href="#ca9d719fa7b58447d483bf77871ba6f2">↩</a></p>
-<p><a id="wangLearningReinforcementLearn2017" target="_blank">Wang,
-J. X., Kurth-Nelson, Zeb, Tirumala, D., Soyer, H., Leibo, J. Z.,
-Munos, R., Blundell, C., …, <em>Learning to reinforcement
-learn</em>, arXiv:1611.05763 [cs, stat], <em>()</em>, (2017).</a>
-<a href="#f15b91fb193804e00afcf44881bafada">↩</a></p>
-<p><a id="duanRLFastReinforcement2016" target="_blank">Duan, Y.,
-Schulman, J., Chen, X., Bartlett, P. L., Sutskever, I., & Abbeel,
-P., <em>RL$^2$: Fast Reinforcement Learning via Slow Reinforcement
-Learning</em>, arXiv:1611.02779 [cs, stat], <em>()</em>,
-(2016).</a> <a href="#e3852e7d43e6b47d417e8caa6bdeca0f">↩</a></p>
+<h2 id="bibliography">Bibliography</h2>
+<p><a id="org43dcbaf"></a>Clune, Jeff. 2019. “AI-GAs: AI-Generating
+Algorithms, an Alternate Paradigm for Producing General Artificial
+Intelligence.” <em>arXiv:1905.10985 [Cs]</em>, May.</p>
+<p><a id="org730db5b"></a>Duan, Yan, John Schulman, Xi Chen, Peter
+L. Bartlett, Ilya Sutskever, and Pieter Abbeel. 2016. “RL\(^2\):
+Fast Reinforcement Learning via Slow Reinforcement Learning.”
+<em>arXiv:1611.02779 [Cs, Stat]</em>, November.</p>
+<p><a id="org2c62b50"></a>Wang, Jane X., Zeb Kurth-Nelson, Dhruva
+Tirumala, Hubert Soyer, Joel Z. Leibo, Remi Munos, Charles
+Blundell, Dharshan Kumaran, and Matt Botvinick. 2017. “Learning to
+Reinforcement Learn.” <em>arXiv:1611.05763 [Cs, Stat]</em>,
+January.</p>
 </div>
 <div class="note-footer">Last changed <a class="u-url" href=
 "https://hugocisneros.com/notes/cluneaigasaigeneratingalgorithms2019/">

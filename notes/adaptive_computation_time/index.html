@@ -49,7 +49,7 @@ media="all" type="text/css">
 <ul class="nav-links">
 <li><a href="/about/">About</a></li>
 <li><a href="/blog/">Blog</a></li>
-<li><a href="/other/">Other</a></li>
+<li><a href="/notes/">Notes</a></li>
 <li><a href="/resume/cv.pdf">Resume</a></li>
 </ul>
 </nav>
@@ -67,14 +67,11 @@ Computation Time</h1>
 <dd><a href="/notes/neural_networks/">Neural networks</a>, <a href=
 "/notes/algorithm/">Algorithm</a></dd>
 </dl>
-<p>Adaptive computation time (ACT) was introduced in <sup id=
-"42765fe2cdc0cee29d0a33471b2d5344"><a href=
-"#gravesAdaptiveComputationTime2017" title=
-"Graves, Adaptive {{Computation Time}} for {{Recurrent Neural Networks}}, {arXiv:1603.08983 [cs]}, v(), (2017).">
-gravesAdaptiveComputationTime2017</a></sup> as a way to make
-computations in <a href="/notes/recurrent_neural_networks/">RNN</a>
-adaptive. The network learns how many computational steps to use
-before emitting an output.</p>
+<p>Adaptive computation time (ACT) was introduced in (<a href=
+"#org60a65ff">Graves 2017</a>) as a way to make computations in
+<a href="/notes/recurrent_neural_networks/">RNN</a> adaptive. The
+network learns how many computational steps to use before emitting
+an output.</p>
 <p>This is done by outputting an extra <em>halting probability</em>
 at each update step, and considering two timelines:</p>
 <ul>
@@ -86,12 +83,10 @@ run at each of the input steps. This runs until the cumulative
 halting probability is above a threshold and emits as many output
 values as steps..</li>
 </ul>
-<h1 id="bibliography">Bibliography</h1>
-<p><a id=
-"gravesAdaptiveComputationTime2017"></a>[gravesAdaptiveComputationTime2017]
-Graves, Adaptive Computation Time for Recurrent Neural Networks,
-<i>arXiv:1603.08983 [cs]</i>, (2017). <a href=
-"#42765fe2cdc0cee29d0a33471b2d5344">↩</a></p>
+<h2 id="bibliography">Bibliography</h2>
+<p><a id="org60a65ff"></a>Graves, Alex. 2017. “Adaptive Computation
+Time for Recurrent Neural Networks.” <em>arXiv:1603.08983
+[Cs]</em>, February.</p>
 </div>
 <div class="note-footer">Last changed <a class="u-url" href=
 "https://hugocisneros.com/notes/adaptive_computation_time/"><time itemprop="datePublished"

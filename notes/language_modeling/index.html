@@ -48,7 +48,7 @@ media="all" type="text/css">
 <ul class="nav-links">
 <li><a href="/about/">About</a></li>
 <li><a href="/blog/">Blog</a></li>
-<li><a href="/other/">Other</a></li>
+<li><a href="/notes/">Notes</a></li>
 <li><a href="/resume/cv.pdf">Resume</a></li>
 </ul>
 </nav>
@@ -68,16 +68,11 @@ modeling</h1>
 <h2 id="lm-with-rnn--recurrent-neural-networks-dot-md--s-dot">LM
 with <a href="/notes/recurrent_neural_networks/">RNN</a>s.</h2>
 <p>Different models have been studied, starting from the initial
-Recurrent neural network based language model <sup id=
-"af30eebda2012dee291db422e2405493"><a href=
-"#mikolovRecurrentNeuralNetwork2011" title=
-"Mikolov, Karafiat, Burget, Cernocky \&amp; Khudanpur, Recurrent {{Neural Network Based Language Model}}, 4, in in: {Interspeech 2011}, edited by (2011)">
-mikolovRecurrentNeuralNetwork2011</a></sup>.</p>
+Recurrent neural network based language model (<a href=
+"#orgeedb516">Mikolov et al. 2011</a>).</p>
 <p>LSTM were then used with more success than previous models
-<sup id="988fd7af6f099ae7e9878d4a0123521b"><a href=
-"#zarembaRecurrentNeuralNetwork2015" title=
-"Zaremba, Sutskever \&amp; Vinyals, Recurrent {{Neural Network Regularization}}, {arXiv:1409.2329 [cs]}, v(), (2015).">
-zarembaRecurrentNeuralNetwork2015</a></sup>.</p>
+(<a href="#orge9793de">Zaremba, Sutskever, and Vinyals
+2015</a>).</p>
 <h2 id="lm-with-transformers--transformers-dot-md">LM with <a href=
 "/notes/transformers/">Transformers</a></h2>
 <h2 id="language-modeling-and-compression--compression-dot-md">
@@ -87,49 +82,38 @@ Language modeling and <a href=
 <p>Language models can be used to generate text from a prompt or
 starting sentence. This is the kind of examples that made models
 like GPT-2 and GPT-3 famous, because of their ability to generate
-long sequences of apparently coherent text <sup id=
-"762299846cd6184a66c4d7c3c2f1403b"><a href=
-"#radfordLanguageModelsAre2019" title=
-"Radford, Wu, Child, Luan, Amodei \&amp; Sutskever, Language Models Are Unsupervised Multitask Learners, {OpenAI Blog}, v(8), 9 (2019).">
-radfordLanguageModelsAre2019</a></sup><sup>,</sup><sup id=
-"7b3a07c15ecbce46342c4d16a5588a99"><a href=
-"#brownLanguageModelsAre2020" title=
-"Brown, Mann, Ryder, Subbiah, Kaplan, Dhariwal, Neelakantan, Shyam, Sastry, Askell, Agarwal, Herbert-Voss, Krueger, Henighan, Child, Ramesh, Ziegler, Wu, Winter, Hesse, Chen, Sigler, Litwin, Gray, Chess, Clark, Berner, McCandlish, Radford, Sutskever \&amp; Amodei, Language {{Models}} Are {{Few}}-{{Shot Learners}}, {arXiv:2005.14165 [cs]}, v(), (2020).">brownLanguageModelsAre2020</a></sup>.</p>
-<h1 id="bibliography">Bibliography</h1>
-<p><a id=
-"mikolovRecurrentNeuralNetwork2011"></a>[mikolovRecurrentNeuralNetwork2011]
-Mikolov, Karafiat, Burget, Cernocky & Khudanpur, Recurrent Neural
-Network Based Language Model, 4, in in: Interspeech 2011, edited by
-(2011) <a href="#af30eebda2012dee291db422e2405493">↩</a></p>
-<p><a id=
-"zarembaRecurrentNeuralNetwork2015"></a>[zarembaRecurrentNeuralNetwork2015]
-Zaremba, Sutskever & Vinyals, Recurrent Neural Network
-Regularization, <i>arXiv:1409.2329 [cs]</i>, (2015). <a href=
-"#988fd7af6f099ae7e9878d4a0123521b">↩</a></p>
-<p><a id=
-"radfordLanguageModelsAre2019"></a>[radfordLanguageModelsAre2019]
-Radford, Wu, Child, Luan, Amodei & Sutskever, Language Models Are
-Unsupervised Multitask Learners, <i>OpenAI Blog</i>, <b>1(8)</b>, 9
-(2019). <a href="#762299846cd6184a66c4d7c3c2f1403b">↩</a></p>
-<p><a id=
-"brownLanguageModelsAre2020"></a>[brownLanguageModelsAre2020]
-Brown, Mann, Ryder, Subbiah, Kaplan, Dhariwal, Neelakantan, Shyam,
-Sastry, Askell, Agarwal, Herbert-Voss, Krueger, Henighan, Child,
-Ramesh, Ziegler, Wu, Winter, Hesse, Chen, Sigler, Litwin, Gray,
-Chess, Clark, Berner, McCandlish, Radford, Sutskever & Amodei,
-Language Models Are Few-Shot Learners, <i>arXiv:2005.14165
-[cs]</i>, (2020). <a href=
-"#7b3a07c15ecbce46342c4d16a5588a99">↩</a></p>
+long sequences of apparently coherent text (<a href=
+"#orgba93943">Radford et al. 2019</a>; <a href="#org62c04c1">Brown
+et al. 2020</a>).</p>
+<h2 id="bibliography">Bibliography</h2>
+<p><a id="org62c04c1"></a>Brown, Tom B., Benjamin Mann, Nick Ryder,
+Melanie Subbiah, Jared Kaplan, Prafulla Dhariwal, Arvind
+Neelakantan, et al. 2020. “Language Models Are Few-Shot Learners.”
+<em>arXiv:2005.14165 [Cs]</em>, June.</p>
+<p><a id="orgeedb516"></a>Mikolov, Tomas, Martin Karafiat, Lukas
+Burget, Jan Cernocky, and Sanjeev Khudanpur. 2011. “Recurrent
+Neural Network Based Language Model.” In <em>Interspeech 2011</em>,
+4.</p>
+<p><a id="orgba93943"></a>Radford, Alec, Jeffrey Wu, Rewon Child,
+David Luan, Dario Amodei, and Ilya Sutskever. 2019. “Language
+Models Are Unsupervised Multitask Learners.” <em>OpenAI Blog</em> 1
+(8):9.</p>
+<p><a id="orge9793de"></a>Zaremba, Wojciech, Ilya Sutskever, and
+Oriol Vinyals. 2015. “Recurrent Neural Network Regularization.”
+<em>arXiv:1409.2329 [Cs]</em>, February.</p>
 <h2 id="backlinks">Backlinks</h2>
 <ul>
 <li><a href="/notes/nlp/">NLP</a></li>
+<li><a href="/notes/benderclimbingnlumeaning2020/">Notes on:
+Climbing towards NLU: On Meaning, Form, and Understanding in the
+Age of Data by Bender, E. M., & Koller, A. (2020)</a></li>
+<li><a href="/notes/zophneuralarchitecturesearch2017/">Notes on:
+Neural Architecture Search with Reinforcement Learning by Zoph, B.,
+& Le, Q. V. (2017)</a></li>
 <li><a href="/notes/katharopoulostransformersarernns2020/">Notes
 on: Transformers are RNNs: Fast Autoregressive Transformers with
 Linear Attention by Katharopoulos, A., Vyas, A., Pappas, N., &
 Fleuret, F. (2020)</a></li>
-<li><a href="/notes/zophneuralarchitecturesearch2017/">Notes on:
-Neural Architecture Search with Reinforcement Learning by Zoph, B.,
-& Le, Q. V. (2017)</a></li>
 <li><a href="/notes/word_vectors/">Word vectors</a></li>
 </ul>
 </div>

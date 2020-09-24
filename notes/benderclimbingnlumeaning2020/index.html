@@ -50,7 +50,7 @@ media="all" type="text/css">
 <ul class="nav-links">
 <li><a href="/about/">About</a></li>
 <li><a href="/blog/">Blog</a></li>
-<li><a href="/other/">Other</a></li>
+<li><a href="/notes/">Notes</a></li>
 <li><a href="/resume/cv.pdf">Resume</a></li>
 </ul>
 </nav>
@@ -66,30 +66,85 @@ Bender, E. M., & Koller, A. (2020)</h1>
 "articleBody">
 <dl>
 <dt>source</dt>
-<dd><a id="50ea2fd1db43ed6cf4ee1a481433644f" href=
-"#benderClimbingNLUMeaning2020">(Bender & Koller, 2020)</a></dd>
+<dd>(<a href="#org01e1715">Bender and Koller 2020</a>)</dd>
 <dt>tags</dt>
 <dd><a href="/notes/nlp/">NLP</a>, <a href=
 "/notes/artificial_intelligence/">Artificial Intelligence</a>,
 <a href="/notes/evaluating_nlp/">Evaluating NLP</a></dd>
 </dl>
-<h2 id="summary"><span class="org-todo todo TODO">TODO</span>
-Summary</h2>
-<h2 id="comments"><span class="org-todo todo TODO">TODO</span>
-Comments</h2>
-<h1 id="bibliography">Bibliography</h1>
-<p><a id="benderClimbingNLUMeaning2020" target="_blank">Bender, E.
-M., & Koller, A., <em>Climbing towards NLU: On Meaning, Form, and
-Understanding in the Age of Data</em>, In , Proceedings of the 58th
-{{Annual Meeting}} of the {{Association}} for {{Computational
-Linguistics} (pp. 5185–5198) (2020). Online: Association for
-Computational Linguistics.</a> <a href=
-"#50ea2fd1db43ed6cf4ee1a481433644f">↩</a></p>
+<h2 id="summary">Summary</h2>
+<p>The main point of the article could be summarized like so:</p>
+<blockquote>
+<p>We argue that <em>the language modeling task, because it only
+uses form as training data, cannot in principle lead to learning of
+meaning</em>. We take the term <em>language model</em> to refer to
+any system trained only on the task of string prediction, whether
+it operates over characters, words or sentences, and sequentially
+or not. We take (linguistic) <em>meaning</em> to be the relation
+between a linguistic form and communicative intent.</p>
+</blockquote>
+<p>Several NLP papers (cited in the text) use overly confident
+claims about <a href="/notes/language_modeling/">language
+models</a> <em>understanding</em> a piece of text or knowledge.</p>
+<p>The authors formalize <em>meaning</em> with a set of pairs \(M
+\subseteq E \times I\), \((e, i)\) representing natural language
+expressions and their <em>communicative intent</em>. In this
+framework, <em>understanding</em> means being able to retrieve
+\(i\) when given \(e\).</p>
+<p>They also mention the concept of conventional meaning, i.e. the
+communicative potential \(s\) of a form \(e\) which is constant
+across contexts of use of the form \(e\).</p>
+<p>When communicating, a speaker has a prior intent \(i\), and has
+to choose a form \(e\) with the right potential \(s\) that fits
+\(i\). The argument of the paper is that there isn’t enough signal
+in a text corpus to learn the above relations in \(M\).</p>
+<p>A nice example is the <a href=
+"/notes/chinese_room_experiment/">Chinese room experiment</a>,
+wherein a person is tasked with answering questions in Chinese by
+consulting a library of Chinese books according to fixed rules.
+Such a person would <em>look</em> intelligent without having any
+actual understanding of Chinese.</p>
+<p>A nice example is the problem of learning language models on
+<a href="/notes/programming_languages/">Programming languages</a>.
+No matter how good a LM is at learning the semantics of the
+language, it has no way of learning the relations between program
+inputs and outputs.</p>
+<p>The authors provide more example why human-language acquisition
+is fundamentally different from the flawed language models.</p>
+<p>A good LM might learn to give meaningful answers, but will need
+to store infinite amount of data and will ultimately fail at
+dealing with the ever evolving set of forms humans use.</p>
+<h2 id="comments">Comments</h2>
+<p>Regarding the programming language example, one could argue that
+by learning the semantics of the language on a large corpus, a LM
+will eventually have to learn inputs/outputs mapping for
+intermediate functions in the larger programs, and could build
+understanding from these small building blocks. However, no
+explicit mechanisms in current language models allow for combining
+and re-using building blocks like that.</p>
+<p>This is the same with language models, as long as we use
+<a href="/notes/neural_networks/">neural networks</a> trained with
+<a href="/notes/gradient_descent/">Gradient descent</a>, it will
+probably never have this power humans have to re-use and create
+forms to manipulate meaning and deal with a changing world. In a
+way GPT-3 (<a href="#org44d05a7">Brown et al. 2020</a>) has showed
+that we can get to a pretty impressive point with sentence
+prediction alone provided we have enough storage.</p>
+<h2 id="bibliography">Bibliography</h2>
+<p><a id="org01e1715"></a>Bender, Emily M., and Alexander Koller.
+2020. “Climbing Towards NLU: On Meaning, Form, and Understanding in
+the Age of Data.” In <em>Proceedings of the 58th Annual Meeting of
+the Association for Computational Linguistics</em>, 5185–98.
+Online: Association for Computational Linguistics.</p>
+<p><a id="org44d05a7"></a>Brown, Tom B., Benjamin Mann, Nick Ryder,
+Melanie Subbiah, Jared Kaplan, Prafulla Dhariwal, Arvind
+Neelakantan, et al. 2020. “Language Models Are Few-Shot Learners.”
+<em>arXiv:2005.14165 [Cs]</em>, June.</p>
 </div>
 <div class="note-footer">Last changed <a class="u-url" href=
 "https://hugocisneros.com/notes/benderclimbingnlumeaning2020/"><time itemprop="datePublished"
 class="dt-published" datetime=
-"2020-07-17T09:22:00+0200">17/07/2020</time></a> | authored by
+"2020-09-20T10:56:00+0200">20/09/2020</time></a> | authored by
 <a href="https://hugocisneros.com/" rel="author" class=
 "p-author h-card" itemprop="author" itemscope itemtype=
 "http://schema.org/Person"><span itemprop="name">Hugo
