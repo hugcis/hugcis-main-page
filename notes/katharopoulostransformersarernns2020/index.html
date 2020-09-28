@@ -24,7 +24,7 @@ page</title>
 <meta name="twitter:site" content="@cisne_hug">
 <meta name="twitter:creator" content="@cisne_hug">
 <link rel="stylesheet" href=
-"https://hugocisneros.com/css/main.min.8ea61129b6fd559b4b37a6b34ef4fc2e7dd654e21d921a711df724adeb52a29d.css"
+"https://hugocisneros.com/css/main.min.a74755be15fd251daaad99e6ae47460f10592f726b10ff9ceeef3c9ce3ae59cc.css"
 media="all" type="text/css">
 <link rel="apple-touch-icon" sizes="180x180" href=
 "/apple-touch-icon.png">
@@ -92,19 +92,19 @@ while attention \(A_l\) is applied to the whole input sequence.</p>
 <p>Softmax <a href="/notes/attention/">self-attention</a> at layer
 \(l\) with <em>queries</em>, <em>keys</em> and <em>values</em>
 matrices is written</p>
-<p>\[A_l(x) = V’ = \text{softmax}\left( \dfrac{QK^{T}}{\sqrt{D}}
+<p>\[A_l(x) = V' = \text{softmax}\left( \dfrac{QK^{T}}{\sqrt{D}}
 \right) V.\]</p>
 <p>The equation above can be generalized to any similarity function
-\(\text{sim}\), and if \(V’_i\) designates the $i$-th row of
-\(V’\),</p>
-<p>\[ V’_i = \dfrac{\sum_{j = 1}^N \text{sim}(Q_i, K_j)
+\(\text{sim}\), and if \(V'_i\) designates the $i$-th row of
+\(V'\),</p>
+<p>\[ V'_i = \dfrac{\sum_{j = 1}^N \text{sim}(Q_i, K_j)
 V_j}{\sum_{j = 1}^N \text{sim}(Q_i, K_j)} \]</p>
 <h3 id="linearizing-attention">Linearizing attention</h3>
 <p>In particular, all <a href="/notes/kernel_methods/">kernels</a>
 \(k(x, y) = \langle\phi(x), \phi(y)\rangle_\mathcal{S} :
 \mathbb{R}^{2\times F} \rightarrow \mathbb{R}_+\) can be used as a
 similarity function, changing the equation above to</p>
-<p>\[ V’_i = \dfrac{\phi(Q_i)^T \sum_{j = 1}^N \phi(K_j) V_j^T}{
+<p>\[ V'_i = \dfrac{\phi(Q_i)^T \sum_{j = 1}^N \phi(K_j) V_j^T}{
 \phi(Q_i)^T \sum_{j = 1}^N \phi(K_j)}.\]</p>
 <p>Because the right term of the numerator and denominator above
 does not depend on \(i\), it can be computed once for all sequence,

@@ -5,10 +5,6 @@
     <link>https://hugocisneros.com/bookmarks/</link>
     <description>Recent content in Bookmarks on Hugo Cisneros - Personal page</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://hugocisneros.com/bookmarks/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://hugocisneros.com/bookmarks/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

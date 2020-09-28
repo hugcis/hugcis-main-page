@@ -4,12 +4,37 @@
     
     <url>
         <loc>https://hugocisneros.com/</loc>
-        <lastmod>2020-09-23T16:10:00+02:00</lastmod>
+        <lastmod>2020-09-28T16:35:00+02:00</lastmod>
     </url>
     
     <url>
         <loc>https://hugocisneros.com/notes/</loc>
-        <lastmod>2020-09-23T16:10:00+02:00</lastmod>
+        <lastmod>2020-09-28T16:35:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/dongreservoircomputingmeets2020/</loc>
+        <lastmod>2020-09-28T16:35:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/open_ended_evolution/</loc>
+        <lastmod>2020-09-28T16:32:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/reservoir_computing/</loc>
+        <lastmod>2020-09-28T16:32:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/talk_alife_2020_keynote_luis_zaman_new_frontiers_in_alife_what_was_old_is_new_again/</loc>
+        <lastmod>2020-09-28T16:32:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/python/</loc>
+        <lastmod>2020-09-28T10:32:00+02:00</lastmod>
     </url>
     
     <url>
@@ -40,11 +65,6 @@
     <url>
         <loc>https://hugocisneros.com/notes/generative_adversarial_networks/</loc>
         <lastmod>2020-09-21T17:18:00+02:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/python/</loc>
-        <lastmod>2020-09-20T21:24:00+02:00</lastmod>
     </url>
     
     <url>
@@ -323,17 +343,7 @@
     </url>
     
     <url>
-        <loc>https://hugocisneros.com/notes/talk_alife_2020_keynote_luis_zaman_new_frontiers_in_alife_what_was_old_is_new_again/</loc>
-        <lastmod>2020-07-26T19:50:00+02:00</lastmod>
-    </url>
-    
-    <url>
         <loc>https://hugocisneros.com/notes/patteeevolvedopenendednessnot2019/</loc>
-        <lastmod>2020-07-26T19:24:00+02:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/open_ended_evolution/</loc>
         <lastmod>2020-07-26T19:24:00+02:00</lastmod>
     </url>
     
@@ -958,11 +968,6 @@
     </url>
     
     <url>
-        <loc>https://hugocisneros.com/notes/reservoir_computing/</loc>
-        <lastmod>2020-07-09T14:31:00+02:00</lastmod>
-    </url>
-    
-    <url>
         <loc>https://hugocisneros.com/notes/rice_s_theorem/</loc>
         <lastmod>2020-07-09T14:31:00+02:00</lastmod>
     </url>
@@ -1367,6 +1372,10 @@
     
     <url>
         <loc>https://hugocisneros.com/bookmarks/</loc>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/org-config/</loc>
     </url>
     
     <url>

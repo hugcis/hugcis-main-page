@@ -6,10 +6,58 @@
     <description>Recent content in Notes on Hugo Cisneros - Personal page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 23 Sep 2020 16:10:00 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 28 Sep 2020 16:35:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Notes on: Reservoir Computing meets Recurrent Kernels and Structured Transforms by Dong, J., Ohana, R., Rafayelyan, M., &amp; Krzakala, F. (2020)</title>
+      <link>https://hugocisneros.com/notes/dongreservoircomputingmeets2020/</link>
+      <pubDate>Mon, 28 Sep 2020 16:35:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/dongreservoircomputingmeets2020/</guid>
+      <description>source (Dong et al. 2020) tags Reservoir computing, Kernel Methods  Summary This paper presents a connection between large size reservoir computing and kernel methods.
+The authors formulate a reservoir computing model as a form of recurrent kernel iteration. If the reservoir update is written \[ x^{(t+1)} = \dfrac{1}{\sqrt{N}} f \left(W_r x^{(t)} + W_i i^{(t)} \right) \] with \(x^{(t)}\) the state of the reservoir at time \(t\) and \(i^{(t)}\) sequential input at time \(t\), \(W_r \in \mathbb{R}^{N\times N}\) and \(W_i \in \mathbb{R}^{N\times d}\), we may re-frame it as a random feature embedding of the vector \(\left[ x^{(t)} , i^{(t)} \right]\).</description>
+    </item>
     
-	<atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Open-ended Evolution</title>
+      <link>https://hugocisneros.com/notes/open_ended_evolution/</link>
+      <pubDate>Mon, 28 Sep 2020 16:32:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/open_ended_evolution/</guid>
+      <description>tags Evolution, Complexity, Artificial Intelligence resources Open-endedness: The last grand challenge you’ve never heard of  My idea of Open Ended evolution As part of my research, I have been thinking a lot about open-ended evolution and what this concept means to me. Although it is still early in my research journey, I will go into the process of writing down my thoughts about this very challenging concept in order to have material on which I will be able to reflect later and understand how my beliefs have changed.</description>
+    </item>
     
+    <item>
+      <title>Reservoir computing</title>
+      <link>https://hugocisneros.com/notes/reservoir_computing/</link>
+      <pubDate>Mon, 28 Sep 2020 16:32:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/reservoir_computing/</guid>
+      <description>tags Recurrent neural networks, Machine learning, Unconventional computing  Echo-state networks Reservoir computing with cellular automata Reservoir computing can use Cellular automata as the reservoir. Some citations (Yilmaz 2014; Morán, Frasser, and Rosselló 2018; Babson, Teuscher, and University 2019).
+Bibliography Babson, Neil, Christof Teuscher, and Portland State University. 2019. “Reservoir Computing with Complex Cellular Automata.” Complex Systems 28 (4):433–55.
+Morán, Alejandro, Christiam F. Frasser, and Josep L. Rosselló. 2018. “Reservoir Computing Hardware with Cellular Automata.</description>
+    </item>
+    
+    <item>
+      <title>Talk: Alife 2020 keynote Luis Zaman - New Frontiers in Alife: What was old is new again</title>
+      <link>https://hugocisneros.com/notes/talk_alife_2020_keynote_luis_zaman_new_frontiers_in_alife_what_was_old_is_new_again/</link>
+      <pubDate>Mon, 28 Sep 2020 16:32:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/talk_alife_2020_keynote_luis_zaman_new_frontiers_in_alife_what_was_old_is_new_again/</guid>
+      <description>tags Artificial life, ALife 2020  This keynote is about this sub-community of ALife which is dedicated to constructing actual artificial systems that can exhibit Open-ended Evolution, and Life-like behavior.
+The first models that tried to construct ALife were probably Von Neumann&amp;rsquo;s self-reproducing CA and Langton&amp;rsquo;s loop. However, their main limitation was they were extremely brittle, which is why evolution did not really work in them.
+Zaman&amp;rsquo;s definition of evolution is</description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://hugocisneros.com/notes/python/</link>
+      <pubDate>Mon, 28 Sep 2020 10:32:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/python/</guid>
+      <description>tags Programming languages, Coding  Code tips Categories to one-hot This is a handy technique but can be very resource intensive for large arrays.
+import numpy as np a = np.random.randrange(5, size=10) one_hot_a = np.eye(5)[a] Side-output for jupyter notebooks Insert the following block in a notebook cell and execute as code (From Twitter). This will put the output of each cell on the side of the code.
+%%html &amp;lt;style&amp;gt; #notebook-container {width: 100%; background-color: #EEE} .</description>
+    </item>
     
     <item>
       <title>Self-organization</title>
@@ -70,17 +118,6 @@ The authors argue for another approach to build artificially intelligent systems
       <guid>https://hugocisneros.com/notes/generative_adversarial_networks/</guid>
       <description>tags Neural networks  Generative adversarial networks are a type of generative model. It is close in spirit to Variational autoencoders, but has key differences. The main one is the way the model is trained, which uses an adversarial equilibrium between training a generator and training a discriminator.
 Are GANs glorified PCA? (Richardson and Weiss 2020) This paper seems to show that image-to-image translation models are ill-posed and imply the image transformation should always be very local.</description>
-    </item>
-    
-    <item>
-      <title>Python</title>
-      <link>https://hugocisneros.com/notes/python/</link>
-      <pubDate>Sun, 20 Sep 2020 21:24:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/python/</guid>
-      <description>tags Programming languages, Coding  Code tips Categories to one-hot This is a handy technique but can be very resource intensive for large arrays.
-import numpy as np a = np.random.randrange(5, size=10) one_hot_a = np.eye(5)[a] Side-output for jupyter notebooks Insert the following block in a notebook cell and execute as code (From Twitter). This will put the output of each cell on the side of the code.
-%%html &amp;lt;style&amp;gt; #notebook-container {width: 100%; background-color: #EEE} .</description>
     </item>
     
     <item>
@@ -632,32 +669,12 @@ Like for cellular automata, cells (or nodes) don&amp;rsquo;t have to be in just 
     </item>
     
     <item>
-      <title>Talk: Alife 2020 keynote Luis Zaman - New Frontiers in Alife: What was old is new again</title>
-      <link>https://hugocisneros.com/notes/talk_alife_2020_keynote_luis_zaman_new_frontiers_in_alife_what_was_old_is_new_again/</link>
-      <pubDate>Sun, 26 Jul 2020 19:50:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/talk_alife_2020_keynote_luis_zaman_new_frontiers_in_alife_what_was_old_is_new_again/</guid>
-      <description>tags Artificial life, ALife 2020  This keynote is about this sub-community of ALife which is dedicated to constructing actual artificial systems that can exhibit Open-ended Evolution, and Life-like behavior.
-The first models that tried to construct ALife were probably Von Neumann&amp;rsquo;s self-reproducing CA and Langton&amp;rsquo;s loop. However, their main limitation was they were extremely brittle, which is why evolution did not really work in them.
-Zaman&amp;rsquo;s definition of evolution is</description>
-    </item>
-    
-    <item>
       <title>Notes on: Evolved Open-Endedness, Not Open-Ended Evolution by Pattee, H. H., &amp; Sayama, H. (2019)</title>
       <link>https://hugocisneros.com/notes/patteeevolvedopenendednessnot2019/</link>
       <pubDate>Sun, 26 Jul 2020 19:24:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/patteeevolvedopenendednessnot2019/</guid>
       <description>source (Pattee and Sayama 2019)  Summary Evolution need not have been inherently open-ended in nature, because from a simple cell evolving in a complex self-organising environment new mechanisms might have been created by the organisms themself, effectively rendering them &amp;ldquo;more&amp;rdquo; open-ended. Symbolic languages are a striking example of this phenomenon: an open-ended descriptive power where the complexity of the environment is not limiting because language can refer itself recursively to build on its complexity.</description>
-    </item>
-    
-    <item>
-      <title>Open-ended Evolution</title>
-      <link>https://hugocisneros.com/notes/open_ended_evolution/</link>
-      <pubDate>Sun, 26 Jul 2020 19:24:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/open_ended_evolution/</guid>
-      <description>tags Evolution, Complexity, Artificial Intelligence resources Open-endedness: The last grand challenge you’ve never heard of  My idea of Open Ended evolution As part of my research, I have been thinking a lot about open-ended evolution and what this concept means to me. Although it is still early in my research journey, I will go into the process of writing down my thoughts about this very challenging concept in order to have material on which I will be able to reflect later and understand how my beliefs have changed.</description>
     </item>
     
     <item>
@@ -750,7 +767,7 @@ This idea is similar in spirit to Privacy-preserving machine learning, or federa
       <pubDate>Sat, 25 Jul 2020 22:35:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/sayamanewstructurallydissolvable1999/</guid>
-      <description>source (Sayama 1999) tags Cellular automata, Evolution  Summary This work presents a simple evolutionary system based on Langton&amp;lsquo;s self-reproducing loop. This is entirely done with a normal state-transition rule based CA. The initial structure of the loop was modified to catch variations. An interesting consequence of this system evolving is its natural tendency to evolve towards smaller loops despite no stochastic mutation being hard-coded.
+      <description>source (Sayama 1999) tags Cellular automata, Evolution  Summary This work presents a simple evolutionary system based on Langton&amp;rsquo;s self-reproducing loop. This is entirely done with a normal state-transition rule based CA. The initial structure of the loop was modified to catch variations. An interesting consequence of this system evolving is its natural tendency to evolve towards smaller loops despite no stochastic mutation being hard-coded.
 Bibliography Sayama, H. 1999. “A New Structurally Dissolvable Self-Reproducing Loop Evolving in a Simple Cellular Automata Space.</description>
     </item>
     
@@ -861,7 +878,7 @@ Backlinks  Talk: Alife 2020 keynote Luis Zaman - New Frontiers in Alife: What wa
       <pubDate>Mon, 20 Jul 2020 13:47:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/lenia/</guid>
-      <description>tags Cellular automata papers (Chan, n.d., n.d.)  Lenia is a continuous cellular automaton. It is sometimes referred to as a &amp;ldquo;continuous Conway&amp;rsquo;s Game of Life&amp;quot;.
+      <description>tags Cellular automata papers (Chan, n.d., n.d.)  Lenia is a continuous cellular automaton. It is sometimes referred to as a &amp;ldquo;continuous Conway&amp;rsquo;s Game of Life&amp;rdquo;.
 Backlinks  Notes on: Intrinsically Motivated Discovery of Diverse Patterns in Self-Organizing Systems by Reinke, C., Etcheverry, M., &amp;amp; Oudeyer, P. (2020)  Bibliography Chan, Bert Wang-Chak. n.d. “Lenia - Biology of Artificial Life.” http://arxiv.org/abs/1812.05433.
 ———. n.d. “Lenia and Expanded Universe.” http://arxiv.org/abs/2005.03742.</description>
     </item>
@@ -952,8 +969,8 @@ The authors base their new operator on the optimal configuration for \(L_2\) lin
       
       <guid>https://hugocisneros.com/notes/gradient_descent/</guid>
       <description>tags Optimization, Algorithm  Fixed learning rate The simplest way to apply the gradient descent algorithm on a function \(g\) convex and $L-$smooth on \(\mathbb{R}^d\) is to use the parameter update:
-\[ \theta_t = \theta_{t-1} - \gamma g&amp;rsquo;(\theta_{t-1}) \]
-Line search Another common way to apply the gradient descent algorithm with non fixed learning rate is to use line search at each step. This corresponds to searching for the best \(\gamma\) to use in \(\theta_{} + \gamma \Delta\theta\) (in gradient descent, \(\Delta\theta = - g&amp;rsquo;(\theta)\)).</description>
+\[ \theta_t = \theta_{t-1} - \gamma g&#39;(\theta_{t-1}) \]
+Line search Another common way to apply the gradient descent algorithm with non fixed learning rate is to use line search at each step. This corresponds to searching for the best \(\gamma\) to use in \(\theta_{} + \gamma \Delta\theta\) (in gradient descent, \(\Delta\theta = - g&#39;(\theta)\)).</description>
     </item>
     
     <item>
@@ -1315,7 +1332,7 @@ Remove metadata from an image Useful for preserving Online privacy when publishi
       
       <guid>https://hugocisneros.com/notes/jevons_paradox/</guid>
       <description>tags Economics, Climate resources (York and McGee 2016; Polimeni et al. 2015), Wikipedia, Real climate economics blog posts (Jim Barrett)  Definition Jevons Paradox is used to describe the situation where an increase in resource efficiency triggered by technological innovation has the counter-intuitive effect of raising the demand and increasing the overall consumption.
-It was first described in W. S. Jenvons&amp;rsquo; book The Coal question in 1865.
+It was first described in W. S. Jenvons&#39; book The Coal question in 1865.
 It is closely to another paradox well known in road planning (Downs–Thomson paradox) and Wirth&amp;rsquo;s law in software engineering.</description>
     </item>
     
@@ -1679,7 +1696,7 @@ Parameter space \(\Theta\) of available parameters \(\theta\). An observation sp
       <pubDate>Mon, 13 Jul 2020 18:40:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/online_privacy/</guid>
-      <description>IP Addresses In (Mishra et al. 2020), the authors analyze a set of users&amp;rsquo; internet traffic for more than 100 days. They observed a little more than 11% of the 34,488 IP addresses they collected were present for more than a month. Many of them were reused throughout the whole experience, making long-term tracking of users possible.
+      <description>IP Addresses In (Mishra et al. 2020), the authors analyze a set of users&#39; internet traffic for more than 100 days. They observed a little more than 11% of the 34,488 IP addresses they collected were present for more than a month. Many of them were reused throughout the whole experience, making long-term tracking of users possible.
 The study also shows that 93% of users had a unique fixed set of IP addresses during the whole experiment, making it easy to track them between home, work, etc.</description>
     </item>
     
@@ -1868,17 +1885,6 @@ Objective The goal is to find the above mapping such as to minimize an objective
       
       <guid>https://hugocisneros.com/notes/reinforcement_learning/</guid>
       <description>tags Machine learning  Backlinks  Neural architecture search Adversarial examples Notes on: Adapting to Unseen Environments through Explicit Representation of Context by Tutum, C., &amp;amp; Miikkulainen, R. (2020) Notes on: POET: open-ended coevolution of environments and their optimized solutions by Wang, R., Lehman, J., Clune, J., &amp;amp; Stanley, K. O. (2019) Notes on: PCGRL: Procedural Content Generation via Reinforcement Learning by Khalifa, A., Bontrager, P., Earle, S., &amp;amp; Togelius, J.</description>
-    </item>
-    
-    <item>
-      <title>Reservoir computing</title>
-      <link>https://hugocisneros.com/notes/reservoir_computing/</link>
-      <pubDate>Thu, 09 Jul 2020 14:31:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/reservoir_computing/</guid>
-      <description>tags Recurrent neural networks, Machine learning, Unconventional computing  Echo-state networks Reservoir computing with cellular automata Reservoir computing can use Cellular automata as the reservoir. (Yilmaz 2014; Morán, Frasser, and Rosselló 2018; Babson, Teuscher, and University 2019)
- Bibliography  Babson, Neil, Christof Teuscher, and Portland State University. 2019. “Reservoir Computing with Complex Cellular Automata.” Complex Systems 28 (4):433–55.
-Morán, Alejandro, Christiam F. Frasser, and Josep L. Rosselló. 2018. “Reservoir Computing Hardware with Cellular Automata.</description>
     </item>
     
     <item>
@@ -2365,7 +2371,7 @@ From (Crutchfield 1994):
       <pubDate>Thu, 02 Jul 2020 08:39:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/complexity/</guid>
-      <description>resources Page of Pablo Funes&amp;rsquo; PhD thesis  What is complexity? What is complexity?: The question is very much too vast to be answered in something smaller than a whole book. I am planning on dedicating an entire post about measuring complexity with a range of metrics that people have come up with in the past. A big question I&amp;rsquo;m asking myself is: &amp;ldquo;How much does complexity depend on subjectivity and the observer?</description>
+      <description>resources Page of Pablo Funes&#39; PhD thesis  What is complexity? What is complexity?: The question is very much too vast to be answered in something smaller than a whole book. I am planning on dedicating an entire post about measuring complexity with a range of metrics that people have come up with in the past. A big question I&amp;rsquo;m asking myself is: &amp;ldquo;How much does complexity depend on subjectivity and the observer?</description>
     </item>
     
     <item>
