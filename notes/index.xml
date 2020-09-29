@@ -6,7 +6,16 @@
     <description>Recent content in Notes on Hugo Cisneros - Personal page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 28 Sep 2020 16:35:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Sep 2020 08:45:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Automatic differentiation</title>
+      <link>https://hugocisneros.com/notes/automatic_differentiation/</link>
+      <pubDate>Tue, 29 Sep 2020 08:45:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/automatic_differentiation/</guid>
+      <description> tags Applied maths, Optimization  </description>
+    </item>
+    
     <item>
       <title>Notes on: Reservoir Computing meets Recurrent Kernels and Structured Transforms by Dong, J., Ohana, R., Rafayelyan, M., &amp; Krzakala, F. (2020)</title>
       <link>https://hugocisneros.com/notes/dongreservoircomputingmeets2020/</link>
