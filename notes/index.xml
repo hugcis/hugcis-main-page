@@ -6,7 +6,127 @@
     <description>Recent content in Notes on Hugo Cisneros - Personal page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 29 Sep 2020 08:45:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 16 Oct 2020 10:57:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Raven&#39;s progressive matrices</title>
+      <link>https://hugocisneros.com/notes/raven_s_progressive_matrices/</link>
+      <pubDate>Fri, 16 Oct 2020 10:57:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/raven_s_progressive_matrices/</guid>
+      <description>tags Artificial intelligence test  It is a visual test used to estimate abstract reasoning. The patterns are often between 2x2 and 6x6 matrices of symbols. One of these symbols is usually left blank and supposed to be deduced from the others.
+The overall concept is very similar to the Abstraction and Reasoning Corpus but is much more tied to human vision. This makes the range of possible tasks much larger but also harder to integrate in an algorithm.</description>
+    </item>
+    
+    <item>
+      <title>Cellular automata as CNNs</title>
+      <link>https://hugocisneros.com/notes/cellular_automata_as_cnns/</link>
+      <pubDate>Tue, 13 Oct 2020 09:55:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/cellular_automata_as_cnns/</guid>
+      <description>tags Cellular automata, Convolutional neural networks  Motivation Cellular automata are computational models based on several principles such as translation-invariance and parallelism of computations. These principles also motivated the creation of Convolutional neural networks &amp;mdash; used initially for images and text &amp;mdash;, making this model well-suited to reason about cellular automata.
+There is indeed a deep connection between the two models, making it seem like there are two expressions of the same idea: spatially organized information can be processed locally in parallel.</description>
+    </item>
+    
+    <item>
+      <title>Turing degree</title>
+      <link>https://hugocisneros.com/notes/turing_degree/</link>
+      <pubDate>Wed, 07 Oct 2020 22:07:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/turing_degree/</guid>
+      <description>tags Computability theory  The idea behind Turing degrees is similar to the notion of cardinality of infinite sets ($ℵ_0, ℵ_1, &amp;hellip;$) in the world of computation.
+A Turing degree is an equivalence class for the Turing equivalence. Being Turing equivalent for two sets \(X\) and \(Y\) means that a Turing machine can decide if an element belongs to the set \(X\) when it has an oracle for membership to \(Y\) (there is a way to formulate the membership problem for \(X\) as a problem for \(Y\)) and reciprocally.</description>
+    </item>
+    
+    <item>
+      <title>Compression</title>
+      <link>https://hugocisneros.com/notes/compression/</link>
+      <pubDate>Wed, 07 Oct 2020 16:22:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/compression/</guid>
+      <description>Compression with Neural networks Compression can be done with the help of neural networks as estimators of the sequence&amp;rsquo;s next character probability (Schmidhuber and Heil 1996).
+Compression as a measure of Artificial Intelligence Mahoney argues in (Mahoney 1999) that being able to compress information amounts to being able to predict optimally the distribution of an inputs natural language corpus. A good compression algorithm &amp;ldquo;learns&amp;rdquo; features of the language to make better predictions.</description>
+    </item>
+    
+    <item>
+      <title>Turing Machine</title>
+      <link>https://hugocisneros.com/notes/turing_machine/</link>
+      <pubDate>Mon, 05 Oct 2020 08:07:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/turing_machine/</guid>
+      <description>tags Computability theory, Computer science resources Wikipedia  The machine was invented by Alan Turing in 1936.
+General definition A Turing Machine is usually composed of four main components:
+ A tape divided into cells. This tape is the way the machine reads inputs, writes outputs and manipulates information (storing it, moving it, etc.). Each cell can contain any symbol of a predefined alphabet. It is also often presented as infinitely long on both sides.</description>
+    </item>
+    
+    <item>
+      <title>Alan Turing</title>
+      <link>https://hugocisneros.com/notes/alan_turing/</link>
+      <pubDate>Mon, 05 Oct 2020 08:06:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/alan_turing/</guid>
+      <description> tags Computer science, Artificial Intelligence, Cryptography  Backlinks  Turing test  </description>
+    </item>
+    
+    <item>
+      <title>Turing test</title>
+      <link>https://hugocisneros.com/notes/turing_test/</link>
+      <pubDate>Mon, 05 Oct 2020 08:06:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/turing_test/</guid>
+      <description> tags Artificial intelligence test  This is probably one of the most famous test for artificial intelligence. It was elaborated by Alan Turing.
+Backlinks  Artificial intelligence test  </description>
+    </item>
+    
+    <item>
+      <title>Optimization</title>
+      <link>https://hugocisneros.com/notes/optimization/</link>
+      <pubDate>Fri, 02 Oct 2020 16:43:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/optimization/</guid>
+      <description> tags Mathematics, Applied maths  Backlinks  Gradient descent for wide two-layer neural networks – I : Global convergence Supervised learning Neural network training Gradient descent Automatic differentiation  </description>
+    </item>
+    
+    <item>
+      <title>Echo-state networks</title>
+      <link>https://hugocisneros.com/notes/echo_state_networks/</link>
+      <pubDate>Fri, 02 Oct 2020 16:17:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/echo_state_networks/</guid>
+      <description>tags Recurrent neural networks, Unsupervised learning resources Scholarpedia  Principle An echo state network is usually a standard RNN with fixed random weights. The output from this RNN is used as a high dimensional feature map to be fed into a machine learning system.
+(Jaeger 2004, 2012; Jaeger, Maass, and Principe 2007)
+Bibliography Jaeger, H. 2004. “Harnessing Nonlinearity: Predicting Chaotic Systems and Saving Energy in Wireless Communication.” Science 304 (5667):78–80.</description>
+    </item>
+    
+    <item>
+      <title>Unsupervised learning</title>
+      <link>https://hugocisneros.com/notes/unsupervised_learning/</link>
+      <pubDate>Fri, 02 Oct 2020 09:16:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/unsupervised_learning/</guid>
+      <description> tags Machine learning  Backlinks  Reservoir computing Echo-state networks  </description>
+    </item>
+    
+    <item>
+      <title>Reservoir computing</title>
+      <link>https://hugocisneros.com/notes/reservoir_computing/</link>
+      <pubDate>Fri, 02 Oct 2020 08:52:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/reservoir_computing/</guid>
+      <description>tags Machine learning, Unconventional computing, Unsupervised learning  Reservoir computing with cellular automata Reservoir computing can use Cellular automata as the reservoir. Some citations (Nichele and Molund 2017; Yilmaz 2014; Morán, Frasser, and Rosselló 2018; Babson, Teuscher, and University 2019).
+Echo-state networks Bibliography Babson, Neil, Christof Teuscher, and Portland State University. 2019. “Reservoir Computing with Complex Cellular Automata.” Complex Systems 28 (4):433–55.
+Morán, Alejandro, Christiam F. Frasser, and Josep L.</description>
+    </item>
+    
+    <item>
+      <title>Notes on: Reservoir Computing meets Recurrent Kernels and Structured Transforms by Dong, J., Ohana, R., Rafayelyan, M., &amp; Krzakala, F. (2020)</title>
+      <link>https://hugocisneros.com/notes/dongreservoircomputingmeets2020/</link>
+      <pubDate>Wed, 30 Sep 2020 21:01:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/dongreservoircomputingmeets2020/</guid>
+      <description>source (Dong et al. 2020) tags Reservoir computing, Kernel Methods  Summary This paper presents a connection between large size reservoir computing and kernel methods.
+The authors formulate a reservoir computing model as a form of recurrent kernel iteration. If the reservoir update is written \[ x^{(t+1)} = \dfrac{1}{\sqrt{N}} f \left(W_r x^{(t)} + W_i i^{(t)} \right) \] with \(x^{(t)}\) the state of the reservoir at time \(t\) and \(i^{(t)}\) sequential input at time \(t\), \(W_r \in \mathbb{R}^{N\times N}\) and \(W_i \in \mathbb{R}^{N\times d}\), we may re-frame it as a random feature embedding of the vector \(\left[ x^{(t)} , i^{(t)} \right]\).</description>
+    </item>
+    
     <item>
       <title>Automatic differentiation</title>
       <link>https://hugocisneros.com/notes/automatic_differentiation/</link>
@@ -17,33 +137,12 @@
     </item>
     
     <item>
-      <title>Notes on: Reservoir Computing meets Recurrent Kernels and Structured Transforms by Dong, J., Ohana, R., Rafayelyan, M., &amp; Krzakala, F. (2020)</title>
-      <link>https://hugocisneros.com/notes/dongreservoircomputingmeets2020/</link>
-      <pubDate>Mon, 28 Sep 2020 16:35:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/dongreservoircomputingmeets2020/</guid>
-      <description>source (Dong et al. 2020) tags Reservoir computing, Kernel Methods  Summary This paper presents a connection between large size reservoir computing and kernel methods.
-The authors formulate a reservoir computing model as a form of recurrent kernel iteration. If the reservoir update is written \[ x^{(t+1)} = \dfrac{1}{\sqrt{N}} f \left(W_r x^{(t)} + W_i i^{(t)} \right) \] with \(x^{(t)}\) the state of the reservoir at time \(t\) and \(i^{(t)}\) sequential input at time \(t\), \(W_r \in \mathbb{R}^{N\times N}\) and \(W_i \in \mathbb{R}^{N\times d}\), we may re-frame it as a random feature embedding of the vector \(\left[ x^{(t)} , i^{(t)} \right]\).</description>
-    </item>
-    
-    <item>
       <title>Open-ended Evolution</title>
       <link>https://hugocisneros.com/notes/open_ended_evolution/</link>
       <pubDate>Mon, 28 Sep 2020 16:32:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/open_ended_evolution/</guid>
       <description>tags Evolution, Complexity, Artificial Intelligence resources Open-endedness: The last grand challenge you’ve never heard of  My idea of Open Ended evolution As part of my research, I have been thinking a lot about open-ended evolution and what this concept means to me. Although it is still early in my research journey, I will go into the process of writing down my thoughts about this very challenging concept in order to have material on which I will be able to reflect later and understand how my beliefs have changed.</description>
-    </item>
-    
-    <item>
-      <title>Reservoir computing</title>
-      <link>https://hugocisneros.com/notes/reservoir_computing/</link>
-      <pubDate>Mon, 28 Sep 2020 16:32:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/reservoir_computing/</guid>
-      <description>tags Recurrent neural networks, Machine learning, Unconventional computing  Echo-state networks Reservoir computing with cellular automata Reservoir computing can use Cellular automata as the reservoir. Some citations (Yilmaz 2014; Morán, Frasser, and Rosselló 2018; Babson, Teuscher, and University 2019).
-Bibliography Babson, Neil, Christof Teuscher, and Portland State University. 2019. “Reservoir Computing with Complex Cellular Automata.” Complex Systems 28 (4):433–55.
-Morán, Alejandro, Christiam F. Frasser, and Josep L. Rosselló. 2018. “Reservoir Computing Hardware with Cellular Automata.</description>
     </item>
     
     <item>
@@ -147,15 +246,6 @@ Another experiment uses this exploration method to produce recurrent cell throug
       <guid>https://hugocisneros.com/notes/benderclimbingnlumeaning2020/</guid>
       <description>source (Bender and Koller 2020) tags NLP, Artificial Intelligence, Evaluating NLP  Summary The main point of the article could be summarized like so:
  We argue that the language modeling task, because it only uses form as training data, cannot in principle lead to learning of meaning. We take the term language model to refer to any system trained only on the task of string prediction, whether it operates over characters, words or sentences, and sequentially or not.</description>
-    </item>
-    
-    <item>
-      <title>Turing test</title>
-      <link>https://hugocisneros.com/notes/turing_test/</link>
-      <pubDate>Wed, 16 Sep 2020 10:57:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/turing_test/</guid>
-      <description> tags Artificial intelligence test  Backlinks  Artificial intelligence test  </description>
     </item>
     
     <item>
@@ -1019,15 +1109,6 @@ Line search Another common way to apply the gradient descent algorithm with non 
     </item>
     
     <item>
-      <title>Raven&#39;s progressive matrices</title>
-      <link>https://hugocisneros.com/notes/raven_s_progressive_matrices/</link>
-      <pubDate>Tue, 14 Jul 2020 20:20:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/raven_s_progressive_matrices/</guid>
-      <description> tags Artificial Intelligence  </description>
-    </item>
-    
-    <item>
       <title>Notes on: More Is Different by Anderson, P. W. (1972)</title>
       <link>https://hugocisneros.com/notes/andersonmoredifferent1972/</link>
       <pubDate>Tue, 14 Jul 2020 19:57:00 +0200</pubDate>
@@ -1115,18 +1196,6 @@ Backlinks  Notes on: Combinatory Chemistry: Towards a Simple Model of Emergent E
       <description>tags Complexity, Cellular automata  Measuring complexity created by cellular automata a vast subject.
 Using Entropy In (Wuensche 1999), the author uses the entropy of rule table lookup frequencies to evaluate the complexity of a CA.
 Bibliography Wuensche, Andrew. 1999. “Classifying Cellular Automata Automatically: Finding Gliders, Filtering, and Relating Space-Time Patterns, Attractor Basins, and the Z Parameter.” Complexity 4 (3):47–66.</description>
-    </item>
-    
-    <item>
-      <title>Compression</title>
-      <link>https://hugocisneros.com/notes/compression/</link>
-      <pubDate>Tue, 14 Jul 2020 08:31:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/compression/</guid>
-      <description>Compression with Neural networks Compression can be done with the help of neural networks as estimators of the sequence&amp;rsquo;s next character probability (Schmidhuber and Heil 1996).
-Compression as a measure of Artificial Intelligence (Mahoney 1999)
-Compression as a measure of Complexity Compression algorithms have long been used as a way of measuring complexity of data.
-Bibliography Mahoney, Matthew V. 1999. “Text Compression as a Test for Artificial Intelligence.” In Proceedings of AAAI-1999, 3.</description>
     </item>
     
     <item>
@@ -1818,16 +1887,6 @@ Hebbian learning The theory is sometimes summarized as &amp;ldquo;Cells that fir
     </item>
     
     <item>
-      <title>Turing Machine</title>
-      <link>https://hugocisneros.com/notes/turing_machine/</link>
-      <pubDate>Fri, 10 Jul 2020 09:15:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/turing_machine/</guid>
-      <description>tags Computability theory, Computer science resources Wikipedia  General definition A Turing Machine is usually composed of four main components:
- A tape divided into cells. This tape is the way the machine reads inputs, writes outputs and manipulates information (storing it, moving it, etc.). Each cell can contain any symbol of a predefined alphabet. It is also often presented as infinitely long on both sides. A head that can read or write a symbol from the tape at its current position.</description>
-    </item>
-    
-    <item>
       <title>Algorithm</title>
       <link>https://hugocisneros.com/notes/algorithm/</link>
       <pubDate>Fri, 10 Jul 2020 09:13:00 +0200</pubDate>
@@ -2263,15 +2322,6 @@ Hassibi, Babak, and David G. Stork. 1993. “Second Order Derivatives for Networ
     </item>
     
     <item>
-      <title>Optimization</title>
-      <link>https://hugocisneros.com/notes/optimization/</link>
-      <pubDate>Thu, 02 Jul 2020 10:20:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/optimization/</guid>
-      <description> tags Mathematics  Backlinks  Gradient descent for wide two-layer neural networks – I : Global convergence Supervised learning Neural network training Gradient descent  </description>
-    </item>
-    
-    <item>
       <title>Ruby</title>
       <link>https://hugocisneros.com/notes/ruby/</link>
       <pubDate>Thu, 02 Jul 2020 10:20:00 +0200</pubDate>
@@ -2543,25 +2593,6 @@ Tasks Language modeling Text classification Question answering Backlinks  Langua
       
       <guid>https://hugocisneros.com/notes/philosophy/</guid>
       <description>Backlinks  The Simulated reality hypothesis Zuse&amp;rsquo;s thesis Notes on: More Is Different by Anderson, P. W. (1972) Nick Bostrom  </description>
-    </item>
-    
-    <item>
-      <title>Turing degree</title>
-      <link>https://hugocisneros.com/notes/turing_degree/</link>
-      <pubDate>Fri, 26 Jun 2020 11:26:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/turing_degree/</guid>
-      <description> tags Computability theory  </description>
-    </item>
-    
-    <item>
-      <title>Cellular automata as CNNs</title>
-      <link>https://hugocisneros.com/notes/cellular_automata_as_cnns/</link>
-      <pubDate>Fri, 26 Jun 2020 11:13:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/cellular_automata_as_cnns/</guid>
-      <description>tags Cellular automata, Convolutional neural networks  Motivation Cellular automata are computational models based on several principles such as translation-invariance and parallelism of computations. These principles also motivated the creation of Convolutional neural networks &amp;mdash; used initially for images and text &amp;mdash;, making this model well-suited to reason about cellular automata.
-There is indeed a deep connection between the two models, making it seem like there are two expressions of the same idea: spatially organized information can be processed locally in parallel.</description>
     </item>
     
     <item>

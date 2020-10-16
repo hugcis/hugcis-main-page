@@ -18,7 +18,7 @@ page</title>
 <meta name="twitter:site" content="@cisne_hug">
 <meta name="twitter:creator" content="@cisne_hug">
 <link rel="stylesheet" href=
-"https://hugocisneros.com/css/main.min.7e0268123468ff3d2bfefd538ebf9dbb7c6e8fbee9fd2635652d12391efcc0c7.css"
+"https://hugocisneros.com/css/main.min.4013a5f5fc6d742bc4167b4f83ace541f94c1382a293c49ab93a17371eddc42e.css"
 media="all" type="text/css">
 <link rel="apple-touch-icon" sizes="180x180" href=
 "/apple-touch-icon.png">
@@ -50,9 +50,61 @@ media="all" type="text/css">
 </ul>
 </nav>
 </header>
-<main class="content" role="main">
+<main class="content h-feed">
+<h1>Org-mode configuration</h1>
+<div class="ox-hugo-toc toc">
+<div class="heading">Table of Contents</div>
+<ul>
+<li><a href="#setting-up-todo-keywords">Setting up “TODO”
+keywords</a>
+<ul>
+<li><a href="#todo-faces-and-export-settings">“TODO” faces and
+export settings</a></li>
+<li><a href="#org-todo-bullets">Org “TODO” bullets</a></li>
+</ul>
+</li>
+<li><a href="#general-style">General style</a>
+<ul>
+<li><a href="#proportional-width">Proportional width</a></li>
+<li><a href="#hide-face-characters">Hide face characters</a></li>
+<li><a href="#faces-setup">Faces setup</a></li>
+</ul>
+</li>
+<li><a href="#org-agenda">Org agenda</a>
+<ul>
+<li><a href="#agenda-style">Agenda style</a></li>
+<li><a href="#super-agenda">Super agenda</a></li>
+</ul>
+</li>
+<li><a href="#org-custom-commands">Org custom commands</a>
+<ul>
+<li><a href="#close-journal-on-exit">Close journal on exit</a></li>
+</ul>
+</li>
+<li><a href="#org-ref-and-bibtex">Org Ref and Bibtex</a></li>
+<li><a href="#org-capture">Org capture</a></li>
+<li><a href="#org-refile">Org Refile</a></li>
+<li><a href="#org-roam">Org Roam</a>
+<ul>
+<li><a href="#org-roam-export-backlinks">Org roam export
+backlinks</a></li>
+</ul>
+</li>
+<li><a href="#misc">Misc</a>
+<ul>
+<li><a href="#timestamp-on-save">Timestamp on save</a></li>
+<li><a href="#make-markdown-mode-variable-width">Make markdown mode
+variable width</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<!--endtoc-->
 <h2 id="setting-up-todo-keywords">Setting up “TODO” keywords</h2>
-<p>Those keywords are from “Organize your life in plain text!”</p>
+<p>Those keywords are from “Organize your life in plain text!”.
+There are three “main” keywords and a <code>WAITING</code>,
+<code>HOLD</code> and <code>CANCELLED</code> keyword that each
+require a note for justifying moving to these states.</p>
 <div class="highlight">
 <pre style=
 "color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
@@ -70,16 +122,15 @@ media="all" type="text/css">
 "color:#ed9d13">"WAITING(w@/!)"</span> <span style=
 "color:#ed9d13">"HOLD(h@/!)"</span> <span style=
 "color:#ed9d13">"|"</span> <span style=
-"color:#ed9d13">"CANCELLED(c@/!)"</span> <span style=
-"color:#ed9d13">"PHONE"</span> <span style=
-"color:#ed9d13">"MEETING"</span>))))
+"color:#ed9d13">"CANCELLED(c@/!)"</span>))))
 </code></pre></div>
 <h3 id="todo-faces-and-export-settings">“TODO” faces and export
 settings</h3>
+<p>This sets the colors of keywords.</p>
 <div class="highlight">
 <pre style=
 "color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<code class="language-elisp" data-lang="elisp">  (<span style=
+<code class="language-elisp" data-lang="elisp">(<span style=
 "color:#24909d">setq</span> <span style=
 "color:#40ffff">org-todo-keyword-faces</span>
         (<span style="color:#24909d">quote</span> ((<span style=
@@ -138,6 +189,10 @@ settings</h3>
 "color:#40ffff">t</span>)
 </code></pre></div>
 <h3 id="org-todo-bullets">Org “TODO” bullets</h3>
+<p>I use <a href=
+"https://github.com/integral-dw/org-superstar-mode">org-superstar</a>
+to remove the keywords from my org files and replace them with nice
+icons.</p>
 <div class="highlight">
 <pre style=
 "color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
@@ -183,8 +238,14 @@ settings</h3>
 "color:#40ffff">org-ellipsis</span> <span style=
 "color:#ed9d13">"⤵"</span>)
 </code></pre></div>
+<p>This results in the following appearance for different keywords:
+<img src="/ox-hugo/screen_org.jpg" alt=""></p>
 <h2 id="general-style">General style</h2>
+<p>This section covers the general look and feel of my org
+files.</p>
 <h3 id="proportional-width">Proportional width</h3>
+<p>I use a function that I add as a hook to all the files I want to
+automatically set to variable width.</p>
 <div class="highlight">
 <pre style=
 "color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
@@ -223,6 +284,8 @@ settings</h3>
 <code class="language-elisp" data-lang="elisp">(<span style=
 "color:#24909d">defun</span> <span style=
 "color:#40ffff">my/style-org</span> ()
+  <span style=
+"color:#999;font-style:italic">;; I have removed indentation to make the file look cleaner</span>
   (<span style="color:#40ffff">org-indent-mode</span> <span style=
 "color:#3677a9">-1</span>)
   (<span style="color:#40ffff">my/buffer-face-mode-variable</span>)
@@ -239,39 +302,39 @@ settings</h3>
 "color:#40ffff">variable-pitch-mode</span> <span style=
 "color:#3677a9">+1</span>)
   (<span style="color:#447fcf">mapc</span>
-   (<span style="color:#24909d">lambda</span> (<span style=
+    (<span style="color:#24909d">lambda</span> (<span style=
 "color:#40ffff">face</span>) <span style=
-"color:#999;font-style:italic">;; Other fonts with fixed-pitch.</span>
-     (<span style=
+"color:#999;font-style:italic">;; Other fonts that require it are set to fixed-pitch.</span>
+      (<span style=
 "color:#40ffff">set-face-attribute</span> <span style=
 "color:#40ffff">face</span> <span style=
 "color:#40ffff">nil</span> <span style=
 "color:#24909d">:inherit</span> <span style=
 "color:#ed9d13">'fixed-pitch</span>))
-   (<span style="color:#447fcf">list</span> <span style=
+    (<span style="color:#447fcf">list</span> <span style=
 "color:#ed9d13">'org-block</span>
-         <span style="color:#ed9d13">'org-table</span>
-         <span style="color:#ed9d13">'org-verbatim</span>
-         <span style="color:#ed9d13">'org-block-begin-line</span>
-         <span style="color:#ed9d13">'org-block-end-line</span>
-         <span style="color:#ed9d13">'org-meta-line</span>
-         <span style=
+          <span style="color:#ed9d13">'org-table</span>
+          <span style="color:#ed9d13">'org-verbatim</span>
+          <span style="color:#ed9d13">'org-block-begin-line</span>
+          <span style="color:#ed9d13">'org-block-end-line</span>
+          <span style="color:#ed9d13">'org-meta-line</span>
+          <span style=
 "color:#ed9d13">'org-document-info-keyword</span>))
-  (<span style="color:#447fcf">mapc</span>
-   (<span style="color:#24909d">lambda</span> (<span style=
+  (<span style="color:#447fcf">mapc</span> <span style=
+"color:#999;font-style:italic">;; This sets the fonts to a smaller size</span>
+    (<span style="color:#24909d">lambda</span> (<span style=
 "color:#40ffff">face</span>)
-     (<span style=
+      (<span style=
 "color:#40ffff">set-face-attribute</span> <span style=
 "color:#40ffff">face</span> <span style=
 "color:#40ffff">nil</span> <span style=
 "color:#24909d">:height</span> <span style=
 "color:#3677a9">0.7</span>))
-   (<span style="color:#447fcf">list</span> <span style=
+    (<span style="color:#447fcf">list</span> <span style=
 "color:#ed9d13">'org-document-info-keyword</span>
-         <span style="color:#ed9d13">'org-block-begin-line</span>
-         <span style="color:#ed9d13">'org-block-end-line</span>
-         <span style="color:#ed9d13">'org-meta-line</span>
-         ))
+          <span style="color:#ed9d13">'org-block-begin-line</span>
+          <span style="color:#ed9d13">'org-block-end-line</span>
+          <span style="color:#ed9d13">'org-meta-line</span>))
   (<span style=
 "color:#40ffff">set-face-attribute</span> <span style=
 "color:#ed9d13">'org-indent</span> <span style=
@@ -286,44 +349,56 @@ settings</h3>
 "color:#24909d">:inherit</span> '(<span style=
 "color:#40ffff">shadow</span> <span style=
 "color:#40ffff">fixed-pitch</span>))
+  <span style=
+"color:#999;font-style:italic">;; Without indentation the headlines need to be different to be visible</span>
   (<span style=
 "color:#40ffff">set-face-attribute</span> <span style=
 "color:#ed9d13">'org-level-1</span> <span style=
-"color:#40ffff">nil</span> <span style=
+"color:#40ffff">nil</span>
+                      <span style=
 "color:#24909d">:height</span> <span style=
-"color:#3677a9">1.15</span> <span style=
+"color:#3677a9">1.15</span>
+                      <span style=
 "color:#24909d">:foreground</span> <span style=
 "color:#ed9d13">"#BEA4DB"</span>)
   (<span style=
 "color:#40ffff">set-face-attribute</span> <span style=
 "color:#ed9d13">'org-level-2</span> <span style=
-"color:#40ffff">nil</span> <span style=
+"color:#40ffff">nil</span>
+                      <span style=
 "color:#24909d">:height</span> <span style=
-"color:#3677a9">1.1</span> <span style=
+"color:#3677a9">1.1</span>
+                      <span style=
 "color:#24909d">:foreground</span> <span style=
-"color:#ed9d13">"#A382FF"</span> <span style=
+"color:#ed9d13">"#A382FF"</span>
+                      <span style=
 "color:#24909d">:slant</span> <span style=
 "color:#ed9d13">'italic</span>)
   (<span style=
 "color:#40ffff">set-face-attribute</span> <span style=
 "color:#ed9d13">'org-level-3</span> <span style=
-"color:#40ffff">nil</span> <span style=
+"color:#40ffff">nil</span>
+                      <span style=
 "color:#24909d">:height</span> <span style=
-"color:#3677a9">1.05</span> <span style=
+"color:#3677a9">1.05</span>
+                      <span style=
 "color:#24909d">:foreground</span> <span style=
-"color:#ed9d13">"#5E65CC"</span> <span style=
+"color:#ed9d13">"#5E65CC"</span>
+                      <span style=
 "color:#24909d">:slant</span> <span style=
 "color:#ed9d13">'italic</span>)
   (<span style=
 "color:#40ffff">set-face-attribute</span> <span style=
 "color:#ed9d13">'org-level-4</span> <span style=
-"color:#40ffff">nil</span> <span style=
+"color:#40ffff">nil</span>
+                      <span style=
 "color:#24909d">:foreground</span> <span style=
 "color:#ed9d13">"#ABABFF"</span>)
   (<span style=
 "color:#40ffff">set-face-attribute</span> <span style=
 "color:#ed9d13">'org-level-5</span> <span style=
-"color:#40ffff">nil</span> <span style=
+"color:#40ffff">nil</span>
+                      <span style=
 "color:#24909d">:foreground</span> <span style=
 "color:#ed9d13">"#2843FB"</span>)
   (<span style="color:#447fcf">mapc</span> (<span style=
@@ -381,9 +456,6 @@ settings</h3>
 "color:#40ffff">org-agenda-skip-deadline-if-done</span> <span style="color:#40ffff">t</span>
       <span style=
 "color:#40ffff">org-agenda-include-deadlines</span> <span style=
-"color:#40ffff">t</span>
-      <span style=
-"color:#40ffff">org-agenda-include-diary</span> <span style=
 "color:#40ffff">t</span>
       <span style=
 "color:#40ffff">org-agenda-block-separator</span> <span style=
@@ -592,6 +664,7 @@ settings</h3>
 "color:#40ffff">calendar-mark-diary-entries-flag</span> <span style="color:#40ffff">nil</span>)
 </code></pre></div>
 <h3 id="agenda-style">Agenda style</h3>
+<p>Those settings adjust the look and feel of the org-agenda.</p>
 <div class="highlight">
 <pre style=
 "color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
@@ -627,20 +700,53 @@ settings</h3>
 (<span style="color:#24909d">setq</span> <span style=
 "color:#40ffff">org-agenda-breadcrumbs-separator</span> <span style="color:#ed9d13">" ❱ "</span>
       <span style=
-"color:#999;font-style:italic">;; org-agenda-todo-keyword-format " ☐ "</span>
-      <span style=
 "color:#40ffff">org-agenda-current-time-string</span> <span style=
-"color:#ed9d13">"⮜┈┈┈┈┈┈┈ now"</span>
-      <span style="color:#40ffff">org-agenda-time-grid</span>
-      (<span style="color:#24909d">quote</span> ((<span style=
-"color:#40ffff">require-timed</span> <span style=
-"color:#40ffff">remove-match</span>) (<span style=
-"color:#3677a9">0900</span> <span style=
-"color:#3677a9">2100</span>) <span style=
-"color:#ed9d13">"      "</span> <span style=
-"color:#ed9d13">"┈┈┈┈┈┈┈┈┈┈┈┈┈"</span>))
-      )
+"color:#ed9d13">"⮜┈┈┈┈┈┈┈┈┈┈┈ now"</span>
+      <span style=
+"color:#40ffff">org-agenda-time-grid</span> '((<span style=
+"color:#40ffff">weekly</span> <span style=
+"color:#40ffff">today</span> <span style=
+"color:#40ffff">require-timed</span>)
+                             (<span style=
+"color:#3677a9">800</span> <span style=
+"color:#3677a9">1000</span> <span style=
+"color:#3677a9">1200</span> <span style=
+"color:#3677a9">1400</span> <span style=
+"color:#3677a9">1600</span> <span style=
+"color:#3677a9">1800</span> <span style=
+"color:#3677a9">2000</span>)
+                             <span style=
+"color:#ed9d13">"---"</span> <span style=
+"color:#ed9d13">"┈┈┈┈┈┈┈┈┈┈┈┈┈"</span>)
+      <span style=
+"color:#40ffff">org-agenda-prefix-format</span> '((<span style=
+"color:#40ffff">agenda</span> . <span style=
+"color:#ed9d13">"%i %-12:c%?-12t%b% s"</span>)
+                                 (<span style=
+"color:#40ffff">todo</span> . <span style=
+"color:#ed9d13">" %i %-12:c"</span>)
+                                 (<span style=
+"color:#40ffff">tags</span> . <span style=
+"color:#ed9d13">" %i %-12:c"</span>)
+                                 (<span style=
+"color:#40ffff">search</span> . <span style=
+"color:#ed9d13">" %i %-12:c"</span>)))
 
+(<span style="color:#24909d">setq</span> <span style=
+"color:#40ffff">org-agenda-format-date</span> (<span style=
+"color:#24909d">lambda</span> (<span style=
+"color:#40ffff">date</span>) (<span style=
+"color:#447fcf">concat</span> <span style=
+"color:#ed9d13">"\n"</span>
+                                                    (<span style=
+"color:#447fcf">make-string</span> (<span style=
+"color:#40ffff">window-width</span>) <span style=
+"color:#3677a9">9472</span>)
+                                                    <span style=
+"color:#ed9d13">"\n"</span>
+                                                    (<span style=
+"color:#40ffff">org-agenda-format-date-aligned</span> <span style=
+"color:#40ffff">date</span>))))
 (<span style="color:#24909d">setq</span> <span style=
 "color:#40ffff">org-cycle-separator-lines</span> <span style=
 "color:#3677a9">2</span>)
@@ -677,12 +783,14 @@ settings</h3>
 
 </code></pre></div>
 <h3 id="super-agenda">Super agenda</h3>
+<p><a href="https://github.com/alphapapa/org-super-agenda">Org
+super agenda</a> is a powerful package for easily filtering and
+grouping agenda items in your views.</p>
 <div class="highlight">
 <pre style=
 "color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<code class="language-elisp" data-lang="elisp">(<span style=
-"color:#24909d">setq</span> <span style=
-"color:#40ffff">org-super-agenda-header-separator</span> <span style="color:#ed9d13">"\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"</span>)
+<code class="language-elisp" data-lang="elisp"><span style=
+"color:#999;font-style:italic">;(setq org-super-agenda-header-separator "\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n")</span>
 (<span style="color:#24909d">setq</span> <span style=
 "color:#40ffff">org-agenda-custom-commands</span>
       '((<span style="color:#ed9d13">"z"</span> <span style=
@@ -883,8 +991,6 @@ settings</h3>
 "color:#24909d">lambda</span> () (<span style=
 "color:#24909d">interactive</span>) (<span style=
 "color:#40ffff">org-zotxt-insert-reference-link</span> '(<span style="color:#3677a9">4</span>))))))
-
-
 </code></pre></div>
 <h3 id="close-journal-on-exit">Close journal on exit</h3>
 <div class="highlight">
@@ -916,34 +1022,65 @@ settings</h3>
 <div class="highlight">
 <pre style=
 "color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<code class="language-elisp" data-lang="elisp">(<span style=
+<code class="language-elisp" data-lang="elisp">  (<span style=
 "color:#24909d">with-eval-after-load</span> <span style=
 "color:#ed9d13">'org-ref</span>
-  (<span style="color:#24909d">setq</span> <span style=
+    (<span style="color:#24909d">setq</span> <span style=
 "color:#40ffff">reftex-default-bibliography</span> '(<span style=
 "color:#ed9d13">"~/Papers/library.bib"</span>))
-  (<span style="color:#24909d">setq</span> <span style=
+    (<span style="color:#24909d">setq</span> <span style=
 "color:#40ffff">org-ref-default-bibliography</span> '(<span style=
 "color:#ed9d13">"~/Papers/library.bib"</span>)
-        <span style=
+          <span style=
 "color:#40ffff">org-ref-pdf-directory</span> <span style=
 "color:#ed9d13">"~/Papers/pdf/"</span>
-        <span style=
+          <span style=
 "color:#40ffff">org-ref-bibliography-notes</span> <span style=
 "color:#ed9d13">"~/org/roam/notes"</span>)
-  (<span style="color:#24909d">setq</span> <span style=
+    (<span style="color:#24909d">setq</span> <span style=
 "color:#40ffff">org-ref-notes-function</span>
-        (<span style="color:#24909d">lambda</span> (<span style=
+          (<span style="color:#24909d">lambda</span> (<span style=
 "color:#40ffff">thekey</span>)
-          (<span style="color:#24909d">let</span> ((<span style=
+            (<span style="color:#24909d">let</span> ((<span style=
 "color:#40ffff">bibtex-completion-bibliography</span> (<span style=
 "color:#40ffff">org-ref-find-bibliography</span>)))
-            (<span style=
+              (<span style=
 "color:#40ffff">bibtex-completion-edit-notes</span>
-             (<span style="color:#447fcf">list</span> (<span style=
+               (<span style=
+"color:#447fcf">list</span> (<span style=
 "color:#447fcf">car</span> (<span style=
 "color:#40ffff">org-ref-get-bibtex-key-and-file</span> <span style=
 "color:#40ffff">thekey</span>)))))))
+  )
+
+  <span style="color:#999;font-style:italic">;; Bibtex setup</span>
+  (<span style="color:#24909d">setq</span> <span style=
+"color:#40ffff">bibtex-completion-notes-path</span> <span style=
+"color:#ed9d13">"~/org/roam/notes"</span>)
+  (<span style="color:#24909d">setq</span> <span style=
+"color:#40ffff">bibtex-completion-pdf-open-function</span>
+        (<span style="color:#24909d">lambda</span> (<span style=
+"color:#40ffff">fpath</span>)
+          (<span style="color:#24909d">cond</span> ((<span style=
+"color:#447fcf">eq</span> <span style=
+"color:#40ffff">system-type</span> <span style=
+"color:#ed9d13">'darwin</span>) (<span style=
+"color:#447fcf">start-process</span> <span style=
+"color:#ed9d13">"open"</span> <span style=
+"color:#ed9d13">"*open*"</span> <span style=
+"color:#ed9d13">"open"</span> <span style=
+"color:#40ffff">fpath</span>))
+                ((<span style=
+"color:#447fcf">eq</span> <span style="color:#40ffff">system-type</span> <span style="color:#ed9d13">'gnu/linux</span>) (<span style="color:#447fcf">start-process</span> <span style="color:#ed9d13">"evince"</span> <span style="color:#ed9d13">"*evince*"</span> <span style="color:#ed9d13">"evince"</span> <span style="color:#40ffff">fpath</span>)))))
+  (<span style="color:#24909d">setq</span> <span style=
+"color:#40ffff">bibtex-completion-pdf-field</span> <span style=
+"color:#ed9d13">"file"</span>)
+  (<span style="color:#24909d">setq</span> <span style=
+"color:#40ffff">bibtex-completion-pdf-symbol</span> <span style=
+"color:#ed9d13">"⌘"</span>)
+  (<span style="color:#24909d">setq</span> <span style=
+"color:#40ffff">bibtex-completion-notes-symbol</span> <span style=
+"color:#ed9d13">"✎"</span>)
   (<span style="color:#24909d">setq</span> <span style=
 "color:#40ffff">bibtex-completion-notes-template-multiple-files</span>
         <span style=
@@ -953,44 +1090,7 @@ settings</h3>
 </span><span style=
 "color:#ed9d13">\n\n* TODO Summary\n* TODO Comments\n\n
 </span><span style=
-"color:#ed9d13">bibliography:~/Papers/library_bibtex.bib
-</span><span style="color:#ed9d13">"</span>)
-)
-
-<span style="color:#999;font-style:italic">;; Bibtex setup</span>
-(<span style="color:#24909d">setq</span> <span style=
-"color:#40ffff">bibtex-completion-notes-path</span> <span style=
-"color:#ed9d13">"~/org/roam/notes"</span>)
-(<span style="color:#24909d">setq</span> <span style=
-"color:#40ffff">bibtex-completion-pdf-open-function</span>
-      (<span style="color:#24909d">lambda</span> (<span style=
-"color:#40ffff">fpath</span>)
-        (<span style="color:#24909d">cond</span> ((<span style=
-"color:#447fcf">eq</span> <span style=
-"color:#40ffff">system-type</span> <span style=
-"color:#ed9d13">'darwin</span>) (<span style=
-"color:#447fcf">start-process</span> <span style=
-"color:#ed9d13">"open"</span> <span style=
-"color:#ed9d13">"*open*"</span> <span style=
-"color:#ed9d13">"open"</span> <span style=
-"color:#40ffff">fpath</span>))
-              ((<span style="color:#447fcf">eq</span> <span style=
-"color:#40ffff">system-type</span> <span style=
-"color:#ed9d13">'gnu/linux</span>) (<span style=
-"color:#447fcf">start-process</span> <span style=
-"color:#ed9d13">"evince"</span> <span style=
-"color:#ed9d13">"*evince*"</span> <span style=
-"color:#ed9d13">"evince"</span> <span style=
-"color:#40ffff">fpath</span>)))))
-(<span style="color:#24909d">setq</span> <span style=
-"color:#40ffff">bibtex-completion-pdf-field</span> <span style=
-"color:#ed9d13">"file"</span>)
-(<span style="color:#24909d">setq</span> <span style=
-"color:#40ffff">bibtex-completion-pdf-symbol</span> <span style=
-"color:#ed9d13">"⌘"</span>)
-(<span style="color:#24909d">setq</span> <span style=
-"color:#40ffff">bibtex-completion-notes-symbol</span> <span style=
-"color:#ed9d13">"✎"</span>)
+"color:#ed9d13">bibliography:~/Papers/library_bibtex.bib"</span>)
 </code></pre></div>
 <h2 id="org-capture">Org capture</h2>
 <div class="highlight">
@@ -1047,6 +1147,12 @@ settings</h3>
 "color:#40ffff">org-refile-allow-creating-parent-nodes</span> <span style="color:#ed9d13">'confirm</span>)
 </code></pre></div>
 <h2 id="org-roam">Org Roam</h2>
+<p>I use <a href=
+"https://github.com/org-roam/org-roam">org-roam</a> a lot to take
+notes and link between them. A large portion of this configuration
+is heavily borrowed from <a href=
+"https://github.com/jethrokuan/dots">jethrokuan’s dot
+files</a>.</p>
 <div class="highlight">
 <pre style=
 "color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
@@ -1149,6 +1255,10 @@ settings</h3>
 "color:#ed9d13">"~/org/roam/"</span>)
 </code></pre></div>
 <h3 id="org-roam-export-backlinks">Org roam export backlinks</h3>
+<p>This function makes sure all the Backlinks of the current
+org-buffer are being exported and appended to the end of the
+resulting file. Files with a name containing <code>private</code>
+will not be exported.</p>
 <div class="highlight">
 <pre style=
 "color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
@@ -1217,6 +1327,10 @@ settings</h3>
 </code></pre></div>
 <h2 id="misc">Misc</h2>
 <h3 id="timestamp-on-save">Timestamp on save</h3>
+<p>Org-roam notes are created with a <code>#+hugo_lastmod:
+Time-stamp: &lt;&gt;</code> line in the beginning. The hook below
+makes sure the current time is inserted between the brackets each
+time I save a file.</p>
 <div class="highlight">
 <pre style=
 "color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
@@ -1227,6 +1341,8 @@ settings</h3>
 </code></pre></div>
 <h3 id="make-markdown-mode-variable-width">Make markdown mode
 variable width</h3>
+<p>This is not part of the org-mode configuration, but applies
+variable width mode to markdown files when I (rarely) edit one.</p>
 <div class="highlight">
 <pre style=
 "color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4">

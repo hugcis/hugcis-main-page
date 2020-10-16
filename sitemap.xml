@@ -4,7 +4,72 @@
     
     <url>
         <loc>https://hugocisneros.com/</loc>
-        <lastmod>2020-09-29T08:45:00+02:00</lastmod>
+        <lastmod>2020-10-16T10:57:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/</loc>
+        <lastmod>2020-10-16T10:57:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/raven_s_progressive_matrices/</loc>
+        <lastmod>2020-10-16T10:57:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/cellular_automata_as_cnns/</loc>
+        <lastmod>2020-10-13T09:55:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/turing_degree/</loc>
+        <lastmod>2020-10-07T22:07:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/compression/</loc>
+        <lastmod>2020-10-07T16:22:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/turing_machine/</loc>
+        <lastmod>2020-10-05T08:07:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/alan_turing/</loc>
+        <lastmod>2020-10-05T08:06:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/turing_test/</loc>
+        <lastmod>2020-10-05T08:06:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/optimization/</loc>
+        <lastmod>2020-10-02T16:43:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/echo_state_networks/</loc>
+        <lastmod>2020-10-02T16:17:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/unsupervised_learning/</loc>
+        <lastmod>2020-10-02T09:16:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/reservoir_computing/</loc>
+        <lastmod>2020-10-02T08:52:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/dongreservoircomputingmeets2020/</loc>
+        <lastmod>2020-09-30T21:01:00+02:00</lastmod>
     </url>
     
     <url>
@@ -13,22 +78,7 @@
     </url>
     
     <url>
-        <loc>https://hugocisneros.com/notes/</loc>
-        <lastmod>2020-09-29T08:45:00+02:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/dongreservoircomputingmeets2020/</loc>
-        <lastmod>2020-09-28T16:35:00+02:00</lastmod>
-    </url>
-    
-    <url>
         <loc>https://hugocisneros.com/notes/open_ended_evolution/</loc>
-        <lastmod>2020-09-28T16:32:00+02:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/reservoir_computing/</loc>
         <lastmod>2020-09-28T16:32:00+02:00</lastmod>
     </url>
     
@@ -80,11 +130,6 @@
     <url>
         <loc>https://hugocisneros.com/notes/benderclimbingnlumeaning2020/</loc>
         <lastmod>2020-09-20T10:56:00+02:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/turing_test/</loc>
-        <lastmod>2020-09-16T10:57:00+02:00</lastmod>
     </url>
     
     <url>
@@ -523,11 +568,6 @@
     </url>
     
     <url>
-        <loc>https://hugocisneros.com/notes/raven_s_progressive_matrices/</loc>
-        <lastmod>2020-07-14T20:20:00+02:00</lastmod>
-    </url>
-    
-    <url>
         <loc>https://hugocisneros.com/notes/andersonmoredifferent1972/</loc>
         <lastmod>2020-07-14T19:57:00+02:00</lastmod>
     </url>
@@ -570,11 +610,6 @@
     <url>
         <loc>https://hugocisneros.com/notes/complexity_of_cellular_automata/</loc>
         <lastmod>2020-07-14T08:32:00+02:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/compression/</loc>
-        <lastmod>2020-07-14T08:31:00+02:00</lastmod>
     </url>
     
     <url>
@@ -933,11 +968,6 @@
     </url>
     
     <url>
-        <loc>https://hugocisneros.com/notes/turing_machine/</loc>
-        <lastmod>2020-07-10T09:15:00+02:00</lastmod>
-    </url>
-    
-    <url>
         <loc>https://hugocisneros.com/notes/algorithm/</loc>
         <lastmod>2020-07-10T09:13:00+02:00</lastmod>
     </url>
@@ -1163,11 +1193,6 @@
     </url>
     
     <url>
-        <loc>https://hugocisneros.com/notes/optimization/</loc>
-        <lastmod>2020-07-02T10:20:00+02:00</lastmod>
-    </url>
-    
-    <url>
         <loc>https://hugocisneros.com/notes/ruby/</loc>
         <lastmod>2020-07-02T10:20:00+02:00</lastmod>
     </url>
@@ -1305,16 +1330,6 @@
     <url>
         <loc>https://hugocisneros.com/notes/philosophy/</loc>
         <lastmod>2020-06-26T11:28:00+02:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/turing_degree/</loc>
-        <lastmod>2020-06-26T11:26:00+02:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/cellular_automata_as_cnns/</loc>
-        <lastmod>2020-06-26T11:13:00+02:00</lastmod>
     </url>
     
     <url>

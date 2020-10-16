@@ -96,10 +96,10 @@ d3.json("/js/graph.json").then(function(data) {
                .strength(-250))
         .force('collision', d3.forceCollide().radius(d => radius(d) + 4).strength(1.2))
         .force('x', d3.forceX().x(function(d) {
-            return width / 2 +  (width / 5) * centersx[d.communityLabel];
+            return width / 2 +  (width / 4) * centersx[d.communityLabel];
         }).strength(0.25))
         .force('y', d3.forceY().y(function(d) {
-            return height / 2 +  (height / 12) * centersy[d.communityLabel];
+            return height / 2 +  (height / 8) * centersy[d.communityLabel];
         }).strength(0.25));
 
     const svg = d3.select("svg")
