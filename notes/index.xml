@@ -6,7 +6,26 @@
     <description>Recent content in Notes on Hugo Cisneros - Personal page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 16 Oct 2020 10:57:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 19 Oct 2020 10:41:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Unker non-linear writing system</title>
+      <link>https://hugocisneros.com/notes/unker_non_linear_writing_system/</link>
+      <pubDate>Mon, 19 Oct 2020 10:41:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/unker_non_linear_writing_system/</guid>
+      <description>tags Language resources https://s.ai/nlws/  A fascinating writing system based on glyphs connected to each other to create meaning. The system is quite advanced and reading its grammar is like discovering some new alien language.
+This is the kind of complexity that would be incredible to discover in open-ended evolving language systems. A system starting from elementary components and no particular assumption about what language should be, could come up with such exotic models (probably even more exotic in the case of a truly open-ended system).</description>
+    </item>
+    
+    <item>
+      <title>Reversible cellular automata</title>
+      <link>https://hugocisneros.com/notes/reversible_cellular_automata/</link>
+      <pubDate>Fri, 16 Oct 2020 14:11:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/reversible_cellular_automata/</guid>
+      <description> tags Cellular automata  Second-order CA Block CA Backlinks  Cellular automata  </description>
+    </item>
+    
     <item>
       <title>Raven&#39;s progressive matrices</title>
       <link>https://hugocisneros.com/notes/raven_s_progressive_matrices/</link>
@@ -2101,16 +2120,6 @@ Backlinks  Chaos computing Amorphous computing Reservoir computing Computing in 
     </item>
     
     <item>
-      <title>Unker non-linear writing system</title>
-      <link>https://hugocisneros.com/notes/unker_non_linear_writing_system/</link>
-      <pubDate>Thu, 09 Jul 2020 12:41:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/unker_non_linear_writing_system/</guid>
-      <description>tags Language resources https://s.ai/nlws/  A fascinating writing system based on glyphs connected to each other to create meaning. The system is quite advanced and reading its grammar is like discovering some new alien language.
-This is the kind of complexity that would be incredible to discover in open-ended evolving language systems. A system starting from elementary components and no particular assumption about what language should be, could come up with such exotic models (probably even more exotic in the case of a truly open-ended system).</description>
-    </item>
-    
-    <item>
       <title>Why programming is a good medium for expressing poorly understood and sloppily-formulated ideas</title>
       <link>https://hugocisneros.com/notes/why_programming_is_a_good_medium/</link>
       <pubDate>Thu, 09 Jul 2020 12:41:00 +0200</pubDate>
@@ -2393,15 +2402,6 @@ Hand-engineered CA rules Below images show CA rules that can compute non trivial
       <guid>https://hugocisneros.com/notes/cellular_automata/</guid>
       <description>tags Emergence, Chaos, Artificial Intelligence resources Wikipedia, (Von Neumann and Burks 1966; Wolfram 2002)  Definition A cellular automaton is a computational model defined with respect to a regular grid of individual elements (called cells). Each of those cells can be in one of a finite number of states &amp;mdash; alive or dead, \(\{1, 2, 3\}\), etc.
 A cellular automaton&amp;rsquo;s evolution is simulated in discrete timesteps. At each new timestep, cells are updated according to a local evolution rule.</description>
-    </item>
-    
-    <item>
-      <title>Reversible cellular automata</title>
-      <link>https://hugocisneros.com/notes/reversible_cellular_automata/</link>
-      <pubDate>Thu, 02 Jul 2020 09:15:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/reversible_cellular_automata/</guid>
-      <description> tags Cellular automata  Backlinks  Cellular automata  </description>
     </item>
     
     <item>
