@@ -6,7 +6,29 @@
     <description>Recent content in Notes on Hugo Cisneros - Personal page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 19 Oct 2020 10:41:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Oct 2020 08:37:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Notes on: Neural Circuit Policies Enabling Auditable Autonomy by Lechner, M., Hasani, R., Amini, A., Henzinger, T. A., Rus, D., &amp; Grosu, R. (2020)</title>
+      <link>https://hugocisneros.com/notes/lechnerneuralcircuitpolicies2020/</link>
+      <pubDate>Wed, 21 Oct 2020 08:37:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/lechnerneuralcircuitpolicies2020/</guid>
+      <description>source (Lechner et al. 2020) tags Neural networks  Summary Comments Bibliography Lechner, Mathias, Ramin Hasani, Alexander Amini, Thomas A. Henzinger, Daniela Rus, and Radu Grosu. 2020. “Neural Circuit Policies Enabling Auditable Autonomy.” Nature Machine Intelligence 2 (10):642–52.</description>
+    </item>
+    
+    <item>
+      <title>Turing completeness of cellular automata</title>
+      <link>https://hugocisneros.com/notes/turing_completeness_of_cellular_automata/</link>
+      <pubDate>Tue, 20 Oct 2020 08:20:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/turing_completeness_of_cellular_automata/</guid>
+      <description> tags Cellular automata, Turing-completeness  Rule 110 Elementary cellular automaton rule 110 is universal (Cook 2004).
+Game of Life Conway&amp;rsquo;s Game of Life has also been show to be Turing-complete. Gliders can be used to implement logic gates.
+A working computer in Game of Life
+Bibliography Cook, Matthew. 2004. “Universality in Elementary Cellular Automata.” Complex Systems, 40.
+Backlinks  Turing-completeness  </description>
+    </item>
+    
     <item>
       <title>Unker non-linear writing system</title>
       <link>https://hugocisneros.com/notes/unker_non_linear_writing_system/</link>
@@ -2442,18 +2464,6 @@ From (Crutchfield 1994):
       <description>tags Coding  Make is a build automation tool.
 Don&amp;rsquo;t deal with tabs I have been annoyed with tabs in Makefiles many times. Some editors or copy-pasting functions automatically convert tabs to space and vice-versa and this can break your Makefile.
 With GNU Make 4.0 or later, it is possible to set the prefix to some other fixed token. To use &amp;gt; as a prefix, put this at the beginning of your Makefile:</description>
-    </item>
-    
-    <item>
-      <title>Turing completeness of cellular automata</title>
-      <link>https://hugocisneros.com/notes/turing_completeness_of_cellular_automata/</link>
-      <pubDate>Wed, 01 Jul 2020 14:25:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/turing_completeness_of_cellular_automata/</guid>
-      <description> tags Cellular automata, Turing-completeness  Rule 110 Elementary cellular automaton rule 110 is universal (Cook 2004).
-Game of Life Conway&amp;rsquo;s Game of Life has also been show to be Turing-complete. Gliders can be used to implement logic gates.
-Bibliography Cook, Matthew. 2004. “Universality in Elementary Cellular Automata.” Complex Systems, 40.
-Backlinks  Turing-completeness  </description>
     </item>
     
     <item>
