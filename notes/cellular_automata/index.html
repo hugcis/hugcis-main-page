@@ -69,8 +69,8 @@ automata</h1>
 <dt>resources</dt>
 <dd><a href=
 "https://en.wikipedia.org/wiki/Cellular%5Fautomaton">Wikipedia</a>,
-(<a href="#org15d5c9d">Von Neumann and Burks 1966</a>; <a href=
-"#orgb101e27">Wolfram 2002</a>)</dd>
+(<a href="#org24df432">Von Neumann and Burks 1966</a>; <a href=
+"#org9f43acf">Wolfram 2002</a>)</dd>
 </dl>
 <h2 id="definition">Definition</h2>
 <p>A cellular automaton is a computational model defined with
@@ -82,7 +82,8 @@ number of states — <em>alive</em> or <em>dead</em>, \(\{1, 2,
 timesteps. At each new timestep, cells are updated according to a
 local <strong>evolution rule</strong>. The rule is a table or
 function mapping every possible state of a cell and their local
-neighborhoods to a new state.</p>
+neighborhoods to a new state. It follows that a CA is a kind of
+<a href="/notes/dynamical_systems/">dynamical system</a>.</p>
 <p>There are multiple ways to define the topology of the grid,
 rules, local neighborhoods and simulation steps. Some well known
 types of automata are listed below</p>
@@ -105,7 +106,7 @@ Cellular automata and <a href=
 <p>I just realized that cellular automata and reaction-diffusion
 systems are strongly related. This might be a well known fact but
 it seemed particularly striking when looking at the following image
-from (<a href="#org51a80c6">Manukyan et al. 2017</a>) it seems
+from (<a href="#org5dcc931">Manukyan et al. 2017</a>) it seems
 clear that there is a continuum between the two models.</p>
 <figure><img src="/img/ca_reaction_diffusion.jpg"></figure>
 <h2 id=
@@ -113,8 +114,8 @@ clear that there is a continuum between the two models.</p>
 Cellular automata in <a href="/notes/image_processing/">Image
 processing</a></h2>
 <p>Papers about using cellular automata in image processing
-(<a href="#orge629784">Selvapeter and Hordijk 2009</a>; <a href=
-"#orgf1fdc69">Wongthanavasu and Ponkaew 2013</a>)</p>
+(<a href="#org1dac6bf">Selvapeter and Hordijk 2009</a>; <a href=
+"#org595acb3">Wongthanavasu and Ponkaew 2013</a>)</p>
 <p>Some cellular automata have a characteristic “blob-preserving”
 behavior where parts of the space get organized in large blobs.
 This behavior is very similar to an application of <a href=
@@ -208,20 +209,20 @@ hypothesis</a> and <a href="/notes/zuse_s_thesis/">Zuse’s
 thesis</a>, and is an interesting argument for the universe being a
 computer simulation — and even a CA.</p>
 <h2 id="bibliography">Bibliography</h2>
-<p><a id="org51a80c6"></a>Manukyan, Liana, Sophie A. Montandon,
+<p><a id="org5dcc931"></a>Manukyan, Liana, Sophie A. Montandon,
 Anamarija Fofonjka, Stanislav Smirnov, and Michel C. Milinkovitch.
 2017. “A Living Mesoscopic Cellular Automaton Made of Skin Scales.”
 <em>Nature</em> 544 (7649):173–79.</p>
-<p><a id="orge629784"></a>Selvapeter, P. Jebaraj, and Wim Hordijk.
+<p><a id="org1dac6bf"></a>Selvapeter, P. Jebaraj, and Wim Hordijk.
 2009. “Cellular Automata for Image Noise Filtering.” In <em>2009
 World Congress on Nature & Biologically Inspired Computing
 (NaBIC)</em>, 193–97. Coimbatore, India: IEEE.</p>
-<p><a id="org15d5c9d"></a>Von Neumann, John, and Arthur W. Burks.
+<p><a id="org24df432"></a>Von Neumann, John, and Arthur W. Burks.
 1966. “Theory of Self-Reproducing Automata.” <em>IEEE Transactions
 on Neural Networks</em> 5 (1):3–14.</p>
-<p><a id="orgb101e27"></a>Wolfram, Stephen. 2002. <em>A New Kind of
+<p><a id="org9f43acf"></a>Wolfram, Stephen. 2002. <em>A New Kind of
 Science</em>. Champaign, IL: Wolfram Media.</p>
-<p><a id="orgf1fdc69"></a>Wongthanavasu, Sartra, and Jetsada
+<p><a id="org595acb3"></a>Wongthanavasu, Sartra, and Jetsada
 Ponkaew. 2013. “Cellular Automata for Pattern Recognition.” In
 <em>Emerging Applications of Cellular Automata</em>, edited by
 Alejandro Salcido. InTech.</p>
@@ -247,15 +248,10 @@ discovery in complex systems</a></li>
 model</a></li>
 <li><a href="/notes/elementary_cellular_automata/">Elementary
 cellular automata</a></li>
-<li><a href=
-"/notes/turing_completeness_of_cellular_automata/">Turing
-completeness of cellular automata</a></li>
 <li><a href="/notes/complexity_of_cellular_automata/">Complexity of
 cellular automata</a></li>
 <li><a href="/notes/zuse_s_thesis/">Zuse’s thesis</a></li>
 <li><a href="/notes/langton_s_loop/">Langton’s loop</a></li>
-<li><a href="/notes/reversible_cellular_automata/">Reversible
-cellular automata</a></li>
 <li><a href=
 "/notes/lehredevelopmentalmappingsphenotypic2003/">Notes on:
 Developmental mappings and phenotypic complexity by Lehre, P. K., &
@@ -303,19 +299,24 @@ Life</a></li>
 <li><a href="/notes/konrad_zuse/">Konrad Zuse</a></li>
 <li><a href="/notes/computing_in_cellular_automata/">Computing in
 cellular automata</a></li>
-<li><a href="/notes/cellular_automata_as_cnns/">Cellular automata
-as CNNs</a></li>
 <li><a href="/notes/open_ended_evolution/">Open-ended
 Evolution</a></li>
 <li><a href="/notes/von_neumann_s_self_reproducing_ca/">Von
 Neumann’s self-reproducing CA</a></li>
 <li><a href="/notes/boolean_networks/">Boolean networks</a></li>
+<li><a href="/notes/cellular_automata_as_cnns/">Cellular automata
+as CNNs</a></li>
+<li><a href="/notes/reversible_cellular_automata/">Reversible
+cellular automata</a></li>
+<li><a href=
+"/notes/turing_completeness_of_cellular_automata/">Turing
+completeness of cellular automata</a></li>
 </ul>
 </div>
 <div class="note-footer">Last changed <a class="u-url" href=
 "https://hugocisneros.com/notes/cellular_automata/"><time itemprop=
 "datePublished" class="dt-published" datetime=
-"2020-07-02T09:15:00+0200">02/07/2020</time></a> | authored by
+"2020-10-27T20:26:00+0100">27/10/2020</time></a> | authored by
 <a href="https://hugocisneros.com/" rel="author" class=
 "p-author h-card" itemprop="author" itemscope itemtype=
 "http://schema.org/Person"><span itemprop="name">Hugo

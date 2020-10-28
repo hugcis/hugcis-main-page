@@ -6,14 +6,75 @@
     <description>Recent content in Notes on Hugo Cisneros - Personal page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 Oct 2020 08:37:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 28 Oct 2020 09:32:00 +0100</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Neural network training</title>
+      <link>https://hugocisneros.com/notes/neural_network_training/</link>
+      <pubDate>Wed, 28 Oct 2020 09:32:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/neural_network_training/</guid>
+      <description>tags Neural networks, Machine learning, Optimization  Neural network training as development in program space A neural network as a whole can be seen as a dynamical system. Its state is the collection of its parameters, and its evolution function is the optimization step taken when training the network.
+In such a framework, the goal of training the neural network is to reach a form of attractor further optimization steps don&amp;rsquo;t change the state of the neural network.</description>
+    </item>
+    
+    <item>
+      <title>Cellular automata</title>
+      <link>https://hugocisneros.com/notes/cellular_automata/</link>
+      <pubDate>Tue, 27 Oct 2020 20:26:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/cellular_automata/</guid>
+      <description>tags Emergence, Chaos, Artificial Intelligence resources Wikipedia, (Von Neumann and Burks 1966; Wolfram 2002)  Definition A cellular automaton is a computational model defined with respect to a regular grid of individual elements (called cells). Each of those cells can be in one of a finite number of states &amp;mdash; alive or dead, \(\{1, 2, 3\}\), etc.
+A cellular automaton&amp;rsquo;s evolution is simulated in discrete timesteps. At each new timestep, cells are updated according to a local evolution rule.</description>
+    </item>
+    
+    <item>
+      <title>Complex Systems</title>
+      <link>https://hugocisneros.com/notes/complex_systems/</link>
+      <pubDate>Tue, 27 Oct 2020 20:26:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/complex_systems/</guid>
+      <description>Bottomless wonders spring from simple rules, which are repeated without end.
+ &amp;mdash; Mandelbrot, ~1980
+When we talk about complex systems in time, we often used the term complex dynamical systems.
+Example of complex systems  The economy (Anderson and Global Economy Workshop 1996)  Bibliography Anderson, Philip W., and Evolutionary Paths of the Global Economy Workshop, eds. 1996. The Economy as an Evolving Complex System: The Proceedings of the Evolutionary Paths of the Global Economy Workshop, Held September, 1987 in Santa Fe, New Mexico.</description>
+    </item>
+    
+    <item>
+      <title>Dynamical systems</title>
+      <link>https://hugocisneros.com/notes/dynamical_systems/</link>
+      <pubDate>Tue, 27 Oct 2020 20:26:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/dynamical_systems/</guid>
+      <description> tags Applied maths, Physics  Backlinks  Neural network training Cellular automata Complex Systems  </description>
+    </item>
+    
+    <item>
+      <title>Dynamical system</title>
+      <link>https://hugocisneros.com/notes/dynamical_system/</link>
+      <pubDate>Tue, 27 Oct 2020 19:44:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/dynamical_system/</guid>
+      <description> tags Applied maths, Physics  </description>
+    </item>
+    
     <item>
       <title>Notes on: Neural Circuit Policies Enabling Auditable Autonomy by Lechner, M., Hasani, R., Amini, A., Henzinger, T. A., Rus, D., &amp; Grosu, R. (2020)</title>
       <link>https://hugocisneros.com/notes/lechnerneuralcircuitpolicies2020/</link>
-      <pubDate>Wed, 21 Oct 2020 08:37:00 +0200</pubDate>
+      <pubDate>Thu, 22 Oct 2020 10:06:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/lechnerneuralcircuitpolicies2020/</guid>
-      <description>source (Lechner et al. 2020) tags Neural networks  Summary Comments Bibliography Lechner, Mathias, Ramin Hasani, Alexander Amini, Thomas A. Henzinger, Daniela Rus, and Radu Grosu. 2020. “Neural Circuit Policies Enabling Auditable Autonomy.” Nature Machine Intelligence 2 (10):642–52.</description>
+      <description>source (Lechner et al. 2020) tags Neural networks  Summary This article introduces a type of RNN called Neural Circuit Policies (NCP). This architecture is said to be inspired from the wiring diagram of the C. elegans nematode.
+The main building block is a Recurrent neural network called liquid time constant (LTC) introduced in (Hasani et al. 2020).
+LTC Neurons These neurons are bio-inspired. For a given neuron in state x_i(t), the continuous temporal evolution is described by an ODE: \[ \dot{x}_i = - \left(\frac{1}{\tau_i} + \frac{w_{ij}}{C_{m_i}} \sigma_i(x_j) \right) x_i + \left( \frac{x_{\text{leak}_i}}{\tau_i}+ \frac{w_{ij}}{C_{m_i}} \sigma_i(x_j) E_{ij} \right) \]</description>
+    </item>
+    
+    <item>
+      <title>Stable marriage problem</title>
+      <link>https://hugocisneros.com/notes/stable_marriage_problem/</link>
+      <pubDate>Thu, 22 Oct 2020 09:42:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/stable_marriage_problem/</guid>
+      <description> tags Algorithm  </description>
     </item>
     
     <item>
@@ -659,17 +720,6 @@ The algorithm is relatively simple. It starts by selecting the point with lowest
       <guid>https://hugocisneros.com/notes/jensenreservoircomputingartificial2020/</guid>
       <description>source (Jensen and Tufte 2020) tags Reservoir computing, Complex Systems  Summary This talk is about artificial spin ice. This model is based on a grid of coupled magnets that can be controlled with a magnetic field. The geometry of that grid can very greatly the kind of behavior one may observe in such systems.
 The authors want to use the spin ice model for reservoir computing. They measure useful quantities such as kernel quality \(K\) (ability to separate inputs) and generalization capabilities \(G\) (how similar inputs yield similar results).</description>
-    </item>
-    
-    <item>
-      <title>Complex Systems</title>
-      <link>https://hugocisneros.com/notes/complex_systems/</link>
-      <pubDate>Mon, 27 Jul 2020 16:46:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/complex_systems/</guid>
-      <description>Bottomless wonders spring from simple rules, which are repeated without end.
- &amp;mdash; Mandelbrot, ~1980
-Example of complex systems  The economy (Anderson and Global Economy Workshop 1996)  Bibliography Anderson, Philip W., and Evolutionary Paths of the Global Economy Workshop, eds. 1996. The Economy as an Evolving Complex System: The Proceedings of the Evolutionary Paths of the Global Economy Workshop, Held September, 1987 in Santa Fe, New Mexico. 8.</description>
     </item>
     
     <item>
@@ -1583,15 +1633,6 @@ Backlinks  Notes on: Information-Theoretic Probing with Minimum Description Leng
     </item>
     
     <item>
-      <title>Neural network training</title>
-      <link>https://hugocisneros.com/notes/neural_network_training/</link>
-      <pubDate>Tue, 14 Jul 2020 08:20:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/neural_network_training/</guid>
-      <description> tags Neural networks, Machine learning, Optimization  Backlinks  Notes on: Network Deconvolution by Ye, C., Evanusa, M., He, H., Mitrokhin, A., Goldstein, T., Yorke, J. A., Fermuller, Cornelia, … (2020) The Lottery ticket hypothesis  </description>
-    </item>
-    
-    <item>
       <title>Notes on: On Adversarial Mixup Resynthesis by Beckham, C., Honari, S., Verma, V., Lamb, A., Ghadiri, F., Hjelm, R. D., Bengio, Y., … (2019)</title>
       <link>https://hugocisneros.com/notes/beckhamadversarialmixupresynthesis2019/</link>
       <pubDate>Tue, 14 Jul 2020 08:19:00 +0200</pubDate>
@@ -2414,16 +2455,6 @@ Hand-engineered CA rules Below images show CA rules that can compute non trivial
       
       <guid>https://hugocisneros.com/notes/hyperbolic_geometry/</guid>
       <description> tags Mathematics  Backlinks  Computing in cellular automata  </description>
-    </item>
-    
-    <item>
-      <title>Cellular automata</title>
-      <link>https://hugocisneros.com/notes/cellular_automata/</link>
-      <pubDate>Thu, 02 Jul 2020 09:15:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/cellular_automata/</guid>
-      <description>tags Emergence, Chaos, Artificial Intelligence resources Wikipedia, (Von Neumann and Burks 1966; Wolfram 2002)  Definition A cellular automaton is a computational model defined with respect to a regular grid of individual elements (called cells). Each of those cells can be in one of a finite number of states &amp;mdash; alive or dead, \(\{1, 2, 3\}\), etc.
-A cellular automaton&amp;rsquo;s evolution is simulated in discrete timesteps. At each new timestep, cells are updated according to a local evolution rule.</description>
     </item>
     
     <item>

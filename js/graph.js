@@ -94,7 +94,8 @@ d3.json("/js/graph.json").then(function(data) {
         .force("link", d3.forceLink(links).id(d => d.id).strength(.1))
         .force("charge", d3.forceManyBody()
                .strength(-250))
-        .force('collision', d3.forceCollide().radius(d => radius(d) + 4).strength(1.2))
+        .force('collision',
+               d3.forceCollide().radius(d => radius(d) * 1.2).strength(1.5))
         .force('x', d3.forceX().x(function(d) {
             return width / 2 +  (width / 4) * centersx[d.communityLabel];
         }).strength(0.25))
