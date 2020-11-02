@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+
+<meta charset="utf-8">
+<meta name="viewport" content=
+"width=device-width,initial-scale=1.0,minimum-scale=1">
+<title>Notes on: The geometry of integration in text classification
+RNNs by Aitken, K., Ramasesh, V. V., Garg, A., Cao, Y., Sussillo,
+D., & Maheswaranathan, N. (2020) - Hugo Cisneros - Personal
+page</title>
+<meta property="og:title" content=
+"Notes on: The geometry of integration in text classification RNNs by Aitken, K., Ramasesh, V. V., Garg, A., Cao, Y., Sussillo, D., &amp; Maheswaranathan, N. (2020) - Hugo Cisneros - Personal page">
+<meta property="og:type" content="article">
+<meta property="og:image" content="/img/main.jpeg">
+<meta property="og:url" content=
+"https://hugocisneros.com/notes/aitkengeometryintegrationtext2020/">
+<meta property="og:description" content=
+"Notes about The geometry of integration in text classification RNNs by Aitken, K., Ramasesh, V. V., Garg, A., Cao, Y., Sussillo, D., &amp; Maheswaranathan, N. (2020)">
+<meta name="Description" property="description" content=
+"Notes about The geometry of integration in text classification RNNs by Aitken, K., Ramasesh, V. V., Garg, A., Cao, Y., Sussillo, D., &amp; Maheswaranathan, N. (2020)">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@cisne_hug">
+<meta name="twitter:creator" content="@cisne_hug">
+<link rel="stylesheet" href=
+"https://hugocisneros.com/css/main.min.2748d42cc00e1d64a84f8ba0e8e381dea8a40ce5a09292f5c308dd35fc373bd5.css"
+media="all" type="text/css">
+<link rel="apple-touch-icon" sizes="180x180" href=
+"/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href=
+"/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href=
+"/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color=
+"#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<link rel="webmention" href=
+"https://webmention.io/hugocisneros.com/webmention">
+<link rel="pingback" href=
+"https://webmention.io/hugocisneros.com/xmlrpc">
+</head>
+<body>
+<div class="wrapper">
+<header class="header">
+<nav class="nav">
+<div class="nav-main"><a href="https://hugocisneros.com/" class=
+"nav-title">Hugo Cisneros - Personal page</a></div>
+<ul class="nav-links">
+<li><a href="/about/">About</a></li>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/notes/">Notes</a></li>
+<li><a href="/resume/">Resume</a></li>
+</ul>
+</nav>
+</header>
+<main class="content" role="main">
+<article class="article h-entry" itemprop="mainEntity" itemscope
+itemtype="http://schema.org/BlogPosting">
+<div class="single-note note-container">
+<h1 class="article-title p-name" itemprop="name">The geometry of
+integration in text classification RNNs by Aitken, K., Ramasesh, V.
+V., Garg, A., Cao, Y., Sussillo, D., & Maheswaranathan, N.
+(2020)</h1>
+<div class="article-content e-content p-name" itemprop=
+"articleBody">
+<dl>
+<dt>tags</dt>
+<dd><a href="/notes/recurrent_neural_networks/">RNN</a>, <a href=
+"/notes/nlp/">NLP</a></dd>
+<dt>source</dt>
+<dd>(<a href="#orga82c59e">Aitken et al. 2020</a>)</dd>
+</dl>
+<h2 id="summary">Summary</h2>
+<p>This paper takes a <a href="/notes/dynamical_systems/">dynamical
+system</a> based approach to study learning in RNNs. <a href=
+"/notes/gradient_descent/">Gradient descent</a> <a href=
+"/notes/optimization/">optimization</a> in RNNs allows them to
+learn a simplified form of memory and information processing.</p>
+<p>The authors use simple text classification tasks to try and
+understand if these learned properties can be understood by looking
+at the state dynamics of RNNs.</p>
+<p>The RNNs usually behave like <a href=
+"/notes/attractor_networks/">attractor networks</a>, with the
+hidden state lying on a low-dimensional manifold.</p>
+<h3 id="synthetic-data">Synthetic data</h3>
+<p>A first task is to classify sentences based on the number of
+<em>evidence</em> word corresponding to a target class. A simple
+solution to this problem is a counter which returns a class with
+the majority of evidence words.</p>
+<p>With 3 classes, the learned neural network functions exactly
+like an <em>integrator</em> working mostly on a 2D equilateral
+triangle. Each evidence word moves the hidden state towards a
+corner of this triangle while neutral words don’t move the hidden
+state.</p>
+<p>For varying number of classes \(N\), the authors show that
+\(N-1\) dimensions are mostly used for classification, explaining
+95% of the variance of the hidden state.</p>
+<h3 id="natural-data">Natural data</h3>
+<p>Interestingly, learned attractors are more or less similar with
+natural classification data. A RNN learns for each word a direction
+that will lead the hidden state towards the corresponding
+class.</p>
+<h3 id="ordered-classification">Ordered classification</h3>
+<p>With the more involved task of ordered classification (star
+review prediction), RNN still learn low dimensional attractors. The
+integration is now apparently twofold: sentiment and intensity both
+play a role for the final score.</p>
+<h3 id="multi-label-classification">Multi-label classification</h3>
+<p>With multi-label classification, a RNN keeps track of all
+classes combinations like if they were different classes.</p>
+<h2 id="comments">Comments</h2>
+<p>I’m particularly interested in this kind of work trying to
+understand how these neural networks work. Gradient descent seems
+pretty good at finding shortcuts in data. This makes it
+particularly efficient for relatively simple tasks like <a href=
+"/notes/text_classification/">sentence classification</a> or
+relatively OK <a href="/notes/language_modeling/">language
+modeling</a>, but fails to construct more complex primitives or
+attractors.</p>
+<p><a href="/notes/neuroscience/">Neuroscience</a> seems to have
+shown that at least parts of our brain functions use attractor
+dynamics like RNNs, but they likely weren’t found through the same
+kind of optimization.</p>
+<p>It is interesting to think about this in connection with
+(<a href="#org816888a">Katharopoulos et al. 2020</a>). This also
+mean that the powerful transformers also act like some kind of
+fancy integrator in a large space. It seems like this would be
+limiting their capabilities, since our brain doesn’t look like its
+only doing integration.</p>
+<h2 id="bibliography">Bibliography</h2>
+<p><a id="orga82c59e"></a>Aitken, Kyle, Vinay V. Ramasesh, Ankush
+Garg, Yuan Cao, David Sussillo, and Niru Maheswaranathan. 2020.
+“The Geometry of Integration in Text Classification RNNs.”
+<em>arXiv:2010.15114 [Cs, Stat]</em>, October.</p>
+<p><a id="org816888a"></a>Katharopoulos, Angelos, Apoorv Vyas,
+Nikolaos Pappas, and François Fleuret. 2020. “Transformers Are
+RNNs: Fast Autoregressive Transformers with Linear Attention.”
+<em>arXiv:2006.16236 [Cs, Stat]</em>, June.</p>
+</div>
+<div class="note-footer">Last changed <a class="u-url" href=
+"https://hugocisneros.com/notes/aitkengeometryintegrationtext2020/">
+<time itemprop="datePublished" class="dt-published" datetime=
+"2020-11-02T15:36:00+0100">02/11/2020</time></a> | authored by
+<a href="https://hugocisneros.com/" rel="author" class=
+"p-author h-card" itemprop="author" itemscope itemtype=
+"http://schema.org/Person"><span itemprop="name">Hugo
+Cisneros</span></a></div>
+</div>
+</article>
+<br>
+<a href="/notes#aitkengeometryintegrationtext2020"><b>← Back to
+Notes</b></a>
+<hr></main>
+<footer class="footer">
+<ul class="footer-links">
+<li><a class="rss-link" href="/blog/index.xml" type=
+"application/rss+xml" target="_blank">Blog <img class="rss-icon"
+src="/img/RSS.svg" alt="RSS feed icon"></a></li>
+<li><a href=
+"https://github.com/hugcis/natrium-custom">Code</a></li>
+<li>© Hugo Cisneros 2020</li>
+</ul>
+</footer>
+</div>
+<script>
+ MathJax = {
+     tex: {
+         inlineMath: [['$','$'], ['\\(', '\\)']],
+         tags: 'ams'
+     }
+ };
+</script> 
+<script type="text/javascript" rel="preconnect" id="MathJax-script"
+async src=
+"https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>
