@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+
+<meta charset="utf-8">
+<meta name="viewport" content=
+"width=device-width,initial-scale=1.0,minimum-scale=1">
+<title>Supervised learning - Hugo Cisneros - Personal page</title>
+<meta property="og:title" content=
+"Supervised learning - Hugo Cisneros - Personal page">
+<meta property="og:type" content="article">
+<meta property="og:image" content="/img/main.jpeg">
+<meta property="og:url" content=
+"https://hugocisneros.com/notes/supervised_learning/">
+<meta property="og:description" content=
+"Notes about Supervised learning">
+<meta name="Description" property="description" content=
+"Notes about Supervised learning">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@cisne_hug">
+<meta name="twitter:creator" content="@cisne_hug">
+<link rel="stylesheet" href=
+"https://hugocisneros.com/css/main.min.2748d42cc00e1d64a84f8ba0e8e381dea8a40ce5a09292f5c308dd35fc373bd5.css"
+media="all" type="text/css">
+<link rel="apple-touch-icon" sizes="180x180" href=
+"/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href=
+"/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href=
+"/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color=
+"#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<link rel="webmention" href=
+"https://webmention.io/hugocisneros.com/webmention">
+<link rel="pingback" href=
+"https://webmention.io/hugocisneros.com/xmlrpc">
+</head>
+<body>
+<div class="wrapper">
+<header class="header">
+<nav class="nav">
+<div class="nav-main"><a href="https://hugocisneros.com/" class=
+"nav-title">Hugo Cisneros - Personal page</a></div>
+<ul class="nav-links">
+<li><a href="/about/">About</a></li>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/notes/">Notes</a></li>
+<li><a href="/resume/">Resume</a></li>
+</ul>
+</nav>
+</header>
+<main class="content" role="main">
+<article class="article h-entry" itemprop="mainEntity" itemscope
+itemtype="http://schema.org/BlogPosting">
+<div class="single-note note-container">
+<h1 class="article-title p-name" itemprop="name">Supervised
+learning</h1>
+<div class="article-content e-content p-name" itemprop=
+"articleBody">
+<dl>
+<dt>tags</dt>
+<dd><a href="/notes/machine_learning/">Machine learning</a></dd>
+</dl>
+<h2 id="data">Data</h2>
+<p>Input/output example pairs: \[ \{(x_i, y_i)\}_{i\leq n}
+\sim_{iid} \mathbb{P}, \quad \mathbb{P} \in \mathcal{P}(\mathcal{X}
+\times \mathcal{Y}) \text{ unknown} \]</p>
+<h2 id="mapping">Mapping</h2>
+<p>We search for a mapping \(f: \mathcal{X} \rightarrow
+\mathcal{Y}\). It is also common to parameterize this mapping with
+a parameter \(\theta \in \mathbb{R}^d\) and write \(h: \mathcal{X}
+\times \mathbb{R}^d \rightarrow \mathcal{Y}\).</p>
+<p>The prediction \(\hat{y}\) is written</p>
+<p>\[ \hat{y} = f(x) = h(x, \theta) \]</p>
+<h2 id="objective">Objective</h2>
+<p>The goal is to find the above mapping such as to minimize an
+objective. For example, the objective can be the expectation
+quadratic loss below: \[ R(f) = \mathbb{E}\left\{
+\frac{1}{2}(y_{new} - f(x_{new}))^2 \right\}, \quad (y_{new},
+x_{new}) \sim \mathbb{P} \]</p>
+<p>In general we write</p>
+<p>\[ R(f) = \mathbb{E}_\mathbb{P} \left[ \ell(y, f(x))
+\right]\]</p>
+<p>Usually, because this objective cannot be minimized directly —
+we don’t have access to infinitely many new samples — minimization
+on the set of available examples is done instead: this is
+<strong>Empirical risk minimization</strong> (ERM).</p>
+<h3 id="empirical-risk-minimization">Empirical risk
+minimization</h3>
+<p>For the above \(R\) with least-square loss, ERM is written \[
+\text{minimize}\quad \hat{R}_n(\theta) :=
+\frac{1}{2n}\sum_{i=1}^n(y_i - f(x_i;\theta))^2, \] \[ \text{subj.
+to } f(\cdot;\theta) : \mathbb{R}^d \rightarrow \mathbb{R}, \quad
+\theta \in \Theta \subseteq \mathbb{R}^p \]</p>
+<p>This minimization problem can be solved using <a href=
+"/notes/optimization/">Optimization</a> methods. <a href=
+"/notes/gradient_descent/">Gradient descent</a> is one of them. Its
+<strong>stochastic</strong> variant is written as follows for the
+problem above.</p>
+<p>\[ \theta^{k+1} = \theta^k - \frac{\epsilon}{2}
+\nabla_\theta(y_{I(k)} - f(x_{I(k)}; \theta^k))^2 \] \[ I(k) \sim
+\text{Unif}([n]) \]</p>
+<h3 id="expected-risk-minimization">Expected risk minimization</h3>
+<p>This other quantity measures the generalization performance of
+our model , the expectation below is taken with respect to unseen
+data and thus cannot be computed. This is the setting of a single
+pass optimization or online learning, and gives the best
+generalization guarantees.</p>
+<p>\[ R(f) = \mathbb{E}_\mathbb{P} \left[ \ell(y, f(x))
+\right]\]</p>
+<h3 id="usual-losses">Usual losses</h3>
+<p>In general, the loss as the form \(\ell: \mathcal{Y} \times
+\mathcal{Y} \rightarrow \mathbb{R}\) Several losses are usually
+used in the two most common supervised learning settings:</p>
+<h4 id="regression">Regression</h4>
+<p>The quadratic loss is most often used: \[ \frac{1}{2} (y -
+f(x))^2 \]</p>
+<h4 id="classification">Classification</h4>
+<p>With classification, the prediction \(y\) is in \(\{ -1, 1 \}\),
+and we usually take \(\hat{y} = \text{sign}(f(x))\)</p>
+<p>An “ideal” loss would be \(\ell(y\cdot f(x)) = 1_{y\cdot f(x)
+&lt; 0}\). Usually, this is substituted for convex losses:</p>
+<ul>
+<li>Hinge loss \(\max(0, - y \cdot f(x) + 1)\)</li>
+<li>Square loss \(\frac{1}{2}(1- y \cdot f(x))^2\)</li>
+<li>Logistic loss \(\log ( 1 + \exp (- y \cdot f(x)))\)</li>
+</ul>
+<h2 id="learning">Learning</h2>
+<p>A learning algorithm in the supervised setting can be reduced
+down to a mapping between the initial set of input/output pairs and
+a prediction function:</p>
+<p>\[ L: (\mathcal{X} \times \mathcal{Y})^n \rightarrow (f:
+\mathcal{X} \rightarrow \mathcal{Y}) \]</p>
+<h2 id="backlinks">Backlinks</h2>
+<ul>
+<li><a href="/notes/mean_field_theory_of_neural_networks/">Mean
+field theory of neural networks (talk)</a></li>
+</ul>
+</div>
+<div class="note-footer">Last changed <a class="u-url" href=
+"https://hugocisneros.com/notes/supervised_learning/"><time itemprop="datePublished"
+class="dt-published" datetime=
+"2020-07-09T17:29:00+0200">09/07/2020</time></a> | authored by
+<a href="https://hugocisneros.com/" rel="author" class=
+"p-author h-card" itemprop="author" itemscope itemtype=
+"http://schema.org/Person"><span itemprop="name">Hugo
+Cisneros</span></a></div>
+</div>
+</article>
+<br>
+<a href="/notes#supervised_learning"><b>← Back to Notes</b></a>
+<hr></main>
+<footer class="footer">
+<ul class="footer-links">
+<li><a class="rss-link" href="/blog/index.xml" type=
+"application/rss+xml" target="_blank">Blog <img class="rss-icon"
+src="/img/RSS.svg" alt="RSS feed icon"></a></li>
+<li><a href=
+"https://github.com/hugcis/natrium-custom">Code</a></li>
+<li>© Hugo Cisneros 2020</li>
+</ul>
+</footer>
+</div>
+<script>
+ MathJax = {
+     tex: {
+         inlineMath: [['$','$'], ['\\(', '\\)']],
+         tags: 'ams'
+     }
+ };
+</script> 
+<script type="text/javascript" rel="preconnect" id="MathJax-script"
+async src=
+"https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>

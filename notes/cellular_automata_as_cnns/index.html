@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+
+<meta charset="utf-8">
+<meta name="viewport" content=
+"width=device-width,initial-scale=1.0,minimum-scale=1">
+<title>Cellular automata as CNNs - Hugo Cisneros - Personal
+page</title>
+<meta property="og:title" content=
+"Cellular automata as CNNs - Hugo Cisneros - Personal page">
+<meta property="og:type" content="article">
+<meta property="og:image" content="/img/rnn_and_gol.jpg">
+<meta property="og:url" content=
+"https://hugocisneros.com/notes/cellular_automata_as_cnns/">
+<meta property="og:description" content=
+"Notes about Cellular automata as CNNs">
+<meta name="Description" property="description" content=
+"Notes about Cellular automata as CNNs">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@cisne_hug">
+<meta name="twitter:creator" content="@cisne_hug">
+<link rel="stylesheet" href=
+"https://hugocisneros.com/css/main.min.2748d42cc00e1d64a84f8ba0e8e381dea8a40ce5a09292f5c308dd35fc373bd5.css"
+media="all" type="text/css">
+<link rel="apple-touch-icon" sizes="180x180" href=
+"/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href=
+"/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href=
+"/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color=
+"#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<link rel="webmention" href=
+"https://webmention.io/hugocisneros.com/webmention">
+<link rel="pingback" href=
+"https://webmention.io/hugocisneros.com/xmlrpc">
+</head>
+<body>
+<div class="wrapper">
+<header class="header">
+<nav class="nav">
+<div class="nav-main"><a href="https://hugocisneros.com/" class=
+"nav-title">Hugo Cisneros - Personal page</a></div>
+<ul class="nav-links">
+<li><a href="/about/">About</a></li>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/notes/">Notes</a></li>
+<li><a href="/resume/">Resume</a></li>
+</ul>
+</nav>
+</header>
+<main class="content" role="main">
+<article class="article h-entry" itemprop="mainEntity" itemscope
+itemtype="http://schema.org/BlogPosting">
+<div class="single-note note-container">
+<div class="title-image"><img src="/img/rnn_and_gol.jpg" alt=
+"RNN and Game of life" style="width:100%"></div>
+<h1 class="article-title p-name" itemprop="name">Cellular automata
+as CNNs</h1>
+<div class="article-content e-content p-name" itemprop=
+"articleBody">
+<dl>
+<dt>tags</dt>
+<dd><a href="/notes/cellular_automata/">Cellular automata</a>,
+<a href="/notes/convolutional_neural_networks/">Convolutional
+neural networks</a></dd>
+</dl>
+<h2 id="motivation">Motivation</h2>
+<p><a href="/notes/cellular_automata/">Cellular automata</a> are
+computational models based on several principles such as
+translation-invariance and parallelism of computations. These
+principles also motivated the creation of <a href=
+"/notes/convolutional_neural_networks/">Convolutional neural
+networks</a> — used initially for images and text —, making this
+model well-suited to reason about cellular automata.</p>
+<p>There is indeed a deep connection between the two models, making
+it seem like there are two expressions of the same idea:
+<strong>spatially organized information</strong> <strong>can be
+processed locally in parallel</strong>.</p>
+<h2 id="relevant-literature">Relevant literature</h2>
+<p>Cellular automata can easily be represented as Convolutional
+Neural Networks (CNNs). This relation has already been investigated
+in (<a href="#org46f164c">Gilpin 2018</a>) or (<a href=
+"#org414f871">Mordvintsev et al. 2020</a>) for instance. This idea
+has advantages and drawbacks:</p>
+<ul>
+<li>Computational cost of using floating points operations is
+higher than discrete operations.</li>
+<li>Discrete operations can lead to exponential growth of the
+number of possible configurations and update rules in a CA. This is
+why rules aren’t represented as bijective tables matching
+neighborhoods to states anymore in (<a href=
+"#org414f871">Mordvintsev et al. 2020</a>).</li>
+<li>The use of floating point operations is mainly there to be able
+to compute gradients for gradient based optimization. This is
+against a <em>non-supervised</em> philosophy I am trying to work
+on. Training cellular automata is basically re-implementing a
+“recurrent convolutional neural network”: this might lead to
+interesting models but isn’t exploiting all the potential of those
+computational models</li>
+<li>Ultimately computations in a computer are discrete and
+Mordvintsev et al. eventually use quantization to discretize the
+CA, resulting in an approximation of a discrete automaton.</li>
+</ul>
+<h2 id="graph-networks">Graph networks</h2>
+<p>CNNs could be considered a particular architecture of neural
+network especially designed for regular grid-like graphs.</p>
+<p>However, a CA can have arbitrary structures as long as the rule
+is defined to deal with this type of structures. This extends the
+concept of CA-CNN to graph neural networks.</p>
+<h2 id="turing-completeness">Turing-completeness</h2>
+<p><a href="/notes/turing_completeness/">Turing-completeness</a> of
+convolutional neural networks can be directly inferred from this
+close relation with cellular automata. The condition is to consider
+a <em>recurrent-convolutional</em> network where the output is fed
+back to the network at each step. A simple <a href=
+"/notes/elementary_cellular_automata/">ECA</a> rule such as rule
+110 is easily implemented in this type of convolutional neural
+network, hence Turing-completeness.</p>
+<h2 id="bibliography">Bibliography</h2>
+<p><a id="org46f164c"></a>Gilpin, William. 2018. “Cellular Automata
+as Convolutional Neural Networks.” <em>arXiv:1809.02942 [Cond-Mat,
+Physics:Nlin, Physics:Physics]</em>, September.</p>
+<p><a id="org414f871"></a>Mordvintsev, Alexander, Ettore Randazzo,
+Eyvind Niklasson, and Michael Levin. 2020. “Growing Neural Cellular
+Automata.” <em>Distill</em> 5 (2):e23.</p>
+<h2 id="backlinks">Backlinks</h2>
+<ul>
+<li><a href="/notes/gilpincellularautomataconvolutional2018/">Notes
+on: Cellular automata as convolutional neural networks by Gilpin,
+W. (2018)</a></li>
+<li><a href="/notes/mordvintsevgrowingneuralcellular2020/">Notes
+on: Growing Neural Cellular Automata by Mordvintsev, A., Randazzo,
+E., Niklasson, E., & Levin, M. (2020)</a></li>
+</ul>
+</div>
+<div class="note-footer">Last changed <a class="u-url" href=
+"https://hugocisneros.com/notes/cellular_automata_as_cnns/"><time itemprop="datePublished"
+class="dt-published" datetime=
+"2020-10-13T09:55:00+0200">13/10/2020</time></a> | authored by
+<a href="https://hugocisneros.com/" rel="author" class=
+"p-author h-card" itemprop="author" itemscope itemtype=
+"http://schema.org/Person"><span itemprop="name">Hugo
+Cisneros</span></a></div>
+</div>
+</article>
+<br>
+<a href="/notes#cellular_automata_as_cnns"><b>← Back to
+Notes</b></a>
+<hr></main>
+<footer class="footer">
+<ul class="footer-links">
+<li><a class="rss-link" href="/blog/index.xml" type=
+"application/rss+xml" target="_blank">Blog <img class="rss-icon"
+src="/img/RSS.svg" alt="RSS feed icon"></a></li>
+<li><a href=
+"https://github.com/hugcis/natrium-custom">Code</a></li>
+<li>© Hugo Cisneros 2020</li>
+</ul>
+</footer>
+</div>
+<script>
+ MathJax = {
+     tex: {
+         inlineMath: [['$','$'], ['\\(', '\\)']],
+         tags: 'ams'
+     }
+ };
+</script> 
+<script type="text/javascript" rel="preconnect" id="MathJax-script"
+async src=
+"https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>

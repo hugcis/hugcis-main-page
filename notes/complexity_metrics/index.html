@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+
+<meta charset="utf-8">
+<meta name="viewport" content=
+"width=device-width,initial-scale=1.0,minimum-scale=1">
+<title>Complexity metrics - Hugo Cisneros - Personal page</title>
+<meta property="og:title" content=
+"Complexity metrics - Hugo Cisneros - Personal page">
+<meta property="og:type" content="article">
+<meta property="og:image" content="/img/main.jpeg">
+<meta property="og:url" content=
+"https://hugocisneros.com/notes/complexity_metrics/">
+<meta property="og:description" content=
+"Notes about Complexity metrics">
+<meta name="Description" property="description" content=
+"Notes about Complexity metrics">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@cisne_hug">
+<meta name="twitter:creator" content="@cisne_hug">
+<link rel="stylesheet" href=
+"https://hugocisneros.com/css/main.min.2748d42cc00e1d64a84f8ba0e8e381dea8a40ce5a09292f5c308dd35fc373bd5.css"
+media="all" type="text/css">
+<link rel="apple-touch-icon" sizes="180x180" href=
+"/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href=
+"/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href=
+"/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color=
+"#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<link rel="webmention" href=
+"https://webmention.io/hugocisneros.com/webmention">
+<link rel="pingback" href=
+"https://webmention.io/hugocisneros.com/xmlrpc">
+</head>
+<body>
+<div class="wrapper">
+<header class="header">
+<nav class="nav">
+<div class="nav-main"><a href="https://hugocisneros.com/" class=
+"nav-title">Hugo Cisneros - Personal page</a></div>
+<ul class="nav-links">
+<li><a href="/about/">About</a></li>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/notes/">Notes</a></li>
+<li><a href="/resume/">Resume</a></li>
+</ul>
+</nav>
+</header>
+<main class="content" role="main">
+<article class="article h-entry" itemprop="mainEntity" itemscope
+itemtype="http://schema.org/BlogPosting">
+<div class="single-note note-container">
+<h1 class="article-title p-name" itemprop="name">Complexity
+metrics</h1>
+<div class="article-content e-content p-name" itemprop=
+"articleBody">
+<dl>
+<dt>tags</dt>
+<dd><a href="/notes/complexity/">Complexity</a></dd>
+</dl>
+<p>To study the complexity of various systems, researchers have
+come up with various metrics. They are based on several principles
+such as <a href="/notes/information_theory/">Information theory</a>
+or <a href="/notes/algorithmic_information_theory/">Algorithmic
+Information theory</a>. Many of these metrics are described in
+(<a href="#org12500dc">Grassberger 1989</a>).</p>
+<h2 id="shannon-entropy-and-kolmogorov-complexity">Shannon entropy
+and Kolmogorov Complexity</h2>
+<p>The paper (<a href="#org0052338">Grunwald and Vitanyi, n.d.</a>)
+is a great description and analysis of two of the most important
+<a href="/notes/complexity/">Complexity</a> metrics:</p>
+<ul>
+<li><a href="/notes/entropy/">Shannon entropy</a></li>
+<li><a href="/notes/kolmogorov_complexity/">Kolmogorov
+complexity</a></li>
+</ul>
+<h2 id="information-theoretic-metrics">Information-theoretic
+metrics</h2>
+<ul>
+<li><a href="/notes/entropy/">Shannon entropy</a></li>
+</ul>
+<h2 id="ait-based-metrics">AIT based metrics</h2>
+<p>For a <a href="/notes/turing_completeness/">Universal
+computer</a> \(U\) the algorithmic information of \(S\) relative to
+\(U\) is defined as the length of the shortest program that yields
+\(S\) on \(U\). \[ C_U(S) = \min_{Prog_U(S)} \text{Len}[Prog_U(S)]
+\]</p>
+<p>This quantity is called algorithmic information, or <a href=
+"/notes/kolmogorov_complexity/">Solomonoff–Kolmogorov–Chaitin
+complexity</a>.</p>
+<h2 id="compression-based-metrics">Compression-based metrics</h2>
+<p>It is not possible for a given sequence to estimate reliably its
+algorithmic information, because we cannot know if we have found
+the shortest description. A solution is to restrict the encoding
+method, and <a href="/notes/lempel_ziv_welch_algorithm/">LZW
+algorithm</a> complexity is one of them (<a href=
+"#orgb2dfe96">Lempel and Ziv 1976</a>).</p>
+<h2 id="others">Others</h2>
+<ul>
+<li><a href="/notes/epsilon_machines/">Epsilon machines</a></li>
+<li><a href="/notes/statistical_complexity/">Statistical
+complexity</a></li>
+</ul>
+<h2 id="bibliography">Bibliography</h2>
+<p><a id="org12500dc"></a>Grassberger, Peter. 1989. “Randomness,
+Information, and Complexity.” In <em>Proceedings of the 5th Mexican
+School on Statistical Physics</em>.</p>
+<p><a id="org0052338"></a>Grunwald, Peter, and Paul Vitanyi. n.d.
+“Shannon Information and Kolmogorov Complexity,” 51.</p>
+<p><a id="orgb2dfe96"></a>Lempel, A., and J. Ziv. 1976. “On the
+Complexity of Finite Sequences.” <em>IEEE Transactions on
+Information Theory</em> 22 (1):75–81.</p>
+<h2 id="backlinks">Backlinks</h2>
+<ul>
+<li><a href="/notes/entropy/">Entropy</a></li>
+<li><a href="/notes/logical_depth/">Logical depth</a></li>
+<li><a href="/notes/statistical_complexity/">Statistical
+complexity</a></li>
+<li><a href="/notes/assembly_theory/">Assembly theory</a></li>
+<li><a href="/notes/effective_measure_complexity/">Effective
+measure complexity</a></li>
+<li><a href=
+"/notes/talk_alife_2020_keynote_lee_cronin_a_top_down_chemically_embodied_artificial_life_computation/">
+Talk: Alife 2020 keynote Lee Cronin - A Top Down Chemically
+Embodied Artificial Life Computation</a></li>
+<li><a href="/notes/avida/">Avida</a></li>
+</ul>
+</div>
+<div class="note-footer">Last changed <a class="u-url" href=
+"https://hugocisneros.com/notes/complexity_metrics/"><time itemprop="datePublished"
+class="dt-published" datetime=
+"2020-07-07T22:29:00+0200">07/07/2020</time></a> | authored by
+<a href="https://hugocisneros.com/" rel="author" class=
+"p-author h-card" itemprop="author" itemscope itemtype=
+"http://schema.org/Person"><span itemprop="name">Hugo
+Cisneros</span></a></div>
+</div>
+</article>
+<br>
+<a href="/notes#complexity_metrics"><b>← Back to Notes</b></a>
+<hr></main>
+<footer class="footer">
+<ul class="footer-links">
+<li><a class="rss-link" href="/blog/index.xml" type=
+"application/rss+xml" target="_blank">Blog <img class="rss-icon"
+src="/img/RSS.svg" alt="RSS feed icon"></a></li>
+<li><a href=
+"https://github.com/hugcis/natrium-custom">Code</a></li>
+<li>© Hugo Cisneros 2020</li>
+</ul>
+</footer>
+</div>
+<script>
+ MathJax = {
+     tex: {
+         inlineMath: [['$','$'], ['\\(', '\\)']],
+         tags: 'ams'
+     }
+ };
+</script> 
+<script type="text/javascript" rel="preconnect" id="MathJax-script"
+async src=
+"https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>

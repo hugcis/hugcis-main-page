@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+
+<meta charset="utf-8">
+<meta name="viewport" content=
+"width=device-width,initial-scale=1.0,minimum-scale=1">
+<title>Autoencoders - Hugo Cisneros - Personal page</title>
+<meta property="og:title" content=
+"Autoencoders - Hugo Cisneros - Personal page">
+<meta property="og:type" content="article">
+<meta property="og:image" content="/img/main.jpeg">
+<meta property="og:url" content=
+"https://hugocisneros.com/notes/autoencoders/">
+<meta property="og:description" content="Notes about Autoencoders">
+<meta name="Description" property="description" content=
+"Notes about Autoencoders">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@cisne_hug">
+<meta name="twitter:creator" content="@cisne_hug">
+<link rel="stylesheet" href=
+"https://hugocisneros.com/css/main.min.2748d42cc00e1d64a84f8ba0e8e381dea8a40ce5a09292f5c308dd35fc373bd5.css"
+media="all" type="text/css">
+<link rel="apple-touch-icon" sizes="180x180" href=
+"/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href=
+"/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href=
+"/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color=
+"#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<link rel="webmention" href=
+"https://webmention.io/hugocisneros.com/webmention">
+<link rel="pingback" href=
+"https://webmention.io/hugocisneros.com/xmlrpc">
+</head>
+<body>
+<div class="wrapper">
+<header class="header">
+<nav class="nav">
+<div class="nav-main"><a href="https://hugocisneros.com/" class=
+"nav-title">Hugo Cisneros - Personal page</a></div>
+<ul class="nav-links">
+<li><a href="/about/">About</a></li>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/notes/">Notes</a></li>
+<li><a href="/resume/">Resume</a></li>
+</ul>
+</nav>
+</header>
+<main class="content" role="main">
+<article class="article h-entry" itemprop="mainEntity" itemscope
+itemtype="http://schema.org/BlogPosting">
+<div class="single-note note-container">
+<h1 class="article-title p-name" itemprop="name">Autoencoders</h1>
+<div class="article-content e-content p-name" itemprop=
+"articleBody">
+<dl>
+<dt>tags</dt>
+<dd><a href="/notes/neural_networks/">Neural networks</a>, <a href=
+"/notes/data_representation/">Data representation</a></dd>
+</dl>
+<h2 id="autoencoders-and-pca">Autoencoders and PCA</h2>
+<p>The relation between <a href=
+"https://en.wikipedia.org/wiki/Autoencoder">Autoencoders</a> and
+PCA is strong. In particular, a very small autoencoder with only
+linear activations seems intuitively very close to PCA
+decomposition. (<a href="#org906b040">Bourlard and Kamp 1988</a>)
+gives an interesting analysis of the uselessness of the activation
+functions in the encoding layers of an autoencoder when there is no
+activations in the output layers. In that case, autoencoding is
+closely related to a sinigular value decomposition of the input
+data. Quoting Elad Plaut:</p>
+<blockquote>
+<p>It is well known that an autoencoder with a single
+fully-connected hidden layer, a linear activation function and a
+squared error cost function trains weights that span the same
+subspace as the one spanned by the principal component loading
+vectors, but that they are not identical to the loading
+vectors.</p>
+</blockquote>
+<p>The above quote is from (<a href="#orgbb73e8b">Plaut 2018</a>)
+where it is demonstrated that autoencoder weights contain all the
+information of the loading vectors of the SVD.</p>
+<h2 id="bibliography">Bibliography</h2>
+<p><a id="org906b040"></a>Bourlard, H., and Y. Kamp. 1988.
+“Auto-Association by Multilayer Perceptrons and Singular Value
+Decomposition.” <em>Biological Cybernetics</em> 59
+(4-5):291–94.</p>
+<p><a id="orgbb73e8b"></a>Plaut, Elad. 2018. “From Principal
+Subspaces to Principal Components with Linear Autoencoders.”
+<em>arXiv:1804.10253 [Cs, Stat]</em>, December.</p>
+<h2 id="backlinks">Backlinks</h2>
+<ul>
+<li><a href="/notes/variational_autoencoders/">Variational
+autoencoders</a></li>
+<li><a href=
+"/notes/reinkeintrinsicallymotivateddiscovery2020/">Notes on:
+Intrinsically Motivated Discovery of Diverse Patterns in
+Self-Organizing Systems by Reinke, C., Etcheverry, M., & Oudeyer,
+P. (2020)</a></li>
+<li><a href="/notes/beckhamadversarialmixupresynthesis2019/">Notes
+on: On Adversarial Mixup Resynthesis by Beckham, C., Honari, S.,
+Verma, V., Lamb, A., Ghadiri, F., Hjelm, R. D., Bengio, Y., …
+(2019)</a></li>
+<li><a href="/notes/cellular_automata/">Cellular automata</a></li>
+<li><a href="/notes/data_representation/">Data
+representation</a></li>
+</ul>
+</div>
+<div class="note-footer">Last changed <a class="u-url" href=
+"https://hugocisneros.com/notes/autoencoders/"><time itemprop=
+"datePublished" class="dt-published" datetime=
+"2020-07-13T10:19:00+0200">13/07/2020</time></a> | authored by
+<a href="https://hugocisneros.com/" rel="author" class=
+"p-author h-card" itemprop="author" itemscope itemtype=
+"http://schema.org/Person"><span itemprop="name">Hugo
+Cisneros</span></a></div>
+</div>
+</article>
+<br>
+<a href="/notes#autoencoders"><b>← Back to Notes</b></a>
+<hr></main>
+<footer class="footer">
+<ul class="footer-links">
+<li><a class="rss-link" href="/blog/index.xml" type=
+"application/rss+xml" target="_blank">Blog <img class="rss-icon"
+src="/img/RSS.svg" alt="RSS feed icon"></a></li>
+<li><a href=
+"https://github.com/hugcis/natrium-custom">Code</a></li>
+<li>© Hugo Cisneros 2020</li>
+</ul>
+</footer>
+</div>
+<script>
+ MathJax = {
+     tex: {
+         inlineMath: [['$','$'], ['\\(', '\\)']],
+         tags: 'ams'
+     }
+ };
+</script> 
+<script type="text/javascript" rel="preconnect" id="MathJax-script"
+async src=
+"https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>
