@@ -6,17 +6,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content=
 "width=device-width,initial-scale=1.0,minimum-scale=1">
-<title>Image processing - Hugo Cisneros - Personal page</title>
+<title>Self-replication - Hugo Cisneros - Personal page</title>
 <meta property="og:title" content=
-"Image processing - Hugo Cisneros - Personal page">
+"Self-replication - Hugo Cisneros - Personal page">
 <meta property="og:type" content="article">
 <meta property="og:image" content="/img/main.jpeg">
 <meta property="og:url" content=
-"https://hugocisneros.com/notes/image_processing/">
+"https://hugocisneros.com/notes/self_replication/">
 <meta property="og:description" content=
-"Notes about Image processing">
+"Notes about Self-replication">
 <meta name="Description" property="description" content=
-"Notes about Image processing">
+"Notes about Self-replication">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@cisne_hug">
 <meta name="twitter:creator" content="@cisne_hug">
@@ -57,47 +57,30 @@ media="all" type="text/css">
 <article class="article h-entry" itemprop="mainEntity" itemscope
 itemtype="http://schema.org/BlogPosting">
 <div class="single-note note-container">
-<h1 class="article-title p-name" itemprop="name">Image
-processing</h1>
+<h1 class="article-title p-name" itemprop="name">
+Self-replication</h1>
 <div class="article-content e-content p-name" itemprop=
 "articleBody">
 <dl>
 <dt>tags</dt>
-<dd><a href="/notes/applied_maths/">Applied maths</a>, <a href=
-"/notes/signal_processing/">Signal processing</a></dd>
+<dd><a href="/notes/complexity/">Complexity</a>, <a href=
+"/notes/self_organization/">Self-organization</a></dd>
 </dl>
-<h2 id="scale-an-image-with-no-interpolation">Scale an image with
-no interpolation</h2>
-<p><a href=
-"http://www.imagemagick.org/Usage/resize/#scale">Imagemagick
-documentation</a></p>
-<pre><code class="language-nil" data-lang=
-"nil">convert source.[png|gif|...] -scale 400% target.[png|gif|...]
-</code></pre>
-<p>The scale option can also take integer parameters (without the
-percent sign) to indicate the target size.</p>
-<h2 id="remove-metadata-from-an-image">Remove metadata from an
-image</h2>
-<p>Useful for preserving <a href="/notes/online_privacy/">Online
-privacy</a> when publishing images. Pictures taken with smartphones
-and other modern devices often contain large amounts of data about
-location, time and date and device type.</p>
-<h3 id="exiftool">Exiftool</h3>
-<p>`exiftool -all= image.jpg`</p>
-<h2 id="backlinks">Backlinks</h2>
-<ul>
-<li><a href="/notes/machine_learning/">Machine learning</a></li>
-<li><a href="/notes/computer_vision/">Computer vision</a></li>
-<li><a href="/notes/cellular_automata/">Cellular automata</a></li>
-<li><a href="/notes/edge_detection/">Edge detection</a></li>
-<li><a href="/notes/implicit_neural_representations/">Implicit
-neural representations</a></li>
-</ul>
+<p>An early example of artificial self-replication is <a href=
+"/notes/von_neumann_s_self_reproducing_ca/">Von Neumann’s
+self-reproducing CA</a> which is a <a href=
+"/notes/cellular_automata/">cellular automaton</a>.</p>
+<p>Self-replication in <a href="/notes/neural_networks/">neural
+networks</a> can be done with neural network quines (<a href=
+"#org2bbe33e">Chang and Lipson 2018</a>).</p>
+<h2 id="bibliography">Bibliography</h2>
+<p><a id="org2bbe33e"></a>Chang, Oscar, and Hod Lipson. 2018.
+“Neural Network Quine.” <em>arXiv:1803.05859 [Cs]</em>, May.</p>
 </div>
 <div class="note-footer">Last changed <a class="u-url" href=
-"https://hugocisneros.com/notes/image_processing/"><time itemprop=
+"https://hugocisneros.com/notes/self_replication/"><time itemprop=
 "datePublished" class="dt-published" datetime=
-"2020-11-04T09:17:00+0100">04/11/2020</time></a> | authored by
+"2020-11-12T11:49:00+0100">12/11/2020</time></a> | authored by
 <a href="https://hugocisneros.com/" rel="author" class=
 "p-author h-card" itemprop="author" itemscope itemtype=
 "http://schema.org/Person"><span itemprop="name">Hugo
@@ -105,7 +88,7 @@ Cisneros</span></a></div>
 </div>
 </article>
 <br>
-<a href="/notes#image_processing"><b>← Back to Notes</b></a>
+<a href="/notes#self_replication"><b>← Back to Notes</b></a>
 <hr></main>
 <footer class="footer">
 <ul class="footer-links">

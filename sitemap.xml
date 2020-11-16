@@ -4,7 +4,52 @@
     
     <url>
         <loc>https://hugocisneros.com/</loc>
-        <lastmod>2020-11-02T15:58:00+01:00</lastmod>
+        <lastmod>2020-11-16T10:34:00+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/</loc>
+        <lastmod>2020-11-16T10:34:00+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/felleisenexpressivepowerprogramming1991/</loc>
+        <lastmod>2020-11-16T10:34:00+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/self_replication/</loc>
+        <lastmod>2020-11-12T11:49:00+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/dirichlet_energy/</loc>
+        <lastmod>2020-11-10T09:58:00+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/hadamard_product/</loc>
+        <lastmod>2020-11-05T10:23:00+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/wavelets/</loc>
+        <lastmod>2020-11-04T09:23:00+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/signal_processing/</loc>
+        <lastmod>2020-11-04T09:18:00+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/image_processing/</loc>
+        <lastmod>2020-11-04T09:17:00+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/attractor_networks/</loc>
+        <lastmod>2020-11-02T16:53:00+01:00</lastmod>
     </url>
     
     <url>
@@ -13,18 +58,8 @@
     </url>
     
     <url>
-        <loc>https://hugocisneros.com/notes/</loc>
-        <lastmod>2020-11-02T15:58:00+01:00</lastmod>
-    </url>
-    
-    <url>
         <loc>https://hugocisneros.com/notes/aitkengeometryintegrationtext2020/</loc>
         <lastmod>2020-11-02T15:36:00+01:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/attractor_networks/</loc>
-        <lastmod>2020-11-02T15:32:00+01:00</lastmod>
     </url>
     
     <url>
@@ -759,11 +794,6 @@
     
     <url>
         <loc>https://hugocisneros.com/notes/haskell_curry/</loc>
-        <lastmod>2020-07-14T08:27:00+02:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/image_processing/</loc>
         <lastmod>2020-07-14T08:27:00+02:00</lastmod>
     </url>
     

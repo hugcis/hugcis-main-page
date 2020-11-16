@@ -6,17 +6,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content=
 "width=device-width,initial-scale=1.0,minimum-scale=1">
-<title>Image processing - Hugo Cisneros - Personal page</title>
+<title>Dirichlet energy - Hugo Cisneros - Personal page</title>
 <meta property="og:title" content=
-"Image processing - Hugo Cisneros - Personal page">
+"Dirichlet energy - Hugo Cisneros - Personal page">
 <meta property="og:type" content="article">
 <meta property="og:image" content="/img/main.jpeg">
 <meta property="og:url" content=
-"https://hugocisneros.com/notes/image_processing/">
+"https://hugocisneros.com/notes/dirichlet_energy/">
 <meta property="og:description" content=
-"Notes about Image processing">
+"Notes about Dirichlet energy">
 <meta name="Description" property="description" content=
-"Notes about Image processing">
+"Notes about Dirichlet energy">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@cisne_hug">
 <meta name="twitter:creator" content="@cisne_hug">
@@ -57,47 +57,22 @@ media="all" type="text/css">
 <article class="article h-entry" itemprop="mainEntity" itemscope
 itemtype="http://schema.org/BlogPosting">
 <div class="single-note note-container">
-<h1 class="article-title p-name" itemprop="name">Image
-processing</h1>
+<h1 class="article-title p-name" itemprop="name">Dirichlet
+energy</h1>
 <div class="article-content e-content p-name" itemprop=
 "articleBody">
-<dl>
-<dt>tags</dt>
-<dd><a href="/notes/applied_maths/">Applied maths</a>, <a href=
-"/notes/signal_processing/">Signal processing</a></dd>
-</dl>
-<h2 id="scale-an-image-with-no-interpolation">Scale an image with
-no interpolation</h2>
-<p><a href=
-"http://www.imagemagick.org/Usage/resize/#scale">Imagemagick
-documentation</a></p>
-<pre><code class="language-nil" data-lang=
-"nil">convert source.[png|gif|...] -scale 400% target.[png|gif|...]
-</code></pre>
-<p>The scale option can also take integer parameters (without the
-percent sign) to indicate the target size.</p>
-<h2 id="remove-metadata-from-an-image">Remove metadata from an
-image</h2>
-<p>Useful for preserving <a href="/notes/online_privacy/">Online
-privacy</a> when publishing images. Pictures taken with smartphones
-and other modern devices often contain large amounts of data about
-location, time and date and device type.</p>
-<h3 id="exiftool">Exiftool</h3>
-<p>`exiftool -all= image.jpg`</p>
-<h2 id="backlinks">Backlinks</h2>
-<ul>
-<li><a href="/notes/machine_learning/">Machine learning</a></li>
-<li><a href="/notes/computer_vision/">Computer vision</a></li>
-<li><a href="/notes/cellular_automata/">Cellular automata</a></li>
-<li><a href="/notes/edge_detection/">Edge detection</a></li>
-<li><a href="/notes/implicit_neural_representations/">Implicit
-neural representations</a></li>
-</ul>
+<p>The dirichlet energy of a continuous function on
+\(\mathbb{R}^d\) is the \(L^2\) norm of its gradient.</p>
+<p>In the case of a 2D graph, such as a <a href=
+"/notes/cellular_automata/">cellular automaton</a> or <a href=
+"/notes/hopfield_networks/">hopfield network</a>, this can be
+discretized as the \(L^2\) norm of the difference along each
+edge.</p>
 </div>
 <div class="note-footer">Last changed <a class="u-url" href=
-"https://hugocisneros.com/notes/image_processing/"><time itemprop=
+"https://hugocisneros.com/notes/dirichlet_energy/"><time itemprop=
 "datePublished" class="dt-published" datetime=
-"2020-11-04T09:17:00+0100">04/11/2020</time></a> | authored by
+"2020-11-10T09:58:00+0100">10/11/2020</time></a> | authored by
 <a href="https://hugocisneros.com/" rel="author" class=
 "p-author h-card" itemprop="author" itemscope itemtype=
 "http://schema.org/Person"><span itemprop="name">Hugo
@@ -105,7 +80,7 @@ Cisneros</span></a></div>
 </div>
 </article>
 <br>
-<a href="/notes#image_processing"><b>← Back to Notes</b></a>
+<a href="/notes#dirichlet_energy"><b>← Back to Notes</b></a>
 <hr></main>
 <footer class="footer">
 <ul class="footer-links">

@@ -6,7 +6,87 @@
     <description>Recent content in Notes on Hugo Cisneros - Personal page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 02 Nov 2020 15:58:00 +0100</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 Nov 2020 10:34:00 +0100</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Notes on: On the expressive power of programming languages by Felleisen, M. (1991)</title>
+      <link>https://hugocisneros.com/notes/felleisenexpressivepowerprogramming1991/</link>
+      <pubDate>Mon, 16 Nov 2020 10:34:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/felleisenexpressivepowerprogramming1991/</guid>
+      <description>source (Felleisen 1991) tags Programming languages resources PWL Conf talk  Summary Programming languages have different levels of expressiveness. While can be used to create for loops, binary if statements can implement multi-if statements, etc.
+Turing tarpit: once we get to programming languages that are universal, everything can be re-written into anything and the notion of &amp;ldquo;expressiveness&amp;rdquo; of programming languages doesn&amp;rsquo;t make much sense.
+For a language \(L\) and \(F + L\) the addition of some features, can we say the second is more expressive than the first?</description>
+    </item>
+    
+    <item>
+      <title>Self-replication</title>
+      <link>https://hugocisneros.com/notes/self_replication/</link>
+      <pubDate>Thu, 12 Nov 2020 11:49:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/self_replication/</guid>
+      <description>tags Complexity, Self-organization  An early example of artificial self-replication is Von Neumann&amp;rsquo;s self-reproducing CA which is a cellular automaton.
+Self-replication in neural networks can be done with neural network quines (Chang and Lipson 2018).
+Bibliography Chang, Oscar, and Hod Lipson. 2018. “Neural Network Quine.” arXiv:1803.05859 [Cs], May.</description>
+    </item>
+    
+    <item>
+      <title>Dirichlet energy</title>
+      <link>https://hugocisneros.com/notes/dirichlet_energy/</link>
+      <pubDate>Tue, 10 Nov 2020 09:58:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/dirichlet_energy/</guid>
+      <description>The dirichlet energy of a continuous function on \(\mathbb{R}^d\) is the \(L^2\) norm of its gradient.
+In the case of a 2D graph, such as a cellular automaton or hopfield network, this can be discretized as the \(L^2\) norm of the difference along each edge.</description>
+    </item>
+    
+    <item>
+      <title>Hadamard product</title>
+      <link>https://hugocisneros.com/notes/hadamard_product/</link>
+      <pubDate>Thu, 05 Nov 2020 10:23:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/hadamard_product/</guid>
+      <description>The Hadamard product is a mathematical name for element-wise multiplication of matrices.</description>
+    </item>
+    
+    <item>
+      <title>Wavelets</title>
+      <link>https://hugocisneros.com/notes/wavelets/</link>
+      <pubDate>Wed, 04 Nov 2020 09:23:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/wavelets/</guid>
+      <description> tags Applied maths, Signal processing  Wavelets are functions with specific properties that make them useful when dealing with images. They are used for lossy image compression.
+Types of wavelets Haar wavelets Daubechies wavelets </description>
+    </item>
+    
+    <item>
+      <title>Signal processing</title>
+      <link>https://hugocisneros.com/notes/signal_processing/</link>
+      <pubDate>Wed, 04 Nov 2020 09:18:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/signal_processing/</guid>
+      <description> tags Applied maths  Backlinks  Image processing  </description>
+    </item>
+    
+    <item>
+      <title>Image processing</title>
+      <link>https://hugocisneros.com/notes/image_processing/</link>
+      <pubDate>Wed, 04 Nov 2020 09:17:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/image_processing/</guid>
+      <description>tags Applied maths, Signal processing  Scale an image with no interpolation Imagemagick documentation
+convert source.[png|gif|...] -scale 400% target.[png|gif|...] The scale option can also take integer parameters (without the percent sign) to indicate the target size.
+Remove metadata from an image Useful for preserving Online privacy when publishing images. Pictures taken with smartphones and other modern devices often contain large amounts of data about location, time and date and device type.</description>
+    </item>
+    
+    <item>
+      <title>Attractor networks</title>
+      <link>https://hugocisneros.com/notes/attractor_networks/</link>
+      <pubDate>Mon, 02 Nov 2020 16:53:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/attractor_networks/</guid>
+      <description>tags Physics, Applied maths resources Scholarpedia  Attractor networks are sets of nodes connected in such a way that their dynamics are stable in a small space. The network state usually resides on this smaller manifold.</description>
+    </item>
+    
     <item>
       <title>Neuroscience</title>
       <link>https://hugocisneros.com/notes/neuroscience/</link>
@@ -25,15 +105,6 @@
       <description>tags RNN, NLP source (Aitken et al. 2020)  Summary This paper takes a dynamical system based approach to study learning in RNNs. Gradient descent optimization in RNNs allows them to learn a simplified form of memory and information processing.
 The authors use simple text classification tasks to try and understand if these learned properties can be understood by looking at the state dynamics of RNNs.
 The RNNs usually behave like attractor networks, with the hidden state lying on a low-dimensional manifold.</description>
-    </item>
-    
-    <item>
-      <title>Attractor networks</title>
-      <link>https://hugocisneros.com/notes/attractor_networks/</link>
-      <pubDate>Mon, 02 Nov 2020 15:32:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/attractor_networks/</guid>
-      <description>tags Physics, Applied maths  Attractor networks are sets of nodes connected in such a way that their dynamics are stable in a small space. The network state usually resides on this smaller manifold.</description>
     </item>
     
     <item>
@@ -1494,17 +1565,6 @@ Backlinks  Surprisingly Turing-Complete Article: The End of the RNA World Is Nea
       
       <guid>https://hugocisneros.com/notes/haskell_curry/</guid>
       <description>Backlinks  Combinatory logic  </description>
-    </item>
-    
-    <item>
-      <title>Image processing</title>
-      <link>https://hugocisneros.com/notes/image_processing/</link>
-      <pubDate>Tue, 14 Jul 2020 08:27:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/image_processing/</guid>
-      <description>tags Applied maths  Scale an image with no interpolation Imagemagick documentation
-convert source.[png|gif|...] -scale 400% target.[png|gif|...] The scale option can also take integer parameters (without the percent sign) to indicate the target size.
-Remove metadata from an image Useful for preserving Online privacy when publishing images. Pictures taken with smartphones and other modern devices often contain large amounts of data about location, time and date and device type.</description>
     </item>
     
     <item>
