@@ -4,16 +4,56 @@
     
     <url>
         <loc>https://hugocisneros.com/</loc>
-        <lastmod>2020-11-19T12:14:00+01:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/boolean_networks/</loc>
-        <lastmod>2020-11-19T12:14:00+01:00</lastmod>
+        <lastmod>2020-11-30T10:20:00+01:00</lastmod>
     </url>
     
     <url>
         <loc>https://hugocisneros.com/notes/</loc>
+        <lastmod>2020-11-30T10:20:00+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/pathakcuriositydrivenexplorationselfsupervised2017/</loc>
+        <lastmod>2020-11-30T10:20:00+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/reinforcement_learning/</loc>
+        <lastmod>2020-11-30T09:23:00+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/hudrinkingfirehosecontinual2020/</loc>
+        <lastmod>2020-11-27T17:43:00+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/continual_learning/</loc>
+        <lastmod>2020-11-27T12:43:00+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/self_supervised_learning/</loc>
+        <lastmod>2020-11-27T12:39:00+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/complexity_of_cellular_automata/</loc>
+        <lastmod>2020-11-25T09:20:00+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/rainbow_tables/</loc>
+        <lastmod>2020-11-25T09:14:00+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/gradient_descent/</loc>
+        <lastmod>2020-11-24T12:10:00+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/boolean_networks/</loc>
         <lastmod>2020-11-19T12:14:00+01:00</lastmod>
     </url>
     
@@ -643,11 +683,6 @@
     </url>
     
     <url>
-        <loc>https://hugocisneros.com/notes/gradient_descent/</loc>
-        <lastmod>2020-07-19T21:21:00+02:00</lastmod>
-    </url>
-    
-    <url>
         <loc>https://hugocisneros.com/notes/bongard_problems/</loc>
         <lastmod>2020-07-17T13:46:00+02:00</lastmod>
     </url>
@@ -704,11 +739,6 @@
     
     <url>
         <loc>https://hugocisneros.com/notes/combinatory_logic/</loc>
-        <lastmod>2020-07-14T08:32:00+02:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/complexity_of_cellular_automata/</loc>
         <lastmod>2020-07-14T08:32:00+02:00</lastmod>
     </url>
     
@@ -1080,11 +1110,6 @@
     <url>
         <loc>https://hugocisneros.com/notes/supervised_learning/</loc>
         <lastmod>2020-07-09T17:29:00+02:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/reinforcement_learning/</loc>
-        <lastmod>2020-07-09T14:31:00+02:00</lastmod>
     </url>
     
     <url>

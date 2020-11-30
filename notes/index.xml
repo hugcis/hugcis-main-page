@@ -6,7 +6,87 @@
     <description>Recent content in Notes on Hugo Cisneros - Personal page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 19 Nov 2020 12:14:00 +0100</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 Nov 2020 10:20:00 +0100</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Notes on: Curiosity-Driven Exploration by Self-Supervised Prediction by Pathak, D., Agrawal, P., Efros, A. A., &amp; Darrell, T. (2017)</title>
+      <link>https://hugocisneros.com/notes/pathakcuriositydrivenexplorationselfsupervised2017/</link>
+      <pubDate>Mon, 30 Nov 2020 10:20:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/pathakcuriositydrivenexplorationselfsupervised2017/</guid>
+      <description>tags Reinforcement learning source (Pathak et al. 2017)  Summary This paper presents a curiosity-based method for training RL agents. These agents are given a reward \(r_t\) which is the sum of an intrinsic and an extrinsic rewards. The latter is mostly (if not always) 0, while the former is constructed progressively during exploration by an Intrisic Curiosity Module (ICM).
+The module is illustrated below (figure from the paper).</description>
+    </item>
+    
+    <item>
+      <title>Reinforcement learning</title>
+      <link>https://hugocisneros.com/notes/reinforcement_learning/</link>
+      <pubDate>Mon, 30 Nov 2020 09:23:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/reinforcement_learning/</guid>
+      <description> tags Machine learning  </description>
+    </item>
+    
+    <item>
+      <title>Notes on: Drinking from a Firehose: Continual Learning with Web-scale Natural Language by Hu, H., Sener, O., Sha, F., &amp; Koltun, V. (2020)</title>
+      <link>https://hugocisneros.com/notes/hudrinkingfirehosecontinual2020/</link>
+      <pubDate>Fri, 27 Nov 2020 17:43:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/hudrinkingfirehosecontinual2020/</guid>
+      <description>tags Continual learning source (Hu et al. 2020)  Summary This paper focuses on the problem of (self-)supervised continual learning with deep neural networks. The Firehose dataset introduced by the authors is a large database of timestamped tweets. The goal is to learn a language model for each user from the dataset, which is called Personalized online language learning (POLL).
+The authors also introduce a new extension of gradient descent for continual learning.</description>
+    </item>
+    
+    <item>
+      <title>Continual learning</title>
+      <link>https://hugocisneros.com/notes/continual_learning/</link>
+      <pubDate>Fri, 27 Nov 2020 12:43:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/continual_learning/</guid>
+      <description>tags Machine learning  Continual learning is a type of supervised learning where there is no &amp;ldquo;testing phase&amp;rdquo; associated to a decision process. Instead, training samples keep being processed by the algorithm which has to simultaneously make predictions and keep learning.
+A definition from the survey (De Lange et al. 2020):
+ The General Continual Learning setting considers an infinite stream of training data where at each time step, the system receives a (number of) new sample(s) drawn non i.</description>
+    </item>
+    
+    <item>
+      <title>Self-supervised learning</title>
+      <link>https://hugocisneros.com/notes/self_supervised_learning/</link>
+      <pubDate>Fri, 27 Nov 2020 12:39:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/self_supervised_learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Complexity of cellular automata</title>
+      <link>https://hugocisneros.com/notes/complexity_of_cellular_automata/</link>
+      <pubDate>Wed, 25 Nov 2020 09:20:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/complexity_of_cellular_automata/</guid>
+      <description>tags Complexity, Cellular automata  Measuring complexity created by cellular automata is a vast subject.
+Using Entropy In (Wuensche 1999), the author uses the entropy of rule table lookup frequencies to evaluate the complexity of a CA.
+Bibliography Wuensche, Andrew. 1999. “Classifying Cellular Automata Automatically: Finding Gliders, Filtering, and Relating Space-Time Patterns, Attractor Basins, and the Z Parameter.” Complexity 4 (3):47–66.</description>
+    </item>
+    
+    <item>
+      <title>Rainbow tables</title>
+      <link>https://hugocisneros.com/notes/rainbow_tables/</link>
+      <pubDate>Wed, 25 Nov 2020 09:14:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/rainbow_tables/</guid>
+      <description> tags Cryptography resources How Rainbow tables work  </description>
+    </item>
+    
+    <item>
+      <title>Gradient descent</title>
+      <link>https://hugocisneros.com/notes/gradient_descent/</link>
+      <pubDate>Tue, 24 Nov 2020 12:10:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/gradient_descent/</guid>
+      <description>tags Optimization, Algorithm resources Slides by Christian S. Perone  Fixed learning rate The simplest way to apply the gradient descent algorithm on a function \(g\) convex and $L-$smooth on \(\mathbb{R}^d\) is to use the parameter update:
+\[ \theta_t = \theta_{t-1} - \gamma g&#39;(\theta_{t-1}) \]
+This is based on the standard first-order approximation of the function \(g\). It can be very sensitive to the learning rate and suffer from pathological curvature.</description>
+    </item>
+    
     <item>
       <title>Boolean networks</title>
       <link>https://hugocisneros.com/notes/boolean_networks/</link>
@@ -1257,17 +1337,6 @@ The authors base their new operator on the optimal configuration for \(L_2\) lin
     </item>
     
     <item>
-      <title>Gradient descent</title>
-      <link>https://hugocisneros.com/notes/gradient_descent/</link>
-      <pubDate>Sun, 19 Jul 2020 21:21:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/gradient_descent/</guid>
-      <description>tags Optimization, Algorithm  Fixed learning rate The simplest way to apply the gradient descent algorithm on a function \(g\) convex and $L-$smooth on \(\mathbb{R}^d\) is to use the parameter update:
-\[ \theta_t = \theta_{t-1} - \gamma g&#39;(\theta_{t-1}) \]
-Line search Another common way to apply the gradient descent algorithm with non fixed learning rate is to use line search at each step. This corresponds to searching for the best \(\gamma\) to use in \(\theta_{} + \gamma \Delta\theta\) (in gradient descent, \(\Delta\theta = - g&#39;(\theta)\)).</description>
-    </item>
-    
-    <item>
       <title>Bongard problems</title>
       <link>https://hugocisneros.com/notes/bongard_problems/</link>
       <pubDate>Fri, 17 Jul 2020 13:46:00 +0200</pubDate>
@@ -1379,17 +1448,6 @@ Resolution An interesting study and resolution of Berry&amp;rsquo;s paradox</des
       <description>tags Logic papers (Cardone and Hindley, n.d.)  It was independently invented by Moses Schönfinkel, John Von Neumann and Haskell Curry.
 A Turing-complete basis of operators is:
  \(If\quad\triangleright\quad f\) \(Kfg \quad\triangleright\quad f\) \(Sfgx \quad\triangleright\quad fx(gx)\)  Bibliography Cardone, Felice, and J Roger Hindley. n.d. “History of Lambda-Calculus and Combinatory Logic,” 95.</description>
-    </item>
-    
-    <item>
-      <title>Complexity of cellular automata</title>
-      <link>https://hugocisneros.com/notes/complexity_of_cellular_automata/</link>
-      <pubDate>Tue, 14 Jul 2020 08:32:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/complexity_of_cellular_automata/</guid>
-      <description>tags Complexity, Cellular automata  Measuring complexity created by cellular automata a vast subject.
-Using Entropy In (Wuensche 1999), the author uses the entropy of rule table lookup frequencies to evaluate the complexity of a CA.
-Bibliography Wuensche, Andrew. 1999. “Classifying Cellular Automata Automatically: Finding Gliders, Filtering, and Relating Space-Time Patterns, Attractor Basins, and the Z Parameter.” Complexity 4 (3):47–66.</description>
     </item>
     
     <item>
@@ -2099,15 +2157,6 @@ Mapping We search for a mapping \(f: \mathcal{X} \rightarrow \mathcal{Y}\). It i
 The prediction \(\hat{y}\) is written
 \[ \hat{y} = f(x) = h(x, \theta) \]
 Objective The goal is to find the above mapping such as to minimize an objective.</description>
-    </item>
-    
-    <item>
-      <title>Reinforcement learning</title>
-      <link>https://hugocisneros.com/notes/reinforcement_learning/</link>
-      <pubDate>Thu, 09 Jul 2020 14:31:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/reinforcement_learning/</guid>
-      <description> tags Machine learning  </description>
     </item>
     
     <item>

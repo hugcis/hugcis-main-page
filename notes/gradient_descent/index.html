@@ -65,12 +65,26 @@ descent</h1>
 <dt>tags</dt>
 <dd><a href="/notes/optimization/">Optimization</a>, <a href=
 "/notes/algorithm/">Algorithm</a></dd>
+<dt>resources</dt>
+<dd><a href=
+"https://drive.google.com/file/d/1e%5F9W8q9PL20iqOR-pfK89eILc%5FVtYaw1/view">
+Slides by Christian S. Perone</a></dd>
 </dl>
 <h2 id="fixed-learning-rate">Fixed learning rate</h2>
 <p>The simplest way to apply the gradient descent algorithm on a
 function \(g\) convex and $L-$smooth on \(\mathbb{R}^d\) is to use
 the parameter update:</p>
 <p>\[ \theta_t = \theta_{t-1} - \gamma g'(\theta_{t-1}) \]</p>
+<p>This is based on the standard first-order approximation of the
+function \(g\). It can be very sensitive to the learning rate and
+suffer from pathological curvature.</p>
+<h3 id="momentum">Momentum</h3>
+<p>Momentum has been introduced in the gradient descent algorithm
+to dampen oscillations in the pathological cases and accelerating
+descent. Trajectories are less sensitive to changes in the loss
+landscape.</p>
+<p>\begin{align} V_{t + 1} = \beta V_t + g'(\theta_{t})\\\<br>
+\theta_{t + 1} = \theta_t - \gamma V_{t + 1} \end{align}</p>
 <h2 id="line-search">Line search</h2>
 <p>Another common way to apply the gradient descent algorithm with
 non fixed learning rate is to use line search at each step. This
@@ -101,6 +115,15 @@ is run until the following condition is verified</p>
 <li><a href="/notes/benderclimbingnlumeaning2020/">Notes on:
 Climbing towards NLU: On Meaning, Form, and Understanding in the
 Age of Data by Bender, E. M., & Koller, A. (2020)</a></li>
+<li><a href=
+"/notes/pathakcuriositydrivenexplorationselfsupervised2017/">Notes
+on: Curiosity-Driven Exploration by Self-Supervised Prediction by
+Pathak, D., Agrawal, P., Efros, A. A., & Darrell, T.
+(2017)</a></li>
+<li><a href="/notes/hudrinkingfirehosecontinual2020/">Notes on:
+Drinking from a Firehose: Continual Learning with Web-scale Natural
+Language by Hu, H., Sener, O., Sha, F., & Koltun, V.
+(2020)</a></li>
 <li><a href="/notes/yenetworkdeconvolution2020/">Notes on: Network
 Deconvolution by Ye, C., Evanusa, M., He, H., Mitrokhin, A.,
 Goldstein, T., Yorke, J. A., Fermuller, Cornelia, … (2020)</a></li>
@@ -117,7 +140,7 @@ learning</a></li>
 <div class="note-footer">Last changed <a class="u-url" href=
 "https://hugocisneros.com/notes/gradient_descent/"><time itemprop=
 "datePublished" class="dt-published" datetime=
-"2020-07-19T21:21:00+0200">19/07/2020</time></a> | authored by
+"2020-11-24T12:10:00+0100">24/11/2020</time></a> | authored by
 <a href="https://hugocisneros.com/" rel="author" class=
 "p-author h-card" itemprop="author" itemscope itemtype=
 "http://schema.org/Person"><span itemprop="name">Hugo

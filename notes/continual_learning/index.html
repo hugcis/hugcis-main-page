@@ -6,18 +6,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content=
 "width=device-width,initial-scale=1.0,minimum-scale=1">
-<title>Reinforcement learning - Hugo Cisneros - Personal
-page</title>
+<title>Continual learning - Hugo Cisneros - Personal page</title>
 <meta property="og:title" content=
-"Reinforcement learning - Hugo Cisneros - Personal page">
+"Continual learning - Hugo Cisneros - Personal page">
 <meta property="og:type" content="article">
 <meta property="og:image" content="/img/main.jpeg">
 <meta property="og:url" content=
-"https://hugocisneros.com/notes/reinforcement_learning/">
+"https://hugocisneros.com/notes/continual_learning/">
 <meta property="og:description" content=
-"Notes about Reinforcement learning">
+"Notes about Continual learning">
 <meta name="Description" property="description" content=
-"Notes about Reinforcement learning">
+"Notes about Continual learning">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@cisne_hug">
 <meta name="twitter:creator" content="@cisne_hug">
@@ -58,7 +57,7 @@ media="all" type="text/css">
 <article class="article h-entry" itemprop="mainEntity" itemscope
 itemtype="http://schema.org/BlogPosting">
 <div class="single-note note-container">
-<h1 class="article-title p-name" itemprop="name">Reinforcement
+<h1 class="article-title p-name" itemprop="name">Continual
 learning</h1>
 <div class="article-content e-content p-name" itemprop=
 "articleBody">
@@ -66,45 +65,55 @@ learning</h1>
 <dt>tags</dt>
 <dd><a href="/notes/machine_learning/">Machine learning</a></dd>
 </dl>
+<p>Continual learning is a type of <a href=
+"/notes/supervised_learning/">supervised learning</a> where there
+is no “testing phase” associated to a decision process. Instead,
+training samples keep being processed by the <a href=
+"/notes/algorithm/">algorithm</a> which has to simultaneously make
+predictions and keep learning.</p>
+<p>A definition from the survey (<a href="#orgc630d54">De Lange et
+al. 2020</a>):</p>
+<blockquote>
+<p>The General Continual Learning setting considers an infinite
+stream of training data where at each time step, the system
+receives a (number of) new sample(s) drawn non i.i.d from a current
+distribution that could itself experience sudden of gradual
+changes.</p>
+</blockquote>
+<h2 id="examples-of-continual-learning-systems">Examples of
+continual learning systems</h2>
+<ul>
+<li>Never Ending Language Learner (NELL) (<a href=
+"#org06d0ddb">Carlson, Betteridge, and Kisiel 2010</a>)</li>
+</ul>
+<h2 id="bibliography">Bibliography</h2>
+<p><a id="org06d0ddb"></a>Carlson, Andrew, Justin Betteridge, and
+Bryan Kisiel. 2010. “Toward an Architecture for Never-Ending
+Language Learning.” <em>In Proceedings of the Conference on
+Artificial Intelligence (AAAI) (2010)</em>, 1306–13.</p>
+<p><a id="orgc630d54"></a>De Lange, Matthias, Rahaf Aljundi, Marc
+Masana, Sarah Parisot, Xu Jia, Ales Leonardis, Gregory Slabaugh,
+and Tinne Tuytelaars. 2020. “A Continual Learning Survey: Defying
+Forgetting in Classification Tasks.” <em>arXiv:1909.08383 [Cs,
+Stat]</em>, May.</p>
 </div>
 <div>
 <div class="bl-section">
 <h2>Links to this note</h2>
 <div class="backlinks">
 <ul>
-<li><a href="/notes/adversarial_examples/">Adversarial
-examples</a></li>
-<li><a href="/notes/map_elites/">MAP-Elites</a></li>
-<li><a href="/notes/neural_architecture_search/">Neural
-architecture search</a></li>
-<li><a href="/notes/tutumadaptingunseenenvironments2020/">Notes on:
-Adapting to Unseen Environments through Explicit Representation of
-Context by Tutum, C., & Miikkulainen, R. (2020)</a></li>
-<li><a href=
-"/notes/pathakcuriositydrivenexplorationselfsupervised2017/">Notes
-on: Curiosity-Driven Exploration by Self-Supervised Prediction by
-Pathak, D., Agrawal, P., Efros, A. A., & Darrell, T.
-(2017)</a></li>
-<li><a href="/notes/khalifapcgrlproceduralcontent2020/">Notes on:
-PCGRL: Procedural Content Generation via Reinforcement Learning by
-Khalifa, A., Bontrager, P., Earle, S., & Togelius, J.
+<li><a href="/notes/hudrinkingfirehosecontinual2020/">Notes on:
+Drinking from a Firehose: Continual Learning with Web-scale Natural
+Language by Hu, H., Sener, O., Sha, F., & Koltun, V.
 (2020)</a></li>
-<li><a href="/notes/wangpoetopenendedcoevolution2019/">Notes on:
-POET: open-ended coevolution of environments and their optimized
-solutions by Wang, R., Lehman, J., Clune, J., & Stanley, K. O.
-(2019)</a></li>
-<li><a href="/notes/grbicsafereinforcementlearning2020/">Notes on:
-Safe Reinforcement Learning through Meta-learned Instincts by
-Grbic, D., & Risi, S. (2020)</a></li>
-<li><a href="/notes/quality_diversity/">Quality diversity</a></li>
 </ul>
 </div>
 </div>
 </div>
 <div class="note-footer">Last changed <a class="u-url" href=
-"https://hugocisneros.com/notes/reinforcement_learning/"><time itemprop="datePublished"
+"https://hugocisneros.com/notes/continual_learning/"><time itemprop="datePublished"
 class="dt-published" datetime=
-"2020-11-30T09:23:00+0100">30/11/2020</time></a> | authored by
+"2020-11-27T12:43:00+0100">27/11/2020</time></a> | authored by
 <a href="https://hugocisneros.com/" rel="author" class=
 "p-author h-card" itemprop="author" itemscope itemtype=
 "http://schema.org/Person"><span itemprop="name">Hugo
@@ -112,7 +121,7 @@ Cisneros</span></a></div>
 </div>
 </article>
 <br>
-<a href="/notes#reinforcement_learning"><b>← Back to Notes</b></a>
+<a href="/notes#continual_learning"><b>← Back to Notes</b></a>
 <hr></main>
 <footer class="footer">
 <ul class="footer-links">

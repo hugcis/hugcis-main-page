@@ -21,6 +21,7 @@ d3.json("/js/graph.json").then(function(data) {
         '#007500',
         '#968674',
         '#5E998A',
+        "#363ea9",
     ];
 
     nodeColor = d => {
