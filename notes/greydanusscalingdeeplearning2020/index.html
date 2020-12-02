@@ -6,16 +6,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content=
 "width=device-width,initial-scale=1.0,minimum-scale=1">
-<title>Compression - Hugo Cisneros - Personal page</title>
+<title>Notes on: Scaling down Deep Learning by Greydanus, S. (2020)
+- Hugo Cisneros - Personal page</title>
 <meta property="og:title" content=
-"Compression - Hugo Cisneros - Personal page">
+"Notes on: Scaling down Deep Learning by Greydanus, S. (2020) - Hugo Cisneros - Personal page">
 <meta property="og:type" content="article">
 <meta property="og:image" content="/img/main.jpeg">
 <meta property="og:url" content=
-"https://hugocisneros.com/notes/compression/">
-<meta property="og:description" content="Notes about Compression">
+"https://hugocisneros.com/notes/greydanusscalingdeeplearning2020/">
+<meta property="og:description" content=
+"Notes about Scaling down Deep Learning by Greydanus, S. (2020)">
 <meta name="Description" property="description" content=
-"Notes about Compression">
+"Notes about Scaling down Deep Learning by Greydanus, S. (2020)">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@cisne_hug">
 <meta name="twitter:creator" content="@cisne_hug">
@@ -56,66 +58,72 @@ media="all" type="text/css">
 <article class="article h-entry" itemprop="mainEntity" itemscope
 itemtype="http://schema.org/BlogPosting">
 <div class="single-note note-container">
-<h1 class="article-title p-name" itemprop="name">Compression</h1>
+<h1 class="article-title p-name" itemprop="name">Scaling down Deep
+Learning by Greydanus, S. (2020)</h1>
 <div class="article-content e-content p-name" itemprop=
 "articleBody">
-<h2 id="compression-with-neural-networks--neural-networks-dot-md">
-Compression with <a href="/notes/neural_networks/">Neural
-networks</a></h2>
-<p>Compression can be done with the help of neural networks as
-estimators of the sequence’s next character probability (<a href=
-"#org1c425ab">Schmidhuber and Heil 1996</a>).</p>
-<h2 id=
-"compression-as-a-measure-of-artificial-intelligence--artificial-intelligence-dot-md">
-Compression as a measure of <a href=
-"/notes/artificial_intelligence/">Artificial Intelligence</a></h2>
-<p>Mahoney argues in (<a href="#org6fbae5b">Mahoney 1999</a>) that
-being able to compress information amounts to being able to predict
-optimally the distribution of an inputs natural language corpus. A
-good compression algorithm “learns” features of the language to
-make better predictions. This is maybe one of the original
-motivation for <a href="/notes/language_modeling/">language
-modeling</a>, and can be used as an <a href=
-"/notes/artificial_intelligence_test/">artificial intelligence
-test</a>.</p>
-<h2 id="compression-as-a-measure-of-complexity--complexity-dot-md">
-Compression as a measure of <a href=
-"/notes/complexity/">Complexity</a></h2>
-<p>Compression algorithms have long been used as a way of measuring
-complexity of data.</p>
+<dl>
+<dt>tags</dt>
+<dd><a href="/notes/neural_networks/">Neural networks</a></dd>
+<dt>source</dt>
+<dd>(<a href="#orgdd30fc7">Greydanus 2020</a>)</dd>
+</dl>
+<h2 id="summary">Summary</h2>
+<p>This paper introduces a minimalist 1D version of the MNIST
+dataset for studying some basic properties of neural networks. The
+authors simplify the MNIST dataset by assigning a 1D glyph to each
+digit. These glyphs are padded, translated, sheared and blurred to
+build a dataset of multiple different objects.</p>
+<p>The figure from the paper shown below illustrates this dataset’s
+construction:</p>
+<figure class="center" itemprop="image" itemscope itemtype=
+"http://schema.org/ImageObject"><img itemprop="url" src=
+"/img/greydanusScalingDeepLearning2020.jpg" alt="1D simple MNIST"
+width="600">
+<figcaption>
+<h4 itemprop="name">1D simple MNIST</h4>
+</figcaption>
+</figure>
+<p>This dataset is shown to be a suitable tool to study very small
+neural networks and their properties. The authors discuss:</p>
+<ul>
+<li><a href="/notes/the_lottery_ticket_hypothesis/">Lottery
+tickets</a></li>
+<li><a href="/notes/double_descent/">Double descent</a></li>
+<li>Metalearning</li>
+<li>The use of strong spatial priors such as translation
+invariance</li>
+<li>Pooling methods</li>
+</ul>
+<h2 id="comments">Comments</h2>
+<p>This is an interesting paper, which for once isn’t about getting
+bigger models or better results than the state of the art. The
+small MNIST dataset may lead to interesting insights into the
+functioning of neural networks but I’m not sure that will be enough
+for solving the big questions about deep learning. The secrets of
+those huge recent models might elude us for a while simply because
+we don’t have the resources (mathematical or computational) to
+study them.</p>
 <h2 id="bibliography">Bibliography</h2>
-<p><a id="org6fbae5b"></a>Mahoney, Matthew V. 1999. “Text
-Compression as a Test for Artificial Intelligence.” In
-<em>Proceedings of AAAI-1999</em>, 3.</p>
-<p><a id="org1c425ab"></a>Schmidhuber, J., and S. Heil. 1996.
-“Sequential Neural Text Compression.” <em>IEEE Transactions on
-Neural Networks</em> 7 (1):142–46.</p>
+<p><a id="orgdd30fc7"></a>Greydanus, Sam. 2020. “Scaling
+<strong>down</strong> Deep Learning.” <em>arXiv:2011.14439 [Cs,
+Stat]</em>, November.</p>
 </div>
 <div>
 <div class="bl-section">
 <h2>Links to this note</h2>
 <div class="backlinks">
 <ul>
-<li><a href="/notes/complexity_metrics/">Complexity
-metrics</a></li>
-<li><a href="/notes/compression/">Compression</a></li>
-<li><a href="/notes/evaluating_nlp/">Evaluating NLP</a></li>
-<li><a href="/notes/implicit_neural_representations/">Implicit
-neural representations</a></li>
-<li><a href="/notes/language_modeling/">Language modeling</a></li>
-<li><a href="/notes/lempel_ziv_welch_algorithm/">Lempel-Ziv-Welch
-algorithm</a></li>
-<li><a href="/notes/schmidhuber_on_consciousness/">Schmidhuber on
-Consciousness</a></li>
-<li><a href="/notes/wavelets/">Wavelets</a></li>
+<li><a href="/notes/greydanusscalingdeeplearning2020/">Notes on:
+Scaling down Deep Learning by Greydanus, S. (2020)</a></li>
 </ul>
 </div>
 </div>
 </div>
 <div class="note-footer">Last changed <a class="u-url" href=
-"https://hugocisneros.com/notes/compression/"><time itemprop=
-"datePublished" class="dt-published" datetime=
-"2020-10-07T16:22:00+0200">07/10/2020</time></a> | authored by
+"https://hugocisneros.com/notes/greydanusscalingdeeplearning2020/"><time itemprop="datePublished"
+class="dt-published" datetime=
+"2020-12-02T19:13:00+0100">02/12/2020</time></a> | authored by
 <a href="https://hugocisneros.com/" rel="author" class=
 "p-author h-card" itemprop="author" itemscope itemtype=
 "http://schema.org/Person"><span itemprop="name">Hugo
@@ -123,7 +131,8 @@ Cisneros</span></a></div>
 </div>
 </article>
 <br>
-<a href="/notes#compression"><b>← Back to Notes</b></a>
+<a href="/notes#greydanusscalingdeeplearning2020"><b>← Back to
+Notes</b></a>
 <hr></main>
 <footer class="footer">
 <ul class="footer-links">

@@ -6,7 +6,88 @@
     <description>Recent content in Notes on Hugo Cisneros - Personal page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 30 Nov 2020 10:20:00 +0100</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 02 Dec 2020 19:13:00 +0100</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Notes on: Scaling down Deep Learning by Greydanus, S. (2020)</title>
+      <link>https://hugocisneros.com/notes/greydanusscalingdeeplearning2020/</link>
+      <pubDate>Wed, 02 Dec 2020 19:13:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/greydanusscalingdeeplearning2020/</guid>
+      <description>tags Neural networks source (Greydanus 2020)  Summary This paper introduces a minimalist 1D version of the MNIST dataset for studying some basic properties of neural networks. The authors simplify the MNIST dataset by assigning a 1D glyph to each digit. These glyphs are padded, translated, sheared and blurred to build a dataset of multiple different objects.
+The figure from the paper shown below illustrates this dataset&amp;rsquo;s construction:
+ 1D simple MNIST   This dataset is shown to be a suitable tool to study very small neural networks and their properties.</description>
+    </item>
+    
+    <item>
+      <title>Double descent</title>
+      <link>https://hugocisneros.com/notes/double_descent/</link>
+      <pubDate>Wed, 02 Dec 2020 18:59:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/double_descent/</guid>
+      <description> tags Neural network training  </description>
+    </item>
+    
+    <item>
+      <title>Privacy-preserving machine learning</title>
+      <link>https://hugocisneros.com/notes/privacy_preserving_machine_learning/</link>
+      <pubDate>Wed, 02 Dec 2020 11:16:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/privacy_preserving_machine_learning/</guid>
+      <description>tags Machine learning, Online privacy  This is a kind of machine learning where one wants to train a model or perform inference without transmitting sensitive information.
+This information could leak because of data transmission to an untrusted computing server, or because the model itself reveals the structure of its training data (Ateniese et al. 2013; Song, Ristenpart, and Shmatikov 2017).
+Bibliography Ateniese, Giuseppe, Giovanni Felici, Luigi V. Mancini, Angelo Spognardi, Antonio Villani, and Domenico Vitali.</description>
+    </item>
+    
+    <item>
+      <title>Homomorphic encryption</title>
+      <link>https://hugocisneros.com/notes/fully_homomorphic_encryption/</link>
+      <pubDate>Wed, 02 Dec 2020 10:28:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/fully_homomorphic_encryption/</guid>
+      <description>tags Cryptography resources Vitalik Buterin&amp;rsquo;s blog  Principle The idea of homomorphic encryption is to encrypt data in such a way that, given a function \(f\) and a message to encrypt \(x\), \(\text{enc}(f(x)) = f(\text{enc}(x))\).
+This idea is similar in spirit to Privacy-preserving machine learning, or federated learning, where one wants to obfuscate data while still being able to use it in a learning model. Here, one considers arbitrary functions.</description>
+    </item>
+    
+    <item>
+      <title>Neural networks</title>
+      <link>https://hugocisneros.com/notes/neural_networks/</link>
+      <pubDate>Wed, 02 Dec 2020 09:42:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/neural_networks/</guid>
+      <description>tags Machine learning  Two-layers neural network Mathematically, a simple two-layers neural network with relu non-linearities can be written like below. For an input vector \(x \in \mathbb{R}^D\), \(\mathbf{a} = (a_1, \cdots, a_N)\in \mathbb{R}^M\) are the output weights, \(\mathbf{b} = (b_1, \cdots, b_N)\in \mathbb{R}^D\) are the input weights
+\[ h(x) = \frac{1}{m} \sum_{i=1}^m a_i \max\{ b_i^\top x,0\}, \]
+Universal approximation theorem Cybenko showed in 1989 that a neural network of arbitrary width with sigmoid activation function could approximate any continuous function (Cybenko 1989).</description>
+    </item>
+    
+    <item>
+      <title>Graph convolutional networks</title>
+      <link>https://hugocisneros.com/notes/graph_convolutional_networks/</link>
+      <pubDate>Tue, 01 Dec 2020 15:34:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/graph_convolutional_networks/</guid>
+      <description> tags Convolutional neural networks, Graph neural networks  </description>
+    </item>
+    
+    <item>
+      <title>Graph neural networks</title>
+      <link>https://hugocisneros.com/notes/graph_neural_networks/</link>
+      <pubDate>Tue, 01 Dec 2020 15:33:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/graph_neural_networks/</guid>
+      <description> tags Neural networks  </description>
+    </item>
+    
+    <item>
+      <title>Complexity metrics</title>
+      <link>https://hugocisneros.com/notes/complexity_metrics/</link>
+      <pubDate>Mon, 30 Nov 2020 16:27:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/complexity_metrics/</guid>
+      <description>tags Complexity  To study the complexity of various systems, researchers have come up with various metrics. They are based on several principles such as Information theory or Algorithmic Information theory. Many of these metrics are described in (Grassberger 1989).
+Shannon entropy and Kolmogorov Complexity The paper (Grunwald and Vitanyi, n.d.) is a great description and analysis of two of the most important Complexity metrics:
+ Shannon entropy Kolmogorov complexity  Information-theoretic metrics  Shannon entropy  AIT based metrics For a Universal computer \(U\) the algorithmic information of \(S\) relative to \(U\) is defined as the length of the shortest program that yields \(S\) on \(U\).</description>
+    </item>
+    
     <item>
       <title>Notes on: Curiosity-Driven Exploration by Self-Supervised Prediction by Pathak, D., Agrawal, P., Efros, A. A., &amp; Darrell, T. (2017)</title>
       <link>https://hugocisneros.com/notes/pathakcuriositydrivenexplorationselfsupervised2017/</link>
@@ -1092,31 +1173,12 @@ Where is the large-scale pattern specified?</description>
     </item>
     
     <item>
-      <title>Homomorphic encryption</title>
-      <link>https://hugocisneros.com/notes/fully_homomorphic_encryption/</link>
-      <pubDate>Sun, 26 Jul 2020 17:42:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/fully_homomorphic_encryption/</guid>
-      <description>tags Cryptography resources Vitalik Buterin&amp;rsquo;s blog  Principle The idea of homomorphic encryption is to encrypt data in such a way that, given a function \(f\) and a message to encrypt \(x\), \(\text{enc}(f(x)) = f(\text{enc}(x))\).
-This idea is similar in spirit to Privacy-preserving machine learning, or federated learning, where one wants to obfuscate data while still being able to use it in a learning model. Here, one considers arbitrary functions.</description>
-    </item>
-    
-    <item>
       <title>Federated learning</title>
       <link>https://hugocisneros.com/notes/federated_learning/</link>
       <pubDate>Sun, 26 Jul 2020 17:37:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/federated_learning/</guid>
       <description> tags Machine learning  </description>
-    </item>
-    
-    <item>
-      <title>Privacy-preserving machine learning</title>
-      <link>https://hugocisneros.com/notes/privacy_preserving_machine_learning/</link>
-      <pubDate>Sun, 26 Jul 2020 17:37:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/privacy_preserving_machine_learning/</guid>
-      <description> tags Machine learning, Online privacy  </description>
     </item>
     
     <item>
@@ -2331,27 +2393,6 @@ However, once you have the pruned architecture, it will often not be able to lea
       <description>tags Neural networks, Optimization authors Francis Bach, Lénaïc Chizat source Francis Bach&amp;rsquo;s blog  In the rest, we use the mathematical definition of a neural network from Neural networks.
 Two layer neural network Even simple neural network models are very difficult to analyze. This is primarily due to two difficulties:
  Non-linearity: the problem is typically non-convex, which in general is a bad thing in optimization. Overparametrization: there are often a lot of parameters, sometimes many more parameters than observations.</description>
-    </item>
-    
-    <item>
-      <title>Complexity metrics</title>
-      <link>https://hugocisneros.com/notes/complexity_metrics/</link>
-      <pubDate>Tue, 07 Jul 2020 22:29:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/complexity_metrics/</guid>
-      <description>tags Complexity  To study the complexity of various systems, researchers have come up with various metrics. They are based on several principles such as Information theory or Algorithmic Information theory. Many of these metrics are described in (Grassberger 1989).
-Shannon entropy and Kolmogorov Complexity The paper (Grunwald and Vitanyi, n.d.) is a great description and analysis of two of the most important Complexity metrics:
- Shannon entropy Kolmogorov complexity  Information-theoretic metrics  Shannon entropy  AIT based metrics For a Universal computer \(U\) the algorithmic information of \(S\) relative to \(U\) is defined as the length of the shortest program that yields \(S\) on \(U\).</description>
-    </item>
-    
-    <item>
-      <title>Neural networks</title>
-      <link>https://hugocisneros.com/notes/neural_networks/</link>
-      <pubDate>Tue, 07 Jul 2020 18:32:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/neural_networks/</guid>
-      <description>tags Machine learning  Two-layers neural network Mathematically, a simple two-layers neural network with relu non-linearities can be written like below. For an input vector \(x \in \mathbb{R}^D\), \(\mathbf{a} = (a_1, \cdots, a_N)\in \mathbb{R}^M\) are the output weights, \(\mathbf{b} = (b_1, \cdots, b_N)\in \mathbb{R}^D\) are the input weights
-\[ h(x) = \frac{1}{m} \sum_{i=1}^m a_i \max\{ b_i^\top x,0\}, \]</description>
     </item>
     
     <item>
