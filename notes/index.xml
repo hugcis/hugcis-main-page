@@ -6,7 +6,48 @@
     <description>Recent content in Notes on Hugo Cisneros - Personal page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 02 Dec 2020 19:13:00 +0100</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 09 Dec 2020 14:23:00 +0100</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Neural tangent kernel</title>
+      <link>https://hugocisneros.com/notes/neural_tangent_kernel/</link>
+      <pubDate>Wed, 09 Dec 2020 14:23:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/neural_tangent_kernel/</guid>
+      <description>tags Neural networks  For a neural network trying to minimize a quadratic loss, the gradient flow can be re-written from \[ \dot{w} = - \nabla L (w(t)) \] to \[ \dot{w} = - \nabla y(w) (y(w) - \bar{y}) \]
+Therefore, the time derivative of \(y\) is \[ \dot{y}(w) = \nabla y(w)^T \dot{w} = - \nabla y(w)^T \nabla y(w) (y(w) - \bar{y}) \] The NTK is the quantity to the left of the last term: \(\nabla y(w)^T \nabla y(w)\).</description>
+    </item>
+    
+    <item>
+      <title>Gradient descent for wide two-layer neural networks – I : Global convergence</title>
+      <link>https://hugocisneros.com/notes/gradient_descent_for_wide_two_layer_neural_networks_i_global_convergence/</link>
+      <pubDate>Wed, 09 Dec 2020 14:11:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/gradient_descent_for_wide_two_layer_neural_networks_i_global_convergence/</guid>
+      <description>tags Neural networks, Optimization authors Francis Bach, Lénaïc Chizat source Francis Bach&amp;rsquo;s blog  In the rest, we use the mathematical definition of a neural network from Neural networks.
+Two layer neural network Even simple neural network models are very difficult to analyze. This is primarily due to two difficulties:
+ Non-linearity: the problem is typically non-convex, which in general is a bad thing in optimization. Overparametrization: there are often a lot of parameters, sometimes many more parameters than observations.</description>
+    </item>
+    
+    <item>
+      <title>Gradient flow</title>
+      <link>https://hugocisneros.com/notes/gradient_flow/</link>
+      <pubDate>Wed, 09 Dec 2020 14:11:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/gradient_flow/</guid>
+      <description>tags Gradient descent, Optimization  The gradient flow for a model parametrized by parameters \(w\) and a loss function \(L\) is written:
+\[ \dot{w} = - \nabla L (w(t)) \]</description>
+    </item>
+    
+    <item>
+      <title>Notes on: Curiosity-Driven Exploration by Self-Supervised Prediction by Pathak, D., Agrawal, P., Efros, A. A., &amp; Darrell, T. (2017)</title>
+      <link>https://hugocisneros.com/notes/pathakcuriositydrivenexplorationselfsupervised2017/</link>
+      <pubDate>Thu, 03 Dec 2020 15:30:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/pathakcuriositydrivenexplorationselfsupervised2017/</guid>
+      <description>tags Reinforcement learning source (Pathak et al. 2017)  Summary This paper presents a curiosity-based method for training RL agents. These agents are given a reward \(r_t\) which is the sum of an intrinsic and an extrinsic rewards. The latter is mostly (if not always) 0, while the former is constructed progressively during exploration by an Intrisic Curiosity Module (ICM).
+The module is illustrated below (figure from the paper).</description>
+    </item>
+    
     <item>
       <title>Notes on: Scaling down Deep Learning by Greydanus, S. (2020)</title>
       <link>https://hugocisneros.com/notes/greydanusscalingdeeplearning2020/</link>
@@ -86,16 +127,6 @@ Universal approximation theorem Cybenko showed in 1989 that a neural network of 
       <description>tags Complexity  To study the complexity of various systems, researchers have come up with various metrics. They are based on several principles such as Information theory or Algorithmic Information theory. Many of these metrics are described in (Grassberger 1989).
 Shannon entropy and Kolmogorov Complexity The paper (Grunwald and Vitanyi, n.d.) is a great description and analysis of two of the most important Complexity metrics:
  Shannon entropy Kolmogorov complexity  Information-theoretic metrics  Shannon entropy  AIT based metrics For a Universal computer \(U\) the algorithmic information of \(S\) relative to \(U\) is defined as the length of the shortest program that yields \(S\) on \(U\).</description>
-    </item>
-    
-    <item>
-      <title>Notes on: Curiosity-Driven Exploration by Self-Supervised Prediction by Pathak, D., Agrawal, P., Efros, A. A., &amp; Darrell, T. (2017)</title>
-      <link>https://hugocisneros.com/notes/pathakcuriositydrivenexplorationselfsupervised2017/</link>
-      <pubDate>Mon, 30 Nov 2020 10:20:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/pathakcuriositydrivenexplorationselfsupervised2017/</guid>
-      <description>tags Reinforcement learning source (Pathak et al. 2017)  Summary This paper presents a curiosity-based method for training RL agents. These agents are given a reward \(r_t\) which is the sum of an intrinsic and an extrinsic rewards. The latter is mostly (if not always) 0, while the former is constructed progressively during exploration by an Intrisic Curiosity Module (ICM).
-The module is illustrated below (figure from the paper).</description>
     </item>
     
     <item>
@@ -2382,17 +2413,6 @@ However, once you have the pruned architecture, it will often not be able to lea
       
       <guid>https://hugocisneros.com/notes/decentralization/</guid>
       <description> tags Economics  </description>
-    </item>
-    
-    <item>
-      <title>Gradient descent for wide two-layer neural networks – I : Global convergence</title>
-      <link>https://hugocisneros.com/notes/gradient_descent_for_wide_two_layer_neural_networks_i_global_convergence/</link>
-      <pubDate>Thu, 09 Jul 2020 11:11:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/gradient_descent_for_wide_two_layer_neural_networks_i_global_convergence/</guid>
-      <description>tags Neural networks, Optimization authors Francis Bach, Lénaïc Chizat source Francis Bach&amp;rsquo;s blog  In the rest, we use the mathematical definition of a neural network from Neural networks.
-Two layer neural network Even simple neural network models are very difficult to analyze. This is primarily due to two difficulties:
- Non-linearity: the problem is typically non-convex, which in general is a bad thing in optimization. Overparametrization: there are often a lot of parameters, sometimes many more parameters than observations.</description>
     </item>
     
     <item>
