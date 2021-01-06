@@ -89,9 +89,9 @@ d3.json("/js/graph.json").then(function(data) {
     const links = data.links.map(d => Object.create(d));
     const nodes = data.nodes.map(d => Object.create(d));
 
-
     simulation = d3.forceSimulation(nodes)
-        .velocityDecay(0.6)
+    .alpha(0.9)
+    .velocityDecay(0.4)
         .force("link", d3.forceLink(links).id(d => d.id).strength(.1))
         .force("charge", d3.forceManyBody()
                .strength(-250))
