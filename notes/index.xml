@@ -6,7 +6,67 @@
     <description>Recent content in Notes on Hugo Cisneros - Personal page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Dec 2020 14:23:00 +0100</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 25 Jan 2021 13:48:00 +0100</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hash functions</title>
+      <link>https://hugocisneros.com/notes/hash_functions/</link>
+      <pubDate>Mon, 25 Jan 2021 13:48:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/hash_functions/</guid>
+      <description>tags Computer science  Hash functions map variable sized inputs to a finite set of outputs.
+They need to have a range of properties such as:
+ Determinism: The output of a hash function should be the same every time for each input. Universality: Two inputs should have a probability of getting the same hash as close to \(1/n\) as possible, where \(n\) is the size of the output set.</description>
+    </item>
+    
+    <item>
+      <title>Ordinary least squares</title>
+      <link>https://hugocisneros.com/notes/ordinary_least_squares/</link>
+      <pubDate>Wed, 13 Jan 2021 15:20:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/ordinary_least_squares/</guid>
+      <description> tags Applied maths, Optimization  </description>
+    </item>
+    
+    <item>
+      <title>System of linear equations</title>
+      <link>https://hugocisneros.com/notes/system_of_linear_equations/</link>
+      <pubDate>Wed, 13 Jan 2021 15:18:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/system_of_linear_equations/</guid>
+      <description>tags Applied maths  Such a system with \(m\) equations and \(n\) unknowns is often denoted \(Ax = b\) where \(A\) is a matrix \(m\times n\) and \(b\) is a vector of size \(m\).
+There are multiple methods to solve such a systems with different sets of hypotheses.
+System types Square matrix with full rank In the most simple case: a square matrix with full rank, the solution exists and is unique: \(x = A^{-1} b\)</description>
+    </item>
+    
+    <item>
+      <title>Diffusion limited aggregation</title>
+      <link>https://hugocisneros.com/notes/diffusion_limited_aggregation/</link>
+      <pubDate>Wed, 13 Jan 2021 13:43:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/diffusion_limited_aggregation/</guid>
+      <description> tags Applied maths, Physics  </description>
+    </item>
+    
+    <item>
+      <title>Genetic algorithms</title>
+      <link>https://hugocisneros.com/notes/genetic_algorithm/</link>
+      <pubDate>Thu, 07 Jan 2021 14:05:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/genetic_algorithm/</guid>
+      <description>Genetic algorithms can be used as optimization algorithms for search problems, where usual optimization techniques such as gradient-based ones aren&amp;rsquo;t very effective.
+These methods are loosely based on evolution in biological life, implementing a limited form variation and selection to progress towards better fitness (measured by a specific fitness function).
+New candidate solutions for a problem are constructed by randomly combining and mutating parent solutions. The best candidate are kept and become parents of the next generation.</description>
+    </item>
+    
+    <item>
+      <title>CMA-ES</title>
+      <link>https://hugocisneros.com/notes/cma_es/</link>
+      <pubDate>Thu, 07 Jan 2021 13:59:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/cma_es/</guid>
+      <description> tags Evolutionary algorithms  </description>
+    </item>
+    
     <item>
       <title>Neural tangent kernel</title>
       <link>https://hugocisneros.com/notes/neural_tangent_kernel/</link>
@@ -2533,15 +2593,6 @@ In the case of Decentralization, an almost immediate effect is the decrease of p
       
       <guid>https://hugocisneros.com/notes/combinatorics/</guid>
       <description> tags Mathematics  </description>
-    </item>
-    
-    <item>
-      <title>Genetic algorithms</title>
-      <link>https://hugocisneros.com/notes/genetic_algorithm/</link>
-      <pubDate>Thu, 02 Jul 2020 10:20:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/genetic_algorithm/</guid>
-      <description>Genetic algorithms are mostly used as optimization algorithms for Search problems, where usual optimization techniques such as gradient-based ones aren&amp;rsquo;t very effective.</description>
     </item>
     
     <item>

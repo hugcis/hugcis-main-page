@@ -76,6 +76,7 @@ export settings</a></li>
 <li><a href="#super-agenda">Super agenda</a></li>
 </ul>
 </li>
+<li><a href="#org-clock">Org clock</a></li>
 <li><a href="#org-custom-commands">Org custom commands</a>
 <ul>
 <li><a href="#close-journal-on-exit">Close journal on exit</a></li>
@@ -86,10 +87,11 @@ export settings</a></li>
 <li><a href="#org-refile">Org Refile</a></li>
 <li><a href="#org-roam">Org Roam</a>
 <ul>
-<li><a href="#org-roam-export-backlinks">Org roam export
-backlinks</a></li>
+<li><a href="#configuration">Configuration</a></li>
+<li><a href="#ox-hugo-export">Ox-Hugo export</a></li>
 </ul>
 </li>
+<li><a href="#org-caldav">Org Caldav</a></li>
 <li><a href="#misc">Misc</a>
 <ul>
 <li><a href="#timestamp-on-save">Timestamp on save</a></li>
@@ -297,7 +299,10 @@ automatically set to variable width.</p>
 "color:#40ffff">t</span>
         <span style=
 "color:#40ffff">org-startup-indented</span> <span style=
-"color:#40ffff">t</span>)
+"color:#40ffff">t</span>
+        <span style=
+"color:#40ffff">org-adapt-indentation</span> <span style=
+"color:#40ffff">nil</span>)
   (<span style=
 "color:#40ffff">variable-pitch-mode</span> <span style=
 "color:#3677a9">+1</span>)
@@ -318,6 +323,10 @@ automatically set to variable width.</p>
           <span style="color:#ed9d13">'org-block-begin-line</span>
           <span style="color:#ed9d13">'org-block-end-line</span>
           <span style="color:#ed9d13">'org-meta-line</span>
+          <span style="color:#ed9d13">'org-date</span>
+          <span style="color:#ed9d13">'org-drawer</span>
+          <span style="color:#ed9d13">'org-property-value</span>
+          <span style="color:#ed9d13">'org-special-keyword</span>
           <span style=
 "color:#ed9d13">'org-document-info-keyword</span>))
   (<span style="color:#447fcf">mapc</span> <span style=
@@ -329,7 +338,7 @@ automatically set to variable width.</p>
 "color:#40ffff">face</span> <span style=
 "color:#40ffff">nil</span> <span style=
 "color:#24909d">:height</span> <span style=
-"color:#3677a9">0.7</span>))
+"color:#3677a9">0.8</span>))
     (<span style="color:#447fcf">list</span> <span style=
 "color:#ed9d13">'org-document-info-keyword</span>
           <span style="color:#ed9d13">'org-block-begin-line</span>
@@ -357,7 +366,7 @@ automatically set to variable width.</p>
 "color:#40ffff">nil</span>
                       <span style=
 "color:#24909d">:height</span> <span style=
-"color:#3677a9">1.15</span>
+"color:#3677a9">1.25</span>
                       <span style=
 "color:#24909d">:foreground</span> <span style=
 "color:#ed9d13">"#BEA4DB"</span>)
@@ -367,7 +376,7 @@ automatically set to variable width.</p>
 "color:#40ffff">nil</span>
                       <span style=
 "color:#24909d">:height</span> <span style=
-"color:#3677a9">1.1</span>
+"color:#3677a9">1.15</span>
                       <span style=
 "color:#24909d">:foreground</span> <span style=
 "color:#ed9d13">"#A382FF"</span>
@@ -380,7 +389,7 @@ automatically set to variable width.</p>
 "color:#40ffff">nil</span>
                       <span style=
 "color:#24909d">:height</span> <span style=
-"color:#3677a9">1.05</span>
+"color:#3677a9">1.1</span>
                       <span style=
 "color:#24909d">:foreground</span> <span style=
 "color:#ed9d13">"#5E65CC"</span>
@@ -391,6 +400,9 @@ automatically set to variable width.</p>
 "color:#40ffff">set-face-attribute</span> <span style=
 "color:#ed9d13">'org-level-4</span> <span style=
 "color:#40ffff">nil</span>
+                      <span style=
+"color:#24909d">:height</span> <span style=
+"color:#3677a9">1.05</span>
                       <span style=
 "color:#24909d">:foreground</span> <span style=
 "color:#ed9d13">"#ABABFF"</span>)
@@ -466,22 +478,13 @@ automatically set to variable width.</p>
       <span style=
 "color:#40ffff">org-agenda-start-with-log-mode</span> <span style=
 "color:#40ffff">t</span>)
-
-(<span style="color:#24909d">setq-default</span> <span style=
-"color:#40ffff">org-icalendar-include-todo</span> <span style=
-"color:#40ffff">t</span>)
-(<span style="color:#24909d">setq</span> <span style=
-"color:#40ffff">org-agenda-files</span> '(<span style=
-"color:#ed9d13">"~/org"</span> <span style=
-"color:#ed9d13">"~/org/roam/notes/"</span>))
-
 (<span style=
 "color:#24909d">with-eval-after-load</span> <span style=
 "color:#ed9d13">'org-journal</span>
-  (<span style="color:#40ffff">add-to-list</span> <span style=
-"color:#ed9d13">'org-agenda-files</span> <span style=
-"color:#40ffff">org-journal-dir</span>)
-  )
+  (<span style="color:#24909d">setq</span> <span style=
+"color:#40ffff">org-agenda-files</span> '(<span style=
+"color:#ed9d13">"~/org"</span> <span style=
+"color:#ed9d13">"~/org/roam/notes/"</span>)))
 (<span style="color:#24909d">setq</span> <span style=
 "color:#40ffff">org-agenda-clockreport-parameter-plist</span>
       (<span style="color:#24909d">quote</span> (<span style=
@@ -504,6 +507,9 @@ automatically set to variable width.</p>
 "color:#40ffff">org-upcoming-deadline</span>)))  <span style=
 "color:#999;font-style:italic">; due today or later</span>
 
+(<span style="color:#24909d">setq-default</span> <span style=
+"color:#40ffff">org-icalendar-include-todo</span> <span style=
+"color:#40ffff">t</span>)
 (<span style="color:#24909d">setq</span> <span style=
 "color:#40ffff">org-combined-agenda-icalendar-file</span> <span style="color:#ed9d13">"~/org/calendar.ics"</span>)
 (<span style="color:#24909d">setq</span> <span style=
@@ -525,6 +531,9 @@ automatically set to variable width.</p>
 (<span style="color:#24909d">setq</span> <span style=
 "color:#40ffff">org-icalendar-store-UID</span> <span style=
 "color:#40ffff">t</span>)
+(<span style="color:#24909d">setq</span> <span style=
+"color:#40ffff">org-icalendar-alarm-time</span> <span style=
+"color:#3677a9">30</span>)
 (<span style="color:#24909d">setq</span> <span style=
 "color:#40ffff">french-holiday</span>
   '((<span style="color:#40ffff">holiday-fixed</span> <span style=
@@ -701,7 +710,7 @@ automatically set to variable width.</p>
 "color:#40ffff">org-agenda-breadcrumbs-separator</span> <span style="color:#ed9d13">" ❱ "</span>
       <span style=
 "color:#40ffff">org-agenda-current-time-string</span> <span style=
-"color:#ed9d13">"⮜┈┈┈┈┈┈┈┈┈┈┈ now"</span>
+"color:#ed9d13">"⏰ ┈┈┈┈┈┈┈┈┈┈┈ now"</span>
       <span style=
 "color:#40ffff">org-agenda-time-grid</span> '((<span style=
 "color:#40ffff">weekly</span> <span style=
@@ -858,12 +867,13 @@ grouping agenda items in your views.</p>
 "color:#ed9d13">"Work important"</span>
                                  <span style=
 "color:#24909d">:and</span> (<span style=
-"color:#24909d">:priority</span> <span style=
-"color:#ed9d13">"A"</span> <span style=
+"color:#24909d">:priority&gt;=</span> <span style=
+"color:#ed9d13">"B"</span> <span style=
 "color:#24909d">:category</span> <span style=
 "color:#ed9d13">"Work"</span> <span style=
-"color:#24909d">:todo</span> <span style=
-"color:#ed9d13">"TODO"</span>))
+"color:#24909d">:todo</span> (<span style=
+"color:#ed9d13">"TODO"</span> <span style=
+"color:#ed9d13">"NEXT"</span>)))
                           (<span style=
 "color:#24909d">:name</span> <span style=
 "color:#ed9d13">"Work other"</span>
@@ -871,8 +881,9 @@ grouping agenda items in your views.</p>
 "color:#24909d">:and</span> (<span style=
 "color:#24909d">:category</span> <span style=
 "color:#ed9d13">"Work"</span> <span style=
-"color:#24909d">:todo</span> <span style=
-"color:#ed9d13">"TODO"</span>))
+"color:#24909d">:todo</span> (<span style=
+"color:#ed9d13">"TODO"</span> <span style=
+"color:#ed9d13">"NEXT"</span>)))
                           (<span style=
 "color:#24909d">:name</span> <span style=
 "color:#ed9d13">"Important"</span>
@@ -916,6 +927,43 @@ grouping agenda items in your views.</p>
 (<span style="color:#40ffff">add-hook</span> <span style=
 "color:#ed9d13">'org-agenda-mode-hook</span> <span style=
 "color:#ed9d13">'org-super-agenda-mode</span>)
+</code></pre></div>
+<h2 id="org-clock">Org clock</h2>
+<div class="highlight">
+<pre style=
+"color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<code class="language-elisp" data-lang="elisp"><span style=
+"color:#999;font-style:italic">;; Resume clocking task when emacs is restarted</span>
+(<span style=
+"color:#40ffff">org-clock-persistence-insinuate</span>)
+<span style=
+"color:#999;font-style:italic">;; Show lot of clocking history so it's easy to pick items off the C-F11 list</span>
+(<span style="color:#24909d">setq</span> <span style=
+"color:#40ffff">org-clock-history-length</span> <span style=
+"color:#3677a9">23</span>)
+<span style=
+"color:#999;font-style:italic">;; Resume clocking task on clock-in if the clock is open</span>
+(<span style="color:#24909d">setq</span> <span style=
+"color:#40ffff">org-clock-in-resume</span> <span style=
+"color:#40ffff">t</span>)
+<span style=
+"color:#999;font-style:italic">;; Sometimes I change tasks I'm clocking quickly - this removes clocked tasks with 0:00 duration</span>
+(<span style="color:#24909d">setq</span> <span style=
+"color:#40ffff">org-clock-out-remove-zero-time-clocks</span> <span style="color:#40ffff">t</span>)
+<span style=
+"color:#999;font-style:italic">;; Clock out when moving task to a done state</span>
+(<span style="color:#24909d">setq</span> <span style=
+"color:#40ffff">org-clock-out-when-done</span> <span style=
+"color:#40ffff">t</span>)
+<span style=
+"color:#999;font-style:italic">;; Save the running clock and all clock history when exiting Emacs, load it on startup</span>
+(<span style="color:#24909d">setq</span> <span style=
+"color:#40ffff">org-clock-persist</span> <span style=
+"color:#40ffff">t</span>)
+<span style=
+"color:#999;font-style:italic">;; Include current clocking task in clock reports</span>
+(<span style="color:#24909d">setq</span> <span style=
+"color:#40ffff">org-clock-report-include-clocking-task</span> <span style="color:#40ffff">t</span>)
 </code></pre></div>
 <h2 id="org-custom-commands">Org custom commands</h2>
 <div class="highlight">
@@ -1122,7 +1170,7 @@ grouping agenda items in your views.</p>
 "color:#40ffff">entry</span>
          (<span style="color:#40ffff">file</span> <span style=
 "color:#ed9d13">"~/org/calendar.org"</span>) <span style=
-"color:#ed9d13">"* %^{Is it a todo?| |TODO |NEXT }%^{Title}\n%^t\n%?"</span>)
+"color:#ed9d13">"* %^{Is it a todo?||TODO |NEXT }%^{Title}\n%^t\n%?"</span>)
         (<span style="color:#ed9d13">"w"</span> <span style=
 "color:#ed9d13">"Work TODO"</span> <span style=
 "color:#40ffff">entry</span>
@@ -1153,24 +1201,40 @@ notes and link between them. A large portion of this configuration
 is heavily borrowed from <a href=
 "https://github.com/jethrokuan/dots">jethrokuan’s dot
 files</a>.</p>
+<h3 id="configuration">Configuration</h3>
+<p>You’ll find the exported notes on <a href=
+"https://hugocisneros.com/notes/">my notes page</a>.</p>
 <div class="highlight">
 <pre style=
 "color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <code class="language-elisp" data-lang="elisp">(<span style=
 "color:#24909d">with-eval-after-load</span> <span style=
 "color:#ed9d13">'org-roam</span>
+  <span style=
+"color:#999;font-style:italic">;; Style the backlinks buffer like an org-mode file</span>
   (<span style="color:#40ffff">add-hook</span> <span style=
 "color:#ed9d13">'org-roam-backlinks-mode-hook</span> <span style=
 "color:#ed9d13">'my/style-org</span>)
+  <span style=
+"color:#999;font-style:italic">;; Roam is always one level deep in my org-directory</span>
+  (<span style="color:#24909d">setq</span> <span style=
+"color:#40ffff">org-roam-directory</span> (<span style=
+"color:#447fcf">concat</span> <span style=
+"color:#40ffff">org-directory</span> <span style=
+"color:#ed9d13">"/roam/"</span>))
+  <span style=
+"color:#999;font-style:italic">;; Graphing options</span>
   (<span style="color:#24909d">setq</span> <span style=
 "color:#40ffff">org-roam-graphviz-executable</span> (<span style=
 "color:#40ffff">executable-find</span> <span style=
 "color:#ed9d13">"neato"</span>))
   (<span style="color:#24909d">setq</span> <span style=
 "color:#40ffff">org-roam-graphviz-extra-options</span> '((<span style="color:#ed9d13">"overlap"</span> . <span style="color:#ed9d13">"false"</span>)))
+
   (<span style="color:#24909d">setq</span> <span style=
 "color:#40ffff">org-roam-completion-system</span> <span style=
 "color:#ed9d13">'helm</span>)
+
   (<span style="color:#24909d">setq</span> <span style=
 "color:#40ffff">org-roam-capture-templates</span>
         '((<span style="color:#ed9d13">"d"</span> <span style=
@@ -1205,29 +1269,18 @@ files</a>.</p>
            <span style=
 "color:#24909d">:unnarrowed</span> <span style=
 "color:#40ffff">t</span>))))
-
-(<span style=
+</code></pre></div>
+<h3 id="ox-hugo-export">Ox-Hugo export</h3>
+<p>I use <a href="https://ox-hugo.scripter.co/">ox-hugo</a> to
+export my org-roam notes to markdown and then to web pages. The
+<code>my/org-export-all-roam</code> loops through all the org files
+and exports them one by one.</p>
+<div class="highlight">
+<pre style=
+"color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<code class="language-elisp" data-lang="elisp">(<span style=
 "color:#24909d">with-eval-after-load</span> <span style=
 "color:#ed9d13">'ox-hugo</span>
-  (<span style="color:#24909d">setq</span> <span style=
-"color:#40ffff">python-graph-script-location</span> <span style=
-"color:#ed9d13">"/Users/hugo/scripts/dot_to_json.py"</span>)
-  (<span style="color:#24909d">setq</span> <span style=
-"color:#40ffff">json-graph-location</span>
-        <span style=
-"color:#ed9d13">"/Users/hugo/website/personal-website/static/js/graph.json"</span>)
-  (<span style="color:#24909d">defun</span> <span style=
-"color:#40ffff">my/run-python-script-roam-graph</span> (<span style="color:#40ffff">graph-fname</span> <span style="color:#40ffff">output-fname</span>)
-    (<span style="color:#447fcf">insert</span> (<span style=
-"color:#40ffff">shell-command-to-string</span> (<span style=
-"color:#447fcf">format</span> <span style=
-"color:#ed9d13">"python %s %s %s"</span>
-                                             <span style=
-"color:#40ffff">python-graph-script-location</span>
-                                             <span style=
-"color:#40ffff">graph-fname</span>
-                                             <span style=
-"color:#40ffff">output-fname</span>))))
   (<span style="color:#24909d">defun</span> <span style=
 "color:#40ffff">my/org-export-all-roam</span> ()
     (<span style="color:#24909d">interactive</span>)
@@ -1246,7 +1299,7 @@ files</a>.</p>
 "color:#447fcf">kill-buffer</span>))))
           (<span style=
 "color:#40ffff">org-roam--list-files</span> <span style=
-"color:#ed9d13">"/Users/hugo/org/roam"</span>)))
+"color:#40ffff">org-roam-directory</span>)))
   (<span style="color:#40ffff">citeproc-org-setup</span>))
 <span style=
 "color:#999;font-style:italic">;; Using Deft in org-mode</span>
@@ -1254,76 +1307,37 @@ files</a>.</p>
 "color:#40ffff">deft-directory</span> <span style=
 "color:#ed9d13">"~/org/roam/"</span>)
 </code></pre></div>
-<h3 id="org-roam-export-backlinks">Org roam export backlinks</h3>
-<p>This function makes sure all the Backlinks of the current
-org-buffer are being exported and appended to the end of the
-resulting file. Files with a name containing <code>private</code>
-will not be exported.</p>
+<h2 id="org-caldav">Org Caldav</h2>
+<p>I use this function to sync my calendar with a remote calendar
+on a server running Nextcloud with the <a href=
+"https://github.com/dengste/org-caldav">org-caldav</a> package.
+This should also work with Google calendar. It allows me to get my
+org-mode calendar on all my devices and get notifications of
+upcoming events.</p>
 <div class="highlight">
 <pre style=
 "color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <code class="language-elisp" data-lang="elisp">(<span style=
 "color:#24909d">defun</span> <span style=
-"color:#40ffff">my/org-roam--backlinks-list</span> (<span style=
-"color:#40ffff">file</span>)
-  (<span style="color:#24909d">if</span> (<span style=
-"color:#40ffff">org-roam--org-roam-file-p</span> <span style=
-"color:#40ffff">file</span>)
-      (<span style="color:#40ffff">--reduce-from</span>
-       (<span style="color:#447fcf">concat</span> <span style=
-"color:#40ffff">acc</span> (<span style=
-"color:#447fcf">format</span> <span style=
-"color:#ed9d13">"- [[file:%s][%s]]\n"</span>
-                           (<span style=
-"color:#40ffff">file-relative-name</span> (<span style=
-"color:#447fcf">car</span> <span style=
-"color:#40ffff">it</span>) <span style=
-"color:#40ffff">org-roam-directory</span>)
-                           (<span style=
-"color:#40ffff">org-roam--get-title-or-slug</span> (<span style=
-"color:#447fcf">car</span> <span style=
-"color:#40ffff">it</span>))))
-       <span style="color:#ed9d13">""</span> (<span style=
-"color:#40ffff">delete-dups</span>
-           (<span style=
-"color:#40ffff">org-roam-sql</span> [<span style=
-"color:#24909d">:select</span> [<span style=
-"color:#40ffff">from</span>] <span style=
-"color:#24909d">:from</span> <span style=
-"color:#40ffff">links</span> <span style=
-"color:#24909d">:where</span> (<span style=
-"color:#447fcf">=</span> <span style=
-"color:#40ffff">to</span> <span style="color:#40ffff">$s1</span>)
-                                  <span style=
-"color:#24909d">:and</span> <span style=
-"color:#40ffff">from</span> <span style=
-"color:#24909d">:not</span> <span style=
-"color:#24909d">:like</span> <span style=
-"color:#40ffff">$s2</span>]
-                         <span style=
-"color:#40ffff">file</span> <span style=
-"color:#ed9d13">"%private%"</span>))) <span style=
-"color:#ed9d13">""</span>))
-
-(<span style="color:#24909d">defun</span> <span style=
-"color:#40ffff">my/org-export-preprocessor</span> (<span style=
-"color:#40ffff">_backend</span>)
+"color:#40ffff">my/caldav-sync-perso</span> ()
+<span style=
+"color:#ed9d13">"Sync my local calendar in ~/org/calendar.org with my remote calendar"</span>
+  (<span style="color:#24909d">interactive</span>)
   (<span style="color:#24909d">let</span> ((<span style=
-"color:#40ffff">links</span> (<span style=
-"color:#40ffff">my/org-roam--backlinks-list</span> (<span style=
-"color:#447fcf">buffer-file-name</span>))))
-    (<span style="color:#24909d">unless</span> (<span style=
-"color:#40ffff">string=</span> <span style=
-"color:#40ffff">links</span> <span style="color:#ed9d13">""</span>)
-      (<span style="color:#24909d">save-excursion</span>
-        (<span style="color:#447fcf">goto-char</span> (<span style=
-"color:#447fcf">point-max</span>))
-        (<span style="color:#447fcf">insert</span> (<span style=
-"color:#447fcf">concat</span> <span style=
-"color:#ed9d13">"\n* Backlinks\n"</span> <span style=
-"color:#40ffff">links</span>))))))
-(<span style="color:#40ffff">add-hook</span> <span style=
-"color:#ed9d13">'org-export-before-processing-hook</span> <span style="color:#ed9d13">'my/org-export-preprocessor</span>)
+"color:#40ffff">org-caldav-inbox</span> <span style=
+"color:#ed9d13">"~/org/cal_inbox.org"</span>)
+        (<span style=
+"color:#40ffff">org-caldav-calendar-id</span> <span style=
+"color:#ed9d13">"org"</span>)
+        (<span style=
+"color:#40ffff">org-caldav-url</span> <span style=
+"color:#ed9d13">"https://cld.hugocisneros.com/remote.php/dav/calendars/ncp/"</span>)
+        (<span style=
+"color:#40ffff">org-caldav-files</span> '(<span style=
+"color:#ed9d13">"~/org/calendar.org"</span>)))
+    (<span style=
+"color:#447fcf">call-interactively</span> <span style=
+"color:#ed9d13">'org-caldav-sync</span>)))
 </code></pre></div>
 <h2 id="misc">Misc</h2>
 <h3 id="timestamp-on-save">Timestamp on save</h3>

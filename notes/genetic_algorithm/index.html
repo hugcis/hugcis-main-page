@@ -61,11 +61,20 @@ itemtype="http://schema.org/BlogPosting">
 algorithms</h1>
 <div class="article-content e-content p-name" itemprop=
 "articleBody">
-<p>Genetic algorithms are mostly used as optimization algorithms
-for <a href="/notes/search/">Search</a> problems, where usual
-optimization techniques such as <a href=
+<p>Genetic algorithms can be used as <a href=
+"/notes/optimization/">optimization</a> algorithms for <a href=
+"/notes/search/">search</a> problems, where usual optimization
+techniques such as <a href=
 "/notes/gradient_descent/">gradient-based</a> ones aren’t very
 effective.</p>
+<p>These methods are loosely based on <a href=
+"/notes/evolution/">evolution</a> in <a href=
+"/notes/life/">biological life</a>, implementing a limited form
+variation and selection to progress towards better fitness
+(measured by a specific fitness function).</p>
+<p>New candidate solutions for a problem are constructed by
+randomly combining and mutating parent solutions. The best
+candidate are kept and become parents of the next generation.</p>
 </div>
 <div>
 <div class="bl-section">
@@ -76,6 +85,7 @@ effective.</p>
 <li><a href=
 "/notes/automated_discovery_in_complex_systems/">Automated
 discovery in complex systems</a></li>
+<li><a href="/notes/cma_es/">CMA-ES</a></li>
 <li><a href="/notes/computing_in_cellular_automata/">Computing in
 cellular automata</a></li>
 <li><a href="/notes/cppn/">CPPN</a></li>
@@ -106,7 +116,7 @@ was old is new again</a></li>
 <div class="note-footer">Last changed <a class="u-url" href=
 "https://hugocisneros.com/notes/genetic_algorithm/"><time itemprop=
 "datePublished" class="dt-published" datetime=
-"2020-07-02T10:20:00+0200">02/07/2020</time></a> | authored by
+"2021-01-07T14:05:00+0100">07/01/2021</time></a> | authored by
 <a href="https://hugocisneros.com/" rel="author" class=
 "p-author h-card" itemprop="author" itemscope itemtype=
 "http://schema.org/Person"><span itemprop="name">Hugo

@@ -22,11 +22,19 @@ function search_function() {
 function sort_by_rad(a, b) {
     circlea = document.getElementById("/users/hugo/org/roam/" + a.id + ".org");
     circleb = document.getElementById("/users/hugo/org/roam/" + b.id + ".org");
-    if (circlea == null) document.getElementById("/users/hugo/org/roam/notes/" + a.id + ".org");
-    if (circleb == null) document.getElementById("/users/hugo/org/roam/notes/" + b.id + ".org");
 
-    if (circlea == null || circleb == null) return 0;
-    return circlea.r.baseVal.value < circleb.r.baseVal.value;
+    if (circlea == null || ! circleb == null) {
+        return 1;
+    }
+    else if (! circlea == null || circleb == null) {
+        return -1;
+    }
+    else if (! circlea == null || circleb == null) {
+        return 0;
+    }
+    else {
+        return circlea.r.baseVal.value < circleb.r.baseVal.value;
+    }
 }
 
 function sort_by_name(a, b) {
