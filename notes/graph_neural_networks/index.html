@@ -64,16 +64,60 @@ networks</h1>
 "articleBody">
 <dl>
 <dt>tags</dt>
-<dd><a href="/notes/neural_networks/">Neural networks</a></dd>
+<dd><a href="/notes/neural_networks/">Neural networks</a>, <a href=
+"/notes/graphs/">Graphs</a></dd>
 </dl>
+<h2 id="basic-properties">Basic properties</h2>
+<p>To operate on graphs, a neural network must be invariant to
+isomorphism of these graphs. This translates to permutation
+invariance for the nodes of a graph.</p>
+<p>\[ f(\mathbf{PX}) = f(\mathbf{X}) \]</p>
+<p>Where \(\mathbf{P}\) is a permutation matrix. For simple sets,
+this amounts to performing node-wise transformations and use a
+permutation invariant aggregator (sum/max/avg/…). This was done in
+(<a href="#org91786ec">Zaheer et al. 2018</a>).</p>
+<p>\[ f(\mathbf{X}) = \phi\left( \bigoplus_i \psi(\mathbf{x}_i)
+\right) \]</p>
+<p>In the case of GNNs, the local neighborhood of a node can also
+be defined, and therefore the neural network can be written:</p>
+<p>\[ f(\mathbf{X}, \mathbf{A}) = \begin{bmatrix} — g(\mathbf{x}_1
+, \mathbf{X}_{\mathcal{N}_1} ) — \\\<br>
+— g(\mathbf{x}_2 , \mathbf{X}_{\mathcal{N}_2} ) — \\\<br>
+\vdots\\\<br>
+— g(\mathbf{x}_n , \mathbf{X}_{\mathcal{N}_n} ) — \end{bmatrix}
+\]</p>
+<p>where \(\mathbf{A}\) is the adjacency matrix of the graph. The
+function \(g\) also need to be permutation invariant to ensure the
+permutation invariance of \(f\).</p>
+<p>The various ways of defining \(g\) give rise to three main
+flavours of GNNs:</p>
+<ul>
+<li><a href="/notes/graph_convolutional_networks/">Graph
+convolutional networks</a></li>
+<li><a href="/notes/attention_graph_networks/">Attention graph
+networks</a></li>
+<li><a href=
+"/notes/message_passing_graph_networks/">Message-passing graph
+networks</a></li>
+</ul>
+<h2 id="bibliography">Bibliography</h2>
+<p><a id="org91786ec"></a>Zaheer, Manzil, Satwik Kottur, Siamak
+Ravanbakhsh, Barnabas Poczos, Ruslan Salakhutdinov, and Alexander
+Smola. 2018. “Deep Sets.” <em>arXiv:1703.06114 [Cs, Stat]</em>,
+April.</p>
 </div>
 <div>
 <div class="bl-section">
 <h2>Links to this note</h2>
 <div class="backlinks">
 <ul>
+<li><a href="/notes/attention_graph_networks/">Attention graph
+networks</a></li>
 <li><a href="/notes/graph_convolutional_networks/">Graph
 convolutional networks</a></li>
+<li><a href=
+"/notes/message_passing_graph_networks/">Message-passing graph
+networks</a></li>
 </ul>
 </div>
 </div>
@@ -81,7 +125,7 @@ convolutional networks</a></li>
 <div class="note-footer">Last changed <a class="u-url" href=
 "https://hugocisneros.com/notes/graph_neural_networks/"><time itemprop="datePublished"
 class="dt-published" datetime=
-"2020-12-01T15:33:00+0100">01/12/2020</time></a> | authored by
+"2021-02-24T11:34:00+0100">24/02/2021</time></a> | authored by
 <a href="https://hugocisneros.com/" rel="author" class=
 "p-author h-card" itemprop="author" itemscope itemtype=
 "http://schema.org/Person"><span itemprop="name">Hugo
