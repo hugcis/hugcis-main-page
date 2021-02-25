@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+
+<meta charset="utf-8">
+<meta name="viewport" content=
+"width=device-width,initial-scale=1.0,minimum-scale=1">
+<title>Notes on: AI-GAs: AI-generating algorithms, an alternate
+paradigm for producing general artificial intelligence by Clune, J.
+(2019) - Hugo Cisneros - Personal page</title>
+<meta property="og:title" content=
+"Notes on: AI-GAs: AI-generating algorithms, an alternate paradigm for producing general artificial intelligence by Clune, J. (2019) - Hugo Cisneros - Personal page">
+<meta property="og:type" content="article">
+<meta property="og:image" content="/img/main.jpeg">
+<meta property="og:url" content=
+"https://hugocisneros.com/notes/cluneaigasaigeneratingalgorithms2019/">
+<meta property="og:description" content=
+"Notes about AI-GAs: AI-generating algorithms, an alternate paradigm for producing general artificial intelligence by Clune, J. (2019)">
+<meta name="Description" property="description" content=
+"Notes about AI-GAs: AI-generating algorithms, an alternate paradigm for producing general artificial intelligence by Clune, J. (2019)">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@cisne_hug">
+<meta name="twitter:creator" content="@cisne_hug">
+<link rel="stylesheet" href=
+"https://hugocisneros.com/css/main.min.2748d42cc00e1d64a84f8ba0e8e381dea8a40ce5a09292f5c308dd35fc373bd5.css"
+media="all" type="text/css">
+<link rel="apple-touch-icon" sizes="180x180" href=
+"/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href=
+"/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href=
+"/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color=
+"#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<link rel="webmention" href=
+"https://webmention.io/hugocisneros.com/webmention">
+<link rel="pingback" href=
+"https://webmention.io/hugocisneros.com/xmlrpc">
+</head>
+<body>
+<div class="wrapper">
+<header class="header">
+<nav class="nav">
+<div class="nav-main"><a href="https://hugocisneros.com/" class=
+"nav-title">Hugo Cisneros - Personal page</a></div>
+<ul class="nav-links">
+<li><a href="/about/">About</a></li>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/notes/">Notes</a></li>
+<li><a href="/resume/">Resume</a></li>
+</ul>
+</nav>
+</header>
+<main class="content" role="main">
+<article class="article h-entry" itemprop="mainEntity" itemscope
+itemtype="http://schema.org/BlogPosting">
+<div class="single-note note-container">
+<h1 class="article-title p-name" itemprop="name">AI-GAs:
+AI-generating algorithms, an alternate paradigm for producing
+general artificial intelligence by Clune, J. (2019)</h1>
+<div class="article-content e-content p-name" itemprop=
+"articleBody">
+<dl>
+<dt>tags</dt>
+<dd><a href="/notes/artificial_intelligence/">Artificial
+Intelligence</a>, <a href="/notes/genetic_algorithm/">Genetic
+algorithms</a>, <a href="/notes/open_ended_evolution/">Open-ended
+Evolution</a></dd>
+<dt>source</dt>
+<dd>(<a href="#org3d47c06">Clune 2019</a>)</dd>
+</dl>
+<h2 id="summary">Summary</h2>
+<p>We are nowadays more or less approaching the design of <a href=
+"/notes/artificial_intelligence/">AI</a> through the implementation
+of some elementary building blocks — like convolutions, skip
+connections, activation functions, attention, etc. We have no idea
+how to combine these relatively successful blocks into a global
+system that would work by combining them.</p>
+<p>In essence, Darwinian <a href="/notes/evolution/">evolution</a>
+is a form of algorithms that moved its way up from the simplest
+replicators to the human mind. It is probably not a very smart
+algorithm, but it was given an unfathomable amount of computation.
+The question of computation is therefore still open.</p>
+<p>There would be three pillars for AI-GA:</p>
+<h3 id="meta-learning-architectures">Meta-learning
+architectures</h3>
+<p>This part is related to Neural architecture search: algorithms
+learn to create the learning architectures.</p>
+<h3 id="meta-learning-the-learning-algorithms-themselves">
+Meta-learning the learning algorithms themselves</h3>
+<p>This part wants to avoid learning algorithms such as SGD and
+instead learn them directly. Ex: Model Agnostic Meta Learning
+(MAML) aims at finding an initial set of weights that is the
+fastest at learning a range of tasks.</p>
+<p>Another idea is to use RNN (Turing complete) trained via an
+outer loop optimization algorithm to be the most sample-efficient
+learning algorithm and use it then to train other models. This has
+been done in (<a href="#orgd7b0b1b">Wang et al. 2017</a>) and
+(<a href="#orgd4a1a24">Duan et al. 2016</a>) in the context of
+Reinforcement learning, with policy gradients as the outer loop (in
+nature this would be the role of evolution).</p>
+<p>The main question with meta-learning is: what tasks should the
+meta-learner learn on ? The author argues that can be learned
+too.</p>
+<h3 id="automatically-generating-effective-learning-environments">
+Automatically generating effective learning environments</h3>
+<p>We should have algorithms that can learn to generate learning
+environments. This includes defining a reward in this environment.
+This is likely the hardest of the three pillars. This is what
+people attempt at reproducing in Alife simulations, coevolution,
+self-play (Dota, Go, etc.). They all more or less fail to create
+this open-ended complexity explosion like what happened on Earth.
+This is usually due to the fact that the environmental component of
+the algorithm is not evolving.</p>
+<p>The authors suggests to focus on explicitly optimizing for
+environments that favor learning instead of hoping we can create
+environments that create dynamics that can lead to evolutionary
+explosions. The author sees open-ended evolution as a way to
+generate endlessly environments that are growing in complexity.
+This can be related in natural evolution to the active process of
+creating new species and niche, where the new species create more
+complex environments that can in turn create new even more complex
+creatures.</p>
+<p>The author explicitly avoids the term evolutionary approach for
+AI-GAs because he argues that the outer-loop optimization method
+doesn’t have to be evolution and can rather be some other
+optimization algorithms.</p>
+<p>According to the authors, interesting path to this 3rd pillar
+include:</p>
+<ul>
+<li>Encouraging behavioral diversity (like Novelty search or
+Curiosity search).</li>
+<li>Quality diversity, meaning that the algorithm should be able to
+generate many solutions to a problem where each of those solutions
+is as high performing as possible for its type (or species) this is
+related to MAP-elites.</li>
+</ul>
+<p>The authors believe that POET is a step in that direction.</p>
+<p>The rest of the paper is a long discussion about the pros and
+cons of the method and potential ways it could be used/useful.</p>
+<h2 id="comments">Comments</h2>
+<p>This work resonates well with many of my opinions about the
+current state of machine learning research and its relation to AI
+research in general.</p>
+<p>I believe the 3rd pillar, which is the generation of effective
+learning environments is indeed the hardest and I even think that
+it is AI complete: meaning this would in itself be a sufficient to
+have AI. This is also because pillar 3 would necessitate open-ended
+evolution to work which is in my opinion AI-complete. Without even
+mentioning effectiveness.</p>
+<p>Overall, the goal and means to get to this goal seem very close
+to what many researchers are envisioning too, and I agree. However,
+these solutions don’t seem very promising to me , because the very
+system the author thinks could be generating this endless variety
+of environments is still undefined and remains the hardest part of
+the problem.</p>
+<h2 id="bibliography">Bibliography</h2>
+<p><a id="org3d47c06"></a>Clune, Jeff. 2019. “AI-GAs: AI-Generating
+Algorithms, an Alternate Paradigm for Producing General Artificial
+Intelligence.” <em>arXiv:1905.10985 [Cs]</em>, May.</p>
+<p><a id="orgd4a1a24"></a>Duan, Yan, John Schulman, Xi Chen, Peter
+L. Bartlett, Ilya Sutskever, and Pieter Abbeel. 2016. “RL\(^2\):
+Fast Reinforcement Learning via Slow Reinforcement Learning.”
+<em>arXiv:1611.02779 [Cs, Stat]</em>, November.</p>
+<p><a id="orgd7b0b1b"></a>Wang, Jane X., Zeb Kurth-Nelson, Dhruva
+Tirumala, Hubert Soyer, Joel Z. Leibo, Remi Munos, Charles
+Blundell, Dharshan Kumaran, and Matt Botvinick. 2017. “Learning to
+Reinforcement Learn.” <em>arXiv:1611.05763 [Cs, Stat]</em>,
+January.</p>
+</div>
+<div class="note-footer">Last changed <a class="u-url" href=
+"https://hugocisneros.com/notes/cluneaigasaigeneratingalgorithms2019/">
+<time itemprop="datePublished" class="dt-published" datetime=
+"2020-07-19T21:23:00+0200">19/07/2020</time></a> | authored by
+<a href="https://hugocisneros.com/" rel="author" class=
+"p-author h-card" itemprop="author" itemscope itemtype=
+"http://schema.org/Person"><span itemprop="name">Hugo
+Cisneros</span></a></div>
+</div>
+</article>
+<br>
+<a href="/notes#cluneaigasaigeneratingalgorithms2019"><b>← Back to
+Notes</b></a>
+<hr></main>
+<footer class="footer">
+<ul class="footer-links">
+<li><a class="rss-link" href="/blog/index.xml" type=
+"application/rss+xml" target="_blank">Blog <img class="rss-icon"
+src="/img/RSS.svg" alt="RSS feed icon"></a></li>
+<li><a href=
+"https://github.com/hugcis/natrium-custom">Code</a></li>
+<li>© Hugo Cisneros 2021</li>
+</ul>
+</footer>
+</div>
+<script>
+ MathJax = {
+     tex: {
+         inlineMath: [['$','$'], ['\\(', '\\)']],
+         tags: 'ams'
+     }
+ };
+</script> 
+<script type="text/javascript" rel="preconnect" id="MathJax-script"
+async src=
+"https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>

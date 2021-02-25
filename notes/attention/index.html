@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+
+<meta charset="utf-8">
+<meta name="viewport" content=
+"width=device-width,initial-scale=1.0,minimum-scale=1">
+<title>Attention - Hugo Cisneros - Personal page</title>
+<meta property="og:title" content=
+"Attention - Hugo Cisneros - Personal page">
+<meta property="og:type" content="article">
+<meta property="og:image" content="/img/main.jpeg">
+<meta property="og:url" content=
+"https://hugocisneros.com/notes/attention/">
+<meta property="og:description" content="Notes about Attention">
+<meta name="Description" property="description" content=
+"Notes about Attention">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@cisne_hug">
+<meta name="twitter:creator" content="@cisne_hug">
+<link rel="stylesheet" href=
+"https://hugocisneros.com/css/main.min.2748d42cc00e1d64a84f8ba0e8e381dea8a40ce5a09292f5c308dd35fc373bd5.css"
+media="all" type="text/css">
+<link rel="apple-touch-icon" sizes="180x180" href=
+"/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href=
+"/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href=
+"/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color=
+"#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<link rel="webmention" href=
+"https://webmention.io/hugocisneros.com/webmention">
+<link rel="pingback" href=
+"https://webmention.io/hugocisneros.com/xmlrpc">
+</head>
+<body>
+<div class="wrapper">
+<header class="header">
+<nav class="nav">
+<div class="nav-main"><a href="https://hugocisneros.com/" class=
+"nav-title">Hugo Cisneros - Personal page</a></div>
+<ul class="nav-links">
+<li><a href="/about/">About</a></li>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/notes/">Notes</a></li>
+<li><a href="/resume/">Resume</a></li>
+</ul>
+</nav>
+</header>
+<main class="content" role="main">
+<article class="article h-entry" itemprop="mainEntity" itemscope
+itemtype="http://schema.org/BlogPosting">
+<div class="single-note note-container">
+<h1 class="article-title p-name" itemprop="name">Attention</h1>
+<div class="article-content e-content p-name" itemprop=
+"articleBody">
+<dl>
+<dt>tags</dt>
+<dd><a href="/notes/neural_networks/">Neural networks</a></dd>
+</dl>
+<h2 id="implementation">Implementation</h2>
+<p>Self-attention is a weighted average of all input elements from
+a sequence, with a weight proportional to a similarity score
+between representations. The input \(x \in \mathbb{R}^{L \times
+F}\) is projected by matrices \(W_Q \in \mathbb{R}^{F \times D}\),
+\(W_K \in \mathbb{R}^{F\times D}\) and \(W_V \in
+\mathbb{R}^{F\times M}\) to representations \(Q\)
+(<em>queries</em>), \(K\) (<em>keys</em>) and \(V\)
+(<em>values</em>).</p>
+<p>\[ Q = xW_Q\] \[ K = xW_K\] \[ V = xW_V\]</p>
+<p>Output for all positions in a sequence \(x\), is written</p>
+<p>\[A(x) = V' = \text{softmax}\left( \dfrac{QK^{T}}{\sqrt{D}}
+\right) V.\]</p>
+<p>The softmax is applied row-wise in the equation above.</p>
+</div>
+<div>
+<div class="bl-section">
+<h2>Links to this note</h2>
+<div class="backlinks">
+<ul>
+<li><a href="/notes/attention/">Attention</a></li>
+<li><a href="/notes/attention_graph_networks/">Attention graph
+networks</a></li>
+<li><a href="/notes/graph_neural_networks/">Graph neural
+networks</a></li>
+<li><a href="/notes/cluneaigasaigeneratingalgorithms2019/">Notes
+on: AI-GAs: AI-generating algorithms, an alternate paradigm for
+producing general artificial intelligence by Clune, J.
+(2019)</a></li>
+<li><a href="/notes/ramsauerhopfieldnetworksall2020/">Notes on:
+Hopfield Networks is All You Need by Ramsauer, H., Schäfl, B.,
+Lehner, J., Seidl, P., Widrich, M., Gruber, L., Holzleitner, M., …
+(2020)</a></li>
+<li><a href="/notes/xiongnystromformernystr2021/">Notes on:
+Nyströmformer: A Nyström-Based Algorithm for Approximating
+Self-Attention by Xiong, Y., Zeng, Z., Chakraborty, R., Tan, M.,
+Fung, G., Li, Y., & Singh, V. (2021)</a></li>
+<li><a href="/notes/katharopoulostransformersarernns2020/">Notes
+on: Transformers are RNNs: Fast Autoregressive Transformers with
+Linear Attention by Katharopoulos, A., Vyas, A., Pappas, N., &
+Fleuret, F. (2020)</a></li>
+<li><a href="/notes/schmidhuber_on_consciousness/">Schmidhuber on
+Consciousness</a></li>
+<li><a href="/notes/transformers/">Transformers</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="note-footer">Last changed <a class="u-url" href=
+"https://hugocisneros.com/notes/attention/"><time itemprop=
+"datePublished" class="dt-published" datetime=
+"2021-02-03T11:04:00+0100">03/02/2021</time></a> | authored by
+<a href="https://hugocisneros.com/" rel="author" class=
+"p-author h-card" itemprop="author" itemscope itemtype=
+"http://schema.org/Person"><span itemprop="name">Hugo
+Cisneros</span></a></div>
+</div>
+</article>
+<br>
+<a href="/notes#attention"><b>← Back to Notes</b></a>
+<hr></main>
+<footer class="footer">
+<ul class="footer-links">
+<li><a class="rss-link" href="/blog/index.xml" type=
+"application/rss+xml" target="_blank">Blog <img class="rss-icon"
+src="/img/RSS.svg" alt="RSS feed icon"></a></li>
+<li><a href=
+"https://github.com/hugcis/natrium-custom">Code</a></li>
+<li>© Hugo Cisneros 2021</li>
+</ul>
+</footer>
+</div>
+<script>
+ MathJax = {
+     tex: {
+         inlineMath: [['$','$'], ['\\(', '\\)']],
+         tags: 'ams'
+     }
+ };
+</script> 
+<script type="text/javascript" rel="preconnect" id="MathJax-script"
+async src=
+"https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>
