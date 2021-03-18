@@ -1,0 +1,28 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo Cisneros - Personal page</title>
+    <link>https://hugocisneros.com/</link>
+    <description>Recent content on Hugo Cisneros - Personal page</description>
+    
+    <language>en-us</language>
+    <lastBuildDate>Thu, 18 Mar 2021 09:03:00 +0100</lastBuildDate>
+    
+    <atom:link href="https://hugocisneros.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+    
+    
+    <item>
+      <title>The Elegance of Optimal Transport</title>
+      <link>https://hugocisneros.com/blog/2019/12/the-elegance-of-optimal-transport/</link>
+      <pubDate>Sat, 07 Dec 2019 23:20:20 +0100</pubDate>
+      <guid>https://hugocisneros.com/blog/2019/12/the-elegance-of-optimal-transport/</guid>
+      <description>This post was largely inspired by Gabriel Peyré and Marco Cuturi&amp;rsquo;s excellent book about Computational Optimal Transport, which is free, (arXiv link, ref: [1]).
+A simple problem? Let&amp;rsquo;s start at the beginning: what is Optimal transport (OT)?
+It all begins with Gaspard Monge, reading his mémoire [2] in front of eminent scientists and engineers of the time &amp;mdash; including famous Enlightenment philosopher Condorcet &amp;mdash; at the French Académie Royale des Sciences in 1776.</description>
+    </item>
+    
+    
+  </channel>
+</rss>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+
+<meta charset="utf-8">
+<meta name="viewport" content=
+"width=device-width,initial-scale=1.0,minimum-scale=1">
+<title>Notes on: On the expressive power of programming languages
+by Felleisen, M. (1991) - Hugo Cisneros - Personal page</title>
+<meta property="og:title" content=
+"Notes on: On the expressive power of programming languages by Felleisen, M. (1991) - Hugo Cisneros - Personal page">
+<meta property="og:type" content="article">
+<meta property="og:image" content="/img/main.jpeg">
+<meta property="og:url" content=
+"https://hugocisneros.com/notes/felleisenexpressivepowerprogramming1991/">
+<meta property="og:description" content=
+"Notes about On the expressive power of programming languages by Felleisen, M. (1991)">
+<meta name="Description" property="description" content=
+"Notes about On the expressive power of programming languages by Felleisen, M. (1991)">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@cisne_hug">
+<meta name="twitter:creator" content="@cisne_hug">
+<link rel="stylesheet" href=
+"https://hugocisneros.com/css/main.min.2748d42cc00e1d64a84f8ba0e8e381dea8a40ce5a09292f5c308dd35fc373bd5.css"
+media="all" type="text/css">
+<link rel="apple-touch-icon" sizes="180x180" href=
+"/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href=
+"/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href=
+"/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color=
+"#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<link rel="webmention" href=
+"https://webmention.io/hugocisneros.com/webmention">
+<link rel="pingback" href=
+"https://webmention.io/hugocisneros.com/xmlrpc">
+</head>
+<body>
+<div class="wrapper">
+<header class="header">
+<nav class="nav">
+<div class="nav-main"><a href="https://hugocisneros.com/" class=
+"nav-title">Hugo Cisneros - Personal page</a></div>
+<ul class="nav-links">
+<li><a href="/about/">About</a></li>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/notes/">Notes</a></li>
+<li><a href="/resume/">Resume</a></li>
+</ul>
+</nav>
+</header>
+<main class="content" role="main">
+<article class="article h-entry" itemprop="mainEntity" itemscope
+itemtype="http://schema.org/BlogPosting">
+<div class="single-note note-container">
+<h1 class="article-title p-name" itemprop="name">On the expressive
+power of programming languages by Felleisen, M. (1991)</h1>
+<div class="article-content e-content p-name" itemprop=
+"articleBody">
+<dl>
+<dt>source</dt>
+<dd>(<a href="#org73c5086">Felleisen 1991</a>)</dd>
+<dt>tags</dt>
+<dd><a href="/notes/programming_languages/">Programming
+languages</a></dd>
+<dt>resources</dt>
+<dd><a href="https://pwlconf.org/2019/shriram-krishnamurthi/">PWL
+Conf talk</a></dd>
+</dl>
+<h2 id="summary">Summary</h2>
+<p>Programming languages have different levels of expressiveness.
+<code>While</code> can be used to create <code>for</code> loops,
+binary <code>if</code> statements can implement
+multi-<code>if</code> statements, etc.</p>
+<p>Turing tarpit: once we get to programming languages that are
+<a href="/notes/turing_completeness/">universal</a>, everything can
+be re-written into anything and the notion of “expressiveness” of
+programming languages doesn’t make much sense.</p>
+<p>For a language \(L\) and \(F + L\) the addition of some
+features, can we say the second is more expressive than the first?
+Intuitively, this is related to some form of re-writing of programs
+into one another.</p>
+<p>\(F + L\) isn’t more expressive than \(L\) when a macro for
+\(F\) to \(L\) exists. This means that for all programs \(P\) in
+\(L+F\), \(P_L\) its extension in \(L\), the two programs are
+equal.</p>
+<p>When \(F\) is expressive relative to \(L\), you need to show
+that there cannot possibly exist such a macro.</p>
+<h3 id="a-definition-of-equality">A definition of equality</h3>
+<p>Equality is hard to define formally with programming languages.
+Is there a way in the language to tell them apart? If not, two
+things can be said to be equal within that language. But an even
+more general definition of equality: if for all contexts \(C\),
+\(C[e_1]\) halts iff \(C[e_2]\) halts (additional “trick”: programs
+with errors don’t terminate). The power of the definition comes
+from the fact that it has to hold for all contexts. This is called
+<em>observational equivalence</em>.</p>
+<p>With this definition of equality, we can re-frame
+expressiveness. If we have of a language with more features, are
+all things previously considered equal still equal?</p>
+<h3 id="key-theorem">Key theorem</h3>
+<p>If we suppose \(F\) is written as a local macro, then for each
+terms that are equal under \(L\) they will be equal under \(F+L\).
+This means it hasn’t added power to \(L\).</p>
+<p>With this, how do we show expressiveness? We show that we can
+find a context in \(L + F\) which makes two previously equal things
+distinguishable. \(F\) added power to the language \(L\).</p>
+<h3 id="examples">Examples</h3>
+<p>With this one can show that a <code>halts</code> statement does
+add expressiveness to a language. Similarly, state gives the power
+to count compared to a pure functional language.</p>
+<h3 id="conclusions">Conclusions</h3>
+<p>Local vs global transformations, in all of the above,
+transformations were local. But things like state can for example
+be implemented in functional programming through store-passing
+style.</p>
+<p>When two languages are not as expressive, no local
+transformations can work.</p>
+<p>This gives us two great definitions of equality and
+expressiveness.</p>
+<p>Macros in language can add expressiveness, but expressiveness
+isn’t always suitable because they break existing equalities.
+However they can help avoid global transformations when a feature
+is needed.</p>
+<h2 id="bibliography">Bibliography</h2>
+<p><a id="org73c5086"></a>Felleisen, Matthias. 1991. “On the
+Expressive Power of Programming Languages.” <em>Science of Computer
+Programming</em> 17 (1):35–75.</p>
+</div>
+<div class="note-footer">Last changed <a class="u-url" href=
+"https://hugocisneros.com/notes/felleisenexpressivepowerprogramming1991/">
+<time itemprop="datePublished" class="dt-published" datetime=
+"2020-11-16T10:34:00+0100">16/11/2020</time></a> | authored by
+<a href="https://hugocisneros.com/" rel="author" class=
+"p-author h-card" itemprop="author" itemscope itemtype=
+"http://schema.org/Person"><span itemprop="name">Hugo
+Cisneros</span></a></div>
+</div>
+</article>
+<br>
+<a href="/notes#felleisenexpressivepowerprogramming1991"><b>← Back
+to Notes</b></a>
+<hr></main>
+<footer class="footer">
+<ul class="footer-links">
+<li><a class="rss-link" href="/blog/index.xml" type=
+"application/rss+xml" target="_blank">Blog <img class="rss-icon"
+src="/img/RSS.svg" alt="RSS feed icon"></a></li>
+<li><a href=
+"https://github.com/hugcis/natrium-custom">Code</a></li>
+<li>© Hugo Cisneros 2021</li>
+</ul>
+</footer>
+</div>
+<script>
+ MathJax = {
+     tex: {
+         inlineMath: [['$','$'], ['\\(', '\\)']],
+         tags: 'ams'
+     }
+ };
+</script> 
+<script type="text/javascript" rel="preconnect" id="MathJax-script"
+async src=
+"https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>

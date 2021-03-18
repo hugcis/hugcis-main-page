@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+
+<meta charset="utf-8">
+<meta name="viewport" content=
+"width=device-width,initial-scale=1.0,minimum-scale=1">
+<title>Notes on: Network Deconvolution by Ye, C., Evanusa, M., He,
+H., Mitrokhin, A., Goldstein, T., Yorke, J. A., Fermuller,
+Cornelia, … (2020) - Hugo Cisneros - Personal page</title>
+<meta property="og:title" content=
+"Notes on: Network Deconvolution by Ye, C., Evanusa, M., He, H., Mitrokhin, A., Goldstein, T., Yorke, J. A., Fermuller, Cornelia, … (2020) - Hugo Cisneros - Personal page">
+<meta property="og:type" content="article">
+<meta property="og:image" content="/img/main.jpeg">
+<meta property="og:url" content=
+"https://hugocisneros.com/notes/yenetworkdeconvolution2020/">
+<meta property="og:description" content=
+"Notes about Network Deconvolution by Ye, C., Evanusa, M., He, H., Mitrokhin, A., Goldstein, T., Yorke, J. A., Fermuller, Cornelia, … (2020)">
+<meta name="Description" property="description" content=
+"Notes about Network Deconvolution by Ye, C., Evanusa, M., He, H., Mitrokhin, A., Goldstein, T., Yorke, J. A., Fermuller, Cornelia, … (2020)">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@cisne_hug">
+<meta name="twitter:creator" content="@cisne_hug">
+<link rel="stylesheet" href=
+"https://hugocisneros.com/css/main.min.2748d42cc00e1d64a84f8ba0e8e381dea8a40ce5a09292f5c308dd35fc373bd5.css"
+media="all" type="text/css">
+<link rel="apple-touch-icon" sizes="180x180" href=
+"/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href=
+"/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href=
+"/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color=
+"#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<link rel="webmention" href=
+"https://webmention.io/hugocisneros.com/webmention">
+<link rel="pingback" href=
+"https://webmention.io/hugocisneros.com/xmlrpc">
+</head>
+<body>
+<div class="wrapper">
+<header class="header">
+<nav class="nav">
+<div class="nav-main"><a href="https://hugocisneros.com/" class=
+"nav-title">Hugo Cisneros - Personal page</a></div>
+<ul class="nav-links">
+<li><a href="/about/">About</a></li>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/notes/">Notes</a></li>
+<li><a href="/resume/">Resume</a></li>
+</ul>
+</nav>
+</header>
+<main class="content" role="main">
+<article class="article h-entry" itemprop="mainEntity" itemscope
+itemtype="http://schema.org/BlogPosting">
+<div class="single-note note-container">
+<h1 class="article-title p-name" itemprop="name">Network
+Deconvolution by Ye, C., Evanusa, M., He, H., Mitrokhin, A.,
+Goldstein, T., Yorke, J. A., Fermuller, Cornelia, … (2020)</h1>
+<div class="article-content e-content p-name" itemprop=
+"articleBody">
+<dl>
+<dt>tags</dt>
+<dd><a href="/notes/convolutional_neural_networks/">Convolutional
+neural networks</a>, <a href=
+"/notes/neural_network_training/">Neural network training</a></dd>
+<dt>source</dt>
+<dd>(<a href="#orgbf7bba8">Ye et al. 2020</a>)</dd>
+</dl>
+<h2 id="summary">Summary</h2>
+<p>This paper introduces so-called <em>Network Deconvolution</em>,
+advertised as a way to remove pixel-wise and channel-wise
+correlation in deep neural networks.</p>
+<p>The authors base their new operator on the optimal configuration
+for \(L_2\) linear regression, where <a href=
+"/notes/gradient_descent/">gradient descent</a> converges in one
+single step if and only if:</p>
+<p>\[ \frac{1}{N}X^t X = I \] where \(X\) is the feature matrix and
+\(N\) the number of samples.</p>
+<p>This means that input features should be normalized and
+uncorrelated for <a href="/notes/gradient_descent/">gradient
+descent</a> to converge the fastest. This can be achieved, either
+by correcting the gradient with the Hessian matrix, or manipulating
+input features so as to normalize them and remove correlations.</p>
+<p>An algorithm to construct this deconvolution operator is
+introduced. \(D \approx (Cov + \epsilon \cdot I) ^{-\frac{1}{2}}\),
+where \(Cov = \frac{1}{N}(X-\mu)^t (X-\mu)\).</p>
+<p>Actual deconvolution operator approximation is done with some
+sampling to accelerate computations. After training, a running
+average of \(D\) is frozen and can be used for evaluation.</p>
+<p>Deconvolution is presented as a unification of commonly used
+normalization techniques such as channel-wise decorrelation or
+BatchNorm.</p>
+<p>The authors report what looks like pretty consistent improvement
+over BatchNorm on image classification tasks. This improvement is
+not very large however (less than top-5 1% accuracy on
+ImageNet).</p>
+<h2 id="comments">Comments</h2>
+<p>This paper demonstrates what seems like a generalization of deep
+learning training acceleration techniques rooted in somewhat
+theoretically sound ideas. These theoretical ideas are based on the
+linear version of the problem however, which doesn’t translate well
+to deep networks most of the time. <a href=
+"https://openreview.net/forum?id=rkeu30EtvS">Reviews</a> are
+positive overall, and the paper may set a new standard for these
+normalization techniques, although comparison with recent work
+apart from BatchNorm is lacking in the paper.</p>
+<p>These acceleration techniques seem to only have empirical
+foundations for deep learning as of today, and may well be rendered
+useless by some new training algorithm someday.</p>
+<h2 id="bibliography">Bibliography</h2>
+<p><a id="orgbf7bba8"></a>Ye, Chengxi, Matthew Evanusa, Hua He,
+Anton Mitrokhin, Tom Goldstein, James A Yorke, Cornelia Fermüller,
+and Yiannis Aloimonos. 2020. “Network Deconvolution.” In
+<em>International Conference on Learning Representations</em>,
+20.</p>
+</div>
+<div class="note-footer">Last changed <a class="u-url" href=
+"https://hugocisneros.com/notes/yenetworkdeconvolution2020/"><time itemprop="datePublished"
+class="dt-published" datetime=
+"2020-07-19T21:22:00+0200">19/07/2020</time></a> | authored by
+<a href="https://hugocisneros.com/" rel="author" class=
+"p-author h-card" itemprop="author" itemscope itemtype=
+"http://schema.org/Person"><span itemprop="name">Hugo
+Cisneros</span></a></div>
+</div>
+</article>
+<br>
+<a href="/notes#yenetworkdeconvolution2020"><b>← Back to
+Notes</b></a>
+<hr></main>
+<footer class="footer">
+<ul class="footer-links">
+<li><a class="rss-link" href="/blog/index.xml" type=
+"application/rss+xml" target="_blank">Blog <img class="rss-icon"
+src="/img/RSS.svg" alt="RSS feed icon"></a></li>
+<li><a href=
+"https://github.com/hugcis/natrium-custom">Code</a></li>
+<li>© Hugo Cisneros 2021</li>
+</ul>
+</footer>
+</div>
+<script>
+ MathJax = {
+     tex: {
+         inlineMath: [['$','$'], ['\\(', '\\)']],
+         tags: 'ams'
+     }
+ };
+</script> 
+<script type="text/javascript" rel="preconnect" id="MathJax-script"
+async src=
+"https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>
