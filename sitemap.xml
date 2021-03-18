@@ -4,16 +4,86 @@
     
     <url>
         <loc>https://hugocisneros.com/</loc>
-        <lastmod>2021-02-24T16:02:00+01:00</lastmod>
+        <lastmod>2021-03-18T09:03:00+01:00</lastmod>
     </url>
     
     <url>
-        <loc>https://hugocisneros.com/notes/lempel_ziv_welch_algorithm/</loc>
-        <lastmod>2021-02-24T16:02:00+01:00</lastmod>
+        <loc>https://hugocisneros.com/notes/artificial_intelligence/</loc>
+        <lastmod>2021-03-18T09:03:00+01:00</lastmod>
     </url>
     
     <url>
         <loc>https://hugocisneros.com/notes/</loc>
+        <lastmod>2021-03-18T09:03:00+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/self_supervised_learning/</loc>
+        <lastmod>2021-03-12T11:05:00+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/lambda_calculus/</loc>
+        <lastmod>2021-03-03T14:47:00+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/machine_learning/</loc>
+        <lastmod>2021-03-03T09:38:00+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/von_neumann_s_self_reproducing_ca/</loc>
+        <lastmod>2021-03-03T08:45:00+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/automatic_differentiation/</loc>
+        <lastmod>2021-03-03T08:43:00+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/neural_tangent_kernel/</loc>
+        <lastmod>2021-03-02T11:43:00+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/reservoir_computing/</loc>
+        <lastmod>2021-03-02T10:57:00+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/why_programming_is_a_good_medium/</loc>
+        <lastmod>2021-03-02T10:17:00+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/why_sex_biologists_find_new_explanations/</loc>
+        <lastmod>2021-03-02T10:15:00+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/wirth_s_law/</loc>
+        <lastmod>2021-03-02T10:15:00+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/word_vectors/</loc>
+        <lastmod>2021-03-02T10:12:00+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/zuse_s_thesis/</loc>
+        <lastmod>2021-03-02T10:11:00+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/3_sat/</loc>
+        <lastmod>2021-03-02T10:01:00+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/lempel_ziv_welch_algorithm/</loc>
         <lastmod>2021-02-24T16:02:00+01:00</lastmod>
     </url>
     
@@ -178,11 +248,6 @@
     </url>
     
     <url>
-        <loc>https://hugocisneros.com/notes/neural_tangent_kernel/</loc>
-        <lastmod>2020-12-09T14:23:00+01:00</lastmod>
-    </url>
-    
-    <url>
         <loc>https://hugocisneros.com/notes/gradient_descent_for_wide_two_layer_neural_networks_i_global_convergence/</loc>
         <lastmod>2020-12-09T14:11:00+01:00</lastmod>
     </url>
@@ -240,11 +305,6 @@
     <url>
         <loc>https://hugocisneros.com/notes/continual_learning/</loc>
         <lastmod>2020-11-27T12:43:00+01:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/self_supervised_learning/</loc>
-        <lastmod>2020-11-27T12:39:00+01:00</lastmod>
     </url>
     
     <url>
@@ -413,18 +473,8 @@
     </url>
     
     <url>
-        <loc>https://hugocisneros.com/notes/reservoir_computing/</loc>
-        <lastmod>2020-10-02T08:52:00+02:00</lastmod>
-    </url>
-    
-    <url>
         <loc>https://hugocisneros.com/notes/dongreservoircomputingmeets2020/</loc>
         <lastmod>2020-09-30T21:01:00+02:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/automatic_differentiation/</loc>
-        <lastmod>2020-09-29T08:45:00+02:00</lastmod>
     </url>
     
     <url>
@@ -553,11 +603,6 @@
     </url>
     
     <url>
-        <loc>https://hugocisneros.com/notes/why_sex_biologists_find_new_explanations/</loc>
-        <lastmod>2020-08-24T09:17:00+02:00</lastmod>
-    </url>
-    
-    <url>
         <loc>https://hugocisneros.com/notes/melanie_mitchell/</loc>
         <lastmod>2020-08-24T08:59:00+02:00</lastmod>
     </url>
@@ -610,11 +655,6 @@
     <url>
         <loc>https://hugocisneros.com/notes/fractional_calculus/</loc>
         <lastmod>2020-07-28T17:29:00+02:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/word_vectors/</loc>
-        <lastmod>2020-07-28T17:08:00+02:00</lastmod>
     </url>
     
     <url>
@@ -708,11 +748,6 @@
     </url>
     
     <url>
-        <loc>https://hugocisneros.com/notes/von_neumann_s_self_reproducing_ca/</loc>
-        <lastmod>2020-07-26T19:04:00+02:00</lastmod>
-    </url>
-    
-    <url>
         <loc>https://hugocisneros.com/notes/talk_alife_2020_keynote_michael_levin_robot_cancer/</loc>
         <lastmod>2020-07-26T18:42:00+02:00</lastmod>
     </url>
@@ -790,16 +825,6 @@
     <url>
         <loc>https://hugocisneros.com/notes/lenia/</loc>
         <lastmod>2020-07-20T13:47:00+02:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/machine_learning/</loc>
-        <lastmod>2020-07-20T08:20:00+02:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/artificial_intelligence/</loc>
-        <lastmod>2020-07-20T08:14:00+02:00</lastmod>
     </url>
     
     <url>
@@ -1018,11 +1043,6 @@
     </url>
     
     <url>
-        <loc>https://hugocisneros.com/notes/lambda_calculus/</loc>
-        <lastmod>2020-07-14T08:23:00+02:00</lastmod>
-    </url>
-    
-    <url>
         <loc>https://hugocisneros.com/notes/language/</loc>
         <lastmod>2020-07-14T08:22:00+02:00</lastmod>
     </url>
@@ -1233,11 +1253,6 @@
     </url>
     
     <url>
-        <loc>https://hugocisneros.com/notes/wirth_s_law/</loc>
-        <lastmod>2020-07-10T09:12:00+02:00</lastmod>
-    </url>
-    
-    <url>
         <loc>https://hugocisneros.com/notes/elementary_cellular_automata/</loc>
         <lastmod>2020-07-10T09:03:00+02:00</lastmod>
     </url>
@@ -1319,11 +1334,6 @@
     
     <url>
         <loc>https://hugocisneros.com/notes/unconventional_computing/</loc>
-        <lastmod>2020-07-09T12:41:00+02:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/why_programming_is_a_good_medium/</loc>
         <lastmod>2020-07-09T12:41:00+02:00</lastmod>
     </url>
     
@@ -1433,11 +1443,6 @@
     </url>
     
     <url>
-        <loc>https://hugocisneros.com/notes/3_sat/</loc>
-        <lastmod>2020-07-02T09:46:00+02:00</lastmod>
-    </url>
-    
-    <url>
         <loc>https://hugocisneros.com/notes/hyperbolic_geometry/</loc>
         <lastmod>2020-07-02T09:46:00+02:00</lastmod>
     </url>
@@ -1529,11 +1534,6 @@
     
     <url>
         <loc>https://hugocisneros.com/notes/ising_model/</loc>
-        <lastmod>2020-06-26T11:12:00+02:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/zuse_s_thesis/</loc>
         <lastmod>2020-06-26T11:12:00+02:00</lastmod>
     </url>
     
