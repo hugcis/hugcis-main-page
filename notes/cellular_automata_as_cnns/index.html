@@ -85,8 +85,8 @@ processed locally in parallel</strong>.</p>
 <h2 id="relevant-literature">Relevant literature</h2>
 <p>Cellular automata can easily be represented as Convolutional
 Neural Networks (CNNs). This relation has already been investigated
-in (<a href="#orgb9bd703">Gilpin 2018</a>) or (<a href=
-"#org6a6322a">Mordvintsev et al. 2020</a>) for instance. This idea
+in (<a href="#orgaeed52f">Gilpin 2018</a>) or (<a href=
+"#org42c71d9">Mordvintsev et al. 2020</a>) for instance. This idea
 has advantages and drawbacks:</p>
 <ul>
 <li>Computational cost of using floating points operations is
@@ -95,7 +95,7 @@ higher than discrete operations.</li>
 number of possible configurations and update rules in a CA. This is
 why rules aren’t represented as bijective tables matching
 neighborhoods to states anymore in (<a href=
-"#org6a6322a">Mordvintsev et al. 2020</a>).</li>
+"#org42c71d9">Mordvintsev et al. 2020</a>).</li>
 <li>The use of floating point operations is mainly there to be able
 to compute gradients for gradient based optimization. This is
 against a <em>non-supervised</em> philosophy I am trying to work
@@ -121,12 +121,13 @@ a <em>recurrent-convolutional</em> network where the output is fed
 back to the network at each step. A simple <a href=
 "/notes/elementary_cellular_automata/">ECA</a> rule such as rule
 110 is easily implemented in this type of convolutional neural
-network, hence Turing-completeness.</p>
+network, hence <a href=
+"/notes/turing_completeness_of_cellular_automata/">Turing-completeness</a>.</p>
 <h2 id="bibliography">Bibliography</h2>
-<p><a id="orgb9bd703"></a>Gilpin, William. 2018. “Cellular Automata
+<p><a id="orgaeed52f"></a>Gilpin, William. 2018. “Cellular Automata
 as Convolutional Neural Networks.” <em>arXiv:1809.02942 [Cond-Mat,
 Physics:Nlin, Physics:Physics]</em>, September.</p>
-<p><a id="org6a6322a"></a>Mordvintsev, Alexander, Ettore Randazzo,
+<p><a id="org42c71d9"></a>Mordvintsev, Alexander, Ettore Randazzo,
 Eyvind Niklasson, and Michael Levin. 2020. “Growing Neural Cellular
 Automata.” <em>Distill</em> 5 (2):e23.</p>
 </div>
@@ -151,7 +152,7 @@ Horibe, K., Walker, K., & Risi, S. (2021)</a></li>
 <div class="note-footer">Last changed <a class="u-url" href=
 "https://hugocisneros.com/notes/cellular_automata_as_cnns/"><time itemprop="datePublished"
 class="dt-published" datetime=
-"2020-10-13T09:55:00+0200">13/10/2020</time></a> | authored by
+"2021-03-25T12:08:00+0100">25/03/2021</time></a> | authored by
 <a href="https://hugocisneros.com/" rel="author" class=
 "p-author h-card" itemprop="author" itemscope itemtype=
 "http://schema.org/Person"><span itemprop="name">Hugo

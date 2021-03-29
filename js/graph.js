@@ -124,9 +124,7 @@ d3.json("/js/graph.json").then(function(data) {
           .data(nodes)
           .join("a")
           .attr("xlink:href", d => {
-              it = d.id.split('/');
-              return "./" +
-                  it[it.length-1].replace(/\.org/g, "").toLowerCase() + "/";
+              return "./" + d.lnk;
           })
           .append("circle")
           .attr("id", d => d.id.toLowerCase())
