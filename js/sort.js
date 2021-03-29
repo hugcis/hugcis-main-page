@@ -20,8 +20,15 @@ function search_function() {
 }
 
 function sort_by_rad(a, b) {
-    circlea = document.getElementById("/users/hugo/org/roam/" + a.id + ".org");
-    circleb = document.getElementById("/users/hugo/org/roam/" + b.id + ".org");
+    let noteGraph = document.getElementsByClassName("note-graph");
+    if (noteGraph.length == 0) {
+      return 0;
+    }
+    let circlea = noteGraph[0].getElementById("circle_" + a.id);
+    if (circlea != null) circlea = circlea.childNodes[0];
+
+    let circleb = noteGraph[0].getElementById("circle_" + b.id);
+    if (circleb != null) circleb = circleb.childNodes[0];
 
     if (circlea == null || ! circleb == null) {
         return 1;

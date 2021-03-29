@@ -126,6 +126,7 @@ d3.json("/js/graph.json").then(function(data) {
           .attr("xlink:href", d => {
               return "./" + d.lnk;
           })
+          .attr("id", d => "circle_" + d.lnk)
           .append("circle")
           .attr("id", d => d.id.toLowerCase())
           .attr("r", radius)
