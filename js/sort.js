@@ -30,13 +30,13 @@ function sort_by_rad(a, b) {
     let circleb = noteGraph[0].getElementById("circle_" + b.id);
     if (circleb != null) circleb = circleb.childNodes[0];
 
-    if (circlea == null || ! circleb == null) {
+    if (circlea == null && circleb != null) {
         return 1;
     }
-    else if (! circlea == null || circleb == null) {
+    else if (circlea != null && circleb == null) {
         return -1;
     }
-    else if (! circlea == null || circleb == null) {
+    else if (circlea == null && circleb == null) {
         return 0;
     }
     else {

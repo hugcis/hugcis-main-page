@@ -6,7 +6,37 @@
     <description>Recent content in Notes on Hugo Cisneros - Personal page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 29 Mar 2021 14:49:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 08 Apr 2021 10:35:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Bitter Lesson</title>
+      <link>https://hugocisneros.com/notes/the_bitter_lesson/</link>
+      <pubDate>Thu, 08 Apr 2021 10:35:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/the_bitter_lesson/</guid>
+      <description>tags Machine learning, Artificial Intelligence author Richard Sutton resources Link  The Bitter Lesson is a pattern that can be observed in several areas of machine learning: many hard problems involving some form of artificial intelligence have seen dramatic progress at some point in the last 50 years, which was mostly driven by data and computations as opposed to &amp;ldquo;clever&amp;rdquo; human engineering.
+If this trend is a fundamental principle (which is what the article argues) it would mean that most of the time spent on engineering features and task-specific representations is wasted.</description>
+    </item>
+    
+    <item>
+      <title>Richard Sutton</title>
+      <link>https://hugocisneros.com/notes/richard_sutton/</link>
+      <pubDate>Thu, 08 Apr 2021 09:58:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/richard_sutton/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Genetic algorithms</title>
+      <link>https://hugocisneros.com/notes/genetic_algorithm/</link>
+      <pubDate>Tue, 06 Apr 2021 08:58:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/genetic_algorithm/</guid>
+      <description>Genetic algorithms can be used as optimization algorithms for search problems, where usual optimization techniques such as gradient-based ones aren&amp;rsquo;t very effective.
+These methods are loosely based on evolution in biological life, implementing a limited form variation and selection to progress towards better fitness (measured by a specific fitness function).
+New candidate solutions for a problem are constructed by randomly combining and mutating parent solutions. The best candidate are kept and become parents of the next generation.</description>
+    </item>
+    
     <item>
       <title>Note-taking</title>
       <link>https://hugocisneros.com/notes/note_taking/</link>
@@ -865,17 +895,6 @@ Each of those \(2^3\) neighborhoods of size 3 can be mapped to either state 1 or
       <guid>https://hugocisneros.com/notes/generative_adversarial_networks/</guid>
       <description>tags Neural networks  Generative adversarial networks are a type of generative model. It is close in spirit to Variational autoencoders, but has key differences. The main one is the way the model is trained, which uses an adversarial equilibrium between training a generator and training a discriminator.
 Are GANs glorified PCA? (Richardson and Weiss 2020) This paper seems to show that image-to-image translation models are ill-posed and imply the image transformation should always be very local.</description>
-    </item>
-    
-    <item>
-      <title>Genetic algorithms</title>
-      <link>https://hugocisneros.com/notes/genetic_algorithm/</link>
-      <pubDate>Thu, 25 Mar 2021 09:56:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/genetic_algorithm/</guid>
-      <description>Genetic algorithms can be used as optimization algorithms for search problems, where usual optimization techniques such as gradient-based ones aren&amp;rsquo;t very effective.
-These methods are loosely based on evolution in biological life, implementing a limited form variation and selection to progress towards better fitness (measured by a specific fitness function).
-New candidate solutions for a problem are constructed by randomly combining and mutating parent solutions. The best candidate are kept and become parents of the next generation.</description>
     </item>
     
     <item>
