@@ -20,7 +20,7 @@
 <meta name="twitter:site" content="@cisne_hug">
 <meta name="twitter:creator" content="@cisne_hug">
 <link rel="stylesheet" href=
-"https://hugocisneros.com/css/main.min.6d8ddba07050cfeddf2374d9c093e712537bb8dc6f8700aab40719b1dcb29350.css"
+"https://hugocisneros.com/css/main.min.da0ecaf5695aac82ac1d036476c57133068282267487d121fc3ad2571b732644.css"
 media="all" type="text/css">
 <link rel="apple-touch-icon" sizes="180x180" href=
 "/apple-touch-icon.png">
@@ -71,15 +71,15 @@ large arrays.</p>
 <div class="highlight">
 <pre style=
 "color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<code class="language-python" data-lang="python"><span style=
+<code class="language-python" data-lang="python">  <span style=
 "color:#6ab825;font-weight:bold">import</span> <span style=
 "color:#447fcf;text-decoration:underline">numpy</span> <span style=
 "color:#6ab825;font-weight:bold">as</span> <span style=
 "color:#447fcf;text-decoration:underline">np</span>
-a = np.random.randrange(<span style=
+  a = np.random.randrange(<span style=
 "color:#3677a9">5</span>, size=<span style=
 "color:#3677a9">10</span>)
-one_hot_a = np.eye(<span style="color:#3677a9">5</span>)[a]
+  one_hot_a = np.eye(<span style="color:#3677a9">5</span>)[a]
 </code></pre></div>
 <h3 id="side-output-for-jupyter-notebooks">Side-output for jupyter
 notebooks</h3>
@@ -90,17 +90,18 @@ This will put the output of each cell on the side of the code.</p>
 <div class="highlight">
 <pre style=
 "color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<code class="language-html" data-lang="html">%%html
-&lt;<span style="color:#6ab825;font-weight:bold">style</span>&gt;
-#<span style=
+<code class="language-html" data-lang="html">  %%html
+  &lt;<span style="color:#6ab825;font-weight:bold">style</span>&gt;
+  #<span style=
 "color:#447fcf;text-decoration:underline">notebook-container</span> {<span style="color:#6ab825;font-weight:bold">width</span>: <span style="color:#3677a9">100</span><span style="color:#6ab825;font-weight:bold">%</span>; <span style="color:#6ab825;font-weight:bold">background-color</span>: <span style="color:#3677a9">#EEE</span>}
-.<span style=
+  .<span style=
 "color:#447fcf;text-decoration:underline">code_cell</span> {<span style="color:#6ab825;font-weight:bold">flex-direction</span>: <span style="color:#6ab825;font-weight:bold">row</span> <span style="color:#cd2828;font-weight:bold">!important</span>;}
-.<span style=
+  .<span style=
 "color:#447fcf;text-decoration:underline">code_cell</span> .<span style="color:#447fcf;text-decoration:underline">output_wrapper</span> {<span style="color:#6ab825;font-weight:bold">width</span>: <span style="color:#3677a9">50</span><span style="color:#6ab825;font-weight:bold">%</span>;<span style="color:#6ab825;font-weight:bold">background-color</span>: <span style="color:#3677a9">#FFF</span>}
-.<span style=
+  .<span style=
 "color:#447fcf;text-decoration:underline">code_cell</span> .<span style="color:#447fcf;text-decoration:underline">input</span> {<span style="color:#6ab825;font-weight:bold">width</span>: <span style="color:#3677a9">50</span><span style="color:#6ab825;font-weight:bold">%</span>;<span style="color:#6ab825;font-weight:bold">background-color</span>: <span style="color:#3677a9">#FFF</span>}
-&lt;/<span style="color:#6ab825;font-weight:bold">style</span>&gt;
+  &lt;/<span style=
+"color:#6ab825;font-weight:bold">style</span>&gt;
 </code></pre></div>
 <p>Convert the code cell to markdown to cancel.</p>
 <h3 id="dataclasses">Dataclasses</h3>
@@ -110,26 +111,26 @@ python class.</p>
 <div class="highlight">
 <pre style=
 "color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<code class="language-python" data-lang="python"><span style=
+<code class="language-python" data-lang="python">  <span style=
 "color:#6ab825;font-weight:bold">from</span> <span style=
 "color:#447fcf;text-decoration:underline">dataclasses</span> <span style="color:#6ab825;font-weight:bold">import</span> dataclass
 
-<span style="color:#ffa500">@dataclass</span>
-<span style=
+  <span style="color:#ffa500">@dataclass</span>
+  <span style=
 "color:#6ab825;font-weight:bold">class</span> <span style=
 "color:#447fcf;text-decoration:underline">InventoryItem</span>:
-    <span style=
+      <span style=
 "color:#ed9d13">"""Class for keeping track of an item in inventory."""</span>
-    name: <span style="color:#24909d">str</span>
-    unit_price: <span style="color:#24909d">float</span>
-    quantity_on_hand: <span style=
+      name: <span style="color:#24909d">str</span>
+      unit_price: <span style="color:#24909d">float</span>
+      quantity_on_hand: <span style=
 "color:#24909d">int</span> = <span style="color:#3677a9">0</span>
 
-    <span style=
+      <span style=
 "color:#6ab825;font-weight:bold">def</span> <span style=
 "color:#447fcf">total_cost</span>(self) -&gt; <span style=
 "color:#24909d">float</span>:
-        <span style=
+          <span style=
 "color:#6ab825;font-weight:bold">return</span> self.unit_price * self.quantity_on_hand
 </code></pre></div>
 <h3 id="pathlib">Pathlib</h3>
@@ -139,31 +140,30 @@ repeatedly.</p>
 <div class="highlight">
 <pre style=
 "color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<code class="language-python" data-lang="python"><span style=
+<code class="language-python" data-lang="python">  <span style=
 "color:#6ab825;font-weight:bold">from</span> <span style=
 "color:#447fcf;text-decoration:underline">pathlib</span> <span style="color:#6ab825;font-weight:bold">import</span> Path
-p = Path(<span style="color:#ed9d13">'/'</span>)
-<span style=
+  p = Path(<span style="color:#ed9d13">'/'</span>)
+  <span style=
 "color:#6ab825;font-weight:bold">print</span>(<span style=
 "color:#ed9d13">"List subdir:"</span>, [x <span style=
 "color:#6ab825;font-weight:bold">for</span> x <span style=
 "color:#6ab825;font-weight:bold">in</span> p.iterdir() <span style=
 "color:#6ab825;font-weight:bold">if</span> x.is_dir()])
-q = p / <span style="color:#ed9d13">'init.d'</span> / <span style=
-"color:#ed9d13">'reboot'</span>
-<span style="color:#6ab825;font-weight:bold">print</span>(q)
-<span style=
+  q = p / <span style=
+"color:#ed9d13">'init.d'</span> / <span style="color:#ed9d13">'reboot'</span>
+  <span style="color:#6ab825;font-weight:bold">print</span>(q)
+  <span style=
 "color:#6ab825;font-weight:bold">print</span>(q.resolve())
-<span style=
+  <span style=
 "color:#6ab825;font-weight:bold">print</span>(q.exists())
-<span style=
+  <span style=
 "color:#6ab825;font-weight:bold">print</span>(q.is_dir())
-<span style=
+  <span style=
 "color:#6ab825;font-weight:bold">with</span> q.open() <span style=
 "color:#6ab825;font-weight:bold">as</span> f: f.readline()
 </code></pre></div>
 </div>
-<div>
 <div class="bl-section">
 <h2>Links to this note</h2>
 <div class="backlinks">
@@ -178,7 +178,6 @@ algorithm</a></li>
 languages</a></li>
 <li><a href="/notes/python/">Python</a></li>
 </ul>
-</div>
 </div>
 </div>
 <div class="note-footer">Last changed <a class="u-url" href=

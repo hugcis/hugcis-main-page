@@ -6,7 +6,58 @@
     <description>Recent content in Notes on Hugo Cisneros - Personal page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 08 Apr 2021 10:35:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 12 Apr 2021 14:57:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Artificial life</title>
+      <link>https://hugocisneros.com/notes/artificial_life/</link>
+      <pubDate>Mon, 12 Apr 2021 14:57:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/artificial_life/</guid>
+      <description>Artificial life could be thought of as attempts at re-creating biological Life or other types of life. It uses different tools such as biology, physics, chemistry, computer science, etc.
+Creating artificial life seems like a possible way to create AI, since most living systems on Earth seem to exhibit some form of robust intelligent behavior.</description>
+    </item>
+    
+    <item>
+      <title>Avida</title>
+      <link>https://hugocisneros.com/notes/avida/</link>
+      <pubDate>Mon, 12 Apr 2021 14:57:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/avida/</guid>
+      <description>tags Artificial life, Evolution  Avida is an Artificial life system inspired by Tierra which uses computer programs as individuals.
+One interesting advantage of this system is the possibility to measure the complexity of organisms easily. This is done by counting the number of instructions in their computer program.</description>
+    </item>
+    
+    <item>
+      <title>Hash functions</title>
+      <link>https://hugocisneros.com/notes/hash_functions/</link>
+      <pubDate>Mon, 12 Apr 2021 14:57:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/hash_functions/</guid>
+      <description>tags Computer science  Hash functions map variable sized inputs to a finite set of outputs.
+They need to have a range of properties such as:
+ Determinism: The output of a hash function should be the same every time for each input. Universality: Two inputs should have a probability of getting the same hash as close to \(1/n\) as possible, where \(n\) is the size of the output set.</description>
+    </item>
+    
+    <item>
+      <title>Open-ended Evolution</title>
+      <link>https://hugocisneros.com/notes/open_ended_evolution/</link>
+      <pubDate>Mon, 12 Apr 2021 14:56:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/open_ended_evolution/</guid>
+      <description>tags Evolution, Complexity, Artificial Intelligence resources Open-endedness: The last grand challenge you’ve never heard of  My idea of Open Ended evolution As part of my research, I have been thinking a lot about open-ended evolution and what this concept means to me. Although it is still early in my research journey, I will go into the process of writing down my thoughts about this very challenging concept in order to have material on which I will be able to reflect later and understand how my beliefs have changed.</description>
+    </item>
+    
+    <item>
+      <title>Illegal numbers</title>
+      <link>https://hugocisneros.com/notes/illegal_numbers/</link>
+      <pubDate>Mon, 12 Apr 2021 14:29:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/illegal_numbers/</guid>
+      <description>tags Cryptography, Computer science resources Wikipedia  A number that represents some information which is illegal to posses or transmit, making said number technically illegal. It can also refer to numbers that have a particular meaning or connotation that a government wishes to censor.
+When focusing on some specific class of numbers one could create funny illegal numbers such as:
+ Illegal primes Illegal Pythagorean triples Illegal triangular numbers Illegal Fibonacci numbers etc.</description>
+    </item>
+    
     <item>
       <title>The Bitter Lesson</title>
       <link>https://hugocisneros.com/notes/the_bitter_lesson/</link>
@@ -106,15 +157,6 @@ This is the kind of complexity that would be incredible to discover in open-ende
       <guid>https://hugocisneros.com/notes/cluneaigasaigeneratingalgorithms2019/</guid>
       <description>tags Artificial Intelligence, Genetic algorithms, Open-ended Evolution source (Clune 2019)  Summary We are nowadays more or less approaching the design of AI through the implementation of some elementary building blocks &amp;mdash; like convolutions, skip connections, activation functions, attention, etc. We have no idea how to combine these relatively successful blocks into a global system that would work by combining them.
 In essence, Darwinian evolution is a form of algorithms that moved its way up from the simplest replicators to the human mind.</description>
-    </item>
-    
-    <item>
-      <title>Open-ended Evolution</title>
-      <link>https://hugocisneros.com/notes/open_ended_evolution/</link>
-      <pubDate>Thu, 25 Mar 2021 11:06:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/open_ended_evolution/</guid>
-      <description>tags Evolution, Complexity, Artificial Intelligence resources Open-endedness: The last grand challenge you’ve never heard of  My idea of Open Ended evolution As part of my research, I have been thinking a lot about open-ended evolution and what this concept means to me. Although it is still early in my research journey, I will go into the process of writing down my thoughts about this very challenging concept in order to have material on which I will be able to reflect later and understand how my beliefs have changed.</description>
     </item>
     
     <item>
@@ -610,7 +652,8 @@ The authors also introduce a new extension of gradient descent for continual lea
       <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/nehanivevolutionasynchronouscellular2003/</guid>
-      <description>tags Cellular automata, Evolution source (Nehaniv 2003)  Summary This paper proposes a general asynchronous extension of CA rules and show that they can be made equivalent to the original CA rule. Applying this extension to H. Sayama&amp;rsquo;s Evoloop cellular automaton (Sayama 1999), the author creates the first asynchronous implementation of evolution of self-replicators.
+      <description>tags Cellular automata, Evolution source (Nehaniv 2003)  Summary This paper proposes a general asynchronous extension of CA rules and show that they can be made equivalent to the original CA rule. Applying this extension to
+ Sayama&amp;rsquo;s Evoloop cellular automaton  (Sayama 1999), the author creates the first asynchronous implementation of evolution of self-replicators.
 One hope formulated by the author is that asynchronicity could help achieve fault-tolerance and self-repair.</description>
     </item>
     
@@ -856,16 +899,6 @@ In a few words, the authors idea of individuality is based on the amount of info
       
       <guid>https://hugocisneros.com/notes/algorithmic_information_theory/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>Artificial life</title>
-      <link>https://hugocisneros.com/notes/artificial_life/</link>
-      <pubDate>Thu, 25 Mar 2021 09:56:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/artificial_life/</guid>
-      <description>Artificial life could be thought of as attempts at re-creating biological Life or other types of life. It uses different tools such as biology, physics, chemistry, computer science, etc.
-Creating artificial life seems like a possible way to create AI, since most living systems on Earth seem to exhibit some form of robust intelligent behavior.</description>
     </item>
     
     <item>
@@ -1257,17 +1290,6 @@ Bibliography Williams, Christopher, and Matthias Seeger. 2001. “Using the Nyst
       <guid>https://hugocisneros.com/notes/transformers/</guid>
       <description>tags Neural networks  Transformers are a neural network architecture based on a mechanism called Attention.
 They have been particularly successful for NLP applications and also penetrated other fields of machine learning such as Computer vision.</description>
-    </item>
-    
-    <item>
-      <title>Hash functions</title>
-      <link>https://hugocisneros.com/notes/hash_functions/</link>
-      <pubDate>Mon, 25 Jan 2021 13:48:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/hash_functions/</guid>
-      <description>tags Computer science  Hash functions map variable sized inputs to a finite set of outputs.
-They need to have a range of properties such as:
- Determinism: The output of a hash function should be the same every time for each input. Universality: Two inputs should have a probability of getting the same hash as close to \(1/n\) as possible, where \(n\) is the size of the output set.</description>
     </item>
     
     <item>
@@ -2052,16 +2074,6 @@ This is done by outputting an extra halting probability at each update step, and
       
       <guid>https://hugocisneros.com/notes/tierra/</guid>
       <description> tags Artificial life, Evolution  </description>
-    </item>
-    
-    <item>
-      <title>Avida</title>
-      <link>https://hugocisneros.com/notes/avida/</link>
-      <pubDate>Mon, 20 Jul 2020 13:47:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/avida/</guid>
-      <description>tags Artificial life, Evolution  Avida is an Artificial life system inspired by Tierra which uses computer programs as individuals.
-One interesting advantage of this system is the possibility to measure the complexity of organisms easily. This is done by counting the number of instructions in their computer program.</description>
     </item>
     
     <item>
