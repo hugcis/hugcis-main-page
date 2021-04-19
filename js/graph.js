@@ -69,13 +69,13 @@ d3.json("/js/graph.json").then(function(data) {
             .attr("stroke-width", 1);
 
         d3.selectAll("line")
-            .filter((l, idx) =>
+            .filter((l, _) =>
                     l.source.index == i.index ||
                     l.target.index == i.index)
             .attr("stroke-width", 8);
     };
 
-    handleMouseOut = (d, i) => {
+    handleMouseOut = (d, _) => {
         nde = d3.select(d.currentTarget);
         nde.attr("fill", nodeColor)
             .attr("r", nde.attr("r") / 1.4);
@@ -91,7 +91,7 @@ d3.json("/js/graph.json").then(function(data) {
 
     simulation = d3.forceSimulation(nodes)
     .alpha(0.9)
-    .velocityDecay(0.4)
+    .velocityDecay(0.6)
         .force("link", d3.forceLink(links).id(d => d.id).strength(.1))
         .force("charge", d3.forceManyBody()
                .strength(-250))

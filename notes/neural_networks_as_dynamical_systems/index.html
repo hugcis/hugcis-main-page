@@ -6,17 +6,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content=
 "width=device-width,initial-scale=1.0,minimum-scale=1">
-<title>Dynamical systems - Hugo Cisneros - Personal page</title>
+<title>Neural networks as dynamical systems - Hugo Cisneros -
+Personal page</title>
 <meta property="og:title" content=
-"Dynamical systems - Hugo Cisneros - Personal page">
+"Neural networks as dynamical systems - Hugo Cisneros - Personal page">
 <meta property="og:type" content="article">
 <meta property="og:image" content="/img/main.jpeg">
 <meta property="og:url" content=
-"https://hugocisneros.com/notes/dynamical_systems/">
+"https://hugocisneros.com/notes/neural_networks_as_dynamical_systems/">
 <meta property="og:description" content=
-"Notes about Dynamical systems">
+"Notes about Neural networks as dynamical systems">
 <meta name="Description" property="description" content=
-"Notes about Dynamical systems">
+"Notes about Neural networks as dynamical systems">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@cisne_hug">
 <meta name="twitter:creator" content="@cisne_hug">
@@ -57,37 +58,41 @@ media="all" type="text/css">
 <article class="article h-entry" itemprop="mainEntity" itemscope
 itemtype="http://schema.org/BlogPosting">
 <div class="single-note note-container">
-<h1 class="article-title p-name" itemprop="name">Dynamical
-systems</h1>
+<h1 class="article-title p-name" itemprop="name">Neural networks as
+dynamical systems</h1>
 <div class="article-content e-content p-name" itemprop=
 "articleBody">
 <dl>
 <dt>tags</dt>
-<dd><a href="/notes/applied_maths/">Applied maths</a>, <a href=
-"/notes/physics/">Physics</a></dd>
+<dd><a href="/notes/neural_networks/">Neural networks</a>, <a href=
+"/notes/dynamical_systems/">Dynamical systems</a></dd>
 </dl>
-</div>
-<div class="bl-section">
-<h2>Links to this note</h2>
-<div class="backlinks">
-<ul>
-<li><a href="/notes/cellular_automata/">Cellular automata</a></li>
-<li><a href="/notes/complex_systems/">Complex Systems</a></li>
-<li><a href="/notes/neural_network_training/">Neural network
-training</a></li>
-<li><a href="/notes/neural_networks_as_dynamical_systems/">Neural
-networks as dynamical systems</a></li>
-<li><a href="/notes/aitkengeometryintegrationtext2020/">Notes on:
-The geometry of integration in text classification RNNs by Aitken,
-K., Ramasesh, V. V., Garg, A., Cao, Y., Sussillo, D., &
-Maheswaranathan, N. (2020)</a></li>
-</ul>
-</div>
+<p>Neural networks can be seen as dynamical systems in different
+contexts.</p>
+<h2 id="recurrent-networks">Recurrent networks</h2>
+<p>With <a href="/notes/recurrent_neural_networks/">Recurrent
+neural networks</a>, the continuous dynamical system analogy is
+very striking. These networks evolve progressively in time by
+updating an internal state with a fixed <a href=
+"/notes/algorithm/">algorithm</a>. Usually the state dynamics are
+not studied because the recurrent networks is designed to complete
+some fixed task.</p>
+<p>The notion of attractor can be defined for such networks, making
+them related to the notion of <a href=
+"/notes/attractor_networks/">attractor networks</a>.</p>
+<h2 id="training-as-a-dynamical-system">Training as a dynamical
+system</h2>
+<p>For a neural network with parameters \(\theta\) trained with
+example pairs \((x_i, y_i)\), the parameters trajectory \(\theta_0,
+\theta_1, \ldots, \theta_n\) until convergence can be interpreted
+as the evolution of a dynamical system.</p>
+<p>One may study the various attractors of that dynamical system
+and how the training examples affect them.</p>
 </div>
 <div class="note-footer">Last changed <a class="u-url" href=
-"https://hugocisneros.com/notes/dynamical_systems/"><time itemprop=
-"datePublished" class="dt-published" datetime=
-"2020-10-27T20:26:00+0100">27/10/2020</time></a> | authored by
+"https://hugocisneros.com/notes/neural_networks_as_dynamical_systems/">
+<time itemprop="datePublished" class="dt-published" datetime=
+"2021-04-19T11:54:00+0200">19/04/2021</time></a> | authored by
 <a href="https://hugocisneros.com/" rel="author" class=
 "p-author h-card" itemprop="author" itemscope itemtype=
 "http://schema.org/Person"><span itemprop="name">Hugo
@@ -95,7 +100,8 @@ Cisneros</span></a></div>
 </div>
 </article>
 <br>
-<a href="/notes#dynamical_systems"><b>← Back to Notes</b></a>
+<a href="/notes#neural_networks_as_dynamical_systems"><b>← Back to
+Notes</b></a>
 <hr></main>
 <footer class="footer">
 <ul class="footer-links">
