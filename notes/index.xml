@@ -6,7 +6,47 @@
     <description>Recent content in Notes on Hugo Cisneros - Personal page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 12 Apr 2021 14:57:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 19 Apr 2021 09:05:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Notes on: Pretrained Transformers as Universal Computation Engines by Lu, K., Grover, A., Abbeel, P., &amp; Mordatch, I. (2021)</title>
+      <link>https://hugocisneros.com/notes/lupretrainedtransformersuniversal2021/</link>
+      <pubDate>Mon, 19 Apr 2021 09:05:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/lupretrainedtransformersuniversal2021/</guid>
+      <description>source (Lu et al. 2021) tags Transformers  Summary Different types of neural network architecture encode different kinds of biases. For example, convolutional neural networks perform local, translation-invariant operations and recurrent neural networks operate on sequential data.
+One can use these biases in randomly initialized networks as a basis for interesting computations. This is on of the motivation for reservoir computing with echo-state networks, which uses fixed random recurrent neural network and a simple trainable linear transformation to perform complex computations.</description>
+    </item>
+    
+    <item>
+      <title>Boolean networks</title>
+      <link>https://hugocisneros.com/notes/boolean_networks/</link>
+      <pubDate>Fri, 16 Apr 2021 14:46:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/boolean_networks/</guid>
+      <description>tags Complex Systems  A generalization of Cellular automata Boolean networks could be seen as CA generalization with any topology (not necessarily 1D or 2D). In the standard model, each node of the network is assigned a rule randomly chosen from the \(2^{2^k}\) possible ones with K inputs.
+Like for cellular automata, cells (or nodes) don&amp;rsquo;t have to be in just two states (although the name Boolean no longer holds) and updates can be done either synchronously or asynchronously.</description>
+    </item>
+    
+    <item>
+      <title>Art with Cellular Automata</title>
+      <link>https://hugocisneros.com/notes/art_with_cellular_automata/</link>
+      <pubDate>Fri, 16 Apr 2021 14:44:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/art_with_cellular_automata/</guid>
+      <description>Cellular automata have been used a lot to create various forms of Generative art.
+Here is a collection of some interesting examples:
+Examples based on Neural CA  Self organizing textures: (Niklasson et al. 2021) Dialogue: an art project using interacting Neural CA to generate patterns  Revisiting classical CA  Crosshatch CA  CA Music  Wolfram tones  Bibliography Niklasson, Eyvind, Alexander Mordvintsev, Ettore Randazzo, and Michael Levin. 2021.</description>
+    </item>
+    
+    <item>
+      <title>Generative art</title>
+      <link>https://hugocisneros.com/notes/generative_art/</link>
+      <pubDate>Fri, 16 Apr 2021 11:16:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/generative_art/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Artificial life</title>
       <link>https://hugocisneros.com/notes/artificial_life/</link>
@@ -106,16 +146,6 @@ New candidate solutions for a problem are constructed by randomly combining and 
       <description>tags Artificial Intelligence source (Brooks 1991)  Summary What is intelligence Intelligence cannot be thought of as a collection of building blocks that may one fall into place to form a coherent whole.
 The authors argue for another approach to build artificially intelligent systems:
  Build the systems incrementally, with complete systems each step of the way to ensure that the pieces and their interfaces are valid. Build intelligent systems at each step of the way that should be let loose in the real world with real sensing and action.</description>
-    </item>
-    
-    <item>
-      <title>Notes on: Pretrained Transformers as Universal Computation Engines by Lu, K., Grover, A., Abbeel, P., &amp; Mordatch, I. (2021)</title>
-      <link>https://hugocisneros.com/notes/lupretrainedtransformersuniversal2021/</link>
-      <pubDate>Mon, 29 Mar 2021 12:22:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/lupretrainedtransformersuniversal2021/</guid>
-      <description>source (Lu et al. 2021) tags Transformers  Summary Different types of neural network architecture encode different kinds of biases. For example, convolutional neural networks perform local, translation-invariant operations and recurrent neural networks operate on sequential data.
-One can use these biases in randomly initialized networks as a basis for interesting computations. This is on of the motivation for reservoir computing with echo-state networks, which uses fixed random recurrent neural network and a simple trainable linear transformation to perform complex computations.</description>
     </item>
     
     <item>
@@ -1425,16 +1455,6 @@ Bibliography Wuensche, Andrew. 1999. “Classifying Cellular Automata Automatica
       <description>tags Optimization, Algorithm resources Slides by Christian S. Perone  Fixed learning rate The simplest way to apply the gradient descent algorithm on a function \(g\) convex and $L-$smooth on \(\mathbb{R}^d\) is to use the parameter update:
 \[ \theta_t = \theta_{t-1} - \gamma g&#39;(\theta_{t-1}) \]
 This is based on the standard first-order approximation of the function \(g\). It can be very sensitive to the learning rate and suffer from pathological curvature.</description>
-    </item>
-    
-    <item>
-      <title>Boolean networks</title>
-      <link>https://hugocisneros.com/notes/boolean_networks/</link>
-      <pubDate>Thu, 19 Nov 2020 12:14:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/boolean_networks/</guid>
-      <description>tags Complex Systems  A generalization of Cellular automata Boolean networks could be seen as CA generalization with any topology (not necessarily 1D or 2D). In the standard model, each node of the network is assigned a rule randomly chosen from the \(2^{2^k}\) possible ones with K inputs.
-Like for cellular automata, cells (or nodes) don&amp;rsquo;t have to be in just two states (although the name Boolean no longer holds) and updates can be done either synchronously or asynchronously.</description>
     </item>
     
     <item>

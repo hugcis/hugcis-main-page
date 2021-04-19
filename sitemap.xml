@@ -4,7 +4,32 @@
     
     <url>
         <loc>https://hugocisneros.com/</loc>
-        <lastmod>2021-04-12T14:57:00+02:00</lastmod>
+        <lastmod>2021-04-19T09:05:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/</loc>
+        <lastmod>2021-04-19T09:05:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/lupretrainedtransformersuniversal2021/</loc>
+        <lastmod>2021-04-19T09:05:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/boolean_networks/</loc>
+        <lastmod>2021-04-16T14:46:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/art_with_cellular_automata/</loc>
+        <lastmod>2021-04-16T14:44:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/generative_art/</loc>
+        <lastmod>2021-04-16T11:16:00+02:00</lastmod>
     </url>
     
     <url>
@@ -19,11 +44,6 @@
     
     <url>
         <loc>https://hugocisneros.com/notes/hash_functions/</loc>
-        <lastmod>2021-04-12T14:57:00+02:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/</loc>
         <lastmod>2021-04-12T14:57:00+02:00</lastmod>
     </url>
     
@@ -60,11 +80,6 @@
     <url>
         <loc>https://hugocisneros.com/notes/brooksintelligencerepresentation1991/</loc>
         <lastmod>2021-03-29T14:35:00+02:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/lupretrainedtransformersuniversal2021/</loc>
-        <lastmod>2021-03-29T12:22:00+02:00</lastmod>
     </url>
     
     <url>
@@ -725,11 +740,6 @@
     <url>
         <loc>https://hugocisneros.com/notes/gradient_descent/</loc>
         <lastmod>2020-11-24T12:10:00+01:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/boolean_networks/</loc>
-        <lastmod>2020-11-19T12:14:00+01:00</lastmod>
     </url>
     
     <url>
