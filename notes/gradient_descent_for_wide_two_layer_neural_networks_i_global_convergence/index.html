@@ -2,221 +2,145 @@
 <html lang="en-us">
 <head>
 
-
-<meta charset="utf-8">
-<meta name="viewport" content=
-"width=device-width,initial-scale=1.0,minimum-scale=1">
-<title>Gradient descent for wide two-layer neural networks – I :
-Global convergence - Hugo Cisneros - Personal page</title>
-<meta property="og:title" content=
-"Gradient descent for wide two-layer neural networks – I : Global convergence - Hugo Cisneros - Personal page">
-<meta property="og:type" content="article">
-<meta property="og:image" content="/img/main.jpeg">
-<meta property="og:url" content=
-"https://hugocisneros.com/notes/gradient_descent_for_wide_two_layer_neural_networks_i_global_convergence/">
-<meta property="og:description" content=
-"Notes about Gradient descent for wide two-layer neural networks – I : Global convergence">
-<meta name="Description" property="description" content=
-"Notes about Gradient descent for wide two-layer neural networks – I : Global convergence">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:site" content="@cisne_hug">
-<meta name="twitter:creator" content="@cisne_hug">
-<link rel="stylesheet" href=
-"https://hugocisneros.com/css/main.min.da0ecaf5695aac82ac1d036476c57133068282267487d121fc3ad2571b732644.css"
-media="all" type="text/css">
-<link rel="apple-touch-icon" sizes="180x180" href=
-"/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href=
-"/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href=
-"/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color=
-"#5bbad5">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff">
-<link rel="webmention" href=
-"https://webmention.io/hugocisneros.com/webmention">
-<link rel="pingback" href=
-"https://webmention.io/hugocisneros.com/xmlrpc">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1">
+  <title>Gradient descent for wide two-layer neural networks – I : Global convergence - Hugo Cisneros - Personal page</title>
+  <meta property="og:title" content="Gradient descent for wide two-layer neural networks – I : Global convergence - Hugo Cisneros - Personal page">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="/img/main.jpeg">
+  <meta property="og:url" content="https://hugocisneros.com/notes/gradient_descent_for_wide_two_layer_neural_networks_i_global_convergence/">
+  <meta property="og:description" content="Notes about Gradient descent for wide two-layer neural networks – I : Global convergence">
+  <meta name="Description" property="description" content="Notes about Gradient descent for wide two-layer neural networks – I : Global convergence">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@cisne_hug">
+  <meta name="twitter:creator" content="@cisne_hug">
+  <link rel="stylesheet" href="https://hugocisneros.com/css/main.min.da0ecaf5695aac82ac1d036476c57133068282267487d121fc3ad2571b732644.css" media="all" type="text/css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
+  <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
 </head>
 <body>
-<div class="wrapper">
-<header class="header">
-<nav class="nav">
-<div class="nav-main"><a href="https://hugocisneros.com/" class=
-"nav-title">Hugo Cisneros - Personal page</a></div>
-<ul class="nav-links">
-<li><a href="/about/">About</a></li>
-<li><a href="/blog/">Blog</a></li>
-<li><a href="/notes/">Notes</a></li>
-<li><a href="/resume/">Resume</a></li>
-</ul>
-</nav>
-</header>
-<main class="content" role="main">
-<article class="article h-entry" itemprop="mainEntity" itemscope
-itemtype="http://schema.org/BlogPosting">
-<div class="single-note note-container">
-<h1 class="article-title p-name" itemprop="name">Gradient descent
-for wide two-layer neural networks – I : Global convergence</h1>
-<div class="article-content e-content p-name" itemprop=
-"articleBody">
-<dl>
-<dt>tags</dt>
-<dd><a href="/notes/neural_networks/">Neural networks</a>, <a href=
-"/notes/optimization/">Optimization</a></dd>
-<dt>authors</dt>
-<dd>Francis Bach, Lénaïc Chizat</dd>
-<dt>source</dt>
-<dd><a href=
-"https://francisbach.com/gradient-descent-neural-networks-global-convergence/">
-Francis Bach’s blog</a></dd>
-</dl>
-<p>In the rest, we use the mathematical definition of a neural
-network from <a href="/notes/neural_networks/">Neural
-networks</a>.</p>
-<h2 id="two-layer-neural-network">Two layer neural network</h2>
-<p>Even simple neural network models are very difficult to analyze.
-This is primarily due to two difficulties:</p>
-<ul>
-<li><strong>Non-linearity</strong>: the problem is typically
-non-convex, which in general is a bad thing in optimization.</li>
-<li><strong>Overparametrization</strong>: there are often a lot of
-parameters, sometimes many more parameters than observations.</li>
-</ul>
-<p>Results presented here are actually taking advantage of
-overparametrization, with \(m\rightarrow \infty\) and two key
-properties of the problem.</p>
-<ul>
-<li><strong>Separability</strong>: The problem can be decomposed in
-a sum of terms independently parametrized in \(\omega_i = (a_i,
-b_i)\), with \(h = \frac{1}{m} \sum_{i=1}^m \Phi(\omega_i)\) where
-\(\Phi : \mathbb{R}^p \rightarrow \mathcal{F}\) and \(\mathcal{F}\)
-is a space of functions. Here, \(p = d+1\) and \[ \Phi(w)(x) = a
-(b^\top x)_+. \] This part is only true for two-layer neural
-networks however.</li>
-<li><strong>Homogeneity</strong>: ReLU is positively homogeneous
-and \(\Phi\) is 2-homogeneous, meaning that for \(\omega = (a,
-b)\), \(\Phi(\lambda\omega) = \lambda^2 \Phi(\omega)\).</li>
-</ul>
-<h2 id="infinitely-wide-neural-network">Infinitely wide neural
-network</h2>
-<p>The goal is to minimize a functional \(R\) w.r.t function
-\(h\)</p>
-<p>\[R(h) = \mathbb{E}_{p(x, y)} \left[ \ell(y, h(x))\right]\]</p>
-<p>with \(\ell(y, h(x))\) the loss incurred by predicting \(h(x)\)
-when the true label was \(y\). \(R\) is assumed to be convex in its
-second argument, like least-square or logistic losses.</p>
-<p>We re-use the two layer neural network formulation above to
-obtain</p>
-<p>\[ G(W) = G(w_1,\dots,w_m) = R \Big( \frac{1}{m} \sum_{i=1}^m
-\Phi(w_i) \Big), \]</p>
-<p>which can be seen as the minimization of</p>
-<p>\[ F(\mu) = R \Big( \int_{\mathbb{R}^p} \Phi(w) d\mu(w)
-\Big),\]</p>
-<p>with respect to a probability measure which is a sum of Dirac
-measures at \(w_i\), \(\mu = \frac{1}{m} \sum_{i = 1}^m
-\delta(w_i)\).</p>
-<p>This makes the minimization problem much nicer since the set of
-measures is convex and \(h = \int_{\mathbb{R}^p} \Phi(w) d\mu(w)\)
-is linear in \(\mu\). However, because the set of measures is
-infinite dimensional, the choice of new neurons to minimize \(F\)
-is very difficult (NP-hard for a threshold activation, polynomial
-but with very high complexity for ReLU). In practise, SGD is
-used.</p>
-<h2 id="gradient-flow">Gradient flow</h2>
-<p>The <a href="/notes/gradient_flow/">gradient flow</a> is defined
-by</p>
-<p>\[ \dot{W} = - m \nabla G(W) \]</p>
-<p>On a metric space \(\mathcal{X}\), a gradient flow can be
-defined for a function \(f\) and seen a the limit of taking
-infinitesimal steps of length \(\gamma\), defining a sequence
-\((x_k)\)</p>
-<p>\[ x_{k+1} \in \arg\min_{x\mathcal{x}} f(x) + \dfrac{1}{2\gamma}
-d(x, x_k)^2 \]</p>
-<p>The smaller the step, the closer this sequence is to the actual
-gradient flow.</p>
-<h3 id="euler-discretization">Euler discretization</h3>
-<p>In \(\mathbb{R}^d\) and a continuously differentiable \(f\),
-\(x_{k + 1} = x_k - \gamma f'(x_k) + o(\gamma)\), we simply obtain
-Euler steps.</p>
-<h3 id="vector-space-gradient-flows-on-probability-measures">Vector
-space gradient flows on probability measures</h3>
-<blockquote>
-<p>Probability measures are a convex subset of measures with finite
-total variation, which is equal to the $ℓ_1$-norm between densities
-when the two probability measures have densities with respect to
-the same base measure. It is a normed vector space for which we
-could derive our first type of gradient flow, which can be seen as
-a continuous version of Frank-Wolfe algorithm, where atoms are
-added one by one, until convergence.</p>
-</blockquote>
-<p>However, the flow of measures cannot be approximated by the set
-of neurons of the network.</p>
-<h3 id="wasserstein-gradient-flow-on-probability-measures">
-Wasserstein gradient flow on probability measures</h3>
-<p>The Wasserstein distance is directly related to <a href=
-"/notes/optimal_transport/">Optimal transport</a>. For two
-empirical measures with the same number of points, it is the
-minimal sum of squared distances between pairs of point over all
-possible permutations.</p>
-<p>The Wasserstein gradient flow is written</p>
-<p>\[ \dot{w}_i = \ – \nabla \Phi(w_i) \nabla
-R\Big(\int_{\mathbb{R}^p} \Phi d\mu \Big), \]</p>
-<h2 id="global-convergence">Global convergence</h2>
-<p>Under two main assumptions (plus additional technical
-assumptions), if the Wasserstein gradient flow converges to a
-measure, it has to be the global minimum of the function \(F\)
-defined above.</p>
-<p>The two assumptions are:</p>
-<ul>
-<li>Homogeneity of \(\Phi: \mathbb{R}^p \rightarrow
-\mathcal{F}\)</li>
-<li>$w_i$s are uniformly distributed on the sphere</li>
-</ul>
-<p>The authors show on simple examples that for data generated with
-a neural network with \(m_0 = 5\) neurons. The result above suggest
-that with large \(m\) a neural network should converge to the
-original neurons. Surprisingly, relatively small $m$s are already
-very good at doing that.</p>
-</div>
-<div class="note-footer">Last changed <a class="u-url" href=
-"https://hugocisneros.com/notes/gradient_descent_for_wide_two_layer_neural_networks_i_global_convergence/">
-<time itemprop="datePublished" class="dt-published" datetime=
-"2020-12-09T14:11:00+0100">09/12/2020</time></a> | authored by
-<a href="https://hugocisneros.com/" rel="author" class=
-"p-author h-card" itemprop="author" itemscope itemtype=
-"http://schema.org/Person"><span itemprop="name">Hugo
-Cisneros</span></a></div>
-</div>
-</article>
-<br>
-<a href=
-"/notes#gradient_descent_for_wide_two_layer_neural_networks_i_global_convergence">
-<b>← Back to Notes</b></a>
-<hr></main>
-<footer class="footer">
-<ul class="footer-links">
-<li><a class="rss-link" href="/blog/index.xml" type=
-"application/rss+xml" target="_blank">Blog <img class="rss-icon"
-src="/img/RSS.svg" alt="RSS feed icon"></a></li>
-<li><a href=
-"https://github.com/hugcis/natrium-custom">Code</a></li>
-<li>© Hugo Cisneros 2021</li>
-</ul>
-</footer>
-</div>
-<script>
- MathJax = {
+  <div class="wrapper">
+    <header class="header">
+      <nav class="nav">
+        <div class="nav-main">
+          <a href="https://hugocisneros.com/" class="nav-title">Hugo Cisneros - Personal page</a>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="/about/">About</a>
+          </li>
+          <li>
+            <a href="/blog/">Blog</a>
+          </li>
+          <li>
+            <a href="/notes/">Notes</a>
+          </li>
+          <li>
+            <a href="/resume/">Resume</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="content" role="main">
+      <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="single-note note-container">
+          <h1 class="article-title p-name" itemprop="name">Gradient descent for wide two-layer neural networks – I : Global convergence</h1>
+          <div class="article-content e-content p-name" itemprop="articleBody">
+            <dl>
+              <dt>tags</dt>
+              <dd>
+                <a href="/notes/neural_networks/">Neural networks</a>, <a href="/notes/optimization/">Optimization</a>
+              </dd>
+              <dt>authors</dt>
+              <dd>Francis Bach, Lénaïc Chizat</dd>
+              <dt>source</dt>
+              <dd>
+                <a href="https://francisbach.com/gradient-descent-neural-networks-global-convergence/">Francis Bach’s blog</a>
+              </dd>
+            </dl>
+            <p>In the rest, we use the mathematical definition of a neural network from <a href="/notes/neural_networks/">Neural networks</a>.</p>
+            <h2 id="two-layer-neural-network">Two layer neural network</h2>
+            <p>Even simple neural network models are very difficult to analyze. This is primarily due to two difficulties:</p>
+            <ul>
+              <li><strong>Non-linearity</strong>: the problem is typically non-convex, which in general is a bad thing in optimization.</li>
+              <li><strong>Overparametrization</strong>: there are often a lot of parameters, sometimes many more parameters than observations.</li>
+            </ul>
+            <p>Results presented here are actually taking advantage of overparametrization, with \(m\rightarrow \infty\) and two key properties of the problem.</p>
+            <ul>
+              <li><strong>Separability</strong>: The problem can be decomposed in a sum of terms independently parametrized in \(\omega_i = (a_i, b_i)\), with \(h = \frac{1}{m} \sum_{i=1}^m \Phi(\omega_i)\) where \(\Phi : \mathbb{R}^p \rightarrow \mathcal{F}\) and \(\mathcal{F}\) is a space of functions. Here, \(p = d+1\) and \[ \Phi(w)(x) = a (b^\top x)_+. \] This part is only true for two-layer neural networks however.</li>
+              <li><strong>Homogeneity</strong>: ReLU is positively homogeneous and \(\Phi\) is 2-homogeneous, meaning that for \(\omega = (a, b)\), \(\Phi(\lambda\omega) = \lambda^2 \Phi(\omega)\).</li>
+            </ul>
+            <h2 id="infinitely-wide-neural-network">Infinitely wide neural network</h2>
+            <p>The goal is to minimize a functional \(R\) w.r.t function \(h\)</p>
+            <p>\[R(h) = \mathbb{E}_{p(x, y)} \left[ \ell(y, h(x))\right]\]</p>
+            <p>with \(\ell(y, h(x))\) the loss incurred by predicting \(h(x)\) when the true label was \(y\). \(R\) is assumed to be convex in its second argument, like least-square or logistic losses.</p>
+            <p>We re-use the two layer neural network formulation above to obtain</p>
+            <p>\[ G(W) = G(w_1,\dots,w_m) = R \Big( \frac{1}{m} \sum_{i=1}^m \Phi(w_i) \Big), \]</p>
+            <p>which can be seen as the minimization of</p>
+            <p>\[ F(\mu) = R \Big( \int_{\mathbb{R}^p} \Phi(w) d\mu(w) \Big),\]</p>
+            <p>with respect to a probability measure which is a sum of Dirac measures at \(w_i\), \(\mu = \frac{1}{m} \sum_{i = 1}^m \delta(w_i)\).</p>
+            <p>This makes the minimization problem much nicer since the set of measures is convex and \(h = \int_{\mathbb{R}^p} \Phi(w) d\mu(w)\) is linear in \(\mu\). However, because the set of measures is infinite dimensional, the choice of new neurons to minimize \(F\) is very difficult (NP-hard for a threshold activation, polynomial but with very high complexity for ReLU). In practise, SGD is used.</p>
+            <h2 id="gradient-flow">Gradient flow</h2>
+            <p>The <a href="/notes/gradient_flow/">gradient flow</a> is defined by</p>
+            <p>\[ \dot{W} = - m \nabla G(W) \]</p>
+            <p>On a metric space \(\mathcal{X}\), a gradient flow can be defined for a function \(f\) and seen a the limit of taking infinitesimal steps of length \(\gamma\), defining a sequence \((x_k)\)</p>
+            <p>\[ x_{k+1} \in \arg\min_{x\mathcal{x}} f(x) + \dfrac{1}{2\gamma} d(x, x_k)^2 \]</p>
+            <p>The smaller the step, the closer this sequence is to the actual gradient flow.</p>
+            <h3 id="euler-discretization">Euler discretization</h3>
+            <p>In \(\mathbb{R}^d\) and a continuously differentiable \(f\), \(x_{k + 1} = x_k - \gamma f'(x_k) + o(\gamma)\), we simply obtain Euler steps.</p>
+            <h3 id="vector-space-gradient-flows-on-probability-measures">Vector space gradient flows on probability measures</h3>
+            <blockquote>
+              <p>Probability measures are a convex subset of measures with finite total variation, which is equal to the $ℓ_1$-norm between densities when the two probability measures have densities with respect to the same base measure. It is a normed vector space for which we could derive our first type of gradient flow, which can be seen as a continuous version of Frank-Wolfe algorithm, where atoms are added one by one, until convergence.</p>
+            </blockquote>
+            <p>However, the flow of measures cannot be approximated by the set of neurons of the network.</p>
+            <h3 id="wasserstein-gradient-flow-on-probability-measures">Wasserstein gradient flow on probability measures</h3>
+            <p>The Wasserstein distance is directly related to <a href="/notes/optimal_transport/">Optimal transport</a>. For two empirical measures with the same number of points, it is the minimal sum of squared distances between pairs of point over all possible permutations.</p>
+            <p>The Wasserstein gradient flow is written</p>
+            <p>\[ \dot{w}_i = \ – \nabla \Phi(w_i) \nabla R\Big(\int_{\mathbb{R}^p} \Phi d\mu \Big), \]</p>
+            <h2 id="global-convergence">Global convergence</h2>
+            <p>Under two main assumptions (plus additional technical assumptions), if the Wasserstein gradient flow converges to a measure, it has to be the global minimum of the function \(F\) defined above.</p>
+            <p>The two assumptions are:</p>
+            <ul>
+              <li>Homogeneity of \(\Phi: \mathbb{R}^p \rightarrow \mathcal{F}\)</li>
+              <li>$w_i$s are uniformly distributed on the sphere</li>
+            </ul>
+            <p>The authors show on simple examples that for data generated with a neural network with \(m_0 = 5\) neurons. The result above suggest that with large \(m\) a neural network should converge to the original neurons. Surprisingly, relatively small $m$s are already very good at doing that.</p>
+          </div>
+          <div class="note-footer">
+            Last changed <a class="u-url" href="https://hugocisneros.com/notes/gradient_descent_for_wide_two_layer_neural_networks_i_global_convergence/"><time itemprop="datePublished" class="dt-published" datetime="2020-12-09T14:11:00+0100">09/12/2020</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+          </div>
+        </div>
+      </article><br>
+      <a href="/notes#gradient_descent_for_wide_two_layer_neural_networks_i_global_convergence"><b>← Back to Notes</b></a>
+      <hr>
+    </main>
+    <footer class="footer">
+      <ul class="footer-links">
+        <li>
+          <a class="rss-link" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon" src="/img/RSS.svg" alt="RSS feed icon"></a>
+        </li>
+        <li>
+          <a href="https://github.com/hugcis/natrium-custom">Code</a>
+        </li>
+        <li>© Hugo Cisneros 2021</li>
+      </ul>
+    </footer>
+  </div>
+  <script>
+  MathJax = {
      tex: {
          inlineMath: [['$','$'], ['\\(', '\\)']],
          tags: 'ams'
      }
- };
-</script> 
-<script type="text/javascript" rel="preconnect" id="MathJax-script"
-async src=
-"https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  };
+  </script> 
+  <script type="text/javascript" rel="preconnect" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </body>
 </html>

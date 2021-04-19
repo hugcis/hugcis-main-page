@@ -2,138 +2,104 @@
 <html lang="en-us">
 <head>
 
-
-<meta charset="utf-8">
-<meta name="viewport" content=
-"width=device-width,initial-scale=1.0,minimum-scale=1">
-<title>Notes on: Neural Architecture Search with Reinforcement
-Learning by Zoph, B., & Le, Q. V. (2017) - Hugo Cisneros - Personal
-page</title>
-<meta property="og:title" content=
-"Notes on: Neural Architecture Search with Reinforcement Learning by Zoph, B., &amp; Le, Q. V. (2017) - Hugo Cisneros - Personal page">
-<meta property="og:type" content="article">
-<meta property="og:image" content="/img/main.jpeg">
-<meta property="og:url" content=
-"https://hugocisneros.com/notes/zophneuralarchitecturesearch2017/">
-<meta property="og:description" content=
-"Notes about Neural Architecture Search with Reinforcement Learning by Zoph, B., &amp; Le, Q. V. (2017)">
-<meta name="Description" property="description" content=
-"Notes about Neural Architecture Search with Reinforcement Learning by Zoph, B., &amp; Le, Q. V. (2017)">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:site" content="@cisne_hug">
-<meta name="twitter:creator" content="@cisne_hug">
-<link rel="stylesheet" href=
-"https://hugocisneros.com/css/main.min.da0ecaf5695aac82ac1d036476c57133068282267487d121fc3ad2571b732644.css"
-media="all" type="text/css">
-<link rel="apple-touch-icon" sizes="180x180" href=
-"/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href=
-"/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href=
-"/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color=
-"#5bbad5">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff">
-<link rel="webmention" href=
-"https://webmention.io/hugocisneros.com/webmention">
-<link rel="pingback" href=
-"https://webmention.io/hugocisneros.com/xmlrpc">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1">
+  <title>Notes on: Neural Architecture Search with Reinforcement Learning by Zoph, B., & Le, Q. V. (2017) - Hugo Cisneros - Personal page</title>
+  <meta property="og:title" content="Notes on: Neural Architecture Search with Reinforcement Learning by Zoph, B., &amp; Le, Q. V. (2017) - Hugo Cisneros - Personal page">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="/img/main.jpeg">
+  <meta property="og:url" content="https://hugocisneros.com/notes/zophneuralarchitecturesearch2017/">
+  <meta property="og:description" content="Notes about Neural Architecture Search with Reinforcement Learning by Zoph, B., &amp; Le, Q. V. (2017)">
+  <meta name="Description" property="description" content="Notes about Neural Architecture Search with Reinforcement Learning by Zoph, B., &amp; Le, Q. V. (2017)">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@cisne_hug">
+  <meta name="twitter:creator" content="@cisne_hug">
+  <link rel="stylesheet" href="https://hugocisneros.com/css/main.min.da0ecaf5695aac82ac1d036476c57133068282267487d121fc3ad2571b732644.css" media="all" type="text/css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
+  <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
 </head>
 <body>
-<div class="wrapper">
-<header class="header">
-<nav class="nav">
-<div class="nav-main"><a href="https://hugocisneros.com/" class=
-"nav-title">Hugo Cisneros - Personal page</a></div>
-<ul class="nav-links">
-<li><a href="/about/">About</a></li>
-<li><a href="/blog/">Blog</a></li>
-<li><a href="/notes/">Notes</a></li>
-<li><a href="/resume/">Resume</a></li>
-</ul>
-</nav>
-</header>
-<main class="content" role="main">
-<article class="article h-entry" itemprop="mainEntity" itemscope
-itemtype="http://schema.org/BlogPosting">
-<div class="single-note note-container">
-<h1 class="article-title p-name" itemprop="name">Neural
-Architecture Search with Reinforcement Learning by Zoph, B., & Le,
-Q. V. (2017)</h1>
-<div class="article-content e-content p-name" itemprop=
-"articleBody">
-<dl>
-<dt>tags</dt>
-<dd><a href="/notes/neural_architecture_search/">NAS</a></dd>
-<dt>source</dt>
-<dd>(<a href="#orgdb56e93">Zoph and Le 2017</a>)</dd>
-</dl>
-<h2 id="summary">Summary</h2>
-<p>This paper introduces the idea of using a <a href=
-"/notes/recurrent_neural_networks/">RNN</a> controller system to
-generate the operations of a neural network. In a first setting the
-authors use this method to construct <a href=
-"/notes/convolutional_neural_networks/">CNN</a>s. The controller
-samples an architecture, the architecture is built and trained and
-the controller is rewarded with the maximum validation accuracy of
-the last 5 epochs cubed (??).</p>
-<p>Another experiment uses this exploration method to produce
-recurrent cell through a complicated model based on a tree of
-units, for each of which the controller samples an operation.</p>
-<h2 id="comments">Comments</h2>
-<p>There is a lot of hyperparameters everywhere, given without
-anything else. Learning rates, weights, scores and random
-operations. Overall, the paper shows that their method can produce
-architecture that give comparable performance to human-designed
-ones. However, there is nothing said about wether a random search
-could do the same or better. The lesson is maybe that all those
-tasks are pretty much solved once you have the right operations
-(convolutions for images and recurrent cell for penn treebank and
-<a href="/notes/language_modeling/">LM</a>).</p>
-<p>Search is really expensive (22400 GPU-hours, 800 GPU for 28
-days).</p>
-<h2 id="bibliography">Bibliography</h2>
-<p><a id="orgdb56e93"></a>Zoph, Barret, and Quoc V. Le. 2017.
-“Neural Architecture Search with Reinforcement Learning.”
-<em>arXiv:1611.01578 [Cs]</em>, February.</p>
-</div>
-<div class="note-footer">Last changed <a class="u-url" href=
-"https://hugocisneros.com/notes/zophneuralarchitecturesearch2017/"><time itemprop="datePublished"
-class="dt-published" datetime=
-"2021-03-25T09:57:00+0100">25/03/2021</time></a> | authored by
-<a href="https://hugocisneros.com/" rel="author" class=
-"p-author h-card" itemprop="author" itemscope itemtype=
-"http://schema.org/Person"><span itemprop="name">Hugo
-Cisneros</span></a></div>
-</div>
-</article>
-<br>
-<a href="/notes#zophneuralarchitecturesearch2017"><b>← Back to
-Notes</b></a>
-<hr></main>
-<footer class="footer">
-<ul class="footer-links">
-<li><a class="rss-link" href="/blog/index.xml" type=
-"application/rss+xml" target="_blank">Blog <img class="rss-icon"
-src="/img/RSS.svg" alt="RSS feed icon"></a></li>
-<li><a href=
-"https://github.com/hugcis/natrium-custom">Code</a></li>
-<li>© Hugo Cisneros 2021</li>
-</ul>
-</footer>
-</div>
-<script>
- MathJax = {
+  <div class="wrapper">
+    <header class="header">
+      <nav class="nav">
+        <div class="nav-main">
+          <a href="https://hugocisneros.com/" class="nav-title">Hugo Cisneros - Personal page</a>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="/about/">About</a>
+          </li>
+          <li>
+            <a href="/blog/">Blog</a>
+          </li>
+          <li>
+            <a href="/notes/">Notes</a>
+          </li>
+          <li>
+            <a href="/resume/">Resume</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="content" role="main">
+      <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="single-note note-container">
+          <h1 class="article-title p-name" itemprop="name">Neural Architecture Search with Reinforcement Learning by Zoph, B., & Le, Q. V. (2017)</h1>
+          <div class="article-content e-content p-name" itemprop="articleBody">
+            <dl>
+              <dt>tags</dt>
+              <dd>
+                <a href="/notes/neural_architecture_search/">NAS</a>
+              </dd>
+              <dt>source</dt>
+              <dd>
+                (<a href="#orgdb56e93">Zoph and Le 2017</a>)
+              </dd>
+            </dl>
+            <h2 id="summary">Summary</h2>
+            <p>This paper introduces the idea of using a <a href="/notes/recurrent_neural_networks/">RNN</a> controller system to generate the operations of a neural network. In a first setting the authors use this method to construct <a href="/notes/convolutional_neural_networks/">CNN</a>s. The controller samples an architecture, the architecture is built and trained and the controller is rewarded with the maximum validation accuracy of the last 5 epochs cubed (??).</p>
+            <p>Another experiment uses this exploration method to produce recurrent cell through a complicated model based on a tree of units, for each of which the controller samples an operation.</p>
+            <h2 id="comments">Comments</h2>
+            <p>There is a lot of hyperparameters everywhere, given without anything else. Learning rates, weights, scores and random operations. Overall, the paper shows that their method can produce architecture that give comparable performance to human-designed ones. However, there is nothing said about wether a random search could do the same or better. The lesson is maybe that all those tasks are pretty much solved once you have the right operations (convolutions for images and recurrent cell for penn treebank and <a href="/notes/language_modeling/">LM</a>).</p>
+            <p>Search is really expensive (22400 GPU-hours, 800 GPU for 28 days).</p>
+            <h2 id="bibliography">Bibliography</h2>
+            <p><a id="orgdb56e93"></a>Zoph, Barret, and Quoc V. Le. 2017. “Neural Architecture Search with Reinforcement Learning.” <em>arXiv:1611.01578 [Cs]</em>, February.</p>
+          </div>
+          <div class="note-footer">
+            Last changed <a class="u-url" href="https://hugocisneros.com/notes/zophneuralarchitecturesearch2017/"><time itemprop="datePublished" class="dt-published" datetime="2021-03-25T09:57:00+0100">25/03/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+          </div>
+        </div>
+      </article><br>
+      <a href="/notes#zophneuralarchitecturesearch2017"><b>← Back to Notes</b></a>
+      <hr>
+    </main>
+    <footer class="footer">
+      <ul class="footer-links">
+        <li>
+          <a class="rss-link" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon" src="/img/RSS.svg" alt="RSS feed icon"></a>
+        </li>
+        <li>
+          <a href="https://github.com/hugcis/natrium-custom">Code</a>
+        </li>
+        <li>© Hugo Cisneros 2021</li>
+      </ul>
+    </footer>
+  </div>
+  <script>
+  MathJax = {
      tex: {
          inlineMath: [['$','$'], ['\\(', '\\)']],
          tags: 'ams'
      }
- };
-</script> 
-<script type="text/javascript" rel="preconnect" id="MathJax-script"
-async src=
-"https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  };
+  </script> 
+  <script type="text/javascript" rel="preconnect" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </body>
 </html>

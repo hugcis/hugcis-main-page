@@ -2,192 +2,139 @@
 <html lang="en-us">
 <head>
 
-
-<meta charset="utf-8">
-<meta name="viewport" content=
-"width=device-width,initial-scale=1.0,minimum-scale=1">
-<title>Evaluating NLP - Hugo Cisneros - Personal page</title>
-<meta property="og:title" content=
-"Evaluating NLP - Hugo Cisneros - Personal page">
-<meta property="og:type" content="article">
-<meta property="og:image" content="/img/main.jpeg">
-<meta property="og:url" content=
-"https://hugocisneros.com/notes/evaluating_nlp/">
-<meta property="og:description" content=
-"Notes about Evaluating NLP">
-<meta name="Description" property="description" content=
-"Notes about Evaluating NLP">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:site" content="@cisne_hug">
-<meta name="twitter:creator" content="@cisne_hug">
-<link rel="stylesheet" href=
-"https://hugocisneros.com/css/main.min.da0ecaf5695aac82ac1d036476c57133068282267487d121fc3ad2571b732644.css"
-media="all" type="text/css">
-<link rel="apple-touch-icon" sizes="180x180" href=
-"/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href=
-"/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href=
-"/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color=
-"#5bbad5">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff">
-<link rel="webmention" href=
-"https://webmention.io/hugocisneros.com/webmention">
-<link rel="pingback" href=
-"https://webmention.io/hugocisneros.com/xmlrpc">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1">
+  <title>Evaluating NLP - Hugo Cisneros - Personal page</title>
+  <meta property="og:title" content="Evaluating NLP - Hugo Cisneros - Personal page">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="/img/main.jpeg">
+  <meta property="og:url" content="https://hugocisneros.com/notes/evaluating_nlp/">
+  <meta property="og:description" content="Notes about Evaluating NLP">
+  <meta name="Description" property="description" content="Notes about Evaluating NLP">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@cisne_hug">
+  <meta name="twitter:creator" content="@cisne_hug">
+  <link rel="stylesheet" href="https://hugocisneros.com/css/main.min.da0ecaf5695aac82ac1d036476c57133068282267487d121fc3ad2571b732644.css" media="all" type="text/css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
+  <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
 </head>
 <body>
-<div class="wrapper">
-<header class="header">
-<nav class="nav">
-<div class="nav-main"><a href="https://hugocisneros.com/" class=
-"nav-title">Hugo Cisneros - Personal page</a></div>
-<ul class="nav-links">
-<li><a href="/about/">About</a></li>
-<li><a href="/blog/">Blog</a></li>
-<li><a href="/notes/">Notes</a></li>
-<li><a href="/resume/">Resume</a></li>
-</ul>
-</nav>
-</header>
-<main class="content" role="main">
-<article class="article h-entry" itemprop="mainEntity" itemscope
-itemtype="http://schema.org/BlogPosting">
-<div class="single-note note-container">
-<h1 class="article-title p-name" itemprop="name">Evaluating
-NLP</h1>
-<div class="article-content e-content p-name" itemprop=
-"articleBody">
-<dl>
-<dt>tags</dt>
-<dd><a href="/notes/nlp/">Natural language processing</a></dd>
-</dl>
-<h2 id="language-model-evaluation">Language model evaluation</h2>
-<h3 id="perplexity">Perplexity</h3>
-<p>For a given word sequence \(\mathbf{w} = (w_1, …, w_n)\),
-perplexity (PPL) is defined \[ PPL = 2^{-\frac{1}{n} \sum_{i=1}^n
-\log_2 P(w_i |&nbsp;w_{i-1} … w_1 )} \] It can be seen as the
-cross-entropy between an empirical distribution of test words and
-the predicted conditional word distribution. A language model that
-would encode each word with an average 8 bits has a perplexity of
-256 (\(2^8\)).</p>
-<p>It is often used as an evaluation of language models, probably
-for two main reasons:</p>
-<ul>
-<li>Because it yields an easier to remember and reason about number
-than the average bits per word value (easier to compare 155 and 128
-than 7.27 bits and 7 bits).</li>
-<li>Because a language model with the lowest possible perplexity
-would be the closest to the “true” model that generated the
-data.</li>
-</ul>
-<p>Because of its connection with entropy, there is also a clear
-connection between perplexity and <a href=
-"/notes/compression/">Compression</a>, and finding the best
-language model for a given task is equivalent to finding the best
-compressor for the data (<a href="#orgd1838da">Mahoney
-1999</a>).</p>
-<p>Perplexity is the dominant metric for Language model evaluation.
-However, it has a few drawbacks:</p>
-<ul>
-<li>Perplexity is computed assuming perfect history, which might
-not always be the case when using previously generated data to
-generate a new word.</li>
-<li>Perplexity improvements can be misleading, since a fixed
-perplexity improvement is exponentially harder the closest it is to
-zero. Therefore, it is advantageous to report a sub-optimal
-baseline to maximize the value of perplexity improvement, while the
-actual entropy improvement might be small.</li>
-</ul>
-<h2 id="winograd-schema-challenge">Winograd Schema Challenge</h2>
-<p>This challenge (<a href="#org37e928c">Levesque, Davis, and
-Morgenstern, n.d.</a>), part of the GLUE benchmark is specifically
-about sentences that are hard to deal with for computers: there are
-implicit and ambiguous references within the sentence that can only
-be solved with contextual knowledge of the things being talked
-about. To me this is a very hard challenge that we are nowhere near
-solving. GPT-2’s 70% accuracy on this task is impressive but still
-doesn’t convince me we are on the right track of solving it.</p>
-<p>This seems like a good way of <a href=
-"/notes/artificial_intelligence_test/">testing a artificially
-intelligent system</a>.</p>
-<p>Example:</p>
-<pre><code class="language-nil" data-lang=
-"nil">I poured water from the bottle into the cup until it was full.
+  <div class="wrapper">
+    <header class="header">
+      <nav class="nav">
+        <div class="nav-main">
+          <a href="https://hugocisneros.com/" class="nav-title">Hugo Cisneros - Personal page</a>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="/about/">About</a>
+          </li>
+          <li>
+            <a href="/blog/">Blog</a>
+          </li>
+          <li>
+            <a href="/notes/">Notes</a>
+          </li>
+          <li>
+            <a href="/resume/">Resume</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="content" role="main">
+      <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="single-note note-container">
+          <h1 class="article-title p-name" itemprop="name">Evaluating NLP</h1>
+          <div class="article-content e-content p-name" itemprop="articleBody">
+            <dl>
+              <dt>tags</dt>
+              <dd>
+                <a href="/notes/nlp/">Natural language processing</a>
+              </dd>
+            </dl>
+            <h2 id="language-model-evaluation">Language model evaluation</h2>
+            <h3 id="perplexity">Perplexity</h3>
+            <p>For a given word sequence \(\mathbf{w} = (w_1, …, w_n)\), perplexity (PPL) is defined \[ PPL = 2^{-\frac{1}{n} \sum_{i=1}^n \log_2 P(w_i |&nbsp;w_{i-1} … w_1 )} \] It can be seen as the cross-entropy between an empirical distribution of test words and the predicted conditional word distribution. A language model that would encode each word with an average 8 bits has a perplexity of 256 (\(2^8\)).</p>
+            <p>It is often used as an evaluation of language models, probably for two main reasons:</p>
+            <ul>
+              <li>Because it yields an easier to remember and reason about number than the average bits per word value (easier to compare 155 and 128 than 7.27 bits and 7 bits).</li>
+              <li>Because a language model with the lowest possible perplexity would be the closest to the “true” model that generated the data.</li>
+            </ul>
+            <p>Because of its connection with entropy, there is also a clear connection between perplexity and <a href="/notes/compression/">Compression</a>, and finding the best language model for a given task is equivalent to finding the best compressor for the data (<a href="#orgd1838da">Mahoney 1999</a>).</p>
+            <p>Perplexity is the dominant metric for Language model evaluation. However, it has a few drawbacks:</p>
+            <ul>
+              <li>Perplexity is computed assuming perfect history, which might not always be the case when using previously generated data to generate a new word.</li>
+              <li>Perplexity improvements can be misleading, since a fixed perplexity improvement is exponentially harder the closest it is to zero. Therefore, it is advantageous to report a sub-optimal baseline to maximize the value of perplexity improvement, while the actual entropy improvement might be small.</li>
+            </ul>
+            <h2 id="winograd-schema-challenge">Winograd Schema Challenge</h2>
+            <p>This challenge (<a href="#org37e928c">Levesque, Davis, and Morgenstern, n.d.</a>), part of the GLUE benchmark is specifically about sentences that are hard to deal with for computers: there are implicit and ambiguous references within the sentence that can only be solved with contextual knowledge of the things being talked about. To me this is a very hard challenge that we are nowhere near solving. GPT-2’s 70% accuracy on this task is impressive but still doesn’t convince me we are on the right track of solving it.</p>
+            <p>This seems like a good way of <a href="/notes/artificial_intelligence_test/">testing a artificially intelligent system</a>.</p>
+            <p>Example:</p>
+            <pre><code class="language-nil" data-lang="nil">I poured water from the bottle into the cup until it was full.
 </code></pre>
-<p>It is not sufficient to learn this sentence structure because
-when we change only a word the meaning changes significantly.</p>
-<pre><code class="language-nil" data-lang=
-"nil">I poured water from the bottle into the cup until it was empty.
+            <p>It is not sufficient to learn this sentence structure because when we change only a word the meaning changes significantly.</p>
+            <pre><code class="language-nil" data-lang="nil">I poured water from the bottle into the cup until it was empty.
 </code></pre>
-<p>If a machine solves this ambiguous reference, can we say that it
-has learned some meaningful concept about a bottle or a cup?</p>
-<blockquote>
-<p>When AI can’t determine what ‘it’ refers to in a sentence, it’s
-hard to believe that it will take over the world.</p>
-<p>Oren Etzioni, Allen Institute for AI</p>
-</blockquote>
-<h2 id="bibliography">Bibliography</h2>
-<p><a id="org37e928c"></a>Levesque, Hector, Ernest Davis, and Leora
-Morgenstern. n.d. “The Winograd Schema Challenge,” 10.</p>
-<p><a id="orgd1838da"></a>Mahoney, Matthew V. 1999. “Text
-Compression as a Test for Artificial Intelligence.” In
-<em>Proceedings of AAAI-1999</em>, 3.</p>
-</div>
-<div class="bl-section">
-<h2>Links to this note</h2>
-<div class="backlinks">
-<ul>
-<li><a href="/notes/benderclimbingnlumeaning2020/">Notes on:
-Climbing towards NLU: On Meaning, Form, and Understanding in the
-Age of Data by Bender, E. M., & Koller, A. (2020)</a></li>
-<li><a href=
-"/notes/voitainformationtheoreticprobingminimum2020/">Notes on:
-Information-Theoretic Probing with Minimum Description Length by
-Voita, E., & Titov, I. (2020)</a></li>
-<li><a href=
-"/notes/talk_artificial_intelligence_a_guide_for_thinking_humans/">Talk:
-Artificial Intelligence: A Guide for Thinking Humans</a></li>
-</ul>
-</div>
-</div>
-<div class="note-footer">Last changed <a class="u-url" href=
-"https://hugocisneros.com/notes/evaluating_nlp/"><time itemprop=
-"datePublished" class="dt-published" datetime=
-"2020-07-17T13:46:00+0200">17/07/2020</time></a> | authored by
-<a href="https://hugocisneros.com/" rel="author" class=
-"p-author h-card" itemprop="author" itemscope itemtype=
-"http://schema.org/Person"><span itemprop="name">Hugo
-Cisneros</span></a></div>
-</div>
-</article>
-<br>
-<a href="/notes#evaluating_nlp"><b>← Back to Notes</b></a>
-<hr></main>
-<footer class="footer">
-<ul class="footer-links">
-<li><a class="rss-link" href="/blog/index.xml" type=
-"application/rss+xml" target="_blank">Blog <img class="rss-icon"
-src="/img/RSS.svg" alt="RSS feed icon"></a></li>
-<li><a href=
-"https://github.com/hugcis/natrium-custom">Code</a></li>
-<li>© Hugo Cisneros 2021</li>
-</ul>
-</footer>
-</div>
-<script>
- MathJax = {
+            <p>If a machine solves this ambiguous reference, can we say that it has learned some meaningful concept about a bottle or a cup?</p>
+            <blockquote>
+              <p>When AI can’t determine what ‘it’ refers to in a sentence, it’s hard to believe that it will take over the world.</p>
+              <p>Oren Etzioni, Allen Institute for AI</p>
+            </blockquote>
+            <h2 id="bibliography">Bibliography</h2>
+            <p><a id="org37e928c"></a>Levesque, Hector, Ernest Davis, and Leora Morgenstern. n.d. “The Winograd Schema Challenge,” 10.</p>
+            <p><a id="orgd1838da"></a>Mahoney, Matthew V. 1999. “Text Compression as a Test for Artificial Intelligence.” In <em>Proceedings of AAAI-1999</em>, 3.</p>
+          </div>
+          <div class="bl-section">
+            <h2>Links to this note</h2>
+            <div class="backlinks">
+              <ul>
+                <li>
+                  <a href="/notes/benderclimbingnlumeaning2020/">Notes on: Climbing towards NLU: On Meaning, Form, and Understanding in the Age of Data by Bender, E. M., & Koller, A. (2020)</a>
+                </li>
+                <li>
+                  <a href="/notes/voitainformationtheoreticprobingminimum2020/">Notes on: Information-Theoretic Probing with Minimum Description Length by Voita, E., & Titov, I. (2020)</a>
+                </li>
+                <li>
+                  <a href="/notes/talk_artificial_intelligence_a_guide_for_thinking_humans/">Talk: Artificial Intelligence: A Guide for Thinking Humans</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="note-footer">
+            Last changed <a class="u-url" href="https://hugocisneros.com/notes/evaluating_nlp/"><time itemprop="datePublished" class="dt-published" datetime="2020-07-17T13:46:00+0200">17/07/2020</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+          </div>
+        </div>
+      </article><br>
+      <a href="/notes#evaluating_nlp"><b>← Back to Notes</b></a>
+      <hr>
+    </main>
+    <footer class="footer">
+      <ul class="footer-links">
+        <li>
+          <a class="rss-link" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon" src="/img/RSS.svg" alt="RSS feed icon"></a>
+        </li>
+        <li>
+          <a href="https://github.com/hugcis/natrium-custom">Code</a>
+        </li>
+        <li>© Hugo Cisneros 2021</li>
+      </ul>
+    </footer>
+  </div>
+  <script>
+  MathJax = {
      tex: {
          inlineMath: [['$','$'], ['\\(', '\\)']],
          tags: 'ams'
      }
- };
-</script> 
-<script type="text/javascript" rel="preconnect" id="MathJax-script"
-async src=
-"https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  };
+  </script> 
+  <script type="text/javascript" rel="preconnect" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </body>
 </html>

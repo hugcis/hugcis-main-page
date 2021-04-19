@@ -2,205 +2,134 @@
 <html lang="en-us">
 <head>
 
-
-<meta charset="utf-8">
-<meta name="viewport" content=
-"width=device-width,initial-scale=1.0,minimum-scale=1">
-<title>Notes on: Curiosity-Driven Exploration by Self-Supervised
-Prediction by Pathak, D., Agrawal, P., Efros, A. A., & Darrell, T.
-(2017) - Hugo Cisneros - Personal page</title>
-<meta property="og:title" content=
-"Notes on: Curiosity-Driven Exploration by Self-Supervised Prediction by Pathak, D., Agrawal, P., Efros, A. A., &amp; Darrell, T. (2017) - Hugo Cisneros - Personal page">
-<meta property="og:type" content="article">
-<meta property="og:image" content="/img/main.jpeg">
-<meta property="og:url" content=
-"https://hugocisneros.com/notes/pathakcuriositydrivenexplorationselfsupervised2017/">
-<meta property="og:description" content=
-"Notes about Curiosity-Driven Exploration by Self-Supervised Prediction by Pathak, D., Agrawal, P., Efros, A. A., &amp; Darrell, T. (2017)">
-<meta name="Description" property="description" content=
-"Notes about Curiosity-Driven Exploration by Self-Supervised Prediction by Pathak, D., Agrawal, P., Efros, A. A., &amp; Darrell, T. (2017)">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:site" content="@cisne_hug">
-<meta name="twitter:creator" content="@cisne_hug">
-<link rel="stylesheet" href=
-"https://hugocisneros.com/css/main.min.da0ecaf5695aac82ac1d036476c57133068282267487d121fc3ad2571b732644.css"
-media="all" type="text/css">
-<link rel="apple-touch-icon" sizes="180x180" href=
-"/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href=
-"/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href=
-"/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color=
-"#5bbad5">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff">
-<link rel="webmention" href=
-"https://webmention.io/hugocisneros.com/webmention">
-<link rel="pingback" href=
-"https://webmention.io/hugocisneros.com/xmlrpc">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1">
+  <title>Notes on: Curiosity-Driven Exploration by Self-Supervised Prediction by Pathak, D., Agrawal, P., Efros, A. A., & Darrell, T. (2017) - Hugo Cisneros - Personal page</title>
+  <meta property="og:title" content="Notes on: Curiosity-Driven Exploration by Self-Supervised Prediction by Pathak, D., Agrawal, P., Efros, A. A., &amp; Darrell, T. (2017) - Hugo Cisneros - Personal page">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="/img/main.jpeg">
+  <meta property="og:url" content="https://hugocisneros.com/notes/pathakcuriositydrivenexplorationselfsupervised2017/">
+  <meta property="og:description" content="Notes about Curiosity-Driven Exploration by Self-Supervised Prediction by Pathak, D., Agrawal, P., Efros, A. A., &amp; Darrell, T. (2017)">
+  <meta name="Description" property="description" content="Notes about Curiosity-Driven Exploration by Self-Supervised Prediction by Pathak, D., Agrawal, P., Efros, A. A., &amp; Darrell, T. (2017)">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@cisne_hug">
+  <meta name="twitter:creator" content="@cisne_hug">
+  <link rel="stylesheet" href="https://hugocisneros.com/css/main.min.da0ecaf5695aac82ac1d036476c57133068282267487d121fc3ad2571b732644.css" media="all" type="text/css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
+  <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
 </head>
 <body>
-<div class="wrapper">
-<header class="header">
-<nav class="nav">
-<div class="nav-main"><a href="https://hugocisneros.com/" class=
-"nav-title">Hugo Cisneros - Personal page</a></div>
-<ul class="nav-links">
-<li><a href="/about/">About</a></li>
-<li><a href="/blog/">Blog</a></li>
-<li><a href="/notes/">Notes</a></li>
-<li><a href="/resume/">Resume</a></li>
-</ul>
-</nav>
-</header>
-<main class="content" role="main">
-<article class="article h-entry" itemprop="mainEntity" itemscope
-itemtype="http://schema.org/BlogPosting">
-<div class="single-note note-container">
-<h1 class="article-title p-name" itemprop="name">Curiosity-Driven
-Exploration by Self-Supervised Prediction by Pathak, D., Agrawal,
-P., Efros, A. A., & Darrell, T. (2017)</h1>
-<div class="article-content e-content p-name" itemprop=
-"articleBody">
-<dl>
-<dt>tags</dt>
-<dd><a href="/notes/reinforcement_learning/">Reinforcement
-learning</a></dd>
-<dt>source</dt>
-<dd>(<a href="#org0c749c3">Pathak et al. 2017</a>)</dd>
-</dl>
-<h2 id="summary">Summary</h2>
-<p>This paper presents a curiosity-based method for training
-<a href="/notes/reinforcement_learning/">RL</a> agents. These
-agents are given a reward \(r_t\) which is the sum of an intrinsic
-and an extrinsic rewards. The latter is mostly (if not always) 0,
-while the former is constructed progressively during exploration by
-an Intrisic Curiosity Module (ICM).</p>
-<p>The module is illustrated below (figure from the paper).</p>
-<figure><img src=
-"/ox-hugo/pathakCuriosityDrivenExplorationSelfSupervised2017.jpg"></figure>
-<p>The left part of the figure represents a standard RL setup where
-actions are taken according to a policy and they affect the state
-of the agent.</p>
-<p>The ICM module is a constantly evolving reward function composed
-of 3 sub-modules:</p>
-<ul>
-<li>A feature encoder \(\phi\) which encodes the states into
-feature vectors.</li>
-<li>A forward model which tries to predict the encoded next states
-\(\phi(s_{t + 1})\) from the current encoded state and action
-taken.</li>
-<li>An inverse model that predicts the action taken from both the
-previous state and next state.</li>
-</ul>
-<p>The intrinsic reward is the scaled squared difference between
-estimated \(\hat{\phi}(s_{t + 1})\) and \(\phi(s_{t + 1})\). This
-setup rewards exploration because large errors in the prediction of
-the next state’s feature encoding will lead to more exploration of
-that region of the environment. Moreover, parts of the environment
-that are completely unpredictable and unaffected by the actions
-will have no incentive in being encoded by the ICM. The model
-should therefore “distill” the current state to only its essential
-parts.</p>
-<p>Results are impressive, especially in the sparse and very sparse
-reward settings (see paper for details) where the model still learn
-significantly better policies than other methods in terms of
-extrinsic reward.</p>
-<h2 id="comments">Comments</h2>
-<p>Comment on generalization in RL from the paper:</p>
-<blockquote>
-<p>It is common practice to evaluate reinforcement learning
-approaches in the same environment that was used for training.
-However, we feel that it is also important to evaluate on a
-separate “testing set” as well. This allows us to gauge how much of
-what has been learned is specific to the training environment (i.e.
-memorized), and how much might constitute “generalizable skills”
-that could be applied to new settings.</p>
-</blockquote>
-<p>I think this research direction is extremely interesting.
-No/sparse-reward RL seems like a promising approach to construct
-agents that can efficiently explore and reach good performance on
-unseen environments.</p>
-<p>The authors recognize a few issues with their method, but the
-overall principle seems solid. However, the component that still
-bothers me is the fact that the ICM, policy, etc. still rely on
-<a href="/notes/neural_networks/">neural networks</a> trained with
-<a href="/notes/gradient_descent/">gradient descent</a>. This is in
-my opinion why they won’t really be able to do much more than what
-they’ve been trained to do and still suffer from the usual issues
-with neural networks. They won’t be able to learn things on the
-long term or re-use successful components or innovate
-significantly.</p>
-<p>This issue with neural networks and gradient-based learning is
-illustrated in the paper by the following quote:</p>
-<blockquote>
-<p>In Mario our agent crosses more than 30% of Level-1 without any
-rewards from the game. One reason why our agent is unable to go
-beyond this limit is the presence of a pit at 38% of the game that
-requires a very specific sequence of 15-20 key presses in order to
-jump across it. If the agent is unable to execute this sequence, it
-falls in the pit and dies, receiving no further rewards from the
-environment. Therefore it receives no gradient information
-indicating that there is a world beyond the pit that could
-potentially be explored.</p>
-</blockquote>
-<h2 id="bibliography">Bibliography</h2>
-<p><a id="org0c749c3"></a>Pathak, Deepak, Pulkit Agrawal, Alexei A.
-Efros, and Trevor Darrell. 2017. “Curiosity-Driven Exploration by
-Self-Supervised Prediction.” In <em>2017 IEEE Conference on
-Computer Vision and Pattern Recognition Workshops (CVPRW)</em>,
-488–89. Honolulu, HI, USA: IEEE.</p>
-</div>
-<div class="bl-section">
-<h2>Links to this note</h2>
-<div class="backlinks">
-<ul>
-<li><a href=
-"/notes/pathakcuriositydrivenexplorationselfsupervised2017/">Notes
-on: Curiosity-Driven Exploration by Self-Supervised Prediction by
-Pathak, D., Agrawal, P., Efros, A. A., & Darrell, T.
-(2017)</a></li>
-</ul>
-</div>
-</div>
-<div class="note-footer">Last changed <a class="u-url" href=
-"https://hugocisneros.com/notes/pathakcuriositydrivenexplorationselfsupervised2017/">
-<time itemprop="datePublished" class="dt-published" datetime=
-"2021-03-25T09:57:00+0100">25/03/2021</time></a> | authored by
-<a href="https://hugocisneros.com/" rel="author" class=
-"p-author h-card" itemprop="author" itemscope itemtype=
-"http://schema.org/Person"><span itemprop="name">Hugo
-Cisneros</span></a></div>
-</div>
-</article>
-<br>
-<a href=
-"/notes#pathakcuriositydrivenexplorationselfsupervised2017"><b>←
-Back to Notes</b></a>
-<hr></main>
-<footer class="footer">
-<ul class="footer-links">
-<li><a class="rss-link" href="/blog/index.xml" type=
-"application/rss+xml" target="_blank">Blog <img class="rss-icon"
-src="/img/RSS.svg" alt="RSS feed icon"></a></li>
-<li><a href=
-"https://github.com/hugcis/natrium-custom">Code</a></li>
-<li>© Hugo Cisneros 2021</li>
-</ul>
-</footer>
-</div>
-<script>
- MathJax = {
+  <div class="wrapper">
+    <header class="header">
+      <nav class="nav">
+        <div class="nav-main">
+          <a href="https://hugocisneros.com/" class="nav-title">Hugo Cisneros - Personal page</a>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="/about/">About</a>
+          </li>
+          <li>
+            <a href="/blog/">Blog</a>
+          </li>
+          <li>
+            <a href="/notes/">Notes</a>
+          </li>
+          <li>
+            <a href="/resume/">Resume</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="content" role="main">
+      <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="single-note note-container">
+          <h1 class="article-title p-name" itemprop="name">Curiosity-Driven Exploration by Self-Supervised Prediction by Pathak, D., Agrawal, P., Efros, A. A., & Darrell, T. (2017)</h1>
+          <div class="article-content e-content p-name" itemprop="articleBody">
+            <dl>
+              <dt>tags</dt>
+              <dd>
+                <a href="/notes/reinforcement_learning/">Reinforcement learning</a>
+              </dd>
+              <dt>source</dt>
+              <dd>
+                (<a href="#org0c749c3">Pathak et al. 2017</a>)
+              </dd>
+            </dl>
+            <h2 id="summary">Summary</h2>
+            <p>This paper presents a curiosity-based method for training <a href="/notes/reinforcement_learning/">RL</a> agents. These agents are given a reward \(r_t\) which is the sum of an intrinsic and an extrinsic rewards. The latter is mostly (if not always) 0, while the former is constructed progressively during exploration by an Intrisic Curiosity Module (ICM).</p>
+            <p>The module is illustrated below (figure from the paper).</p>
+            <figure>
+              <img src="/ox-hugo/pathakCuriosityDrivenExplorationSelfSupervised2017.jpg">
+            </figure>
+            <p>The left part of the figure represents a standard RL setup where actions are taken according to a policy and they affect the state of the agent.</p>
+            <p>The ICM module is a constantly evolving reward function composed of 3 sub-modules:</p>
+            <ul>
+              <li>A feature encoder \(\phi\) which encodes the states into feature vectors.</li>
+              <li>A forward model which tries to predict the encoded next states \(\phi(s_{t + 1})\) from the current encoded state and action taken.</li>
+              <li>An inverse model that predicts the action taken from both the previous state and next state.</li>
+            </ul>
+            <p>The intrinsic reward is the scaled squared difference between estimated \(\hat{\phi}(s_{t + 1})\) and \(\phi(s_{t + 1})\). This setup rewards exploration because large errors in the prediction of the next state’s feature encoding will lead to more exploration of that region of the environment. Moreover, parts of the environment that are completely unpredictable and unaffected by the actions will have no incentive in being encoded by the ICM. The model should therefore “distill” the current state to only its essential parts.</p>
+            <p>Results are impressive, especially in the sparse and very sparse reward settings (see paper for details) where the model still learn significantly better policies than other methods in terms of extrinsic reward.</p>
+            <h2 id="comments">Comments</h2>
+            <p>Comment on generalization in RL from the paper:</p>
+            <blockquote>
+              <p>It is common practice to evaluate reinforcement learning approaches in the same environment that was used for training. However, we feel that it is also important to evaluate on a separate “testing set” as well. This allows us to gauge how much of what has been learned is specific to the training environment (i.e. memorized), and how much might constitute “generalizable skills” that could be applied to new settings.</p>
+            </blockquote>
+            <p>I think this research direction is extremely interesting. No/sparse-reward RL seems like a promising approach to construct agents that can efficiently explore and reach good performance on unseen environments.</p>
+            <p>The authors recognize a few issues with their method, but the overall principle seems solid. However, the component that still bothers me is the fact that the ICM, policy, etc. still rely on <a href="/notes/neural_networks/">neural networks</a> trained with <a href="/notes/gradient_descent/">gradient descent</a>. This is in my opinion why they won’t really be able to do much more than what they’ve been trained to do and still suffer from the usual issues with neural networks. They won’t be able to learn things on the long term or re-use successful components or innovate significantly.</p>
+            <p>This issue with neural networks and gradient-based learning is illustrated in the paper by the following quote:</p>
+            <blockquote>
+              <p>In Mario our agent crosses more than 30% of Level-1 without any rewards from the game. One reason why our agent is unable to go beyond this limit is the presence of a pit at 38% of the game that requires a very specific sequence of 15-20 key presses in order to jump across it. If the agent is unable to execute this sequence, it falls in the pit and dies, receiving no further rewards from the environment. Therefore it receives no gradient information indicating that there is a world beyond the pit that could potentially be explored.</p>
+            </blockquote>
+            <h2 id="bibliography">Bibliography</h2>
+            <p><a id="org0c749c3"></a>Pathak, Deepak, Pulkit Agrawal, Alexei A. Efros, and Trevor Darrell. 2017. “Curiosity-Driven Exploration by Self-Supervised Prediction.” In <em>2017 IEEE Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)</em>, 488–89. Honolulu, HI, USA: IEEE.</p>
+          </div>
+          <div class="bl-section">
+            <h2>Links to this note</h2>
+            <div class="backlinks">
+              <ul>
+                <li>
+                  <a href="/notes/pathakcuriositydrivenexplorationselfsupervised2017/">Notes on: Curiosity-Driven Exploration by Self-Supervised Prediction by Pathak, D., Agrawal, P., Efros, A. A., & Darrell, T. (2017)</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="note-footer">
+            Last changed <a class="u-url" href="https://hugocisneros.com/notes/pathakcuriositydrivenexplorationselfsupervised2017/"><time itemprop="datePublished" class="dt-published" datetime="2021-03-25T09:57:00+0100">25/03/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+          </div>
+        </div>
+      </article><br>
+      <a href="/notes#pathakcuriositydrivenexplorationselfsupervised2017"><b>← Back to Notes</b></a>
+      <hr>
+    </main>
+    <footer class="footer">
+      <ul class="footer-links">
+        <li>
+          <a class="rss-link" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon" src="/img/RSS.svg" alt="RSS feed icon"></a>
+        </li>
+        <li>
+          <a href="https://github.com/hugcis/natrium-custom">Code</a>
+        </li>
+        <li>© Hugo Cisneros 2021</li>
+      </ul>
+    </footer>
+  </div>
+  <script>
+  MathJax = {
      tex: {
          inlineMath: [['$','$'], ['\\(', '\\)']],
          tags: 'ams'
      }
- };
-</script> 
-<script type="text/javascript" rel="preconnect" id="MathJax-script"
-async src=
-"https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  };
+  </script> 
+  <script type="text/javascript" rel="preconnect" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </body>
 </html>
