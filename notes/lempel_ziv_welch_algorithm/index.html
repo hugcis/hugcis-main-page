@@ -60,11 +60,11 @@
               </dd>
               <dt>papers</dt>
               <dd>
-                (<a href="#org9cccaab">Lempel and Ziv 1976</a>; <a href="#org306fdef">Ziv and Lempel 1977</a>, <a href="#org58ab8e6">1978</a>; <a href="#orgf9a0ec7">Welch 1984</a>; <a href="#org4f9ee33">Storer and Szymanski 1982</a>)
+                (<a href="#orgd92ea41">Lempel and Ziv 1976</a>; <a href="#org45f0b71">Ziv and Lempel 1977</a>, <a href="#orgd36262b">1978</a>; <a href="#orgf141860">Welch 1984</a>; <a href="#orgb56ca0c">Storer and Szymanski 1982</a>)
               </dd>
             </dl>
             <h2 id="context">Context</h2>
-            <p>The LZW algorithm was originally designed as a complexity (“randomness”) metric for finite sequences (<a href="#org9cccaab">Lempel and Ziv 1976</a>). It was then extended as a compression algorithm by the same authors to LZ77 (<a href="#org306fdef">Ziv and Lempel 1977</a>) and LZ78 (<a href="#org58ab8e6">Ziv and Lempel 1978</a>). Those last two are the basis of many well known and widely used compression utilities such as <code>GIF</code>, <code>compress</code> (LZW (<a href="#orgf9a0ec7">Welch 1984</a>) ) or <code>DEFLATE</code>, <code>gzip</code> (LZSS (<a href="#org4f9ee33">Storer and Szymanski 1982</a>)), etc.</p>
+            <p>The LZW algorithm was originally designed as a complexity (“randomness”) metric for finite sequences (<a href="#orgd92ea41">Lempel and Ziv 1976</a>). It was then extended as a compression algorithm by the same authors to LZ77 (<a href="#org45f0b71">Ziv and Lempel 1977</a>) and LZ78 (<a href="#orgd36262b">Ziv and Lempel 1978</a>). Those last two are the basis of many well known and widely used compression utilities such as <code>GIF</code>, <code>compress</code> (LZW (<a href="#orgf141860">Welch 1984</a>) ) or <code>DEFLATE</code>, <code>gzip</code> (LZSS (<a href="#orgb56ca0c">Storer and Szymanski 1982</a>)), etc.</p>
             <h2 id="description">Description</h2>
             <p>The base idea of these algorithms is to build a dictionary of words in the input sequence. A given sequence is scanned and an empty dictionary is initialized. Each new word is the shortest next word not in the dictionary. It is registered by using a previous word and adding a single digit in the form \((j, s_{last})\). This encoding allows a unique decoding of the original sequence. When encoding <strong>or</strong> decoding the string the same dictionary of words is built. For sequences with string repetitions, the length of each new word increases fast and the numbers of needed pairs to encode increases very slowly.</p>
             <p>Example implementation of the LZ algorithm in Python:</p>
@@ -96,11 +96,11 @@
 </code></pre>
             </div>
             <h2 id="bibliography">Bibliography</h2>
-            <p><a id="org9cccaab"></a>Lempel, A., and J. Ziv. 1976. “On the Complexity of Finite Sequences.” <em>IEEE Transactions on Information Theory</em> 22 (1):75–81.</p>
-            <p><a id="org4f9ee33"></a>Storer, James A., and Thomas G. Szymanski. 1982. “Data Compression via Textual Substitution.” <em>Journal of the ACM (JACM)</em> 29 (4):928–51.</p>
-            <p><a id="orgf9a0ec7"></a>Welch. 1984. “A Technique for High-Performance Data Compression.” <em>Computer</em> 17 (6):8–19.</p>
-            <p><a id="org306fdef"></a>Ziv, J., and A. Lempel. 1977. “A Universal Algorithm for Sequential Data Compression.” <em>IEEE Transactions on Information Theory</em> 23 (3):337–43.</p>
-            <p><a id="org58ab8e6"></a>———. 1978. “Compression of Individual Sequences via Variable-Rate Coding.” <em>IEEE Transactions on Information Theory</em> 24 (5):530–36.</p>
+            <p><a id="orgd92ea41"></a>Lempel, A., and J. Ziv. 1976. “On the Complexity of Finite Sequences.” <em>IEEE Transactions on Information Theory</em> 22 (1):75–81.</p>
+            <p><a id="orgb56ca0c"></a>Storer, James A., and Thomas G. Szymanski. 1982. “Data Compression via Textual Substitution.” <em>Journal of the ACM (JACM)</em> 29 (4):928–51.</p>
+            <p><a id="orgf141860"></a>Welch. 1984. “A Technique for High-Performance Data Compression.” <em>Computer</em> 17 (6):8–19.</p>
+            <p><a id="org45f0b71"></a>Ziv, J., and A. Lempel. 1977. “A Universal Algorithm for Sequential Data Compression.” <em>IEEE Transactions on Information Theory</em> 23 (3):337–43.</p>
+            <p><a id="orgd36262b"></a>———. 1978. “Compression of Individual Sequences via Variable-Rate Coding.” <em>IEEE Transactions on Information Theory</em> 24 (5):530–36.</p>
           </div>
           <div class="bl-section">
             <h2>Links to this note</h2>

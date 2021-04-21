@@ -64,10 +64,10 @@
             <p><a href="/notes/cellular_automata/">Cellular automata</a> are computational models based on several principles such as translation-invariance and parallelism of computations. These principles also motivated the creation of <a href="/notes/convolutional_neural_networks/">Convolutional neural networks</a> — used initially for images and text —, making this model well-suited to reason about cellular automata.</p>
             <p>There is indeed a deep connection between the two models, making it seem like there are two expressions of the same idea: <strong>spatially organized information</strong> <strong>can be processed locally in parallel</strong>.</p>
             <h2 id="relevant-literature">Relevant literature</h2>
-            <p>Cellular automata can easily be represented as Convolutional Neural Networks (CNNs). This relation has already been investigated in (<a href="#orge266206">Gilpin 2018</a>) or (<a href="#org3d293b1">Mordvintsev et al. 2020</a>) for instance. This idea has advantages and drawbacks:</p>
+            <p>Cellular automata can easily be represented as Convolutional Neural Networks (CNNs). This relation has already been investigated in (<a href="#orgddaada2">Gilpin 2018</a>) or (<a href="#org88da0cc">Mordvintsev et al. 2020</a>) for instance. This idea has advantages and drawbacks:</p>
             <ul>
               <li>Computational cost of using floating points operations is higher than discrete operations.</li>
-              <li>Discrete operations can lead to exponential growth of the number of possible configurations and update rules in a CA. This is why rules aren’t represented as bijective tables matching neighborhoods to states anymore in (<a href="#org3d293b1">Mordvintsev et al. 2020</a>).
+              <li>Discrete operations can lead to exponential growth of the number of possible configurations and update rules in a CA. This is why rules aren’t represented as bijective tables matching neighborhoods to states anymore in (<a href="#org88da0cc">Mordvintsev et al. 2020</a>).
               </li>
               <li>The use of floating point operations is mainly there to be able to compute gradients for gradient based optimization. This is against a <em>non-supervised</em> philosophy I am trying to work on. Training cellular automata is basically re-implementing a “recurrent convolutional neural network”: this might lead to interesting models but isn’t exploiting all the potential of those computational models</li>
               <li>Ultimately computations in a computer are discrete and Mordvintsev et al. eventually use quantization to discretize the CA, resulting in an approximation of a discrete automaton.</li>
@@ -78,8 +78,8 @@
             <h2 id="turing-completeness">Turing-completeness</h2>
             <p><a href="/notes/turing_completeness/">Turing-completeness</a> of convolutional neural networks can be directly inferred from this close relation with cellular automata. The condition is to consider a <em>recurrent-convolutional</em> network where the output is fed back to the network at each step. A simple <a href="/notes/elementary_cellular_automata/">ECA</a> rule such as rule 110 is easily implemented in this type of convolutional neural network, hence <a href="/notes/turing_completeness_of_cellular_automata/">Turing-completeness</a>.</p>
             <h2 id="bibliography">Bibliography</h2>
-            <p><a id="orge266206"></a>Gilpin, William. 2018. “Cellular Automata as Convolutional Neural Networks.” <em>arXiv:1809.02942 [Cond-Mat, Physics:Nlin, Physics:Physics]</em>, September.</p>
-            <p><a id="org3d293b1"></a>Mordvintsev, Alexander, Ettore Randazzo, Eyvind Niklasson, and Michael Levin. 2020. “Growing Neural Cellular Automata.” <em>Distill</em> 5 (2):e23.</p>
+            <p><a id="orgddaada2"></a>Gilpin, William. 2018. “Cellular Automata as Convolutional Neural Networks.” <em>arXiv:1809.02942 [Cond-Mat, Physics:Nlin, Physics:Physics]</em>, September.</p>
+            <p><a id="org88da0cc"></a>Mordvintsev, Alexander, Ettore Randazzo, Eyvind Niklasson, and Michael Levin. 2020. “Growing Neural Cellular Automata.” <em>Distill</em> 5 (2):e23.</p>
           </div>
           <div class="bl-section">
             <h2>Links to this note</h2>

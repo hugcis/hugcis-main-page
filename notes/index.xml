@@ -6,7 +6,38 @@
     <description>Recent content in Notes on Hugo Cisneros - Personal page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 19 Apr 2021 11:54:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Apr 2021 13:15:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Matrix factorization</title>
+      <link>https://hugocisneros.com/notes/matrix_factorization/</link>
+      <pubDate>Wed, 21 Apr 2021 13:15:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/matrix_factorization/</guid>
+      <description> tags Mathematics  LU Factorization  resources Nick Higham&amp;rsquo;s blog  An LU factorization of a \(n \times n\) matrix \(A\) is a factorization \(A = LU\), where \(L\) is lower triangular and \(U\) is upper triangular
+LUP factorization LU factorization with partial pivoting: \(PA = LU\) with \(P\) a permutation matrix.
+LDU factorization </description>
+    </item>
+    
+    <item>
+      <title>Moore-Penrose inverse</title>
+      <link>https://hugocisneros.com/notes/moore_penrose_inverse/</link>
+      <pubDate>Wed, 21 Apr 2021 08:43:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/moore_penrose_inverse/</guid>
+      <description> tags Mathematics  </description>
+    </item>
+    
+    <item>
+      <title>System of linear equations</title>
+      <link>https://hugocisneros.com/notes/system_of_linear_equations/</link>
+      <pubDate>Wed, 21 Apr 2021 08:43:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/system_of_linear_equations/</guid>
+      <description>tags Applied maths  Such a system with \(m\) equations and \(n\) unknowns is often denoted \(Ax = b\) where \(A\) is a matrix \(m\times n\) and \(b\) is a vector of size \(m\).
+There are multiple methods to solve such a systems with different sets of hypotheses.
+System types Square matrix with full rank In the most simple case: a square matrix with full rank, the solution exists and is unique: \(x = A^{-1} b\)</description>
+    </item>
+    
     <item>
       <title>Neural networks as dynamical systems</title>
       <link>https://hugocisneros.com/notes/neural_networks_as_dynamical_systems/</link>
@@ -1344,17 +1375,6 @@ They have been particularly successful for NLP applications and also penetrated 
     </item>
     
     <item>
-      <title>System of linear equations</title>
-      <link>https://hugocisneros.com/notes/system_of_linear_equations/</link>
-      <pubDate>Wed, 13 Jan 2021 15:18:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/system_of_linear_equations/</guid>
-      <description>tags Applied maths  Such a system with \(m\) equations and \(n\) unknowns is often denoted \(Ax = b\) where \(A\) is a matrix \(m\times n\) and \(b\) is a vector of size \(m\).
-There are multiple methods to solve such a systems with different sets of hypotheses.
-System types Square matrix with full rank In the most simple case: a square matrix with full rank, the solution exists and is unique: \(x = A^{-1} b\)</description>
-    </item>
-    
-    <item>
       <title>Gradient descent for wide two-layer neural networks – I : Global convergence</title>
       <link>https://hugocisneros.com/notes/gradient_descent_for_wide_two_layer_neural_networks_i_global_convergence/</link>
       <pubDate>Wed, 09 Dec 2020 14:11:00 +0100</pubDate>
@@ -2085,7 +2105,7 @@ Where is the large-scale pattern specified?</description>
       <pubDate>Tue, 21 Jul 2020 08:54:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/adaptive_computation_time/</guid>
-      <description>tags Neural networks, Algorithm  Adaptive computation time (ACT) was introduced in (Graves 2017 adaptive. The network learns how many computational steps to use before emitting an output.
+      <description>tags Neural networks, Algorithm  Adaptive computation time (ACT) was introduced in (Graves 2017) as a way to make computations in RNN adaptive. The network learns how many computational steps to use before emitting an output.
 This is done by outputting an extra halting probability at each update step, and considering two timelines:
  the input timeline which plays the role of an outer loop, at each of those step, a new input symbol is fed to the RNN.</description>
     </item>
