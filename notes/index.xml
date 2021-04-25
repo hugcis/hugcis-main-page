@@ -6,16 +6,16 @@
     <description>Recent content in Notes on Hugo Cisneros - Personal page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 Apr 2021 13:15:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Apr 2021 15:34:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Matrix factorization</title>
       <link>https://hugocisneros.com/notes/matrix_factorization/</link>
-      <pubDate>Wed, 21 Apr 2021 13:15:00 +0200</pubDate>
+      <pubDate>Wed, 21 Apr 2021 15:34:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/matrix_factorization/</guid>
-      <description> tags Mathematics  LU Factorization  resources Nick Higham&amp;rsquo;s blog  An LU factorization of a \(n \times n\) matrix \(A\) is a factorization \(A = LU\), where \(L\) is lower triangular and \(U\) is upper triangular
+      <description>tags Mathematics  LU Factorization  resources Nick Higham&amp;rsquo;s blog  An LU factorization of a \(n \times n\) matrix \(A\) is a factorization \(A = LU\), where \(L\) is lower triangular and \(U\) is upper triangular
 LUP factorization LU factorization with partial pivoting: \(PA = LU\) with \(P\) a permutation matrix.
-LDU factorization </description>
+LDU factorization Lower-diagonal upper factorization: \(A = LDU\) with \(D\) a diagonal matrix and \(L\) and \(U\) are uni-triangular (triangular with diagonal one).</description>
     </item>
     
     <item>
