@@ -13,12 +13,17 @@
     </url>
     
     <url>
-        <loc>https://hugocisneros.com/notes/matrix_factorization/</loc>
-        <lastmod>2021-04-21T15:34:00+02:00</lastmod>
+        <loc>https://hugocisneros.com/notes/generalization_in_machine_learning/</loc>
+        <lastmod>2021-04-23T11:26:00+02:00</lastmod>
     </url>
     
     <url>
         <loc>https://hugocisneros.com/notes/</loc>
+        <lastmod>2021-04-23T11:26:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/matrix_factorization/</loc>
         <lastmod>2021-04-21T15:34:00+02:00</lastmod>
     </url>
     
@@ -1638,8 +1643,23 @@
     </url>
     
     <url>
+        <loc>https://hugocisneros.com/tags/deep-learning/</loc>
+        <lastmod>2019-03-25T12:00:00+00:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/tags/nlp/</loc>
+        <lastmod>2019-03-25T12:00:00+00:00</lastmod>
+    </url>
+    
+    <url>
         <loc>https://hugocisneros.com/projects/posos_dl/</loc>
         <lastmod>2019-03-25T12:00:00+00:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/tags/graph-neural-networks-graphs/</loc>
+        <lastmod>2019-01-24T12:00:00+00:00</lastmod>
     </url>
     
     <url>
@@ -1648,8 +1668,28 @@
     </url>
     
     <url>
+        <loc>https://hugocisneros.com/tags/stochastic/</loc>
+        <lastmod>2019-01-07T12:00:00+00:00</lastmod>
+    </url>
+    
+    <url>
         <loc>https://hugocisneros.com/projects/stochastic_optimization_for_large_scale_optimal_transport/</loc>
         <lastmod>2019-01-07T12:00:00+00:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/tags/data-journalism/</loc>
+        <lastmod>2018-10-29T12:00:00+00:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/projects/data_journalism_extractor/</loc>
+        <lastmod>2018-10-29T12:00:00+00:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/projects/arxiv_explorer/</loc>
+        <lastmod>2018-10-26T12:00:00+00:00</lastmod>
     </url>
     
     <url>

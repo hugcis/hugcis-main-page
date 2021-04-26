@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data journalism on Hugo Cisneros - Personal page</title>
+    <link>https://hugocisneros.com/tags/data-journalism/</link>
+    <description>Recent content in Data journalism on Hugo Cisneros - Personal page</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 29 Oct 2018 12:00:00 +0000</lastBuildDate><atom:link href="https://hugocisneros.com/tags/data-journalism/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data journalism extractor</title>
+      <link>https://hugocisneros.com/projects/data_journalism_extractor/</link>
+      <pubDate>Mon, 29 Oct 2018 12:00:00 +0000</pubDate>
+      
+      <guid>https://hugocisneros.com/projects/data_journalism_extractor/</guid>
+      <description>Links  Github repo Online documentation  Data Journalism Extractor This project is an attempt to create a tool to help journalists extract and process data at scale, from multiple heterogenous data sources while leveraging powerful and complex database, information extraction and NLP tools with limited programming knowledge.
+Features This software is based on Apache Flink, a stream processing framework similar to Spark written in Java and Scala. It executes dataflow programs, is highly scalable and integrates easily with other Big Data frameworks and tools such as Kafka, HDFS, YARN, Cassandra or ElasticSearch.</description>
+    </item>
+    
+  </channel>
+</rss>

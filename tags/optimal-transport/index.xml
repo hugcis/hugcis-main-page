@@ -18,5 +18,25 @@ A simple problem? Let&amp;rsquo;s start at the beginning: what is Optimal transp
 It all begins with Gaspard Monge, reading his mémoire [2] in front of eminent scientists and engineers of the time &amp;mdash; including famous Enlightenment philosopher Condorcet &amp;mdash; at the French Académie Royale des Sciences in 1776.</description>
     </item>
     
+    <item>
+      <title>Stochastic optimization for large scale optimal transport</title>
+      <link>https://hugocisneros.com/projects/stochastic_optimization_for_large_scale_optimal_transport/</link>
+      <pubDate>Mon, 07 Jan 2019 12:00:00 +0000</pubDate>
+      
+      <guid>https://hugocisneros.com/projects/stochastic_optimization_for_large_scale_optimal_transport/</guid>
+      <description>Links  Project slides PDF project report Github  Description This project was part of the course Mathematical Foundations Of Data Science taught by Gabriel Peyré in 2019.
+The goal was to reproduce and extend results from [1] to other optimization algorithms, including SAGA [2]. After comparing the regularized optimal transport convergence results for these algorithms, I studied an optimal school placement and allocation problem in several French regions.</description>
+    </item>
+    
+    <item>
+      <title>Arxiv explorer</title>
+      <link>https://hugocisneros.com/projects/arxiv_explorer/</link>
+      <pubDate>Fri, 26 Oct 2018 12:00:00 +0000</pubDate>
+      
+      <guid>https://hugocisneros.com/projects/arxiv_explorer/</guid>
+      <description>Github repo  Description This project was about creating a tool similar to Arxiv Sanity with additional NLP functionalities for finding similar papers from their abstract.
+I used a concept from [1], which uses earth mover&amp;rsquo;s distance metric between documents represented as normalized bag-of-words. The underlying transport cost between two words is given by their distance in a pre-trained word vector space. The app trains word vectors on all Arxiv abstracts and uses the EMD based metric to compute similarities between papers.</description>
+    </item>
+    
   </channel>
 </rss>
