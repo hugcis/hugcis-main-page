@@ -59,14 +59,14 @@
               </dd>
             </dl>
             <h2 id="autoencoders-and-pca">Autoencoders and PCA</h2>
-            <p>The relation between <a href="https://en.wikipedia.org/wiki/Autoencoder">Autoencoders</a> and PCA is strong. In particular, a very small autoencoder with only linear activations seems intuitively very close to PCA decomposition. (<a href="#orgff9b5fa">Bourlard and Kamp 1988</a>) gives an interesting analysis of the uselessness of the activation functions in the encoding layers of an autoencoder when there is no activations in the output layers. In that case, autoencoding is closely related to a sinigular value decomposition of the input data. Quoting Elad Plaut:</p>
+            <p>The relation between <a href="https://en.wikipedia.org/wiki/Autoencoder">Autoencoders</a> and PCA is strong. In particular, a very small autoencoder with only linear activations seems intuitively very close to PCA decomposition. (<a href="#orgf8f3869">Bourlard and Kamp 1988</a>) gives an interesting analysis of the uselessness of the activation functions in the encoding layers of an autoencoder when there is no activations in the output layers. In that case, autoencoding is closely related to a sinigular value decomposition of the input data. Quoting Elad Plaut:</p>
             <blockquote>
               <p>It is well known that an autoencoder with a single fully-connected hidden layer, a linear activation function and a squared error cost function trains weights that span the same subspace as the one spanned by the principal component loading vectors, but that they are not identical to the loading vectors.</p>
             </blockquote>
-            <p>The above quote is from (<a href="#org40fd22a">Plaut 2018</a>) where it is demonstrated that autoencoder weights contain all the information of the loading vectors of the SVD.</p>
+            <p>The above quote is from (<a href="#orga3967bc">Plaut 2018</a>) where it is demonstrated that autoencoder weights contain all the information of the loading vectors of the SVD.</p>
             <h2 id="bibliography">Bibliography</h2>
-            <p><a id="orgff9b5fa"></a>Bourlard, H., and Y. Kamp. 1988. “Auto-Association by Multilayer Perceptrons and Singular Value Decomposition.” <em>Biological Cybernetics</em> 59 (4-5):291–94.</p>
-            <p><a id="org40fd22a"></a>Plaut, Elad. 2018. “From Principal Subspaces to Principal Components with Linear Autoencoders.” <em>arXiv:1804.10253 [Cs, Stat]</em>, December.</p>
+            <p><a id="orgf8f3869"></a>Bourlard, H., and Y. Kamp. 1988. “Auto-Association by Multilayer Perceptrons and Singular Value Decomposition.” <em>Biological Cybernetics</em> 59 (4-5):291–94.</p>
+            <p><a id="orga3967bc"></a>Plaut, Elad. 2018. “From Principal Subspaces to Principal Components with Linear Autoencoders.” <em>arXiv:1804.10253 [Cs, Stat]</em>, December.</p>
           </div>
           <div class="bl-section">
             <h2>Links to this note</h2>

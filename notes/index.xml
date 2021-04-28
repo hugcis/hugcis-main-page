@@ -6,11 +6,22 @@
     <description>Recent content in Notes on Hugo Cisneros - Personal page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 26 Apr 2021 20:51:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 26 Apr 2021 21:38:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reservoir computing</title>
+      <link>https://hugocisneros.com/notes/reservoir_computing/</link>
+      <pubDate>Mon, 26 Apr 2021 21:38:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/reservoir_computing/</guid>
+      <description>tags Machine learning, Unconventional computing, Unsupervised learning  Reservoir computing is a term used to describe a class of machine learning algorithms that rely on transient dynamics of a dynamical system to implement and manipulate goal-related information.
+The most famous example is Echo-state networks, which uses random recurrent neural networks as reservoirs, but other dynamical systems can also be used.
+Reservoir computing with cellular automata Reservoir computing can use Cellular automata as the reservoir.</description>
+    </item>
+    
     <item>
       <title>Notes on: Generalization over different cellular automata rules learned by a deep feed-forward neural network by Aach, M., Goebbert, J. H., &amp; Jitsev, J. (2021)</title>
       <link>https://hugocisneros.com/notes/aachgeneralizationdifferentcellular2021/</link>
-      <pubDate>Mon, 26 Apr 2021 20:51:00 +0200</pubDate>
+      <pubDate>Mon, 26 Apr 2021 20:53:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/aachgeneralizationdifferentcellular2021/</guid>
       <description>source (Aach, Goebbert, and Jitsev 2021) tags Cellular automata, Neural networks  Summary This paper studies the generalization abilities of neural networks on tasks involving learning the dynamics of cellular automata rules from examples.
@@ -1176,17 +1187,6 @@ sed -i.bak &amp;#39;/to the/d&amp;#39; test.txt cat test.</description>
       
       <guid>https://hugocisneros.com/notes/automatic_differentiation/</guid>
       <description> tags Applied maths, Optimization  </description>
-    </item>
-    
-    <item>
-      <title>Reservoir computing</title>
-      <link>https://hugocisneros.com/notes/reservoir_computing/</link>
-      <pubDate>Tue, 02 Mar 2021 10:57:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/reservoir_computing/</guid>
-      <description>tags Machine learning, Unconventional computing, Unsupervised learning  Reservoir computing with cellular automata Reservoir computing can use Cellular automata as the reservoir. Some citations (Nichele and Molund 2017; Yilmaz 2014; Morán, Frasser, and Rosselló 2018; Babson, Teuscher, and University 2019).
-Echo-state networks Bibliography Babson, Neil, Christof Teuscher, and Portland State University. 2019. “Reservoir Computing with Complex Cellular Automata.” Complex Systems 28 (4):433–55.
-Morán, Alejandro, Christiam F. Frasser, and Josep L.</description>
     </item>
     
     <item>

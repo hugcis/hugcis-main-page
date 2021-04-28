@@ -59,7 +59,7 @@
               </dd>
               <dt>source</dt>
               <dd>
-                (<a href="#org58a453d">Clune 2019</a>)
+                (<a href="#org151f292">Clune 2019</a>)
               </dd>
             </dl>
             <h2 id="summary">Summary</h2>
@@ -70,7 +70,7 @@
             <p>This part is related to <a href="/notes/neural_architecture_search/">Neural architecture search</a>: algorithms learn to create the learning architectures.</p>
             <h3 id="meta-learning-the-learning-algorithms-themselves">Meta-learning the learning algorithms themselves</h3>
             <p>This part wants to avoid learning algorithms such as SGD and instead learn them directly. Ex: Model Agnostic Meta Learning (MAML) aims at finding an initial set of weights that is the fastest at learning a range of tasks.</p>
-            <p>Another idea is to use RNN (Turing complete) trained via an outer loop optimization algorithm to be the most sample-efficient learning algorithm and use it then to train other models. This has been done in (<a href="#org3405b30">Wang et al. 2017</a>) and (<a href="#org7b5d92d">Duan et al. 2016</a>) in the context of Reinforcement learning, with policy gradients as the outer loop (in nature this would be the role of evolution).</p>
+            <p>Another idea is to use RNN (Turing complete) trained via an outer loop optimization algorithm to be the most sample-efficient learning algorithm and use it then to train other models. This has been done in (<a href="#org6b77c15">Wang et al. 2017</a>) and (<a href="#orge6a8db9">Duan et al. 2016</a>) in the context of Reinforcement learning, with policy gradients as the outer loop (in nature this would be the role of evolution).</p>
             <p>The main question with meta-learning is: what tasks should the meta-learner learn on ? The author argues that can be learned too.</p>
             <h3 id="automatically-generating-effective-learning-environments">Automatically generating effective learning environments</h3>
             <p>We should have algorithms that can learn to generate learning environments. This includes defining a reward in this environment. This is likely the hardest of the three pillars. This is what people attempt at reproducing in Alife simulations, coevolution, self-play (Dota, Go, etc.). They all more or less fail to create this open-ended complexity explosion like what happened on Earth. This is usually due to the fact that the environmental component of the algorithm is not evolving.</p>
@@ -92,9 +92,9 @@
             <p>I believe the 3rd pillar, which is the generation of effective learning environments is indeed the hardest and I even think that it is AI complete: meaning this would in itself be a sufficient to have AI. This is also because pillar 3 would necessitate open-ended evolution to work which is in my opinion AI-complete. Without even mentioning effectiveness.</p>
             <p>Overall, the goal and means to get to this goal seem very close to what many researchers are envisioning too, and I agree. However, these solutions don’t seem very promising to me , because the very system the author thinks could be generating this endless variety of environments is still undefined and remains the hardest part of the problem.</p>
             <h2 id="bibliography">Bibliography</h2>
-            <p><a id="org58a453d"></a>Clune, Jeff. 2019. “AI-GAs: AI-Generating Algorithms, an Alternate Paradigm for Producing General Artificial Intelligence.” <em>arXiv:1905.10985 [Cs]</em>, May.</p>
-            <p><a id="org7b5d92d"></a>Duan, Yan, John Schulman, Xi Chen, Peter L. Bartlett, Ilya Sutskever, and Pieter Abbeel. 2016. “RL\(^2\): Fast Reinforcement Learning via Slow Reinforcement Learning.” <em>arXiv:1611.02779 [Cs, Stat]</em>, November.</p>
-            <p><a id="org3405b30"></a>Wang, Jane X., Zeb Kurth-Nelson, Dhruva Tirumala, Hubert Soyer, Joel Z. Leibo, Remi Munos, Charles Blundell, Dharshan Kumaran, and Matt Botvinick. 2017. “Learning to Reinforcement Learn.” <em>arXiv:1611.05763 [Cs, Stat]</em>, January.</p>
+            <p><a id="org151f292"></a>Clune, Jeff. 2019. “AI-GAs: AI-Generating Algorithms, an Alternate Paradigm for Producing General Artificial Intelligence.” <em>arXiv:1905.10985 [Cs]</em>, May.</p>
+            <p><a id="orge6a8db9"></a>Duan, Yan, John Schulman, Xi Chen, Peter L. Bartlett, Ilya Sutskever, and Pieter Abbeel. 2016. “RL\(^2\): Fast Reinforcement Learning via Slow Reinforcement Learning.” <em>arXiv:1611.02779 [Cs, Stat]</em>, November.</p>
+            <p><a id="org6b77c15"></a>Wang, Jane X., Zeb Kurth-Nelson, Dhruva Tirumala, Hubert Soyer, Joel Z. Leibo, Remi Munos, Charles Blundell, Dharshan Kumaran, and Matt Botvinick. 2017. “Learning to Reinforcement Learn.” <em>arXiv:1611.05763 [Cs, Stat]</em>, January.</p>
           </div>
           <div class="note-footer">
             Last changed <a class="u-url" href="https://hugocisneros.com/notes/cluneaigasaigeneratingalgorithms2019/"><time itemprop="datePublished" class="dt-published" datetime="2021-04-23T11:13:00+0200">23/04/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
