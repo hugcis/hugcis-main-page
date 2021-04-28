@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Graphs on Hugo Cisneros - Personal page</title>
+    <link>https://hugocisneros.com/tags/graphs/</link>
+    <description>Recent content in Graphs on Hugo Cisneros - Personal page</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 24 Jan 2019 12:00:00 +0000</lastBuildDate><atom:link href="https://hugocisneros.com/tags/graphs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Graph neural networks for influence maximization</title>
+      <link>https://hugocisneros.com/projects/graph_nn_for_influence_maximization/</link>
+      <pubDate>Thu, 24 Jan 2019 12:00:00 +0000</pubDate>
+      
+      <guid>https://hugocisneros.com/projects/graph_nn_for_influence_maximization/</guid>
+      <description>Links  Project slides PDF project report  Description This project was part of the course Graphs in Machine learning taught by Michal Valko. The project was proposed by Peter Battaglia and supervised by Peter and Michal together.
+The goal of this project was to apply graph neural networks on the influence maximization (IM) problem for a graph with the independent cascade (IC) assumption (more details in the report). The project was in collaboration with Hind Dadoun</description>
+    </item>
+    
+  </channel>
+</rss>

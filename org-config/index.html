@@ -12,13 +12,12 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@cisne_hug">
   <meta name="twitter:creator" content="@cisne_hug">
-  <link rel="stylesheet" href="https://hugocisneros.com/css/main.min.d7a9fd2b760998479828b379304d27f1cd96d150bdde5ba3dc75a7be4f1beb59.css" media="all" type="text/css">
+  <link rel="stylesheet" href="https://hugocisneros.com/css/main.min.64843a26a240a89df41e8638455c8c7fe2d469a0e1217b51bd51928ffecd1255.css" media="all" type="text/css">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
   <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
   <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
@@ -115,9 +114,6 @@
               <li>
                 <a href="#configuration">Configuration</a>
               </li>
-              <li>
-                <a href="#ox-hugo-export">Ox-Hugo export</a>
-              </li>
             </ul>
           </li>
           <li>
@@ -136,405 +132,408 @@
           </li>
         </ul>
       </div><!--endtoc-->
+      <p>This is my org-mode configuration. You will find the rest of my dotfiles (including my full Doom Emacs configuration) on <a href="https://github.com/hugcis/dotfiles">Github</a>.</p>
       <h2 id="setting-up-todo-keywords">Setting up “TODO” keywords</h2>
-      <p>Those keywords are from “Organize your life in plain text!”. There are three “main” keywords and a <code>WAITING</code>, <code>HOLD</code> and <code>CANCELLED</code> keyword that each require a note for justifying moving to these states.</p>
+      <p>Those keywords are from <a href="http://doc.norang.ca/org-mode.html">“Organize your life in plain text!"</a>. There are three “main” keywords and a <code>WAITING</code>, <code>HOLD</code> and <code>CANCELLED</code> keyword that each require a note for justifying moving to these states.</p>
       <div class="highlight">
-        <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-todo-keywords</span>
-        (<span style="color:#24909d">quote</span> ((<span style="color:#40ffff">sequence</span> <span style="color:#ed9d13">"TODO(t)"</span> <span style="color:#ed9d13">"NEXT(n)"</span> <span style="color:#ed9d13">"|"</span> <span style="color:#ed9d13">"DONE(d)"</span>)
-                (<span style="color:#40ffff">sequence</span> <span style="color:#ed9d13">"WAITING(w@/!)"</span> <span style="color:#ed9d13">"HOLD(h@/!)"</span> <span style="color:#ed9d13">"|"</span> <span style="color:#ed9d13">"CANCELLED(c@/!)"</span>))))
+        <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-todo-keywords</span>
+    (<span style="color:#24909d">quote</span> ((<span style="color:#40ffff">sequence</span> <span style="color:#ed9d13">"TODO(t)"</span> <span style="color:#ed9d13">"NEXT(n)"</span> <span style="color:#ed9d13">"|"</span> <span style="color:#ed9d13">"DONE(d)"</span>)
+            (<span style="color:#40ffff">sequence</span> <span style="color:#ed9d13">"WAITING(w@/!)"</span> <span style="color:#ed9d13">"HOLD(h@/!)"</span> <span style="color:#ed9d13">"|"</span> <span style="color:#ed9d13">"CANCELLED(c@/!)"</span>))))
 </code></pre>
       </div>
       <h3 id="todo-faces-and-export-settings">“TODO” faces and export settings</h3>
       <p>This sets the colors of keywords.</p>
       <div class="highlight">
-        <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-todo-keyword-faces</span>
-          (<span style="color:#24909d">quote</span> ((<span style="color:#ed9d13">"TODO"</span> <span style="color:#24909d">:foreground</span> <span style="color:#ed9d13">"red"</span> <span style="color:#24909d">:weight</span> <span style="color:#40ffff">bold</span>)
-                  (<span style="color:#ed9d13">"NEXT"</span> <span style="color:#24909d">:foreground</span> <span style="color:#ed9d13">"blue"</span> <span style="color:#24909d">:weight</span> <span style="color:#40ffff">bold</span>)
-                  (<span style="color:#ed9d13">"DONE"</span> <span style="color:#24909d">:foreground</span> <span style="color:#ed9d13">"forest green"</span> <span style="color:#24909d">:weight</span> <span style="color:#40ffff">bold</span>)
-                  (<span style="color:#ed9d13">"WAITING"</span> <span style="color:#24909d">:foreground</span> <span style="color:#ed9d13">"orange"</span> <span style="color:#24909d">:weight</span> <span style="color:#40ffff">bold</span>)
-                  (<span style="color:#ed9d13">"HOLD"</span> <span style="color:#24909d">:foreground</span> <span style="color:#ed9d13">"magenta"</span> <span style="color:#24909d">:weight</span> <span style="color:#40ffff">bold</span>)
-                  (<span style="color:#ed9d13">"CANCELLED"</span> <span style="color:#24909d">:foreground</span> <span style="color:#ed9d13">"forest green"</span> <span style="color:#24909d">:weight</span> <span style="color:#40ffff">bold</span>)
-                  (<span style="color:#ed9d13">"MEETING"</span> <span style="color:#24909d">:foreground</span> <span style="color:#ed9d13">"forest green"</span> <span style="color:#24909d">:weight</span> <span style="color:#40ffff">bold</span>)
-                  (<span style="color:#ed9d13">"PHONE"</span> <span style="color:#24909d">:foreground</span> <span style="color:#ed9d13">"forest green"</span> <span style="color:#24909d">:weight</span> <span style="color:#40ffff">bold</span>))))
-  (<span style="color:#24909d">setq-default</span> <span style="color:#40ffff">org-export-with-todo-keywords</span> <span style="color:#40ffff">nil</span>)
-  (<span style="color:#24909d">setq-default</span> <span style="color:#40ffff">org-enforce-todo-dependencies</span> <span style="color:#40ffff">t</span>)
+        <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-todo-keyword-faces</span>
+    (<span style="color:#24909d">quote</span> ((<span style="color:#ed9d13">"TODO"</span> <span style="color:#24909d">:foreground</span> <span style="color:#ed9d13">"red"</span> <span style="color:#24909d">:weight</span> <span style="color:#40ffff">bold</span>)
+            (<span style="color:#ed9d13">"NEXT"</span> <span style="color:#24909d">:foreground</span> <span style="color:#ed9d13">"blue"</span> <span style="color:#24909d">:weight</span> <span style="color:#40ffff">bold</span>)
+            (<span style="color:#ed9d13">"DONE"</span> <span style="color:#24909d">:foreground</span> <span style="color:#ed9d13">"forest green"</span> <span style="color:#24909d">:weight</span> <span style="color:#40ffff">bold</span>)
+            (<span style="color:#ed9d13">"WAITING"</span> <span style="color:#24909d">:foreground</span> <span style="color:#ed9d13">"orange"</span> <span style="color:#24909d">:weight</span> <span style="color:#40ffff">bold</span>)
+            (<span style="color:#ed9d13">"HOLD"</span> <span style="color:#24909d">:foreground</span> <span style="color:#ed9d13">"magenta"</span> <span style="color:#24909d">:weight</span> <span style="color:#40ffff">bold</span>)
+            (<span style="color:#ed9d13">"CANCELLED"</span> <span style="color:#24909d">:foreground</span> <span style="color:#ed9d13">"forest green"</span> <span style="color:#24909d">:weight</span> <span style="color:#40ffff">bold</span>)
+            (<span style="color:#ed9d13">"MEETING"</span> <span style="color:#24909d">:foreground</span> <span style="color:#ed9d13">"forest green"</span> <span style="color:#24909d">:weight</span> <span style="color:#40ffff">bold</span>)
+            (<span style="color:#ed9d13">"PHONE"</span> <span style="color:#24909d">:foreground</span> <span style="color:#ed9d13">"forest green"</span> <span style="color:#24909d">:weight</span> <span style="color:#40ffff">bold</span>))))
+(<span style="color:#24909d">setq-default</span> <span style="color:#40ffff">org-export-with-todo-keywords</span> <span style="color:#40ffff">nil</span>)
+(<span style="color:#24909d">setq-default</span> <span style="color:#40ffff">org-enforce-todo-dependencies</span> <span style="color:#40ffff">t</span>)
 </code></pre>
       </div>
       <h3 id="org-todo-bullets">Org “TODO” bullets</h3>
       <p>I use <a href="https://github.com/integral-dw/org-superstar-mode">org-superstar</a> to remove the keywords from my org files and replace them with nice icons.</p>
       <div class="highlight">
-        <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">  (<span style="color:#24909d">with-eval-after-load</span> <span style="color:#ed9d13">'org-superstar</span>
-    <span style="color:#999;font-style:italic">;; Every non-TODO headline now have no bullet</span>
-    <span style="color:#999;font-style:italic">;; (setq org-superstar-headline-bullets-list '("\u200b"))</span>
-    <span style="color:#999;font-style:italic">;; (setq org-superstar-leading-bullet "\u200b")</span>
-    (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-superstar-item-bullet-alist</span>
-          '((<span style="color:#ed9d13">?*</span> . <span style="color:#ed9d13">?•</span>)
-            (<span style="color:#ed9d13">?+</span> . <span style="color:#ed9d13">?➤</span>)
-            (<span style="color:#ed9d13">?-</span> . <span style="color:#ed9d13">?•</span>)))
-    <span style="color:#999;font-style:italic">;; Enable custom bullets for TODO items</span>
-    (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-superstar-headline-bullets-list</span> '(<span style="color:#ed9d13">?\s</span>))
-    (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-superstar-special-todo-items</span> <span style="color:#40ffff">t</span>)
-    (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-superstar-remove-leading-stars</span> <span style="color:#40ffff">t</span>)
-    (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-superstar-todo-bullet-alist</span>
-          '((<span style="color:#ed9d13">"TODO"</span> . <span style="color:#ed9d13">?☐</span>)
-            (<span style="color:#ed9d13">"NEXT"</span> . <span style="color:#ed9d13">?✒</span>)
-            (<span style="color:#ed9d13">"HOLD"</span> . <span style="color:#ed9d13">?✰</span>)
-            (<span style="color:#ed9d13">"WAITING"</span> . <span style="color:#ed9d13">?☕</span>)
-            (<span style="color:#ed9d13">"CANCELLED"</span> . <span style="color:#ed9d13">?✘</span>)
-            (<span style="color:#ed9d13">"DONE"</span> . <span style="color:#ed9d13">?✔</span>)))
-    (<span style="color:#40ffff">org-superstar-restart</span>))
-  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-ellipsis</span> <span style="color:#ed9d13">" ▼ "</span>)
+        <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(<span style="color:#24909d">with-eval-after-load</span> <span style="color:#ed9d13">'org-superstar</span>
+  <span style="color:#999;font-style:italic">;; Every non-TODO headline now have no bullet</span>
+  <span style="color:#999;font-style:italic">;; (setq org-superstar-headline-bullets-list '("\u200b"))</span>
+  <span style="color:#999;font-style:italic">;; (setq org-superstar-leading-bullet "\u200b")</span>
+  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-superstar-item-bullet-alist</span>
+        '((<span style="color:#ed9d13">?*</span> . <span style="color:#ed9d13">?•</span>)
+          (<span style="color:#ed9d13">?+</span> . <span style="color:#ed9d13">?➤</span>)
+          (<span style="color:#ed9d13">?-</span> . <span style="color:#ed9d13">?•</span>)))
+  <span style="color:#999;font-style:italic">;; Enable custom bullets for TODO items</span>
+  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-superstar-headline-bullets-list</span> '(<span style="color:#ed9d13">?\s</span>))
+  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-superstar-special-todo-items</span> <span style="color:#40ffff">t</span>)
+  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-superstar-remove-leading-stars</span> <span style="color:#40ffff">t</span>)
+  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-superstar-todo-bullet-alist</span>
+        '((<span style="color:#ed9d13">"TODO"</span> . <span style="color:#ed9d13">?☐</span>)
+          (<span style="color:#ed9d13">"NEXT"</span> . <span style="color:#ed9d13">?✒</span>)
+          (<span style="color:#ed9d13">"HOLD"</span> . <span style="color:#ed9d13">?✰</span>)
+          (<span style="color:#ed9d13">"WAITING"</span> . <span style="color:#ed9d13">?☕</span>)
+          (<span style="color:#ed9d13">"CANCELLED"</span> . <span style="color:#ed9d13">?✘</span>)
+          (<span style="color:#ed9d13">"DONE"</span> . <span style="color:#ed9d13">?✔</span>)))
+  (<span style="color:#40ffff">org-superstar-restart</span>))
+(<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-ellipsis</span> <span style="color:#ed9d13">" ▼ "</span>)
 </code></pre>
       </div>
       <p>This results in the following appearance for different keywords: <img src="/ox-hugo/screen_org.jpg" alt=""></p>
       <h2 id="general-style">General style</h2>
       <p>This section covers the general look and feel of my org files.</p>
       <h3 id="proportional-width">Proportional width</h3>
-      <p>I use a function that I add as a hook to all the files I want to automatically set to variable width.</p>
+      <p>I use a function that I add as a hook to all the files I want to automatically set to variable width. You need to have the font installed for this to work.</p>
       <div class="highlight">
-        <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">  (<span style="color:#24909d">defun</span> <span style="color:#40ffff">my/buffer-face-mode-variable</span> ()
-    <span style="color:#ed9d13">"Set font to a variable width (proportional) fonts in current buffer"</span>
-    (<span style="color:#24909d">interactive</span>)
-    (<span style="color:#24909d">setq</span> <span style="color:#40ffff">buffer-face-mode-face</span> '(<span style="color:#24909d">:family</span> <span style="color:#ed9d13">"Roboto Slab"</span>
-                                          <span style="color:#24909d">:height</span> <span style="color:#3677a9">150</span>
-                                          <span style="color:#24909d">:width</span> <span style="color:#40ffff">normal</span>))
-    (<span style="color:#40ffff">buffer-face-mode</span>))
+        <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(<span style="color:#24909d">defun</span> <span style="color:#40ffff">my/buffer-face-mode-variable</span> ()
+  <span style="color:#ed9d13">"Set font to a variable width (proportional) fonts in current buffer"</span>
+  (<span style="color:#24909d">interactive</span>)
+  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">buffer-face-mode-face</span> '(<span style="color:#24909d">:family</span> <span style="color:#ed9d13">"Roboto Slab"</span>
+                                <span style="color:#24909d">:height</span> <span style="color:#3677a9">150</span>
+                                <span style="color:#24909d">:width</span> <span style="color:#40ffff">normal</span>))
+  (<span style="color:#40ffff">buffer-face-mode</span>))
 </code></pre>
       </div>
       <h3 id="hide-face-characters">Hide face characters</h3>
       <p>Hide <code>*</code> and <code>/</code> in org text.</p>
       <div class="highlight">
-        <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-hide-emphasis-markers</span> <span style="color:#40ffff">t</span>)
+        <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-hide-emphasis-markers</span> <span style="color:#40ffff">t</span>)
 </code></pre>
       </div>
       <h3 id="faces-setup">Faces setup</h3>
       <div class="highlight">
-        <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">      (<span style="color:#24909d">defun</span> <span style="color:#40ffff">my/style-org</span> ()
-        <span style="color:#999;font-style:italic">;; I have removed indentation to make the file look cleaner</span>
-        (<span style="color:#40ffff">org-indent-mode</span> <span style="color:#3677a9">-1</span>)
-        (<span style="color:#40ffff">my/buffer-face-mode-variable</span>)
-        (<span style="color:#24909d">setq</span> <span style="color:#40ffff">line-spacing</span> <span style="color:#3677a9">0.1</span>
-              <span style="color:#40ffff">org-pretty-entities</span> <span style="color:#40ffff">t</span>
-              <span style="color:#40ffff">org-startup-indented</span> <span style="color:#40ffff">t</span>
-              <span style="color:#40ffff">org-adapt-indentation</span> <span style="color:#40ffff">nil</span>)
-        (<span style="color:#40ffff">variable-pitch-mode</span> <span style="color:#3677a9">+1</span>)
-        (<span style="color:#447fcf">mapc</span>
-          (<span style="color:#24909d">lambda</span> (<span style="color:#40ffff">face</span>) <span style="color:#999;font-style:italic">;; Other fonts that require it are set to fixed-pitch.</span>
-            (<span style="color:#40ffff">set-face-attribute</span> <span style="color:#40ffff">face</span> <span style="color:#40ffff">nil</span> <span style="color:#24909d">:inherit</span> <span style="color:#ed9d13">'fixed-pitch</span>))
-          (<span style="color:#447fcf">list</span> <span style="color:#ed9d13">'org-block</span>
-                <span style="color:#ed9d13">'org-table</span>
-                <span style="color:#ed9d13">'org-verbatim</span>
-                <span style="color:#ed9d13">'org-block-begin-line</span>
-                <span style="color:#ed9d13">'org-block-end-line</span>
-                <span style="color:#ed9d13">'org-meta-line</span>
-                <span style="color:#ed9d13">'org-date</span>
-                <span style="color:#ed9d13">'org-drawer</span>
-                <span style="color:#ed9d13">'org-property-value</span>
-                <span style="color:#ed9d13">'org-special-keyword</span>
-                <span style="color:#ed9d13">'org-document-info-keyword</span>))
-        (<span style="color:#447fcf">mapc</span> <span style="color:#999;font-style:italic">;; This sets the fonts to a smaller size</span>
-          (<span style="color:#24909d">lambda</span> (<span style="color:#40ffff">face</span>)
-            (<span style="color:#40ffff">set-face-attribute</span> <span style="color:#40ffff">face</span> <span style="color:#40ffff">nil</span> <span style="color:#24909d">:height</span> <span style="color:#3677a9">0.8</span>))
-          (<span style="color:#447fcf">list</span> <span style="color:#ed9d13">'org-document-info-keyword</span>
-                <span style="color:#ed9d13">'org-block-begin-line</span>
-                <span style="color:#ed9d13">'org-block-end-line</span>
-                <span style="color:#ed9d13">'org-meta-line</span>
-                <span style="color:#ed9d13">'org-drawer</span>
-                <span style="color:#ed9d13">'org-property-value</span>
-                ))
-        <span style="color:#999;font-style:italic">;; (set-face-attribute 'org-indent nil</span>
-                            <span style="color:#999;font-style:italic">;; :inherit '(org-hide fixed-pitch))</span>
-        (<span style="color:#40ffff">set-face-attribute</span> <span style="color:#ed9d13">'org-code</span> <span style="color:#40ffff">nil</span>
-                            <span style="color:#24909d">:inherit</span> '(<span style="color:#40ffff">shadow</span> <span style="color:#40ffff">fixed-pitch</span>))
-        <span style="color:#999;font-style:italic">;; Without indentation the headlines need to be different to be visible</span>
-        (<span style="color:#40ffff">set-face-attribute</span> <span style="color:#ed9d13">'org-level-1</span> <span style="color:#40ffff">nil</span>
-                            <span style="color:#24909d">:height</span> <span style="color:#3677a9">1.25</span>
-                            <span style="color:#24909d">:foreground</span> <span style="color:#ed9d13">"#BEA4DB"</span>)
-        (<span style="color:#40ffff">set-face-attribute</span> <span style="color:#ed9d13">'org-level-2</span> <span style="color:#40ffff">nil</span>
-                            <span style="color:#24909d">:height</span> <span style="color:#3677a9">1.15</span>
-                            <span style="color:#24909d">:foreground</span> <span style="color:#ed9d13">"#A382FF"</span>
-                            <span style="color:#24909d">:slant</span> <span style="color:#ed9d13">'italic</span>)
-        (<span style="color:#40ffff">set-face-attribute</span> <span style="color:#ed9d13">'org-level-3</span> <span style="color:#40ffff">nil</span>
-                            <span style="color:#24909d">:height</span> <span style="color:#3677a9">1.1</span>
-                            <span style="color:#24909d">:foreground</span> <span style="color:#ed9d13">"#5E65CC"</span>
-                            <span style="color:#24909d">:slant</span> <span style="color:#ed9d13">'italic</span>)
-        (<span style="color:#40ffff">set-face-attribute</span> <span style="color:#ed9d13">'org-level-4</span> <span style="color:#40ffff">nil</span>
-                            <span style="color:#24909d">:height</span> <span style="color:#3677a9">1.05</span>
-                            <span style="color:#24909d">:foreground</span> <span style="color:#ed9d13">"#ABABFF"</span>)
-        (<span style="color:#40ffff">set-face-attribute</span> <span style="color:#ed9d13">'org-level-5</span> <span style="color:#40ffff">nil</span>
-                            <span style="color:#24909d">:foreground</span> <span style="color:#ed9d13">"#2843FB"</span>)
-        (<span style="color:#40ffff">set-face-attribute</span> <span style="color:#ed9d13">'org-date</span> <span style="color:#40ffff">nil</span>
-                            <span style="color:#24909d">:foreground</span> <span style="color:#ed9d13">"#ECBE7B"</span>
-                            <span style="color:#24909d">:height</span> <span style="color:#3677a9">0.8</span>)
-        (<span style="color:#40ffff">set-face-attribute</span> <span style="color:#ed9d13">'org-document-title</span> <span style="color:#40ffff">nil</span>
-                            <span style="color:#24909d">:foreground</span> <span style="color:#ed9d13">"DarkOrange3"</span>
-                            <span style="color:#24909d">:height</span> <span style="color:#3677a9">1.3</span>)
-        (<span style="color:#40ffff">set-face-attribute</span> <span style="color:#ed9d13">'org-ellipsis</span> <span style="color:#40ffff">nil</span>
-                            <span style="color:#24909d">:foreground</span> <span style="color:#ed9d13">"#4f747a"</span> <span style="color:#24909d">:underline</span> <span style="color:#40ffff">nil</span>)
-        (<span style="color:#40ffff">set-face-attribute</span> <span style="color:#ed9d13">'variable-pitch</span> <span style="color:#40ffff">nil</span>
-                            <span style="color:#24909d">:family</span> <span style="color:#ed9d13">"Roboto Slab"</span> <span style="color:#24909d">:height</span> <span style="color:#3677a9">1.2</span>)
-        (<span style="color:#447fcf">mapc</span> (<span style="color:#24909d">lambda</span> (<span style="color:#40ffff">pair</span>) (<span style="color:#24909d">push</span> <span style="color:#40ffff">pair</span> <span style="color:#40ffff">prettify-symbols-alist</span>))
-              '(<span style="color:#999;font-style:italic">;; Syntax</span>
-                (<span style="color:#ed9d13">"TODO"</span> .     <span style="color:#ed9d13">""</span>)
-                (<span style="color:#ed9d13">"DONE"</span> .     <span style="color:#ed9d13">""</span>)
-                (<span style="color:#ed9d13">"WAITING"</span> .  <span style="color:#ed9d13">""</span>)
-                (<span style="color:#ed9d13">"HOLD"</span> .     <span style="color:#ed9d13">""</span>)
-                (<span style="color:#ed9d13">"NEXT"</span> .     <span style="color:#ed9d13">""</span>)
-                (<span style="color:#ed9d13">"CANCELLED"</span> . <span style="color:#ed9d13">""</span>)
-                (<span style="color:#ed9d13">"#+begin_quote"</span> . <span style="color:#ed9d13">"“"</span>)
-                (<span style="color:#ed9d13">"#+end_quote"</span> . <span style="color:#ed9d13">"”"</span>)))
-        (<span style="color:#40ffff">prettify-symbols-mode</span> <span style="color:#3677a9">+1</span>)
-        (<span style="color:#40ffff">org-superstar-mode</span> <span style="color:#3677a9">+1</span>)
-      )
+        <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(<span style="color:#24909d">defun</span> <span style="color:#40ffff">my/style-org</span> ()
+  <span style="color:#999;font-style:italic">;; I have removed indentation to make the file look cleaner</span>
+  (<span style="color:#40ffff">org-indent-mode</span> <span style="color:#3677a9">-1</span>)
+  (<span style="color:#40ffff">my/buffer-face-mode-variable</span>)
+  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">line-spacing</span> <span style="color:#3677a9">0.1</span>
+        <span style="color:#40ffff">org-pretty-entities</span> <span style="color:#40ffff">t</span>
+        <span style="color:#40ffff">org-startup-indented</span> <span style="color:#40ffff">t</span>
+        <span style="color:#40ffff">org-adapt-indentation</span> <span style="color:#40ffff">nil</span>)
+  (<span style="color:#40ffff">variable-pitch-mode</span> <span style="color:#3677a9">+1</span>)
+  (<span style="color:#447fcf">mapc</span>
+   (<span style="color:#24909d">lambda</span> (<span style="color:#40ffff">face</span>) <span style="color:#999;font-style:italic">;; Other fonts that require it are set to fixed-pitch.</span>
+     (<span style="color:#40ffff">set-face-attribute</span> <span style="color:#40ffff">face</span> <span style="color:#40ffff">nil</span> <span style="color:#24909d">:inherit</span> <span style="color:#ed9d13">'fixed-pitch</span>))
+   (<span style="color:#447fcf">list</span> <span style="color:#ed9d13">'org-block</span>
+         <span style="color:#ed9d13">'org-table</span>
+         <span style="color:#ed9d13">'org-verbatim</span>
+         <span style="color:#ed9d13">'org-block-begin-line</span>
+         <span style="color:#ed9d13">'org-block-end-line</span>
+         <span style="color:#ed9d13">'org-meta-line</span>
+         <span style="color:#ed9d13">'org-date</span>
+         <span style="color:#ed9d13">'org-drawer</span>
+         <span style="color:#ed9d13">'org-property-value</span>
+         <span style="color:#ed9d13">'org-special-keyword</span>
+         <span style="color:#ed9d13">'org-document-info-keyword</span>))
+  (<span style="color:#447fcf">mapc</span> <span style="color:#999;font-style:italic">;; This sets the fonts to a smaller size</span>
+   (<span style="color:#24909d">lambda</span> (<span style="color:#40ffff">face</span>)
+     (<span style="color:#40ffff">set-face-attribute</span> <span style="color:#40ffff">face</span> <span style="color:#40ffff">nil</span> <span style="color:#24909d">:height</span> <span style="color:#3677a9">0.8</span>))
+   (<span style="color:#447fcf">list</span> <span style="color:#ed9d13">'org-document-info-keyword</span>
+         <span style="color:#ed9d13">'org-block-begin-line</span>
+         <span style="color:#ed9d13">'org-block-end-line</span>
+         <span style="color:#ed9d13">'org-meta-line</span>
+         <span style="color:#ed9d13">'org-drawer</span>
+         <span style="color:#ed9d13">'org-property-value</span>
+         ))
+  <span style="color:#999;font-style:italic">;; (set-face-attribute 'org-indent nil</span>
+  <span style="color:#999;font-style:italic">;; :inherit '(org-hide fixed-pitch))</span>
+  (<span style="color:#40ffff">set-face-attribute</span> <span style="color:#ed9d13">'org-code</span> <span style="color:#40ffff">nil</span>
+                      <span style="color:#24909d">:inherit</span> '(<span style="color:#40ffff">shadow</span> <span style="color:#40ffff">fixed-pitch</span>))
+  <span style="color:#999;font-style:italic">;; Without indentation the headlines need to be different to be visible</span>
+  (<span style="color:#40ffff">set-face-attribute</span> <span style="color:#ed9d13">'org-level-1</span> <span style="color:#40ffff">nil</span>
+                      <span style="color:#24909d">:height</span> <span style="color:#3677a9">1.25</span>
+                      <span style="color:#24909d">:foreground</span> <span style="color:#ed9d13">"#BEA4DB"</span>)
+  (<span style="color:#40ffff">set-face-attribute</span> <span style="color:#ed9d13">'org-level-2</span> <span style="color:#40ffff">nil</span>
+                      <span style="color:#24909d">:height</span> <span style="color:#3677a9">1.15</span>
+                      <span style="color:#24909d">:foreground</span> <span style="color:#ed9d13">"#A382FF"</span>
+                      <span style="color:#24909d">:slant</span> <span style="color:#ed9d13">'italic</span>)
+  (<span style="color:#40ffff">set-face-attribute</span> <span style="color:#ed9d13">'org-level-3</span> <span style="color:#40ffff">nil</span>
+                      <span style="color:#24909d">:height</span> <span style="color:#3677a9">1.1</span>
+                      <span style="color:#24909d">:foreground</span> <span style="color:#ed9d13">"#5E65CC"</span>
+                      <span style="color:#24909d">:slant</span> <span style="color:#ed9d13">'italic</span>)
+  (<span style="color:#40ffff">set-face-attribute</span> <span style="color:#ed9d13">'org-level-4</span> <span style="color:#40ffff">nil</span>
+                      <span style="color:#24909d">:height</span> <span style="color:#3677a9">1.05</span>
+                      <span style="color:#24909d">:foreground</span> <span style="color:#ed9d13">"#ABABFF"</span>)
+  (<span style="color:#40ffff">set-face-attribute</span> <span style="color:#ed9d13">'org-level-5</span> <span style="color:#40ffff">nil</span>
+                      <span style="color:#24909d">:foreground</span> <span style="color:#ed9d13">"#2843FB"</span>)
+  (<span style="color:#40ffff">set-face-attribute</span> <span style="color:#ed9d13">'org-date</span> <span style="color:#40ffff">nil</span>
+                      <span style="color:#24909d">:foreground</span> <span style="color:#ed9d13">"#ECBE7B"</span>
+                      <span style="color:#24909d">:height</span> <span style="color:#3677a9">0.8</span>)
+  (<span style="color:#40ffff">set-face-attribute</span> <span style="color:#ed9d13">'org-document-title</span> <span style="color:#40ffff">nil</span>
+                      <span style="color:#24909d">:foreground</span> <span style="color:#ed9d13">"DarkOrange3"</span>
+                      <span style="color:#24909d">:height</span> <span style="color:#3677a9">1.3</span>)
+  (<span style="color:#40ffff">set-face-attribute</span> <span style="color:#ed9d13">'org-ellipsis</span> <span style="color:#40ffff">nil</span>
+                      <span style="color:#24909d">:foreground</span> <span style="color:#ed9d13">"#4f747a"</span> <span style="color:#24909d">:underline</span> <span style="color:#40ffff">nil</span>)
+  (<span style="color:#40ffff">set-face-attribute</span> <span style="color:#ed9d13">'variable-pitch</span> <span style="color:#40ffff">nil</span>
+                      <span style="color:#24909d">:family</span> <span style="color:#ed9d13">"Roboto Slab"</span> <span style="color:#24909d">:height</span> <span style="color:#3677a9">1.2</span>)
+  (<span style="color:#447fcf">mapc</span> (<span style="color:#24909d">lambda</span> (<span style="color:#40ffff">pair</span>) (<span style="color:#24909d">push</span> <span style="color:#40ffff">pair</span> <span style="color:#40ffff">prettify-symbols-alist</span>))
+        '(<span style="color:#999;font-style:italic">;; Syntax</span>
+          (<span style="color:#ed9d13">"TODO"</span> .     <span style="color:#ed9d13">""</span>)
+          (<span style="color:#ed9d13">"DONE"</span> .     <span style="color:#ed9d13">""</span>)
+          (<span style="color:#ed9d13">"WAITING"</span> .  <span style="color:#ed9d13">""</span>)
+          (<span style="color:#ed9d13">"HOLD"</span> .     <span style="color:#ed9d13">""</span>)
+          (<span style="color:#ed9d13">"NEXT"</span> .     <span style="color:#ed9d13">""</span>)
+          (<span style="color:#ed9d13">"CANCELLED"</span> . <span style="color:#ed9d13">""</span>)
+          (<span style="color:#ed9d13">"#+begin_quote"</span> . <span style="color:#ed9d13">"“"</span>)
+          (<span style="color:#ed9d13">"#+end_quote"</span> . <span style="color:#ed9d13">"”"</span>)))
+  (<span style="color:#40ffff">prettify-symbols-mode</span> <span style="color:#3677a9">+1</span>)
+  (<span style="color:#40ffff">org-superstar-mode</span> <span style="color:#3677a9">+1</span>)
+  )
 
-      (<span style="color:#40ffff">add-hook</span> <span style="color:#ed9d13">'org-mode-hook</span> <span style="color:#ed9d13">'my/style-org</span>)
+(<span style="color:#40ffff">add-hook</span> <span style="color:#ed9d13">'org-mode-hook</span> <span style="color:#ed9d13">'my/style-org</span>)
 </code></pre>
       </div>
       <h2 id="org-agenda">Org agenda</h2>
       <div class="highlight">
-        <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">spacemacs-theme-org-agenda-height</span> <span style="color:#40ffff">nil</span>
-        <span style="color:#40ffff">org-agenda-skip-scheduled-if-done</span> <span style="color:#40ffff">t</span>
-        <span style="color:#40ffff">org-agenda-skip-deadline-if-done</span> <span style="color:#40ffff">t</span>
-        <span style="color:#40ffff">org-agenda-include-deadlines</span> <span style="color:#40ffff">t</span>
-        <span style="color:#40ffff">org-agenda-block-separator</span> <span style="color:#3677a9">#x2501</span>
-        <span style="color:#40ffff">org-agenda-compact-blocks</span> <span style="color:#40ffff">t</span>
-        <span style="color:#40ffff">org-agenda-start-with-log-mode</span> <span style="color:#40ffff">t</span>)
-  (<span style="color:#24909d">with-eval-after-load</span> <span style="color:#ed9d13">'org-journal</span>
-    (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-agenda-files</span> '(<span style="color:#ed9d13">"~/org"</span> <span style="color:#ed9d13">"~/org/roam/notes/"</span>)))
-  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-agenda-clockreport-parameter-plist</span>
-        (<span style="color:#24909d">quote</span> (<span style="color:#24909d">:link</span> <span style="color:#40ffff">t</span> <span style="color:#24909d">:maxlevel</span> <span style="color:#3677a9">5</span> <span style="color:#24909d">:fileskip0</span> <span style="color:#40ffff">t</span> <span style="color:#24909d">:compact</span> <span style="color:#40ffff">t</span> <span style="color:#24909d">:narrow</span> <span style="color:#3677a9">80</span>)))
-  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-agenda-deadline-faces</span>
-        '((<span style="color:#3677a9">1.0001</span> . <span style="color:#40ffff">org-warning</span>)              <span style="color:#999;font-style:italic">; due yesterday or before</span>
-          (<span style="color:#3677a9">0.0</span>    . <span style="color:#40ffff">org-upcoming-deadline</span>)))  <span style="color:#999;font-style:italic">; due today or later</span>
-
-  (<span style="color:#24909d">setq-default</span> <span style="color:#40ffff">org-icalendar-include-todo</span> <span style="color:#40ffff">t</span>)
-  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-combined-agenda-icalendar-file</span> <span style="color:#ed9d13">"~/org/calendar.ics"</span>)
-  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-icalendar-combined-name</span> <span style="color:#ed9d13">"Hugo Org"</span>)
-  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-icalendar-use-scheduled</span> '(<span style="color:#40ffff">todo-start</span> <span style="color:#40ffff">event-if-todo</span> <span style="color:#40ffff">event-if-not-todo</span>))
-  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-icalendar-use-deadline</span> '(<span style="color:#40ffff">todo-due</span> <span style="color:#40ffff">event-if-todo</span> <span style="color:#40ffff">event-if-not-todo</span>))
-  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-icalendar-timezone</span> <span style="color:#ed9d13">"Europe/Paris"</span>)
-  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-icalendar-store-UID</span> <span style="color:#40ffff">t</span>)
-  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-icalendar-alarm-time</span> <span style="color:#3677a9">30</span>)
-  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">french-holiday</span>
-    '((<span style="color:#40ffff">holiday-fixed</span> <span style="color:#3677a9">1</span> <span style="color:#3677a9">1</span> <span style="color:#ed9d13">"Jour de l'an"</span>)
-      (<span style="color:#40ffff">holiday-fixed</span> <span style="color:#3677a9">5</span> <span style="color:#3677a9">8</span> <span style="color:#ed9d13">"Victoire 45"</span>)
-      (<span style="color:#40ffff">holiday-fixed</span> <span style="color:#3677a9">7</span> <span style="color:#3677a9">14</span> <span style="color:#ed9d13">"Fête nationale"</span>)
-      (<span style="color:#40ffff">holiday-fixed</span> <span style="color:#3677a9">8</span> <span style="color:#3677a9">15</span> <span style="color:#ed9d13">"Assomption"</span>)
-      (<span style="color:#40ffff">holiday-fixed</span> <span style="color:#3677a9">11</span> <span style="color:#3677a9">1</span> <span style="color:#ed9d13">"Toussaint"</span>)
-      (<span style="color:#40ffff">holiday-fixed</span> <span style="color:#3677a9">11</span> <span style="color:#3677a9">11</span> <span style="color:#ed9d13">"Armistice 18"</span>)
-      (<span style="color:#40ffff">holiday-easter-etc</span> <span style="color:#3677a9">1</span> <span style="color:#ed9d13">"Lundi de Pâques"</span>)
-      (<span style="color:#40ffff">holiday-easter-etc</span> <span style="color:#3677a9">39</span> <span style="color:#ed9d13">"Ascension"</span>)
-      (<span style="color:#40ffff">holiday-easter-etc</span> <span style="color:#3677a9">50</span> <span style="color:#ed9d13">"Lundi de Pentecôte"</span>)
-      (<span style="color:#40ffff">holiday-fixed</span> <span style="color:#3677a9">1</span> <span style="color:#3677a9">6</span> <span style="color:#ed9d13">"Épiphanie"</span>)
-      (<span style="color:#40ffff">holiday-fixed</span> <span style="color:#3677a9">2</span> <span style="color:#3677a9">2</span> <span style="color:#ed9d13">"Chandeleur"</span>)
-      (<span style="color:#40ffff">holiday-fixed</span> <span style="color:#3677a9">2</span> <span style="color:#3677a9">14</span> <span style="color:#ed9d13">"Saint Valentin"</span>)
-      (<span style="color:#40ffff">holiday-fixed</span> <span style="color:#3677a9">5</span> <span style="color:#3677a9">1</span> <span style="color:#ed9d13">"Fête du travail"</span>)
-      (<span style="color:#40ffff">holiday-fixed</span> <span style="color:#3677a9">5</span> <span style="color:#3677a9">8</span> <span style="color:#ed9d13">"Commémoration de la capitulation de l'Allemagne en 1945"</span>)
-      (<span style="color:#40ffff">holiday-fixed</span> <span style="color:#3677a9">6</span> <span style="color:#3677a9">21</span> <span style="color:#ed9d13">"Fête de la musique"</span>)
-      (<span style="color:#40ffff">holiday-fixed</span> <span style="color:#3677a9">11</span> <span style="color:#3677a9">2</span> <span style="color:#ed9d13">"Commémoration des fidèles défunts"</span>)
-      (<span style="color:#40ffff">holiday-fixed</span> <span style="color:#3677a9">12</span> <span style="color:#3677a9">25</span> <span style="color:#ed9d13">"Noël"</span>)
-      <span style="color:#999;font-style:italic">;; fêtes à date variable</span>
-      (<span style="color:#40ffff">holiday-easter-etc</span> <span style="color:#3677a9">0</span> <span style="color:#ed9d13">"Pâques"</span>)
-      (<span style="color:#40ffff">holiday-easter-etc</span> <span style="color:#3677a9">49</span> <span style="color:#ed9d13">"Pentecôte"</span>)
-      (<span style="color:#40ffff">holiday-easter-etc</span> <span style="color:#3677a9">-47</span> <span style="color:#ed9d13">"Mardi gras"</span>)
-      (<span style="color:#40ffff">holiday-float</span> <span style="color:#3677a9">6</span> <span style="color:#3677a9">0</span> <span style="color:#3677a9">3</span> <span style="color:#ed9d13">"Fête des pères"</span>) <span style="color:#999;font-style:italic">;; troisième dimanche de juin</span>
-      <span style="color:#999;font-style:italic">;; Fête des mères</span>
-      (<span style="color:#40ffff">holiday-sexp</span>
-       '(<span style="color:#24909d">if</span> (<span style="color:#447fcf">equal</span>
-       <span style="color:#999;font-style:italic">;; Pentecôte</span>
-       (<span style="color:#40ffff">holiday-easter-etc</span> <span style="color:#3677a9">49</span>)
-       <span style="color:#999;font-style:italic">;; Dernier dimanche de mai</span>
-       (<span style="color:#40ffff">holiday-float</span> <span style="color:#3677a9">5</span> <span style="color:#3677a9">0</span> <span style="color:#3677a9">-1</span> <span style="color:#40ffff">nil</span>))
-      <span style="color:#999;font-style:italic">;; -&gt; Premier dimanche de juin si coïncidence</span>
-      (<span style="color:#447fcf">car</span> (<span style="color:#447fcf">car</span> (<span style="color:#40ffff">holiday-float</span> <span style="color:#3677a9">6</span> <span style="color:#3677a9">0</span> <span style="color:#3677a9">1</span> <span style="color:#40ffff">nil</span>)))
-          <span style="color:#999;font-style:italic">;; -&gt; Dernier dimanche de mai sinon</span>
-          (<span style="color:#447fcf">car</span> (<span style="color:#447fcf">car</span> (<span style="color:#40ffff">holiday-float</span> <span style="color:#3677a9">5</span> <span style="color:#3677a9">0</span> <span style="color:#3677a9">-1</span> <span style="color:#40ffff">nil</span>))))
-       <span style="color:#ed9d13">"Fête des mères"</span>)))
-  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">calendar-date-style</span> <span style="color:#ed9d13">'european</span>
-        <span style="color:#40ffff">holiday-other-holidays</span> <span style="color:#40ffff">french-holiday</span>
-        <span style="color:#40ffff">calendar-mark-holidays-flag</span> <span style="color:#40ffff">t</span>
-        <span style="color:#40ffff">calendar-week-start-day</span> <span style="color:#3677a9">1</span>
-        <span style="color:#40ffff">calendar-mark-diary-entries-flag</span> <span style="color:#40ffff">nil</span>)
+        <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-agenda-skip-scheduled-if-done</span> <span style="color:#40ffff">t</span>
+      <span style="color:#40ffff">org-agenda-skip-deadline-if-done</span> <span style="color:#40ffff">t</span>
+      <span style="color:#40ffff">org-agenda-include-deadlines</span> <span style="color:#40ffff">t</span>
+      <span style="color:#40ffff">org-agenda-block-separator</span> <span style="color:#3677a9">#x2501</span>
+      <span style="color:#40ffff">org-agenda-compact-blocks</span> <span style="color:#40ffff">t</span>
+      <span style="color:#40ffff">org-agenda-start-with-log-mode</span> <span style="color:#40ffff">t</span>)
+(<span style="color:#24909d">with-eval-after-load</span> <span style="color:#ed9d13">'org-journal</span>
+  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-agenda-files</span> '(<span style="color:#ed9d13">"~/org"</span> <span style="color:#ed9d13">"~/org/roam/notes/"</span>)))
+(<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-agenda-clockreport-parameter-plist</span>
+      (<span style="color:#24909d">quote</span> (<span style="color:#24909d">:link</span> <span style="color:#40ffff">t</span> <span style="color:#24909d">:maxlevel</span> <span style="color:#3677a9">5</span> <span style="color:#24909d">:fileskip0</span> <span style="color:#40ffff">t</span> <span style="color:#24909d">:compact</span> <span style="color:#40ffff">t</span> <span style="color:#24909d">:narrow</span> <span style="color:#3677a9">80</span>)))
+(<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-agenda-deadline-faces</span>
+      '((<span style="color:#3677a9">1.0001</span> . <span style="color:#40ffff">org-warning</span>)              <span style="color:#999;font-style:italic">; due yesterday or before</span>
+        (<span style="color:#3677a9">0.0</span>    . <span style="color:#40ffff">org-upcoming-deadline</span>)))  <span style="color:#999;font-style:italic">; due today or later</span>
+</code></pre>
+      </div>
+      <p>Most of this was copied from <a href="https://github.com/bzg/dotemacs/blob/master/emacs.org">bzg’s dotfiles</a>.</p>
+      <div class="highlight">
+        <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(<span style="color:#24909d">setq-default</span> <span style="color:#40ffff">org-icalendar-include-todo</span> <span style="color:#40ffff">t</span>)
+(<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-combined-agenda-icalendar-file</span> <span style="color:#ed9d13">"~/org/calendar.ics"</span>)
+(<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-icalendar-combined-name</span> <span style="color:#ed9d13">"Hugo Org"</span>)
+(<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-icalendar-use-scheduled</span> '(<span style="color:#40ffff">todo-start</span> <span style="color:#40ffff">event-if-todo</span> <span style="color:#40ffff">event-if-not-todo</span>))
+(<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-icalendar-use-deadline</span> '(<span style="color:#40ffff">todo-due</span> <span style="color:#40ffff">event-if-todo</span> <span style="color:#40ffff">event-if-not-todo</span>))
+(<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-icalendar-timezone</span> <span style="color:#ed9d13">"Europe/Paris"</span>)
+(<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-icalendar-store-UID</span> <span style="color:#40ffff">t</span>)
+(<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-icalendar-alarm-time</span> <span style="color:#3677a9">30</span>)
+(<span style="color:#24909d">setq</span> <span style="color:#40ffff">french-holiday</span>
+      '((<span style="color:#40ffff">holiday-fixed</span> <span style="color:#3677a9">1</span> <span style="color:#3677a9">1</span> <span style="color:#ed9d13">"Jour de l'an"</span>)
+        (<span style="color:#40ffff">holiday-fixed</span> <span style="color:#3677a9">5</span> <span style="color:#3677a9">8</span> <span style="color:#ed9d13">"Victoire 45"</span>)
+        (<span style="color:#40ffff">holiday-fixed</span> <span style="color:#3677a9">7</span> <span style="color:#3677a9">14</span> <span style="color:#ed9d13">"Fête nationale"</span>)
+        (<span style="color:#40ffff">holiday-fixed</span> <span style="color:#3677a9">8</span> <span style="color:#3677a9">15</span> <span style="color:#ed9d13">"Assomption"</span>)
+        (<span style="color:#40ffff">holiday-fixed</span> <span style="color:#3677a9">11</span> <span style="color:#3677a9">1</span> <span style="color:#ed9d13">"Toussaint"</span>)
+        (<span style="color:#40ffff">holiday-fixed</span> <span style="color:#3677a9">11</span> <span style="color:#3677a9">11</span> <span style="color:#ed9d13">"Armistice 18"</span>)
+        (<span style="color:#40ffff">holiday-easter-etc</span> <span style="color:#3677a9">1</span> <span style="color:#ed9d13">"Lundi de Pâques"</span>)
+        (<span style="color:#40ffff">holiday-easter-etc</span> <span style="color:#3677a9">39</span> <span style="color:#ed9d13">"Ascension"</span>)
+        (<span style="color:#40ffff">holiday-easter-etc</span> <span style="color:#3677a9">50</span> <span style="color:#ed9d13">"Lundi de Pentecôte"</span>)
+        (<span style="color:#40ffff">holiday-fixed</span> <span style="color:#3677a9">1</span> <span style="color:#3677a9">6</span> <span style="color:#ed9d13">"Épiphanie"</span>)
+        (<span style="color:#40ffff">holiday-fixed</span> <span style="color:#3677a9">2</span> <span style="color:#3677a9">2</span> <span style="color:#ed9d13">"Chandeleur"</span>)
+        (<span style="color:#40ffff">holiday-fixed</span> <span style="color:#3677a9">2</span> <span style="color:#3677a9">14</span> <span style="color:#ed9d13">"Saint Valentin"</span>)
+        (<span style="color:#40ffff">holiday-fixed</span> <span style="color:#3677a9">5</span> <span style="color:#3677a9">1</span> <span style="color:#ed9d13">"Fête du travail"</span>)
+        (<span style="color:#40ffff">holiday-fixed</span> <span style="color:#3677a9">5</span> <span style="color:#3677a9">8</span> <span style="color:#ed9d13">"Commémoration de la capitulation de l'Allemagne en 1945"</span>)
+        (<span style="color:#40ffff">holiday-fixed</span> <span style="color:#3677a9">6</span> <span style="color:#3677a9">21</span> <span style="color:#ed9d13">"Fête de la musique"</span>)
+        (<span style="color:#40ffff">holiday-fixed</span> <span style="color:#3677a9">11</span> <span style="color:#3677a9">2</span> <span style="color:#ed9d13">"Commémoration des fidèles défunts"</span>)
+        (<span style="color:#40ffff">holiday-fixed</span> <span style="color:#3677a9">12</span> <span style="color:#3677a9">25</span> <span style="color:#ed9d13">"Noël"</span>)
+        <span style="color:#999;font-style:italic">;; fêtes à date variable</span>
+        (<span style="color:#40ffff">holiday-easter-etc</span> <span style="color:#3677a9">0</span> <span style="color:#ed9d13">"Pâques"</span>)
+        (<span style="color:#40ffff">holiday-easter-etc</span> <span style="color:#3677a9">49</span> <span style="color:#ed9d13">"Pentecôte"</span>)
+        (<span style="color:#40ffff">holiday-easter-etc</span> <span style="color:#3677a9">-47</span> <span style="color:#ed9d13">"Mardi gras"</span>)
+        (<span style="color:#40ffff">holiday-float</span> <span style="color:#3677a9">6</span> <span style="color:#3677a9">0</span> <span style="color:#3677a9">3</span> <span style="color:#ed9d13">"Fête des pères"</span>) <span style="color:#999;font-style:italic">;; troisième dimanche de juin</span>
+        <span style="color:#999;font-style:italic">;; Fête des mères</span>
+        (<span style="color:#40ffff">holiday-sexp</span>
+         '(<span style="color:#24909d">if</span> (<span style="color:#447fcf">equal</span>
+               <span style="color:#999;font-style:italic">;; Pentecôte</span>
+               (<span style="color:#40ffff">holiday-easter-etc</span> <span style="color:#3677a9">49</span>)
+               <span style="color:#999;font-style:italic">;; Dernier dimanche de mai</span>
+               (<span style="color:#40ffff">holiday-float</span> <span style="color:#3677a9">5</span> <span style="color:#3677a9">0</span> <span style="color:#3677a9">-1</span> <span style="color:#40ffff">nil</span>))
+              <span style="color:#999;font-style:italic">;; -&gt; Premier dimanche de juin si coïncidence</span>
+              (<span style="color:#447fcf">car</span> (<span style="color:#447fcf">car</span> (<span style="color:#40ffff">holiday-float</span> <span style="color:#3677a9">6</span> <span style="color:#3677a9">0</span> <span style="color:#3677a9">1</span> <span style="color:#40ffff">nil</span>)))
+            <span style="color:#999;font-style:italic">;; -&gt; Dernier dimanche de mai sinon</span>
+            (<span style="color:#447fcf">car</span> (<span style="color:#447fcf">car</span> (<span style="color:#40ffff">holiday-float</span> <span style="color:#3677a9">5</span> <span style="color:#3677a9">0</span> <span style="color:#3677a9">-1</span> <span style="color:#40ffff">nil</span>))))
+         <span style="color:#ed9d13">"Fête des mères"</span>)))
+(<span style="color:#24909d">setq</span> <span style="color:#40ffff">calendar-date-style</span> <span style="color:#ed9d13">'european</span>
+      <span style="color:#40ffff">holiday-other-holidays</span> <span style="color:#40ffff">french-holiday</span>
+      <span style="color:#40ffff">calendar-mark-holidays-flag</span> <span style="color:#40ffff">t</span>
+      <span style="color:#40ffff">calendar-week-start-day</span> <span style="color:#3677a9">1</span>
+      <span style="color:#40ffff">calendar-mark-diary-entries-flag</span> <span style="color:#40ffff">nil</span>)
 </code></pre>
       </div>
       <h3 id="agenda-style">Agenda style</h3>
       <p>Those settings adjust the look and feel of the org-agenda.</p>
       <div class="highlight">
-        <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">    (<span style="color:#24909d">defun</span> <span style="color:#40ffff">my/style-org-agenda</span>()
-      (<span style="color:#40ffff">my/buffer-face-mode-variable</span>)
-      (<span style="color:#40ffff">set-face-attribute</span> <span style="color:#ed9d13">'org-agenda-date</span> <span style="color:#40ffff">nil</span> <span style="color:#24909d">:height</span> <span style="color:#3677a9">1.1</span>)
-      (<span style="color:#40ffff">set-face-attribute</span> <span style="color:#ed9d13">'org-agenda-date-today</span> <span style="color:#40ffff">nil</span> <span style="color:#24909d">:height</span> <span style="color:#3677a9">1.1</span> <span style="color:#24909d">:slant</span> <span style="color:#ed9d13">'italic</span>)
-      (<span style="color:#40ffff">set-face-attribute</span> <span style="color:#ed9d13">'org-agenda-date-weekend</span> <span style="color:#40ffff">nil</span> <span style="color:#24909d">:height</span> <span style="color:#3677a9">1.1</span>))
+        <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(<span style="color:#24909d">defun</span> <span style="color:#40ffff">my/style-org-agenda</span>()
+  (<span style="color:#40ffff">my/buffer-face-mode-variable</span>)
+  (<span style="color:#40ffff">set-face-attribute</span> <span style="color:#ed9d13">'org-agenda-date</span> <span style="color:#40ffff">nil</span> <span style="color:#24909d">:height</span> <span style="color:#3677a9">1.1</span>)
+  (<span style="color:#40ffff">set-face-attribute</span> <span style="color:#ed9d13">'org-agenda-date-today</span> <span style="color:#40ffff">nil</span> <span style="color:#24909d">:height</span> <span style="color:#3677a9">1.1</span> <span style="color:#24909d">:slant</span> <span style="color:#ed9d13">'italic</span>)
+  (<span style="color:#40ffff">set-face-attribute</span> <span style="color:#ed9d13">'org-agenda-date-weekend</span> <span style="color:#40ffff">nil</span> <span style="color:#24909d">:height</span> <span style="color:#3677a9">1.1</span>))
 
-    (<span style="color:#40ffff">add-hook</span> <span style="color:#ed9d13">'org-agenda-mode-hook</span> <span style="color:#ed9d13">'my/style-org-agenda</span>)
+(<span style="color:#40ffff">add-hook</span> <span style="color:#ed9d13">'org-agenda-mode-hook</span> <span style="color:#ed9d13">'my/style-org-agenda</span>)
 
-    (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-agenda-breadcrumbs-separator</span> <span style="color:#ed9d13">" ❱ "</span>
-          <span style="color:#40ffff">org-agenda-current-time-string</span> <span style="color:#ed9d13">"⏰ ┈┈┈┈┈┈┈┈┈┈┈ now"</span>
-          <span style="color:#40ffff">org-agenda-time-grid</span> '((<span style="color:#40ffff">weekly</span> <span style="color:#40ffff">today</span> <span style="color:#40ffff">require-timed</span>)
-                                 (<span style="color:#3677a9">800</span> <span style="color:#3677a9">1000</span> <span style="color:#3677a9">1200</span> <span style="color:#3677a9">1400</span> <span style="color:#3677a9">1600</span> <span style="color:#3677a9">1800</span> <span style="color:#3677a9">2000</span>)
-                                 <span style="color:#ed9d13">"---"</span> <span style="color:#ed9d13">"┈┈┈┈┈┈┈┈┈┈┈┈┈"</span>)
-          <span style="color:#40ffff">org-agenda-prefix-format</span> '((<span style="color:#40ffff">agenda</span> . <span style="color:#ed9d13">"%i %-12:c%?-12t%b% s"</span>)
-                                     (<span style="color:#40ffff">todo</span> . <span style="color:#ed9d13">" %i %-12:c"</span>)
-                                     (<span style="color:#40ffff">tags</span> . <span style="color:#ed9d13">" %i %-12:c"</span>)
-                                     (<span style="color:#40ffff">search</span> . <span style="color:#ed9d13">" %i %-12:c"</span>)))
+(<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-agenda-breadcrumbs-separator</span> <span style="color:#ed9d13">" ❱ "</span>
+      <span style="color:#40ffff">org-agenda-current-time-string</span> <span style="color:#ed9d13">"⏰ ┈┈┈┈┈┈┈┈┈┈┈ now"</span>
+      <span style="color:#40ffff">org-agenda-time-grid</span> '((<span style="color:#40ffff">weekly</span> <span style="color:#40ffff">today</span> <span style="color:#40ffff">require-timed</span>)
+                             (<span style="color:#3677a9">800</span> <span style="color:#3677a9">1000</span> <span style="color:#3677a9">1200</span> <span style="color:#3677a9">1400</span> <span style="color:#3677a9">1600</span> <span style="color:#3677a9">1800</span> <span style="color:#3677a9">2000</span>)
+                             <span style="color:#ed9d13">"---"</span> <span style="color:#ed9d13">"┈┈┈┈┈┈┈┈┈┈┈┈┈"</span>)
+      <span style="color:#40ffff">org-agenda-prefix-format</span> '((<span style="color:#40ffff">agenda</span> . <span style="color:#ed9d13">"%i %-12:c%?-12t%b% s"</span>)
+                                 (<span style="color:#40ffff">todo</span> . <span style="color:#ed9d13">" %i %-12:c"</span>)
+                                 (<span style="color:#40ffff">tags</span> . <span style="color:#ed9d13">" %i %-12:c"</span>)
+                                 (<span style="color:#40ffff">search</span> . <span style="color:#ed9d13">" %i %-12:c"</span>)))
 
-    (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-agenda-format-date</span> (<span style="color:#24909d">lambda</span> (<span style="color:#40ffff">date</span>) (<span style="color:#447fcf">concat</span> <span style="color:#ed9d13">"\n"</span>
-                                                        (<span style="color:#447fcf">make-string</span> (<span style="color:#40ffff">window-width</span>) <span style="color:#3677a9">9472</span>)
-                                                        <span style="color:#ed9d13">"\n"</span>
-                                                        (<span style="color:#40ffff">org-agenda-format-date-aligned</span> <span style="color:#40ffff">date</span>))))
-    (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-cycle-separator-lines</span> <span style="color:#3677a9">2</span>)
-    (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-agenda-category-icon-alist</span>
-          `((<span style="color:#ed9d13">"Work"</span> ,(<span style="color:#447fcf">list</span> (<span style="color:#40ffff">all-the-icons-faicon</span> <span style="color:#ed9d13">"cogs"</span>)) <span style="color:#40ffff">nil</span> <span style="color:#40ffff">nil</span> <span style="color:#24909d">:ascent</span> <span style="color:#40ffff">center</span>)
-            (<span style="color:#ed9d13">"Personal"</span> ,(<span style="color:#447fcf">list</span> (<span style="color:#40ffff">all-the-icons-material</span> <span style="color:#ed9d13">"person"</span>)) <span style="color:#40ffff">nil</span> <span style="color:#40ffff">nil</span> <span style="color:#24909d">:ascent</span> <span style="color:#40ffff">center</span>)
-            (<span style="color:#ed9d13">"Calendar"</span> ,(<span style="color:#447fcf">list</span> (<span style="color:#40ffff">all-the-icons-faicon</span> <span style="color:#ed9d13">"calendar"</span>)) <span style="color:#40ffff">nil</span> <span style="color:#40ffff">nil</span> <span style="color:#24909d">:ascent</span> <span style="color:#40ffff">center</span>)
-            (<span style="color:#ed9d13">"Reading"</span> ,(<span style="color:#447fcf">list</span> (<span style="color:#40ffff">all-the-icons-faicon</span> <span style="color:#ed9d13">"book"</span>)) <span style="color:#40ffff">nil</span> <span style="color:#40ffff">nil</span> <span style="color:#24909d">:ascent</span> <span style="color:#40ffff">center</span>)))
+(<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-agenda-format-date</span> (<span style="color:#24909d">lambda</span> (<span style="color:#40ffff">date</span>) (<span style="color:#447fcf">concat</span> <span style="color:#ed9d13">"\n"</span> (<span style="color:#447fcf">make-string</span> (<span style="color:#40ffff">window-width</span>) <span style="color:#3677a9">9472</span>)
+                                                    <span style="color:#ed9d13">"\n"</span>
+                                                    (<span style="color:#40ffff">org-agenda-format-date-aligned</span> <span style="color:#40ffff">date</span>))))
+(<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-cycle-separator-lines</span> <span style="color:#3677a9">2</span>)
+(<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-agenda-category-icon-alist</span>
+      `((<span style="color:#ed9d13">"Work"</span> ,(<span style="color:#447fcf">list</span> (<span style="color:#40ffff">all-the-icons-faicon</span> <span style="color:#ed9d13">"cogs"</span>)) <span style="color:#40ffff">nil</span> <span style="color:#40ffff">nil</span> <span style="color:#24909d">:ascent</span> <span style="color:#40ffff">center</span>)
+        (<span style="color:#ed9d13">"Personal"</span> ,(<span style="color:#447fcf">list</span> (<span style="color:#40ffff">all-the-icons-material</span> <span style="color:#ed9d13">"person"</span>)) <span style="color:#40ffff">nil</span> <span style="color:#40ffff">nil</span> <span style="color:#24909d">:ascent</span> <span style="color:#40ffff">center</span>)
+        (<span style="color:#ed9d13">"Calendar"</span> ,(<span style="color:#447fcf">list</span> (<span style="color:#40ffff">all-the-icons-faicon</span> <span style="color:#ed9d13">"calendar"</span>)) <span style="color:#40ffff">nil</span> <span style="color:#40ffff">nil</span> <span style="color:#24909d">:ascent</span> <span style="color:#40ffff">center</span>)
+        (<span style="color:#ed9d13">"Reading"</span> ,(<span style="color:#447fcf">list</span> (<span style="color:#40ffff">all-the-icons-faicon</span> <span style="color:#ed9d13">"book"</span>)) <span style="color:#40ffff">nil</span> <span style="color:#40ffff">nil</span> <span style="color:#24909d">:ascent</span> <span style="color:#40ffff">center</span>)))
 
 </code></pre>
       </div>
       <h3 id="super-agenda">Super agenda</h3>
       <p><a href="https://github.com/alphapapa/org-super-agenda">Org super agenda</a> is a powerful package for easily filtering and grouping agenda items in your views.</p>
       <div class="highlight">
-        <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">  <span style="color:#999;font-style:italic">;(setq org-super-agenda-header-separator "\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n")</span>
-  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-agenda-custom-commands</span>
-        '((<span style="color:#ed9d13">"z"</span> <span style="color:#ed9d13">"Hugo view"</span>
-           ((<span style="color:#40ffff">agenda</span> <span style="color:#ed9d13">""</span> ((<span style="color:#40ffff">org-agenda-span</span> <span style="color:#ed9d13">'day</span>)
-                        (<span style="color:#40ffff">org-super-agenda-groups</span>
-                         '((<span style="color:#24909d">:name</span> <span style="color:#ed9d13">"Today"</span>
-                                  <span style="color:#24909d">:time-grid</span> <span style="color:#40ffff">t</span>
-                                  <span style="color:#24909d">:date</span> <span style="color:#40ffff">today</span>
-                                  <span style="color:#24909d">:todo</span> <span style="color:#ed9d13">"TODAY"</span>
-                                  <span style="color:#24909d">:scheduled</span> <span style="color:#40ffff">today</span>
-                                  <span style="color:#24909d">:order</span> <span style="color:#3677a9">1</span>)))))
-            (<span style="color:#40ffff">alltodo</span> <span style="color:#ed9d13">""</span> ((<span style="color:#40ffff">org-agenda-overriding-header</span> <span style="color:#ed9d13">""</span>)
-                         (<span style="color:#40ffff">org-super-agenda-groups</span>
-                          '(<span style="color:#999;font-style:italic">;; Each group has an implicit boolean OR operator between its selectors.</span>
-                            (<span style="color:#24909d">:name</span> <span style="color:#ed9d13">"Today"</span>
-                                   <span style="color:#24909d">:deadline</span> <span style="color:#40ffff">today</span>
-                                   <span style="color:#24909d">:face</span> (<span style="color:#24909d">:background</span> <span style="color:#ed9d13">"black"</span>))
-                            (<span style="color:#24909d">:name</span> <span style="color:#ed9d13">"Passed deadline"</span>
-                                   <span style="color:#24909d">:and</span> (<span style="color:#24909d">:deadline</span> <span style="color:#40ffff">past</span> <span style="color:#24909d">:todo</span> (<span style="color:#ed9d13">"TODO"</span> <span style="color:#ed9d13">"WAITING"</span> <span style="color:#ed9d13">"HOLD"</span> <span style="color:#ed9d13">"NEXT"</span>))
-                                   <span style="color:#24909d">:face</span> (<span style="color:#24909d">:background</span> <span style="color:#ed9d13">"#7f1b19"</span>))
-                            (<span style="color:#24909d">:name</span> <span style="color:#ed9d13">"Work important"</span>
-                                   <span style="color:#24909d">:and</span> (<span style="color:#24909d">:priority&gt;=</span> <span style="color:#ed9d13">"B"</span> <span style="color:#24909d">:category</span> <span style="color:#ed9d13">"Work"</span> <span style="color:#24909d">:todo</span> (<span style="color:#ed9d13">"TODO"</span> <span style="color:#ed9d13">"NEXT"</span>)))
-                            (<span style="color:#24909d">:name</span> <span style="color:#ed9d13">"Work other"</span>
-                                   <span style="color:#24909d">:and</span> (<span style="color:#24909d">:category</span> <span style="color:#ed9d13">"Work"</span> <span style="color:#24909d">:todo</span> (<span style="color:#ed9d13">"TODO"</span> <span style="color:#ed9d13">"NEXT"</span>)))
-                            (<span style="color:#24909d">:name</span> <span style="color:#ed9d13">"Important"</span>
-                                   <span style="color:#24909d">:priority</span> <span style="color:#ed9d13">"A"</span>)
-                            (<span style="color:#24909d">:priority&lt;=</span> <span style="color:#ed9d13">"B"</span>
-                                         <span style="color:#999;font-style:italic">;; Show this section after "Today" and "Important", because</span>
-                                         <span style="color:#999;font-style:italic">;; their order is unspecified, defaulting to 0. Sections</span>
-                                         <span style="color:#999;font-style:italic">;; are displayed lowest-number-first.</span>
-                                         <span style="color:#24909d">:order</span> <span style="color:#3677a9">1</span>)
-                            (<span style="color:#24909d">:name</span> <span style="color:#ed9d13">"Papers"</span>
-                                   <span style="color:#24909d">:file-path</span> <span style="color:#ed9d13">"org/roam/notes"</span>)
-                            (<span style="color:#24909d">:name</span> <span style="color:#ed9d13">"Waiting"</span>
-                                   <span style="color:#24909d">:todo</span> <span style="color:#ed9d13">"WAITING"</span>
-                                   <span style="color:#24909d">:order</span> <span style="color:#3677a9">9</span>)
-                            (<span style="color:#24909d">:name</span> <span style="color:#ed9d13">"On hold"</span>
-                                   <span style="color:#24909d">:todo</span> <span style="color:#ed9d13">"HOLD"</span>
-                                   <span style="color:#24909d">:order</span> <span style="color:#3677a9">10</span>)))))))))
-  (<span style="color:#40ffff">add-hook</span> <span style="color:#ed9d13">'org-agenda-mode-hook</span> <span style="color:#ed9d13">'org-super-agenda-mode</span>)
+        <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-agenda-custom-commands</span>
+      '((<span style="color:#ed9d13">"z"</span> <span style="color:#ed9d13">"Hugo view"</span>
+         ((<span style="color:#40ffff">agenda</span> <span style="color:#ed9d13">""</span> ((<span style="color:#40ffff">org-agenda-span</span> <span style="color:#ed9d13">'day</span>)
+                      (<span style="color:#40ffff">org-super-agenda-groups</span>
+                       '((<span style="color:#24909d">:name</span> <span style="color:#ed9d13">"Today"</span>
+                          <span style="color:#24909d">:time-grid</span> <span style="color:#40ffff">t</span>
+                          <span style="color:#24909d">:date</span> <span style="color:#40ffff">today</span>
+                          <span style="color:#24909d">:todo</span> <span style="color:#ed9d13">"TODAY"</span>
+                          <span style="color:#24909d">:scheduled</span> <span style="color:#40ffff">today</span>
+                          <span style="color:#24909d">:order</span> <span style="color:#3677a9">1</span>)))))
+          (<span style="color:#40ffff">alltodo</span> <span style="color:#ed9d13">""</span> ((<span style="color:#40ffff">org-agenda-overriding-header</span> <span style="color:#ed9d13">""</span>)
+                       (<span style="color:#40ffff">org-super-agenda-groups</span>
+                        '(<span style="color:#999;font-style:italic">;; Each group has an implicit boolean OR operator between its selectors.</span>
+                          (<span style="color:#24909d">:name</span> <span style="color:#ed9d13">"Today"</span>
+                           <span style="color:#24909d">:deadline</span> <span style="color:#40ffff">today</span>
+                           <span style="color:#24909d">:face</span> (<span style="color:#24909d">:background</span> <span style="color:#ed9d13">"black"</span>))
+                          (<span style="color:#24909d">:name</span> <span style="color:#ed9d13">"Passed deadline"</span>
+                           <span style="color:#24909d">:and</span> (<span style="color:#24909d">:deadline</span> <span style="color:#40ffff">past</span> <span style="color:#24909d">:todo</span> (<span style="color:#ed9d13">"TODO"</span> <span style="color:#ed9d13">"WAITING"</span> <span style="color:#ed9d13">"HOLD"</span> <span style="color:#ed9d13">"NEXT"</span>))
+                           <span style="color:#24909d">:face</span> (<span style="color:#24909d">:background</span> <span style="color:#ed9d13">"#7f1b19"</span>))
+                          (<span style="color:#24909d">:name</span> <span style="color:#ed9d13">"Work important"</span>
+                           <span style="color:#24909d">:and</span> (<span style="color:#24909d">:priority&gt;=</span> <span style="color:#ed9d13">"B"</span> <span style="color:#24909d">:category</span> <span style="color:#ed9d13">"Work"</span> <span style="color:#24909d">:todo</span> (<span style="color:#ed9d13">"TODO"</span> <span style="color:#ed9d13">"NEXT"</span>)))
+                          (<span style="color:#24909d">:name</span> <span style="color:#ed9d13">"Work other"</span>
+                           <span style="color:#24909d">:and</span> (<span style="color:#24909d">:category</span> <span style="color:#ed9d13">"Work"</span> <span style="color:#24909d">:todo</span> (<span style="color:#ed9d13">"TODO"</span> <span style="color:#ed9d13">"NEXT"</span>)))
+                          (<span style="color:#24909d">:name</span> <span style="color:#ed9d13">"Important"</span>
+                           <span style="color:#24909d">:priority</span> <span style="color:#ed9d13">"A"</span>)
+                          (<span style="color:#24909d">:priority&lt;=</span> <span style="color:#ed9d13">"B"</span>
+                           <span style="color:#999;font-style:italic">;; Show this section after "Today" and "Important", because</span>
+                           <span style="color:#999;font-style:italic">;; their order is unspecified, defaulting to 0. Sections</span>
+                           <span style="color:#999;font-style:italic">;; are displayed lowest-number-first.</span>
+                           <span style="color:#24909d">:order</span> <span style="color:#3677a9">1</span>)
+                          (<span style="color:#24909d">:name</span> <span style="color:#ed9d13">"Papers"</span>
+                           <span style="color:#24909d">:file-path</span> <span style="color:#ed9d13">"org/roam/notes"</span>)
+                          (<span style="color:#24909d">:name</span> <span style="color:#ed9d13">"Waiting"</span>
+                           <span style="color:#24909d">:todo</span> <span style="color:#ed9d13">"WAITING"</span>
+                           <span style="color:#24909d">:order</span> <span style="color:#3677a9">9</span>)
+                          (<span style="color:#24909d">:name</span> <span style="color:#ed9d13">"On hold"</span>
+                           <span style="color:#24909d">:todo</span> <span style="color:#ed9d13">"HOLD"</span>
+                           <span style="color:#24909d">:order</span> <span style="color:#3677a9">10</span>)))))))))
+(<span style="color:#40ffff">add-hook</span> <span style="color:#ed9d13">'org-agenda-mode-hook</span> <span style="color:#ed9d13">'org-super-agenda-mode</span>)
 </code></pre>
       </div>
       <h2 id="org-clock">Org clock</h2>
       <div class="highlight">
-        <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">  <span style="color:#999;font-style:italic">;; Resume clocking task when emacs is restarted</span>
-  (<span style="color:#40ffff">org-clock-persistence-insinuate</span>)
-  <span style="color:#999;font-style:italic">;; Show lot of clocking history so it's easy to pick items off the C-F11 list</span>
-  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-clock-history-length</span> <span style="color:#3677a9">23</span>)
-  <span style="color:#999;font-style:italic">;; Resume clocking task on clock-in if the clock is open</span>
-  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-clock-in-resume</span> <span style="color:#40ffff">t</span>)
-  <span style="color:#999;font-style:italic">;; Sometimes I change tasks I'm clocking quickly - this removes clocked tasks with 0:00 duration</span>
-  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-clock-out-remove-zero-time-clocks</span> <span style="color:#40ffff">t</span>)
-  <span style="color:#999;font-style:italic">;; Clock out when moving task to a done state</span>
-  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-clock-out-when-done</span> <span style="color:#40ffff">t</span>)
-  <span style="color:#999;font-style:italic">;; Save the running clock and all clock history when exiting Emacs, load it on startup</span>
-  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-clock-persist</span> <span style="color:#40ffff">t</span>)
-  <span style="color:#999;font-style:italic">;; Include current clocking task in clock reports</span>
-  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-clock-report-include-clocking-task</span> <span style="color:#40ffff">t</span>)
+        <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="color:#999;font-style:italic">;; Resume clocking task when emacs is restarted</span>
+(<span style="color:#40ffff">org-clock-persistence-insinuate</span>)
+<span style="color:#999;font-style:italic">;; Show lot of clocking history so it's easy to pick items off the C-F11 list</span>
+(<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-clock-history-length</span> <span style="color:#3677a9">23</span>)
+<span style="color:#999;font-style:italic">;; Resume clocking task on clock-in if the clock is open</span>
+(<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-clock-in-resume</span> <span style="color:#40ffff">t</span>)
+<span style="color:#999;font-style:italic">;; Sometimes I change tasks I'm clocking quickly - this removes clocked tasks with 0:00 duration</span>
+(<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-clock-out-remove-zero-time-clocks</span> <span style="color:#40ffff">t</span>)
+<span style="color:#999;font-style:italic">;; Clock out when moving task to a done state</span>
+(<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-clock-out-when-done</span> <span style="color:#40ffff">t</span>)
+<span style="color:#999;font-style:italic">;; Save the running clock and all clock history when exiting Emacs, load it on startup</span>
+(<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-clock-persist</span> <span style="color:#40ffff">t</span>)
+<span style="color:#999;font-style:italic">;; Include current clocking task in clock reports</span>
+(<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-clock-report-include-clocking-task</span> <span style="color:#40ffff">t</span>)
 </code></pre>
       </div>
       <h2 id="org-custom-commands">Org custom commands</h2>
+      <p>Define some keybindings and options in org-mode.</p>
       <div class="highlight">
-        <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">  (<span style="color:#40ffff">add-hook</span> <span style="color:#ed9d13">'org-mode-hook</span> <span style="color:#ed9d13">'turn-on-auto-fill</span>)
-  (<span style="color:#40ffff">add-hook</span> <span style="color:#ed9d13">'org-mode-hook</span>
-            (<span style="color:#24909d">lambda</span> ()
-              (<span style="color:#24909d">setq</span> <span style="color:#40ffff">fill-column</span> <span style="color:#3677a9">80</span>)
-              (<span style="color:#447fcf">define-key</span> <span style="color:#40ffff">org-mode-map</span> (<span style="color:#40ffff">kbd</span> <span style="color:#ed9d13">"s-i"</span>) <span style="color:#ed9d13">'org-clock-in</span>)
-              (<span style="color:#447fcf">define-key</span> <span style="color:#40ffff">org-mode-map</span> (<span style="color:#40ffff">kbd</span> <span style="color:#ed9d13">"s-o"</span>) <span style="color:#ed9d13">'org-clock-out</span>)
-              (<span style="color:#447fcf">define-key</span> <span style="color:#40ffff">org-mode-map</span> (<span style="color:#40ffff">kbd</span> <span style="color:#ed9d13">"s-d"</span>) <span style="color:#ed9d13">'org-todo</span>)
-              (<span style="color:#447fcf">define-key</span> <span style="color:#40ffff">org-mode-map</span> (<span style="color:#40ffff">kbd</span> <span style="color:#ed9d13">"M-+"</span>) <span style="color:#ed9d13">'text-scale-increase</span>)
-              (<span style="color:#447fcf">define-key</span> <span style="color:#40ffff">org-mode-map</span> (<span style="color:#40ffff">kbd</span> <span style="color:#ed9d13">"M-°"</span>) <span style="color:#ed9d13">'text-scale-decrease</span>)
-              (<span style="color:#447fcf">define-key</span> <span style="color:#40ffff">org-mode-map</span> (<span style="color:#40ffff">kbd</span> <span style="color:#ed9d13">"C-c \" \""</span>)
-                (<span style="color:#24909d">lambda</span> () (<span style="color:#24909d">interactive</span>) (<span style="color:#40ffff">org-zotxt-insert-reference-link</span> '(<span style="color:#3677a9">4</span>))))))
+        <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(<span style="color:#40ffff">add-hook</span> <span style="color:#ed9d13">'org-mode-hook</span> <span style="color:#ed9d13">'turn-on-auto-fill</span>)
+(<span style="color:#40ffff">add-hook</span> <span style="color:#ed9d13">'org-mode-hook</span>
+          (<span style="color:#24909d">lambda</span> ()
+            (<span style="color:#24909d">setq</span> <span style="color:#40ffff">fill-column</span> <span style="color:#3677a9">80</span>)
+            (<span style="color:#447fcf">define-key</span> <span style="color:#40ffff">org-mode-map</span> (<span style="color:#40ffff">kbd</span> <span style="color:#ed9d13">"s-i"</span>) <span style="color:#ed9d13">'org-clock-in</span>)
+            (<span style="color:#447fcf">define-key</span> <span style="color:#40ffff">org-mode-map</span> (<span style="color:#40ffff">kbd</span> <span style="color:#ed9d13">"s-o"</span>) <span style="color:#ed9d13">'org-clock-out</span>)
+            (<span style="color:#447fcf">define-key</span> <span style="color:#40ffff">org-mode-map</span> (<span style="color:#40ffff">kbd</span> <span style="color:#ed9d13">"s-d"</span>) <span style="color:#ed9d13">'org-todo</span>)
+            (<span style="color:#447fcf">define-key</span> <span style="color:#40ffff">org-mode-map</span> (<span style="color:#40ffff">kbd</span> <span style="color:#ed9d13">"M-+"</span>) <span style="color:#ed9d13">'text-scale-increase</span>)
+            (<span style="color:#447fcf">define-key</span> <span style="color:#40ffff">org-mode-map</span> (<span style="color:#40ffff">kbd</span> <span style="color:#ed9d13">"M-°"</span>) <span style="color:#ed9d13">'text-scale-decrease</span>)
+            (<span style="color:#447fcf">define-key</span> <span style="color:#40ffff">org-mode-map</span> (<span style="color:#40ffff">kbd</span> <span style="color:#ed9d13">"C-c \" \""</span>)
+              (<span style="color:#24909d">lambda</span> () (<span style="color:#24909d">interactive</span>) (<span style="color:#40ffff">org-zotxt-insert-reference-link</span> '(<span style="color:#3677a9">4</span>))))))
 </code></pre>
       </div>
       <h3 id="close-journal-on-exit">Close journal on exit</h3>
+      <p>A small function to make journaling faster by closing the buffer when I save it.</p>
       <div class="highlight">
-        <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">  (<span style="color:#24909d">defun</span> <span style="color:#40ffff">org-journal-save-entry-and-exit</span>()
-    <span style="color:#ed9d13">"Simple convenience function.
+        <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(<span style="color:#24909d">defun</span> <span style="color:#40ffff">org-journal-save-entry-and-exit</span>()
+  <span style="color:#ed9d13">"Simple convenience function.
 </span><span style="color:#ed9d13">    Saves the buffer of the current day's entry and kills the window
 </span><span style="color:#ed9d13">    Similar to org-capture like behavior"</span>
-    (<span style="color:#24909d">interactive</span>)
-    (<span style="color:#40ffff">save-buffer</span>)
-    (<span style="color:#40ffff">kill-buffer-and-window</span>))
+  (<span style="color:#24909d">interactive</span>)
+  (<span style="color:#40ffff">save-buffer</span>)
+  (<span style="color:#40ffff">kill-buffer-and-window</span>))
 
-  (<span style="color:#40ffff">add-hook</span> <span style="color:#ed9d13">'org-journal-mode-hook</span>
-            (<span style="color:#24909d">lambda</span> ()
-              (<span style="color:#447fcf">define-key</span> <span style="color:#40ffff">org-journal-mode-map</span>
-                (<span style="color:#40ffff">kbd</span> <span style="color:#ed9d13">"C-x C-s"</span>) <span style="color:#ed9d13">'org-journal-save-entry-and-exit</span>)))
+(<span style="color:#40ffff">add-hook</span> <span style="color:#ed9d13">'org-journal-mode-hook</span>
+          (<span style="color:#24909d">lambda</span> ()
+            (<span style="color:#447fcf">define-key</span> <span style="color:#40ffff">org-journal-mode-map</span>
+              (<span style="color:#40ffff">kbd</span> <span style="color:#ed9d13">"C-x C-s"</span>) <span style="color:#ed9d13">'org-journal-save-entry-and-exit</span>)))
 </code></pre>
       </div>
       <h2 id="org-ref-and-bibtex">Org Ref and Bibtex</h2>
       <div class="highlight">
-        <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">  (<span style="color:#24909d">with-eval-after-load</span> <span style="color:#ed9d13">'org-ref</span>
-    (<span style="color:#24909d">setq</span> <span style="color:#40ffff">reftex-default-bibliography</span> '(<span style="color:#ed9d13">"~/Papers/library.bib"</span>))
-    (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-ref-default-bibliography</span> '(<span style="color:#ed9d13">"~/Papers/library.bib"</span>)
-          <span style="color:#40ffff">org-ref-pdf-directory</span> <span style="color:#ed9d13">"~/Papers/pdf/"</span>
-          <span style="color:#40ffff">org-ref-bibliography-notes</span> <span style="color:#ed9d13">"~/org/roam/notes"</span>)
-    (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-ref-notes-function</span>
-          (<span style="color:#24909d">lambda</span> (<span style="color:#40ffff">thekey</span>)
-            (<span style="color:#24909d">let</span> ((<span style="color:#40ffff">bibtex-completion-bibliography</span> (<span style="color:#40ffff">org-ref-find-bibliography</span>)))
-              (<span style="color:#40ffff">bibtex-completion-edit-notes</span>
-               (<span style="color:#447fcf">list</span> (<span style="color:#447fcf">car</span> (<span style="color:#40ffff">org-ref-get-bibtex-key-and-file</span> <span style="color:#40ffff">thekey</span>)))))))
+        <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(<span style="color:#24909d">with-eval-after-load</span> <span style="color:#ed9d13">'org-ref</span>
+  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">reftex-default-bibliography</span> '(<span style="color:#ed9d13">"~/Papers/library.bib"</span>))
+  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-ref-default-bibliography</span> '(<span style="color:#ed9d13">"~/Papers/library.bib"</span>)
+        <span style="color:#40ffff">org-ref-pdf-directory</span> <span style="color:#ed9d13">"~/Papers/pdf/"</span>
+        <span style="color:#40ffff">org-ref-bibliography-notes</span> <span style="color:#ed9d13">"~/org/roam/notes"</span>)
+  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-ref-notes-function</span>
+        (<span style="color:#24909d">lambda</span> (<span style="color:#40ffff">thekey</span>)
+          (<span style="color:#24909d">let</span> ((<span style="color:#40ffff">bibtex-completion-bibliography</span> (<span style="color:#40ffff">org-ref-find-bibliography</span>)))
+            (<span style="color:#40ffff">bibtex-completion-edit-notes</span>
+             (<span style="color:#447fcf">list</span> (<span style="color:#447fcf">car</span> (<span style="color:#40ffff">org-ref-get-bibtex-key-and-file</span> <span style="color:#40ffff">thekey</span>)))))))
   )
 
-  <span style="color:#999;font-style:italic">;; Bibtex setup</span>
-  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">bibtex-completion-notes-path</span> <span style="color:#ed9d13">"~/org/roam/notes"</span>)
-  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">bibtex-completion-pdf-open-function</span>
-        (<span style="color:#24909d">lambda</span> (<span style="color:#40ffff">fpath</span>)
-          (<span style="color:#24909d">cond</span> ((<span style="color:#447fcf">eq</span> <span style="color:#40ffff">system-type</span> <span style="color:#ed9d13">'darwin</span>) (<span style="color:#447fcf">start-process</span> <span style="color:#ed9d13">"open"</span> <span style="color:#ed9d13">"*open*"</span> <span style="color:#ed9d13">"open"</span> <span style="color:#40ffff">fpath</span>))
-                ((<span style="color:#447fcf">eq</span> <span style="color:#40ffff">system-type</span> <span style="color:#ed9d13">'gnu/linux</span>) (<span style="color:#447fcf">start-process</span> <span style="color:#ed9d13">"evince"</span> <span style="color:#ed9d13">"*evince*"</span> <span style="color:#ed9d13">"evince"</span> <span style="color:#40ffff">fpath</span>)))))
-  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">bibtex-completion-pdf-field</span> <span style="color:#ed9d13">"file"</span>)
-  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">bibtex-completion-pdf-symbol</span> <span style="color:#ed9d13">"⌘"</span>)
-  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">bibtex-completion-notes-symbol</span> <span style="color:#ed9d13">"✎"</span>)
-  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">bibtex-completion-notes-template-multiple-files</span>
-        <span style="color:#ed9d13">"#+TITLE: Notes on: ${title} by ${author-or-editor} (${year})\n#+HUGO_BASE_DIR: ~/website/personal-website/
-</span><span style="color:#ed9d13">#+HUGO_SECTION: notes\n#+hugo_lastmod: Time-stamp: &lt;&gt;\n#+ROAM_KEY: cite:${=key=}\n\n- source :: cite:${=key=}
+<span style="color:#999;font-style:italic">;; Bibtex setup</span>
+(<span style="color:#24909d">setq</span> <span style="color:#40ffff">bibtex-completion-notes-path</span> <span style="color:#ed9d13">"~/org/roam/notes"</span>)
+(<span style="color:#24909d">setq</span> <span style="color:#40ffff">bibtex-completion-pdf-open-function</span>
+      (<span style="color:#24909d">lambda</span> (<span style="color:#40ffff">fpath</span>)
+        (<span style="color:#24909d">cond</span> ((<span style="color:#447fcf">eq</span> <span style="color:#40ffff">system-type</span> <span style="color:#ed9d13">'darwin</span>) (<span style="color:#447fcf">start-process</span> <span style="color:#ed9d13">"open"</span> <span style="color:#ed9d13">"*open*"</span> <span style="color:#ed9d13">"open"</span> <span style="color:#40ffff">fpath</span>))
+              ((<span style="color:#447fcf">eq</span> <span style="color:#40ffff">system-type</span> <span style="color:#ed9d13">'gnu/linux</span>) (<span style="color:#447fcf">start-process</span> <span style="color:#ed9d13">"evince"</span> <span style="color:#ed9d13">"*evince*"</span> <span style="color:#ed9d13">"evince"</span> <span style="color:#40ffff">fpath</span>)))))
+(<span style="color:#24909d">setq</span> <span style="color:#40ffff">bibtex-completion-pdf-field</span> <span style="color:#ed9d13">"file"</span>)
+(<span style="color:#24909d">setq</span> <span style="color:#40ffff">bibtex-completion-pdf-symbol</span> <span style="color:#ed9d13">"⌘"</span>)
+(<span style="color:#24909d">setq</span> <span style="color:#40ffff">bibtex-completion-notes-symbol</span> <span style="color:#ed9d13">"✎"</span>)
+(<span style="color:#24909d">setq</span> <span style="color:#40ffff">bibtex-completion-notes-template-multiple-files</span>
+      <span style="color:#ed9d13">":PROPERTIES:\n:ROAM_REFS: cite:${=key=}\n:END:\n#+TITLE: Notes on: ${title} by ${author-or-editor} (${year})\n#+hugo_lastmod: Time-stamp: &lt;&gt;\n#+ROAM_KEY: cite:${=key=}\n\n- source :: cite:${=key=}
 </span><span style="color:#ed9d13">\n\n* TODO Summary\n* TODO Comments\n\n
 </span><span style="color:#ed9d13">bibliography:~/Papers/library_bibtex.bib"</span>)
 </code></pre>
       </div>
       <h2 id="org-capture">Org capture</h2>
+      <p>I use org captures mostly for quickly creating new events and event-related TODOs.</p>
       <div class="highlight">
-        <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-capture-templates</span>
-        '((<span style="color:#ed9d13">"n"</span> <span style="color:#ed9d13">"Notes"</span> <span style="color:#40ffff">entry</span>
-           (<span style="color:#40ffff">file</span> <span style="color:#ed9d13">"~/org/inbox.org"</span>) <span style="color:#ed9d13">"* %^{Description} %^g\n Added: %U\n%?"</span>)
-          (<span style="color:#ed9d13">"m"</span> <span style="color:#ed9d13">"Meeting notes"</span> <span style="color:#40ffff">entry</span>
-           (<span style="color:#40ffff">file</span> <span style="color:#ed9d13">"~/org/meetings.org"</span>) <span style="color:#ed9d13">"* TODO %^{Title} %t\n- %?"</span>)
-          (<span style="color:#ed9d13">"t"</span> <span style="color:#ed9d13">"TODO"</span> <span style="color:#40ffff">entry</span>
-           (<span style="color:#40ffff">file</span> <span style="color:#ed9d13">"~/org/inbox.org"</span>) <span style="color:#ed9d13">"* TODO %^{Title}"</span>)
-          (<span style="color:#ed9d13">"e"</span> <span style="color:#ed9d13">"Event"</span> <span style="color:#40ffff">entry</span>
-           (<span style="color:#40ffff">file</span> <span style="color:#ed9d13">"~/org/calendar.org"</span>) <span style="color:#ed9d13">"* %^{Is it a todo?||TODO |NEXT }%^{Title}\n%^t\n%?"</span>)
-          (<span style="color:#ed9d13">"w"</span> <span style="color:#ed9d13">"Work TODO"</span> <span style="color:#40ffff">entry</span>
-           (<span style="color:#40ffff">file</span> <span style="color:#ed9d13">"~/org/work.org"</span>) <span style="color:#ed9d13">"* TODO %^{Title}"</span>)))
+        <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-capture-templates</span>
+      '((<span style="color:#ed9d13">"n"</span> <span style="color:#ed9d13">"Notes"</span> <span style="color:#40ffff">entry</span>
+         (<span style="color:#40ffff">file</span> <span style="color:#ed9d13">"~/org/inbox.org"</span>) <span style="color:#ed9d13">"* %^{Description} %^g\n Added: %U\n%?"</span>)
+        (<span style="color:#ed9d13">"m"</span> <span style="color:#ed9d13">"Meeting notes"</span> <span style="color:#40ffff">entry</span>
+         (<span style="color:#40ffff">file</span> <span style="color:#ed9d13">"~/org/meetings.org"</span>) <span style="color:#ed9d13">"* TODO %^{Title} %t\n- %?"</span>)
+        (<span style="color:#ed9d13">"t"</span> <span style="color:#ed9d13">"TODO"</span> <span style="color:#40ffff">entry</span>
+         (<span style="color:#40ffff">file</span> <span style="color:#ed9d13">"~/org/inbox.org"</span>) <span style="color:#ed9d13">"* TODO %^{Title}"</span>)
+        (<span style="color:#ed9d13">"e"</span> <span style="color:#ed9d13">"Event"</span> <span style="color:#40ffff">entry</span>
+         (<span style="color:#40ffff">file</span> <span style="color:#ed9d13">"~/org/calendar.org"</span>) <span style="color:#ed9d13">"* %^{Is it a todo?||TODO |NEXT }%^{Title}\n%^t\n%?"</span>)
+        (<span style="color:#ed9d13">"w"</span> <span style="color:#ed9d13">"Work TODO"</span> <span style="color:#40ffff">entry</span>
+         (<span style="color:#40ffff">file</span> <span style="color:#ed9d13">"~/org/work.org"</span>) <span style="color:#ed9d13">"* TODO %^{Title}"</span>)))
 </code></pre>
       </div>
       <h2 id="org-refile">Org Refile</h2>
       <div class="highlight">
-        <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-refile-targets</span> '((<span style="color:#40ffff">org-agenda-files</span> . (<span style="color:#24909d">:maxlevel</span> . <span style="color:#3677a9">6</span>))))
-  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-refile-use-outline-path</span> <span style="color:#ed9d13">'file</span>)
-  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-refile-allow-creating-parent-nodes</span> <span style="color:#ed9d13">'confirm</span>)
+        <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-refile-targets</span> '((<span style="color:#40ffff">org-agenda-files</span> . (<span style="color:#24909d">:maxlevel</span> . <span style="color:#3677a9">6</span>))))
+(<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-refile-use-outline-path</span> <span style="color:#ed9d13">'file</span>)
+(<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-refile-allow-creating-parent-nodes</span> <span style="color:#ed9d13">'confirm</span>)
 </code></pre>
       </div>
       <h2 id="org-roam">Org Roam</h2>
@@ -542,78 +541,69 @@
       <h3 id="configuration">Configuration</h3>
       <p>You’ll find the exported notes on <a href="https://hugocisneros.com/notes/">my notes page</a>.</p>
       <div class="highlight">
-        <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">  (<span style="color:#24909d">with-eval-after-load</span> <span style="color:#ed9d13">'org-roam</span>
-    <span style="color:#999;font-style:italic">;; Style the backlinks buffer like an org-mode file</span>
-    <span style="color:#999;font-style:italic">;; (add-hook 'org-roam-backlinks-mode-hook 'my/style-org)</span>
-    <span style="color:#999;font-style:italic">;; Roam is always one level deep in my org-directory</span>
-    (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-roam-directory</span> (<span style="color:#447fcf">concat</span> <span style="color:#40ffff">org-directory</span> <span style="color:#ed9d13">"/roam/"</span>))
-    <span style="color:#999;font-style:italic">;; Graphing options</span>
-    (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-roam-graphviz-executable</span> (<span style="color:#40ffff">executable-find</span> <span style="color:#ed9d13">"neato"</span>))
-    (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-roam-graphviz-extra-options</span> '((<span style="color:#ed9d13">"overlap"</span> . <span style="color:#ed9d13">"false"</span>)))
+        <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(<span style="color:#24909d">with-eval-after-load</span> <span style="color:#ed9d13">'org-roam</span>
+  <span style="color:#999;font-style:italic">;; Roam is always one level deep in my org-directory</span>
+  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-roam-directory</span> (<span style="color:#447fcf">concat</span> <span style="color:#40ffff">org-directory</span> <span style="color:#ed9d13">"/roam/"</span>))
+  <span style="color:#999;font-style:italic">;; Graphing options</span>
+  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-roam-graphviz-executable</span> (<span style="color:#40ffff">executable-find</span> <span style="color:#ed9d13">"neato"</span>))
+  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-roam-graphviz-extra-options</span> '((<span style="color:#ed9d13">"overlap"</span> . <span style="color:#ed9d13">"false"</span>)))
 
-    (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-roam-completion-system</span> <span style="color:#ed9d13">'helm</span>)
-
-    (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-roam-capture-templates</span>
-          '((<span style="color:#ed9d13">"d"</span> <span style="color:#ed9d13">"default"</span> <span style="color:#40ffff">plain</span> <span style="color:#447fcf">#'</span><span style="color:#40ffff">org-roam--capture-get-point</span> <span style="color:#ed9d13">"%?"</span>
-             <span style="color:#24909d">:file-name</span> <span style="color:#ed9d13">"${slug}"</span>
-             <span style="color:#24909d">:head</span> <span style="color:#ed9d13">"#+TITLE: ${title}\n#+HUGO_BASE_DIR: ~/website/personal-\
-</span><span style="color:#ed9d13">  website/\n#+HUGO_SECTION: notes\n#+hugo_lastmod: Time-stamp: &lt;&gt;\n\n"</span>
-             <span style="color:#24909d">:unnarrowed</span> <span style="color:#40ffff">t</span>)
-            (<span style="color:#ed9d13">"t"</span> <span style="color:#ed9d13">"temp"</span> <span style="color:#40ffff">plain</span> <span style="color:#447fcf">#'</span><span style="color:#40ffff">org-roam--capture-get-point</span> <span style="color:#ed9d13">"%?"</span>
-             <span style="color:#24909d">:file-name</span> <span style="color:#ed9d13">"%&lt;%Y%m%d%H%M%S&gt;-${slug}"</span>
-             <span style="color:#24909d">:head</span> <span style="color:#ed9d13">"#+TITLE: ${title}\n#+HUGO_BASE_DIR: ~/website/personal-\
-</span><span style="color:#ed9d13">  website/\n#+HUGO_SECTION: notes\n#+hugo_lastmod: Time-stamp: &lt;&gt;\n\n"</span>
-             <span style="color:#24909d">:unnarrowed</span> <span style="color:#40ffff">t</span>)))
-    <span style="color:#999;font-style:italic">;; Org-roam v2</span>
-    (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-roam-mode-sections</span>
-          (<span style="color:#447fcf">list</span> <span style="color:#447fcf">#'</span><span style="color:#40ffff">org-roam-backlinks-insert-section</span>
-                <span style="color:#447fcf">#'</span><span style="color:#40ffff">org-roam-reflinks-insert-section</span>
-                <span style="color:#447fcf">#'</span><span style="color:#40ffff">org-roam-unlinked-references-insert-section</span>))
-    )
-    (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-id-extra-files</span> (<span style="color:#40ffff">org-roam--list-files</span> <span style="color:#40ffff">org-roam-directory</span>))
-</code></pre>
-      </div>
-      <h3 id="ox-hugo-export">Ox-Hugo export</h3>
-      <p>I use <a href="https://ox-hugo.scripter.co/">ox-hugo</a> to export my org-roam notes to markdown and then to web pages. The <code>my/org-export-all-roam</code> loops through all the org files and exports them one by one.</p>
-      <div class="highlight">
-        <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">  (<span style="color:#24909d">with-eval-after-load</span> <span style="color:#ed9d13">'ox-hugo</span>
-    (<span style="color:#24909d">defun</span> <span style="color:#40ffff">my/org-export-all-roam</span> ()
-      (<span style="color:#24909d">interactive</span>)
-      (<span style="color:#447fcf">mapc</span> (<span style="color:#24909d">lambda</span> (<span style="color:#40ffff">fPath</span>)
-              (<span style="color:#24909d">ignore-errors</span> (<span style="color:#24909d">with-temp-buffer</span>
-                               (<span style="color:#40ffff">find-file-read-only</span> <span style="color:#40ffff">fPath</span>)
-                               (<span style="color:#40ffff">org-hugo-export-to-md</span>)
-                               (<span style="color:#447fcf">kill-buffer</span>))))
-            (<span style="color:#40ffff">org-roam--list-files</span> <span style="color:#40ffff">org-roam-directory</span>)))
-    (<span style="color:#40ffff">citeproc-org-setup</span>))
-  <span style="color:#999;font-style:italic">;; Using Deft in org-mode</span>
-  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">deft-directory</span> <span style="color:#ed9d13">"~/org/roam/"</span>)
+  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-roam-completion-system</span> <span style="color:#ed9d13">'helm</span>)
+  (<span style="color:#40ffff">add-to-list</span> <span style="color:#ed9d13">'display-buffer-alist</span>
+               '((<span style="color:#ed9d13">"\\*org-roam\\*"</span>
+                  (<span style="color:#40ffff">display-buffer-in-direction</span>)
+                  (<span style="color:#40ffff">direction</span> . <span style="color:#40ffff">right</span>)
+                  (<span style="color:#40ffff">window-width</span> . <span style="color:#3677a9">0.33</span>)
+                  (<span style="color:#40ffff">window-height</span> . <span style="color:#40ffff">fit-window-to-buffer</span>))))
+  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-roam-capture-templates</span>
+        '((<span style="color:#ed9d13">"d"</span> <span style="color:#ed9d13">"default"</span> <span style="color:#40ffff">plain</span> <span style="color:#ed9d13">"%?"</span>
+           <span style="color:#24909d">:immediate-finish</span> <span style="color:#40ffff">t</span>
+           <span style="color:#24909d">:if-new</span> (<span style="color:#40ffff">file+head</span> <span style="color:#ed9d13">"${slug}.org"</span>
+                              <span style="color:#ed9d13">"#+TITLE: ${title}\n#+hugo_lastmod: Time-stamp: &lt;&gt;\n\n"</span>)
+           <span style="color:#24909d">:unnarrowed</span> <span style="color:#40ffff">t</span>)
+          (<span style="color:#ed9d13">"t"</span> <span style="color:#ed9d13">"temp"</span> <span style="color:#40ffff">plain</span> <span style="color:#ed9d13">"%?"</span>
+           <span style="color:#24909d">:if-new</span>(<span style="color:#40ffff">file+head</span> <span style="color:#ed9d13">"%&lt;%Y%m%d%H%M%S&gt;-${slug}.org"</span>
+                             <span style="color:#ed9d13">"#+TITLE: ${title}\n#+hugo_lastmod: Time-stamp: &lt;&gt;\n\n"</span>)
+           <span style="color:#24909d">:immediate-finish</span> <span style="color:#40ffff">t</span>
+           <span style="color:#24909d">:unnarrowed</span> <span style="color:#40ffff">t</span>)
+          (<span style="color:#ed9d13">"p"</span> <span style="color:#ed9d13">"private"</span> <span style="color:#40ffff">plain</span> <span style="color:#ed9d13">"%?"</span>
+           <span style="color:#24909d">:if-new</span> (<span style="color:#40ffff">file+head</span> <span style="color:#ed9d13">"${slug}-private.org"</span>
+                              <span style="color:#ed9d13">"#+TITLE: ${title}\n"</span>)
+           <span style="color:#24909d">:immediate-finish</span> <span style="color:#40ffff">t</span>
+           <span style="color:#24909d">:unnarrowed</span> <span style="color:#40ffff">t</span>)))
+  <span style="color:#999;font-style:italic">;; Org-roam v2</span>
+  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-roam-mode-sections</span>
+        (<span style="color:#447fcf">list</span> <span style="color:#447fcf">#'</span><span style="color:#40ffff">org-roam-backlinks-insert-section</span>
+              <span style="color:#447fcf">#'</span><span style="color:#40ffff">org-roam-reflinks-insert-section</span>
+              <span style="color:#447fcf">#'</span><span style="color:#40ffff">org-roam-unlinked-references-insert-section</span>))
+  )
+(<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-id-extra-files</span> (<span style="color:#40ffff">org-roam--list-files</span> <span style="color:#40ffff">org-roam-directory</span>))
 </code></pre>
       </div>
       <h2 id="org-caldav">Org Caldav</h2>
       <p>I use this function to sync my calendar with a remote calendar on a server running Nextcloud with the <a href="https://github.com/dengste/org-caldav">org-caldav</a> package. This should also work with Google calendar. It allows me to get my org-mode calendar on all my devices and get notifications of upcoming events.</p>
       <div class="highlight">
-        <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">  (<span style="color:#24909d">defun</span> <span style="color:#40ffff">my/caldav-sync-perso</span> ()
+        <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(<span style="color:#24909d">defun</span> <span style="color:#40ffff">my/caldav-sync-perso</span> ()
   <span style="color:#ed9d13">"Sync my local calendar in ~/org/calendar.org with my remote calendar"</span>
-    (<span style="color:#24909d">interactive</span>)
-    (<span style="color:#24909d">let</span> ((<span style="color:#40ffff">org-caldav-inbox</span> <span style="color:#ed9d13">"~/org/cal_inbox.org"</span>)
-          (<span style="color:#40ffff">org-caldav-calendar-id</span> <span style="color:#ed9d13">"org"</span>)
-          (<span style="color:#40ffff">org-caldav-url</span> <span style="color:#ed9d13">"https://cld.hugocisneros.com/remote.php/dav/calendars/ncp/"</span>)
-          (<span style="color:#40ffff">org-caldav-files</span> '(<span style="color:#ed9d13">"~/org/calendar.org"</span>)))
-      (<span style="color:#447fcf">call-interactively</span> <span style="color:#ed9d13">'org-caldav-sync</span>)))
+  (<span style="color:#24909d">interactive</span>)
+  (<span style="color:#24909d">let</span> ((<span style="color:#40ffff">org-caldav-inbox</span> <span style="color:#ed9d13">"~/org/cal_inbox.org"</span>)
+        (<span style="color:#40ffff">org-caldav-calendar-id</span> <span style="color:#ed9d13">"org"</span>)
+        (<span style="color:#40ffff">org-caldav-url</span> <span style="color:#ed9d13">"https://cld.hugocisneros.com/remote.php/dav/calendars/ncp/"</span>)
+        (<span style="color:#40ffff">org-caldav-files</span> '(<span style="color:#ed9d13">"~/org/calendar.org"</span>)))
+    (<span style="color:#447fcf">call-interactively</span> <span style="color:#ed9d13">'org-caldav-sync</span>)))
 </code></pre>
       </div>
       <h2 id="misc">Misc</h2>
       <h3 id="timestamp-on-save">Timestamp on save</h3>
       <p>Org-roam notes are created with a <code>#+hugo_lastmod: Time-stamp: &lt;&gt;</code> line in the beginning. The hook below makes sure the current time is inserted between the brackets each time I save a file. This is useful to keep track of when I last edited a note.</p>
       <div class="highlight">
-        <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">  (<span style="color:#40ffff">add-hook</span> <span style="color:#ed9d13">'before-save-hook</span> <span style="color:#ed9d13">'time-stamp</span>)
+        <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(<span style="color:#40ffff">add-hook</span> <span style="color:#ed9d13">'before-save-hook</span> <span style="color:#ed9d13">'time-stamp</span>)
 </code></pre>
       </div>
       <h3 id="make-markdown-mode-variable-width">Make markdown mode variable width</h3>
       <p>This is not part of the org-mode configuration, but applies variable width mode to markdown files when I (rarely) edit one.</p>
       <div class="highlight">
-        <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">  (<span style="color:#40ffff">add-hook</span> <span style="color:#ed9d13">'markdown-mode-hook</span> <span style="color:#ed9d13">'my/buffer-face-mode-variable</span>)
+        <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(<span style="color:#40ffff">add-hook</span> <span style="color:#ed9d13">'markdown-mode-hook</span> <span style="color:#ed9d13">'my/buffer-face-mode-variable</span>)
 </code></pre>
       </div>
     </main>

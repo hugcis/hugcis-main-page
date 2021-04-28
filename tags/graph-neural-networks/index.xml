@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Graph neural networks - Graphs on Hugo Cisneros - Personal page</title>
-    <link>https://hugocisneros.com/tags/graph-neural-networks-graphs/</link>
-    <description>Recent content in Graph neural networks - Graphs on Hugo Cisneros - Personal page</description>
+    <title>Graph neural networks on Hugo Cisneros - Personal page</title>
+    <link>https://hugocisneros.com/tags/graph-neural-networks/</link>
+    <description>Recent content in Graph neural networks on Hugo Cisneros - Personal page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 24 Jan 2019 12:00:00 +0000</lastBuildDate><atom:link href="https://hugocisneros.com/tags/graph-neural-networks-graphs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Jan 2019 12:00:00 +0000</lastBuildDate><atom:link href="https://hugocisneros.com/tags/graph-neural-networks/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Graph neural networks for influence maximization</title>
       <link>https://hugocisneros.com/projects/graph_nn_for_influence_maximization/</link>

@@ -6,7 +6,18 @@
     <description>Recent content in Notes on Hugo Cisneros - Personal page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 23 Apr 2021 11:26:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 26 Apr 2021 20:51:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Notes on: Generalization over different cellular automata rules learned by a deep feed-forward neural network by Aach, M., Goebbert, J. H., &amp; Jitsev, J. (2021)</title>
+      <link>https://hugocisneros.com/notes/aachgeneralizationdifferentcellular2021/</link>
+      <pubDate>Mon, 26 Apr 2021 20:51:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/aachgeneralizationdifferentcellular2021/</guid>
+      <description>source (Aach, Goebbert, and Jitsev 2021) tags Cellular automata, Neural networks  Summary This paper studies the generalization abilities of neural networks on tasks involving learning the dynamics of cellular automata rules from examples.
+Neural networks are trained to predict the next state of a CA from the three previous timesteps. Different training examples for a single rule corresponds to different initialization.
+The authors study three kinds of generalization:</description>
+    </item>
+    
     <item>
       <title>Generalization in Machine learning</title>
       <link>https://hugocisneros.com/notes/generalization_in_machine_learning/</link>
@@ -14,6 +25,15 @@
       
       <guid>https://hugocisneros.com/notes/generalization_in_machine_learning/</guid>
       <description> tags Machine learning, Applied maths  </description>
+    </item>
+    
+    <item>
+      <title>Notes on: AI-GAs: AI-generating algorithms, an alternate paradigm for producing general artificial intelligence by Clune, J. (2019)</title>
+      <link>https://hugocisneros.com/notes/cluneaigasaigeneratingalgorithms2019/</link>
+      <pubDate>Fri, 23 Apr 2021 11:13:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/cluneaigasaigeneratingalgorithms2019/</guid>
+      <description>tags Artificial Intelligence, Genetic algorithms, Open-ended Evolution source (Clune 2019)  Summary Nowadays, the design of AI systems is approached through one main way (more or less): the implementation of some elementary building blocks &amp;mdash; like convolutions, skip connections, activation functions, attention, etc. We currently have no clear idea how to combine these relatively successful blocks into a global system that would take advantage of each and every one of them.</description>
     </item>
     
     <item>
@@ -238,16 +258,6 @@ There is indeed a deep connection between the two models, making it seem like th
       <guid>https://hugocisneros.com/notes/unker_non_linear_writing_system/</guid>
       <description>tags Language resources https://s.ai/nlws/  A fascinating writing system based on glyphs connected to each other to create meaning. The system is quite advanced and reading its grammar is like discovering some new alien language.
 This is the kind of complexity that would be incredible to discover in open-ended evolving language systems. A system starting from elementary components and no particular assumption about what language should be, could come up with such exotic models (probably even more exotic in the case of a truly open-ended system).</description>
-    </item>
-    
-    <item>
-      <title>Notes on: AI-GAs: AI-generating algorithms, an alternate paradigm for producing general artificial intelligence by Clune, J. (2019)</title>
-      <link>https://hugocisneros.com/notes/cluneaigasaigeneratingalgorithms2019/</link>
-      <pubDate>Thu, 25 Mar 2021 11:06:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/cluneaigasaigeneratingalgorithms2019/</guid>
-      <description>tags Artificial Intelligence, Genetic algorithms, Open-ended Evolution source (Clune 2019)  Summary We are nowadays more or less approaching the design of AI through the implementation of some elementary building blocks &amp;mdash; like convolutions, skip connections, activation functions, attention, etc. We have no idea how to combine these relatively successful blocks into a global system that would work by combining them.
-In essence, Darwinian evolution is a form of algorithms that moved its way up from the simplest replicators to the human mind.</description>
     </item>
     
     <item>
