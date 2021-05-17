@@ -6,11 +6,11 @@
     <description>Recent content in Notes on Hugo Cisneros - Personal page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 17 May 2021 14:38:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 17 May 2021 14:41:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Notes on: Emergence in artificial life by Gershenson, C. (2021)</title>
       <link>https://hugocisneros.com/notes/gershensonemergenceartificiallife2021/</link>
-      <pubDate>Mon, 17 May 2021 14:38:00 +0200</pubDate>
+      <pubDate>Mon, 17 May 2021 14:41:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/gershensonemergenceartificiallife2021/</guid>
       <description>tags Artificial life, Emergence source (Gershenson 2021)  Summary The paper introduces a complexity metric based on information. emergence is first measured with Shannon&amp;rsquo;s information: \[E = - K \sum_{i} p_i \log p_i\]
