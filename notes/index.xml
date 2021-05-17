@@ -6,7 +6,69 @@
     <description>Recent content in Notes on Hugo Cisneros - Personal page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 05 May 2021 16:26:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 17 May 2021 14:38:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Notes on: Emergence in artificial life by Gershenson, C. (2021)</title>
+      <link>https://hugocisneros.com/notes/gershensonemergenceartificiallife2021/</link>
+      <pubDate>Mon, 17 May 2021 14:38:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/gershensonemergenceartificiallife2021/</guid>
+      <description>tags Artificial life, Emergence source (Gershenson 2021)  Summary The paper introduces a complexity metric based on information. emergence is first measured with Shannon&amp;rsquo;s information: \[E = - K \sum_{i} p_i \log p_i\]
+Then the author argues that self-organization can be seen as the opposite of emergence, and measured with \[S = 1 - E\]
+ [&amp;hellip;] complex systems tend to exhibit both emergence and self-organization. Extreme emergence implies chaos, while extreme self-organization implies immutability.</description>
+    </item>
+    
+    <item>
+      <title>Artificial life</title>
+      <link>https://hugocisneros.com/notes/artificial_life/</link>
+      <pubDate>Sun, 16 May 2021 18:28:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/artificial_life/</guid>
+      <description>Artificial life could be thought of as attempts at re-creating biological Life or other types of life. It uses different tools such as biology, physics, chemistry, computer science, etc.
+Creating artificial life seems like a possible way to create AI, since most living systems on Earth seem to exhibit some form of robust intelligent behavior.
+Definition of artificial life from Carlos Gershenson in (Gershenson 2021)
+ Beginning in the mid-1980s, ALife has studied living systems using a synthetic approach: building life to understand it better (Aguilar et al.</description>
+    </item>
+    
+    <item>
+      <title>Reductionism</title>
+      <link>https://hugocisneros.com/notes/reductionism/</link>
+      <pubDate>Sun, 16 May 2021 18:27:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/reductionism/</guid>
+      <description>tags Philosophy, Physics  Reductionism is a philosophy according to which the laws of physics are relatively simple and could be expressed concisely. If we were to understand and model all those laws we could explain any given phenomenon by breaking it down into its smaller parts until we just need to apply these simple laws.
+With the current state of physics, it seems we are close to understanding many of these fundamental laws (although major shortcomings remain in the theory).</description>
+    </item>
+    
+    <item>
+      <title>Church-Turing thesis</title>
+      <link>https://hugocisneros.com/notes/church_turing_thesis/</link>
+      <pubDate>Sun, 16 May 2021 14:56:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/church_turing_thesis/</guid>
+      <description>tags Computability theory  A function on the natural numbers can be computed effectively if and only if it can be computed by a Turing Machine (or any equivalent computational model).
+Implications for Zuse&amp;rsquo;s thesis An interesting implication of the Church-Turing thesis is any Turing-complete computational model could in theory be &amp;ldquo;computing&amp;rdquo; our Universe. However, the constant overhead of running this algorithm is very different from one model to another.</description>
+    </item>
+    
+    <item>
+      <title>Notes on: More Is Different by Anderson, P. W. (1972)</title>
+      <link>https://hugocisneros.com/notes/andersonmoredifferent1972/</link>
+      <pubDate>Sun, 16 May 2021 14:37:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/andersonmoredifferent1972/</guid>
+      <description>tags Complexity, Philosophy source (Anderson 1972)  This is a fundamental paper discussing the fundamental laws of Physics and their relations with complexity.
+Reductionism doesn&amp;rsquo;t imply constructionism It is generally accepted that the fundamental laws governing our Universe are relatively simple. We feel we understand many of these laws quite well. However, understanding these fundamental laws are far from enough to actually describe and reconstruct all phenomena we witness.</description>
+    </item>
+    
+    <item>
+      <title>Emergence in artificial life</title>
+      <link>https://hugocisneros.com/notes/emergence_in_artificial_life/</link>
+      <pubDate>Sun, 16 May 2021 14:23:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/emergence_in_artificial_life/</guid>
+      <description>tags Artificial life, Emergence resources (Gershenson 2021)  Bibliography Gershenson, Carlos. April 2021. &amp;ldquo;Emergence in Artificial Life&amp;rdquo;. arXiv:2105.03216 [Physics], April.</description>
+    </item>
+    
     <item>
       <title>Notes on: Hopfield Networks is All You Need by Ramsauer, H., Schäfl, B., Lehner, J., Seidl, P., Widrich, M., Gruber, L., Holzleitner, M., … (2020)</title>
       <link>https://hugocisneros.com/notes/ramsauerhopfieldnetworksall2020/</link>
@@ -191,16 +253,6 @@ Examples based on Neural CA  Self organizing textures: (Niklasson et al. 2021) D
     </item>
     
     <item>
-      <title>Artificial life</title>
-      <link>https://hugocisneros.com/notes/artificial_life/</link>
-      <pubDate>Mon, 12 Apr 2021 14:57:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/artificial_life/</guid>
-      <description>Artificial life could be thought of as attempts at re-creating biological Life or other types of life. It uses different tools such as biology, physics, chemistry, computer science, etc.
-Creating artificial life seems like a possible way to create AI, since most living systems on Earth seem to exhibit some form of robust intelligent behavior.</description>
-    </item>
-    
-    <item>
       <title>Avida</title>
       <link>https://hugocisneros.com/notes/avida/</link>
       <pubDate>Mon, 12 Apr 2021 14:57:00 +0200</pubDate>
@@ -320,16 +372,6 @@ There is indeed a deep connection between the two models, making it seem like th
       <guid>https://hugocisneros.com/notes/unker_non_linear_writing_system/</guid>
       <description>tags Language resources https://s.ai/nlws/  A fascinating writing system based on glyphs connected to each other to create meaning. The system is quite advanced and reading its grammar is like discovering some new alien language.
 This is the kind of complexity that would be incredible to discover in open-ended evolving language systems. A system starting from elementary components and no particular assumption about what language should be, could come up with such exotic models (probably even more exotic in the case of a truly open-ended system).</description>
-    </item>
-    
-    <item>
-      <title>Notes on: More Is Different by Anderson, P. W. (1972)</title>
-      <link>https://hugocisneros.com/notes/andersonmoredifferent1972/</link>
-      <pubDate>Thu, 25 Mar 2021 10:26:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/andersonmoredifferent1972/</guid>
-      <description>tags Complexity, Philosophy source (Anderson 1972)  This is a fundamental paper discussing the fundamental laws of Physics and their relations with complexity.
-Reductionism doesn&amp;rsquo;t imply constructionism It is generally accepted that the fundamental laws governing our Universe are relatively simple. We feel we understand many of these laws quite well. However, understanding these fundamental laws are far from enough to actually describe and reconstruct all phenomena we witness.</description>
     </item>
     
     <item>
@@ -2553,16 +2595,6 @@ The study also shows that 93% of users had a unique fixed set of IP addresses du
       
       <guid>https://hugocisneros.com/notes/public_key_encryption/</guid>
       <description> tags Cryptography  RSA Diffie-Hellman Elliptic curve cryptography </description>
-    </item>
-    
-    <item>
-      <title>Church-Turing thesis</title>
-      <link>https://hugocisneros.com/notes/church_turing_thesis/</link>
-      <pubDate>Mon, 13 Jul 2020 16:25:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/church_turing_thesis/</guid>
-      <description>tags Computability theory  A function on the natural numbers can be computed effectively if and only if it can be computed by a Turing Machine (or any equivalent computational model).
-Implications for Zuse&amp;rsquo;s thesis An interesting implication of the Church-Turing thesis is any Turing-complete computational model could in theory be &amp;ldquo;computing&amp;rdquo; our Universe. However, the constant overhead of running this algorithm is very different from one model to another.</description>
     </item>
     
     <item>
