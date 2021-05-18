@@ -65,7 +65,7 @@
             </dl>
             <p>ECA are one of the simplest form of 1D cellular automata possible. The grid is a 1-dimensional array of cells in state <code>0</code> or <code>1</code> (<code>dead</code> or <code>alive</code>). The size of the neighborhood being used for the update is 3 (one cell to the left, the main cell and one cell to the right).</p>
             <p>Each of those \(2^3\) neighborhoods of size 3 can be mapped to either state <code>1</code> or <code>0</code>. There are \(2^{2^3} = 2^8 = 256\) possible mappings and therefore 256 possible ECA rules.</p>
-            <p>From this very simple definition, rules with various unexpected behavior emerge. Wolfram constructed a classification of those behavior, known as Wolfram’s classification (<a href="#orgba46606">Wolfram 2002</a>).</p>
+            <p>From this very simple definition, rules with various unexpected behavior emerge. Wolfram constructed a classification of those behavior, known as Wolfram’s classification (<a href="#org59fdb4a">Wolfram 2002</a>).</p>
             <h2 id="simple-implementation">Simple implementation</h2>
             <p>In <a href="/notes/python/">Python</a>, taking advantage of Numpy’s array manipulation. This implementation is much faster than loping through elements of the grid to update them, but uses more memory. The <a href="/notes/algorithm/">algorithm</a> is simply based on the standard ECA update.</p>
             <div class="highlight">
@@ -102,7 +102,7 @@ fig.savefig(<span style="color:#ed9d13">'img/plots/ca_rule54.png'</span>)
               <img src="/img/plots/ca_rule54.png">
             </figure>
             <h2 id="bibliography">Bibliography</h2>
-            <p><a id="orgba46606"></a><span itemscope itemtype="https://schema.org/ScholarlyArticle"><span itemprop="author">Wolfram, Stephen</span>. <span datetime="2002" itemprop="datePublished">2002</span>. <em>A New Kind of Science</em>. Champaign, IL: Wolfram Media.</span></p>
+            <p><a id="org59fdb4a"></a><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle"><span itemprop="author">Wolfram, Stephen</span>. <span datetime="2002" itemprop="datePublished">2002</span>. <em>A New Kind of Science</em>. Champaign, IL: Wolfram Media.</span></p>
           </div>
           <div class="bl-section">
             <h2>Links to this note</h2>

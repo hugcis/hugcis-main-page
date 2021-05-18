@@ -55,7 +55,7 @@
             <dl>
               <dt>source</dt>
               <dd>
-                (<a href="#org3a8e6f4">Lechner et al. 2020</a>)
+                (<a href="#org2ae3db2">Lechner et al. 2020</a>)
               </dd>
               <dt>tags</dt>
               <dd>
@@ -64,11 +64,11 @@
             </dl>
             <h2 id="summary">Summary</h2>
             <p>This article introduces a type of <a href="/notes/recurrent_neural_networks/">RNN</a> called Neural Circuit Policies (NCP). This architecture is said to be inspired from the wiring diagram of the <em>C. elegans</em> nematode.</p>
-            <p>The main building block is a Recurrent neural network called liquid time constant (LTC) introduced in (<a href="#orgf5f17a8">Hasani et al. 2020</a>).</p>
+            <p>The main building block is a Recurrent neural network called liquid time constant (LTC) introduced in (<a href="#org5ef8ffa">Hasani et al. 2020</a>).</p>
             <h3 id="ltc-neurons">LTC Neurons</h3>
             <p>These neurons are bio-inspired. For a given neuron in state x_i(t), the continuous temporal evolution is described by an ODE: \[ \dot{x}_i = - \left(\frac{1}{\tau_i} + \frac{w_{ij}}{C_{m_i}} \sigma_i(x_j) \right) x_i + \left( \frac{x_{\text{leak}_i}}{\tau_i}+ \frac{w_{ij}}{C_{m_i}} \sigma_i(x_j) E_{ij} \right) \]</p>
             <p>where \(w_{ij}\) is a synaptic weight from neuron \(i\) to \(j\), \(C_{m_i}\) is the membrane capacitance of the neuron \(i\), and \(\sigma_i(x_j(t)) = 1/\left( 1 + e^{-\gamma_{ij}(x_j-\mu_{ij})}\right)\). \(x_{\text{leak}_i}\) is called the resting potential and \(E_ij\) is a reversal synaptic potential.</p>
-            <p>More details about the biological analogy for those quantities are given in (<a href="#orgf5f17a8">Hasani et al. 2020</a>; <a href="#org3a8e6f4">Lechner et al. 2020</a>).</p>
+            <p>More details about the biological analogy for those quantities are given in (<a href="#org5ef8ffa">Hasani et al. 2020</a>; <a href="#org2ae3db2">Lechner et al. 2020</a>).</p>
             <h3 id="results">Results</h3>
             <p>The authors reports good results on a car steering task compared to many RNN architectures, although not much better than LSTMs. The main advantages of this method according to the authors are:</p>
             <ul>
@@ -79,8 +79,8 @@
             <h2 id="comments">Comments</h2>
             <p>I was excited about this paper because it seemed to have found a way to train very small neural networks with an <a href="/notes/alternative_learning_mechanisms/">alternative learning mechanism</a>, maybe akin to <a href="/notes/reservoir_computing/">reservoir computing</a>. However it appears to be based on the same principles as traditional supervised learning. The main innovation of this paper would therefore be the architecture it proposes, which I may not understand very deeply due to lack of knowledge in neuroscience.</p>
             <h2 id="bibliography">Bibliography</h2>
-            <p><a id="orgf5f17a8"></a><span itemscope itemtype="https://schema.org/ScholarlyArticle"><span itemprop="author"><span itemprop="author">Hasani, Ramin</span>, <span itemprop="author">Mathias Lechner</span>, <span itemprop="author">Alexander Amini</span>, <span itemprop="author">Daniela Rus</span>, and <span itemprop="author">Radu Grosu</span></span>. <span datetime="2020" itemprop="datePublished">September 2020</span>. “<span itemprop="name">Liquid Time-Constant Networks</span>”. <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">arXiv:2006.04439 [Cs, Stat]</i></span>, September.</span></p>
-            <p><a id="org3a8e6f4"></a><span itemscope itemtype="https://schema.org/ScholarlyArticle"><span itemprop="author"><span itemprop="author">Lechner, Mathias</span>, <span itemprop="author">Ramin Hasani</span>, <span itemprop="author">Alexander Amini</span>, <span itemprop="author">Thomas A. Henzinger</span>, <span itemprop="author">Daniela Rus</span>, and <span itemprop="author">Radu Grosu</span></span>. <span datetime="2020" itemprop="datePublished">October 2020</span>. “<span itemprop="name">Neural Circuit Policies Enabling Auditable Autonomy</span>”. <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Nature Machine Intelligence</i></span> 2 (10):642–52.</span></p>
+            <p><a id="org5ef8ffa"></a><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle"><span itemprop="author"><span itemprop="author">Hasani, Ramin</span>, <span itemprop="author">Mathias Lechner</span>, <span itemprop="author">Alexander Amini</span>, <span itemprop="author">Daniela Rus</span>, and <span itemprop="author">Radu Grosu</span></span>. <span datetime="2020" itemprop="datePublished">September 2020</span>. “<span itemprop="name">Liquid Time-Constant Networks</span>”. <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">arXiv:2006.04439 [Cs, Stat]</i></span>, September.</span></p>
+            <p><a id="org2ae3db2"></a><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle"><span itemprop="author"><span itemprop="author">Lechner, Mathias</span>, <span itemprop="author">Ramin Hasani</span>, <span itemprop="author">Alexander Amini</span>, <span itemprop="author">Thomas A. Henzinger</span>, <span itemprop="author">Daniela Rus</span>, and <span itemprop="author">Radu Grosu</span></span>. <span datetime="2020" itemprop="datePublished">October 2020</span>. “<span itemprop="name">Neural Circuit Policies Enabling Auditable Autonomy</span>”. <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Nature Machine Intelligence</i></span> 2 (10):642–52.</span></p>
           </div>
           <div class="note-footer">
             Last changed <a class="u-url" href="https://hugocisneros.com/notes/lechnerneuralcircuitpolicies2020/"><time itemprop="datePublished" class="dt-published" datetime="2021-03-25T09:57:00+0100">25/03/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>

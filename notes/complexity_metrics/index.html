@@ -58,9 +58,9 @@
                 <a href="/notes/complexity/">Complexity</a>
               </dd>
             </dl>
-            <p>To study the complexity of various systems, researchers have come up with various metrics. They are based on several principles such as <a href="/notes/information_theory/">Information theory</a> or <a href="/notes/algorithmic_information_theory/">Algorithmic Information theory</a>. Many of these metrics are described in (<a href="#org5163a46">Grassberger 1989</a>).</p>
+            <p>To study the complexity of various systems, researchers have come up with various metrics. They are based on several principles such as <a href="/notes/information_theory/">Information theory</a> or <a href="/notes/algorithmic_information_theory/">Algorithmic Information theory</a>. Many of these metrics are described in (<a href="#orgda57b7d">Grassberger 1989</a>).</p>
             <h2 id="shannon-entropy-and-kolmogorov-complexity">Shannon entropy and Kolmogorov Complexity</h2>
-            <p>The paper (<a href="#org52eeb01">Grunwald and Vitanyi, n.d.</a>) is a great description and analysis of two of the most important <a href="/notes/complexity/">Complexity</a> metrics:</p>
+            <p>The paper (<a href="#orgeb4f85a">Grunwald and Vitanyi, n.d.</a>) is a great description and analysis of two of the most important <a href="/notes/complexity/">Complexity</a> metrics:</p>
             <ul>
               <li>
                 <a href="/notes/entropy/">Shannon entropy</a>
@@ -79,7 +79,7 @@
             <p>For a <a href="/notes/turing_completeness/">Universal computer</a> \(U\) the algorithmic information of \(S\) relative to \(U\) is defined as the length of the shortest program that yields \(S\) on \(U\). \[ C_U(S) = \min_{Prog_U(S)} \text{Len}[Prog_U(S)] \]</p>
             <p>This quantity is called algorithmic information, or <a href="/notes/kolmogorov_complexity/">Solomonoff–Kolmogorov–Chaitin complexity</a>.</p>
             <h2 id="compression-based-metrics">Compression-based metrics</h2>
-            <p>It is not possible for a given sequence to estimate reliably its algorithmic information, because we cannot know if we have found the shortest description. A solution is to restrict the encoding method, and <a href="/notes/lempel_ziv_welch_algorithm/">LZW algorithm</a> complexity is one of them (<a href="#org57422ba">Lempel and Ziv 1976</a>).</p>
+            <p>It is not possible for a given sequence to estimate reliably its algorithmic information, because we cannot know if we have found the shortest description. A solution is to restrict the encoding method, and <a href="/notes/lempel_ziv_welch_algorithm/">LZW algorithm</a> complexity is one of them (<a href="#orgaf411ad">Lempel and Ziv 1976</a>).</p>
             <h2 id="others">Others</h2>
             <ul>
               <li>
@@ -88,14 +88,14 @@
               <li>
                 <a href="/notes/statistical_complexity/">Statistical complexity</a>
               </li>
-              <li>In (<a href="#org6a8eb34">Cisneros, Sivic, and Mikolov 2019</a>), we propose a complexity metric which is based on the compression quality of a local neural network based prediction model.
+              <li>In (<a href="#org732b7b4">Cisneros, Sivic, and Mikolov 2019</a>), we propose a complexity metric which is based on the compression quality of a local neural network based prediction model.
               </li>
             </ul>
             <h2 id="bibliography">Bibliography</h2>
-            <p><a id="org6a8eb34"></a><span itemscope itemtype="https://schema.org/ScholarlyArticle"><span itemprop="author"><span itemprop="author">Cisneros, Hugo</span>, <span itemprop="author">Josef Sivic</span>, and <span itemprop="author">Tomas Mikolov</span></span>. <span datetime="2019" itemprop="datePublished">December 2019</span>. “<span itemprop="name">Evolving Structures in Complex Systems</span>”. In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">2019 IEEE Symposium Series on Computational Intelligence (SSCI)</i></span>, 230–37. Xiamen, China: IEEE.</span></p>
-            <p><a id="org52eeb01"></a><span itemscope itemtype="https://schema.org/ScholarlyArticle"><span itemprop="author"><span itemprop="author">Grunwald, Peter</span>, and <span itemprop="author">Paul Vitanyi</span></span>. n.d. “<span itemprop="name">Shannon Information and Kolmogorov Complexity</span>”, 51.</span></p>
-            <p><a id="org57422ba"></a><span itemscope itemtype="https://schema.org/ScholarlyArticle"><span itemprop="author"><span itemprop="author">Lempel, A.</span>, and <span itemprop="author">J. Ziv</span></span>. <span datetime="1976" itemprop="datePublished">January 1976</span>. “<span itemprop="name">On the Complexity of Finite Sequences</span>”. <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">IEEE Transactions on Information Theory</i></span> 22 (1):75–81.</span></p>
-            <p><a id="org5163a46"></a><span itemscope itemtype="https://schema.org/ScholarlyArticle"><span itemprop="author">Grassberger, Peter</span>. <span datetime="1989" itemprop="datePublished">1989</span>. “<span itemprop="name">Randomness, Information, and Complexity</span>”. In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Proceedings of the 5th Mexican School on Statistical Physics</i></span>.</span></p>
+            <p><a id="org732b7b4"></a><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle"><span itemprop="author"><span itemprop="author">Cisneros, Hugo</span>, <span itemprop="author">Josef Sivic</span>, and <span itemprop="author">Tomas Mikolov</span></span>. <span datetime="2019" itemprop="datePublished">December 2019</span>. “<span itemprop="name">Evolving Structures in Complex Systems</span>”. In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">2019 IEEE Symposium Series on Computational Intelligence (SSCI)</i></span>, 230–37. Xiamen, China: IEEE.</span></p>
+            <p><a id="orgeb4f85a"></a><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle"><span itemprop="author"><span itemprop="author">Grunwald, Peter</span>, and <span itemprop="author">Paul Vitanyi</span></span>. n.d. “<span itemprop="name">Shannon Information and Kolmogorov Complexity</span>”, 51.</span></p>
+            <p><a id="orgaf411ad"></a><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle"><span itemprop="author"><span itemprop="author">Lempel, A.</span>, and <span itemprop="author">J. Ziv</span></span>. <span datetime="1976" itemprop="datePublished">January 1976</span>. “<span itemprop="name">On the Complexity of Finite Sequences</span>”. <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">IEEE Transactions on Information Theory</i></span> 22 (1):75–81.</span></p>
+            <p><a id="orgda57b7d"></a><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle"><span itemprop="author">Grassberger, Peter</span>. <span datetime="1989" itemprop="datePublished">1989</span>. “<span itemprop="name">Randomness, Information, and Complexity</span>”. In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Proceedings of the 5th Mexican School on Statistical Physics</i></span>.</span></p>
           </div>
           <div class="bl-section">
             <h2>Links to this note</h2>
