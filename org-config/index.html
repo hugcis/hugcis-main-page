@@ -12,7 +12,7 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@cisne_hug">
   <meta name="twitter:creator" content="@cisne_hug">
-  <link rel="stylesheet" href="https://hugocisneros.com/css/main.min.eade29d17a79794f2a5f343f06dc6de3418db15c7eaf7b7d0250936a1e792b8d.css" media="all" type="text/css">
+  <link rel="stylesheet" href="https://hugocisneros.com/css/main.min.914a9407ca164cc303752993663b9b622d3922262de606128ff489937b2e2dd7.css" media="all" type="text/css">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -543,11 +543,8 @@
       <div class="highlight">
         <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(<span style="color:#24909d">with-eval-after-load</span> <span style="color:#ed9d13">'org-roam</span>
   <span style="color:#999;font-style:italic">;; Roam is always one level deep in my org-directory</span>
-  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-roam-directory</span> (<span style="color:#447fcf">concat</span> <span style="color:#40ffff">org-directory</span> <span style="color:#ed9d13">"/roam/"</span>))
-  <span style="color:#999;font-style:italic">;; Graphing options</span>
-  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-roam-graphviz-executable</span> (<span style="color:#40ffff">executable-find</span> <span style="color:#ed9d13">"neato"</span>))
-  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-roam-graphviz-extra-options</span> '((<span style="color:#ed9d13">"overlap"</span> . <span style="color:#ed9d13">"false"</span>)))
-
+  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-roam-directory</span> (<span style="color:#447fcf">expand-file-name</span> <span style="color:#ed9d13">"~/org/roam"</span>))
+  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-id-link-to-org-use-id</span> <span style="color:#40ffff">t</span>)
   (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-roam-completion-system</span> <span style="color:#ed9d13">'helm</span>)
   (<span style="color:#40ffff">add-to-list</span> <span style="color:#ed9d13">'display-buffer-alist</span>
                '((<span style="color:#ed9d13">"\\*org-roam\\*"</span>
@@ -571,11 +568,11 @@
                               <span style="color:#ed9d13">"#+TITLE: ${title}\n"</span>)
            <span style="color:#24909d">:immediate-finish</span> <span style="color:#40ffff">t</span>
            <span style="color:#24909d">:unnarrowed</span> <span style="color:#40ffff">t</span>)))
-  <span style="color:#999;font-style:italic">;; Org-roam v2</span>
   (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-roam-mode-sections</span>
         (<span style="color:#447fcf">list</span> <span style="color:#447fcf">#'</span><span style="color:#40ffff">org-roam-backlinks-insert-section</span>
               <span style="color:#447fcf">#'</span><span style="color:#40ffff">org-roam-reflinks-insert-section</span>
               <span style="color:#447fcf">#'</span><span style="color:#40ffff">org-roam-unlinked-references-insert-section</span>))
+  (<span style="color:#40ffff">org-roam-setup</span>)
   )
 (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-id-extra-files</span> (<span style="color:#40ffff">org-roam--list-files</span> <span style="color:#40ffff">org-roam-directory</span>))
 </code></pre>

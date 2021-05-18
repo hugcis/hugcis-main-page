@@ -24,8 +24,8 @@ I worked on an intent prediction problem for drug-related question, proposed by 
       <pubDate>Mon, 29 Oct 2018 12:00:00 +0000</pubDate>
       
       <guid>https://hugocisneros.com/projects/data_journalism_extractor/</guid>
-      <description>Links  Github repo Online documentation  Data Journalism Extractor This project is an attempt to create a tool to help journalists extract and process data at scale, from multiple heterogenous data sources while leveraging powerful and complex database, information extraction and NLP tools with limited programming knowledge.
-Features This software is based on Apache Flink, a stream processing framework similar to Spark written in Java and Scala. It executes dataflow programs, is highly scalable and integrates easily with other Big Data frameworks and tools such as Kafka, HDFS, YARN, Cassandra or ElasticSearch.</description>
+      <description>Links  Github repo Online documentation Report (in French)  Data Journalism Extractor This project is an attempt to create a tool to help journalists extract and process data at scale, from multiple heterogenous data sources while leveraging powerful and complex database, information extraction and NLP tools with limited programming knowledge.
+Features This software is based on Apache Flink, a stream processing framework similar to Spark written in Java and Scala.</description>
     </item>
     
     <item>
