@@ -120,14 +120,20 @@
       </ul>
     </footer>
   </div>
+  <link rel="stylesheet" href="/js/katex/katex.min.css">
+  <script src="/js/katex/katex.min.js"></script> 
+  <script src="/js/katex/contrib/auto-render.min.js"></script> 
   <script>
-  MathJax = {
-     tex: {
-         inlineMath: [['$','$'], ['\\(', '\\)']],
-         tags: 'ams'
-     }
-  };
-  </script> 
-  <script type="text/javascript" rel="preconnect" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        delimiters: [
+            {left: "\\[", right: "\\]", display: true},
+            {left: "$", right: "$", display: false},
+            {left: "\\(", right: "\\)", display: false},
+        ]
+  })
+    });
+  </script>
 </body>
 </html>
