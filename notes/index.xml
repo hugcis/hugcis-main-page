@@ -6,7 +6,27 @@
     <description>Recent content in Notes on Hugo Cisneros - Personal page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 18 May 2021 15:05:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 03 Jun 2021 11:04:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Graph cellular automata</title>
+      <link>https://hugocisneros.com/notes/graph_cellular_automata/</link>
+      <pubDate>Thu, 03 Jun 2021 11:04:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/graph_cellular_automata/</guid>
+      <description>tags Cellular automata, Graphs  This concept was mentioned in (O’Sullivan 2001), although it may not be the first ever mention of it.
+Bibliography O’Sullivan, David. October 2001. &amp;ldquo;Graph-Cellular Automata: A Generalised Discrete Urban and Regional Model&amp;rdquo;. Environment and Planning B: Planning and Design 28 (5):687–705.</description>
+    </item>
+    
+    <item>
+      <title>Elementary cellular automata</title>
+      <link>https://hugocisneros.com/notes/elementary_cellular_automata/</link>
+      <pubDate>Mon, 24 May 2021 09:14:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/elementary_cellular_automata/</guid>
+      <description>tags Cellular automata resources Wolfram Mathworld, Wikipedia  ECA are one of the simplest form of 1D cellular automata possible. The grid is a 1-dimensional array of cells in state 0 or 1 (dead or alive). The size of the neighborhood being used for the update is 3 (one cell to the left, the main cell and one cell to the right).
+Each of those \(2^3\) neighborhoods of size 3 can be mapped to either state 1 or 0.</description>
+    </item>
+    
     <item>
       <title>Org-roam</title>
       <link>https://hugocisneros.com/notes/org_roam/</link>
@@ -128,16 +148,6 @@ Comments Bibliography Ramsauer, Hubert, Bernhard Schäfl, Johannes Lehner, Phili
 Definition Nodes have indexes \(i \in \{1, \cdots, n\}\) and are in state \(s_i \in \{-1, 1\}\). Nodes have connections between them, characterized by a weight \(w_{ij}\). Each node also has an associated threshold \(\theta_i\) such that
 \begin{equation*} s_i \leftarrow \begin{cases} +1 &amp;amp; \text{if}\ \sum_j w_{ij} s_j \geq \theta_i, \\\
 -1 &amp;amp; \text{otherwise}.</description>
-    </item>
-    
-    <item>
-      <title>Elementary cellular automata</title>
-      <link>https://hugocisneros.com/notes/elementary_cellular_automata/</link>
-      <pubDate>Tue, 04 May 2021 09:23:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/elementary_cellular_automata/</guid>
-      <description>tags Cellular automata resources Wolfram Mathworld, Wikipedia  ECA are one of the simplest form of 1D cellular automata possible. The grid is a 1-dimensional array of cells in state 0 or 1 (dead or alive). The size of the neighborhood being used for the update is 3 (one cell to the left, the main cell and one cell to the right).
-Each of those \(2^3\) neighborhoods of size 3 can be mapped to either state 1 or 0.</description>
     </item>
     
     <item>
