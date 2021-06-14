@@ -6,7 +6,93 @@
     <description>Recent content in Notes on Hugo Cisneros - Personal page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 Jun 2021 11:04:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 14 Jun 2021 10:29:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Attention</title>
+      <link>https://hugocisneros.com/notes/attention/</link>
+      <pubDate>Mon, 14 Jun 2021 10:29:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/attention/</guid>
+      <description>tags Neural networks  Implementation Self-attention is a weighted average of all input elements from a sequence, with a weight proportional to a similarity score between representations. The input \(x \in \mathbb{R}^{L \times F}\) is projected by matrices \(W_Q \in \mathbb{R}^{F \times D}\), \(W_K \in \mathbb{R}^{F\times D}\) and \(W_V \in \mathbb{R}^{F\times M}\) to representations \(Q\) (queries), \(K\) (keys) and \(V\) (values).
+\[ Q = xW_Q\] \[ K = xW_K\] \[ V = xW_V\]</description>
+    </item>
+    
+    <item>
+      <title>Reinforcement learning</title>
+      <link>https://hugocisneros.com/notes/reinforcement_learning/</link>
+      <pubDate>Mon, 14 Jun 2021 10:25:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/reinforcement_learning/</guid>
+      <description>tags Machine learning  In reinforcement learning, agents take actions within an environment. Usually, both the agent and environment states change in reaction to this action. A reward is given to the agent to tell it if the action was positive or negative.
+The goal of a learning agent is to act so as to maximize that reward.
+An agent can be anything from a fixed set of if-else statements to a deep neural network.</description>
+    </item>
+    
+    <item>
+      <title>Genetic algorithms</title>
+      <link>https://hugocisneros.com/notes/genetic_algorithm/</link>
+      <pubDate>Mon, 14 Jun 2021 10:23:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/genetic_algorithm/</guid>
+      <description>Genetic algorithms can be used as optimization algorithms for search problems, where usual optimization techniques such as gradient-based ones aren&amp;rsquo;t very effective.
+These methods are loosely based on evolution in biological life, implementing a limited form variation and selection to progress towards better fitness (measured by a specific fitness function).
+New candidate solutions for a problem are constructed by randomly combining and mutating parent solutions. The best candidate are kept and become parents of the next generation.</description>
+    </item>
+    
+    <item>
+      <title>Automated theorem proving</title>
+      <link>https://hugocisneros.com/notes/automated_theorem_proving/</link>
+      <pubDate>Mon, 14 Jun 2021 10:21:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/automated_theorem_proving/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Language modeling</title>
+      <link>https://hugocisneros.com/notes/language_modeling/</link>
+      <pubDate>Mon, 14 Jun 2021 10:21:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/language_modeling/</guid>
+      <description>tags NLP  LM with RNNs. Different models have been studied, starting from the initial Recurrent neural network based language model (Mikolov et al. 2011).
+LSTM were then used with more success than previous models (Zaremba, Sutskever, and Vinyals 2015).
+LM with Transformers Language modeling and Compression Text generation Language models can be used to generate text from a prompt or starting sentence. This is the kind of examples that made models like GPT-2 and GPT-3 famous, because of their ability to generate long sequences of apparently coherent text (Radford et al.</description>
+    </item>
+    
+    <item>
+      <title>Alternative learning mechanisms</title>
+      <link>https://hugocisneros.com/notes/alternative_learning_mechanisms/</link>
+      <pubDate>Mon, 14 Jun 2021 10:06:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/alternative_learning_mechanisms/</guid>
+      <description>tags Machine learning Many people, including Geoffrey Hinton, have raised concerns about the back-propagation algorithm and the fact that it&amp;rsquo;s likely not a promising way to achieve Artificial Intelligence (see this Axios blog post).
+  Alternative mechanisms for learning have been and are currently studied to try and approach the learning problem in a more effective way.
+Direct feedback alignment (Nøkland 2016)
+Hebbian learning The theory is sometimes summarized as &amp;ldquo;Cells that fire together wire together.</description>
+    </item>
+    
+    <item>
+      <title>Unker non-linear writing system</title>
+      <link>https://hugocisneros.com/notes/unker_non_linear_writing_system/</link>
+      <pubDate>Mon, 14 Jun 2021 09:59:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/unker_non_linear_writing_system/</guid>
+      <description>tags Language resources https://s.ai/nlws/  A fascinating writing system based on glyphs connected to each other to create meaning. The system is quite advanced and reading its grammar is like discovering some new alien language. It was created by Alex Fink and Sai in 2010.
+This is the kind of complexity that would be incredible to discover in open-ended evolving language systems. A system starting from elementary components and no particular assumption about what language should be, could come up with such exotic models (probably even more exotic in the case of a truly open-ended system).</description>
+    </item>
+    
+    <item>
+      <title>Conway&#39;s Game of Life</title>
+      <link>https://hugocisneros.com/notes/conway_s_game_of_life/</link>
+      <pubDate>Mon, 14 Jun 2021 09:28:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/conway_s_game_of_life/</guid>
+      <description>tags Cellular automata resources (Gardner 1970)  It is one of the most famous Cellular automata rule, invented as a game by John Conway.
+Learn the game of life with a neural network (Springer and Kenyon 2020)
+Bibliography Springer, Jacob M., and Garrett T. Kenyon. September 2020. &amp;ldquo;It’s Hard for Neural Networks to Learn the Game of Life&amp;rdquo;. arXiv:2009.01398 [Cs, Stat], September.
+Gardner, Martin. October 1970. &amp;ldquo;Mathematical Games&amp;rdquo;. Scientific American 223 (4):120–23.</description>
+    </item>
+    
     <item>
       <title>Graph cellular automata</title>
       <link>https://hugocisneros.com/notes/graph_cellular_automata/</link>
@@ -126,16 +212,6 @@ Reductionism doesn&amp;rsquo;t imply constructionism It is generally accepted th
       <guid>https://hugocisneros.com/notes/ramsauerhopfieldnetworksall2020/</guid>
       <description>tags Hopfield Networks, Attention source (Ramsauer et al. 2020) resources Blog post  Summary This quote summarizes the paper well: &amp;ldquo;In order to integrate modern Hopfield networks into deep learning architectures, we have to make them continuous&amp;rdquo;.
 Comments Bibliography Ramsauer, Hubert, Bernhard Schäfl, Johannes Lehner, Philipp Seidl, Michael Widrich, Lukas Gruber, Markus Holzleitner, et al.. July 2020. &amp;ldquo;Hopfield Networks Is All You Need&amp;rdquo;. arXiv:2008.02217 [Cs, Stat], July.</description>
-    </item>
-    
-    <item>
-      <title>Attention</title>
-      <link>https://hugocisneros.com/notes/attention/</link>
-      <pubDate>Wed, 05 May 2021 15:04:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/attention/</guid>
-      <description>tags Neural networks  Implementation Self-attention is a weighted average of all input elements from a sequence, with a weight proportional to a similarity score between representations. The input \(x \in \mathbb{R}^{L \times F}\) is projected by matrices \(W_Q \in \mathbb{R}^{F \times D}\), \(W_K \in \mathbb{R}^{F\times D}\) and \(W_V \in \mathbb{R}^{F\times M}\) to representations \(Q\) (queries), \(K\) (keys) and \(V\) (values).
-\[ Q = xW_Q\] \[ K = xW_K\] \[ V = xW_V\]</description>
     </item>
     
     <item>
@@ -352,17 +428,6 @@ If this trend is a fundamental principle (which is what the article argues) it w
     </item>
     
     <item>
-      <title>Genetic algorithms</title>
-      <link>https://hugocisneros.com/notes/genetic_algorithm/</link>
-      <pubDate>Tue, 06 Apr 2021 08:58:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/genetic_algorithm/</guid>
-      <description>Genetic algorithms can be used as optimization algorithms for search problems, where usual optimization techniques such as gradient-based ones aren&amp;rsquo;t very effective.
-These methods are loosely based on evolution in biological life, implementing a limited form variation and selection to progress towards better fitness (measured by a specific fitness function).
-New candidate solutions for a problem are constructed by randomly combining and mutating parent solutions. The best candidate are kept and become parents of the next generation.</description>
-    </item>
-    
-    <item>
       <title>Note-taking</title>
       <link>https://hugocisneros.com/notes/note_taking/</link>
       <pubDate>Mon, 29 Mar 2021 14:49:00 +0200</pubDate>
@@ -401,16 +466,6 @@ Bibliography Chan, Bert Wang-Chak. May 2019. &amp;ldquo;Lenia - Biology of Artif
       <guid>https://hugocisneros.com/notes/cellular_automata_as_cnns/</guid>
       <description>tags Cellular automata, Convolutional neural networks  Motivation Cellular automata are computational models based on several principles such as translation-invariance and parallelism of computations. These principles also motivated the creation of Convolutional neural networks &amp;mdash; used initially for images and text &amp;mdash;, making this model well-suited to reason about cellular automata.
 There is indeed a deep connection between the two models, making it seem like there are two expressions of the same idea: spatially organized information can be processed locally in parallel.</description>
-    </item>
-    
-    <item>
-      <title>Unker non-linear writing system</title>
-      <link>https://hugocisneros.com/notes/unker_non_linear_writing_system/</link>
-      <pubDate>Thu, 25 Mar 2021 11:07:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/unker_non_linear_writing_system/</guid>
-      <description>tags Language resources https://s.ai/nlws/  A fascinating writing system based on glyphs connected to each other to create meaning. The system is quite advanced and reading its grammar is like discovering some new alien language.
-This is the kind of complexity that would be incredible to discover in open-ended evolving language systems. A system starting from elementary components and no particular assumption about what language should be, could come up with such exotic models (probably even more exotic in the case of a truly open-ended system).</description>
     </item>
     
     <item>
@@ -676,17 +731,6 @@ This new formulation yields better time and memory complexity as well as a model
       <description>tags Evolution, Reinforcement learning, Search algorithms papers (Pugh, Soros, and Stanley 2016; Cully and Demiris 2017)  QD is about creating algorithms that favor diversity in searching the space. In QD, one needs to both:
  Measure the quality of a solution Have a way to describe the effect of a solution  Solutions in QD have to be good in the two above ways.
 QD is also a form of novelty search.</description>
-    </item>
-    
-    <item>
-      <title>Reinforcement learning</title>
-      <link>https://hugocisneros.com/notes/reinforcement_learning/</link>
-      <pubDate>Thu, 25 Mar 2021 09:58:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/reinforcement_learning/</guid>
-      <description>tags Machine learning  In reinforcement learning, agents take actions within an environment. Usually, both the agent and environment states change in reaction to this action. A reward is given to the agent to tell it if the action was positive or negative.
-The goal of a learning agent is to act so as to maximize that reward.
-An agent can be anything from a fixed set of if-else statements to a deep neural network.</description>
     </item>
     
     <item>
@@ -2380,16 +2424,6 @@ A Turing-complete basis of operators is:
     </item>
     
     <item>
-      <title>Conway&#39;s Game of Life</title>
-      <link>https://hugocisneros.com/notes/conway_s_game_of_life/</link>
-      <pubDate>Tue, 14 Jul 2020 08:30:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/conway_s_game_of_life/</guid>
-      <description>tags Cellular automata resources (Gardner 1970)  It is one of the most famous Cellular automata rule, invented as a game by John Conway.
-Bibliography Gardner, Martin. October 1970. &amp;ldquo;Mathematical Games&amp;rdquo;. Scientific American 223 (4):120–23.</description>
-    </item>
-    
-    <item>
       <title>Cryptography</title>
       <link>https://hugocisneros.com/notes/cryptography/</link>
       <pubDate>Tue, 14 Jul 2020 08:30:00 +0200</pubDate>
@@ -2672,18 +2706,6 @@ Bibliography Vahdat, Arash, and Jan Kautz. July 2020. &amp;ldquo;NVAE: A Deep Hi
       
       <guid>https://hugocisneros.com/notes/reaction_diffusion/</guid>
       <description> tags Physics, Morphogenesis  </description>
-    </item>
-    
-    <item>
-      <title>Alternative learning mechanisms</title>
-      <link>https://hugocisneros.com/notes/alternative_learning_mechanisms/</link>
-      <pubDate>Fri, 10 Jul 2020 09:47:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/alternative_learning_mechanisms/</guid>
-      <description>tags Machine learning Many people, including Geoffrey Hinton, have raised concerns about the back-propagation algorithm and the fact that it&amp;rsquo;s likely not a promising way to achieve Artificial Intelligence (see this Axios blog post).
-  Alternative mechanisms for learning have been and are currently studied to try and approach the learning problem in a more effective way.
-Direct feedback alignment (Nøkland 2016)
-Hebbian learning The theory is sometimes summarized as &amp;ldquo;Cells that fire together wire together.</description>
     </item>
     
     <item>
@@ -3162,17 +3184,6 @@ A central server must have long term keys for every user on the network. It uses
       <guid>https://hugocisneros.com/notes/network_authentication/</guid>
       <description>Protocols Password authentication This is one of the simplest authentication method. The idea is just to send a pair (username, password) to the server. It is obviously vulnerable to man-in-the-middle attacks.
 Kerberos </description>
-    </item>
-    
-    <item>
-      <title>Language modeling</title>
-      <link>https://hugocisneros.com/notes/language_modeling/</link>
-      <pubDate>Sun, 28 Jun 2020 10:07:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/language_modeling/</guid>
-      <description>tags NLP  LM with RNNs. Different models have been studied, starting from the initial Recurrent neural network based language model (Mikolov et al. 2011).
-LSTM were then used with more success than previous models (Zaremba, Sutskever, and Vinyals 2015).
-LM with Transformers Language modeling and Compression Text generation Language models can be used to generate text from a prompt or starting sentence. This is the kind of examples that made models like GPT-2 and GPT-3 famous, because of their ability to generate long sequences of apparently coherent text (Radford et al.</description>
     </item>
     
     <item>

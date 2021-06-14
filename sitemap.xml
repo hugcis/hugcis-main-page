@@ -4,16 +4,56 @@
     
     <url>
         <loc>https://hugocisneros.com/</loc>
-        <lastmod>2021-06-03T11:04:00+02:00</lastmod>
+        <lastmod>2021-06-14T10:29:00+02:00</lastmod>
     </url>
     
     <url>
-        <loc>https://hugocisneros.com/notes/graph_cellular_automata/</loc>
-        <lastmod>2021-06-03T11:04:00+02:00</lastmod>
+        <loc>https://hugocisneros.com/notes/attention/</loc>
+        <lastmod>2021-06-14T10:29:00+02:00</lastmod>
     </url>
     
     <url>
         <loc>https://hugocisneros.com/notes/</loc>
+        <lastmod>2021-06-14T10:29:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/reinforcement_learning/</loc>
+        <lastmod>2021-06-14T10:25:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/genetic_algorithm/</loc>
+        <lastmod>2021-06-14T10:23:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/automated_theorem_proving/</loc>
+        <lastmod>2021-06-14T10:21:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/language_modeling/</loc>
+        <lastmod>2021-06-14T10:21:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/alternative_learning_mechanisms/</loc>
+        <lastmod>2021-06-14T10:06:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/unker_non_linear_writing_system/</loc>
+        <lastmod>2021-06-14T09:59:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/conway_s_game_of_life/</loc>
+        <lastmod>2021-06-14T09:28:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/graph_cellular_automata/</loc>
         <lastmod>2021-06-03T11:04:00+02:00</lastmod>
     </url>
     
@@ -70,11 +110,6 @@
     <url>
         <loc>https://hugocisneros.com/notes/ramsauerhopfieldnetworksall2020/</loc>
         <lastmod>2021-05-05T16:26:00+02:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/attention/</loc>
-        <lastmod>2021-05-05T15:04:00+02:00</lastmod>
     </url>
     
     <url>
@@ -188,11 +223,6 @@
     </url>
     
     <url>
-        <loc>https://hugocisneros.com/notes/genetic_algorithm/</loc>
-        <lastmod>2021-04-06T08:58:00+02:00</lastmod>
-    </url>
-    
-    <url>
         <loc>https://hugocisneros.com/notes/note_taking/</loc>
         <lastmod>2021-03-29T14:49:00+02:00</lastmod>
     </url>
@@ -210,11 +240,6 @@
     <url>
         <loc>https://hugocisneros.com/notes/cellular_automata_as_cnns/</loc>
         <lastmod>2021-03-25T12:08:00+01:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/unker_non_linear_writing_system/</loc>
-        <lastmod>2021-03-25T11:07:00+01:00</lastmod>
     </url>
     
     <url>
@@ -344,11 +369,6 @@
     
     <url>
         <loc>https://hugocisneros.com/notes/quality_diversity/</loc>
-        <lastmod>2021-03-25T09:58:00+01:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/reinforcement_learning/</loc>
         <lastmod>2021-03-25T09:58:00+01:00</lastmod>
     </url>
     
@@ -1218,11 +1238,6 @@
     </url>
     
     <url>
-        <loc>https://hugocisneros.com/notes/conway_s_game_of_life/</loc>
-        <lastmod>2020-07-14T08:30:00+02:00</lastmod>
-    </url>
-    
-    <url>
         <loc>https://hugocisneros.com/notes/cryptography/</loc>
         <lastmod>2020-07-14T08:30:00+02:00</lastmod>
     </url>
@@ -1370,11 +1385,6 @@
     <url>
         <loc>https://hugocisneros.com/notes/reaction_diffusion/</loc>
         <lastmod>2020-07-10T10:05:00+02:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/alternative_learning_mechanisms/</loc>
-        <lastmod>2020-07-10T09:47:00+02:00</lastmod>
     </url>
     
     <url>
@@ -1625,11 +1635,6 @@
     <url>
         <loc>https://hugocisneros.com/notes/network_authentication/</loc>
         <lastmod>2020-06-28T16:18:00+02:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/language_modeling/</loc>
-        <lastmod>2020-06-28T10:07:00+02:00</lastmod>
     </url>
     
     <url>
