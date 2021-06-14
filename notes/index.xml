@@ -6,7 +6,16 @@
     <description>Recent content in Notes on Hugo Cisneros - Personal page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 14 Jun 2021 10:29:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 14 Jun 2021 11:25:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Automated theorem proving</title>
+      <link>https://hugocisneros.com/notes/automated_theorem_proving/</link>
+      <pubDate>Mon, 14 Jun 2021 11:25:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/automated_theorem_proving/</guid>
+      <description> tags Mathematics  Machine learning for theorem proving </description>
+    </item>
+    
     <item>
       <title>Attention</title>
       <link>https://hugocisneros.com/notes/attention/</link>
@@ -37,15 +46,6 @@ An agent can be anything from a fixed set of if-else statements to a deep neural
       <description>Genetic algorithms can be used as optimization algorithms for search problems, where usual optimization techniques such as gradient-based ones aren&amp;rsquo;t very effective.
 These methods are loosely based on evolution in biological life, implementing a limited form variation and selection to progress towards better fitness (measured by a specific fitness function).
 New candidate solutions for a problem are constructed by randomly combining and mutating parent solutions. The best candidate are kept and become parents of the next generation.</description>
-    </item>
-    
-    <item>
-      <title>Automated theorem proving</title>
-      <link>https://hugocisneros.com/notes/automated_theorem_proving/</link>
-      <pubDate>Mon, 14 Jun 2021 10:21:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/automated_theorem_proving/</guid>
-      <description></description>
     </item>
     
     <item>
