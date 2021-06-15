@@ -24,24 +24,21 @@ function sort_by_rad(a, b) {
     if (noteGraph.length == 0) {
       return 0;
     }
+    let ra = 0.;
+    let rb = 0.;
     let circlea = noteGraph[0].getElementById("circle_" + a.id);
-    if (circlea != null) circlea = circlea.childNodes[0];
+    if (circlea != null) {
+        circlea = circlea.childNodes[0];
+        ra = circlea.r.baseVal.value;
+    }
 
     let circleb = noteGraph[0].getElementById("circle_" + b.id);
-    if (circleb != null) circleb = circleb.childNodes[0];
+    if (circleb != null) {
+        circleb = circleb.childNodes[0];
+        rb = circleb.r.baseVal.value;
+    }
 
-    if (circlea == null && circleb != null) {
-        return 1;
-    }
-    else if (circlea != null && circleb == null) {
-        return -1;
-    }
-    else if (circlea == null && circleb == null) {
-        return 0;
-    }
-    else {
-        return circlea.r.baseVal.value < circleb.r.baseVal.value;
-    }
+    return rb - ra;
 }
 
 function sort_by_name(a, b) {
@@ -82,8 +79,6 @@ var sorter = document.getElementById("sort_type");
 function sort_items() {
     sort_list_of_items(sorter.selectedOptions[0].value);
 }
-sorter.addEventListener("change", sort_items);
-sort_items();
 
 var selectOption = sorter.options[sorter.selectedIndex];
 var lastSelected = localStorage.getItem('select');
@@ -97,4 +92,6 @@ sorter.onchange = function () {
     lastSelected = sorter.options[sorter.selectedIndex].value;
     console.log(lastSelected);
     localStorage.setItem('select', lastSelected);
+    sort_items();
 };
+sort_items();

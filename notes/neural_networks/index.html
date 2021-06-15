@@ -62,11 +62,17 @@
             <p>Mathematically, a simple two-layers neural network with relu non-linearities can be written like below. For an input vector \(x \in \mathbb{R}^D\), \(\mathbf{a} = (a_1, \cdots, a_N)\in \mathbb{R}^M\) are the <em>output weights</em>, \(\mathbf{b} = (b_1, \cdots, b_N)\in \mathbb{R}^D\) are the <em>input weights</em></p>
             <p>\[ h(x) = \frac{1}{m} \sum_{i=1}^m a_i \max\{ b_i^\top x,0\}, \]</p>
             <h2 id="universal-approximation-theorem">Universal approximation theorem</h2>
-            <p>Cybenko showed in 1989 that a neural network of arbitrary width with sigmoid activation function could approximate any continuous function (<a href="#org5efedb4">Cybenko 1989</a>).</p>
-            <p>Barron added rates of convergence by enforcing smoothness condition on the target function (<a href="#org73bbdac">Barron 1993</a>).</p>
+            <p>Cybenko showed in 1989 that a neural network of arbitrary width with sigmoid activation function could approximate any continuous function (<a href="#org6f7fdca">Cybenko 1989</a>).</p>
+            <p>Barron added rates of convergence by enforcing smoothness condition on the target function (<a href="#org59a0edd">Barron 1993</a>).</p>
             <h2 id="bibliography">Bibliography</h2>
-            <p><a id="org73bbdac"></a><span itemscope itemtype="https://schema.org/ScholarlyArticle"><span itemprop="author">Barron, A. R.</span>. <span datetime="1993" itemprop="datePublished">May 1993</span>. “<span itemprop="name">Universal Approximation Bounds for Superpositions of a Sigmoidal Function</span>”. <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">IEEE Transactions on Information Theory</i></span> 39 (3):930–45.</span></p>
-            <p><a id="org5efedb4"></a><span itemscope itemtype="https://schema.org/ScholarlyArticle"><span itemprop="author">Cybenko, G.</span>. <span datetime="1989" itemprop="datePublished">December 1989</span>. “<span itemprop="name">Approximation by Superpositions of a Sigmoidal Function</span>”. <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Mathematics of Control, Signals, and Systems</i></span> 2 (4):303–14.</span></p>
+            <ol class="biblio-list">
+              <a id="org59a0edd"></a>
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle">
+                <span itemprop="author">Barron, A. R.</span>. <span datetime="1993" itemprop="datePublished">May 1993</span>. "<span itemprop="name">Universal Approximation Bounds for Superpositions of a Sigmoidal Function</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">IEEE Transactions on Information Theory</i></span> 39 (3):930–45.
+                <p><a id="org6f7fdca"></a></p>
+              </li>
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle"><span itemprop="author">Cybenko, G.</span>. <span datetime="1989" itemprop="datePublished">December 1989</span>. “<span itemprop="name">Approximation by Superpositions of a Sigmoidal Function</span>”. <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Mathematics of Control, Signals, and Systems</i></span> 2 (4):303–14.</li>
+            </ol>
           </div>
           <div class="bl-section">
             <h2>Links to this note</h2>
@@ -116,6 +122,9 @@
                 </li>
                 <li>
                   <a href="/notes/data_representation/">Data representation</a>
+                </li>
+                <li>
+                  <a href="/notes/distillation/">Distillation</a>
                 </li>
                 <li>
                   <a href="/notes/echo_state_networks/">Echo-state networks</a>

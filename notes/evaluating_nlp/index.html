@@ -66,14 +66,14 @@
               <li>Because it yields an easier to remember and reason about number than the average bits per word value (easier to compare 155 and 128 than 7.27 bits and 7 bits).</li>
               <li>Because a language model with the lowest possible perplexity would be the closest to the “true” model that generated the data.</li>
             </ul>
-            <p>Because of its connection with entropy, there is also a clear connection between perplexity and <a href="/notes/compression/">Compression</a>, and finding the best language model for a given task is equivalent to finding the best compressor for the data (<a href="#org0cdddde">Mahoney 1999</a>).</p>
+            <p>Because of its connection with entropy, there is also a clear connection between perplexity and <a href="/notes/compression/">Compression</a>, and finding the best language model for a given task is equivalent to finding the best compressor for the data (<a href="#org3f2d671">Mahoney 1999</a>).</p>
             <p>Perplexity is the dominant metric for Language model evaluation. However, it has a few drawbacks:</p>
             <ul>
               <li>Perplexity is computed assuming perfect history, which might not always be the case when using previously generated data to generate a new word.</li>
               <li>Perplexity improvements can be misleading, since a fixed perplexity improvement is exponentially harder the closest it is to zero. Therefore, it is advantageous to report a sub-optimal baseline to maximize the value of perplexity improvement, while the actual entropy improvement might be small.</li>
             </ul>
             <h2 id="winograd-schema-challenge">Winograd Schema Challenge</h2>
-            <p>This challenge (<a href="#org60bb96b">Levesque, Davis, and Morgenstern, n.d.</a>), part of the GLUE benchmark is specifically about sentences that are hard to deal with for computers: there are implicit and ambiguous references within the sentence that can only be solved with contextual knowledge of the things being talked about. To me this is a very hard challenge that we are nowhere near solving. GPT-2’s 70% accuracy on this task is impressive but still doesn’t convince me we are on the right track of solving it.</p>
+            <p>This challenge (<a href="#org2b1bc1e">Levesque, Davis, and Morgenstern, n.d.</a>), part of the GLUE benchmark is specifically about sentences that are hard to deal with for computers: there are implicit and ambiguous references within the sentence that can only be solved with contextual knowledge of the things being talked about. To me this is a very hard challenge that we are nowhere near solving. GPT-2’s 70% accuracy on this task is impressive but still doesn’t convince me we are on the right track of solving it.</p>
             <p>This seems like a good way of <a href="/notes/artificial_intelligence_test/">testing a artificially intelligent system</a>.</p>
             <p>Example:</p>
             <pre><code class="language-nil" data-lang="nil">I poured water from the bottle into the cup until it was full.
@@ -87,8 +87,14 @@
               <p>Oren Etzioni, Allen Institute for AI</p>
             </blockquote>
             <h2 id="bibliography">Bibliography</h2>
-            <p><a id="org60bb96b"></a><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle"><span itemprop="author"><span itemprop="author">Levesque, Hector</span>, <span itemprop="author">Ernest Davis</span>, and <span itemprop="author">Leora Morgenstern</span></span>. n.d. “<span itemprop="name">The Winograd Schema Challenge</span>”, 10.</span></p>
-            <p><a id="org0cdddde"></a><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle"><span itemprop="author">Mahoney, Matthew V</span>. <span datetime="1999" itemprop="datePublished">1999</span>. “<span itemprop="name">Text Compression as a Test for Artificial Intelligence</span>”. In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Proceedings of AAAI-1999</i></span>, 3.</span></p>
+            <ol class="biblio-list">
+              <a id="org2b1bc1e"></a>
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle">
+                <span itemprop="author"><span itemprop="author">Levesque, Hector</span>, <span itemprop="author">Ernest Davis</span>, and <span itemprop="author">Leora Morgenstern</span></span>. n.d. "<span itemprop="name">The Winograd Schema Challenge</span>", 10.
+                <p><a id="org3f2d671"></a></p>
+              </li>
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle"><span itemprop="author">Mahoney, Matthew V</span>. <span datetime="1999" itemprop="datePublished">1999</span>. “<span itemprop="name">Text Compression as a Test for Artificial Intelligence</span>”. In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Proceedings of AAAI-1999</i></span>, 3.</li>
+            </ol>
           </div>
           <div class="bl-section">
             <h2>Links to this note</h2>

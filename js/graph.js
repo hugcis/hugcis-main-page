@@ -1,7 +1,9 @@
 d3.json("/js/graph.json").then(function(data) {
+    // Canvas size
     height = 1300;
     width = 1900;
     scale = 1.;
+    // Radius function for nodes. Node radius are function of centrality
     radius = d => {
         if (!d.radius) {
             d.radius = 11 + 24 * Math.pow(d.centrality, 4/5);
@@ -10,10 +12,13 @@ d3.json("/js/graph.json").then(function(data) {
     };
     color = "#ffffff";
 
+    // Number of colors is the number of clusters (given by communityLabel)
     num_colors = Math.max(...data.nodes.map(d => d.communityLabel)) + 1;
     angleArr = [...Array(num_colors).keys()].map(x => 2 * Math.PI * x / num_colors);
+    // Cluster centers around an circle
     centersx = angleArr.map(x => Math.cos(Math.PI + x));
     centersy = angleArr.map(x => Math.sin(Math.PI + x));
+    // Color palette
     nodeColors = [
         '#C98914',
         '#C55F1A',
@@ -23,11 +28,11 @@ d3.json("/js/graph.json").then(function(data) {
         '#5E998A',
         "#363ea9",
     ];
-
+    // Color function just maps cluster to color palette
     nodeColor = d => {
         return nodeColors[d.communityLabel];
     };
-
+    // Make the nodes draggable
     drag = simulation => {
         function dragsubject(event) {
             return simulation.find(event.x, event.y);
@@ -55,7 +60,7 @@ d3.json("/js/graph.json").then(function(data) {
             .on("drag", dragged)
             .on("end", dragended);
     };
-
+    // Make nodes interactive to hovering
     handleMouseOver = (d, i) => {
         nde = d3.select(d.currentTarget);
         nde.attr("fill", "#999")
@@ -74,7 +79,6 @@ d3.json("/js/graph.json").then(function(data) {
                     l.target.index == i.index)
             .attr("stroke-width", 8);
     };
-
     handleMouseOut = (d, _) => {
         nde = d3.select(d.currentTarget);
         nde.attr("fill", nodeColor)
@@ -86,9 +90,11 @@ d3.json("/js/graph.json").then(function(data) {
 
     };
 
+    // Graph data
     const links = data.links.map(d => Object.create(d));
     const nodes = data.nodes.map(d => Object.create(d));
 
+    // Force simulation for the graph
     simulation = d3.forceSimulation(nodes)
     .alpha(0.9)
     .velocityDecay(0.6)
@@ -104,6 +110,7 @@ d3.json("/js/graph.json").then(function(data) {
             return height / 2 +  (height / 8) * centersy[d.communityLabel];
         }).strength(0.25));
 
+    // Create all the graph elements
     const svg = d3.select("svg")
           .attr('max-width', '60%')
           .attr('class', 'note-graph')
@@ -117,7 +124,6 @@ d3.json("/js/graph.json").then(function(data) {
           .join("line")
           .attr("stroke-dasharray", d => (d.predicted? "5,5": "0,0"))
           .attr("stroke-width", 1);
-
 
     const node = svg.append("g")
           .selectAll("circle")
@@ -140,11 +146,12 @@ d3.json("/js/graph.json").then(function(data) {
     node.append("title")
         .text(d => d.label.replace(/"/g, ''));
 
+    // Nodes have a label that is visible on hover
+    // They have two layers a rectangle "background" and the text on top
     const label = svg.append("g")
           .selectAll("text")
           .data(nodes)
           .join("g");
-
     const label_background = label.append("text")
           .style("font-size", "25px")
           .text(function (d) { return "  "+ d.label.replace(/"/g, '') + "  "; })
@@ -155,7 +162,6 @@ d3.json("/js/graph.json").then(function(data) {
           .style("pointer-events", "none")
           .style("alignment-baseline", "middle")
           .attr("filter", "url(#solid)");
-
     const label_text = label.append("text")
           .style("fill", "#222")
           .style("font-size", "25px")
@@ -167,8 +173,11 @@ d3.json("/js/graph.json").then(function(data) {
           .style("pointer-events", "none")
           .style("alignment-baseline", "middle");
 
+    // We sort the nodes now because some of the sorting function need the
+    // node radius
     sort_items();
 
+    // Run the simulation
     simulation.on("tick", () => {
         link.attr("x1", d => d.source.x)
             .attr("y1", d => d.source.y)
