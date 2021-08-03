@@ -34,16 +34,19 @@
         </div>
         <ul class="nav-links">
           <li>
-            <a href="/about/">About</a>
-          </li>
-          <li>
             <a href="/blog/">Blog</a>
           </li>
           <li>
             <a href="/notes/">Notes</a>
           </li>
           <li>
+            <a href="/projects/">Projects</a>
+          </li>
+          <li>
             <a href="/resume/">Resume</a>
+          </li>
+          <li>
+            <a href="/contact/">Contact</a>
           </li>
         </ul>
       </nav>
@@ -57,13 +60,10 @@
             <feflood flood-color="#f7f7f7" flood-opacity="0.9"></feflood>
             <fecomposite in="SourceGraphic" operator="xor"></fecomposite>
           </filter>
-          <marker id='head' orient='auto' markerwidth='2' markerheight='4' refx='0.1' refy='2'>
-            <path d='M0,0 V4 L2,2 Z' fill='black'></path>
-          </marker>
         </defs>
         <rect id="base_rect" width="100%" height="100%" fill="#f6f6f6"></rect></svg>
       </div>
-      <p>There are 330 notes in total, the graph is displaying the top 200 according to PageRank. Click on notes and follow links to see where they point to!</p>
+      <p>There are 334 notes in total, the graph is displaying the top 200 according to PageRank. Click on notes and follow links to see where they point to!</p>
       <hr>
       <p>This is a collection of notes about several topics I’m either interested in, learning about, or working on at the moment and feel I have things to say about.</p>
       <p>Some notes are empty and used mainly to link other notes between each other. I also sometimes use these notes as <a href="https://github.com/jbranchaud/til" title="Josh Branchaud's Today I learned">TILs</a>. Nodes in the graph are sized according to the <a href="https://en.wikipedia.org/wiki/PageRank" title="PageRank Wikipedia page">PageRank algorithm</a>. Colors corresponding to graph communities are also automatically generated with the <a href="https://en.wikipedia.org/wiki/Girvan%E2%80%93Newman_algorithm">Girvan-Newman algorithm</a> and a fixed number of communities.</p>
@@ -72,7 +72,676 @@
       <div class="note_list_container" itemscope itemtype="http://schema.org/Blog">
         <h2 id="search_bar"><label>Search for notes...</label></h2>
         <div>
-          <label><input type="text" id="search_input" onkeyup="search_function()" placeholder="Search for notes..."> <select id="sort_type" class="select-css" name="sort_type">
+          <label><input list="note-names" type="text" id="search_input" onkeyup="search_function()" placeholder="Search for notes..."> <datalist id="note-names">
+            <option value="3-SAT">
+            </option>
+            <option value="Abelian sandpile model">
+            </option>
+            <option value="Abstraction and Reasoning Corpus">
+            </option>
+            <option value="Adaptive Computation Time">
+            </option>
+            <option value="Adversarial examples">
+            </option>
+            <option value="Alan Turing">
+            </option>
+            <option value="Algorithm">
+            </option>
+            <option value="Algorithmic Information theory">
+            </option>
+            <option value="Algorithmic probability">
+            </option>
+            <option value="ALife 2020">
+            </option>
+            <option value="ALife Conference">
+            </option>
+            <option value="Alternative learning mechanisms">
+            </option>
+            <option value="Amorphous computing">
+            </option>
+            <option value="Applied maths">
+            </option>
+            <option value="Art with Cellular Automata">
+            </option>
+            <option value="Article: Open-endedness: The last grand challenge you’ve never heard of">
+            </option>
+            <option value="Article: The Cartoon Picture of Magnets That Has Transformed Science">
+            </option>
+            <option value="Article: The End of the RNA World Is Near, Biochemists Argue">
+            </option>
+            <option value="Article: Uncertain times">
+            </option>
+            <option value="Article: What Is an Individual? Biology Seeks Clues in Information Theory.">
+            </option>
+            <option value="Article: Why Sex? Biologists Find New Explanations">
+            </option>
+            <option value="Artificial Intelligence">
+            </option>
+            <option value="Artificial intelligence test">
+            </option>
+            <option value="Artificial life">
+            </option>
+            <option value="Assembly language">
+            </option>
+            <option value="Assembly theory">
+            </option>
+            <option value="Attention">
+            </option>
+            <option value="Attention graph networks">
+            </option>
+            <option value="Attractor networks">
+            </option>
+            <option value="Autoencoders">
+            </option>
+            <option value="Automated discovery in complex systems">
+            </option>
+            <option value="Automated theorem proving">
+            </option>
+            <option value="Automatic differentiation">
+            </option>
+            <option value="Autopoiesis">
+            </option>
+            <option value="Avida">
+            </option>
+            <option value="Backward RNN">
+            </option>
+            <option value="Berry's paradox">
+            </option>
+            <option value="Boltzmann brain">
+            </option>
+            <option value="Bongard problems">
+            </option>
+            <option value="Boolean networks">
+            </option>
+            <option value="Byte-pair encoding">
+            </option>
+            <option value="C Programming language">
+            </option>
+            <option value="C++">
+            </option>
+            <option value="Causal inference">
+            </option>
+            <option value="Cellular automata">
+            </option>
+            <option value="Cellular automata as CNNs">
+            </option>
+            <option value="Cellular automata as regular languages">
+            </option>
+            <option value="Cellular neural networks">
+            </option>
+            <option value="Chaos">
+            </option>
+            <option value="Chaos computing">
+            </option>
+            <option value="Chemical reaction network">
+            </option>
+            <option value="Chinese room experiment">
+            </option>
+            <option value="Christopher Langton">
+            </option>
+            <option value="Church-Turing thesis">
+            </option>
+            <option value="Climate">
+            </option>
+            <option value="CMA-ES">
+            </option>
+            <option value="Co-evolution">
+            </option>
+            <option value="Coding">
+            </option>
+            <option value="Combinatorics">
+            </option>
+            <option value="Combinatory logic">
+            </option>
+            <option value="Compilation">
+            </option>
+            <option value="Complex Systems">
+            </option>
+            <option value="Complexity">
+            </option>
+            <option value="Complexity metrics">
+            </option>
+            <option value="Complexity of cellular automata">
+            </option>
+            <option value="Compression">
+            </option>
+            <option value="Computability theory">
+            </option>
+            <option value="Computer science">
+            </option>
+            <option value="Computer security">
+            </option>
+            <option value="Computer vision">
+            </option>
+            <option value="Computing in cellular automata">
+            </option>
+            <option value="Continual learning">
+            </option>
+            <option value="Convolutional neural networks">
+            </option>
+            <option value="Conway's Game of Life">
+            </option>
+            <option value="CPPN">
+            </option>
+            <option value="Crosshatch automata">
+            </option>
+            <option value="Cryptography">
+            </option>
+            <option value="Data representation">
+            </option>
+            <option value="Decentralization">
+            </option>
+            <option value="Diffusion limited aggregation">
+            </option>
+            <option value="Diffusion models">
+            </option>
+            <option value="Dijkstra's algorithm">
+            </option>
+            <option value="Dirichlet energy">
+            </option>
+            <option value="Distillation">
+            </option>
+            <option value="Double descent">
+            </option>
+            <option value="Downs–Thomson paradox">
+            </option>
+            <option value="Dynamical systems">
+            </option>
+            <option value="Echo-state networks">
+            </option>
+            <option value="Economic liberalism">
+            </option>
+            <option value="Economics">
+            </option>
+            <option value="Edge detection">
+            </option>
+            <option value="Effective measure complexity">
+            </option>
+            <option value="Elementary cellular automata">
+            </option>
+            <option value="ELisp">
+            </option>
+            <option value="Emacs">
+            </option>
+            <option value="Emergence">
+            </option>
+            <option value="Emergence in artificial life">
+            </option>
+            <option value="Entropy">
+            </option>
+            <option value="Epistasis">
+            </option>
+            <option value="Epsilon machines">
+            </option>
+            <option value="Evaluating NLP">
+            </option>
+            <option value="Evolution">
+            </option>
+            <option value="Fast Marching method">
+            </option>
+            <option value="Federated learning">
+            </option>
+            <option value="Finite state machines">
+            </option>
+            <option value="Fractional calculus">
+            </option>
+            <option value="Functional programming">
+            </option>
+            <option value="Gaussian Processes">
+            </option>
+            <option value="Generalization in Machine learning">
+            </option>
+            <option value="Generative adversarial networks">
+            </option>
+            <option value="Generative art">
+            </option>
+            <option value="Generative modelling">
+            </option>
+            <option value="Genetic algorithms">
+            </option>
+            <option value="Gradient descent">
+            </option>
+            <option value="Gradient descent for wide two-layer neural networks – I : Global convergence">
+            </option>
+            <option value="Gradient flow">
+            </option>
+            <option value="Graham scan">
+            </option>
+            <option value="Graph cellular automata">
+            </option>
+            <option value="Graph convolutional networks">
+            </option>
+            <option value="Graph neural networks">
+            </option>
+            <option value="Graphs">
+            </option>
+            <option value="Gödel's theorem">
+            </option>
+            <option value="Hadamard product">
+            </option>
+            <option value="Halting probability">
+            </option>
+            <option value="Halting problem">
+            </option>
+            <option value="Hash functions">
+            </option>
+            <option value="Haskell">
+            </option>
+            <option value="Haskell Curry">
+            </option>
+            <option value="Hilbert curve indexing">
+            </option>
+            <option value="Homomorphic encryption">
+            </option>
+            <option value="Hopfield Networks">
+            </option>
+            <option value="Hyperbolic geometry">
+            </option>
+            <option value="Illegal numbers">
+            </option>
+            <option value="Image processing">
+            </option>
+            <option value="Implicit neural representations">
+            </option>
+            <option value="Information theory">
+            </option>
+            <option value="Ising model">
+            </option>
+            <option value="Java">
+            </option>
+            <option value="Javascript">
+            </option>
+            <option value="Jevons paradox">
+            </option>
+            <option value="John Conway">
+            </option>
+            <option value="John Von Neumann">
+            </option>
+            <option value="Kaya identity">
+            </option>
+            <option value="Kenneth Stanley">
+            </option>
+            <option value="Kerberos">
+            </option>
+            <option value="Kernel Machine">
+            </option>
+            <option value="Kernel Methods">
+            </option>
+            <option value="Kolmogorov complexity">
+            </option>
+            <option value="Konrad Zuse">
+            </option>
+            <option value="Kullback-leibler divergence">
+            </option>
+            <option value="Lambda calculus">
+            </option>
+            <option value="Langton's loop">
+            </option>
+            <option value="Language">
+            </option>
+            <option value="Language modeling">
+            </option>
+            <option value="Lempel-Ziv-Welch algorithm">
+            </option>
+            <option value="Lenia">
+            </option>
+            <option value="Life">
+            </option>
+            <option value="Lisp">
+            </option>
+            <option value="Locality-Sensitive Hashing">
+            </option>
+            <option value="Logic">
+            </option>
+            <option value="Logical depth">
+            </option>
+            <option value="Machine learning">
+            </option>
+            <option value="Make">
+            </option>
+            <option value="MAP-Elites">
+            </option>
+            <option value="Marvin Minsky">
+            </option>
+            <option value="Mathematics">
+            </option>
+            <option value="Matrix factorization">
+            </option>
+            <option value="Mean field theory of neural networks (talk)">
+            </option>
+            <option value="Melanie Mitchell">
+            </option>
+            <option value="Message-passing graph networks">
+            </option>
+            <option value="Meta-learning">
+            </option>
+            <option value="Minimum description length">
+            </option>
+            <option value="Moore-Penrose inverse">
+            </option>
+            <option value="Morphogenesis">
+            </option>
+            <option value="NEAT">
+            </option>
+            <option value="Network authentication">
+            </option>
+            <option value="Network programming">
+            </option>
+            <option value="Networking">
+            </option>
+            <option value="Neural architecture search">
+            </option>
+            <option value="Neural network pruning">
+            </option>
+            <option value="Neural network training">
+            </option>
+            <option value="Neural networks">
+            </option>
+            <option value="Neural networks as dynamical systems">
+            </option>
+            <option value="Neural tangent kernel">
+            </option>
+            <option value="Neuroscience">
+            </option>
+            <option value="Nick Bostrom">
+            </option>
+            <option value="NK model">
+            </option>
+            <option value="NLP">
+            </option>
+            <option value="Noise">
+            </option>
+            <option value="Note-taking">
+            </option>
+            <option value="Notes on: A Computer Scientist's View of Life, the Universe, and Everything by Schmidhuber, J. (1999)">
+            </option>
+            <option value="Notes on: A model of urban evolution based on innovation diffusion by Raimbault, J. (2020)">
+            </option>
+            <option value="Notes on: A new structurally dissolvable self-reproducing loop evolving in a simple cellular automata space by Sayama, H. (1999)">
+            </option>
+            <option value="Notes on: Adapting to Unseen Environments through Explicit Representation of Context by Tutum, C., &amp; Miikkulainen, R. (2020)">
+            </option>
+            <option value="Notes on: AI-GAs: AI-generating algorithms, an alternate paradigm for producing general artificial intelligence by Clune, J. (2019)">
+            </option>
+            <option value="Notes on: An Integrated Perspective on the Constitutive and Interactive Dimensions of Autonomy by Beer, R. D. (2020)">
+            </option>
+            <option value="Notes on: Cellular automata as convolutional neural networks by Gilpin, W. (2018)">
+            </option>
+            <option value="Notes on: Climbing towards NLU: On Meaning, Form, and Understanding in the Age of Data by Bender, E. M., &amp; Koller, A. (2020)">
+            </option>
+            <option value="Notes on: Combinatory Chemistry: Towards a Simple Model of Emergent Evolution by Kruszewski, G., &amp; Mikolov, T. (2020)">
+            </option>
+            <option value="Notes on: Complexity and evolution: What everybody knows by McShea, D. W. (1991)">
+            </option>
+            <option value="Notes on: Curiosity-Driven Exploration by Self-Supervised Prediction by Pathak, D., Agrawal, P., Efros, A. A., &amp; Darrell, T. (2017)">
+            </option>
+            <option value="Notes on: Developmental mappings and phenotypic complexity by Lehre, P. K., &amp; Haddow, P. C. (2003)">
+            </option>
+            <option value="Notes on: Diversity preservation in minimal criterion coevolution through resource limitation by Brant, J. C., &amp; Stanley, K. O. (2020)">
+            </option>
+            <option value="Notes on: Drinking from a Firehose: Continual Learning with Web-scale Natural Language by Hu, H., Sener, O., Sha, F., &amp; Koltun, V. (2020)">
+            </option>
+            <option value="Notes on: Efficient Neural Architecture Search via Parameter Sharing by Pham, H., Guan, M. Y., Zoph, B., Le, Q. V., &amp; Dean, J. (2018)">
+            </option>
+            <option value="Notes on: Emergence in artificial life by Gershenson, C. (2021)">
+            </option>
+            <option value="Notes on: Evolution in asynchronous cellular automata by Nehaniv, C. L. (2003)">
+            </option>
+            <option value="Notes on: Evolved Open-Endedness, Not Open-Ended Evolution by Pattee, H. H., &amp; Sayama, H. (2019)">
+            </option>
+            <option value="Notes on: Evolving a self-repairing, self-regulating, French flag organism by Miller, J. F. (2004)">
+            </option>
+            <option value="Notes on: Evolving Neural Networks through Augmenting Topologies by Stanley, K. O., &amp; Miikkulainen, R. (2002)">
+            </option>
+            <option value="Notes on: Fast and stable MAP-Elites in noisy domains using deep grids by Flageat, M., &amp; Cully, A. (2020)">
+            </option>
+            <option value="Notes on: Generalization over different cellular automata rules learned by a deep feed-forward neural network by Aach, M., Goebbert, J. H., &amp; Jitsev, J. (2021)">
+            </option>
+            <option value="Notes on: Growing Neural Cellular Automata by Mordvintsev, A., Randazzo, E., Niklasson, E., &amp; Levin, M. (2020)">
+            </option>
+            <option value="Notes on: Hopfield Networks is All You Need by Ramsauer, H., Schäfl, B., Lehner, J., Seidl, P., Widrich, M., Gruber, L., Holzleitner, M., … (2020)">
+            </option>
+            <option value="Notes on: Information-Theoretic Probing with Minimum Description Length by Voita, E., &amp; Titov, I. (2020)">
+            </option>
+            <option value="Notes on: Intelligence without representation by Brooks, R. A. (1991)">
+            </option>
+            <option value="Notes on: Intrinsically Motivated Discovery of Diverse Patterns in Self-Organizing Systems by Reinke, C., Etcheverry, M., &amp; Oudeyer, P. (2020)">
+            </option>
+            <option value="Notes on: Learning Transferable Architectures for Scalable Image Recognition by Zoph, B., Vasudevan, V., Shlens, J., &amp; Le, Q. V. (2018)">
+            </option>
+            <option value="Notes on: Legendre Memory Units: Continuous-Time Representation in Recurrent Neural Networks by Voelker, A., Kajić, I., &amp; Eliasmith, C. (2019)">
+            </option>
+            <option value="Notes on: Modeling systems with internal state using evolino by Wierstra, D., Gomez, F. J., &amp; Schmidhuber, J. (2005)">
+            </option>
+            <option value="Notes on: Molecule Attention Transformer by Maziarka, Ł., Danel, T., Mucha, S., Rataj, K., Tabor, J., &amp; Jastrzębski, S. (2020)">
+            </option>
+            <option value="Notes on: More Is Different by Anderson, P. W. (1972)">
+            </option>
+            <option value="Notes on: Network Deconvolution by Ye, C., Evanusa, M., He, H., Mitrokhin, A., Goldstein, T., Yorke, J. A., Fermuller, Cornelia, … (2020)">
+            </option>
+            <option value="Notes on: Neural Architecture Search with Reinforcement Learning by Zoph, B., &amp; Le, Q. V. (2017)">
+            </option>
+            <option value="Notes on: Neural Circuit Policies Enabling Auditable Autonomy by Lechner, M., Hasani, R., Amini, A., Henzinger, T. A., Rus, D., &amp; Grosu, R. (2020)">
+            </option>
+            <option value="Notes on: Neuroevolution: from architectures to learning by Floreano, D., Dürr, P., &amp; Mattiussi, C. (2008)">
+            </option>
+            <option value="Notes on: Nyströmformer: A Nyström-Based Algorithm for Approximating Self-Attention by Xiong, Y., Zeng, Z., Chakraborty, R., Tan, M., Fung, G., Li, Y., &amp; Singh, V. (2021)">
+            </option>
+            <option value="Notes on: On Adversarial Mixup Resynthesis by Beckham, C., Honari, S., Verma, V., Lamb, A., Ghadiri, F., Hjelm, R. D., Bengio, Y., … (2019)">
+            </option>
+            <option value="Notes on: On the expressive power of programming languages by Felleisen, M. (1991)">
+            </option>
+            <option value="Notes on: PCGRL: Procedural Content Generation via Reinforcement Learning by Khalifa, A., Bontrager, P., Earle, S., &amp; Togelius, J. (2020)">
+            </option>
+            <option value="Notes on: POET: open-ended coevolution of environments and their optimized solutions by Wang, R., Lehman, J., Clune, J., &amp; Stanley, K. O. (2019)">
+            </option>
+            <option value="Notes on: Pretrained Transformers as Universal Computation Engines by Lu, K., Grover, A., Abbeel, P., &amp; Mordatch, I. (2021)">
+            </option>
+            <option value="Notes on: Regenerating Soft Robots through Neural Cellular Automata by Horibe, K., Walker, K., &amp; Risi, S. (2021)">
+            </option>
+            <option value="Notes on: Reservoir Computing in Artificial Spin Ice by Jensen, J. H., &amp; Tufte, G. (2020)">
+            </option>
+            <option value="Notes on: Reservoir Computing meets Recurrent Kernels and Structured Transforms by Dong, J., Ohana, R., Rafayelyan, M., &amp; Krzakala, F. (2020)">
+            </option>
+            <option value="Notes on: Resilient Life: An Exploration of Perturbed Autopoietic Patterns in Conway's Game of Life by Cika, A., Cohen, E., Kruszewski, G., Seet, L., Steinmann, P., &amp; Yin, W. (2020)">
+            </option>
+            <option value="Notes on: Safe Reinforcement Learning through Meta-learned Instincts by Grbic, D., &amp; Risi, S. (2020)">
+            </option>
+            <option value="Notes on: Scaling down Deep Learning by Greydanus, S. (2020)">
+            </option>
+            <option value="Notes on: Seeking open-ended evolution in Swarm Chemistry by Sayama, H. (2011)">
+            </option>
+            <option value="Notes on: Spontaneous fine-tuning to environment in many-species chemical reaction networks by Horowitz, J. M., &amp; England, J. L. (2017)">
+            </option>
+            <option value="Notes on: The Architecture of Complexity by Simon, H. A. (1962)">
+            </option>
+            <option value="Notes on: The geometry of integration in text classification RNNs by Aitken, K., Ramasesh, V. V., Garg, A., Cao, Y., Sussillo, D., &amp; Maheswaranathan, N. (2020)">
+            </option>
+            <option value="Notes on: The information theory of individuality by Krakauer, D., Bertschinger, N., Olbrich, E., Flack, J. C., &amp; Ay, N. (2020)">
+            </option>
+            <option value="Notes on: Thinking Like Transformers by Weiss, G., Goldberg, Y., &amp; Yahav, E. (2021)">
+            </option>
+            <option value="Notes on: Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention by Katharopoulos, A., Vyas, A., Pappas, N., &amp; Fleuret, F. (2020)">
+            </option>
+            <option value="Notes on: Transition phenomena in cellular automata rule space by Li, W., Packard, N. H., &amp; Langton, C. G. (1990)">
+            </option>
+            <option value="Novelty search">
+            </option>
+            <option value="Nyström method">
+            </option>
+            <option value="Online privacy">
+            </option>
+            <option value="Ontogeny recapitulates phylogeny">
+            </option>
+            <option value="Open-ended Evolution">
+            </option>
+            <option value="Optimal control">
+            </option>
+            <option value="Optimal transport">
+            </option>
+            <option value="Optimization">
+            </option>
+            <option value="Ordinary least squares">
+            </option>
+            <option value="Org-mode">
+            </option>
+            <option value="Org-roam">
+            </option>
+            <option value="PCA">
+            </option>
+            <option value="Philosophy">
+            </option>
+            <option value="Physics">
+            </option>
+            <option value="Picbreeder">
+            </option>
+            <option value="Privacy-preserving machine learning">
+            </option>
+            <option value="Program synthesis">
+            </option>
+            <option value="Programming languages">
+            </option>
+            <option value="Public key encryption">
+            </option>
+            <option value="Python">
+            </option>
+            <option value="Quality diversity">
+            </option>
+            <option value="Rainbow tables">
+            </option>
+            <option value="Raven's progressive matrices">
+            </option>
+            <option value="Reaction-diffusion">
+            </option>
+            <option value="Recurrent neural networks">
+            </option>
+            <option value="Reductionism">
+            </option>
+            <option value="Regular expressions">
+            </option>
+            <option value="Reinforcement learning">
+            </option>
+            <option value="Reservoir computing">
+            </option>
+            <option value="Reversible cellular automata">
+            </option>
+            <option value="Rice’s theorem">
+            </option>
+            <option value="Richard Sutton">
+            </option>
+            <option value="RNA-world">
+            </option>
+            <option value="Roam research">
+            </option>
+            <option value="Robotics">
+            </option>
+            <option value="Ruby">
+            </option>
+            <option value="Rust">
+            </option>
+            <option value="Santa Fe Institute">
+            </option>
+            <option value="Scala">
+            </option>
+            <option value="Schmidhuber on Consciousness">
+            </option>
+            <option value="Search algorithms">
+            </option>
+            <option value="Sed utility">
+            </option>
+            <option value="Self-organization">
+            </option>
+            <option value="Self-replication">
+            </option>
+            <option value="Self-supervised learning">
+            </option>
+            <option value="Signal processing">
+            </option>
+            <option value="Simpson's paradox">
+            </option>
+            <option value="SIR model">
+            </option>
+            <option value="Stable marriage problem">
+            </option>
+            <option value="Statistical complexity">
+            </option>
+            <option value="Statistical physics">
+            </option>
+            <option value="Statistics">
+            </option>
+            <option value="Supervised learning">
+            </option>
+            <option value="Surprisingly Turing-Complete">
+            </option>
+            <option value="Symmetric encryption">
+            </option>
+            <option value="System of linear equations">
+            </option>
+            <option value="Talk: Alife 2020 keynote Lee Cronin - A Top Down Chemically Embodied Artificial Life Computation">
+            </option>
+            <option value="Talk: Alife 2020 keynote Luis Zaman - New Frontiers in Alife: What was old is new again">
+            </option>
+            <option value="Talk: Alife 2020 keynote Michael Levin - Robot Cancer">
+            </option>
+            <option value="Talk: Alife 2020 keynote Sara Walker - The Natural History of Information">
+            </option>
+            <option value="Talk: Artificial Intelligence: A Guide for Thinking Humans">
+            </option>
+            <option value="Talk: Differentiation of black-box combinatorial solvers">
+            </option>
+            <option value="Talk: The Importance of Open-Endedness in AI and Machine Learning">
+            </option>
+            <option value="Text classification">
+            </option>
+            <option value="The Bitter Lesson">
+            </option>
+            <option value="The Lottery ticket hypothesis">
+            </option>
+            <option value="The Simulated reality hypothesis">
+            </option>
+            <option value="Theory of computation">
+            </option>
+            <option value="Tierra">
+            </option>
+            <option value="Transfer learning">
+            </option>
+            <option value="Transformers">
+            </option>
+            <option value="Turing completeness of cellular automata">
+            </option>
+            <option value="Turing degree">
+            </option>
+            <option value="Turing Machine">
+            </option>
+            <option value="Turing test">
+            </option>
+            <option value="Turing-completeness">
+            </option>
+            <option value="Unconventional computing">
+            </option>
+            <option value="Unker non-linear writing system">
+            </option>
+            <option value="Unsupervised learning">
+            </option>
+            <option value="Urban science">
+            </option>
+            <option value="Variational autoencoders">
+            </option>
+            <option value="Von Neumann's self-reproducing CA">
+            </option>
+            <option value="Wavelets">
+            </option>
+            <option value="Why programming is a good medium for expressing poorly understood and sloppily-formulated ideas">
+            </option>
+            <option value="Wirth's law">
+            </option>
+            <option value="Word vectors">
+            </option>
+            <option value="Writing">
+            </option>
+            <option value="Zuse's thesis">
+            </option>
+          </datalist> <select id="sort_type" class="select-css" name="sort_type">
             <option value="top">
               Top
             </option>
@@ -885,6 +1554,16 @@
               <p class="note_preview">tags Applied maths, Physics</p><span id="date_hidden" style="display: none">2021-03-25T09:58:00+0100</span>
             </div></a>
           </li>
+          <li class="note-button h-entry" id="diffusion_models">
+            <a class="single-note u-url" href="https://hugocisneros.com/notes/diffusion_models/" title="Diffusion models">
+            <div class="single-note-wrapper">
+              <div class="note-title">
+                <picture><source srcset="/img/note_dark.svg" class="note-logo" media="(prefers-color-scheme: dark)"> <img class="note-logo" src="/img/note_light.svg" alt="Note logo"></picture>
+                <h3 class="single-note-title">Diffusion models</h3>
+              </div>
+              <p class="note_preview">tags Generative modelling</p><span id="date_hidden" style="display: none">2021-06-17T10:19:00+0200</span>
+            </div></a>
+          </li>
           <li class="note-button h-entry" id="dijkstra_s_algorithm">
             <a class="single-note u-url" href="https://hugocisneros.com/notes/dijkstra_s_algorithm/" title="Dijkstra's algorithm">
             <div class="single-note-wrapper">
@@ -1172,7 +1851,7 @@
                 <picture><source srcset="/img/note_dark.svg" class="note-logo" media="(prefers-color-scheme: dark)"> <img class="note-logo" src="/img/note_light.svg" alt="Note logo"></picture>
                 <h3 class="single-note-title">Generative adversarial networks</h3>
               </div>
-              <p class="note_preview">tags Neural networks Generative adversarial networks are...</p><span id="date_hidden" style="display: none">2021-03-25T09:56:00+0100</span>
+              <p class="note_preview">tags Neural networks, Generative modelling Generative...</p><span id="date_hidden" style="display: none">2021-06-17T10:18:00+0200</span>
             </div></a>
           </li>
           <li class="note-button h-entry" id="generative_art">
@@ -1183,6 +1862,16 @@
                 <h3 class="single-note-title">Generative art</h3>
               </div>
               <p class="note_preview"></p><span id="date_hidden" style="display: none">2021-04-16T11:16:00+0200</span>
+            </div></a>
+          </li>
+          <li class="note-button h-entry" id="generative_modelling">
+            <a class="single-note u-url" href="https://hugocisneros.com/notes/generative_modelling/" title="Generative modelling">
+            <div class="single-note-wrapper">
+              <div class="note-title">
+                <picture><source srcset="/img/note_dark.svg" class="note-logo" media="(prefers-color-scheme: dark)"> <img class="note-logo" src="/img/note_light.svg" alt="Note logo"></picture>
+                <h3 class="single-note-title">Generative modelling</h3>
+              </div>
+              <p class="note_preview">tags Machine learning</p><span id="date_hidden" style="display: none">2021-06-17T10:18:00+0200</span>
             </div></a>
           </li>
           <li class="note-button h-entry" id="genetic_algorithm">
@@ -1643,6 +2332,16 @@
                 <h3 class="single-note-title">Lisp</h3>
               </div>
               <p class="note_preview">tags Programming languages Lisp has been a popular set of language for Artificial...</p><span id="date_hidden" style="display: none">2020-07-10T11:17:00+0200</span>
+            </div></a>
+          </li>
+          <li class="note-button h-entry" id="locality_sensitive_hashing">
+            <a class="single-note u-url" href="https://hugocisneros.com/notes/locality_sensitive_hashing/" title="Locality-Sensitive Hashing">
+            <div class="single-note-wrapper">
+              <div class="note-title">
+                <picture><source srcset="/img/note_dark.svg" class="note-logo" media="(prefers-color-scheme: dark)"> <img class="note-logo" src="/img/note_light.svg" alt="Note logo"></picture>
+                <h3 class="single-note-title">Locality-Sensitive Hashing</h3>
+              </div>
+              <p class="note_preview">tags Computer science resources Tyler Neylon’s blog</p><span id="date_hidden" style="display: none">2021-06-24T08:45:00+0200</span>
             </div></a>
           </li>
           <li class="note-button h-entry" id="logic">
@@ -2112,7 +2811,7 @@
                 <picture><source srcset="/img/article_dark.svg" class="note-logo" media="(prefers-color-scheme: dark)"> <img class="note-logo" src="/img/article_light.svg" alt="Article logo"></picture>
                 <h3 class="single-note-title">Emergence in artificial life by Gershenson, C. (2021)</h3>
               </div>
-              <p class="note_preview">tags Artificial life, Emergence...</p><span id="date_hidden" style="display: none">2021-05-18T14:51:00+0200</span>
+              <p class="note_preview">tags Artificial life, Emergence...</p><span id="date_hidden" style="display: none">2021-08-03T10:45:00+0200</span>
             </div></a>
           </li>
           <li class="note-button h-entry" id="nehanivevolutionasynchronouscellular2003">
@@ -2483,6 +3182,16 @@
                 <h3 class="single-note-title">The information theory of individuality by Krakauer, D., Bertschinger, N., Olbrich, E.,...</h3>
               </div>
               <p class="note_preview">tags Information theory,...</p><span id="date_hidden" style="display: none">2021-03-25T09:57:00+0100</span>
+            </div></a>
+          </li>
+          <li class="note-button h-entry" id="weissthinkingtransformers2021">
+            <a class="single-note u-url" href="https://hugocisneros.com/notes/weissthinkingtransformers2021/" title="Notes on: Thinking Like Transformers by Weiss, G., Goldberg, Y., &amp; Yahav, E. (2021)">
+            <div class="single-note-wrapper">
+              <div class="note-title">
+                <picture><source srcset="/img/article_dark.svg" class="note-logo" media="(prefers-color-scheme: dark)"> <img class="note-logo" src="/img/article_light.svg" alt="Article logo"></picture>
+                <h3 class="single-note-title">Thinking Like Transformers by Weiss, G., Goldberg, Y., & Yahav, E. (2021)</h3>
+              </div>
+              <p class="note_preview">tags NLP, Computer science...</p><span id="date_hidden" style="display: none">2021-06-16T11:36:00+0200</span>
             </div></a>
           </li>
           <li class="note-button h-entry" id="katharopoulostransformersarernns2020">

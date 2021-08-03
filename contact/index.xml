@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>About on Hugo Cisneros - Personal page</title>
-    <link>https://hugocisneros.com/about/</link>
+    <link>https://hugocisneros.com/contact/</link>
     <description>Recent content in About on Hugo Cisneros - Personal page</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://hugocisneros.com/about/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://hugocisneros.com/contact/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

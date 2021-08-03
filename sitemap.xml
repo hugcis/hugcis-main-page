@@ -4,12 +4,42 @@
     
     <url>
         <loc>https://hugocisneros.com/</loc>
-        <lastmod>2021-06-15T09:58:00+02:00</lastmod>
+        <lastmod>2021-08-03T10:45:00+02:00</lastmod>
     </url>
     
     <url>
         <loc>https://hugocisneros.com/notes/</loc>
-        <lastmod>2021-06-15T09:58:00+02:00</lastmod>
+        <lastmod>2021-08-03T10:45:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/gershensonemergenceartificiallife2021/</loc>
+        <lastmod>2021-08-03T10:45:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/locality_sensitive_hashing/</loc>
+        <lastmod>2021-06-24T08:45:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/diffusion_models/</loc>
+        <lastmod>2021-06-17T10:19:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/generative_adversarial_networks/</loc>
+        <lastmod>2021-06-17T10:18:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/generative_modelling/</loc>
+        <lastmod>2021-06-17T10:18:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/weissthinkingtransformers2021/</loc>
+        <lastmod>2021-06-16T11:36:00+02:00</lastmod>
     </url>
     
     <url>
@@ -100,11 +130,6 @@
     <url>
         <loc>https://hugocisneros.com/notes/org_mode/</loc>
         <lastmod>2021-05-18T15:00:00+02:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/gershensonemergenceartificiallife2021/</loc>
-        <lastmod>2021-05-18T14:51:00+02:00</lastmod>
     </url>
     
     <url>
@@ -619,11 +644,6 @@
     
     <url>
         <loc>https://hugocisneros.com/notes/convolutional_neural_networks/</loc>
-        <lastmod>2021-03-25T09:56:00+01:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/generative_adversarial_networks/</loc>
         <lastmod>2021-03-25T09:56:00+01:00</lastmod>
     </url>
     
@@ -1757,7 +1777,7 @@
     </url>
     
     <url>
-        <loc>https://hugocisneros.com/about/</loc>
+        <loc>https://hugocisneros.com/contact/</loc>
     </url>
     
     <url>

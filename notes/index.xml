@@ -6,7 +6,66 @@
     <description>Recent content in Notes on Hugo Cisneros - Personal page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 15 Jun 2021 09:58:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 03 Aug 2021 10:45:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Notes on: Emergence in artificial life by Gershenson, C. (2021)</title>
+      <link>https://hugocisneros.com/notes/gershensonemergenceartificiallife2021/</link>
+      <pubDate>Tue, 03 Aug 2021 10:45:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/gershensonemergenceartificiallife2021/</guid>
+      <description>tags Artificial life, Emergence source (Gershenson 2021)  Summary The paper introduces a complexity metric based on information. emergence is first measured with Shannon&amp;rsquo;s information: \[E = - K \sum_{i} p_i \log p_i\]
+Then the author argues that self-organization can be seen as the opposite of emergence, and measured with \[S = 1 - E\]
+ [&amp;hellip;] complex systems tend to exhibit both emergence and self-organization. Extreme emergence implies chaos, while extreme self-organization implies immutability.</description>
+    </item>
+    
+    <item>
+      <title>Locality-Sensitive Hashing</title>
+      <link>https://hugocisneros.com/notes/locality_sensitive_hashing/</link>
+      <pubDate>Thu, 24 Jun 2021 08:45:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/locality_sensitive_hashing/</guid>
+      <description> tags Computer science resources Tyler Neylon&amp;rsquo;s blog  </description>
+    </item>
+    
+    <item>
+      <title>Diffusion models</title>
+      <link>https://hugocisneros.com/notes/diffusion_models/</link>
+      <pubDate>Thu, 17 Jun 2021 10:19:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/diffusion_models/</guid>
+      <description> tags Generative modelling  </description>
+    </item>
+    
+    <item>
+      <title>Generative adversarial networks</title>
+      <link>https://hugocisneros.com/notes/generative_adversarial_networks/</link>
+      <pubDate>Thu, 17 Jun 2021 10:18:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/generative_adversarial_networks/</guid>
+      <description>tags Neural networks, Generative modelling  Generative adversarial networks are a type of generative model. It is close in spirit to Variational autoencoders, but has key differences. The main one is the way the model is trained, which uses an adversarial equilibrium between training a generator and training a discriminator.
+Are GANs glorified PCA? (Richardson and Weiss 2020) This paper seems to show that image-to-image translation models are ill-posed and imply the image transformation should always be very local.</description>
+    </item>
+    
+    <item>
+      <title>Generative modelling</title>
+      <link>https://hugocisneros.com/notes/generative_modelling/</link>
+      <pubDate>Thu, 17 Jun 2021 10:18:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/generative_modelling/</guid>
+      <description> tags Machine learning  </description>
+    </item>
+    
+    <item>
+      <title>Notes on: Thinking Like Transformers by Weiss, G., Goldberg, Y., &amp; Yahav, E. (2021)</title>
+      <link>https://hugocisneros.com/notes/weissthinkingtransformers2021/</link>
+      <pubDate>Wed, 16 Jun 2021 11:36:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/weissthinkingtransformers2021/</guid>
+      <description>tags NLP, Computer science source (Weiss, Goldberg, and Yahav 2021)  Summary This paper introduces a programming language that is inspired by the way Transformers process input data. The language is called Restricted Access Sequence Processing Language (RASP).
+Data is represented as sequences, which is the structure transformers manipulate (since they have been designed for NLP applications). The language has two types of internal data representation:
+ Sequence operators (s-ops) are functions that translate sequences into sequences.</description>
+    </item>
+    
     <item>
       <title>Zuse&#39;s thesis</title>
       <link>https://hugocisneros.com/notes/zuse_s_thesis/</link>
@@ -190,17 +249,6 @@ Each of those \(2^3\) neighborhoods of size 3 can be mapped to either state 1 or
       <guid>https://hugocisneros.com/notes/org_mode/</guid>
       <description>tags Emacs, Writing  Org is a markup language similar to Markdown. It was designed to be used in the Emacs editor, which offers special features for working with files in the Org format.
 Org mode can be used as an agenda, task manager, writing and publishing tool, and many other things. Extensions in the form of Emacs package offer even more features to make org-mode more powerful.</description>
-    </item>
-    
-    <item>
-      <title>Notes on: Emergence in artificial life by Gershenson, C. (2021)</title>
-      <link>https://hugocisneros.com/notes/gershensonemergenceartificiallife2021/</link>
-      <pubDate>Tue, 18 May 2021 14:51:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/gershensonemergenceartificiallife2021/</guid>
-      <description>tags Artificial life, Emergence source (Gershenson 2021)  Summary The paper introduces a complexity metric based on information. emergence is first measured with Shannon&amp;rsquo;s information: \[E = - K \sum_{i} p_i \log p_i\]
-Then the author argues that self-organization can be seen as the opposite of emergence, and measured with \[S = 1 - E\]
- [&amp;hellip;] complex systems tend to exhibit both emergence and self-organization. Extreme emergence implies chaos, while extreme self-organization implies immutability.</description>
     </item>
     
     <item>
@@ -1214,16 +1262,6 @@ In a few words, the authors idea of individuality is based on the amount of info
       
       <guid>https://hugocisneros.com/notes/convolutional_neural_networks/</guid>
       <description> tags Neural networks  </description>
-    </item>
-    
-    <item>
-      <title>Generative adversarial networks</title>
-      <link>https://hugocisneros.com/notes/generative_adversarial_networks/</link>
-      <pubDate>Thu, 25 Mar 2021 09:56:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/generative_adversarial_networks/</guid>
-      <description>tags Neural networks  Generative adversarial networks are a type of generative model. It is close in spirit to Variational autoencoders, but has key differences. The main one is the way the model is trained, which uses an adversarial equilibrium between training a generator and training a discriminator.
-Are GANs glorified PCA? (Richardson and Weiss 2020) This paper seems to show that image-to-image translation models are ill-posed and imply the image transformation should always be very local.</description>
     </item>
     
     <item>
@@ -3140,7 +3178,7 @@ With GNU Make 4.0 or later, it is possible to set the prefix to some other fixed
       <pubDate>Wed, 01 Jul 2020 10:36:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/cellular_neural_networks/</guid>
-      <description>tags Cellular automata, Neural networks resources Scholarpedia, (Chua and Yang 1988a, 1988b)  Bibliography Chua, L.O., and L. Yang. 1988. &#34;Cellular Neural Networks: Applications&#34;. IEEE Transactions on Circuits and Systems 35 (10):1273–90. ———. October 1988. &amp;ldquo;Cellular Neural Networks: Theory&amp;rdquo;. IEEE Transactions on Circuits and Systems 35 (10):1257–72.</description>
+      <description>tags Cellular automata, Neural networks resources Scholarpedia, (Chua and Yang 1988a, 1988b)  Bibliography Chua, L.O., and L. Yang. 1988. &#34;Cellular Neural Networks: Applications&#34;. IEEE Transactions on Circuits and Systems 35 (10):1273–90. . ———. October 1988. &amp;ldquo;Cellular Neural Networks: Theory&amp;rdquo;. IEEE Transactions on Circuits and Systems 35 (10):1257–72. https://doi.org/10.1109/31.7600.</description>
     </item>
     
     <item>
