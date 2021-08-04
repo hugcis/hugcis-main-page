@@ -59,12 +59,12 @@
             <a class="article-date u-url" href="https://hugocisneros.com/blog/2021/06/my-org-roam-notes-workflow/"><time itemprop="datePublished" class="dt-published" datetime="2021-06-15T13:40:00+0200" content="2021-06-15T13:40:00+0200">15/06/2021</time></a> <a class="article-author p-author h-card" rel="author" href="https://hugocisneros.com/" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
           </div>
           <div>
-            Reading time: 9 minutes.
+            Reading time: 10 minutes.
           </div>
         </div>
         <div class="article-content e-content" itemprop="articleBody">
-          <p>Some people expressed interest in my <a href="https://www.orgroam.com/">org-roam</a> <a href="/notes/">notes</a> workflow. Setting this up has been an interesting project, teaching me about <a href="/notes/emacs">Emacs</a>, <a href="/notes/org_mode">org-mode</a> and a little about web frontend. This post will describe my current workflow in as much detail as possible.</p>
-          <p>Hopefully, you’ll learn to create an automated build script to convert your org-roam note network into a graph like the one below.</p>
+          <p>Some people expressed interest in my <a href="https://www.orgroam.com/">org-roam</a> <a href="/notes/">notes</a> workflow. Setting this up has been an interesting project, teaching me about <a href="/notes/emacs">Emacs</a>, <a href="/notes/org_mode">org-mode</a> and a little about web frontend. This post will describe my current workflow in as much details as possible.</p>
+          <p>Hopefully, you’ll learn to create an automated build script to publish your notes on the web and convert your org-roam note network into a graph like the one below.</p>
           <figure class="center" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
             <img itemprop="url" src="/img/note-graph.svg" alt="Note graph screenshot" style="">
             <figcaption>
@@ -88,7 +88,7 @@
           <h3 id="organizing-knowledge-in-org-roam">Organizing knowledge in org-roam</h3>
           <p>The goal of org-roam is to create a web of notes linked between each other. By linking notes in a non-hierarchical way, one can make connections between topics and remember them without going through the hassle of creating a hierarchical tag system where it’s never clear if a note should belong to tag “A” or its parent “B”, etc.</p>
           <p>There are plenty of different techniques for taking notes with a tool like this, but I don’t follow any particular one.</p>
-          <p>This is what an org-roam note looks like as raw source:</p>
+          <p>This is what an org-roam note looks like as raw source (of course, Emacs makes this much prettier in practice):</p>
           <div class="highlight">
             <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-org" data-lang="org"><span style="color:#999;font-style:italic">:PROPERTIES:
 </span><span style="color:#e50808;background-color:#520000;font-weight:bold">:ID:       9fd080fa-a9a1-4d85-a6bf-682b41a67b72
@@ -135,6 +135,7 @@ Examples of such functions include:
           <p>The database has a table for the nodes and a table for the links, so there isn’t much work to do to get a graph!</p>
           <h4 id="read-the-org-roam-db">Read the org-roam DB</h4>
           <p>My org-roam database is at <code>~/.emacs.d/org-roam.db</code>. Here is the code that extracts all the information to build my note graph from the DB with 2 SQL queries and constructs a Python graph with the networkx library.</p>
+          <p>SQL experts might scream at this.. these queries were the first that came to mind but there might be a better way of doing this! I’m dealing with small databases so performance isn’t a problem.</p>
           <div class="highlight">
             <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">networkx</span> <span style="color:#6ab825;font-weight:bold">as</span> <span style="color:#447fcf;text-decoration:underline">nx</span>
 <span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">pathlib</span>
@@ -286,7 +287,7 @@ MAX_NODES = <span style="color:#3677a9">200</span>  <span style="color:#999;font
           </div>
           <h3 id="some-frontend-with-d3-dot-js">Some frontend with D3.js</h3>
           <p>You will find the JavaScript code for handling the D3 graph construction <a href="https://github.com/hugcis/hugcis.github.io/blob/master/js/graph.js">here</a>. To create the graph I started from this <a href="https://observablehq.com/@d3/force-directed-graph">D3 Observable tutorial on making force-directed graph</a>. Getting something decent-looking is straightforward with D3.</p>
-          <p>The main SVG source where the graph is drawn is defined in the <code>&lt;div&gt;</code> with id <code>main-graph</code> <a href="https://github.com/hugcis/hugcis.github.io/blob/master/notes/index.html#L53-L65">here</a>. There are two components in there: a filter definition and the main rectangle where the graph is drawn.</p>
+          <p>The main SVG source where the graph is drawn is defined in the <code>&lt;div&gt;</code> with id <code>main-graph</code> <a href="https://github.com/hugcis/hugcis.github.io/blob/master/notes/index.html#L56-L65">here</a>. There are two components in there: a filter definition and the main rectangle where the graph is drawn.</p>
           <p>The filter is shown below. I use it for the tooltips when you point a vertex with your mouse. The tooltips are composed of two elements: the text and a background, that is a rectangle bounding box around the text with the text cut out (it’s what the filter does).</p>
           <div class="highlight">
             <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-svg" data-lang="svg"><span style="color:#6ab825;font-weight:bold">&lt;defs&gt;</span>
@@ -298,7 +299,7 @@ MAX_NODES = <span style="color:#3677a9">200</span>  <span style="color:#999;font
 </code></pre>
           </div>
           <h2 id="conclusion">Conclusion</h2>
-          <p>That’s all. I realize this might look like a complicated bunch of scripts, but this setup works well for me at the moment. <a href="https://github.com/jethrokuan/dots">Jethro Kuans’s dotfiles</a> and <a href="https://github.com/jethrokuan/braindump">Braindump source</a> were a great source of inspiration. It notably helped for the Elisp part for which I have less experience.</p>
+          <p>That’s all I have for you. I realize this might look like a complicated bunch of scripts, but this setup works well for me now. <a href="https://github.com/jethrokuan/dots">Jethro Kuans’s dotfiles</a> and <a href="https://github.com/jethrokuan/braindump">Braindump source</a> were a great source of inspiration. It notably helped for the Elisp part for which I have less experience.</p>
           <p>Getting into the habit of taking notes has been a great for me. I no longer fear forgetting ideas or useful thoughts as long as I write them in my “second brain”.</p>
           <p>I hope this post was informative, and it will help you get a nice note website up and running! Enjoy!</p>
         </div>
