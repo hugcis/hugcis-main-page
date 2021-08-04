@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1">
+  <title>Open-ended creation of hybrid creatures with Neural Cellular Automata - Hugo Cisneros - Personal page</title>
+  <meta property="og:title" content="Open-ended creation of hybrid creatures with Neural Cellular Automata - Hugo Cisneros - Personal page">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="/img/hybrid.jpg">
+  <meta property="og:url" content="https://hugocisneros.com/blog/2021/08/open-ended-creation-of-hybrid-creatures-with-neural-cellular-automata/">
+  <meta property="og:description" content="My submission to the Minecraft Open-endedness challenge 2021. The submission uses Neural cellular automata trained on multiple patterns to generate hybrids in an open-ended way.">
+  <meta name="Description" property="description" content="My submission to the Minecraft Open-endedness challenge 2021. The submission uses Neural cellular automata trained on multiple patterns to generate hybrids in an open-ended way.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@cisne_hug">
+  <meta name="twitter:creator" content="@cisne_hug">
+  <meta property="keywords" content="Open-endedness, Cellular automata, Evolution, Hybrids, Minecraft">
+  <link rel="stylesheet" href="https://hugocisneros.com/css/main.min.css" media="all" type="text/css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
+  <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <nav class="nav">
+        <div class="nav-main">
+          <a href="https://hugocisneros.com/" class="nav-title">Hugo Cisneros - Personal page</a>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="/blog/">Blog</a>
+          </li>
+          <li>
+            <a href="/notes/">Notes</a>
+          </li>
+          <li>
+            <a href="/projects/">Projects</a>
+          </li>
+          <li>
+            <a href="/resume/">Resume</a>
+          </li>
+          <li>
+            <a href="/contact/">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="content" role="main">
+      <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="title-container">
+          <h1 class="article-title p-name" itemprop="name">Open-ended creation of hybrid creatures with Neural Cellular Automata</h1><b><i itemprop="headline" class="article-headline p-summary">Submission to the Minecraft Open-Endedness Challenge 2021</i></b>
+          <div class="article-subtitle">
+            <a class="article-date u-url" href="https://hugocisneros.com/blog/2021/08/open-ended-creation-of-hybrid-creatures-with-neural-cellular-automata/"><time itemprop="datePublished" class="dt-published" datetime="2021-08-03T15:25:56+0200" content="2021-08-03T15:25:56+0200">03/08/2021</time></a> <a class="article-author p-author h-card" rel="author" href="https://hugocisneros.com/" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+          </div>
+        </div>
+        <div class="article-content e-content" itemprop="articleBody">
+          <p>This post describes my submission to the <a href="evocraft.life/">Minecraft Open-endedness challenge 2021</a>. The submission was evaluated with the video below and <a href="https://github.com/hugcis/hybrid-nca-evocraft">the code here</a>. This post will detail the methods and tools used for the submission and give hints for future work.</p>
+          <p>If you want a quick description of the work, have a look at the video:</p><iframe width="100%" height="415" src="https://www.youtube-nocookie.com/embed/RdUCL4Fs0XY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <h2 id="introduction">Introduction</h2>
+          <h3 id="motivation">Motivation</h3>
+          <p>My current research deals with evolution in complex systems and specifically cellular automata (CA). I want to see if we can use such systems to construct open-ended evolving simulations that create an endless stream of ever more complex structures and patterns.</p>
+          <p>Minecraft being a grid world, it has a similar structure to some common flavors of CA. I was excited to see if I could port some of these ideas from the world of CA to Minecraft, where a player can interact with the structures in real time and change their evolution.</p>
+          <p>The ideal goal would be to create a CA that behaves in an open-ended way. Such CA would create new and progressively more complex structures autonomously. By mapping the states of such CA to block types in Minecraft, we could watch these structures emerge in-game. A feedback loop could be naturally added where a user’s actions are mapped back to the CA, enabling a form of “controlled” evolution.</p>
+          <h3 id="neural-cellular-automata">Neural cellular automata</h3>
+          <p>Such CA doesn’t exist yet, and our main hope for the time being is to approach this behavior on a reduced domain. Neural cellular automata, introduced in <a href="#nca">[1]</a>, can be trained with gradient descent to grow a fixed pattern stable under small perturbations from a small fixed seed.</p>
+          <figure class="center">
+            <video width="100%" alt="Example patterns learned by a NCA" autoplay="" loop="" muted="" playsinline=""><source src="/img/nca_grow.webm" type="video/webm"> <source src="/img/nca_grow.mp4" type="video/mp4"></video>
+            <figcaption>
+              <h4>Example patterns learned by NCA, created with <a href="https://colab.research.google.com/github/google-research/self-organising-systems/blob/master/notebooks/growing_ca.ipynb">Mordvinstev et al's colab notebook</a></h4>
+            </figcaption>
+          </figure>
+          <p>In each of the examples above, a separate CA was trained on a pattern starting from a single black pixel. We extend this by training a single NCA on multiple patterns from <strong>different</strong> seeds. Instead of a single black cell, a small number of cells are arranged into simple shapes.</p>
+          <figure class="center" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+            <img itemprop="url" src="/img/nca_seed.png" alt="Example seed patterns" width="300" style="image-rendering: crisp-edges">
+            <figcaption>
+              <h4 itemprop="name">Example seed patterns</h4>
+            </figcaption>
+          </figure>
+          <p>NCA have a lot of parameters (low compared to a regular neural network but still high compared to the information that is encoded in the system). This allowed us to learn more than one pattern (or larger patterns) without adding parameters in the architecture. The resulting patterns are of slightly lower quality but still stable under perturbations and able to grow.</p>
+          <figure class="center">
+            <video width="100%" alt="A NCA trained on 4 animal patterns with different seeds" controls="" loop="" muted="" playsinline=""><source src="/img/normal_nca.mp4" type="video/mp4"></video>
+            <figcaption>
+              <h4>A NCA trained on 4 animal patterns with different seeds</h4>
+            </figcaption>
+          </figure>
+          <p>We turned this idea into a “game” by allowing user interaction with the evolving CA through Minecraft. Our system is not open-ended by itself, but needs human interaction to play with the shapes and seed patterns. This is in the spirit of open-ended games like Picbreeder <a href="#picbreeder">[2]</a> where players choose which generated patterns to mutate or evolve from. The algorithms can generate endless novelty but our human eyes provide the missing step to make it open-ended.</p>
+          <p>Players can manipulate seeds in the game to create progressively more complex creatures out of the ones learned by the NCA.</p>
+          <figure class="center">
+            <video width="100%" alt="Hybrids created on a single NCA by recombining parts of the initial seeds" autoplay="" loop="" muted="" playsinline=""><source src="/img/hybrids.mp4" type="video/mp4"></video>
+            <figcaption>
+              <h4>Hybrids created on a single NCA by recombining parts of the initial seeds</h4>
+            </figcaption>
+          </figure>
+          <h3 id="evaluation">Evaluation</h3>
+          <p>We try to address the evaluation criteria from the competition’s website:</p>
+          <blockquote>
+            <p>Submission will be evaluated by a panel of independent researchers based on -but not restricted to- the following criteria:</p>
+            <ul>
+              <li>
+                <p>Divergence: Open-ended algorithms are not expected to slow down or converge but rather keep expanding and generating more complex outputs over time.</p>
+              </li>
+              <li>
+                <p>Diversity: Does the algorithm produce entities with strong phenotypic diversity? […]</p>
+              </li>
+              <li>
+                <p>Complexity: Can the algorithm produce complex entities or entities interactions that give rise to complex systems? Are hierarchical and modular structures present?</p>
+              </li>
+              <li>
+                <p>Ecological interactions: Do the created entities interact with each other? […]</p>
+              </li>
+              <li>
+                <p>Life-Like properties: Inspiration may be taken from other attributes of living systems […]</p>
+              </li>
+            </ul>
+          </blockquote>
+          <ul>
+            <li>Divergence: seeds can be combined as long as one wants. By splitting the seeds and using arbitrarily large canvasses, the possibilities are infinite.</li>
+            <li>Diversity: The diversity is based on the diversity of patterns the NCA was trained on originally. From this, the algorithm produces combinations of the original patterns.</li>
+            <li>Complexity: The produced hybrids are arguably modular and hierarchical.</li>
+            <li>Ecological interactions: Different pieces of the evolved seeds may interact with each other, giving rise to surprising and unexpected structures, but this is arguably not what the organizers meant with this item. There are no proper ecological interactions in our system</li>
+            <li>Life-like properties: Mutations and crossovers that we observe can be related to some living systems.</li>
+          </ul>
+          <h2 id="methods">Methods</h2>
+          <h3 id="modular-seeds">Modular seeds</h3>
+          <p>The patterns learned by NCA may have different spatial symmetries and structures. By using seed patterns that take advantage of these structures we can help making the hybrids modular.</p>
+          <figure class="center" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+            <img itemprop="url" src="/img/seed_overlay.jpeg" alt="Seed displayed on top of the target giraffe pattern" width="300" style="">
+            <figcaption>
+              <h4 itemprop="name">Seed displayed on top of the target pattern. One part of the seed should code for the body and the other for the head</h4>
+            </figcaption>
+          </figure>
+          <p>In the example above, the NCA learns to grow the pattern from this “double” seed: a head-seed and a body-seed. Because the fully trained NCA know how to repair a damaged pattern, it can actually grow the full pattern from each of these two sub-seeds. When two or more patterns are learned, we can swap sub-seeds to create hybrids.</p>
+          <figure class="center" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+            <img itemprop="url" src="/img/hybrid.jpg" alt="Hybrid giraffe-gorilla obtained by using the head-seed of a giraffe and the body-seed of a gorilla" width="300" style="">
+            <figcaption>
+              <h4 itemprop="name">Hybrid giraffe-gorilla obtained by using the head-seed of a giraffe and the body-seed of a gorilla</h4>
+            </figcaption>
+          </figure>
+          <h3 id="genome-seeds">Genome seeds</h3>
+          <p>We also try another way of encoding information about the patterns in a compact and modular form: genome seeds.</p>
+          <figure class="center" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+            <img itemprop="url" src="/img/genome_seeds.png" alt="Genome seeds: unique patterns of cells" width="300" style="image-rendering: crisp-edges">
+            <figcaption>
+              <h4 itemprop="name">Genome seeds: unique patterns of cells</h4>
+            </figcaption>
+          </figure>
+          <h2 id="future-work">Future work</h2>
+          <h3 id="compression-in-nca">Compression in NCA</h3>
+          <p>NCA trained on multiple patterns implement some form of data compression. Information about each pixel of the target images as well as instructions to grow the pattern from any position has to be encoded in the NCA parameters. An natural follow-up question would be to look at the storage capacity of these NCA, and if their low number of parameters could make it an interesting compression device.</p>
+        </div>
+        <ul class="article-taxonomy">
+          <h3>Tags</h3>
+          <li>
+            <a href="/tags/open-endedness"><span class="tag-item"><img class="tag-logo" src="/img/tag.svg" alt="Logo of a tag: indicates that a tag item follows.">Open-endedness</span></a> <a href="/tags/cellular-automata"><span class="tag-item"><img class="tag-logo" src="/img/tag.svg" alt="Logo of a tag: indicates that a tag item follows.">Cellular automata</span></a> <a href="/tags/evolution"><span class="tag-item"><img class="tag-logo" src="/img/tag.svg" alt="Logo of a tag: indicates that a tag item follows.">Evolution</span></a> <a href="/tags/hybrids"><span class="tag-item"><img class="tag-logo" src="/img/tag.svg" alt="Logo of a tag: indicates that a tag item follows.">Hybrids</span></a> <a href="/tags/minecraft"><span class="tag-item"><img class="tag-logo" src="/img/tag.svg" alt="Logo of a tag: indicates that a tag item follows.">Minecraft</span></a>
+          </li>
+        </ul>
+        <hr>
+        <div class="references">
+          <h3>References</h3>
+          <div class="references-list">
+            <ol>
+              <li id="nca"><b>Alexander Mordvintsev, Ettore Randazzo, Eyvind Niklasson, and Michael Levin</b>. Growing Neural Cellular Automata, Distill, 2020.</li>
+              <li id="picbreeder"><b>Jimmy Secretan et al.</b>. Picbreeder: A Case Study in Collaborative Evolutionary Exploration of Design Space. Evol Comput 2011; 19 (3): 373–403.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="article-date-modified">
+          Last modified <span itemprop="dateModified" content="2021-08-04T15:25:56+0200">04/08/2021</span>
+        </div>
+        <hr>
+      </article>
+    </main>
+    <footer class="footer">
+      <ul class="footer-links">
+        <li>
+          <a class="rss-link" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon" src="/img/RSS.svg" alt="RSS feed icon"></a>
+        </li>
+        <li>
+          <a href="https://github.com/hugcis/natrium-custom">Code</a>
+        </li>
+        <li>© Hugo Cisneros 2021</li>
+      </ul>
+    </footer>
+  </div>
+</body>
+</html>
