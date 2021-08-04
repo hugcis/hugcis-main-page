@@ -26,6 +26,18 @@ If you want a quick description of the work, have a look at the video:
     
     
     <item>
+      <title>My Org-roam Notes Workflow</title>
+      <link>https://hugocisneros.com/blog/2021/06/my-org-roam-notes-workflow/</link>
+      <pubDate>Tue, 15 Jun 2021 13:40:00 +0200</pubDate>
+      <guid>https://hugocisneros.com/blog/2021/06/my-org-roam-notes-workflow/</guid>
+      <description>Some people expressed interest in my org-roam notes workflow. Setting this up has been an interesting project, teaching me about Emacs, org-mode and a little about web frontend. This post will describe my current workflow in as much detail as possible.
+Hopefully, you&amp;rsquo;ll learn to create an automated build script to convert your org-roam note network into a graph like the one below.
+ Note graph screenshot   For the interactive version, see my notes.</description>
+    </item>
+    
+    
+    
+    <item>
       <title>The Elegance of Optimal Transport</title>
       <link>https://hugocisneros.com/blog/2019/12/the-elegance-of-optimal-transport/</link>
       <pubDate>Sat, 07 Dec 2019 23:20:20 +0100</pubDate>

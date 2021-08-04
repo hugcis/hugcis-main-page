@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1">
+  <title>My Org-roam Notes Workflow - Hugo Cisneros - Personal page</title>
+  <meta property="og:title" content="My Org-roam Notes Workflow - Hugo Cisneros - Personal page">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="/img/note-graph.svg">
+  <meta property="og:url" content="https://hugocisneros.com/blog/2021/06/my-org-roam-notes-workflow/">
+  <meta property="og:description" content="A description of my org-roam notes workflow, from writing the notes to publishing them on my website.">
+  <meta name="Description" property="description" content="A description of my org-roam notes workflow, from writing the notes to publishing them on my website.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@cisne_hug">
+  <meta name="twitter:creator" content="@cisne_hug">
+  <meta property="keywords" content="Emacs, Org-roam, Org-mode, Web, Notes">
+  <link rel="stylesheet" href="https://hugocisneros.com/css/main.min.css" media="all" type="text/css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
+  <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <nav class="nav">
+        <div class="nav-main">
+          <a href="https://hugocisneros.com/" class="nav-title">Hugo Cisneros - Personal page</a>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="/blog/">Blog</a>
+          </li>
+          <li>
+            <a href="/notes/">Notes</a>
+          </li>
+          <li>
+            <a href="/projects/">Projects</a>
+          </li>
+          <li>
+            <a href="/resume/">Resume</a>
+          </li>
+          <li>
+            <a href="/contact/">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="content" role="main">
+      <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="title-container">
+          <h1 class="article-title p-name" itemprop="name">My Org-roam Notes Workflow</h1><b><i itemprop="headline" class="article-headline p-summary">Organizing my thoughts and knowledge into a web</i></b>
+          <div class="article-subtitle">
+            <a class="article-date u-url" href="https://hugocisneros.com/blog/2021/06/my-org-roam-notes-workflow/"><time itemprop="datePublished" class="dt-published" datetime="2021-06-15T13:40:00+0200" content="2021-06-15T13:40:00+0200">15/06/2021</time></a> <a class="article-author p-author h-card" rel="author" href="https://hugocisneros.com/" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+          </div>
+          <div>
+            Reading time: 9 minutes.
+          </div>
+        </div>
+        <div class="article-content e-content" itemprop="articleBody">
+          <p>Some people expressed interest in my <a href="https://www.orgroam.com/">org-roam</a> <a href="/notes/">notes</a> workflow. Setting this up has been an interesting project, teaching me about <a href="/notes/emacs">Emacs</a>, <a href="/notes/org_mode">org-mode</a> and a little about web frontend. This post will describe my current workflow in as much detail as possible.</p>
+          <p>Hopefully, you’ll learn to create an automated build script to convert your org-roam note network into a graph like the one below.</p>
+          <figure class="center" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+            <img itemprop="url" src="/img/note-graph.svg" alt="Note graph screenshot" style="">
+            <figcaption>
+              <h4 itemprop="name">Note graph screenshot</h4>
+            </figcaption>
+          </figure>For the interactive version, see <a href="/notes/">my notes</a>.
+          <h2 id="the-notes">The notes</h2>
+          <p>For the past years I have been trying to get into the habit of writing down new pieces of knowledge into notes. I am committed to this idea of keeping track of what I read and learn about. It can also be nice to come back to some of these notes to remind myself about a subject or make connections with something I learned.</p>
+          <h3 id="why-org-roam">Why org-roam?</h3>
+          <p>When searching for the right way to organize and keep track of these notes, I ended up hearing about org-roam. I went through <a href="https://blog.jethro.dev/posts/how%5Fto%5Ftake%5Fsmart%5Fnotes%5Forg">this great blog post</a> by Jethro Kuan which details why he started org-roam.</p>
+          <p>The “roam” in org-roam refers to <a href="https://roamresearch.com/">Roam Research</a>, a standalone note-taking tool that people seem to praise. The tool is closed source for now and not cheap, making some people seek free alternatives. Org-roam seems like a great alternative, but not for everybody. Being an org-mode based tool makes it ideal for Emacs users, but may involve a steep learning curve for other users. If you’ve never heard about org-mode, you may want to read <a href="https://orgmode.org/worg/">this introduction</a>. The tool is incredibly useful, but it takes time to get used to it.</p>
+          <p>I haven’t thoroughly researched other alternatives, but <a href="https://github.com/athensresearch/athens">Athens</a> seems to fill the gap: it’s open-source, it looks user-friendly and not tied to an editor.</p>
+          <p>Personally, I prefer to stick with org-roam for three main reasons:</p>
+          <ul>
+            <li>I am already a heavy user of Emacs and org-mode and a lot of features and Emacs tools integrate well with org-roam</li>
+            <li>I can export the files to my site (I detail how in <a href="#publishing">Publishing</a>)
+            </li>
+            <li>The source files are plain text (with org-mode markup). This means that even if Emacs and org-mode and all related software were to disappear, or more probably, if I decide to manage my notes with something else, I can still export all the content and translate it into whichever format I want</li>
+          </ul>
+          <p>If you are interested in Emacs and would like to see my setup, <a href="https://github.com/hugcis/dotfiles">I publish my dotfiles</a>. You can also read the detailed and commented version of <a href="/org-config/">my org-mode configuration</a>, or jump directly to the <a href="/org-config/#org-roam">org-roam configuration</a>.</p>
+          <h3 id="organizing-knowledge-in-org-roam">Organizing knowledge in org-roam</h3>
+          <p>The goal of org-roam is to create a web of notes linked between each other. By linking notes in a non-hierarchical way, one can make connections between topics and remember them without going through the hassle of creating a hierarchical tag system where it’s never clear if a note should belong to tag “A” or its parent “B”, etc.</p>
+          <p>There are plenty of different techniques for taking notes with a tool like this, but I don’t follow any particular one.</p>
+          <p>This is what an org-roam note looks like as raw source:</p>
+          <div class="highlight">
+            <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-org" data-lang="org"><span style="color:#999;font-style:italic">:PROPERTIES:
+</span><span style="color:#e50808;background-color:#520000;font-weight:bold">:ID:       9fd080fa-a9a1-4d85-a6bf-682b41a67b72
+</span><span style="color:#e50808;background-color:#520000;font-weight:bold">:ROAM_ALIASES: "ML"
+</span><span style="color:#999;font-style:italic">:END:</span>
+<span style="color:#e50808;background-color:#520000;font-weight:bold">#+TITLE</span><span style="color:#999;font-style:italic">: Machine learning</span>
+
+<span style="color:#6ab825;font-weight:bold">- tags ::</span> [[<span style="color:#bbb">id:1b23dc1d-c276-4f95-866a-ad8e37dd544f</span>][<span style="color:#6ab825;font-weight:bold">Artificial Intelligence</span>]]
+
+Machine learning is about constructing algorithms that can approximate complex
+functions from observations of input/output pairs. Machine learning is related to
+[[<span style="color:#bbb">id:ce8b2ebe-f42e-4e4b-b0af-2a4563ef9fc0</span>][<span style="color:#6ab825;font-weight:bold">Statistics</span>]] since its goal is to make 
+predictions based on data.
+
+Examples of such functions include:
+<span style="color:#6ab825;font-weight:bold">- </span>[[<span style="color:#bbb">id:33ebc467-8c6c-43bc-b8b4-ba1971c75a37</span>][<span style="color:#6ab825;font-weight:bold">Image classification</span>]]
+<span style="color:#6ab825;font-weight:bold">- </span>Time-series prediction
+<span style="color:#6ab825;font-weight:bold">- </span>[[<span style="color:#bbb">id:e72f23c2-d3a7-47df-87a6-5de09f820ecf</span>][<span style="color:#6ab825;font-weight:bold">Language modeling</span>]]
+</code></pre>
+          </div>
+          <p>The first 5 lines are a header containing the title of the note, an alias (an alternative name I can use to search for the note within org-roam) and an ID (automatically generated with <code>org-id</code>).</p>
+          <p>The rest is org-mode markup with some links to other notes (they also have unique IDs).</p>
+          <h2 id="publishing">Publishing</h2>
+          <p>Sharing knowledge as much as possible is essential. I also think that it’s even better to share the learning process and the steps to acquiring that knowledge because this is what will help your brain make the right connections and remember what you wrote.</p>
+          <p>My notes are a constant work in progress. I will change them, enrich them or delete them as I learn. Let this be a disclaimer too: I might write notes that are not true or the sole result of my uninformed opinion.</p>
+          <p>Other people might have something to say about these thoughts and some have contacted me to discuss it. Interesting discussions have started from these notes.</p>
+          <h3 id="exporting-the-notes">Exporting the notes</h3>
+          <p>The first step to publishing is to export the org-roam notes to the language of the web: HTML.</p>
+          <h4 id="simple-html">Simple HTML</h4>
+          <p>The simplest way is to use org’s embedded HTML export function (for example you can call <code>M-x org-html-export-to-html</code> when the note is open). For the note above, this will give you this simple HTML result:</p>
+          <figure class="center" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+            <img itemprop="url" src="/img/note-html.png" alt="Note exported to plain HTML" style="">
+            <figcaption>
+              <h4 itemprop="name">Note exported to plain HTML</h4>
+            </figcaption>
+          </figure>
+          <p>Plain HTML + styling is more than enough to get a decent site with all your notes.</p>
+          <h4 id="hugo">Hugo</h4>
+          <p>I use a static site generator called <a href="https://gohugo.io/">Hugo</a> for my website, so I chose to go down the slightly more complicated path of exporting the notes to Hugo’s Markdown format and using Hugo to generate the final HTML. This allows for more flexibility and the possibility to automatically and generate complex pages like <a href="/notes/">this one</a>.</p>
+          <p>If you have <a href="https://ox-hugo.scripter.co/">ox-hugo</a> installed, exporting a note is as simple as calling <code>M-x org-hugo-export-wim-to-md</code> on your note. You should read the ox-hugo documentation to configure your site source path and other useful parameters.</p>
+          <p>I automated the process with <a href="https://gist.github.com/hugcis/1f2d2ad4b98b07ee543f10232ba1b025">a few Elisp functions that I put in a Gist</a>. The last function loops through a file containing a note path on each line. For each line, it exports the note and deletes the line from the file.</p>
+          <h3 id="exporting-the-graph">Exporting the graph</h3>
+          <p>A great advantage of org-roam is that it stores all its useful information in a SQLite database. Don’t worry if you deleted it! Org-roam can rebuild it from the notes and all the links inside them. The database caches a lot of useful data but everything is still in the notes.</p>
+          <p>The database has a table for the nodes and a table for the links, so there isn’t much work to do to get a graph!</p>
+          <h4 id="read-the-org-roam-db">Read the org-roam DB</h4>
+          <p>My org-roam database is at <code>~/.emacs.d/org-roam.db</code>. Here is the code that extracts all the information to build my note graph from the DB with 2 SQL queries and constructs a Python graph with the networkx library.</p>
+          <div class="highlight">
+            <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">networkx</span> <span style="color:#6ab825;font-weight:bold">as</span> <span style="color:#447fcf;text-decoration:underline">nx</span>
+<span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">pathlib</span>
+<span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">sqlite3</span>
+
+
+<span style="color:#6ab825;font-weight:bold">def</span> <span style="color:#447fcf">to_rellink</span>(inp: <span style="color:#24909d">str</span>) -&gt; <span style="color:#24909d">str</span>:
+    <span style="color:#6ab825;font-weight:bold">return</span> pathlib.Path(inp).stem
+
+
+<span style="color:#6ab825;font-weight:bold">def</span> <span style="color:#447fcf">build_graph</span>() -&gt; nx.Digraph:
+    <span style="color:#ed9d13">"""Build a graph from the org-roam database."""</span>
+    graph = nx.DiGraph()
+    home = pathlib.Path.home()
+    conn = sqlite3.connect(home / <span style="color:#ed9d13">".emacs.d"</span> / <span style="color:#ed9d13">"org-roam.db"</span>)
+
+    <span style="color:#999;font-style:italic"># Query all nodes first</span>
+    nodes = conn.execute(<span style="color:#ed9d13">"SELECT file, id, title FROM nodes WHERE level = 0;"</span>)
+    <span style="color:#999;font-style:italic"># A double JOIN to get all nodes that are connected by a link</span>
+    links = conn.execute(<span style="color:#ed9d13">"SELECT n1.id, nodes.id FROM ((nodes AS n1) "</span>
+                         <span style="color:#ed9d13">"JOIN links ON n1.id = links.source) "</span>
+                         <span style="color:#ed9d13">"JOIN (nodes AS n2) ON links.dest = nodes.id "</span>
+                         <span style="color:#ed9d13">"WHERE links.type = '</span><span style="color:#ed9d13">\"</span><span style="color:#ed9d13">id</span><span style="color:#ed9d13">\"</span><span style="color:#ed9d13">';"</span>)
+    <span style="color:#999;font-style:italic"># Populate the graph</span>
+    graph.add_nodes_from((n[<span style="color:#3677a9">1</span>], {
+        <span style="color:#ed9d13">"label"</span>: n[<span style="color:#3677a9">2</span>].strip(<span style="color:#ed9d13">"</span><span style="color:#ed9d13">\"</span><span style="color:#ed9d13">"</span>),
+        <span style="color:#ed9d13">"tooltip"</span>: n[<span style="color:#3677a9">2</span>].strip(<span style="color:#ed9d13">"</span><span style="color:#ed9d13">\"</span><span style="color:#ed9d13">"</span>),
+        <span style="color:#ed9d13">"lnk"</span>: to_rellink(n[<span style="color:#3677a9">0</span>]).lower(),
+        <span style="color:#ed9d13">"id"</span>: n[<span style="color:#3677a9">1</span>].strip(<span style="color:#ed9d13">"</span><span style="color:#ed9d13">\"</span><span style="color:#ed9d13">"</span>)
+    }) <span style="color:#6ab825;font-weight:bold">for</span> n <span style="color:#6ab825;font-weight:bold">in</span>  nodes)
+    graph.add_edges_from(n <span style="color:#6ab825;font-weight:bold">for</span> n <span style="color:#6ab825;font-weight:bold">in</span> links <span style="color:#6ab825;font-weight:bold">if</span> n[<span style="color:#3677a9">0</span>] <span style="color:#6ab825;font-weight:bold">in</span> graph.nodes <span style="color:#6ab825;font-weight:bold">and</span> n[<span style="color:#3677a9">1</span>] <span style="color:#6ab825;font-weight:bold">in</span> graph.nodes)
+    conn.close()
+    <span style="color:#6ab825;font-weight:bold">return</span> graph
+</code></pre>
+          </div>
+          <h4 id="some-graph-analysis">Some graph analysis</h4>
+          <p>This second script starts by constructing the graph with the function above. Then, it applies 3 graph algorithms:</p>
+          <ul>
+            <li>Compute the PageRank score for each vertex and store it as the <code>centrality</code> attribute. This will be used to size the nodes</li>
+            <li>Do a clustering of the nodes into <code>N_COM</code> clusters and store the community in the vertex attribute <code>communityLabel</code></li>
+            <li>Add <code>N_MISSING</code> “predicted” links to enable discovery of new hidden connections between nodes. This uses <a href="https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.link_prediction.ra_index_soundarajan_hopcroft.html#networkx.algorithms.link_prediction.ra_index_soundarajan_hopcroft"><code>networkx</code>’s implementation</a> of Soundarajan and Hopcroft’s method for link prediction
+            </li>
+          </ul>
+          <div class="highlight">
+            <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">itertools</span>
+<span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">json</span>
+<span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">sys</span>
+
+<span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">networkx</span> <span style="color:#6ab825;font-weight:bold">as</span> <span style="color:#447fcf;text-decoration:underline">nx</span>
+<span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">networkx.algorithms.link_analysis.pagerank_alg</span> <span style="color:#6ab825;font-weight:bold">as</span> <span style="color:#447fcf;text-decoration:underline">pag</span>
+<span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">networkx.algorithms.community</span> <span style="color:#6ab825;font-weight:bold">as</span> <span style="color:#447fcf;text-decoration:underline">com</span>
+<span style="color:#6ab825;font-weight:bold">from</span> <span style="color:#447fcf;text-decoration:underline">networkx.drawing.nx_pydot</span> <span style="color:#6ab825;font-weight:bold">import</span> read_dot
+<span style="color:#6ab825;font-weight:bold">from</span> <span style="color:#447fcf;text-decoration:underline">networkx.readwrite</span> <span style="color:#6ab825;font-weight:bold">import</span> json_graph
+
+<span style="color:#6ab825;font-weight:bold">from</span> <span style="color:#447fcf;text-decoration:underline">build_graph_from_org_roam_db</span> <span style="color:#6ab825;font-weight:bold">import</span> build_graph
+
+N_COM = <span style="color:#3677a9">7</span>  <span style="color:#999;font-style:italic"># Desired number of communities</span>
+N_MISSING = <span style="color:#3677a9">20</span>  <span style="color:#999;font-style:italic"># Number of predicted missing links</span>
+MAX_NODES = <span style="color:#3677a9">200</span>  <span style="color:#999;font-style:italic"># Number of nodes in the final graph </span>
+
+<span style="color:#6ab825;font-weight:bold">def</span> <span style="color:#447fcf">compute_centrality</span>(dot_graph: nx.DiGraph) -&gt; None:
+    <span style="color:#ed9d13">"""Add a `centrality` attribute to each node with its PageRank score.
+</span><span style="color:#ed9d13">    """</span>
+    simp_graph = nx.Graph(dot_graph)
+    central = pag.pagerank(simp_graph)
+    min_cent = <span style="color:#24909d">min</span>(central.values())
+    central = {i: central[i] - min_cent <span style="color:#6ab825;font-weight:bold">for</span> i <span style="color:#6ab825;font-weight:bold">in</span> central}
+    max_cent = <span style="color:#24909d">max</span>(central.values())
+    central = {i: central[i] / max_cent <span style="color:#6ab825;font-weight:bold">for</span> i <span style="color:#6ab825;font-weight:bold">in</span> central}
+    nx.set_node_attributes(dot_graph, central, <span style="color:#ed9d13">"centrality"</span>)
+    sorted_cent = <span style="color:#24909d">sorted</span>(dot_graph, key=<span style="color:#6ab825;font-weight:bold">lambda</span> x: dot_graph.nodes[x][<span style="color:#ed9d13">"centrality"</span>])
+    <span style="color:#6ab825;font-weight:bold">for</span> n <span style="color:#6ab825;font-weight:bold">in</span> sorted_cent[:-MAX_NODES]:
+        dot_graph.remove_node(n)
+
+
+<span style="color:#6ab825;font-weight:bold">def</span> <span style="color:#447fcf">compute_communities</span>(dot_graph: nx.DiGraph, n_com: <span style="color:#24909d">int</span>) -&gt; None:
+    <span style="color:#ed9d13">"""Add a `communityLabel` attribute to each node according to their
+</span><span style="color:#ed9d13">    computed community.
+</span><span style="color:#ed9d13">    """</span>
+    simp_graph = nx.Graph(dot_graph)
+    communities = com.girvan_newman(simp_graph)
+    labels = [<span style="color:#24909d">tuple</span>(<span style="color:#24909d">sorted</span>(c) <span style="color:#6ab825;font-weight:bold">for</span> c <span style="color:#6ab825;font-weight:bold">in</span> unities) <span style="color:#6ab825;font-weight:bold">for</span> unities <span style="color:#6ab825;font-weight:bold">in</span>
+              itertools.islice(communities, n_com - <span style="color:#3677a9">1</span>, n_com)][<span style="color:#3677a9">0</span>]
+    label_dict = {l_key: i <span style="color:#6ab825;font-weight:bold">for</span> i <span style="color:#6ab825;font-weight:bold">in</span> <span style="color:#24909d">range</span>(<span style="color:#24909d">len</span>(labels)) <span style="color:#6ab825;font-weight:bold">for</span> l_key <span style="color:#6ab825;font-weight:bold">in</span> labels[i]}
+    nx.set_node_attributes(dot_graph, label_dict, <span style="color:#ed9d13">"communityLabel"</span>)
+
+
+<span style="color:#6ab825;font-weight:bold">def</span> <span style="color:#447fcf">add_missing_links</span>(dot_graph: nx.DiGraph, n_missing: <span style="color:#24909d">int</span>) -&gt; None:
+    <span style="color:#ed9d13">"""Add some missing links to the graph by using top ranking inexisting
+</span><span style="color:#ed9d13">    links by ressource allocation index.
+</span><span style="color:#ed9d13">    """</span>
+    simp_graph = nx.Graph(dot_graph)
+    preds = nx.ra_index_soundarajan_hopcroft(simp_graph, community=<span style="color:#ed9d13">"communityLabel"</span>)
+    new = <span style="color:#24909d">sorted</span>(preds, key=<span style="color:#6ab825;font-weight:bold">lambda</span> x: -x[<span style="color:#3677a9">2</span>])[:n_missing]
+    <span style="color:#6ab825;font-weight:bold">for</span> link <span style="color:#6ab825;font-weight:bold">in</span> new:
+        sys.stderr.write(f<span style="color:#ed9d13">"Predicted edge {link[0]} {link[1]}</span><span style="color:#ed9d13">\n</span><span style="color:#ed9d13">"</span>)
+        dot_graph.add_edge(link[<span style="color:#3677a9">0</span>], link[<span style="color:#3677a9">1</span>], predicted=link[<span style="color:#3677a9">2</span>])
+
+
+<span style="color:#6ab825;font-weight:bold">if</span> __name__ == <span style="color:#ed9d13">"__main__"</span>:
+    sys.stderr.write(<span style="color:#ed9d13">"Reading graph..."</span>)
+    DOT_GRAPH = build_graph()
+    compute_centrality(DOT_GRAPH)
+    compute_communities(DOT_GRAPH, N_COM)
+    add_missing_links(DOT_GRAPH, N_MISSING)
+    sys.stderr.write(<span style="color:#ed9d13">"Done</span><span style="color:#ed9d13">\n</span><span style="color:#ed9d13">"</span>)
+    JS_GRAPH = json_graph.node_link_data(DOT_GRAPH)
+    sys.stdout.write(json.dumps(JS_GRAPH))
+</code></pre>
+          </div>
+          <p>The script writes the graph in JSON format to <code>stdout</code> with <code>networkx</code>’s JSON export function. It looks something like this (you can find the actual graph represented on my notes page <a href="/js/graph.json">here</a>):</p>
+          <div class="highlight">
+            <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+   <span style="color:#6ab825;font-weight:bold">"directed"</span> : <span style="color:#6ab825;font-weight:bold">true</span>,
+   <span style="color:#6ab825;font-weight:bold">"graph"</span> : {},
+   <span style="color:#6ab825;font-weight:bold">"links"</span> : [
+      {
+         <span style="color:#6ab825;font-weight:bold">"source"</span> : <span style="color:#ed9d13">"012f1087-bae9-4bbf-b468-114169782b5b"</span>,
+         <span style="color:#6ab825;font-weight:bold">"target"</span> : <span style="color:#ed9d13">"2fc873e6-d61d-43e3-9dd1-635f54b4114f"</span>,
+         <span style="color:#6ab825;font-weight:bold">"predicted"</span> : <span style="color:#3677a9">0.676190476190476</span>,
+      },
+      {
+         <span style="color:#6ab825;font-weight:bold">"source"</span> : <span style="color:#ed9d13">"012f1087-bae9-4bbf-b468-114169782b5b"</span>,
+         <span style="color:#6ab825;font-weight:bold">"target"</span> : <span style="color:#ed9d13">"89569187-fcdc-4ebf-8608-75bfb129e8c2"</span>
+      },
+      <span style="color:#a61717;background-color:#e3d2d2">...</span>
+   ],
+   <span style="color:#6ab825;font-weight:bold">"nodes"</span>: [
+      {
+         <span style="color:#6ab825;font-weight:bold">"centrality"</span> : <span style="color:#3677a9">0.0848734602948687</span>,
+         <span style="color:#6ab825;font-weight:bold">"communityLabel"</span> : <span style="color:#3677a9">0</span>,
+         <span style="color:#6ab825;font-weight:bold">"id"</span> : <span style="color:#ed9d13">"012f1087-bae9-4bbf-b468-114169782b5b"</span>,
+         <span style="color:#6ab825;font-weight:bold">"label"</span> : <span style="color:#ed9d13">"CPPN"</span>,
+         <span style="color:#6ab825;font-weight:bold">"lnk"</span> : <span style="color:#ed9d13">"cppn"</span>,
+         <span style="color:#6ab825;font-weight:bold">"tooltip"</span> : <span style="color:#ed9d13">"CPPN"</span>
+      },
+      {
+         <span style="color:#6ab825;font-weight:bold">"centrality"</span> : <span style="color:#3677a9">0.0593788434729073</span>,
+         <span style="color:#6ab825;font-weight:bold">"communityLabel"</span> : <span style="color:#3677a9">0</span>,
+         <span style="color:#6ab825;font-weight:bold">"id"</span> : <span style="color:#ed9d13">"b495ae71-9ed6-4ef1-8917-45b490bca56f"</span>,
+         <span style="color:#6ab825;font-weight:bold">"label"</span> : <span style="color:#ed9d13">"Neural tangent kernel"</span>,
+         <span style="color:#6ab825;font-weight:bold">"lnk"</span> : <span style="color:#ed9d13">"neural_tangent_kernel"</span>,
+         <span style="color:#6ab825;font-weight:bold">"tooltip"</span> : <span style="color:#ed9d13">"Neural tangent kernel"</span>
+      },
+      <span style="color:#a61717;background-color:#e3d2d2">...</span>
+   ]
+}
+</code></pre>
+          </div>
+          <h3 id="some-frontend-with-d3-dot-js">Some frontend with D3.js</h3>
+          <p>You will find the JavaScript code for handling the D3 graph construction <a href="https://github.com/hugcis/hugcis.github.io/blob/master/js/graph.js">here</a>. To create the graph I started from this <a href="https://observablehq.com/@d3/force-directed-graph">D3 Observable tutorial on making force-directed graph</a>. Getting something decent-looking is straightforward with D3.</p>
+          <p>The main SVG source where the graph is drawn is defined in the <code>&lt;div&gt;</code> with id <code>main-graph</code> <a href="https://github.com/hugcis/hugcis.github.io/blob/master/notes/index.html#L53-L65">here</a>. There are two components in there: a filter definition and the main rectangle where the graph is drawn.</p>
+          <p>The filter is shown below. I use it for the tooltips when you point a vertex with your mouse. The tooltips are composed of two elements: the text and a background, that is a rectangle bounding box around the text with the text cut out (it’s what the filter does).</p>
+          <div class="highlight">
+            <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-svg" data-lang="svg"><span style="color:#6ab825;font-weight:bold">&lt;defs&gt;</span>
+    <span style="color:#6ab825;font-weight:bold">&lt;filter</span> <span style="color:#bbb">x=</span><span style="color:#ed9d13">"0"</span> <span style="color:#bbb">y=</span><span style="color:#ed9d13">"0"</span> <span style="color:#bbb">width=</span><span style="color:#ed9d13">"1"</span> <span style="color:#bbb">height=</span><span style="color:#ed9d13">"1"</span> <span style="color:#bbb">id=</span><span style="color:#ed9d13">"solid"</span><span style="color:#6ab825;font-weight:bold">&gt;</span>
+        <span style="color:#6ab825;font-weight:bold">&lt;feFlood</span> <span style="color:#bbb">flood-color=</span><span style="color:#ed9d13">"#f7f7f7"</span> <span style="color:#bbb">flood-opacity=</span><span style="color:#ed9d13">"0.9"</span><span style="color:#6ab825;font-weight:bold">/&gt;</span>
+        <span style="color:#6ab825;font-weight:bold">&lt;feComposite</span> <span style="color:#bbb">in=</span><span style="color:#ed9d13">"SourceGraphic"</span> <span style="color:#bbb">operator=</span><span style="color:#ed9d13">"xor"</span> <span style="color:#6ab825;font-weight:bold">/&gt;</span>
+    <span style="color:#6ab825;font-weight:bold">&lt;/filter&gt;</span>
+<span style="color:#6ab825;font-weight:bold">&lt;/defs&gt;</span>
+</code></pre>
+          </div>
+          <h2 id="conclusion">Conclusion</h2>
+          <p>That’s all. I realize this might look like a complicated bunch of scripts, but this setup works well for me at the moment. <a href="https://github.com/jethrokuan/dots">Jethro Kuans’s dotfiles</a> and <a href="https://github.com/jethrokuan/braindump">Braindump source</a> were a great source of inspiration. It notably helped for the Elisp part for which I have less experience.</p>
+          <p>Getting into the habit of taking notes has been a great for me. I no longer fear forgetting ideas or useful thoughts as long as I write them in my “second brain”.</p>
+          <p>I hope this post was informative, and it will help you get a nice note website up and running! Enjoy!</p>
+        </div>
+        <ul class="article-taxonomy">
+          <h3>Tags</h3>
+          <li>
+            <a href="/tags/emacs"><span class="tag-item"><img class="tag-logo" src="/img/tag.svg" alt="Logo of a tag: indicates that a tag item follows.">Emacs</span></a> <a href="/tags/org-roam"><span class="tag-item"><img class="tag-logo" src="/img/tag.svg" alt="Logo of a tag: indicates that a tag item follows.">Org-roam</span></a> <a href="/tags/org-mode"><span class="tag-item"><img class="tag-logo" src="/img/tag.svg" alt="Logo of a tag: indicates that a tag item follows.">Org-mode</span></a> <a href="/tags/web"><span class="tag-item"><img class="tag-logo" src="/img/tag.svg" alt="Logo of a tag: indicates that a tag item follows.">Web</span></a> <a href="/tags/notes"><span class="tag-item"><img class="tag-logo" src="/img/tag.svg" alt="Logo of a tag: indicates that a tag item follows.">Notes</span></a>
+          </li>
+        </ul>
+        <div class="article-date-modified">
+          Last modified <span itemprop="dateModified" content="2021-06-15T13:40:00+0200">15/06/2021</span>
+        </div>
+        <hr>
+      </article>
+    </main>
+    <footer class="footer">
+      <ul class="footer-links">
+        <li>
+          <a class="rss-link" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon" src="/img/RSS.svg" alt="RSS feed icon"></a>
+        </li>
+        <li>
+          <a href="https://github.com/hugcis/natrium-custom">Code</a>
+        </li>
+        <li>© Hugo Cisneros 2021</li>
+      </ul>
+    </footer>
+  </div>
+</body>
+</html>
