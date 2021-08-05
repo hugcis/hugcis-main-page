@@ -6,7 +6,52 @@
     <description>Recent content in Tags on Hugo Cisneros - Personal page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 04 Aug 2021 15:25:56 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 Aug 2021 10:40:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Emacs</title>
+      <link>https://hugocisneros.com/tags/emacs/</link>
+      <pubDate>Thu, 05 Aug 2021 10:40:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/tags/emacs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Notes</title>
+      <link>https://hugocisneros.com/tags/notes/</link>
+      <pubDate>Thu, 05 Aug 2021 10:40:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/tags/notes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Org-mode</title>
+      <link>https://hugocisneros.com/tags/org-mode/</link>
+      <pubDate>Thu, 05 Aug 2021 10:40:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/tags/org-mode/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Org-roam</title>
+      <link>https://hugocisneros.com/tags/org-roam/</link>
+      <pubDate>Thu, 05 Aug 2021 10:40:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/tags/org-roam/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Web</title>
+      <link>https://hugocisneros.com/tags/web/</link>
+      <pubDate>Thu, 05 Aug 2021 10:40:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/tags/web/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Cellular automata</title>
       <link>https://hugocisneros.com/tags/cellular-automata/</link>
@@ -49,51 +94,6 @@
       <pubDate>Wed, 04 Aug 2021 15:25:56 +0200</pubDate>
       
       <guid>https://hugocisneros.com/tags/open-endedness/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Emacs</title>
-      <link>https://hugocisneros.com/tags/emacs/</link>
-      <pubDate>Tue, 15 Jun 2021 13:40:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/tags/emacs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Notes</title>
-      <link>https://hugocisneros.com/tags/notes/</link>
-      <pubDate>Tue, 15 Jun 2021 13:40:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/tags/notes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Org-mode</title>
-      <link>https://hugocisneros.com/tags/org-mode/</link>
-      <pubDate>Tue, 15 Jun 2021 13:40:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/tags/org-mode/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Org-roam</title>
-      <link>https://hugocisneros.com/tags/org-roam/</link>
-      <pubDate>Tue, 15 Jun 2021 13:40:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/tags/org-roam/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Web</title>
-      <link>https://hugocisneros.com/tags/web/</link>
-      <pubDate>Tue, 15 Jun 2021 13:40:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/tags/web/</guid>
       <description></description>
     </item>
     

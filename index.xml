@@ -5,11 +5,22 @@
     <description>Recent content on Hugo Cisneros - Personal page</description>
     
     <language>en-us</language>
-    <lastBuildDate>Wed, 04 Aug 2021 15:25:56 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 05 Aug 2021 10:40:00 +0200</lastBuildDate>
     
     <atom:link href="https://hugocisneros.com/index.xml" rel="self" type="application/rss+xml" />
     
     
+    
+    
+    
+    <item>
+      <title>My Org-roam Notes Workflow</title>
+      <link>https://hugocisneros.com/blog/2021/08/my-org-roam-notes-workflow/</link>
+      <pubDate>Thu, 05 Aug 2021 10:40:00 +0200</pubDate>
+      <guid>https://hugocisneros.com/blog/2021/08/my-org-roam-notes-workflow/</guid>
+      <description>Some people expressed interest in my org-roam notes workflow. Setting this up has been an interesting project, teaching me about Emacs, org-mode and a little about web frontend. This post will describe my current workflow in as much details as possible.
+Hopefully, you&amp;rsquo;ll learn to create an automated build script to publish your notes on the web and convert your org-roam note network into a graph like the one below.</description>
+    </item>
     
     
     
@@ -21,17 +32,6 @@
       <description>This post describes my submission to the Minecraft Open-endedness challenge 2021. The submission was evaluated with the video below and the code here. This post will detail the methods and tools used for the submission and give hints for future work.
 If you want a quick description of the work, have a look at the video:
  Introduction Motivation My current research deals with evolution in complex systems and specifically cellular automata (CA).</description>
-    </item>
-    
-    
-    
-    <item>
-      <title>My Org-roam Notes Workflow</title>
-      <link>https://hugocisneros.com/blog/2021/06/my-org-roam-notes-workflow/</link>
-      <pubDate>Tue, 15 Jun 2021 13:40:00 +0200</pubDate>
-      <guid>https://hugocisneros.com/blog/2021/06/my-org-roam-notes-workflow/</guid>
-      <description>Some people expressed interest in my org-roam notes workflow. Setting this up has been an interesting project, teaching me about Emacs, org-mode and a little about web frontend. This post will describe my current workflow in as much details as possible.
-Hopefully, you&amp;rsquo;ll learn to create an automated build script to publish your notes on the web and convert your org-roam note network into a graph like the one below.</description>
     </item>
     
     

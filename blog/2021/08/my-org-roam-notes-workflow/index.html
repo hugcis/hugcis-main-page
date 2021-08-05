@@ -8,7 +8,7 @@
   <meta property="og:title" content="My Org-roam Notes Workflow - Hugo Cisneros - Personal page">
   <meta property="og:type" content="article">
   <meta property="og:image" content="/img/note-graph.svg">
-  <meta property="og:url" content="https://hugocisneros.com/blog/2021/06/my-org-roam-notes-workflow/">
+  <meta property="og:url" content="https://hugocisneros.com/blog/2021/08/my-org-roam-notes-workflow/">
   <meta property="og:description" content="A description of my org-roam notes workflow, from writing the notes to publishing them on my website.">
   <meta name="Description" property="description" content="A description of my org-roam notes workflow, from writing the notes to publishing them on my website.">
   <meta name="twitter:card" content="summary">
@@ -56,7 +56,7 @@
         <div class="title-container">
           <h1 class="article-title p-name" itemprop="name">My Org-roam Notes Workflow</h1><b><i itemprop="headline" class="article-headline p-summary">Organizing my thoughts and knowledge into a web</i></b>
           <div class="article-subtitle">
-            <a class="article-date u-url" href="https://hugocisneros.com/blog/2021/06/my-org-roam-notes-workflow/"><time itemprop="datePublished" class="dt-published" datetime="2021-06-15T13:40:00+0200" content="2021-06-15T13:40:00+0200">15/06/2021</time></a> <a class="article-author p-author h-card" rel="author" href="https://hugocisneros.com/" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+            <a class="article-date u-url" href="https://hugocisneros.com/blog/2021/08/my-org-roam-notes-workflow/"><time itemprop="datePublished" class="dt-published" datetime="2021-06-15T13:40:00+0200" content="2021-06-15T13:40:00+0200">15/06/2021</time></a> <a class="article-author p-author h-card" rel="author" href="https://hugocisneros.com/" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
           </div>
           <div>
             Reading time: 10 minutes.
@@ -88,7 +88,7 @@
           <h3 id="organizing-knowledge-in-org-roam">Organizing knowledge in org-roam</h3>
           <p>The goal of org-roam is to create a web of notes linked between each other. By linking notes in a non-hierarchical way, one can make connections between topics and remember them without going through the hassle of creating a hierarchical tag system where it’s never clear if a note should belong to tag “A” or its parent “B”, etc.</p>
           <p>There are plenty of different techniques for taking notes with a tool like this, but I don’t follow any particular one.</p>
-          <p>This is what an org-roam note looks like as raw source (of course, Emacs makes this much prettier in practice):</p>
+          <p>This is what an org-roam note looks like as raw source (Emacs makes this much prettier in practice):</p>
           <div class="highlight">
             <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-org" data-lang="org"><span style="color:#999;font-style:italic">:PROPERTIES:
 </span><span style="color:#e50808;background-color:#520000;font-weight:bold">:ID:       9fd080fa-a9a1-4d85-a6bf-682b41a67b72
@@ -130,10 +130,10 @@ Examples of such functions include:
           <p>I use a static site generator called <a href="https://gohugo.io/">Hugo</a> for my website, so I chose to go down the slightly more complicated path of exporting the notes to Hugo’s Markdown format and using Hugo to generate the final HTML. This allows for more flexibility and the possibility to automatically and generate complex pages like <a href="/notes/">this one</a>.</p>
           <p>If you have <a href="https://ox-hugo.scripter.co/">ox-hugo</a> installed, exporting a note is as simple as calling <code>M-x org-hugo-export-wim-to-md</code> on your note. You should read the ox-hugo documentation to configure your site source path and other useful parameters.</p>
           <p>I automated the process with <a href="https://gist.github.com/hugcis/1f2d2ad4b98b07ee543f10232ba1b025">a few Elisp functions that I put in a Gist</a>. The last function loops through a file containing a note path on each line. For each line, it exports the note and deletes the line from the file.</p>
-          <h3 id="exporting-the-graph">Exporting the graph</h3>
+          <h2 id="the-graph">The graph</h2>
           <p>A great advantage of org-roam is that it stores all its useful information in a SQLite database. Don’t worry if you deleted it! Org-roam can rebuild it from the notes and all the links inside them. The database caches a lot of useful data but everything is still in the notes.</p>
           <p>The database has a table for the nodes and a table for the links, so there isn’t much work to do to get a graph!</p>
-          <h4 id="read-the-org-roam-db">Read the org-roam DB</h4>
+          <h3 id="read-the-org-roam-db">Read the org-roam DB</h3>
           <p>My org-roam database is at <code>~/.emacs.d/org-roam.db</code>. Here is the code that extracts all the information to build my note graph from the DB with 2 SQL queries and constructs a Python graph with the networkx library.</p>
           <p>SQL experts might scream at this.. these queries were the first that came to mind but there might be a better way of doing this! I’m dealing with small databases so performance isn’t a problem.</p>
           <div class="highlight">
@@ -171,7 +171,7 @@ Examples of such functions include:
     <span style="color:#6ab825;font-weight:bold">return</span> graph
 </code></pre>
           </div>
-          <h4 id="some-graph-analysis">Some graph analysis</h4>
+          <h3 id="some-graph-analysis">Some graph analysis</h3>
           <p>This second script starts by constructing the graph with the function above. Then, it applies 3 graph algorithms:</p>
           <ul>
             <li>Compute the PageRank score for each vertex and store it as the <code>centrality</code> attribute. This will be used to size the nodes</li>
@@ -300,7 +300,7 @@ MAX_NODES = <span style="color:#3677a9">200</span>  <span style="color:#999;font
           </div>
           <h2 id="conclusion">Conclusion</h2>
           <p>That’s all I have for you. I realize this might look like a complicated bunch of scripts, but this setup works well for me now. <a href="https://github.com/jethrokuan/dots">Jethro Kuans’s dotfiles</a> and <a href="https://github.com/jethrokuan/braindump">Braindump source</a> were a great source of inspiration. It notably helped for the Elisp part for which I have less experience.</p>
-          <p>Getting into the habit of taking notes has been a great for me. I no longer fear forgetting ideas or useful thoughts as long as I write them in my “second brain”.</p>
+          <p>Getting into the habit of taking notes has been a great experience for me. I no longer fear forgetting ideas or useful thoughts as long as I write them in my “second brain”.</p>
           <p>I hope this post was informative, and it will help you get a nice note website up and running! Enjoy!</p>
         </div>
         <ul class="article-taxonomy">
@@ -310,7 +310,7 @@ MAX_NODES = <span style="color:#3677a9">200</span>  <span style="color:#999;font
           </li>
         </ul>
         <div class="article-date-modified">
-          Last modified <span itemprop="dateModified" content="2021-06-15T13:40:00+0200">15/06/2021</span>
+          Last modified <span itemprop="dateModified" content="2021-08-05T10:40:00+0200">05/08/2021</span>
         </div>
         <hr>
       </article>
