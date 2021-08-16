@@ -66,7 +66,7 @@
             <p>I have been annoyed with tabs in Makefiles many times. Some editors or copy-pasting functions automatically convert tabs to space and vice-versa and this can break your Makefile.</p>
             <p>With GNU Make 4.0 or later, it is possible to set the prefix to some other fixed token. To use <code>&gt;</code> as a prefix, put this at the beginning of your Makefile:</p>
             <div class="highlight">
-              <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-makefile" data-lang="makefile"><span style="color:#a61717;background-color:#e3d2d2">ifeq</span> <span style="color:#a61717;background-color:#e3d2d2">(</span><span style="color:#6ab825;font-weight:bold">$(</span><span style="color:#40ffff">origin</span> .<span style="color:#40ffff">RECIPEPREFIX</span><span style="color:#6ab825;font-weight:bold">)</span><span style="color:#a61717;background-color:#e3d2d2">,</span> <span style="color:#a61717;background-color:#e3d2d2">undefined)</span>
+              <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-makefile" data-lang="makefile"><span style="color:#a61717;background-color:#e3d2d2">ifeq</span> <span style="color:#a61717;background-color:#e3d2d2">(</span><span style="color:#6ab825;font-weight:bold">$(</span><span style="color:#40ffff">origin</span> .<span style="color:#40ffff">RECIPEPREFIX</span><span style="color:#6ab825;font-weight:bold">)</span><span style="color:#a61717;background-color:#e3d2d2">,</span> <span style="color:#a61717;background-color:#e3d2d2">undefined)</span>
   <span style="color:#6ab825;font-weight:bold">$(</span><span style="color:#40ffff">error</span> "<span style="color:#40ffff">This</span> <span style="color:#40ffff">Make</span> <span style="color:#40ffff">does</span> <span style="color:#40ffff">not</span> <span style="color:#40ffff">support</span> .<span style="color:#40ffff">RECIPEPREFIX</span>. \
     <span style="color:#40ffff">Please</span> <span style="color:#40ffff">use</span> <span style="color:#40ffff">GNU</span> <span style="color:#40ffff">Make</span> 4.0 <span style="color:#40ffff">or</span> <span style="color:#40ffff">later</span>"<span style="color:#6ab825;font-weight:bold">)</span>
 <span style="color:#a61717;background-color:#e3d2d2">endif</span>
@@ -76,7 +76,7 @@
             <h2 id="document-a-make-file-for-a-user">Document a make file for a user</h2>
             <p>Large Makefiles with lots of recipes can be overwhelming for someone trying your software for the first time. Many conventions exist about which standard recipes should be there, but it is also efficient to document them. This can be done by adding the following recipe to the Makefile (which will be run by default, to change this behavior, remove the first line):</p>
             <div class="highlight">
-              <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-makefile" data-lang="makefile"><span style="color:#40ffff">.DEFAULT_GOAL</span> := <span style="color:#24909d">help</span>
+              <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-makefile" data-lang="makefile"><span style="color:#40ffff">.DEFAULT_GOAL</span> := <span style="color:#24909d">help</span>
 <span style="color:#447fcf">.PHONY</span>: help
 
 <span style="color:#447fcf">help</span>:
@@ -266,6 +266,7 @@
     renderMathInElement(document.body, {
         delimiters: [
             {left: "\\[", right: "\\]", display: true},
+            {left: "\\begin{equation}", right: "\\end{equation}", display: true},
             {left: "$", right: "$", display: false},
             {left: "\\(", right: "\\)", display: false},
         ]

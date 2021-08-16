@@ -70,7 +70,7 @@
             </figure>
             <p>C implementation from <a href="https://en.wikipedia.org/wiki/Hilbert%5Fcurve#Applications%5Fand%5Fmapping%5Falgorithms">Wikipedia</a> to convert <code>(x,y)</code> coordinates to linear ones and vice versa:</p>
             <div class="highlight">
-              <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#999;font-style:italic">//convert (x,y) to d
+              <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#999;font-style:italic">//convert (x,y) to d
 </span><span style="color:#6ab825;font-weight:bold">int</span> <span style="color:#447fcf">xy2d</span> (<span style="color:#6ab825;font-weight:bold">int</span> n, <span style="color:#6ab825;font-weight:bold">int</span> x, <span style="color:#6ab825;font-weight:bold">int</span> y) {
     <span style="color:#6ab825;font-weight:bold">int</span> rx, ry, s, d=<span style="color:#3677a9">0</span>;
     <span style="color:#6ab825;font-weight:bold">for</span> (s=n/<span style="color:#3677a9">2</span>; s&gt;<span style="color:#3677a9">0</span>; s/=<span style="color:#3677a9">2</span>) {
@@ -142,6 +142,7 @@
     renderMathInElement(document.body, {
         delimiters: [
             {left: "\\[", right: "\\]", display: true},
+            {left: "\\begin{equation}", right: "\\end{equation}", display: true},
             {left: "$", right: "$", display: false},
             {left: "\\(", right: "\\)", display: false},
         ]

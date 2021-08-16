@@ -65,24 +65,24 @@
             <h3 id="delete-the-same-line-in-many-files">Delete the same line in many files</h3>
             <p>Let’s start by creating a simple text file with three lines. This is what it looks like:</p>
             <div class="highlight">
-              <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh"><span style="color:#24909d">echo</span> <span style="color:#ed9d13">"Hello\nto the\nworld"</span> &gt; test.txt
+              <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh"><span style="color:#24909d">echo</span> <span style="color:#ed9d13">"Hello\nto the\nworld"</span> &gt; test.txt
 cat test.txt
 </code></pre>
             </div>
             <div class="highlight">
-              <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Hello
+              <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Hello
 to the
 world
 </code></pre>
             </div>
             <p>We use <code>sed</code> to remove lines in the file matching some <a href="/notes/regular_expressions/">regex</a>. The -<code>i.bak</code> option ensures the file is modified in place.</p>
             <div class="highlight">
-              <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">sed -i.bak <span style="color:#ed9d13">'/to the/d'</span> test.txt
+              <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">sed -i.bak <span style="color:#ed9d13">'/to the/d'</span> test.txt
 cat test.txt
 </code></pre>
             </div>
             <div class="highlight">
-              <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Hello
+              <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Hello
 world
 </code></pre>
             </div>
@@ -117,6 +117,7 @@ world
     renderMathInElement(document.body, {
         delimiters: [
             {left: "\\[", right: "\\]", display: true},
+            {left: "\\begin{equation}", right: "\\end{equation}", display: true},
             {left: "$", right: "$", display: false},
             {left: "\\(", right: "\\)", display: false},
         ]

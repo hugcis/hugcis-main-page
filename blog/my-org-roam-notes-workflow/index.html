@@ -90,7 +90,7 @@
           <p>There are plenty of different techniques for taking notes with a tool like this, but I don’t follow any particular one.</p>
           <p>This is what an org-roam note looks like as raw source (Emacs makes this much prettier in practice):</p>
           <div class="highlight">
-            <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-org" data-lang="org"><span style="color:#999;font-style:italic">:PROPERTIES:
+            <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-org" data-lang="org"><span style="color:#999;font-style:italic">:PROPERTIES:
 </span><span style="color:#e50808;background-color:#520000;font-weight:bold">:ID:       9fd080fa-a9a1-4d85-a6bf-682b41a67b72
 </span><span style="color:#e50808;background-color:#520000;font-weight:bold">:ROAM_ALIASES: "ML"
 </span><span style="color:#999;font-style:italic">:END:</span>
@@ -137,7 +137,7 @@ Examples of such functions include:
           <p>My org-roam database is at <code>~/.emacs.d/org-roam.db</code>. Here is the code that extracts all the information to build my note graph from the DB with 2 SQL queries and constructs a Python graph with the networkx library.</p>
           <p>SQL experts might scream at this.. these queries were the first that came to mind but there might be a better way of doing this! I’m dealing with small databases so performance isn’t a problem.</p>
           <div class="highlight">
-            <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">networkx</span> <span style="color:#6ab825;font-weight:bold">as</span> <span style="color:#447fcf;text-decoration:underline">nx</span>
+            <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">networkx</span> <span style="color:#6ab825;font-weight:bold">as</span> <span style="color:#447fcf;text-decoration:underline">nx</span>
 <span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">pathlib</span>
 <span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">sqlite3</span>
 
@@ -180,7 +180,7 @@ Examples of such functions include:
             </li>
           </ul>
           <div class="highlight">
-            <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">itertools</span>
+            <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">itertools</span>
 <span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">json</span>
 <span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">sys</span>
 
@@ -196,7 +196,7 @@ N_COM = <span style="color:#3677a9">7</span>  <span style="color:#999;font-style
 N_MISSING = <span style="color:#3677a9">20</span>  <span style="color:#999;font-style:italic"># Number of predicted missing links</span>
 MAX_NODES = <span style="color:#3677a9">200</span>  <span style="color:#999;font-style:italic"># Number of nodes in the final graph </span>
 
-<span style="color:#6ab825;font-weight:bold">def</span> <span style="color:#447fcf">compute_centrality</span>(dot_graph: nx.DiGraph) -&gt; None:
+<span style="color:#6ab825;font-weight:bold">def</span> <span style="color:#447fcf">compute_centrality</span>(dot_graph: nx.DiGraph) -&gt; <span style="color:#6ab825;font-weight:bold">None</span>:
     <span style="color:#ed9d13">"""Add a `centrality` attribute to each node with its PageRank score.
 </span><span style="color:#ed9d13">    """</span>
     simp_graph = nx.Graph(dot_graph)
@@ -211,7 +211,7 @@ MAX_NODES = <span style="color:#3677a9">200</span>  <span style="color:#999;font
         dot_graph.remove_node(n)
 
 
-<span style="color:#6ab825;font-weight:bold">def</span> <span style="color:#447fcf">compute_communities</span>(dot_graph: nx.DiGraph, n_com: <span style="color:#24909d">int</span>) -&gt; None:
+<span style="color:#6ab825;font-weight:bold">def</span> <span style="color:#447fcf">compute_communities</span>(dot_graph: nx.DiGraph, n_com: <span style="color:#24909d">int</span>) -&gt; <span style="color:#6ab825;font-weight:bold">None</span>:
     <span style="color:#ed9d13">"""Add a `communityLabel` attribute to each node according to their
 </span><span style="color:#ed9d13">    computed community.
 </span><span style="color:#ed9d13">    """</span>
@@ -223,7 +223,7 @@ MAX_NODES = <span style="color:#3677a9">200</span>  <span style="color:#999;font
     nx.set_node_attributes(dot_graph, label_dict, <span style="color:#ed9d13">"communityLabel"</span>)
 
 
-<span style="color:#6ab825;font-weight:bold">def</span> <span style="color:#447fcf">add_missing_links</span>(dot_graph: nx.DiGraph, n_missing: <span style="color:#24909d">int</span>) -&gt; None:
+<span style="color:#6ab825;font-weight:bold">def</span> <span style="color:#447fcf">add_missing_links</span>(dot_graph: nx.DiGraph, n_missing: <span style="color:#24909d">int</span>) -&gt; <span style="color:#6ab825;font-weight:bold">None</span>:
     <span style="color:#ed9d13">"""Add some missing links to the graph by using top ranking inexisting
 </span><span style="color:#ed9d13">    links by ressource allocation index.
 </span><span style="color:#ed9d13">    """</span>
@@ -231,7 +231,7 @@ MAX_NODES = <span style="color:#3677a9">200</span>  <span style="color:#999;font
     preds = nx.ra_index_soundarajan_hopcroft(simp_graph, community=<span style="color:#ed9d13">"communityLabel"</span>)
     new = <span style="color:#24909d">sorted</span>(preds, key=<span style="color:#6ab825;font-weight:bold">lambda</span> x: -x[<span style="color:#3677a9">2</span>])[:n_missing]
     <span style="color:#6ab825;font-weight:bold">for</span> link <span style="color:#6ab825;font-weight:bold">in</span> new:
-        sys.stderr.write(f<span style="color:#ed9d13">"Predicted edge {link[0]} {link[1]}</span><span style="color:#ed9d13">\n</span><span style="color:#ed9d13">"</span>)
+        sys.stderr.write(<span style="color:#ed9d13">f</span><span style="color:#ed9d13">"Predicted edge </span><span style="color:#ed9d13">{</span>link[<span style="color:#3677a9">0</span>]<span style="color:#ed9d13">}</span><span style="color:#ed9d13"> </span><span style="color:#ed9d13">{</span>link[<span style="color:#3677a9">1</span>]<span style="color:#ed9d13">}</span><span style="color:#ed9d13">\n</span><span style="color:#ed9d13">"</span>)
         dot_graph.add_edge(link[<span style="color:#3677a9">0</span>], link[<span style="color:#3677a9">1</span>], predicted=link[<span style="color:#3677a9">2</span>])
 
 
@@ -248,7 +248,7 @@ MAX_NODES = <span style="color:#3677a9">200</span>  <span style="color:#999;font
           </div>
           <p>The script writes the graph in JSON format to <code>stdout</code> with <code>networkx</code>’s JSON export function. It looks something like this (you can find the actual graph represented on my notes page <a href="/js/graph.json">here</a>):</p>
           <div class="highlight">
-            <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+            <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
    <span style="color:#6ab825;font-weight:bold">"directed"</span> : <span style="color:#6ab825;font-weight:bold">true</span>,
    <span style="color:#6ab825;font-weight:bold">"graph"</span> : {},
    <span style="color:#6ab825;font-weight:bold">"links"</span> : [
@@ -290,7 +290,7 @@ MAX_NODES = <span style="color:#3677a9">200</span>  <span style="color:#999;font
           <p>The main SVG source where the graph is drawn is defined in the <code>&lt;div&gt;</code> with id <code>main-graph</code> <a href="https://github.com/hugcis/hugcis.github.io/blob/master/notes/index.html#L56-L65">here</a>. There are two components in there: a filter definition and the main rectangle where the graph is drawn.</p>
           <p>The filter is shown below. I use it for the tooltips when you point a vertex with your mouse. The tooltips are composed of two elements: the text and a background, that is a rectangle bounding box around the text with the text cut out (it’s what the filter does).</p>
           <div class="highlight">
-            <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-svg" data-lang="svg"><span style="color:#6ab825;font-weight:bold">&lt;defs&gt;</span>
+            <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-svg" data-lang="svg"><span style="color:#6ab825;font-weight:bold">&lt;defs&gt;</span>
     <span style="color:#6ab825;font-weight:bold">&lt;filter</span> <span style="color:#bbb">x=</span><span style="color:#ed9d13">"0"</span> <span style="color:#bbb">y=</span><span style="color:#ed9d13">"0"</span> <span style="color:#bbb">width=</span><span style="color:#ed9d13">"1"</span> <span style="color:#bbb">height=</span><span style="color:#ed9d13">"1"</span> <span style="color:#bbb">id=</span><span style="color:#ed9d13">"solid"</span><span style="color:#6ab825;font-weight:bold">&gt;</span>
         <span style="color:#6ab825;font-weight:bold">&lt;feFlood</span> <span style="color:#bbb">flood-color=</span><span style="color:#ed9d13">"#f7f7f7"</span> <span style="color:#bbb">flood-opacity=</span><span style="color:#ed9d13">"0.9"</span><span style="color:#6ab825;font-weight:bold">/&gt;</span>
         <span style="color:#6ab825;font-weight:bold">&lt;feComposite</span> <span style="color:#bbb">in=</span><span style="color:#ed9d13">"SourceGraphic"</span> <span style="color:#bbb">operator=</span><span style="color:#ed9d13">"xor"</span> <span style="color:#6ab825;font-weight:bold">/&gt;</span>

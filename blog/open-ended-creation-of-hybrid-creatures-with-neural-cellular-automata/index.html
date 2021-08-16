@@ -70,7 +70,7 @@
           <h3 id="neural-cellular-automata">Neural cellular automata</h3>
           <p>Such CA doesn’t exist yet, and our main hope for the time being is to approach this behavior on a reduced domain. Neural cellular automata, introduced in <a href="#nca">[1]</a>, can be trained with gradient descent to grow a fixed pattern stable under small perturbations from a small fixed seed.</p>
           <figure class="center">
-            <video width="100%" alt="Example patterns learned by a NCA" autoplay="" loop="" muted="" playsinline=""><source src="/img/nca_grow.webm" type="video/webm"> <source src="/img/nca_grow.mp4" type="video/mp4"></video>
+            <video width="100%" alt="Example patterns learned by a NCA" autoplay="" loop="" muted playsinline><source src="/img/nca_grow.webm" type="video/webm"> <source src="/img/nca_grow.mp4" type="video/mp4"></video>
             <figcaption>
               <h4>Example patterns learned by NCA, created with <a href="https://colab.research.google.com/github/google-research/self-organising-systems/blob/master/notebooks/growing_ca.ipynb">Mordvinstev et al's colab notebook</a></h4>
             </figcaption>
@@ -84,7 +84,7 @@
           </figure>
           <p>NCA have a lot of parameters (low compared to a regular neural network but still high compared to the information that is encoded in the system). This allowed us to learn more than one pattern (or larger patterns) without adding parameters in the architecture. The resulting patterns are of slightly lower quality but still stable under perturbations and able to grow.</p>
           <figure class="center">
-            <video width="100%" alt="A NCA trained on 4 animal patterns with different seeds" controls="" loop="" muted="" playsinline=""><source src="/img/normal_nca.mp4" type="video/mp4"></video>
+            <video width="100%" alt="A NCA trained on 4 animal patterns with different seeds" controls="" loop="" muted playsinline><source src="/img/normal_nca.mp4" type="video/mp4"></video>
             <figcaption>
               <h4>A NCA trained on 4 animal patterns with different seeds</h4>
             </figcaption>
@@ -92,7 +92,7 @@
           <p>We turned this idea into a “game” by allowing user interaction with the evolving CA through Minecraft. Our system is not open-ended by itself, but needs human interaction to play with the shapes and seed patterns. This is in the spirit of open-ended games like Picbreeder <a href="#picbreeder">[2]</a> where players choose which generated patterns to mutate or evolve from. The algorithms can generate endless novelty but our human eyes provide the missing step to make it open-ended.</p>
           <p>Players can manipulate seeds in the game to create progressively more complex creatures out of the ones learned by the NCA.</p>
           <figure class="center">
-            <video width="100%" alt="Hybrids created on a single NCA by recombining parts of the initial seeds" autoplay="" loop="" muted="" playsinline=""><source src="/img/hybrids.mp4" type="video/mp4"></video>
+            <video width="100%" alt="Hybrids created on a single NCA by recombining parts of the initial seeds" autoplay="" loop="" muted playsinline><source src="/img/hybrids.mp4" type="video/mp4"></video>
             <figcaption>
               <h4>Hybrids created on a single NCA by recombining parts of the initial seeds</h4>
             </figcaption>
@@ -151,8 +151,9 @@
             </figcaption>
           </figure>
           <h2 id="future-work">Future work</h2>
+          <h3 id="seed-engineering">Seed engineering</h3>
           <h3 id="compression-in-nca">Compression in NCA</h3>
-          <p>NCA trained on multiple patterns implement some form of data compression. Information about each pixel of the target images as well as instructions to grow the pattern from any position has to be encoded in the NCA parameters. An natural follow-up question would be to look at the storage capacity of these NCA, and if their low number of parameters could make it an interesting compression device.</p>
+          <p>NCA trained on multiple patterns implement some form of data compression. Information about each pixel of the target images as well as instructions to grow the pattern from any position is encoded in the NCA parameters in some form. A natural follow-up question would be to look at the storage capacity of these NCA and if their low number of parameters could make it an interesting robust and error-correcting compression device.</p>
         </div>
         <ul class="article-taxonomy">
           <h3>Tags</h3>

@@ -6,7 +6,49 @@
     <description>Recent content in Notes on Hugo Cisneros - Personal page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 03 Aug 2021 10:45:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 Aug 2021 12:05:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Unker non-linear writing system</title>
+      <link>https://hugocisneros.com/notes/unker_non_linear_writing_system/</link>
+      <pubDate>Mon, 16 Aug 2021 12:05:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/unker_non_linear_writing_system/</guid>
+      <description>tags Language resources https://s.ai/nlws/  A fascinating writing system based on glyphs connected to each other to create meaning. The system is quite advanced and reading its grammar is like discovering some new alien language. It was created by Alex Fink and Sai in 2010.
+This is the kind of complexity that would be incredible to discover in open-ended evolving language systems. A system starting from elementary components and no particular assumption about what language should be, could come up with such exotic models (probably even more exotic in the case of a truly open-ended system).</description>
+    </item>
+    
+    <item>
+      <title>Cellular automata as convolutional neural networks</title>
+      <link>https://hugocisneros.com/notes/cellular_automata_as_cnns/</link>
+      <pubDate>Mon, 16 Aug 2021 11:56:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/cellular_automata_as_cnns/</guid>
+      <description>tags Cellular automata, Convolutional neural networks  Motivation Cellular automata are computational models based on several principles such as translation-invariance and parallelism of computations. These principles also motivated the creation of Convolutional neural networks &amp;mdash; used initially for images and text &amp;mdash;, making this model well-suited to reason about cellular automata.
+There is indeed a deep connection between the two models, making it seem like there are two expressions of the same idea: spatially organized information can be processed locally in parallel.</description>
+    </item>
+    
+    <item>
+      <title>Cellular automata as recurrent neural networks</title>
+      <link>https://hugocisneros.com/notes/cellular_automata_as_recurrent_neural_networks/</link>
+      <pubDate>Mon, 16 Aug 2021 11:42:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/cellular_automata_as_recurrent_neural_networks/</guid>
+      <description>tags Cellular automata, Recurrent neural networks  Since cellular automata are a kind of dynamical system, they may also be seen as a type of recurrent neural network. They are even closer to a recurrent-convolutional network because each of the &amp;ldquo;hidden neurons&amp;rdquo; update depends only on the neighboring neurons and the update rule is shared across the whole hidden state.</description>
+    </item>
+    
+    <item>
+      <title>Notes on: Legendre Memory Units: Continuous-Time Representation in Recurrent Neural Networks by Voelker, A., Kajić, I., &amp; Eliasmith, C. (2019)</title>
+      <link>https://hugocisneros.com/notes/voelkerlegendrememoryunits2019/</link>
+      <pubDate>Tue, 10 Aug 2021 09:25:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/voelkerlegendrememoryunits2019/</guid>
+      <description>tags Recurrent neural networks source (Voelker, Kajić, and Eliasmith 2019)  Summary This paper introduces the LMU recurrent cell. This cell is based on a similar-ish idea to LSTM to maintain a memory hidden state. The main idea of the paper is to make this memory satisfy a set of first order ordinary differential equations.
+\[
+\begin{equation} \theta \dot{m}(t) = Am(t) + Bu(t) \end{equation}
+\]
+This system has a solution which represents sliding windows of \(u\) via Legendre polynomials.</description>
+    </item>
+    
     <item>
       <title>Notes on: Emergence in artificial life by Gershenson, C. (2021)</title>
       <link>https://hugocisneros.com/notes/gershensonemergenceartificiallife2021/</link>
@@ -179,16 +221,6 @@ New candidate solutions for a problem are constructed by randomly combining and 
   Alternative mechanisms for learning have been and are currently studied to try and approach the learning problem in a more effective way.
 Direct feedback alignment (Nøkland 2016)
 Hebbian learning The theory is sometimes summarized as &amp;ldquo;Cells that fire together wire together.</description>
-    </item>
-    
-    <item>
-      <title>Unker non-linear writing system</title>
-      <link>https://hugocisneros.com/notes/unker_non_linear_writing_system/</link>
-      <pubDate>Mon, 14 Jun 2021 09:59:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/unker_non_linear_writing_system/</guid>
-      <description>tags Language resources https://s.ai/nlws/  A fascinating writing system based on glyphs connected to each other to create meaning. The system is quite advanced and reading its grammar is like discovering some new alien language. It was created by Alex Fink and Sai in 2010.
-This is the kind of complexity that would be incredible to discover in open-ended evolving language systems. A system starting from elementary components and no particular assumption about what language should be, could come up with such exotic models (probably even more exotic in the case of a truly open-ended system).</description>
     </item>
     
     <item>
@@ -556,16 +588,6 @@ Bibliography Chan, Bert Wang-Chak. May 2019. &#34;Lenia - Biology of Artificial 
     </item>
     
     <item>
-      <title>Cellular automata as CNNs</title>
-      <link>https://hugocisneros.com/notes/cellular_automata_as_cnns/</link>
-      <pubDate>Thu, 25 Mar 2021 12:08:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/cellular_automata_as_cnns/</guid>
-      <description>tags Cellular automata, Convolutional neural networks  Motivation Cellular automata are computational models based on several principles such as translation-invariance and parallelism of computations. These principles also motivated the creation of Convolutional neural networks &amp;mdash; used initially for images and text &amp;mdash;, making this model well-suited to reason about cellular automata.
-There is indeed a deep connection between the two models, making it seem like there are two expressions of the same idea: spatially organized information can be processed locally in parallel.</description>
-    </item>
-    
-    <item>
       <title>Notes on: The geometry of integration in text classification RNNs by Aitken, K., Ramasesh, V. V., Garg, A., Cao, Y., Sussillo, D., &amp; Maheswaranathan, N. (2020)</title>
       <link>https://hugocisneros.com/notes/aitkengeometryintegrationtext2020/</link>
       <pubDate>Thu, 25 Mar 2021 10:20:00 +0100</pubDate>
@@ -732,17 +754,6 @@ I am interested in taking an ALife inspired approach to studying cities, as it c
 Their goal is to use an IMGEP algorithm to represent interesting patterns and discover them.
 Problem setting Goal: With a budget of \(N\) experiments, maximize diversity of observations.
 Parameter space \(\Theta\) of available parameters \(\theta\). An observation space \(O\) of observations.</description>
-    </item>
-    
-    <item>
-      <title>Notes on: Legendre Memory Units: Continuous-Time Representation in Recurrent Neural Networks by Voelker, A., Kajić, I., &amp; Eliasmith, C. (2019)</title>
-      <link>https://hugocisneros.com/notes/voelkerlegendrememoryunits2019/</link>
-      <pubDate>Thu, 25 Mar 2021 09:58:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/voelkerlegendrememoryunits2019/</guid>
-      <description>tags Recurrent neural networks source (Voelker, Kajić, and Eliasmith 2019)  Summary This paper introduces the LMU recurrent cell. This cell is based on a similar-ish idea to LSTM to maintain a memory hidden state. The main idea of the paper is to make this memory satisfy a set of first order ordinary differential equations.
-\begin{equation} \theta \dot{m}(t) = Am(t) + Bu(t) \end{equation}
-This system has a solution which represents sliding windows of \(u\) via Legendre polynomials.</description>
     </item>
     
     <item>

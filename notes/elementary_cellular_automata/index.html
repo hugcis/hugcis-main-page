@@ -72,7 +72,7 @@
             <h2 id="simple-implementation">Simple implementation</h2>
             <p>In <a href="/notes/python/">Python</a>, taking advantage of Numpy’s array manipulation. This implementation is much faster than looping through elements of the grid to update them, but uses slightly more memory. The <a href="/notes/algorithm/">algorithm</a> is simply based on the standard ECA update.</p>
             <div class="highlight">
-              <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">numpy</span> <span style="color:#6ab825;font-weight:bold">as</span> <span style="color:#447fcf;text-decoration:underline">np</span>
+              <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">numpy</span> <span style="color:#6ab825;font-weight:bold">as</span> <span style="color:#447fcf;text-decoration:underline">np</span>
 <span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">matplotlib</span>
 <span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">matplotlib.pyplot</span> <span style="color:#6ab825;font-weight:bold">as</span> <span style="color:#447fcf;text-decoration:underline">plt</span>
 fig, ax = plt.subplots(figsize=(<span style="color:#3677a9">3</span>,<span style="color:#3677a9">2</span>))
@@ -123,7 +123,7 @@ fig.savefig(<span style="color:#ed9d13">'img/plots/ca_rule54.png'</span>)
                   <a href="/notes/cellular_automata/">Cellular automata</a>
                 </li>
                 <li>
-                  <a href="/notes/cellular_automata_as_cnns/">Cellular automata as CNNs</a>
+                  <a href="/notes/cellular_automata_as_cnns/">Cellular automata as convolutional neural networks</a>
                 </li>
                 <li>
                   <a href="/notes/reinkeintrinsicallymotivateddiscovery2020/">Notes on: Intrinsically Motivated Discovery of Diverse Patterns in Self-Organizing Systems by Reinke, C., Etcheverry, M., & Oudeyer, P. (2020)</a>
@@ -163,6 +163,7 @@ fig.savefig(<span style="color:#ed9d13">'img/plots/ca_rule54.png'</span>)
     renderMathInElement(document.body, {
         delimiters: [
             {left: "\\[", right: "\\]", display: true},
+            {left: "\\begin{equation}", right: "\\end{equation}", display: true},
             {left: "$", right: "$", display: false},
             {left: "\\(", right: "\\)", display: false},
         ]

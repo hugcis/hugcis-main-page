@@ -65,7 +65,7 @@
             <h3 id="categories-to-one-hot">Categories to one-hot</h3>
             <p>This is a handy technique but can be very resource intensive for large arrays.</p>
             <div class="highlight">
-              <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">  <span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">numpy</span> <span style="color:#6ab825;font-weight:bold">as</span> <span style="color:#447fcf;text-decoration:underline">np</span>
+              <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">  <span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">numpy</span> <span style="color:#6ab825;font-weight:bold">as</span> <span style="color:#447fcf;text-decoration:underline">np</span>
   a = np.random.randrange(<span style="color:#3677a9">5</span>, size=<span style="color:#3677a9">10</span>)
   one_hot_a = np.eye(<span style="color:#3677a9">5</span>)[a]
 </code></pre>
@@ -73,7 +73,7 @@
             <h3 id="side-output-for-jupyter-notebooks">Side-output for jupyter notebooks</h3>
             <p>Insert the following block in a notebook cell and execute as code (From <a href="https://twitter.com/jrking0/status/1199704651085430785">Twitter</a>). This will put the output of each cell on the side of the code.</p>
             <div class="highlight">
-              <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">  %%html
+              <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">  %%html
   &lt;<span style="color:#6ab825;font-weight:bold">style</span>&gt;
   #<span style="color:#447fcf;text-decoration:underline">notebook-container</span> {<span style="color:#6ab825;font-weight:bold">width</span>: <span style="color:#3677a9">100</span><span style="color:#6ab825;font-weight:bold">%</span>; <span style="color:#6ab825;font-weight:bold">background-color</span>: <span style="color:#3677a9">#EEE</span>}
   .<span style="color:#447fcf;text-decoration:underline">code_cell</span> {<span style="color:#6ab825;font-weight:bold">flex-direction</span>: <span style="color:#6ab825;font-weight:bold">row</span> <span style="color:#cd2828;font-weight:bold">!important</span>;}
@@ -86,7 +86,7 @@
             <h3 id="dataclasses">Dataclasses</h3>
             <p>Dataclass can be used to automatically generate special methods like <code>__init__()</code> and <code>__repr__()</code> for a python class.</p>
             <div class="highlight">
-              <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">  <span style="color:#6ab825;font-weight:bold">from</span> <span style="color:#447fcf;text-decoration:underline">dataclasses</span> <span style="color:#6ab825;font-weight:bold">import</span> dataclass
+              <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">  <span style="color:#6ab825;font-weight:bold">from</span> <span style="color:#447fcf;text-decoration:underline">dataclasses</span> <span style="color:#6ab825;font-weight:bold">import</span> dataclass
 
   <span style="color:#ffa500">@dataclass</span>
   <span style="color:#6ab825;font-weight:bold">class</span> <span style="color:#447fcf;text-decoration:underline">InventoryItem</span>:
@@ -102,14 +102,14 @@
             <h3 id="pathlib">Pathlib</h3>
             <p>Pathlib is an extremely useful library for manipulating paths. It is less cumbersome than using <code>os.path.join()</code> repeatedly.</p>
             <div class="highlight">
-              <pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">  <span style="color:#6ab825;font-weight:bold">from</span> <span style="color:#447fcf;text-decoration:underline">pathlib</span> <span style="color:#6ab825;font-weight:bold">import</span> Path
+              <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">  <span style="color:#6ab825;font-weight:bold">from</span> <span style="color:#447fcf;text-decoration:underline">pathlib</span> <span style="color:#6ab825;font-weight:bold">import</span> Path
   p = Path(<span style="color:#ed9d13">'/'</span>)
-  <span style="color:#6ab825;font-weight:bold">print</span>(<span style="color:#ed9d13">"List subdir:"</span>, [x <span style="color:#6ab825;font-weight:bold">for</span> x <span style="color:#6ab825;font-weight:bold">in</span> p.iterdir() <span style="color:#6ab825;font-weight:bold">if</span> x.is_dir()])
+  <span style="color:#24909d">print</span>(<span style="color:#ed9d13">"List subdir:"</span>, [x <span style="color:#6ab825;font-weight:bold">for</span> x <span style="color:#6ab825;font-weight:bold">in</span> p.iterdir() <span style="color:#6ab825;font-weight:bold">if</span> x.is_dir()])
   q = p / <span style="color:#ed9d13">'init.d'</span> / <span style="color:#ed9d13">'reboot'</span>
-  <span style="color:#6ab825;font-weight:bold">print</span>(q)
-  <span style="color:#6ab825;font-weight:bold">print</span>(q.resolve())
-  <span style="color:#6ab825;font-weight:bold">print</span>(q.exists())
-  <span style="color:#6ab825;font-weight:bold">print</span>(q.is_dir())
+  <span style="color:#24909d">print</span>(q)
+  <span style="color:#24909d">print</span>(q.resolve())
+  <span style="color:#24909d">print</span>(q.exists())
+  <span style="color:#24909d">print</span>(q.is_dir())
   <span style="color:#6ab825;font-weight:bold">with</span> q.open() <span style="color:#6ab825;font-weight:bold">as</span> f: f.readline()
 </code></pre>
             </div>
@@ -165,6 +165,7 @@
     renderMathInElement(document.body, {
         delimiters: [
             {left: "\\[", right: "\\]", display: true},
+            {left: "\\begin{equation}", right: "\\end{equation}", display: true},
             {left: "$", right: "$", display: false},
             {left: "\\(", right: "\\)", display: false},
         ]
