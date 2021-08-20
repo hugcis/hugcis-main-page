@@ -1,0 +1,23 @@
+[
+    
+    
+    
+    {"body":"Links  Project slides PDF project report  Description This project was part of the course Theoretical deep learning (L\u0026rsquo;apprentissage par réseaux de neurones profonds, taught in French) by Stéphane Mallat at Collège de France.\nThis course was composed of theoretical lectures and a machine learning challenge.\nI worked on an intent prediction problem for drug-related question, proposed by the healthcare startup Posos. The goal was to classify real user questions into one of 52 classes representing the type of drug-related information they are looking for.\nThe final solution used word embeddings and a convolutional neural network to classify the sentences.\n","title":"Posos Challenge","url":"https://hugocisneros.com/projects/posos_dl/"}
+    
+    , 
+    
+    {"body":"Links  Project slides PDF project report  Description This project was part of the course Graphs in Machine learning taught by Michal Valko. The project was proposed by Peter Battaglia and supervised by Peter and Michal together.\nThe goal of this project was to apply graph neural networks on the influence maximization (IM) problem for a graph with the independent cascade (IC) assumption (more details in the report). The project was in collaboration with Hind Dadoun\n","title":"Graph neural networks for influence maximization","url":"https://hugocisneros.com/projects/graph_nn_for_influence_maximization/"}
+    
+    , 
+    
+    {"body":"Links  Project slides PDF project report Github  Description This project was part of the course Mathematical Foundations Of Data Science taught by Gabriel Peyré in 2019.\nThe goal was to reproduce and extend results from [1] to other optimization algorithms, including SAGA [2]. After comparing the regularized optimal transport convergence results for these algorithms, I studied an optimal school placement and allocation problem in several French regions.\n","title":"Stochastic optimization for large scale optimal transport","url":"https://hugocisneros.com/projects/stochastic_optimization_for_large_scale_optimal_transport/"}
+    
+    , 
+    
+    {"body":"Links  Github repo Online documentation Report (in French)  Data Journalism Extractor This project is an attempt to create a tool to help journalists extract and process data at scale, from multiple heterogenous data sources while leveraging powerful and complex database, information extraction and NLP tools with limited programming knowledge.\nFeatures This software is based on Apache Flink, a stream processing framework similar to Spark written in Java and Scala. It executes dataflow programs, is highly scalable and integrates easily with other Big Data frameworks and tools such as Kafka, HDFS, YARN, Cassandra or ElasticSearch.\nAlthough you can work with custom dataflow programs that suits your specific needs, one doesn\u0026rsquo;t need to know programming, Flink or Scala to work with this tool and build complex dataflow programs to achieve some of the following operations:\n Extract data from relational databases (Postgres, MySQL, Oracle), NoSQL databases (MongoDB), CSV files, HDFS, etc. Use complex processing tools such as soft string-matching functions, link extractions, etc. Store outputs in multiple different data sinks (CSV files, databases, HDFS, etc.)  Documentation Documentation about the project is available at this link.\n","title":"Data journalism extractor","url":"https://hugocisneros.com/projects/data_journalism_extractor/"}
+    
+    , 
+    
+    {"body":" Github repo  Description This project was about creating a tool similar to Arxiv Sanity with additional NLP functionalities for finding similar papers from their abstract.\nI used a concept from [1], which uses earth mover\u0026rsquo;s distance metric between documents represented as normalized bag-of-words. The underlying transport cost between two words is given by their distance in a pre-trained word vector space. The app trains word vectors on all Arxiv abstracts and uses the EMD based metric to compute similarities between papers.\n","title":"Arxiv explorer","url":"https://hugocisneros.com/projects/arxiv_explorer/"}
+    
+]

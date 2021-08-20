@@ -6,7 +6,26 @@
     <description>Recent content in Notes on Hugo Cisneros - Personal page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Aug 2021 12:21:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 20 Aug 2021 15:30:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Neural cellular automata and implicit representations</title>
+      <link>https://hugocisneros.com/notes/neural_cellular_automata_and_implicit_representations/</link>
+      <pubDate>Fri, 20 Aug 2021 15:30:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/neural_cellular_automata_and_implicit_representations/</guid>
+      <description> tags Cellular automata, Neural cellular automata  </description>
+    </item>
+    
+    <item>
+      <title>Notes on: Learned Initializations for Optimizing Coordinate-Based Neural Representations by Tancik, M., Mildenhall, B., Wang, T., Schmidt, D., Srinivasan, P. P., Barron, J. T., &amp; Ng, R. (2021)</title>
+      <link>https://hugocisneros.com/notes/tanciklearnedinitializationsoptimizing2021/</link>
+      <pubDate>Wed, 18 Aug 2021 16:00:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/tanciklearnedinitializationsoptimizing2021/</guid>
+      <description>tags Neural radiance fields, Meta-learning source (Tancik et al. 2021)  Summary This paper explores meta-learning techniques for improving the quality and speed of convergence of learned implicit neural representations
+Comments Bibliography Tancik, Matthew, Ben Mildenhall, Terrance Wang, Divi Schmidt, Pratul P. Srinivasan, Jonathan T. Barron, and Ren Ng. March 2021. &#34;Learned Initializations for Optimizing Coordinate-Based Neural Representations&#34;. arXiv:2012.02189 [Cs], March.</description>
+    </item>
+    
     <item>
       <title>Cellular automata</title>
       <link>https://hugocisneros.com/notes/cellular_automata/</link>

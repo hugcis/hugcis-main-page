@@ -63,7 +63,7 @@
         </defs>
         <rect id="base_rect" width="100%" height="100%" fill="#f6f6f6"></rect></svg>
       </div>
-      <p>There are 335 notes in total, the graph is displaying the top 200 according to PageRank. Click on notes and follow links to see where they point to!</p>
+      <p>There are 337 notes in total, the graph is displaying the top 200 according to PageRank. Click on notes and follow links to see where they point to!</p>
       <hr>
       <p>This is a collection of notes about several topics I’m either interested in, learning about, or working on at the moment and feel I have things to say about.</p>
       <p>Some notes are empty and used mainly to link other notes between each other. I also sometimes use these notes as <a href="https://github.com/jbranchaud/til" title="Josh Branchaud's Today I learned">TILs</a>. Nodes in the graph are sized according to the <a href="https://en.wikipedia.org/wiki/PageRank" title="PageRank Wikipedia page">PageRank algorithm</a>. Colors corresponding to graph communities are also automatically generated with the <a href="https://en.wikipedia.org/wiki/Girvan%E2%80%93Newman_algorithm">Girvan-Newman algorithm</a> and a fixed number of communities.</p>
@@ -433,6 +433,8 @@
             </option>
             <option value="Neural architecture search">
             </option>
+            <option value="Neural cellular automata and implicit representations">
+            </option>
             <option value="Neural network pruning">
             </option>
             <option value="Neural network training">
@@ -508,6 +510,8 @@
             <option value="Notes on: Intelligence without representation by Brooks, R. A. (1991)">
             </option>
             <option value="Notes on: Intrinsically Motivated Discovery of Diverse Patterns in Self-Organizing Systems by Reinke, C., Etcheverry, M., &amp; Oudeyer, P. (2020)">
+            </option>
+            <option value="Notes on: Learned Initializations for Optimizing Coordinate-Based Neural Representations by Tancik, M., Mildenhall, B., Wang, T., Schmidt, D., Srinivasan, P. P., Barron, J. T., &amp; Ng, R. (2021)">
             </option>
             <option value="Notes on: Learning Transferable Architectures for Scalable Image Recognition by Zoph, B., Vasudevan, V., Shlens, J., &amp; Le, Q. V. (2018)">
             </option>
@@ -2556,6 +2560,16 @@
               <p class="note_preview">tags Search, Neural networks Neural architecture search (NAS)...</p><span id="date_hidden" style="display: none">2021-03-25T09:56:00+0100</span>
             </div></a>
           </li>
+          <li class="note-button h-entry" id="neural_cellular_automata_and_implicit_representations">
+            <a class="single-note u-url" href="https://hugocisneros.com/notes/neural_cellular_automata_and_implicit_representations/" title="Neural cellular automata and implicit representations">
+            <div class="single-note-wrapper">
+              <div class="note-title">
+                <picture><source srcset="/img/note_dark.svg" class="note-logo" media="(prefers-color-scheme: dark)"> <img class="note-logo" src="/img/note_light.svg" alt="Note logo"></picture>
+                <h3 class="single-note-title">Neural cellular automata and implicit representations</h3>
+              </div>
+              <p class="note_preview">tags Cellular automata, Neural...</p><span id="date_hidden" style="display: none">2021-08-20T15:30:00+0200</span>
+            </div></a>
+          </li>
           <li class="note-button h-entry" id="neural_network_pruning">
             <a class="single-note u-url" href="https://hugocisneros.com/notes/neural_network_pruning/" title="Neural network pruning">
             <div class="single-note-wrapper">
@@ -2934,6 +2948,16 @@
                 <h3 class="single-note-title">Intrinsically Motivated Discovery of Diverse Patterns in Self-Organizing Systems by...</h3>
               </div>
               <p class="note_preview">source (Reinke, Etcheverry,...</p><span id="date_hidden" style="display: none">2021-03-25T09:58:00+0100</span>
+            </div></a>
+          </li>
+          <li class="note-button h-entry" id="tanciklearnedinitializationsoptimizing2021">
+            <a class="single-note u-url" href="https://hugocisneros.com/notes/tanciklearnedinitializationsoptimizing2021/" title="Notes on: Learned Initializations for Optimizing Coordinate-Based Neural Representations by Tancik, M., Mildenhall, B., Wang, T., Schmidt, D., Srinivasan, P. P., Barron, J. T., &amp; Ng, R. (2021)">
+            <div class="single-note-wrapper">
+              <div class="note-title">
+                <picture><source srcset="/img/article_dark.svg" class="note-logo" media="(prefers-color-scheme: dark)"> <img class="note-logo" src="/img/article_light.svg" alt="Article logo"></picture>
+                <h3 class="single-note-title">Learned Initializations for Optimizing Coordinate-Based Neural Representations by Tancik,...</h3>
+              </div>
+              <p class="note_preview">tags Neural radiance...</p><span id="date_hidden" style="display: none">2021-08-18T16:00:00+0200</span>
             </div></a>
           </li>
           <li class="note-button h-entry" id="zophlearningtransferablearchitectures2018">
@@ -4122,7 +4146,36 @@
       </ul>
     </footer>
   </div>
+  <script type="module">
+
+
+
+
+
+
+
+
+  import { search, default as init } from '/js/tinysearch_engine.js';
+  window.search = search;
+
+  async function run() {
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     await init('/js/tinysearch_engine_bg.wasm');
+  }
+
+  run();
+  </script> 
   <script defer src="/js/sort.js"></script> 
+  <script defer src="/js/search.js"></script> 
   <script defer src="https://d3js.org/d3.v6.min.js"></script> 
   <script defer src="/js/graph.js"></script>
 </body>
