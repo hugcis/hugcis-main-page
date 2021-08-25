@@ -6,7 +6,31 @@
     <description>Recent content in Notes on Hugo Cisneros - Personal page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 Aug 2021 15:21:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 25 Aug 2021 16:07:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Notes on: Learned Initializations for Optimizing Coordinate-Based Neural Representations by Tancik, M., Mildenhall, B., Wang, T., Schmidt, D., Srinivasan, P. P., Barron, J. T., &amp; Ng, R. (2021)</title>
+      <link>https://hugocisneros.com/notes/tanciklearnedinitializationsoptimizing2021/</link>
+      <pubDate>Wed, 25 Aug 2021 16:07:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/tanciklearnedinitializationsoptimizing2021/</guid>
+      <description>tags Neural radiance fields, Meta-learning source (Tancik et al. 2021)  Summary This paper explores meta-learning techniques for improving the quality and speed of convergence of learned implicit neural representations.
+The authors use meta-learning to optimize the initial weights \(\theta_0\) of the neural networks such that it minimizes the loss \(L(\theta_m)\) when the network is optimized on a new unseen observations.
+As a meta-learning problem, there is an inner loop and an outer loop:</description>
+    </item>
+    
+    <item>
+      <title>Meta-learning</title>
+      <link>https://hugocisneros.com/notes/meta_learning/</link>
+      <pubDate>Wed, 25 Aug 2021 16:00:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/meta_learning/</guid>
+      <description>tags Machine learning  Constrained meta-learning (Kirsch and Schmidhuber 2021)
+Meta-learning of initialization The goal is to learn the initialization of neural network parameters or recurrent neural network initial states in order to make the training faster or less prone to getting stuck in local minima.
+Example for implicit neural representations: (Tancik et al. 2021)
+Meta-learning algorithms MAML (Finn, Abbeel, and Levine 2017)
+Reptile (Nichol, Achiam, and Schulman 2018)</description>
+    </item>
+    
     <item>
       <title>Talk: Alife 2020 keynote Luis Zaman - New Frontiers in Alife: What was old is new again</title>
       <link>https://hugocisneros.com/notes/talk_alife_2020_keynote_luis_zaman_new_frontiers_in_alife_what_was_old_is_new_again/</link>
@@ -142,16 +166,6 @@ In the context of compressed sensing, we have \(M &amp;lt; N\).</description>
     </item>
     
     <item>
-      <title>Notes on: Learned Initializations for Optimizing Coordinate-Based Neural Representations by Tancik, M., Mildenhall, B., Wang, T., Schmidt, D., Srinivasan, P. P., Barron, J. T., &amp; Ng, R. (2021)</title>
-      <link>https://hugocisneros.com/notes/tanciklearnedinitializationsoptimizing2021/</link>
-      <pubDate>Wed, 18 Aug 2021 16:00:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/tanciklearnedinitializationsoptimizing2021/</guid>
-      <description>tags Neural radiance fields, Meta-learning source (Tancik et al. 2021)  Summary This paper explores meta-learning techniques for improving the quality and speed of convergence of learned implicit neural representations
-Comments Bibliography Tancik, Matthew, Ben Mildenhall, Terrance Wang, Divi Schmidt, Pratul P. Srinivasan, Jonathan T. Barron, and Ren Ng. March 2021. &#34;Learned Initializations for Optimizing Coordinate-Based Neural Representations&#34;. arXiv:2012.02189 [Cs], March.</description>
-    </item>
-    
-    <item>
       <title>Implicit neural representations</title>
       <link>https://hugocisneros.com/notes/implicit_neural_representations/</link>
       <pubDate>Wed, 18 Aug 2021 15:58:00 +0200</pubDate>
@@ -160,18 +174,6 @@ Comments Bibliography Tancik, Matthew, Ben Mildenhall, Terrance Wang, Divi Schmi
       <description>tags Data representation, Neural networks  Implicit neural representations is about parameterizing a continuous differentiable signal with a neural network. The signal is encoded within the neural network, providing a possibly more compact representation.
 Applications of these learned representations range from simple compression, to 3D scene reconstruction from 2D images, semantic information inference, etc.
 CPPN is an early example of a implicit neural representation implementation mainly used for pattern generation .</description>
-    </item>
-    
-    <item>
-      <title>Meta-learning</title>
-      <link>https://hugocisneros.com/notes/meta_learning/</link>
-      <pubDate>Wed, 18 Aug 2021 15:25:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/meta_learning/</guid>
-      <description>tags Machine learning  Constrained meta-learning (Kirsch and Schmidhuber 2021)
-Meta-learning of initialization The goal is to learn the initialization of neural network parameters or recurrent neural network initial states in order to make the training faster or less prone to getting stuck in local minima.
-Example for implicit neural representations: (Tancik et al. 2021)
-Bibliography Kirsch, Louis, and Jürgen Schmidhuber. February 2021. &#34;Meta Learning Backpropagation and Improving It&#34;. arXiv:2012.</description>
     </item>
     
     <item>

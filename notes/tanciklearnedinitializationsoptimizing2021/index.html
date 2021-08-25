@@ -62,20 +62,36 @@
               </dd>
               <dt>source</dt>
               <dd>
-                (<a href="#orge6b98f5">Tancik et al. 2021</a>)
+                (<a href="#orga5829bb">Tancik et al. 2021</a>)
               </dd>
             </dl>
             <h2 id="summary">Summary</h2>
-            <p>This paper explores <a href="/notes/meta_learning/">meta-learning</a> techniques for improving the quality and speed of convergence of learned <a href="/notes/implicit_neural_representations/">implicit neural representations</a></p>
+            <p>This paper explores <a href="/notes/meta_learning/">meta-learning</a> techniques for improving the quality and speed of convergence of learned <a href="/notes/implicit_neural_representations/">implicit neural representations</a>.</p>
+            <p>The authors use meta-learning to optimize the initial weights \(\theta_0\) of the neural networks such that it minimizes the loss \(L(\theta_m)\) when the network is optimized on a new unseen observations.</p>
+            <p>As a meta-learning problem, there is an <em>inner loop</em> and an <em>outer loop</em>:</p>
+            <ul>
+              <li>The inner loop is the optimization procedure to go from a \(\theta_0\) to an optimized \(\theta_m\) for a specific observation T. This can be done with classical <a href="/notes/optimization/">optimization</a> methods
+              </li>
+              <li>The outer loop is about shifting the position of the \(\theta_0\) to make the inner loop results better on average. This cannot be done with the usual learning algorithms.</li>
+            </ul>
+            <p>Two algorithms are considered for that outer-loop:</p>
+            <ul>
+              <li>
+                <a href="/notes/meta_learning/">MAML</a> where the update \(\theta_0^{(j+1)} = \theta_0^j - \beta\nabla_\theta L(\theta_m(\theta, T_j))\) is computed by taking inner-loop steps with different step sizes
+              </li>
+              <li>
+                <a href="/notes/meta_learning/">Reptile</a> where the update \(\theta_0^{(j+1)} = \theta_0^j - \beta\left( \theta_m(\theta_0^j, T_j) - \theta_0^j \right)\) is a step towards the optimized weights from an observation
+              </li>
+            </ul>
             <h2 id="comments">Comments</h2>
             <h2 id="bibliography">Bibliography</h2>
             <ol class="biblio-list">
-              <a id="orge6b98f5"></a>
+              <a id="orga5829bb"></a>
               <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle"><span itemprop="author"><span itemprop="author">Tancik, Matthew</span>, <span itemprop="author">Ben Mildenhall</span>, <span itemprop="author">Terrance Wang</span>, <span itemprop="author">Divi Schmidt</span>, <span itemprop="author">Pratul P. Srinivasan</span>, <span itemprop="author">Jonathan T. Barron</span>, and <span itemprop="author">Ren Ng</span></span>. <span datetime="2021" itemprop="datePublished">March 2021</span>. "<span itemprop="name">Learned Initializations for Optimizing Coordinate-Based Neural Representations</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">arXiv:2012.02189 [Cs]</i></span>, March.</li>
             </ol>
           </div>
           <div class="note-footer">
-            Last changed <a class="u-url" href="https://hugocisneros.com/notes/tanciklearnedinitializationsoptimizing2021/"><time itemprop="datePublished" class="dt-published" datetime="2021-08-18T16:00:00+0200">18/08/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+            Last changed <a class="u-url" href="https://hugocisneros.com/notes/tanciklearnedinitializationsoptimizing2021/"><time itemprop="datePublished" class="dt-published" datetime="2021-08-25T16:07:00+0200">25/08/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
           </div>
         </div>
       </article><br>
