@@ -6,7 +6,132 @@
     <description>Recent content in Notes on Hugo Cisneros - Personal page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 20 Aug 2021 15:30:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 25 Aug 2021 15:21:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Talk: Alife 2020 keynote Luis Zaman - New Frontiers in Alife: What was old is new again</title>
+      <link>https://hugocisneros.com/notes/talk_alife_2020_keynote_luis_zaman_new_frontiers_in_alife_what_was_old_is_new_again/</link>
+      <pubDate>Wed, 25 Aug 2021 15:21:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/talk_alife_2020_keynote_luis_zaman_new_frontiers_in_alife_what_was_old_is_new_again/</guid>
+      <description>tags Artificial life, ALife 2020  This keynote is about this sub-community of ALife which is dedicated to constructing actual artificial systems that can exhibit Open-ended Evolution, and Life-like behavior.
+The first models that tried to construct ALife were probably Von Neumann&amp;rsquo;s self-reproducing CA and Langton&amp;rsquo;s loop. However, their main limitation was they were extremely brittle, which is why evolution did not really work in them.
+Zaman&amp;rsquo;s definition of evolution is</description>
+    </item>
+    
+    <item>
+      <title>ALife 2020</title>
+      <link>https://hugocisneros.com/notes/alife_2020/</link>
+      <pubDate>Wed, 25 Aug 2021 15:20:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/alife_2020/</guid>
+      <description>tags ALife Conference  Day 1 Tutorial - Functional programming for artificial life Tutorial - Visualization Principles and Techniques for Research in ALife Mike Levin - Keynote Lecture Day 2 Sara Walker, keynote Lecture About what life means and how it can be defined from the point of view of physics/information theory, etc.
+Melanie Mitchell, keynote Lecture This talk was very similar to another one I watched from Santa Fe Institute which promotes her book: Artificial Intelligence: A Guide for Thinking Humans.</description>
+    </item>
+    
+    <item>
+      <title>Notes on: Pretrained Transformers as Universal Computation Engines by Lu, K., Grover, A., Abbeel, P., &amp; Mordatch, I. (2021)</title>
+      <link>https://hugocisneros.com/notes/lupretrainedtransformersuniversal2021/</link>
+      <pubDate>Wed, 25 Aug 2021 15:19:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/lupretrainedtransformersuniversal2021/</guid>
+      <description>source (Lu et al. 2021) tags Transformers  Summary Different types of neural network architecture encode different kinds of biases. For example, convolutional neural networks perform local, translation-invariant operations and recurrent neural networks operate on sequential data.
+One can use these biases in randomly initialized networks as a basis for interesting computations. This is on of the motivation for reservoir computing with echo-state networks, which uses fixed random recurrent neural network and a simple trainable linear transformation to perform complex computations.</description>
+    </item>
+    
+    <item>
+      <title>Notes on: Thinking Like Transformers by Weiss, G., Goldberg, Y., &amp; Yahav, E. (2021)</title>
+      <link>https://hugocisneros.com/notes/weissthinkingtransformers2021/</link>
+      <pubDate>Wed, 25 Aug 2021 15:19:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/weissthinkingtransformers2021/</guid>
+      <description>tags NLP, Computer science source (Weiss, Goldberg, and Yahav 2021)  Summary This paper introduces a programming language that is inspired by the way Transformers process input data. The language is called Restricted Access Sequence Processing Language (RASP).
+Data is represented as sequences, which is the structure transformers manipulate (since they have been designed for NLP applications). The language has two types of internal data representation:
+ Sequence operators (s-ops) are functions that translate sequences into sequences.</description>
+    </item>
+    
+    <item>
+      <title>Cellular automata as convolutional neural networks</title>
+      <link>https://hugocisneros.com/notes/cellular_automata_as_cnns/</link>
+      <pubDate>Wed, 25 Aug 2021 15:16:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/cellular_automata_as_cnns/</guid>
+      <description>tags Cellular automata, Convolutional neural networks  Motivation Cellular automata are computational models based on several principles such as translation-invariance and parallelism of computations. These principles also motivated the creation of Convolutional neural networks &amp;mdash; used initially for images and text &amp;mdash;, making this model well-suited to reason about cellular automata.
+There is indeed a deep connection between the two models, making it seem like there are two expressions of the same idea: spatially organized information can be processed locally in parallel.</description>
+    </item>
+    
+    <item>
+      <title>Conway&#39;s Game of Life</title>
+      <link>https://hugocisneros.com/notes/conway_s_game_of_life/</link>
+      <pubDate>Wed, 25 Aug 2021 14:49:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/conway_s_game_of_life/</guid>
+      <description>tags Cellular automata resources (Gardner 1970)  It is one of the most famous Cellular automata rule, invented as a game by mathematician John Conway.
+Learn the game of life with a neural network (Springer and Kenyon 2020)
+Bibliography Springer, Jacob M., and Garrett T. Kenyon. September 2020. &#34;It’s Hard for Neural Networks to Learn the Game of Life&#34;. arXiv:2009.01398 [Cs, Stat], September. Gardner, Martin. October 1970. &amp;ldquo;Mathematical Games&amp;rdquo;. Scientific American 223 (4):120–23.</description>
+    </item>
+    
+    <item>
+      <title>Reservoir computing</title>
+      <link>https://hugocisneros.com/notes/reservoir_computing/</link>
+      <pubDate>Wed, 25 Aug 2021 14:41:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/reservoir_computing/</guid>
+      <description>tags Machine learning, Unconventional computing, Unsupervised learning  Reservoir computing is a term used to describe a class of machine learning algorithms that rely on transient dynamics of a dynamical system to implement and manipulate goal-related information.
+The most famous example is echo-state networks, which uses random recurrent neural networks as reservoirs, but other dynamical systems can also be used.
+Reservoir computing with cellular automata Reservoir computing can use cellular automata as the reservoir.</description>
+    </item>
+    
+    <item>
+      <title>Computing in cellular automata</title>
+      <link>https://hugocisneros.com/notes/computing_in_cellular_automata/</link>
+      <pubDate>Wed, 25 Aug 2021 14:37:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/computing_in_cellular_automata/</guid>
+      <description>tags Unconventional computing, Cellular automata resources (Mitchell 2005; Wolfram 2002)  Cellular automata are computational models capable of interesting emergent behavior. A major challenge is to understand which CA rules are doing useful or efficient computations. It is not clear how these systems could be programmed or made to compute a particular function.
+Hand-engineered CA rules Below images show CA rules that can compute non trivial functions (Images are from (Wolfram 2002), see A new kind of science online ).</description>
+    </item>
+    
+    <item>
+      <title>Notes on: Growing Neural Cellular Automata by Mordvintsev, A., Randazzo, E., Niklasson, E., &amp; Levin, M. (2020)</title>
+      <link>https://hugocisneros.com/notes/mordvintsevgrowingneuralcellular2020/</link>
+      <pubDate>Wed, 25 Aug 2021 13:54:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/mordvintsevgrowingneuralcellular2020/</guid>
+      <description>tags Cellular automata source (Mordvintsev et al. 2020)  Summary This paper introduces interesting ideas for training cellular automata as CNNs to have self-repairing stable structures. The automata have 16 dimensional continuous states. The main modeling ideas are:
+ Use hard-coded filters for the initial perception step. The filters are Sobel convolutions and those two are concatenated with the current state. Update rules are then 1D convolutions applied to the \(3 * 16 = 48\) dimensional state vector.</description>
+    </item>
+    
+    <item>
+      <title>System of linear equations</title>
+      <link>https://hugocisneros.com/notes/system_of_linear_equations/</link>
+      <pubDate>Tue, 24 Aug 2021 15:04:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/system_of_linear_equations/</guid>
+      <description>tags Applied maths  Such a system with \(m\) equations and \(n\) unknowns is often denoted \(Ax = b\) where \(A\) is a matrix \(m\times n\) and \(b\) is a vector of size \(m\).
+There are multiple methods to solve such a systems with different sets of hypotheses.
+System types Square matrix with full rank In the most simple case: a square matrix with full rank, the solution exists and is unique: \(x = A^{-1} b\)</description>
+    </item>
+    
+    <item>
+      <title>Compressed sensing</title>
+      <link>https://hugocisneros.com/notes/compressed_sensing/</link>
+      <pubDate>Tue, 24 Aug 2021 11:34:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/compressed_sensing/</guid>
+      <description>tags Signal processing  Description Compressed sensing is a technique to recover a sparse signal from partial observations.
+The signal is described as a $N$-dimensional vector \(\textbf{s}\). We make \(M\) measurements, where a measurements means a projection of the signal \(\textbf{s}\) onto some known vector. The result of all these measurements can be written as \(\textbf{y} = \textbf{Fs}\), where \(\textbf{F}\) is a \(M \times N\) matrix.
+In the context of compressed sensing, we have \(M &amp;lt; N\).</description>
+    </item>
+    
+    <item>
+      <title>Knuth-Morris-Pratt string-searching algorithm</title>
+      <link>https://hugocisneros.com/notes/knuth_morris_pratt_string_searching_algorithm/</link>
+      <pubDate>Tue, 24 Aug 2021 11:10:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/knuth_morris_pratt_string_searching_algorithm/</guid>
+      <description> tags Algorithm, Computer science resources Yurichev.com  </description>
+    </item>
+    
     <item>
       <title>Neural cellular automata and implicit representations</title>
       <link>https://hugocisneros.com/notes/neural_cellular_automata_and_implicit_representations/</link>
@@ -27,6 +152,29 @@ Comments Bibliography Tancik, Matthew, Ben Mildenhall, Terrance Wang, Divi Schmi
     </item>
     
     <item>
+      <title>Implicit neural representations</title>
+      <link>https://hugocisneros.com/notes/implicit_neural_representations/</link>
+      <pubDate>Wed, 18 Aug 2021 15:58:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/implicit_neural_representations/</guid>
+      <description>tags Data representation, Neural networks  Implicit neural representations is about parameterizing a continuous differentiable signal with a neural network. The signal is encoded within the neural network, providing a possibly more compact representation.
+Applications of these learned representations range from simple compression, to 3D scene reconstruction from 2D images, semantic information inference, etc.
+CPPN is an early example of a implicit neural representation implementation mainly used for pattern generation .</description>
+    </item>
+    
+    <item>
+      <title>Meta-learning</title>
+      <link>https://hugocisneros.com/notes/meta_learning/</link>
+      <pubDate>Wed, 18 Aug 2021 15:25:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/meta_learning/</guid>
+      <description>tags Machine learning  Constrained meta-learning (Kirsch and Schmidhuber 2021)
+Meta-learning of initialization The goal is to learn the initialization of neural network parameters or recurrent neural network initial states in order to make the training faster or less prone to getting stuck in local minima.
+Example for implicit neural representations: (Tancik et al. 2021)
+Bibliography Kirsch, Louis, and Jürgen Schmidhuber. February 2021. &#34;Meta Learning Backpropagation and Improving It&#34;. arXiv:2012.</description>
+    </item>
+    
+    <item>
       <title>Cellular automata</title>
       <link>https://hugocisneros.com/notes/cellular_automata/</link>
       <pubDate>Mon, 16 Aug 2021 12:21:00 +0200</pubDate>
@@ -44,16 +192,6 @@ A cellular automaton&amp;rsquo;s evolution is simulated in discrete timesteps. A
       <guid>https://hugocisneros.com/notes/unker_non_linear_writing_system/</guid>
       <description>tags Language resources https://s.ai/nlws/  A fascinating writing system based on glyphs connected to each other to create meaning. The system is quite advanced and reading its grammar is like discovering some new alien language. It was created by Alex Fink and Sai in 2010.
 This is the kind of complexity that would be incredible to discover in open-ended evolving language systems. A system starting from elementary components and no particular assumption about what language should be, could come up with such exotic models (probably even more exotic in the case of a truly open-ended system).</description>
-    </item>
-    
-    <item>
-      <title>Cellular automata as convolutional neural networks</title>
-      <link>https://hugocisneros.com/notes/cellular_automata_as_cnns/</link>
-      <pubDate>Mon, 16 Aug 2021 11:56:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/cellular_automata_as_cnns/</guid>
-      <description>tags Cellular automata, Convolutional neural networks  Motivation Cellular automata are computational models based on several principles such as translation-invariance and parallelism of computations. These principles also motivated the creation of Convolutional neural networks &amp;mdash; used initially for images and text &amp;mdash;, making this model well-suited to reason about cellular automata.
-There is indeed a deep connection between the two models, making it seem like there are two expressions of the same idea: spatially organized information can be processed locally in parallel.</description>
     </item>
     
     <item>
@@ -127,17 +265,6 @@ Are GANs glorified PCA? (Richardson and Weiss 2020) This paper seems to show tha
     </item>
     
     <item>
-      <title>Notes on: Thinking Like Transformers by Weiss, G., Goldberg, Y., &amp; Yahav, E. (2021)</title>
-      <link>https://hugocisneros.com/notes/weissthinkingtransformers2021/</link>
-      <pubDate>Wed, 16 Jun 2021 11:36:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/weissthinkingtransformers2021/</guid>
-      <description>tags NLP, Computer science source (Weiss, Goldberg, and Yahav 2021)  Summary This paper introduces a programming language that is inspired by the way Transformers process input data. The language is called Restricted Access Sequence Processing Language (RASP).
-Data is represented as sequences, which is the structure transformers manipulate (since they have been designed for NLP applications). The language has two types of internal data representation:
- Sequence operators (s-ops) are functions that translate sequences into sequences.</description>
-    </item>
-    
-    <item>
       <title>Zuse&#39;s thesis</title>
       <link>https://hugocisneros.com/notes/zuse_s_thesis/</link>
       <pubDate>Tue, 15 Jun 2021 09:58:00 +0200</pubDate>
@@ -178,16 +305,6 @@ Examples of such functions include:
       <description>tags NLP  LM with RNNs Different models have been studied, starting from the initial Recurrent neural network based language model (Mikolov et al. 2011).
 LSTM were then used with more success than previous models (Zaremba, Sutskever, and Vinyals 2015).
 Recently, transformers seem to have dominated language modeling. However it is not clear if this is due to their real superiority over RNNs or their practical scalability (Merity 2019).</description>
-    </item>
-    
-    <item>
-      <title>Meta-learning</title>
-      <link>https://hugocisneros.com/notes/meta_learning/</link>
-      <pubDate>Mon, 14 Jun 2021 11:55:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/meta_learning/</guid>
-      <description> tags Machine learning  (Kirsch and Schmidhuber 2021)
-Bibliography Kirsch, Louis, and Jürgen Schmidhuber. February 2021. &#34;Meta Learning Backpropagation and Improving It&#34;. arXiv:2012.14905 [Cs, Stat], February. </description>
     </item>
     
     <item>
@@ -250,17 +367,6 @@ New candidate solutions for a problem are constructed by randomly combining and 
   Alternative mechanisms for learning have been and are currently studied to try and approach the learning problem in a more effective way.
 Direct feedback alignment (Nøkland 2016)
 Hebbian learning The theory is sometimes summarized as &amp;ldquo;Cells that fire together wire together.</description>
-    </item>
-    
-    <item>
-      <title>Conway&#39;s Game of Life</title>
-      <link>https://hugocisneros.com/notes/conway_s_game_of_life/</link>
-      <pubDate>Mon, 14 Jun 2021 09:28:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/conway_s_game_of_life/</guid>
-      <description>tags Cellular automata resources (Gardner 1970)  It is one of the most famous Cellular automata rule, invented as a game by John Conway.
-Learn the game of life with a neural network (Springer and Kenyon 2020)
-Bibliography Springer, Jacob M., and Garrett T. Kenyon. September 2020. &#34;It’s Hard for Neural Networks to Learn the Game of Life&#34;. arXiv:2009.01398 [Cs, Stat], September. Gardner, Martin. October 1970. &amp;ldquo;Mathematical Games&amp;rdquo;. Scientific American 223 (4):120–23.</description>
     </item>
     
     <item>
@@ -395,17 +501,6 @@ Definition Nodes have indexes \(i \in \{1, \cdots, n\}\) and are in state \(s_i 
     </item>
     
     <item>
-      <title>Reservoir computing</title>
-      <link>https://hugocisneros.com/notes/reservoir_computing/</link>
-      <pubDate>Mon, 26 Apr 2021 21:38:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/reservoir_computing/</guid>
-      <description>tags Machine learning, Unconventional computing, Unsupervised learning  Reservoir computing is a term used to describe a class of machine learning algorithms that rely on transient dynamics of a dynamical system to implement and manipulate goal-related information.
-The most famous example is Echo-state networks, which uses random recurrent neural networks as reservoirs, but other dynamical systems can also be used.
-Reservoir computing with cellular automata Reservoir computing can use Cellular automata as the reservoir.</description>
-    </item>
-    
-    <item>
       <title>Notes on: Generalization over different cellular automata rules learned by a deep feed-forward neural network by Aach, M., Goebbert, J. H., &amp; Jitsev, J. (2021)</title>
       <link>https://hugocisneros.com/notes/aachgeneralizationdifferentcellular2021/</link>
       <pubDate>Mon, 26 Apr 2021 20:53:00 +0200</pubDate>
@@ -455,17 +550,6 @@ LDU factorization Lower-diagonal upper factorization: \(A = LDU\) with \(D\) a d
     </item>
     
     <item>
-      <title>System of linear equations</title>
-      <link>https://hugocisneros.com/notes/system_of_linear_equations/</link>
-      <pubDate>Wed, 21 Apr 2021 08:43:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/system_of_linear_equations/</guid>
-      <description>tags Applied maths  Such a system with \(m\) equations and \(n\) unknowns is often denoted \(Ax = b\) where \(A\) is a matrix \(m\times n\) and \(b\) is a vector of size \(m\).
-There are multiple methods to solve such a systems with different sets of hypotheses.
-System types Square matrix with full rank In the most simple case: a square matrix with full rank, the solution exists and is unique: \(x = A^{-1} b\)</description>
-    </item>
-    
-    <item>
       <title>Neural networks as dynamical systems</title>
       <link>https://hugocisneros.com/notes/neural_networks_as_dynamical_systems/</link>
       <pubDate>Mon, 19 Apr 2021 11:54:00 +0200</pubDate>
@@ -484,16 +568,6 @@ The notion of attractor can be defined for such networks, making them related to
       <guid>https://hugocisneros.com/notes/attractor_networks/</guid>
       <description>tags Physics, Applied maths, Neural networks resources Scholarpedia  Attractor networks are sets of nodes connected in such a way that their dynamics are stable in a small subspace of their phase space. The network state usually resides on this smaller manifold after a few evolution steps.
 These networks are often recurrent.</description>
-    </item>
-    
-    <item>
-      <title>Notes on: Pretrained Transformers as Universal Computation Engines by Lu, K., Grover, A., Abbeel, P., &amp; Mordatch, I. (2021)</title>
-      <link>https://hugocisneros.com/notes/lupretrainedtransformersuniversal2021/</link>
-      <pubDate>Mon, 19 Apr 2021 09:05:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/lupretrainedtransformersuniversal2021/</guid>
-      <description>source (Lu et al. 2021) tags Transformers  Summary Different types of neural network architecture encode different kinds of biases. For example, convolutional neural networks perform local, translation-invariant operations and recurrent neural networks operate on sequential data.
-One can use these biases in randomly initialized networks as a basis for interesting computations. This is on of the motivation for reservoir computing with echo-state networks, which uses fixed random recurrent neural network and a simple trainable linear transformation to perform complex computations.</description>
     </item>
     
     <item>
@@ -674,16 +748,6 @@ This technique has many advantages:</description>
       
       <guid>https://hugocisneros.com/notes/computer_vision/</guid>
       <description> tags Machine learning, Image processing  </description>
-    </item>
-    
-    <item>
-      <title>Computing in cellular automata</title>
-      <link>https://hugocisneros.com/notes/computing_in_cellular_automata/</link>
-      <pubDate>Thu, 25 Mar 2021 09:58:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/computing_in_cellular_automata/</guid>
-      <description>tags Unconventional computing, Cellular automata resources (Mitchell 2005; Wolfram 2002)  Cellular automata are computational models capable of interesting emergent behavior. A major challenge is to understand which CA rules are doing useful or efficient computations. It is not clear how these systems could be programmed or made to compute a particular function.
-Hand-engineered CA rules Below images show CA rules that can compute non trivial functions (Images are from (Wolfram 2002), see A new kind of science online ).</description>
     </item>
     
     <item>
@@ -1069,16 +1133,6 @@ One hope formulated by the author is that asynchronicity could help achieve faul
       <guid>https://hugocisneros.com/notes/flageatfaststablemapelites2020/</guid>
       <description>source (Flageat and Cully 2020) tags ALife 2020, MAP-Elites, Quality diversity  Summary MAP-Elites can be problematic in face of uncertainty because:
  individuals can be unexpectedly lucky the behavior space can be hard to estimate and result in misplacing individuals.  Some mitigation techniques have been explored, e.g in (Justesen, Risi, and Mouret 2019) and this paper is about introducing another way of dealing with noisy domains without using sampling.</description>
-    </item>
-    
-    <item>
-      <title>Notes on: Growing Neural Cellular Automata by Mordvintsev, A., Randazzo, E., Niklasson, E., &amp; Levin, M. (2020)</title>
-      <link>https://hugocisneros.com/notes/mordvintsevgrowingneuralcellular2020/</link>
-      <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/mordvintsevgrowingneuralcellular2020/</guid>
-      <description>tags Cellular automata source (Mordvintsev et al. 2020)  Summary This paper introduces interesting ideas for training cellular automata as CNNs to have self-repairing stable structures. The automata have 16 dimensional continuous states. The main modeling ideas are:
- Use hard-coded filters for the initial perception step. The filters are Sobel convolutions and those two are concatenated with the current state. Update rules are then 1D convolutions applied to the \(3 * 16 = 48\) dimensional state vector.</description>
     </item>
     
     <item>
@@ -1947,17 +2001,6 @@ Bibliography Jaeger, Herbert, Wolfgang Maass, and Jose Principe. April 2007. &#3
     </item>
     
     <item>
-      <title>Talk: Alife 2020 keynote Luis Zaman - New Frontiers in Alife: What was old is new again</title>
-      <link>https://hugocisneros.com/notes/talk_alife_2020_keynote_luis_zaman_new_frontiers_in_alife_what_was_old_is_new_again/</link>
-      <pubDate>Mon, 28 Sep 2020 16:32:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/talk_alife_2020_keynote_luis_zaman_new_frontiers_in_alife_what_was_old_is_new_again/</guid>
-      <description>tags Artificial life, ALife 2020  This keynote is about this sub-community of ALife which is dedicated to constructing actual artificial systems that can exhibit Open-ended Evolution, and Life-like behavior.
-The first models that tried to construct ALife were probably Von Neumann&amp;rsquo;s self-reproducing CA and Langton&amp;rsquo;s loop. However, their main limitation was they were extremely brittle, which is why evolution did not really work in them.
-Zaman&amp;rsquo;s definition of evolution is</description>
-    </item>
-    
-    <item>
       <title>Python</title>
       <link>https://hugocisneros.com/notes/python/</link>
       <pubDate>Mon, 28 Sep 2020 10:32:00 +0200</pubDate>
@@ -2142,16 +2185,6 @@ Several researchers have tried to capture the properties of statistical complexi
       <description>tags Life, ALife 2020  Complex molecules are bio-signatures, they are the sign of complex (evolutionary?) processes that have been going on.
 Assembly theory Exploring complexity: Lee is showing some theoretical idea about a complexity metric. Like many other metrics, he starts from the observation that neither entropy nor Kolmogorov complexity are suitable for considering the history of an object.
 Instead of thinking in terms of disorder or complexity, why not ask simply about &amp;ldquo;how has this object been assembled?</description>
-    </item>
-    
-    <item>
-      <title>ALife 2020</title>
-      <link>https://hugocisneros.com/notes/alife_2020/</link>
-      <pubDate>Wed, 29 Jul 2020 11:13:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/alife_2020/</guid>
-      <description>tags ALife Conference  Day 1 Tutorial - Functional programming for artificial life Tutorial - Visualization Principles and Techniques for Research in ALife Mike Levin - Keynote Lecture Day 2 Sara Walker, keynote Lecture About what life means and how it can be defined from the point of view of physics/information theory, etc.
-Melanie Mitchell, keynote Lecture This talk was very similar to another one I watched from Santa Fe Institute which promotes her book: Artificial Intelligence: A Guide for Thinking Humans.</description>
     </item>
     
     <item>
@@ -3236,17 +3269,6 @@ With GNU Make 4.0 or later, it is possible to set the prefix to some other fixed
       
       <guid>https://hugocisneros.com/notes/neat/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>Implicit neural representations</title>
-      <link>https://hugocisneros.com/notes/implicit_neural_representations/</link>
-      <pubDate>Mon, 29 Jun 2020 16:35:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/implicit_neural_representations/</guid>
-      <description>tags Data representation, Neural networks  Implicit neural representations is about parameterizing a continuous differentiable signal with a neural network. The signal is encoded within the neural network, providing a possibly more compact representation.
-Applications of these learned representations range from simple compression, to 3D scene reconstruction from 2D images, semantic information inference, etc.
-CPPN is an early example of a implicit neural representation implementation mainly used for pattern generation .</description>
     </item>
     
     <item>

@@ -4,8 +4,8 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1">
-  <title>Org config for Emacs - Hugo Cisneros - Personal page</title>
-  <meta property="og:title" content="Org config for Emacs - Hugo Cisneros - Personal page">
+  <title>Org-mode configuration for Emacs - Hugo Cisneros - Personal page</title>
+  <meta property="og:title" content="Org-mode configuration for Emacs - Hugo Cisneros - Personal page">
   <meta property="og:type" content="website">
   <meta property="og:image" content="/img/main.jpeg">
   <meta property="og:url" content="https://hugocisneros.com/org-config/">
@@ -490,7 +490,8 @@
       </div>
       <h2 id="org-ref-and-bibtex">Org Ref and Bibtex</h2>
       <div class="highlight">
-        <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(<span style="color:#24909d">with-eval-after-load</span> <span style="color:#ed9d13">'org-ref</span>
+        <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-cite-global-bibliography</span> '(<span style="color:#ed9d13">"~/Papers/library.bib"</span>))
+(<span style="color:#24909d">with-eval-after-load</span> <span style="color:#ed9d13">'org-ref</span>
   (<span style="color:#24909d">setq</span> <span style="color:#40ffff">reftex-default-bibliography</span> '(<span style="color:#ed9d13">"~/Papers/library.bib"</span>))
   (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-ref-default-bibliography</span> '(<span style="color:#ed9d13">"~/Papers/library.bib"</span>)
         <span style="color:#40ffff">org-ref-pdf-directory</span> <span style="color:#ed9d13">"~/Papers/pdf/"</span>

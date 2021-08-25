@@ -4,13 +4,13 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1">
-  <title>System of linear equations - Hugo Cisneros - Personal page</title>
-  <meta property="og:title" content="System of linear equations - Hugo Cisneros - Personal page">
+  <title>Compressed sensing - Hugo Cisneros - Personal page</title>
+  <meta property="og:title" content="Compressed sensing - Hugo Cisneros - Personal page">
   <meta property="og:type" content="article">
   <meta property="og:image" content="/img/main.jpeg">
-  <meta property="og:url" content="https://hugocisneros.com/notes/system_of_linear_equations/">
-  <meta property="og:description" content="Notes about System of linear equations">
-  <meta name="Description" property="description" content="Notes about System of linear equations">
+  <meta property="og:url" content="https://hugocisneros.com/notes/compressed_sensing/">
+  <meta property="og:description" content="Notes about Compressed sensing">
+  <meta name="Description" property="description" content="Notes about Compressed sensing">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@cisne_hug">
   <meta name="twitter:creator" content="@cisne_hug">
@@ -53,41 +53,26 @@
     <main class="content" role="main">
       <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
         <div class="single-note note-container">
-          <h1 class="article-title p-name" itemprop="name">System of linear equations</h1>
+          <h1 class="article-title p-name" itemprop="name">Compressed sensing</h1>
           <div class="article-content e-content p-name" itemprop="articleBody">
             <dl>
               <dt>tags</dt>
               <dd>
-                <a href="/notes/applied_maths/">Applied maths</a>
+                <a href="/notes/signal_processing/">Signal processing</a>
               </dd>
             </dl>
-            <p>Such a system with \(m\) equations and \(n\) unknowns is often denoted \(Ax = b\) where \(A\) is a matrix \(m\times n\) and \(b\) is a vector of size \(m\).</p>
-            <p>There are multiple methods to solve such a systems with different sets of hypotheses.</p>
-            <h2 id="system-types">System types</h2>
-            <h3 id="square-matrix-with-full-rank">Square matrix with full rank</h3>
-            <p>In the most simple case: a square matrix with full rank, the solution exists and is unique: \(x = A^{-1} b\)</p>
-            <h3 id="underdetermined-systems">Underdetermined systems</h3>
-            <p>In general, such systems have a family of solutions that can be parametrized by some constraint on their components.</p>
-            <p>They can be solved with the following equation: \[ x = A^+ b + (I - A^+ A)w \], where \(w\) is a vector and \(A^+\) is the <a href="/notes/moore_penrose_inverse/">Moore-Penrose inverse</a> of the matrix \(A\). The solutions form a vector space.</p>
-            <h3 id="overdetermined-systems">Overdetermined systems</h3>
-            <p>In overdetermined systems, there is no actual solution. However, one can look for the best solution according to some criterion. If that criterion is the sum of squared residuals, this leads to <a href="/notes/ordinary_least_squares/">ordinary least squares</a>.</p>
-          </div>
-          <div class="bl-section">
-            <h2>Links to this note</h2>
-            <div class="backlinks">
-              <ul>
-                <li>
-                  <a href="/notes/compressed_sensing/">Compressed sensing</a>
-                </li>
-              </ul>
-            </div>
+            <h2 id="description">Description</h2>
+            <p>Compressed sensing is a technique to recover a sparse signal from partial observations.</p>
+            <p>The signal is described as a $N$-dimensional vector \(\textbf{s}\). We make \(M\) measurements, where a measurements means a projection of the signal \(\textbf{s}\) onto some known vector. The result of all these measurements can be written as \(\textbf{y} = \textbf{Fs}\), where \(\textbf{F}\) is a \(M \times N\) matrix.</p>
+            <p>In the context of compressed sensing, we have \(M &lt; N\). This results in an <a href="/notes/system_of_linear_equations/">underdetermined linear system</a> which usually has an infinite number of solutions.</p>
+            <p>&lt;~/Papers/library_bibtex.bib&gt;</p>
           </div>
           <div class="note-footer">
-            Last changed <a class="u-url" href="https://hugocisneros.com/notes/system_of_linear_equations/"><time itemprop="datePublished" class="dt-published" datetime="2021-08-24T15:04:00+0200">24/08/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+            Last changed <a class="u-url" href="https://hugocisneros.com/notes/compressed_sensing/"><time itemprop="datePublished" class="dt-published" datetime="2021-08-24T11:34:00+0200">24/08/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
           </div>
         </div>
       </article><br>
-      <a href="/notes#system_of_linear_equations"><b>← Back to Notes</b></a>
+      <a href="/notes#compressed_sensing"><b>← Back to Notes</b></a>
       <hr>
     </main>
     <footer class="footer">

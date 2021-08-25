@@ -4,7 +4,72 @@
     
     <url>
         <loc>https://hugocisneros.com/</loc>
-        <lastmod>2021-08-20T15:30:00+02:00</lastmod>
+        <lastmod>2021-08-25T15:21:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/</loc>
+        <lastmod>2021-08-25T15:21:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/talk_alife_2020_keynote_luis_zaman_new_frontiers_in_alife_what_was_old_is_new_again/</loc>
+        <lastmod>2021-08-25T15:21:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/alife_2020/</loc>
+        <lastmod>2021-08-25T15:20:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/lupretrainedtransformersuniversal2021/</loc>
+        <lastmod>2021-08-25T15:19:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/weissthinkingtransformers2021/</loc>
+        <lastmod>2021-08-25T15:19:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/cellular_automata_as_cnns/</loc>
+        <lastmod>2021-08-25T15:16:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/conway_s_game_of_life/</loc>
+        <lastmod>2021-08-25T14:49:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/reservoir_computing/</loc>
+        <lastmod>2021-08-25T14:41:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/computing_in_cellular_automata/</loc>
+        <lastmod>2021-08-25T14:37:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/mordvintsevgrowingneuralcellular2020/</loc>
+        <lastmod>2021-08-25T13:54:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/system_of_linear_equations/</loc>
+        <lastmod>2021-08-24T15:04:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/compressed_sensing/</loc>
+        <lastmod>2021-08-24T11:34:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/knuth_morris_pratt_string_searching_algorithm/</loc>
+        <lastmod>2021-08-24T11:10:00+02:00</lastmod>
     </url>
     
     <url>
@@ -13,13 +78,18 @@
     </url>
     
     <url>
-        <loc>https://hugocisneros.com/notes/</loc>
-        <lastmod>2021-08-20T15:30:00+02:00</lastmod>
+        <loc>https://hugocisneros.com/notes/tanciklearnedinitializationsoptimizing2021/</loc>
+        <lastmod>2021-08-18T16:00:00+02:00</lastmod>
     </url>
     
     <url>
-        <loc>https://hugocisneros.com/notes/tanciklearnedinitializationsoptimizing2021/</loc>
-        <lastmod>2021-08-18T16:00:00+02:00</lastmod>
+        <loc>https://hugocisneros.com/notes/implicit_neural_representations/</loc>
+        <lastmod>2021-08-18T15:58:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/meta_learning/</loc>
+        <lastmod>2021-08-18T15:25:00+02:00</lastmod>
     </url>
     
     <url>
@@ -30,11 +100,6 @@
     <url>
         <loc>https://hugocisneros.com/notes/unker_non_linear_writing_system/</loc>
         <lastmod>2021-08-16T12:05:00+02:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/cellular_automata_as_cnns/</loc>
-        <lastmod>2021-08-16T11:56:00+02:00</lastmod>
     </url>
     
     <url>
@@ -143,11 +208,6 @@
     </url>
     
     <url>
-        <loc>https://hugocisneros.com/notes/weissthinkingtransformers2021/</loc>
-        <lastmod>2021-06-16T11:36:00+02:00</lastmod>
-    </url>
-    
-    <url>
         <loc>https://hugocisneros.com/notes/zuse_s_thesis/</loc>
         <lastmod>2021-06-15T09:58:00+02:00</lastmod>
     </url>
@@ -165,11 +225,6 @@
     <url>
         <loc>https://hugocisneros.com/notes/language_modeling/</loc>
         <lastmod>2021-06-14T14:24:00+02:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/meta_learning/</loc>
-        <lastmod>2021-06-14T11:55:00+02:00</lastmod>
     </url>
     
     <url>
@@ -200,11 +255,6 @@
     <url>
         <loc>https://hugocisneros.com/notes/alternative_learning_mechanisms/</loc>
         <lastmod>2021-06-14T10:06:00+02:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/conway_s_game_of_life/</loc>
-        <lastmod>2021-06-14T09:28:00+02:00</lastmod>
     </url>
     
     <url>
@@ -273,11 +323,6 @@
     </url>
     
     <url>
-        <loc>https://hugocisneros.com/notes/reservoir_computing/</loc>
-        <lastmod>2021-04-26T21:38:00+02:00</lastmod>
-    </url>
-    
-    <url>
         <loc>https://hugocisneros.com/notes/aachgeneralizationdifferentcellular2021/</loc>
         <lastmod>2021-04-26T20:53:00+02:00</lastmod>
     </url>
@@ -308,11 +353,6 @@
     </url>
     
     <url>
-        <loc>https://hugocisneros.com/notes/system_of_linear_equations/</loc>
-        <lastmod>2021-04-21T08:43:00+02:00</lastmod>
-    </url>
-    
-    <url>
         <loc>https://hugocisneros.com/notes/neural_networks_as_dynamical_systems/</loc>
         <lastmod>2021-04-19T11:54:00+02:00</lastmod>
     </url>
@@ -320,11 +360,6 @@
     <url>
         <loc>https://hugocisneros.com/notes/attractor_networks/</loc>
         <lastmod>2021-04-19T11:24:00+02:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/lupretrainedtransformersuniversal2021/</loc>
-        <lastmod>2021-04-19T09:05:00+02:00</lastmod>
     </url>
     
     <url>
@@ -414,11 +449,6 @@
     
     <url>
         <loc>https://hugocisneros.com/notes/computer_vision/</loc>
-        <lastmod>2021-03-25T09:58:00+01:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/computing_in_cellular_automata/</loc>
         <lastmod>2021-03-25T09:58:00+01:00</lastmod>
     </url>
     
@@ -614,11 +644,6 @@
     
     <url>
         <loc>https://hugocisneros.com/notes/flageatfaststablemapelites2020/</loc>
-        <lastmod>2021-03-25T09:57:00+01:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/mordvintsevgrowingneuralcellular2020/</loc>
         <lastmod>2021-03-25T09:57:00+01:00</lastmod>
     </url>
     
@@ -1063,11 +1088,6 @@
     </url>
     
     <url>
-        <loc>https://hugocisneros.com/notes/talk_alife_2020_keynote_luis_zaman_new_frontiers_in_alife_what_was_old_is_new_again/</loc>
-        <lastmod>2020-09-28T16:32:00+02:00</lastmod>
-    </url>
-    
-    <url>
         <loc>https://hugocisneros.com/notes/python/</loc>
         <lastmod>2020-09-28T10:32:00+02:00</lastmod>
     </url>
@@ -1160,11 +1180,6 @@
     <url>
         <loc>https://hugocisneros.com/notes/talk_alife_2020_keynote_lee_cronin_a_top_down_chemically_embodied_artificial_life_computation/</loc>
         <lastmod>2020-07-29T14:24:00+02:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/alife_2020/</loc>
-        <lastmod>2020-07-29T11:13:00+02:00</lastmod>
     </url>
     
     <url>
@@ -1735,11 +1750,6 @@
     <url>
         <loc>https://hugocisneros.com/notes/neat/</loc>
         <lastmod>2020-06-30T13:12:00+02:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/implicit_neural_representations/</loc>
-        <lastmod>2020-06-29T16:35:00+02:00</lastmod>
     </url>
     
     <url>
