@@ -6,7 +6,15 @@
     
     , 
     
+    {"body":"Links  Project slides Project report  Description The goal of this project was to write a review of adversarial examples in RL as of January 2019. It was also made into a talk for which the slides can be found above.\nThis project was a collaboration with Clément Acher, part of a reinforcement learning course taught by Alessandro Lazaric and Matteo Pirotta.\n","title":"Adversarial examples in reinforcement learning","url":"https://hugocisneros.com/projects/adversarial_rl/"}
+    
+    , 
+    
     {"body":"Links  Project slides PDF project report  Description This project was part of the course Graphs in Machine learning taught by Michal Valko. The project was proposed by Peter Battaglia and supervised by Peter and Michal together.\nThe goal of this project was to apply graph neural networks on the influence maximization (IM) problem for a graph with the independent cascade (IC) assumption (more details in the report). The project was in collaboration with Hind Dadoun\n","title":"Graph neural networks for influence maximization","url":"https://hugocisneros.com/projects/graph_nn_for_influence_maximization/"}
+    
+    , 
+    
+    {"body":"Links  Project slides Project report  Description This project\u0026rsquo;s goal was to implement style transfer techniques based on GANs. We applied several algorithms on our own datasets of landscape pictures scraped from Flickr and frames from anime extracted automatically.\nThis project was a collaboration with Clément Acher and was part of the course Object recognition and computer vision taught by Jean Ponce, Ivan Laptev, Cordelia Schmid and Josef Sivic.\n","title":"Style transfer with generative adversarial neural networks","url":"https://hugocisneros.com/projects/style_transfer_gans/"}
     
     , 
     

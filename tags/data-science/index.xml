@@ -24,8 +24,12 @@ It all begins with Gaspard Monge, reading his mémoire [2] in front of eminent s
       <pubDate>Mon, 29 Oct 2018 12:00:00 +0000</pubDate>
       
       <guid>https://hugocisneros.com/projects/data_journalism_extractor/</guid>
-      <description>Links  Github repo Online documentation Report (in French)  Data Journalism Extractor This project is an attempt to create a tool to help journalists extract and process data at scale, from multiple heterogenous data sources while leveraging powerful and complex database, information extraction and NLP tools with limited programming knowledge.
-Features This software is based on Apache Flink, a stream processing framework similar to Spark written in Java and Scala.</description>
+      <description>&lt;h3 id=&#34;links&#34;&gt;Links&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/hugcis/data_journalism_extractor&#34;&gt;Github repo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://data-journalism-extractor.readthedocs.io/en/latest/&#34;&gt;Online documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://hugocisneros.com/pdf/report_data_journalism.pdf&#34;&gt;Report (in French)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
     <item>

@@ -6,7 +6,81 @@
     <description>Recent content in Notes on Hugo Cisneros - Personal page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 Aug 2021 16:39:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 29 Aug 2021 21:45:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Language modeling</title>
+      <link>https://hugocisneros.com/notes/language_modeling/</link>
+      <pubDate>Sun, 29 Aug 2021 21:45:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/language_modeling/</guid>
+      <description>tags NLP  LM with RNNs Different models have been studied, starting from the initial Recurrent neural network based language model (Mikolov et al. 2011).
+LSTM were then used with more success than previous models (Zaremba, Sutskever, and Vinyals 2015).
+Recently, transformers seem to have dominated language modeling. However it is not clear if this is due to their real superiority over RNNs or their practical scalability (Merity 2019).</description>
+    </item>
+    
+    <item>
+      <title>Machine learning</title>
+      <link>https://hugocisneros.com/notes/machine_learning/</link>
+      <pubDate>Sun, 29 Aug 2021 21:45:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/machine_learning/</guid>
+      <description>tags Artificial Intelligence, Applied maths  Machine learning is about constructing algorithms that can approximate complex functions from observations of input/output pairs. Machine learning is related to Statistics since its goal is to make predictions based on data.
+Examples of such functions include:
+ Image classification Time-series prediction Language modeling  Regression The goal is to approximate a target function \(f\) or signal \(S\).</description>
+    </item>
+    
+    <item>
+      <title>Christopher Langton</title>
+      <link>https://hugocisneros.com/notes/christopher_langton/</link>
+      <pubDate>Sun, 29 Aug 2021 21:44:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/christopher_langton/</guid>
+      <description>tags Artificial life, Complex Systems  He is a researcher in the field of artificial life and complex systems. He developed many tools and systems that the Alife community still uses today.
+He created a particular cellular automata: the langton loop.</description>
+    </item>
+    
+    <item>
+      <title>Implicit neural representations</title>
+      <link>https://hugocisneros.com/notes/implicit_neural_representations/</link>
+      <pubDate>Sun, 29 Aug 2021 21:42:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/implicit_neural_representations/</guid>
+      <description>tags Data representation, Neural networks  Implicit neural representations is about parameterizing a continuous differentiable signal with a neural network. The signal is encoded within the neural network, providing a possibly more compact representation. This is a type of regression problem.
+Applications of these learned representations range from simple compression, to 3D scene reconstruction from 2D images, semantic information inference, etc.
+CPPN is an early example of a implicit neural representation implementation mainly used for pattern generation .</description>
+    </item>
+    
+    <item>
+      <title>Style transfer</title>
+      <link>https://hugocisneros.com/notes/style_transfer/</link>
+      <pubDate>Sun, 29 Aug 2021 21:25:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/style_transfer/</guid>
+      <description>tags Computer vision  Style transfer is the process of transferring some visual features from one image to another image while preserving the latter&amp;rsquo;s content information. Since both these notions may be considered subjective, the problem of style transfer is not well defined and may be approached in many ways.
+Style transfer with CNNs This is an early example of style transfer with convolutional neural networks: (Gatys, Ecker, and Bethge 2016)</description>
+    </item>
+    
+    <item>
+      <title>Softmax</title>
+      <link>https://hugocisneros.com/notes/softmax/</link>
+      <pubDate>Fri, 27 Aug 2021 15:41:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/softmax/</guid>
+      <description> tags Applied maths  The Softmax can refer to two mathematical functions:
+ In machine learning a softmax is the function which normalizes a vector of values to a probability vector: \(\text{softmax}(\mathbf{x}) = \dfrac{e^{\mathbf{x}}}{\sum_i e^{x_i}}\) where \(\mathbf{x} = (x_i) \in \mathbb{R}^n\). This function could also be called soft-argmax because it is a smooth approximation of the discrete argmax function. It may also refer to a smoothed maximum function like \(\epsilon \log \sum_i \exp (x_i / \epsilon)\) which approximates the \(\text{max}\) function in the limit \(\epsilon \rightarrow 0\)  </description>
+    </item>
+    
+    <item>
+      <title>Graph cellular automata</title>
+      <link>https://hugocisneros.com/notes/graph_cellular_automata/</link>
+      <pubDate>Fri, 27 Aug 2021 14:55:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/graph_cellular_automata/</guid>
+      <description>tags Cellular automata, Graphs  This concept was mentioned in (O’Sullivan 2001), although it may not be the first ever mention of it.
+The idea is also similar to graph convolutional networks and other graph neural networks, where the goal is to construct an update function for a node that doesn&amp;rsquo;t depend on the number of neighboring nodes. This enables running cellular automata on non-grid structures.
+Bibliography O’Sullivan, David. October 2001.</description>
+    </item>
+    
     <item>
       <title>Notes on: Learned Initializations for Optimizing Coordinate-Based Neural Representations by Tancik, M., Mildenhall, B., Wang, T., Schmidt, D., Srinivasan, P. P., Barron, J. T., &amp; Ng, R. (2021)</title>
       <link>https://hugocisneros.com/notes/tanciklearnedinitializationsoptimizing2021/</link>
@@ -166,17 +240,6 @@ In the context of compressed sensing, we have \(M &amp;lt; N\).</description>
     </item>
     
     <item>
-      <title>Implicit neural representations</title>
-      <link>https://hugocisneros.com/notes/implicit_neural_representations/</link>
-      <pubDate>Wed, 18 Aug 2021 15:58:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/implicit_neural_representations/</guid>
-      <description>tags Data representation, Neural networks  Implicit neural representations is about parameterizing a continuous differentiable signal with a neural network. The signal is encoded within the neural network, providing a possibly more compact representation.
-Applications of these learned representations range from simple compression, to 3D scene reconstruction from 2D images, semantic information inference, etc.
-CPPN is an early example of a implicit neural representation implementation mainly used for pattern generation .</description>
-    </item>
-    
-    <item>
       <title>Cellular automata</title>
       <link>https://hugocisneros.com/notes/cellular_automata/</link>
       <pubDate>Mon, 16 Aug 2021 12:21:00 +0200</pubDate>
@@ -288,28 +351,6 @@ An agent can be anything from a fixed set of if-else statements to a deep neural
     </item>
     
     <item>
-      <title>Machine learning</title>
-      <link>https://hugocisneros.com/notes/machine_learning/</link>
-      <pubDate>Mon, 14 Jun 2021 14:45:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/machine_learning/</guid>
-      <description> tags Artificial Intelligence  Machine learning is about constructing algorithms that can approximate complex functions from observations of input/output pairs. Machine learning is related to Statistics since its goal is to make predictions based on data.
-Examples of such functions include:
- Image classification Time-series prediction Language modeling  </description>
-    </item>
-    
-    <item>
-      <title>Language modeling</title>
-      <link>https://hugocisneros.com/notes/language_modeling/</link>
-      <pubDate>Mon, 14 Jun 2021 14:24:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/language_modeling/</guid>
-      <description>tags NLP  LM with RNNs Different models have been studied, starting from the initial Recurrent neural network based language model (Mikolov et al. 2011).
-LSTM were then used with more success than previous models (Zaremba, Sutskever, and Vinyals 2015).
-Recently, transformers seem to have dominated language modeling. However it is not clear if this is due to their real superiority over RNNs or their practical scalability (Merity 2019).</description>
-    </item>
-    
-    <item>
       <title>Distillation</title>
       <link>https://hugocisneros.com/notes/distillation/</link>
       <pubDate>Mon, 14 Jun 2021 11:54:00 +0200</pubDate>
@@ -369,16 +410,6 @@ New candidate solutions for a problem are constructed by randomly combining and 
   Alternative mechanisms for learning have been and are currently studied to try and approach the learning problem in a more effective way.
 Direct feedback alignment (Nøkland 2016)
 Hebbian learning The theory is sometimes summarized as &amp;ldquo;Cells that fire together wire together.</description>
-    </item>
-    
-    <item>
-      <title>Graph cellular automata</title>
-      <link>https://hugocisneros.com/notes/graph_cellular_automata/</link>
-      <pubDate>Thu, 03 Jun 2021 11:04:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/graph_cellular_automata/</guid>
-      <description> tags Cellular automata, Graphs  This concept was mentioned in (O’Sullivan 2001), although it may not be the first ever mention of it.
-Bibliography O’Sullivan, David. October 2001. &#34;Graph-Cellular Automata: A Generalised Discrete Urban and Regional Model&#34;. Environment and Planning B: Planning and Design 28 (5):687–705. </description>
     </item>
     
     <item>
@@ -2316,15 +2347,6 @@ Where is the large-scale pattern specified?</description>
       
       <guid>https://hugocisneros.com/notes/federated_learning/</guid>
       <description> tags Machine learning  </description>
-    </item>
-    
-    <item>
-      <title>Christopher Langton</title>
-      <link>https://hugocisneros.com/notes/christopher_langton/</link>
-      <pubDate>Sat, 25 Jul 2020 22:36:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/christopher_langton/</guid>
-      <description> tags Artificial life, Complex Systems  </description>
     </item>
     
     <item>

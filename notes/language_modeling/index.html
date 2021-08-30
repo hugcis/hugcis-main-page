@@ -62,44 +62,44 @@
               </dd>
             </dl>
             <h2 id="lm-with-rnn--recurrent-neural-networks-dot-md--s">LM with <a href="/notes/recurrent_neural_networks/">RNN</a>s</h2>
-            <p>Different models have been studied, starting from the initial Recurrent neural network based language model (<a href="#org62cefd9">Mikolov et al. 2011</a>).</p>
-            <p>LSTM were then used with more success than previous models (<a href="#org87de83d">Zaremba, Sutskever, and Vinyals 2015</a>).</p>
-            <p>Recently, <a href="#lm-with-transformers--relref-transformers-dot-md">transformers seem to have dominated language modeling</a>. However it is not clear if this is due to their real superiority over RNNs or their practical scalability (<a href="#org265ecc5">Merity 2019</a>).</p>
+            <p>Different models have been studied, starting from the initial <a href="/notes/recurrent_neural_networks/">Recurrent neural network</a> based language model (<a href="#org2f82405">Mikolov et al. 2011</a>).</p>
+            <p>LSTM were then used with more success than previous models (<a href="#org740579f">Zaremba, Sutskever, and Vinyals 2015</a>).</p>
+            <p>Recently, <a href="#lm-with-transformers--relref-transformers-dot-md">transformers seem to have dominated language modeling</a>. However it is not clear if this is due to their real superiority over RNNs or their practical scalability (<a href="#org5311f2f">Merity 2019</a>).</p>
             <h2 id="lm-with-transformers--transformers-dot-md">LM with <a href="/notes/transformers/">Transformers</a></h2>
             <h2 id="language-modeling-and-compression--compression-dot-md">Language modeling and <a href="/notes/compression/">Compression</a></h2>
             <h2 id="text-generation">Text generation</h2>
-            <p>Language models can be used to generate text from a prompt or starting sentence. This is the kind of examples that made models like GPT-2 and GPT-3 famous, because of their ability to generate long sequences of apparently coherent text (<a href="#org8bb76aa">Radford et al. 2019</a>; <a href="#org97c8fcf">Brown et al. 2020</a>).</p>
+            <p>Language models can be used to generate text from a prompt or starting sentence. This is the kind of examples that made models like GPT-2 and GPT-3 famous, because of their ability to generate long sequences of apparently coherent text (<a href="#org5b512f6">Radford et al. 2019</a>; <a href="#org9c80be1">Brown et al. 2020</a>).</p>
             <h2 id="other-applications">Other applications</h2>
             <h3 id="language-modeling-for-automated-theorem-proving--automated-theorem-proving-dot-md">Language modeling for <a href="/notes/automated_theorem_proving/">Automated theorem proving</a></h3>
-            <p>(<a href="#org907303f">Polu and Sutskever 2020</a>)</p>
+            <p>(<a href="#orgd7fd8c0">Polu and Sutskever 2020</a>)</p>
             <h3 id="language-modeling-for-reinforcement-learning--reinforcement-learning-dot-md">Language modeling for <a href="/notes/reinforcement_learning/">Reinforcement Learning</a></h3>
-            <p>(<a href="#orgbe2bf6a">Janner, Li, and Levine, n.d.</a>)</p>
+            <p>(<a href="#org9991f96">Janner, Li, and Levine, n.d.</a>)</p>
             <h2 id="bibliography">Bibliography</h2>
             <ol class="biblio-list">
-              <a id="org97c8fcf"></a>
+              <a id="org9c80be1"></a>
               <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle">
                 <span itemprop="author"><span itemprop="author">Brown, Tom B.</span>, <span itemprop="author">Benjamin Mann</span>, <span itemprop="author">Nick Ryder</span>, <span itemprop="author">Melanie Subbiah</span>, <span itemprop="author">Jared Kaplan</span>, <span itemprop="author">Prafulla Dhariwal</span>, <span itemprop="author">Arvind Neelakantan</span>, et al.</span>. <span datetime="2020" itemprop="datePublished">June 2020</span>. "<span itemprop="name">Language Models Are Few-Shot Learners</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">arXiv:2005.14165 [Cs]</i></span>, June.
-                <p><a id="orgbe2bf6a"></a></p>
+                <p><a id="org9991f96"></a></p>
               </li>
               <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle">
                 <span itemprop="author"><span itemprop="author">Janner, Michael</span>, <span itemprop="author">Qiyang Li</span>, and <span itemprop="author">Sergey Levine</span></span>. n.d. “<span itemprop="name">Reinforcement Learning as One Big Sequence Modeling Problem</span>”, 15.
-                <p><a id="org62cefd9"></a></p>
+                <p><a id="org2f82405"></a></p>
               </li>
               <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle">
                 <span itemprop="author"><span itemprop="author">Mikolov, Tomas</span>, <span itemprop="author">Martin Karafiat</span>, <span itemprop="author">Lukas Burget</span>, <span itemprop="author">Jan Cernocky</span>, and <span itemprop="author">Sanjeev Khudanpur</span></span>. <span datetime="2011" itemprop="datePublished">2011</span>. “<span itemprop="name">Recurrent Neural Network Based Language Model</span>”. In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Interspeech 2011</i></span>, 4.
-                <p><a id="org907303f"></a></p>
+                <p><a id="orgd7fd8c0"></a></p>
               </li>
               <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle">
                 <span itemprop="author"><span itemprop="author">Polu, Stanislas</span>, and <span itemprop="author">Ilya Sutskever</span></span>. <span datetime="2020" itemprop="datePublished">September 2020</span>. “<span itemprop="name">Generative Language Modeling for Automated Theorem Proving</span>”. <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">arXiv:2009.03393 [Cs, Stat]</i></span>, September.
-                <p><a id="org8bb76aa"></a></p>
+                <p><a id="org5b512f6"></a></p>
               </li>
               <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle">
                 <span itemprop="author"><span itemprop="author">Radford, Alec</span>, <span itemprop="author">Jeffrey Wu</span>, <span itemprop="author">Rewon Child</span>, <span itemprop="author">David Luan</span>, <span itemprop="author">Dario Amodei</span>, and <span itemprop="author">Ilya Sutskever</span></span>. <span datetime="2019" itemprop="datePublished">2019</span>. “<span itemprop="name">Language Models Are Unsupervised Multitask Learners</span>”. <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">OpenAI Blog</i></span> 1 (8):9.
-                <p><a id="org87de83d"></a></p>
+                <p><a id="org740579f"></a></p>
               </li>
               <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle">
                 <span itemprop="author"><span itemprop="author">Zaremba, Wojciech</span>, <span itemprop="author">Ilya Sutskever</span>, and <span itemprop="author">Oriol Vinyals</span></span>. <span datetime="2015" itemprop="datePublished">February 2015</span>. “<span itemprop="name">Recurrent Neural Network Regularization</span>”. <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">arXiv:1409.2329 [Cs]</i></span>, February.
-                <p><a id="org265ecc5"></a></p>
+                <p><a id="org5311f2f"></a></p>
               </li>
               <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle"><span itemprop="author">Merity, Stephen</span>. <span datetime="2019" itemprop="datePublished">November 2019</span>. “<span itemprop="name">Single Headed Attention RNN: Stop Thinking with Your Head</span>”. <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">arXiv:1911.11423 [Cs]</i></span>, November.</li>
             </ol>
@@ -142,7 +142,7 @@
             </div>
           </div>
           <div class="note-footer">
-            Last changed <a class="u-url" href="https://hugocisneros.com/notes/language_modeling/"><time itemprop="datePublished" class="dt-published" datetime="2021-06-14T14:24:00+0200">14/06/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+            Last changed <a class="u-url" href="https://hugocisneros.com/notes/language_modeling/"><time itemprop="datePublished" class="dt-published" datetime="2021-08-29T21:45:00+0200">29/08/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
           </div>
         </div>
       </article><br>

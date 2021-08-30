@@ -143,6 +143,24 @@
     </item>
     
     <item>
+      <title>Adversarial attacks</title>
+      <link>https://hugocisneros.com/tags/adversarial-attacks/</link>
+      <pubDate>Wed, 30 Jan 2019 15:10:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/tags/adversarial-attacks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reinforcement learning</title>
+      <link>https://hugocisneros.com/tags/reinforcement-learning/</link>
+      <pubDate>Wed, 30 Jan 2019 15:10:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/tags/reinforcement-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Graph neural networks</title>
       <link>https://hugocisneros.com/tags/graph-neural-networks/</link>
       <pubDate>Thu, 24 Jan 2019 12:00:00 +0000</pubDate>
@@ -157,6 +175,33 @@
       <pubDate>Thu, 24 Jan 2019 12:00:00 +0000</pubDate>
       
       <guid>https://hugocisneros.com/tags/graphs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Computer vision</title>
+      <link>https://hugocisneros.com/tags/computer-vision/</link>
+      <pubDate>Tue, 15 Jan 2019 15:14:57 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/tags/computer-vision/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GANs</title>
+      <link>https://hugocisneros.com/tags/gans/</link>
+      <pubDate>Tue, 15 Jan 2019 15:14:57 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/tags/gans/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Style transfer</title>
+      <link>https://hugocisneros.com/tags/style-transfer/</link>
+      <pubDate>Tue, 15 Jan 2019 15:14:57 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/tags/style-transfer/</guid>
       <description></description>
     </item>
     

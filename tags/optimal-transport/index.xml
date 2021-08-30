@@ -24,8 +24,12 @@ It all begins with Gaspard Monge, reading his mémoire [2] in front of eminent s
       <pubDate>Mon, 07 Jan 2019 12:00:00 +0000</pubDate>
       
       <guid>https://hugocisneros.com/projects/stochastic_optimization_for_large_scale_optimal_transport/</guid>
-      <description>Links  Project slides PDF project report Github  Description This project was part of the course Mathematical Foundations Of Data Science taught by Gabriel Peyré in 2019.
-The goal was to reproduce and extend results from [1] to other optimization algorithms, including SAGA [2]. After comparing the regularized optimal transport convergence results for these algorithms, I studied an optimal school placement and allocation problem in several French regions.</description>
+      <description>&lt;h3 id=&#34;links&#34;&gt;Links&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://hugocisneros.com/pdf/Cisneros_Slides_Stochastic_OT.pdf&#34;&gt;Project slides&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://hugocisneros.com/pdf/Cisneros_report_Stochastic_OT.pdf&#34;&gt;PDF project report&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/hugcis/large-scale-optimal-transport&#34;&gt;Github&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
     <item>
