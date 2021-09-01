@@ -6,7 +6,138 @@
     <description>Recent content in Notes on Hugo Cisneros - Personal page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 29 Aug 2021 21:45:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Sep 2021 20:17:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cellular automata</title>
+      <link>https://hugocisneros.com/notes/cellular_automata/</link>
+      <pubDate>Wed, 01 Sep 2021 20:17:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/cellular_automata/</guid>
+      <description>tags Emergence, Chaos, Artificial Intelligence resources Wikipedia, (Von Neumann and Burks 1966; Wolfram 2002)  Definition A cellular automaton is a computational model defined with respect to a regular grid of individual elements (called cells). Each of those cells can be in one of a finite number of states &amp;mdash; alive or dead, \(\{1, 2, 3\}\), etc.
+A cellular automaton&amp;rsquo;s evolution is simulated in discrete timesteps. At each new timestep, cells are updated according to a local evolution rule.</description>
+    </item>
+    
+    <item>
+      <title>Notes on: Growing Neural Cellular Automata by Mordvintsev, A., Randazzo, E., Niklasson, E., &amp; Levin, M. (2020)</title>
+      <link>https://hugocisneros.com/notes/mordvintsevgrowingneuralcellular2020/</link>
+      <pubDate>Wed, 01 Sep 2021 17:31:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/mordvintsevgrowingneuralcellular2020/</guid>
+      <description>tags Cellular automata source (Mordvintsev et al. 2020)  Summary This paper introduces interesting ideas for training cellular automata as CNNs to have self-repairing stable structures. The automata have 16 dimensional continuous states. The main modeling ideas are:
+ Use hard-coded filters for the initial perception step. The filters are Sobel convolutions and those two are concatenated with the current state. Update rules are then 1D convolutions applied to the \(3 * 16 = 48\) dimensional state vector.</description>
+    </item>
+    
+    <item>
+      <title>Reductionism</title>
+      <link>https://hugocisneros.com/notes/reductionism/</link>
+      <pubDate>Wed, 01 Sep 2021 17:31:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/reductionism/</guid>
+      <description>tags Philosophy, Physics  Reductionism is a philosophy according to which the laws of physics are relatively simple and could be expressed concisely. If we were to understand and model all those laws we could explain any given phenomenon by breaking it down into its smaller parts until we just need to apply these simple laws.
+With the current state of physics, it seems we are close to understanding many of these fundamental laws (although major shortcomings remain in the theory).</description>
+    </item>
+    
+    <item>
+      <title>Cellular automata as convolutional neural networks</title>
+      <link>https://hugocisneros.com/notes/cellular_automata_as_cnns/</link>
+      <pubDate>Wed, 01 Sep 2021 17:30:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/cellular_automata_as_cnns/</guid>
+      <description>tags Cellular automata, Convolutional neural networks  Motivation Cellular automata are computational models based on several principles such as translation-invariance and parallelism of computations. These principles also motivated the creation of Convolutional neural networks &amp;mdash; used initially for images and text &amp;mdash;, making this model well-suited to reason about cellular automata.
+There is indeed a deep connection between the two models, making it seem like there are two expressions of the same idea: spatially organized information can be processed locally in parallel.</description>
+    </item>
+    
+    <item>
+      <title>Cellular neural networks</title>
+      <link>https://hugocisneros.com/notes/cellular_neural_networks/</link>
+      <pubDate>Wed, 01 Sep 2021 17:30:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/cellular_neural_networks/</guid>
+      <description>tags Cellular automata, Neural networks resources Scholarpedia, (Chua and Yang 1988a, 1988b)  Bibliography Chua, L.O., and L. Yang. 1988. &#34;Cellular Neural Networks: Applications&#34;. IEEE Transactions on Circuits and Systems 35 (10):1273–90. &#34;DOI. ———. October 1988. &amp;ldquo;Cellular Neural Networks: Theory&amp;rdquo;. IEEE Transactions on Circuits and Systems 35 (10):1257–72. &#34;DOI.</description>
+    </item>
+    
+    <item>
+      <title>Computing in cellular automata</title>
+      <link>https://hugocisneros.com/notes/computing_in_cellular_automata/</link>
+      <pubDate>Wed, 01 Sep 2021 17:30:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/computing_in_cellular_automata/</guid>
+      <description>tags Unconventional computing, Cellular automata resources (Mitchell 2005; Wolfram 2002)  Cellular automata are computational models capable of interesting emergent behavior. A major challenge is to understand which CA rules are doing useful or efficient computations. It is not clear how these systems could be programmed or made to compute a particular function.
+Hand-engineered CA rules Below images show CA rules that can compute non trivial functions (Images are from (Wolfram 2002), see A new kind of science online ).</description>
+    </item>
+    
+    <item>
+      <title>Epsilon machines</title>
+      <link>https://hugocisneros.com/notes/epsilon_machines/</link>
+      <pubDate>Wed, 01 Sep 2021 17:30:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/epsilon_machines/</guid>
+      <description>(Crutchfield and Young, n.d.)
+Bibliography Crutchfield, James P., and Karl Young. n.d. &#34;Inferring Statistical Complexity&#34; 63 (2):105–8. &#34;</description>
+    </item>
+    
+    <item>
+      <title>Style transfer</title>
+      <link>https://hugocisneros.com/notes/style_transfer/</link>
+      <pubDate>Wed, 01 Sep 2021 17:30:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/style_transfer/</guid>
+      <description>tags Computer vision  Style transfer is the process of transferring some visual features from one image to another image while preserving the latter&amp;rsquo;s content information. Since both these notions may be considered subjective, the problem of style transfer is not well defined and may be approached in many ways.
+Style transfer with CNNs This is an early example of style transfer with convolutional neural networks: (Gatys, Ecker, and Bethge 2016)</description>
+    </item>
+    
+    <item>
+      <title>Talk: Alife 2020 keynote Luis Zaman - New Frontiers in Alife: What was old is new again</title>
+      <link>https://hugocisneros.com/notes/talk_alife_2020_keynote_luis_zaman_new_frontiers_in_alife_what_was_old_is_new_again/</link>
+      <pubDate>Wed, 01 Sep 2021 17:30:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/talk_alife_2020_keynote_luis_zaman_new_frontiers_in_alife_what_was_old_is_new_again/</guid>
+      <description>tags Artificial life, ALife 2020  This keynote is about this sub-community of ALife which is dedicated to constructing actual artificial systems that can exhibit Open-ended Evolution, and Life-like behavior.
+The first models that tried to construct ALife were probably Von Neumann&amp;rsquo;s self-reproducing CA and Langton&amp;rsquo;s loop. However, their main limitation was they were extremely brittle, which is why evolution did not really work in them.
+Zaman&amp;rsquo;s definition of evolution is</description>
+    </item>
+    
+    <item>
+      <title>Graph cellular automata</title>
+      <link>https://hugocisneros.com/notes/graph_cellular_automata/</link>
+      <pubDate>Wed, 01 Sep 2021 17:29:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/graph_cellular_automata/</guid>
+      <description>tags Cellular automata, Graphs  This concept was mentioned in (O’Sullivan 2001), although it may not be the first ever mention of it.
+The idea is also similar to graph convolutional networks and other graph neural networks, where the goal is to construct an update function for a node that doesn&amp;rsquo;t depend on the number of neighboring nodes. This enables running cellular automata on non-grid structures.
+Bibliography O’Sullivan, David. October 2001.</description>
+    </item>
+    
+    <item>
+      <title>Reservoir computing</title>
+      <link>https://hugocisneros.com/notes/reservoir_computing/</link>
+      <pubDate>Wed, 01 Sep 2021 17:29:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/reservoir_computing/</guid>
+      <description>tags Machine learning, Unconventional computing, Unsupervised learning  Reservoir computing is a term used to describe a class of machine learning algorithms that rely on transient dynamics of a dynamical system to implement and manipulate goal-related information.
+The most famous example is echo-state networks, which uses random recurrent neural networks as reservoirs, but other dynamical systems can also be used.
+Reservoir computing with cellular automata Reservoir computing can use cellular automata as the reservoir.</description>
+    </item>
+    
+    <item>
+      <title>Notes on: Reservoir Computing meets Recurrent Kernels and Structured Transforms by Dong, J., Ohana, R., Rafayelyan, M., &amp; Krzakala, F. (2020)</title>
+      <link>https://hugocisneros.com/notes/dongreservoircomputingmeets2020/</link>
+      <pubDate>Mon, 30 Aug 2021 22:02:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/dongreservoircomputingmeets2020/</guid>
+      <description>source (Dong et al. 2020) tags Reservoir computing, Kernel Methods  Summary This paper presents a connection between large size reservoir computing and kernel methods.
+The authors formulate a reservoir computing model as a form of recurrent kernel iteration. If the reservoir update is written \[ x^{(t+1)} = \dfrac{1}{\sqrt{N}} f \left(W_r x^{(t)} + W_i i^{(t)} \right) \] with \(x^{(t)}\) the state of the reservoir at time \(t\) and \(i^{(t)}\) sequential input at time \(t\), \(W_r \in \mathbb{R}^{N\times N}\) and \(W_i \in \mathbb{R}^{N\times d}\), we may re-frame it as a random feature embedding of the vector \(\left[ x^{(t)} , i^{(t)} \right]\) with the matrix \(W = [W_r, W_i]\).</description>
+    </item>
+    
+    <item>
+      <title>Differential equations</title>
+      <link>https://hugocisneros.com/notes/differential_equations/</link>
+      <pubDate>Mon, 30 Aug 2021 17:12:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/differential_equations/</guid>
+      <description> tags Mathematics  </description>
+    </item>
+    
     <item>
       <title>Language modeling</title>
       <link>https://hugocisneros.com/notes/language_modeling/</link>
@@ -51,16 +182,6 @@ CPPN is an early example of a implicit neural representation implementation main
     </item>
     
     <item>
-      <title>Style transfer</title>
-      <link>https://hugocisneros.com/notes/style_transfer/</link>
-      <pubDate>Sun, 29 Aug 2021 21:25:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/style_transfer/</guid>
-      <description>tags Computer vision  Style transfer is the process of transferring some visual features from one image to another image while preserving the latter&amp;rsquo;s content information. Since both these notions may be considered subjective, the problem of style transfer is not well defined and may be approached in many ways.
-Style transfer with CNNs This is an early example of style transfer with convolutional neural networks: (Gatys, Ecker, and Bethge 2016)</description>
-    </item>
-    
-    <item>
       <title>Softmax</title>
       <link>https://hugocisneros.com/notes/softmax/</link>
       <pubDate>Fri, 27 Aug 2021 15:41:00 +0200</pubDate>
@@ -68,17 +189,6 @@ Style transfer with CNNs This is an early example of style transfer with convolu
       <guid>https://hugocisneros.com/notes/softmax/</guid>
       <description> tags Applied maths  The Softmax can refer to two mathematical functions:
  In machine learning a softmax is the function which normalizes a vector of values to a probability vector: \(\text{softmax}(\mathbf{x}) = \dfrac{e^{\mathbf{x}}}{\sum_i e^{x_i}}\) where \(\mathbf{x} = (x_i) \in \mathbb{R}^n\). This function could also be called soft-argmax because it is a smooth approximation of the discrete argmax function. It may also refer to a smoothed maximum function like \(\epsilon \log \sum_i \exp (x_i / \epsilon)\) which approximates the \(\text{max}\) function in the limit \(\epsilon \rightarrow 0\)  </description>
-    </item>
-    
-    <item>
-      <title>Graph cellular automata</title>
-      <link>https://hugocisneros.com/notes/graph_cellular_automata/</link>
-      <pubDate>Fri, 27 Aug 2021 14:55:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/graph_cellular_automata/</guid>
-      <description>tags Cellular automata, Graphs  This concept was mentioned in (O’Sullivan 2001), although it may not be the first ever mention of it.
-The idea is also similar to graph convolutional networks and other graph neural networks, where the goal is to construct an update function for a node that doesn&amp;rsquo;t depend on the number of neighboring nodes. This enables running cellular automata on non-grid structures.
-Bibliography O’Sullivan, David. October 2001.</description>
     </item>
     
     <item>
@@ -103,17 +213,6 @@ Meta-learning of initialization The goal is to learn the initialization of neura
 Example for implicit neural representations: (Tancik et al. 2021)
 Meta-learning algorithms MAML (Finn, Abbeel, and Levine 2017)
 Reptile (Nichol, Achiam, and Schulman 2018)</description>
-    </item>
-    
-    <item>
-      <title>Talk: Alife 2020 keynote Luis Zaman - New Frontiers in Alife: What was old is new again</title>
-      <link>https://hugocisneros.com/notes/talk_alife_2020_keynote_luis_zaman_new_frontiers_in_alife_what_was_old_is_new_again/</link>
-      <pubDate>Wed, 25 Aug 2021 15:21:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/talk_alife_2020_keynote_luis_zaman_new_frontiers_in_alife_what_was_old_is_new_again/</guid>
-      <description>tags Artificial life, ALife 2020  This keynote is about this sub-community of ALife which is dedicated to constructing actual artificial systems that can exhibit Open-ended Evolution, and Life-like behavior.
-The first models that tried to construct ALife were probably Von Neumann&amp;rsquo;s self-reproducing CA and Langton&amp;rsquo;s loop. However, their main limitation was they were extremely brittle, which is why evolution did not really work in them.
-Zaman&amp;rsquo;s definition of evolution is</description>
     </item>
     
     <item>
@@ -148,16 +247,6 @@ Data is represented as sequences, which is the structure transformers manipulate
     </item>
     
     <item>
-      <title>Cellular automata as convolutional neural networks</title>
-      <link>https://hugocisneros.com/notes/cellular_automata_as_cnns/</link>
-      <pubDate>Wed, 25 Aug 2021 15:16:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/cellular_automata_as_cnns/</guid>
-      <description>tags Cellular automata, Convolutional neural networks  Motivation Cellular automata are computational models based on several principles such as translation-invariance and parallelism of computations. These principles also motivated the creation of Convolutional neural networks &amp;mdash; used initially for images and text &amp;mdash;, making this model well-suited to reason about cellular automata.
-There is indeed a deep connection between the two models, making it seem like there are two expressions of the same idea: spatially organized information can be processed locally in parallel.</description>
-    </item>
-    
-    <item>
       <title>Conway&#39;s Game of Life</title>
       <link>https://hugocisneros.com/notes/conway_s_game_of_life/</link>
       <pubDate>Wed, 25 Aug 2021 14:49:00 +0200</pubDate>
@@ -166,37 +255,6 @@ There is indeed a deep connection between the two models, making it seem like th
       <description>tags Cellular automata resources (Gardner 1970)  It is one of the most famous Cellular automata rule, invented as a game by mathematician John Conway.
 Learn the game of life with a neural network (Springer and Kenyon 2020)
 Bibliography Springer, Jacob M., and Garrett T. Kenyon. September 2020. &#34;It’s Hard for Neural Networks to Learn the Game of Life&#34;. arXiv:2009.01398 [Cs, Stat], September. Gardner, Martin. October 1970. &amp;ldquo;Mathematical Games&amp;rdquo;. Scientific American 223 (4):120–23.</description>
-    </item>
-    
-    <item>
-      <title>Reservoir computing</title>
-      <link>https://hugocisneros.com/notes/reservoir_computing/</link>
-      <pubDate>Wed, 25 Aug 2021 14:41:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/reservoir_computing/</guid>
-      <description>tags Machine learning, Unconventional computing, Unsupervised learning  Reservoir computing is a term used to describe a class of machine learning algorithms that rely on transient dynamics of a dynamical system to implement and manipulate goal-related information.
-The most famous example is echo-state networks, which uses random recurrent neural networks as reservoirs, but other dynamical systems can also be used.
-Reservoir computing with cellular automata Reservoir computing can use cellular automata as the reservoir.</description>
-    </item>
-    
-    <item>
-      <title>Computing in cellular automata</title>
-      <link>https://hugocisneros.com/notes/computing_in_cellular_automata/</link>
-      <pubDate>Wed, 25 Aug 2021 14:37:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/computing_in_cellular_automata/</guid>
-      <description>tags Unconventional computing, Cellular automata resources (Mitchell 2005; Wolfram 2002)  Cellular automata are computational models capable of interesting emergent behavior. A major challenge is to understand which CA rules are doing useful or efficient computations. It is not clear how these systems could be programmed or made to compute a particular function.
-Hand-engineered CA rules Below images show CA rules that can compute non trivial functions (Images are from (Wolfram 2002), see A new kind of science online ).</description>
-    </item>
-    
-    <item>
-      <title>Notes on: Growing Neural Cellular Automata by Mordvintsev, A., Randazzo, E., Niklasson, E., &amp; Levin, M. (2020)</title>
-      <link>https://hugocisneros.com/notes/mordvintsevgrowingneuralcellular2020/</link>
-      <pubDate>Wed, 25 Aug 2021 13:54:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/mordvintsevgrowingneuralcellular2020/</guid>
-      <description>tags Cellular automata source (Mordvintsev et al. 2020)  Summary This paper introduces interesting ideas for training cellular automata as CNNs to have self-repairing stable structures. The automata have 16 dimensional continuous states. The main modeling ideas are:
- Use hard-coded filters for the initial perception step. The filters are Sobel convolutions and those two are concatenated with the current state. Update rules are then 1D convolutions applied to the \(3 * 16 = 48\) dimensional state vector.</description>
     </item>
     
     <item>
@@ -237,16 +295,6 @@ In the context of compressed sensing, we have \(M &amp;lt; N\).</description>
       
       <guid>https://hugocisneros.com/notes/neural_cellular_automata_and_implicit_representations/</guid>
       <description> tags Cellular automata, Neural cellular automata  </description>
-    </item>
-    
-    <item>
-      <title>Cellular automata</title>
-      <link>https://hugocisneros.com/notes/cellular_automata/</link>
-      <pubDate>Mon, 16 Aug 2021 12:21:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/cellular_automata/</guid>
-      <description>tags Emergence, Chaos, Artificial Intelligence resources Wikipedia, (Von Neumann and Burks 1966; Wolfram 2002)  Definition A cellular automaton is a computational model defined with respect to a regular grid of individual elements (called cells). Each of those cells can be in one of a finite number of states &amp;mdash; alive or dead, \(\{1, 2, 3\}\), etc.
-A cellular automaton&amp;rsquo;s evolution is simulated in discrete timesteps. At each new timestep, cells are updated according to a local evolution rule.</description>
     </item>
     
     <item>
@@ -461,16 +509,6 @@ Org mode can be used as an agenda, task manager, writing and publishing tool, an
 Creating artificial life seems like a possible way to create AI, since most living systems on Earth seem to exhibit some form of robust intelligent behavior.
 Definition of artificial life from Carlos Gershenson in (Gershenson 2021)
  Beginning in the mid-1980s, ALife has studied living systems using a synthetic approach: building life to understand it better (Aguilar et al.</description>
-    </item>
-    
-    <item>
-      <title>Reductionism</title>
-      <link>https://hugocisneros.com/notes/reductionism/</link>
-      <pubDate>Sun, 16 May 2021 18:27:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/reductionism/</guid>
-      <description>tags Philosophy, Physics  Reductionism is a philosophy according to which the laws of physics are relatively simple and could be expressed concisely. If we were to understand and model all those laws we could explain any given phenomenon by breaking it down into its smaller parts until we just need to apply these simple laws.
-With the current state of physics, it seems we are close to understanding many of these fundamental laws (although major shortcomings remain in the theory).</description>
     </item>
     
     <item>
@@ -1282,16 +1320,6 @@ Comments Bibliography Horibe, Kazuya, Kathryn Walker, and Sebastian Risi. Februa
       <guid>https://hugocisneros.com/notes/jensenreservoircomputingartificial2020/</guid>
       <description>source (Jensen and Tufte 2020) tags Reservoir computing, Complex Systems  Summary This talk is about artificial spin ice. This model is based on a grid of coupled magnets that can be controlled with a magnetic field. The geometry of that grid can very greatly the kind of behavior one may observe in such systems.
 The authors want to use the spin ice model for reservoir computing. They measure useful quantities such as kernel quality \(K\) (ability to separate inputs) and generalization capabilities \(G\) (how similar inputs yield similar results).</description>
-    </item>
-    
-    <item>
-      <title>Notes on: Reservoir Computing meets Recurrent Kernels and Structured Transforms by Dong, J., Ohana, R., Rafayelyan, M., &amp; Krzakala, F. (2020)</title>
-      <link>https://hugocisneros.com/notes/dongreservoircomputingmeets2020/</link>
-      <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/dongreservoircomputingmeets2020/</guid>
-      <description>source (Dong et al. 2020) tags Reservoir computing, Kernel Methods  Summary This paper presents a connection between large size reservoir computing and kernel methods.
-The authors formulate a reservoir computing model as a form of recurrent kernel iteration. If the reservoir update is written \[ x^{(t+1)} = \dfrac{1}{\sqrt{N}} f \left(W_r x^{(t)} + W_i i^{(t)} \right) \] with \(x^{(t)}\) the state of the reservoir at time \(t\) and \(i^{(t)}\) sequential input at time \(t\), \(W_r \in \mathbb{R}^{N\times N}\) and \(W_i \in \mathbb{R}^{N\times d}\), we may re-frame it as a random feature embedding of the vector \(\left[ x^{(t)} , i^{(t)} \right]\).</description>
     </item>
     
     <item>
@@ -2623,16 +2651,6 @@ Tips Delete buffers in helm view In helm buffer list view, individual buffers ca
     </item>
     
     <item>
-      <title>Epsilon machines</title>
-      <link>https://hugocisneros.com/notes/epsilon_machines/</link>
-      <pubDate>Tue, 14 Jul 2020 08:28:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/epsilon_machines/</guid>
-      <description>(Crutchfield and Young, n.d.)
-Bibliography Crutchfield, James P., and Karl Young. n.d. &#34;Inferring Statistical Complexity&#34; 63 (2):105–8. . </description>
-    </item>
-    
-    <item>
       <title>Gaussian Processes</title>
       <link>https://hugocisneros.com/notes/gaussian_processes/</link>
       <pubDate>Tue, 14 Jul 2020 08:28:00 +0200</pubDate>
@@ -3257,15 +3275,6 @@ With GNU Make 4.0 or later, it is possible to set the prefix to some other fixed
       <description>tags Cellular automata, Finite state machines  From (Hanson and Crutchfield 1997):
  Finite state machines are appropriate for investigating pattern dynamics of CAs for a number of reasons, among which we may note the following:
  FAs encompass the full range of behavior types from periodic to complex to random; Characterization of patterns using FAs makes possible a definition of pattern complexity which is both natural and computable in practice; Ensemble evolution in the space of regular languages is closed under the CA rule; The CA update rule is itself an FST; Automated inference techniques exist for reconstructing FAs from experimental data   Bibliography Hanson, James E.</description>
-    </item>
-    
-    <item>
-      <title>Cellular neural networks</title>
-      <link>https://hugocisneros.com/notes/cellular_neural_networks/</link>
-      <pubDate>Wed, 01 Jul 2020 10:36:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/cellular_neural_networks/</guid>
-      <description>tags Cellular automata, Neural networks resources Scholarpedia, (Chua and Yang 1988a, 1988b)  Bibliography Chua, L.O., and L. Yang. 1988. &#34;Cellular Neural Networks: Applications&#34;. IEEE Transactions on Circuits and Systems 35 (10):1273–90. . ———. October 1988. &amp;ldquo;Cellular Neural Networks: Theory&amp;rdquo;. IEEE Transactions on Circuits and Systems 35 (10):1257–72. https://doi.org/10.1109/31.7600.</description>
     </item>
     
     <item>
