@@ -62,7 +62,7 @@
               </dd>
               <dt>source</dt>
               <dd>
-                (<a href="#orgc0e9ca9">Katharopoulos et al. 2020</a>)
+                (<a href="#orgd12c176">Katharopoulos et al. 2020</a>)
               </dd>
             </dl>
             <h2 id="summary">Summary</h2>
@@ -84,24 +84,21 @@
             <p>By replacing \(N\) by \(i\) in the expression above, one readily obtains a formulation of the Transformer function which only depends on previous tokens. This is used to train <a href="/notes/language_modeling/">language models</a> in particular, because the prediction of a token can only depend on the previous tokens.</p>
             <h3 id="transformers-are-rnns">Transformers are RNNs</h3>
             <p>By rewriting the main kernel formulation of a Transformer above, one sees how it can actually be seen as a RNN. Timesteps of the recurrence are denoted as subscripts.</p>
-            <p>\begin{equation} \begin{aligned} & s_0 = 0, z_0 = 0 \\\<br>
-            & s_i = s_{i-1} + \phi(x_i W_K) (x_i W_V)^T \\\<br>
-            & z_i = z_{i-1} + \phi(x_i W_K) \\\<br>
-            & y_i = f_l \left( \dfrac{\phi(x_i W_Q)^T s_i}{\phi(x_i W_Q)^T z_i} + x_i \right) \end{aligned} \label{eq:rnn} \end{equation}</p>
+            <p>\[ \begin{aligned} & s_0 = 0, z_0 = 0 \newline & s_i = s_{i-1} + \phi(x_i W_K) (x_i W_V)^T \newline & z_i = z_{i-1} + \phi(x_i W_K) \newline & y_i = f_l \left( \dfrac{\phi(x_i W_Q)^T s_i}{\phi(x_i W_Q)^T z_i} + x_i \right) \end{aligned} \]</p>
             <p>The resulting RNN has two hidden states, namely the attention memory \(s\) and the normalizer memory \(z\).</p>
             <h2 id="comments">Comments</h2>
             <p>The parallel between RNNs and Transformer models is clearly made in this paper. I believe this is significant because it give insights into why Transformers might be better at language modeling than RNN-based models.</p>
-            <p>It would seem from this new formulation that they aren’t better than RNNs but the choice of update function (in eq. \eqref{eq:rnn}) they are equivalent to is superior.</p>
+            <p>It would seem from this new formulation that they aren’t better than RNNs but the choice of update function (in the equation above) they are equivalent to is superior.</p>
             <p>Another possibility is that RNNs and Transformers have always had the same potential. The hype might have fuelled more effort into making Transformers models work better and have thus widened the performance gap between the two otherwise equivalent models. Recent research into RNN models also seems to have favored a few dominant models (standard RNN, LSTM and GRU) and might have slowed the discovery of other, more effective cells.</p>
             <p>Experiments in the paper only demonstrate the performance of their new model on small tasks and I would like to see how this holds up for language modeling.</p>
             <h2 id="bibliography">Bibliography</h2>
             <ol class="biblio-list">
-              <a id="orgc0e9ca9"></a>
+              <a id="orgd12c176"></a>
               <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle"><span itemprop="author"><span itemprop="author">Katharopoulos, Angelos</span>, <span itemprop="author">Apoorv Vyas</span>, <span itemprop="author">Nikolaos Pappas</span>, and <span itemprop="author">François Fleuret</span></span>. <span datetime="2020" itemprop="datePublished">June 2020</span>. "<span itemprop="name">Transformers Are RNNs: Fast Autoregressive Transformers with Linear Attention</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">arXiv:2006.16236 [Cs, Stat]</i></span>, June.</li>
             </ol>
           </div>
           <div class="note-footer">
-            Last changed <a class="u-url" href="https://hugocisneros.com/notes/katharopoulostransformersarernns2020/"><time itemprop="datePublished" class="dt-published" datetime="2021-03-25T09:58:00+0100">25/03/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+            Last changed <a class="u-url" href="https://hugocisneros.com/notes/katharopoulostransformersarernns2020/"><time itemprop="datePublished" class="dt-published" datetime="2021-09-02T12:07:00+0200">02/09/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
           </div>
         </div>
       </article><br>
@@ -129,6 +126,7 @@
     renderMathInElement(document.body, {
         delimiters: [
             {left: "\\[", right: "\\]", display: true},
+            {left: "$$", right: "$$", display: true},
             {left: "\\begin{equation}", right: "\\end{equation}", display: true},
             {left: "$", right: "$", display: false},
             {left: "\\(", right: "\\)", display: false},

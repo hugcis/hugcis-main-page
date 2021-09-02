@@ -71,8 +71,7 @@
             <p>This is based on the standard first-order approximation of the function \(g\). It can be very sensitive to the learning rate and suffer from pathological curvature.</p>
             <h3 id="momentum">Momentum</h3>
             <p>Momentum has been introduced in the gradient descent algorithm to dampen oscillations in the pathological cases and accelerating descent. Trajectories are less sensitive to changes in the loss landscape.</p>
-            <p>\begin{align} V_{t + 1} = \beta V_t + g'(\theta_{t})\\\<br>
-            \theta_{t + 1} = \theta_t - \gamma V_{t + 1} \end{align}</p>
+            <p>\[ \begin{align} V_{t + 1} = \beta V_t + g'(\theta_{t})\newline \theta_{t + 1} = \theta_t - \gamma V_{t + 1} \end{align}\]</p>
             <h2 id="line-search">Line search</h2>
             <p>Another common way to apply the gradient descent algorithm with non fixed learning rate is to use line search at each step. This corresponds to searching for the best \(\gamma\) to use in \(\theta_{} + \gamma \Delta\theta\) (in gradient descent, \(\Delta\theta = - g'(\theta)\)).</p>
             <h3 id="exact-line-search">Exact line search</h3>
@@ -114,7 +113,7 @@
             </div>
           </div>
           <div class="note-footer">
-            Last changed <a class="u-url" href="https://hugocisneros.com/notes/gradient_descent/"><time itemprop="datePublished" class="dt-published" datetime="2020-11-24T12:10:00+0100">24/11/2020</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+            Last changed <a class="u-url" href="https://hugocisneros.com/notes/gradient_descent/"><time itemprop="datePublished" class="dt-published" datetime="2021-09-02T12:48:00+0200">02/09/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
           </div>
         </div>
       </article><br>
@@ -142,6 +141,7 @@
     renderMathInElement(document.body, {
         delimiters: [
             {left: "\\[", right: "\\]", display: true},
+            {left: "$$", right: "$$", display: true},
             {left: "\\begin{equation}", right: "\\end{equation}", display: true},
             {left: "$", right: "$", display: false},
             {left: "\\(", right: "\\)", display: false},

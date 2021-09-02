@@ -62,30 +62,29 @@
               </dd>
               <dt>source</dt>
               <dd>
-                (<a href="#org7f028a5">Xiong et al. 2021</a>)
+                (<a href="#orgbb45c27">Xiong et al. 2021</a>)
               </dd>
             </dl>
             <h2 id="summary">Summary</h2>
             <p>This paper describes a way of applying the <a href="/notes/nystrom_method/">Nyström method</a> for approximating matrix multiplication to transformers. More precisely, the approximation is used in the <a href="/notes/attention/">self-attention</a> mechanism’s softmax calculation.</p>
             <p>This approximation adresses one of the biggest downside of attention: its computational complexity. The authors claim that their method reduces it from \(O(n^2)\) to \(O(n)\).</p>
             <p>The goal of the method is to efficiently approximate the matrix</p>
-            <p>\begin{align*} S = \text{softmax}\left(\dfrac{QK^T}{\sqrt{d_q}}\right) \end{align*}</p>
+            <p>\[\begin{align*} S = \text{softmax}\left(\dfrac{QK^T}{\sqrt{d_q}}\right) \end{align*}\]</p>
             <h3 id="why-the-standard-nyström-method-won-t-work">Why the standard Nyström method won’t work</h3>
             <p>To apply matrix approximation to this problem, one would start by writing \(S\) as</p>
-            <p>\[ S = \begin{bmatrix} A_S & B_S \\\<br>
-            F_S & C_S \end{bmatrix} \]</p>
+            <p>\[ S = \begin{bmatrix} A_S & B_S \newline F_S & C_S \end{bmatrix}\]</p>
             <p>The full matrix \(S\) can be approximated using only \(m\) columns and \(m\) rows</p>
-            <p>\[ \hat{S} = \begin{bmatrix} A_S \ F_S \end{bmatrix} A^+ \begin{bmatrix} A_S & B_S \end{bmatrix} \]</p>
+            <p>\[ \hat{S} = \begin{bmatrix} A_S \newline F_S \end{bmatrix} A^+ \begin{bmatrix} A_S & B_S \end{bmatrix} \]</p>
             <h3 id="linearized-self-attention-via-the-nyström-method">Linearized self-attention via the Nyström method</h3>
             <h2 id="comments">Comments</h2>
             <h2 id="bibliography">Bibliography</h2>
             <ol class="biblio-list">
-              <a id="org7f028a5"></a>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle"><span itemprop="author"><span itemprop="author">Xiong, Yunyang</span>, <span itemprop="author">Zhanpeng Zeng</span>, <span itemprop="author">Rudrasis Chakraborty</span>, <span itemprop="author">Mingxing Tan</span>, <span itemprop="author">Glenn Fung</span>, <span itemprop="author">Yin Li</span>, and <span itemprop="author">Vikas Singh</span></span>. <span datetime="2021" itemprop="datePublished">February 2021</span>. "<span itemprop="name">Nystrtextbackslash “Omformer: A Nystrtextbackslash “Om-Based Algorithm for Approximating Self-Attention</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">arXiv:2102.03902 [Cs]</i></span>, February.</li>
+              <a id="orgbb45c27"></a>
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle"><span itemprop="author"><span itemprop="author">Xiong, Yunyang</span>, <span itemprop="author">Zhanpeng Zeng</span>, <span itemprop="author">Rudrasis Chakraborty</span>, <span itemprop="author">Mingxing Tan</span>, <span itemprop="author">Glenn Fung</span>, <span itemprop="author">Yin Li</span>, and <span itemprop="author">Vikas Singh</span></span>. <span datetime="2021" itemprop="datePublished">February 2021</span>. "<span itemprop="name">Nystr\Textbackslash “Omformer: A Nystr\Textbackslash “Om-Based Algorithm for Approximating Self-Attention</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">arXiv:2102.03902 [Cs]</i></span>, February.</li>
             </ol>
           </div>
           <div class="note-footer">
-            Last changed <a class="u-url" href="https://hugocisneros.com/notes/xiongnystromformernystr2021/"><time itemprop="datePublished" class="dt-published" datetime="2021-03-25T09:57:00+0100">25/03/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+            Last changed <a class="u-url" href="https://hugocisneros.com/notes/xiongnystromformernystr2021/"><time itemprop="datePublished" class="dt-published" datetime="2021-09-02T12:52:00+0200">02/09/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
           </div>
         </div>
       </article><br>
@@ -113,6 +112,7 @@
     renderMathInElement(document.body, {
         delimiters: [
             {left: "\\[", right: "\\]", display: true},
+            {left: "$$", right: "$$", display: true},
             {left: "\\begin{equation}", right: "\\end{equation}", display: true},
             {left: "$", right: "$", display: false},
             {left: "\\(", right: "\\)", display: false},

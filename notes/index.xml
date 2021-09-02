@@ -6,7 +6,85 @@
     <description>Recent content in Notes on Hugo Cisneros - Personal page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Sep 2021 20:17:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 02 Sep 2021 12:52:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Notes on: Nyströmformer: A Nyström-Based Algorithm for Approximating Self-Attention by Xiong, Y., Zeng, Z., Chakraborty, R., Tan, M., Fung, G., Li, Y., &amp; Singh, V. (2021)</title>
+      <link>https://hugocisneros.com/notes/xiongnystromformernystr2021/</link>
+      <pubDate>Thu, 02 Sep 2021 12:52:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/xiongnystromformernystr2021/</guid>
+      <description>tags Transformers source (Xiong et al. 2021)  Summary This paper describes a way of applying the Nyström method for approximating matrix multiplication to transformers. More precisely, the approximation is used in the self-attention mechanism&amp;rsquo;s softmax calculation.
+This approximation adresses one of the biggest downside of attention: its computational complexity. The authors claim that their method reduces it from \(O(n^2)\) to \(O(n)\).
+The goal of the method is to efficiently approximate the matrix</description>
+    </item>
+    
+    <item>
+      <title>Graph neural networks</title>
+      <link>https://hugocisneros.com/notes/graph_neural_networks/</link>
+      <pubDate>Thu, 02 Sep 2021 12:49:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/graph_neural_networks/</guid>
+      <description>tags Neural networks, Graphs  Basic properties To operate on graphs, a neural network must be invariant to isomorphism of these graphs. This translates to permutation invariance for the nodes of a graph.
+\[ f(\mathbf{PX}) = f(\mathbf{X}) \]
+Where \(\mathbf{P}\) is a permutation matrix. For simple sets, this amounts to performing node-wise transformations and use a permutation invariant aggregator (sum/max/avg/&amp;hellip;). This was done in (Zaheer et al. 2018).
+\[ f(\mathbf{X}) = \phi\left( \bigoplus_i \psi(\mathbf{x}_i) \right) \]</description>
+    </item>
+    
+    <item>
+      <title>Gradient descent</title>
+      <link>https://hugocisneros.com/notes/gradient_descent/</link>
+      <pubDate>Thu, 02 Sep 2021 12:48:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/gradient_descent/</guid>
+      <description>tags Optimization, Algorithm resources Slides by Christian S. Perone  Fixed learning rate The simplest way to apply the gradient descent algorithm on a function \(g\) convex and $L-$smooth on \(\mathbb{R}^d\) is to use the parameter update:
+\[ \theta_t = \theta_{t-1} - \gamma g&#39;(\theta_{t-1}) \]
+This is based on the standard first-order approximation of the function \(g\). It can be very sensitive to the learning rate and suffer from pathological curvature.</description>
+    </item>
+    
+    <item>
+      <title>Notes on: The information theory of individuality by Krakauer, D., Bertschinger, N., Olbrich, E., Flack, J. C., &amp; Ay, N. (2020)</title>
+      <link>https://hugocisneros.com/notes/krakauerinformationtheoryindividuality2020/</link>
+      <pubDate>Thu, 02 Sep 2021 12:46:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/krakauerinformationtheoryindividuality2020/</guid>
+      <description>tags Information theory, Life source (Krakauer et al. 2020)  Summary This paper introduces an information theoretic definition of individuality for complex systems.
+In a few words, the authors idea of individuality is based on the amount of information transmitted through time.
+ If the information transmitted forward in time is close to maximal, we take that as evidence for individuality.
+ Formally, a system \(\mathcal{S}\) is considered in interaction with an environment \(\mathcal{E}\).</description>
+    </item>
+    
+    <item>
+      <title>Hopfield Networks</title>
+      <link>https://hugocisneros.com/notes/hopfield_networks/</link>
+      <pubDate>Thu, 02 Sep 2021 12:45:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/hopfield_networks/</guid>
+      <description>tags Neural networks  Hopfield networks are a kind of recurrent neural network with binary threshold nodes.
+Definition Nodes have indexes \(i \in \{1, \cdots, n\}\) and are in state \(s_i \in \{-1, 1\}\). Nodes have connections between them, characterized by a weight \(w_{ij}\). Each node also has an associated threshold \(\theta_i\) such that
+\[\begin{equation*} s_i \leftarrow \begin{cases} +1 &amp;amp; \text{if}\ \sum_j w_{ij} s_j \geq \theta_i, \newline -1 &amp;amp; \text{otherwise}.</description>
+    </item>
+    
+    <item>
+      <title>Notes on: Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention by Katharopoulos, A., Vyas, A., Pappas, N., &amp; Fleuret, F. (2020)</title>
+      <link>https://hugocisneros.com/notes/katharopoulostransformersarernns2020/</link>
+      <pubDate>Thu, 02 Sep 2021 12:07:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/katharopoulostransformersarernns2020/</guid>
+      <description>tags Transformers, RNN source (Katharopoulos et al. 2020)  Summary Transformers have traditionally been described as different models from RNNs. This is because instead of processing the sequence one token at a time, Transformers use attention to process all elements simultaneously.
+The paper introduces an interesting new formulation, replacing the softmax attention with a feature map-based dot product.
+This new formulation yields better time and memory complexity as well as a model that is casual and autoregressive (similar to RNNs).</description>
+    </item>
+    
+    <item>
+      <title>Reductionism</title>
+      <link>https://hugocisneros.com/notes/reductionism/</link>
+      <pubDate>Thu, 02 Sep 2021 11:04:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/reductionism/</guid>
+      <description>tags Philosophy, Physics  Reductionism is a philosophy according to which the laws of physics are relatively simple and could be expressed concisely. If we were to understand and model all those laws we could explain any given phenomenon by breaking it down into its smaller parts until we just need to apply these simple laws.
+With the current state of physics, it seems we are close to understanding many of these fundamental laws (although major shortcomings remain in the theory).</description>
+    </item>
+    
     <item>
       <title>Cellular automata</title>
       <link>https://hugocisneros.com/notes/cellular_automata/</link>
@@ -25,16 +103,6 @@ A cellular automaton&amp;rsquo;s evolution is simulated in discrete timesteps. A
       <guid>https://hugocisneros.com/notes/mordvintsevgrowingneuralcellular2020/</guid>
       <description>tags Cellular automata source (Mordvintsev et al. 2020)  Summary This paper introduces interesting ideas for training cellular automata as CNNs to have self-repairing stable structures. The automata have 16 dimensional continuous states. The main modeling ideas are:
  Use hard-coded filters for the initial perception step. The filters are Sobel convolutions and those two are concatenated with the current state. Update rules are then 1D convolutions applied to the \(3 * 16 = 48\) dimensional state vector.</description>
-    </item>
-    
-    <item>
-      <title>Reductionism</title>
-      <link>https://hugocisneros.com/notes/reductionism/</link>
-      <pubDate>Wed, 01 Sep 2021 17:31:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/reductionism/</guid>
-      <description>tags Philosophy, Physics  Reductionism is a philosophy according to which the laws of physics are relatively simple and could be expressed concisely. If we were to understand and model all those laws we could explain any given phenomenon by breaking it down into its smaller parts until we just need to apply these simple laws.
-With the current state of physics, it seems we are close to understanding many of these fundamental laws (although major shortcomings remain in the theory).</description>
     </item>
     
     <item>
@@ -551,18 +619,6 @@ Comments Bibliography Ramsauer, Hubert, Bernhard Schäfl, Johannes Lehner, Phili
     </item>
     
     <item>
-      <title>Hopfield Networks</title>
-      <link>https://hugocisneros.com/notes/hopfield_networks/</link>
-      <pubDate>Tue, 04 May 2021 09:57:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/hopfield_networks/</guid>
-      <description>tags Neural networks  Hopfield networks are a kind of recurrent neural network with binary threshold nodes.
-Definition Nodes have indexes \(i \in \{1, \cdots, n\}\) and are in state \(s_i \in \{-1, 1\}\). Nodes have connections between them, characterized by a weight \(w_{ij}\). Each node also has an associated threshold \(\theta_i\) such that
-\begin{equation*} s_i \leftarrow \begin{cases} +1 &amp;amp; \text{if}\ \sum_j w_{ij} s_j \geq \theta_i, \\\
--1 &amp;amp; \text{otherwise}.</description>
-    </item>
-    
-    <item>
       <title>Lempel-Ziv-Welch algorithm</title>
       <link>https://hugocisneros.com/notes/lempel_ziv_welch_algorithm/</link>
       <pubDate>Tue, 04 May 2021 09:22:00 +0200</pubDate>
@@ -963,17 +1019,6 @@ The figure from the paper shown below illustrates this dataset&amp;rsquo;s const
     </item>
     
     <item>
-      <title>Notes on: Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention by Katharopoulos, A., Vyas, A., Pappas, N., &amp; Fleuret, F. (2020)</title>
-      <link>https://hugocisneros.com/notes/katharopoulostransformersarernns2020/</link>
-      <pubDate>Thu, 25 Mar 2021 09:58:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/katharopoulostransformersarernns2020/</guid>
-      <description>tags Transformers, RNN source (Katharopoulos et al. 2020)  Summary Transformers have traditionally been described as different models from RNNs. This is because instead of processing the sequence one token at a time, Transformers use attention to process all elements simultaneously.
-The paper introduces an interesting new formulation, replacing the softmax attention with a feature map-based dot product.
-This new formulation yields better time and memory complexity as well as a model that is casual and autoregressive (similar to RNNs).</description>
-    </item>
-    
-    <item>
       <title>PCA</title>
       <link>https://hugocisneros.com/notes/pca/</link>
       <pubDate>Thu, 25 Mar 2021 09:58:00 +0100</pubDate>
@@ -1264,17 +1309,6 @@ LTC Neurons These neurons are bio-inspired. For a given neuron in state x_i(t), 
     </item>
     
     <item>
-      <title>Notes on: Nyströmformer: A Nyström-Based Algorithm for Approximating Self-Attention by Xiong, Y., Zeng, Z., Chakraborty, R., Tan, M., Fung, G., Li, Y., &amp; Singh, V. (2021)</title>
-      <link>https://hugocisneros.com/notes/xiongnystromformernystr2021/</link>
-      <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/xiongnystromformernystr2021/</guid>
-      <description>tags Transformers source (Xiong et al. 2021)  Summary This paper describes a way of applying the Nyström method for approximating matrix multiplication to transformers. More precisely, the approximation is used in the self-attention mechanism&amp;rsquo;s softmax calculation.
-This approximation adresses one of the biggest downside of attention: its computational complexity. The authors claim that their method reduces it from \(O(n^2)\) to \(O(n)\).
-The goal of the method is to efficiently approximate the matrix</description>
-    </item>
-    
-    <item>
       <title>Notes on: On Adversarial Mixup Resynthesis by Beckham, C., Honari, S., Verma, V., Lamb, A., Ghadiri, F., Hjelm, R. D., Bengio, Y., … (2019)</title>
       <link>https://hugocisneros.com/notes/beckhamadversarialmixupresynthesis2019/</link>
       <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
@@ -1368,18 +1402,6 @@ They test two types of resilience:
       
       <guid>https://hugocisneros.com/notes/simonarchitecturecomplexity1962/</guid>
       <description>tags Complexity, Complex Systems source (Simon 1962)  Complex systems  In such systems, the whole is more than the sum of the parts, not in an ultimate, metaphysical sense, but in the important pragmatic sense that, given the properties of the parts and the laws of their interaction, it is not a trivial matter to infer the properties of the whole. In the face of complexity, an in-principle reductionist may be at the same time a pragmatic holist.</description>
-    </item>
-    
-    <item>
-      <title>Notes on: The information theory of individuality by Krakauer, D., Bertschinger, N., Olbrich, E., Flack, J. C., &amp; Ay, N. (2020)</title>
-      <link>https://hugocisneros.com/notes/krakauerinformationtheoryindividuality2020/</link>
-      <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/krakauerinformationtheoryindividuality2020/</guid>
-      <description>tags Information theory, Life source (Krakauer et al. 2020)  Summary This paper introduces an information theoretic definition of individuality for complex systems.
-In a few words, the authors idea of individuality is based on the amount of information transmitted through time.
- If the information transmitted forward in time is close to maximal, we take that as evidence for individuality.
- Formally, a system \(\mathcal{S}\) is considered in interaction with an environment \(\mathcal{E}\).</description>
     </item>
     
     <item>
@@ -1612,18 +1634,6 @@ Usage Word vectors can encode interesting information, such as semantic similari
       
       <guid>https://hugocisneros.com/notes/3_sat/</guid>
       <description> tags Logic  </description>
-    </item>
-    
-    <item>
-      <title>Graph neural networks</title>
-      <link>https://hugocisneros.com/notes/graph_neural_networks/</link>
-      <pubDate>Wed, 24 Feb 2021 11:34:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/graph_neural_networks/</guid>
-      <description>tags Neural networks, Graphs  Basic properties To operate on graphs, a neural network must be invariant to isomorphism of these graphs. This translates to permutation invariance for the nodes of a graph.
-\[ f(\mathbf{PX}) = f(\mathbf{X}) \]
-Where \(\mathbf{P}\) is a permutation matrix. For simple sets, this amounts to performing node-wise transformations and use a permutation invariant aggregator (sum/max/avg/&amp;hellip;). This was done in (Zaheer et al. 2018).
-\[ f(\mathbf{X}) = \phi\left( \bigoplus_i \psi(\mathbf{x}_i) \right) \]</description>
     </item>
     
     <item>
@@ -1861,17 +1871,6 @@ Bibliography Wuensche, Andrew. 1999. &#34;Classifying Cellular Automata Automati
       
       <guid>https://hugocisneros.com/notes/rainbow_tables/</guid>
       <description> tags Cryptography resources How Rainbow tables work  </description>
-    </item>
-    
-    <item>
-      <title>Gradient descent</title>
-      <link>https://hugocisneros.com/notes/gradient_descent/</link>
-      <pubDate>Tue, 24 Nov 2020 12:10:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/gradient_descent/</guid>
-      <description>tags Optimization, Algorithm resources Slides by Christian S. Perone  Fixed learning rate The simplest way to apply the gradient descent algorithm on a function \(g\) convex and $L-$smooth on \(\mathbb{R}^d\) is to use the parameter update:
-\[ \theta_t = \theta_{t-1} - \gamma g&#39;(\theta_{t-1}) \]
-This is based on the standard first-order approximation of the function \(g\). It can be very sensitive to the learning rate and suffer from pathological curvature.</description>
     </item>
     
     <item>

@@ -62,7 +62,7 @@
               </dd>
               <dt>source</dt>
               <dd>
-                (<a href="#org9784037">Krakauer et al. 2020</a>)
+                (<a href="#org4cc8045">Krakauer et al. 2020</a>)
               </dd>
             </dl>
             <h2 id="summary">Summary</h2>
@@ -73,8 +73,7 @@
             </blockquote>
             <p>Formally, a system \(\mathcal{S}\) is considered in interaction with an environment \(\mathcal{E}\). Two channels \(\phi: \mathcal{E} \times \mathcal{S}\rightarrow\mathcal{S}\) and \(\psi : \mathcal{S} \times \mathcal{E} \rightarrow \mathcal{E}\) corresponds to the transition probabilities for \(\mathcal{S}\) and \(\mathcal{E}\) respectively (\(\phi(e, s; s')\) is the probability to be in state \(s'\) at the next time step for current states \(s\) and \(e\) for \(\mathcal{S}\) and \(\mathcal{E}\)).</p>
             <p>The predictability of the next state of the system is characterized in terms of <a href="/notes/entropy/">entropy</a> and mutual information by</p>
-            <p>\begin{align*} I(S_n, E_n ; S_{n+1} ) &amp;= I(S_{n+1} ; S_n) + I(S_{n+1} ; E_n | S_n)\\\<br>
-            & = I(S_{n+1} ; E_n) + I(S_{n+1} ; S_n|E_n) \end{align*}</p>
+            <p>\[ \begin{align*} I(S_n, E_n ; S_{n+1} ) &amp;= I(S_{n+1} ; S_n) + I(S_{n+1} ; E_n | S_n)\newline & = I(S_{n+1} ; E_n) + I(S_{n+1} ; S_n|E_n) \end{align*} \]</p>
             <p>Depending on which quantity dominates, different types of individuality can be defined</p>
             <ul>
               <li>Colonial Individuality: \(A = I(S_{n+1} ; S_n|E_n)\)</li>
@@ -104,12 +103,14 @@
             <p>However, the main drawback seems to be in accurately computing mutual information for each of the terms. Also, the definition of the system \(\mathcal{S}\) and environment \(\mathcal{E}\) can be problematic when dealing with systems in which the distinction isn’t clear (such as <a href="/notes/cellular_automata/">Cellular automata</a>).</p>
             <h2 id="bibliography">Bibliography</h2>
             <ol class="biblio-list">
-              <a id="org9784037"></a>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle"><span itemprop="author"><span itemprop="author">Krakauer, David</span>, <span itemprop="author">Nils Bertschinger</span>, <span itemprop="author">Eckehard Olbrich</span>, <span itemprop="author">Jessica C. Flack</span>, and <span itemprop="author">Nihat Ay</span></span>. <span datetime="2020" itemprop="datePublished">June 2020</span>. "<span itemprop="name">The Information Theory of Individuality</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Theory in Biosciences</i></span> 139 (2):209–23.</li>
+              <a id="org4cc8045"></a>
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle">
+                <span itemprop="author"><span itemprop="author">Krakauer, David</span>, <span itemprop="author">Nils Bertschinger</span>, <span itemprop="author">Eckehard Olbrich</span>, <span itemprop="author">Jessica C. Flack</span>, and <span itemprop="author">Nihat Ay</span></span>. <span datetime="2020" itemprop="datePublished">June 2020</span>. "<span itemprop="name">The Information Theory of Individuality</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Theory in Biosciences</i></span> 139 (2):209–23. <a itemprop="sameAs" href="%3Chttps://doi.org/10.1007/s12064-020-00313-7%3E">DOI</a>.
+              </li>
             </ol>
           </div>
           <div class="note-footer">
-            Last changed <a class="u-url" href="https://hugocisneros.com/notes/krakauerinformationtheoryindividuality2020/"><time itemprop="datePublished" class="dt-published" datetime="2021-03-25T09:57:00+0100">25/03/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+            Last changed <a class="u-url" href="https://hugocisneros.com/notes/krakauerinformationtheoryindividuality2020/"><time itemprop="datePublished" class="dt-published" datetime="2021-09-02T12:46:00+0200">02/09/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
           </div>
         </div>
       </article><br>
@@ -137,6 +138,7 @@
     renderMathInElement(document.body, {
         delimiters: [
             {left: "\\[", right: "\\]", display: true},
+            {left: "$$", right: "$$", display: true},
             {left: "\\begin{equation}", right: "\\end{equation}", display: true},
             {left: "$", right: "$", display: false},
             {left: "\\(", right: "\\)", display: false},
