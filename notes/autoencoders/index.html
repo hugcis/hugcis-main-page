@@ -62,19 +62,21 @@
               </dd>
             </dl>
             <h2 id="autoencoders-and-pca">Autoencoders and PCA</h2>
-            <p>The relation between <a href="https://en.wikipedia.org/wiki/Autoencoder">Autoencoders</a> and PCA is strong. In particular, a very small autoencoder with only linear activations seems intuitively very close to PCA decomposition. (<a href="#org72c53ad">Bourlard and Kamp 1988</a>) gives an interesting analysis of the uselessness of the activation functions in the encoding layers of an autoencoder when there is no activations in the output layers. In that case, autoencoding is closely related to a sinigular value decomposition of the input data. Quoting Elad Plaut:</p>
+            <p>The relation between <a href="https://en.wikipedia.org/wiki/Autoencoder">Autoencoders</a> and PCA is strong. In particular, a very small autoencoder with only linear activations seems intuitively very close to PCA decomposition. (<a href="#org2ceb93d">Bourlard and Kamp 1988</a>) gives an interesting analysis of the uselessness of the activation functions in the encoding layers of an autoencoder when there is no activations in the output layers. In that case, autoencoding is closely related to a sinigular value decomposition of the input data. Quoting Elad Plaut:</p>
             <blockquote>
               <p>It is well known that an autoencoder with a single fully-connected hidden layer, a linear activation function and a squared error cost function trains weights that span the same subspace as the one spanned by the principal component loading vectors, but that they are not identical to the loading vectors.</p>
             </blockquote>
-            <p>The above quote is from (<a href="#org8e44ba1">Plaut 2018</a>) where it is demonstrated that autoencoder weights contain all the information of the loading vectors of the SVD.</p>
+            <p>The above quote is from (<a href="#orga961a6a">Plaut 2018</a>) where it is demonstrated that autoencoder weights contain all the information of the loading vectors of the SVD.</p>
             <h2 id="bibliography">Bibliography</h2>
             <ol class="biblio-list">
-              <a id="org72c53ad"></a>
+              <a id="org2ceb93d"></a>
               <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle">
-                <span itemprop="author"><span itemprop="author">Bourlard, H.</span>, and <span itemprop="author">Y. Kamp</span></span>. <span datetime="1988" itemprop="datePublished">September 1988</span>. "<span itemprop="name">Auto-Association by Multilayer Perceptrons and Singular Value Decomposition</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Biological Cybernetics</i></span> 59 (4-5):291–94.
-                <p><a id="org8e44ba1"></a></p>
+                <span itemprop="author"><span itemprop="author">Bourlard, H.</span>, and <span itemprop="author">Y. Kamp</span></span>. <span datetime="1988" itemprop="datePublished">September 1988</span>. "<span itemprop="name">Auto-Association by Multilayer Perceptrons and Singular Value Decomposition</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Biological Cybernetics</i></span> 59 (4-5):291–94. <a itemprop="sameAs" href="%3Chttps://doi.org/10.1007/BF00332918%3E">DOI</a>.
+                <p><a id="orga961a6a"></a></p>
               </li>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle"><span itemprop="author">Plaut, Elad</span>. <span datetime="2018" itemprop="datePublished">December 2018</span>. “<span itemprop="name">From Principal Subspaces to Principal Components with Linear Autoencoders</span>”. <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">arXiv:1804.10253 [Cs, Stat]</i></span>, December.</li>
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle">
+                <span itemprop="author">Plaut, Elad</span>. <span datetime="2018" itemprop="datePublished">December 28, 2018</span>. “<span itemprop="name">From Principal Subspaces to Principal Components with Linear Autoencoders</span>”. <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">arXiv:1804.10253 [Cs, Stat]</i></span>, December. <a href="http://arxiv.org/abs/1804.10253">http://arxiv.org/abs/1804.10253</a>.
+              </li>
             </ol>
           </div>
           <div class="bl-section">

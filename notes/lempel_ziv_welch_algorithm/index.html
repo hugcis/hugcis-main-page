@@ -62,11 +62,11 @@
               </dd>
               <dt>papers</dt>
               <dd>
-                (<a href="#org2b0f273">Lempel and Ziv 1976</a>; <a href="#orgb759fe1">Ziv and Lempel 1977</a>, <a href="#org77aa069">1978</a>; <a href="#org758615e">Welch 1984</a>; <a href="#org1c6a6be">Storer and Szymanski 1982</a>)
+                (<a href="#org63e7350">Lempel and Ziv 1976</a>; <a href="#orgef04d9e">Ziv and Lempel 1977</a>, <a href="#orgb1f612c">1978</a>; <a href="#org264d032">1984</a>; <a href="#org538ca31">Storer and Szymanski 1982</a>)
               </dd>
             </dl>
             <h2 id="context">Context</h2>
-            <p>The LZW algorithm was originally designed as a complexity (“randomness”) metric for finite sequences (<a href="#org2b0f273">Lempel and Ziv 1976</a>). It was then extended as a compression algorithm by the same authors to LZ77 (<a href="#orgb759fe1">Ziv and Lempel 1977</a>) and LZ78 (<a href="#org77aa069">Ziv and Lempel 1978</a>). Those last two are the basis of many well known and widely used compression utilities such as <code>GIF</code>, <code>compress</code> (LZW (<a href="#org758615e">Welch 1984</a>) ) or <code>DEFLATE</code>, <code>gzip</code> (LZSS (<a href="#org1c6a6be">Storer and Szymanski 1982</a>)), etc.</p>
+            <p>The LZW algorithm was originally designed as a complexity (“randomness”) metric for finite sequences (<a href="#org63e7350">Lempel and Ziv 1976</a>). It was then extended as a compression algorithm by the same authors to LZ77 (<a href="#orgef04d9e">Ziv and Lempel 1977</a>) and LZ78 (<a href="#orgb1f612c">Ziv and Lempel 1978</a>). Those last two are the basis of many well known and widely used compression utilities such as <code>GIF</code>, <code>compress</code> (LZW (<a href="#org264d032">1984</a>) ) or <code>DEFLATE</code>, <code>gzip</code> (LZSS (<a href="#org538ca31">Storer and Szymanski 1982</a>)), etc.</p>
             <h2 id="description">Description</h2>
             <p>The base idea of these algorithms is to build a dictionary of words in the input sequence. A given sequence is scanned and an empty dictionary is initialized. Each new word is the shortest next word not in the dictionary. It is registered by using a previous word and adding a single digit in the form \((j, s_{last})\). This encoding allows a unique decoding of the original sequence. When encoding <strong>or</strong> decoding the string the same dictionary of words is built. For sequences with string repetitions, the length of each new word increases fast and the numbers of needed pairs to encode increases very slowly.</p>
             <p>Example implementation of the LZ algorithm in Python:</p>
@@ -99,24 +99,26 @@
             </div>
             <h2 id="bibliography">Bibliography</h2>
             <ol class="biblio-list">
-              <a id="org2b0f273"></a>
+              <a id="org63e7350"></a>
               <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle">
-                <span itemprop="author"><span itemprop="author">Lempel, A.</span>, and <span itemprop="author">J. Ziv</span></span>. <span datetime="1976" itemprop="datePublished">January 1976</span>. "<span itemprop="name">On the Complexity of Finite Sequences</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">IEEE Transactions on Information Theory</i></span> 22 (1):75–81.
-                <p><a id="org1c6a6be"></a></p>
+                <span itemprop="author"><span itemprop="author">Lempel, A.</span>, and <span itemprop="author">J. Ziv</span></span>. <span datetime="1976" itemprop="datePublished">January 1976</span>. "<span itemprop="name">On the Complexity of Finite Sequences</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">IEEE Transactions on Information Theory</i></span> 22 (1):75–81. <a itemprop="sameAs" href="%3Chttps://doi.org/10.1109/TIT.1976.1055501%3E">DOI</a>.
+                <p><a id="org538ca31"></a></p>
               </li>
               <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle">
-                <span itemprop="author"><span itemprop="author">Storer, James A.</span>, and <span itemprop="author">Thomas G. Szymanski</span></span>. <span datetime="1982" itemprop="datePublished">October 1982</span>. “<span itemprop="name">Data Compression via Textual Substitution</span>”. <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Journal of the ACM (JACM)</i></span> 29 (4):928–51.
-                <p><a id="orgb759fe1"></a></p>
+                <span itemprop="author"><span itemprop="author">Storer, James A.</span>, and <span itemprop="author">Thomas G. Szymanski</span></span>. <span datetime="1982" itemprop="datePublished">October 1982</span>. “<span itemprop="name">Data Compression via Textual Substitution</span>”. <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Journal of the ACM (JACM)</i></span> 29 (4):928–51. <a itemprop="sameAs" href="%3Chttps://doi.org/10.1145/322344.322346%3E">DOI</a>.
+                <p><a id="orgef04d9e"></a></p>
               </li>
               <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle">
-                <span itemprop="author"><span itemprop="author">Ziv, J.</span>, and <span itemprop="author">A. Lempel</span></span>. <span datetime="1977" itemprop="datePublished">May 1977</span>. “<span itemprop="name">A Universal Algorithm for Sequential Data Compression</span>”. <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">IEEE Transactions on Information Theory</i></span> 23 (3):337–43.
-                <p><a id="org77aa069"></a></p>
+                <span itemprop="author"><span itemprop="author">Ziv, J.</span>, and <span itemprop="author">A. Lempel</span></span>. <span datetime="1977" itemprop="datePublished">May 1977</span>. “<span itemprop="name">A Universal Algorithm for Sequential Data Compression</span>”. <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">IEEE Transactions on Information Theory</i></span> 23 (3):337–43. <a itemprop="sameAs" href="%3Chttps://doi.org/10.1109/TIT.1977.1055714%3E">DOI</a>.
+                <p><a id="orgb1f612c"></a></p>
               </li>
               <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle">
-                <span itemprop="author">———</span>. <span datetime="1978" itemprop="datePublished">September 1978</span>. “<span itemprop="name">Compression of Individual Sequences via Variable-Rate Coding</span>”. <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">IEEE Transactions on Information Theory</i></span> 24 (5):530–36.
-                <p><a id="org758615e"></a></p>
+                <span itemprop="author">———</span>. <span datetime="1978" itemprop="datePublished">September 1978</span>. “<span itemprop="name">Compression of Individual Sequences via Variable-Rate Coding</span>”. <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">IEEE Transactions on Information Theory</i></span> 24 (5):530–36. <a itemprop="sameAs" href="%3Chttps://doi.org/10.1109/TIT.1978.1055934%3E">DOI</a>.
+                <p><a id="org264d032"></a></p>
               </li>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle"><span itemprop="author">Welch</span>. <span datetime="1984" itemprop="datePublished">June 1984</span>. “<span itemprop="name">A Technique for High-Performance Data Compression</span>”. <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Computer</i></span> 17 (6):8–19.</li>
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle">
+                <span datetime="1984" itemprop="datePublished">June 1984</span>. “<span itemprop="name">A Technique for High-Performance Data Compression</span>”. <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Computer</i></span> 17 (6):8–19. <a itemprop="sameAs" href="%3Chttps://doi.org/10.1109/MC.1984.1659158%3E">DOI</a>.
+              </li>
             </ol>
           </div>
           <div class="bl-section">
