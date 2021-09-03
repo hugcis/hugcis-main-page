@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1">
+  <title>Self-replication - Hugo Cisneros - Personal page</title>
+  <meta property="og:title" content="Self-replication - Hugo Cisneros - Personal page">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="/img/main.jpeg">
+  <meta property="og:url" content="https://hugocisneros.com/notes/self_replication/">
+  <meta property="og:description" content="Notes about Self-replication">
+  <meta name="Description" property="description" content="Notes about Self-replication">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@cisne_hug">
+  <meta name="twitter:creator" content="@cisne_hug">
+  <link rel="stylesheet" href="https://hugocisneros.com/css/main.min.css" media="all" type="text/css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
+  <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <nav class="nav">
+        <div class="nav-main">
+          <a href="https://hugocisneros.com/" class="nav-title">Hugo Cisneros - Personal page</a>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="/blog/">Blog</a>
+          </li>
+          <li>
+            <a href="/notes/">Notes</a>
+          </li>
+          <li>
+            <a href="/projects/">Projects</a>
+          </li>
+          <li>
+            <a href="/resume/">Resume</a>
+          </li>
+          <li>
+            <a href="/contact/">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="content" role="main">
+      <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="single-note note-container">
+          <h1 class="article-title p-name" itemprop="name">Self-replication</h1>
+          <div class="article-content e-content p-name" itemprop="articleBody">
+            <dl>
+              <dt>tags</dt>
+              <dd>
+                <a href="/notes/complexity/">Complexity</a>, <a href="/notes/self_organization/">Self-organization</a>
+              </dd>
+            </dl>
+            <p>An early example of artificial self-replication is <a href="/notes/von_neumann_s_self_reproducing_ca/">Von Neumann’s self-reproducing CA</a> which is a <a href="/notes/cellular_automata/">cellular automaton</a>.</p>
+            <p>Self-replication in <a href="/notes/neural_networks/">neural networks</a> can be done with neural network quines (<a href="#org23f70c1">Chang and Lipson 2018</a>).</p>
+            <h2 id="bibliography">Bibliography</h2>
+            <ol class="biblio-list">
+              <a id="org23f70c1"></a>
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle"><span itemprop="author"><span itemprop="author">Chang, Oscar</span>, and <span itemprop="author">Hod Lipson</span></span>. <span datetime="2018" itemprop="datePublished">May 24, 2018</span>. "<span itemprop="name">Neural Network Quine</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">arXiv:1803.05859 [Cs]</i></span>, May. http://arxiv.org/abs/1803.05859.</li>
+            </ol>
+          </div>
+          <div class="note-footer">
+            Last changed <a class="u-url" href="https://hugocisneros.com/notes/self_replication/"><time itemprop="datePublished" class="dt-published" datetime="2020-11-12T11:49:00+0100">12/11/2020</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+          </div>
+        </div>
+      </article><br>
+      <a href="/notes#self_replication"><b>← Back to Notes</b></a>
+      <hr>
+    </main>
+    <footer class="footer">
+      <ul class="footer-links">
+        <li>
+          <a class="rss-link" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon" src="/img/RSS.svg" alt="RSS feed icon"></a>
+        </li>
+        <li>
+          <a href="https://github.com/hugcis/natrium-custom">Code</a>
+        </li>
+        <li>© Hugo Cisneros 2021</li>
+      </ul>
+    </footer>
+  </div>
+  <link rel="stylesheet" href="/js/katex/katex.min.css">
+  <script src="/js/katex/katex.min.js"></script> 
+  <script src="/js/katex/contrib/auto-render.min.js"></script> 
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        delimiters: [
+            {left: "\\[", right: "\\]", display: true},
+            {left: "$$", right: "$$", display: true},
+            {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+            {left: "$", right: "$", display: false},
+            {left: "\\(", right: "\\)", display: false},
+        ]
+  })
+    });
+  </script>
+</body>
+</html>

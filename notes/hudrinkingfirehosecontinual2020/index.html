@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1">
+  <title>Notes on: Drinking from a Firehose: Continual Learning with Web-scale Natural Language by Hu, H., Sener, O., Sha, F., & Koltun, V. (2020) - Hugo Cisneros - Personal page</title>
+  <meta property="og:title" content="Notes on: Drinking from a Firehose: Continual Learning with Web-scale Natural Language by Hu, H., Sener, O., Sha, F., &amp; Koltun, V. (2020) - Hugo Cisneros - Personal page">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="/img/main.jpeg">
+  <meta property="og:url" content="https://hugocisneros.com/notes/hudrinkingfirehosecontinual2020/">
+  <meta property="og:description" content="Notes about Drinking from a Firehose: Continual Learning with Web-scale Natural Language by Hu, H., Sener, O., Sha, F., &amp; Koltun, V. (2020)">
+  <meta name="Description" property="description" content="Notes about Drinking from a Firehose: Continual Learning with Web-scale Natural Language by Hu, H., Sener, O., Sha, F., &amp; Koltun, V. (2020)">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@cisne_hug">
+  <meta name="twitter:creator" content="@cisne_hug">
+  <link rel="stylesheet" href="https://hugocisneros.com/css/main.min.css" media="all" type="text/css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
+  <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <nav class="nav">
+        <div class="nav-main">
+          <a href="https://hugocisneros.com/" class="nav-title">Hugo Cisneros - Personal page</a>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="/blog/">Blog</a>
+          </li>
+          <li>
+            <a href="/notes/">Notes</a>
+          </li>
+          <li>
+            <a href="/projects/">Projects</a>
+          </li>
+          <li>
+            <a href="/resume/">Resume</a>
+          </li>
+          <li>
+            <a href="/contact/">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="content" role="main">
+      <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="single-note note-container">
+          <h1 class="article-title p-name" itemprop="name">Drinking from a Firehose: Continual Learning with Web-scale Natural Language by Hu, H., Sener, O., Sha, F., & Koltun, V. (2020)</h1>
+          <div class="article-content e-content p-name" itemprop="articleBody">
+            <dl>
+              <dt>tags</dt>
+              <dd>
+                <a href="/notes/continual_learning/">Continual learning</a>
+              </dd>
+              <dt>source</dt>
+              <dd>
+                (<a href="#org8915543">Hu et al. 2020</a>)
+              </dd>
+            </dl>
+            <h2 id="summary">Summary</h2>
+            <p>This paper focuses on the problem of (<a href="/notes/self_supervised_learning/">self-</a>)<a href="/notes/supervised_learning/">supervised</a> <a href="/notes/continual_learning/">continual learning</a> with deep <a href="/notes/neural_networks/">neural networks</a>. The Firehose dataset introduced by the authors is a large database of timestamped tweets. The goal is to learn a <a href="/notes/language_modeling/">language model</a> for each user from the dataset, which is called Personalized online language learning (POLL).</p>
+            <p>The authors also introduce a new extension of <a href="/notes/gradient_descent/">gradient descent</a> for continual learning. It is based on a replay buffer to retain information about past examples and a validation buffer used to choose the ideal number of gradient steps at each steps.</p>
+            <p>This new gradient method called ConGraD outperforms Online GD on most settings studied in the paper.</p>
+            <h2 id="comments">Comments</h2>
+            <p>Because the authors are introducing a new dataset and online learning framework, it seems natural their method is not optimal and will be improved upon.</p>
+            <p>I think the concept of continual learning is much more interesting than traditional supervised learning. It looks more adapted to real world situations where data is changing and unpredictable.</p>
+            <p>However, we are still framing <a href="/notes/continual_learning/">continual learning</a> as a weird hybrid loss function taking into account the history of data and future data. It seems like the probabilistic-ally correct way of doing that but isn’t satisfying in my opinion. Nature, if seen as a learning process, doesn’t optimize for past examples, and keeps changing in response to the environment. Sure, it has the capability to retain information and pass it through time (e.g. successful evolutionary strategies) but it doesn’t seem to be optimizing for a hybrid loss function.</p>
+            <h2 id="bibliography">Bibliography</h2>
+            <ol class="biblio-list">
+              <a id="org8915543"></a>
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle"><span itemprop="author"><span itemprop="author">Hu, Hexiang</span>, <span itemprop="author">Ozan Sener</span>, <span itemprop="author">Fei Sha</span>, and <span itemprop="author">Vladlen Koltun</span></span>. <span datetime="2020" itemprop="datePublished">November 1, 2020</span>. "<span itemprop="name">Drinking from a Firehose: Continual Learning with Web-Scale Natural Language</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">arXiv:2007.09335 [Cs, Stat]</i></span>, November. http://arxiv.org/abs/2007.09335.</li>
+            </ol>
+          </div>
+          <div class="note-footer">
+            Last changed <a class="u-url" href="https://hugocisneros.com/notes/hudrinkingfirehosecontinual2020/"><time itemprop="datePublished" class="dt-published" datetime="2021-03-25T09:57:00+0100">25/03/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+          </div>
+        </div>
+      </article><br>
+      <a href="/notes#hudrinkingfirehosecontinual2020"><b>← Back to Notes</b></a>
+      <hr>
+    </main>
+    <footer class="footer">
+      <ul class="footer-links">
+        <li>
+          <a class="rss-link" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon" src="/img/RSS.svg" alt="RSS feed icon"></a>
+        </li>
+        <li>
+          <a href="https://github.com/hugcis/natrium-custom">Code</a>
+        </li>
+        <li>© Hugo Cisneros 2021</li>
+      </ul>
+    </footer>
+  </div>
+  <link rel="stylesheet" href="/js/katex/katex.min.css">
+  <script src="/js/katex/katex.min.js"></script> 
+  <script src="/js/katex/contrib/auto-render.min.js"></script> 
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        delimiters: [
+            {left: "\\[", right: "\\]", display: true},
+            {left: "$$", right: "$$", display: true},
+            {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+            {left: "$", right: "$", display: false},
+            {left: "\\(", right: "\\)", display: false},
+        ]
+  })
+    });
+  </script>
+</body>
+</html>

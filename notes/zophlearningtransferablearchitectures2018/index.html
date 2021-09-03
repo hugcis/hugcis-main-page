@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1">
+  <title>Notes on: Learning Transferable Architectures for Scalable Image Recognition by Zoph, B., Vasudevan, V., Shlens, J., & Le, Q. V. (2018) - Hugo Cisneros - Personal page</title>
+  <meta property="og:title" content="Notes on: Learning Transferable Architectures for Scalable Image Recognition by Zoph, B., Vasudevan, V., Shlens, J., &amp; Le, Q. V. (2018) - Hugo Cisneros - Personal page">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="/img/main.jpeg">
+  <meta property="og:url" content="https://hugocisneros.com/notes/zophlearningtransferablearchitectures2018/">
+  <meta property="og:description" content="Notes about Learning Transferable Architectures for Scalable Image Recognition by Zoph, B., Vasudevan, V., Shlens, J., &amp; Le, Q. V. (2018)">
+  <meta name="Description" property="description" content="Notes about Learning Transferable Architectures for Scalable Image Recognition by Zoph, B., Vasudevan, V., Shlens, J., &amp; Le, Q. V. (2018)">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@cisne_hug">
+  <meta name="twitter:creator" content="@cisne_hug">
+  <link rel="stylesheet" href="https://hugocisneros.com/css/main.min.css" media="all" type="text/css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
+  <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <nav class="nav">
+        <div class="nav-main">
+          <a href="https://hugocisneros.com/" class="nav-title">Hugo Cisneros - Personal page</a>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="/blog/">Blog</a>
+          </li>
+          <li>
+            <a href="/notes/">Notes</a>
+          </li>
+          <li>
+            <a href="/projects/">Projects</a>
+          </li>
+          <li>
+            <a href="/resume/">Resume</a>
+          </li>
+          <li>
+            <a href="/contact/">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="content" role="main">
+      <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="single-note note-container">
+          <h1 class="article-title p-name" itemprop="name">Learning Transferable Architectures for Scalable Image Recognition by Zoph, B., Vasudevan, V., Shlens, J., & Le, Q. V. (2018)</h1>
+          <div class="article-content e-content p-name" itemprop="articleBody">
+            <dl>
+              <dt>tags</dt>
+              <dd>
+                <a href="/notes/neural_architecture_search/">NAS</a>
+              </dd>
+              <dt>source</dt>
+              <dd>
+                (<a href="#org91f9774">Zoph et al. 2018</a>)
+              </dd>
+            </dl>
+            <h2 id="summary">Summary</h2>
+            <p>This paper is more or less a follow up of (<a href="#org7fe3c90">Zoph and Le 2017</a>) where the search space get at the same time widened and more constraints are added (division between normal cell for processing and reduction cell for pooling/downsampling). Normal cells get stacked \(N\) times resulting in very big architectures. NASNet is created by searching for thos cells but the actual number of cells stacked and number of filters of the penultimate layer are searched separately.</p>
+            <h2 id="comments">Comments</h2>
+            <p>These models seem very impractical because very long and hard to produce. The indeed have SOTA results at the time of writing but with explicit mention of the size of the models and time of training. Improvement over random search is only 1%..</p>
+            <h2 id="bibliography">Bibliography</h2>
+            <ol class="biblio-list">
+              <a id="org91f9774"></a>
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle">
+                <span itemprop="author"><span itemprop="author">Zoph, Barret</span>, <span itemprop="author">Vijay Vasudevan</span>, <span itemprop="author">Jonathon Shlens</span>, and <span itemprop="author">Quoc V. Le</span></span>. <span datetime="2018" itemprop="datePublished">April 11, 2018</span>. "<span itemprop="name">Learning Transferable Architectures for Scalable Image Recognition</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">arXiv:1707.07012 [Cs, Stat]</i></span>, April. http://arxiv.org/abs/1707.07012.
+                <p><a id="org7fe3c90"></a></p>
+              </li>
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle">
+                <span itemprop="author"><span itemprop="author">Zoph, Barret</span>, and <span itemprop="author">Quoc V. Le</span></span>. <span datetime="2017" itemprop="datePublished">February 15, 2017</span>. “<span itemprop="name">Neural Architecture Search with Reinforcement Learning</span>”. <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">arXiv:1611.01578 [Cs]</i></span>, February. <a href="http://arxiv.org/abs/1611.01578">http://arxiv.org/abs/1611.01578</a>.
+              </li>
+            </ol>
+          </div>
+          <div class="note-footer">
+            Last changed <a class="u-url" href="https://hugocisneros.com/notes/zophlearningtransferablearchitectures2018/"><time itemprop="datePublished" class="dt-published" datetime="2021-03-25T09:57:00+0100">25/03/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+          </div>
+        </div>
+      </article><br>
+      <a href="/notes#zophlearningtransferablearchitectures2018"><b>← Back to Notes</b></a>
+      <hr>
+    </main>
+    <footer class="footer">
+      <ul class="footer-links">
+        <li>
+          <a class="rss-link" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon" src="/img/RSS.svg" alt="RSS feed icon"></a>
+        </li>
+        <li>
+          <a href="https://github.com/hugcis/natrium-custom">Code</a>
+        </li>
+        <li>© Hugo Cisneros 2021</li>
+      </ul>
+    </footer>
+  </div>
+  <link rel="stylesheet" href="/js/katex/katex.min.css">
+  <script src="/js/katex/katex.min.js"></script> 
+  <script src="/js/katex/contrib/auto-render.min.js"></script> 
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        delimiters: [
+            {left: "\\[", right: "\\]", display: true},
+            {left: "$$", right: "$$", display: true},
+            {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+            {left: "$", right: "$", display: false},
+            {left: "\\(", right: "\\)", display: false},
+        ]
+  })
+    });
+  </script>
+</body>
+</html>

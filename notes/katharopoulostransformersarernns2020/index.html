@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1">
+  <title>Notes on: Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention by Katharopoulos, A., Vyas, A., Pappas, N., & Fleuret, F. (2020) - Hugo Cisneros - Personal page</title>
+  <meta property="og:title" content="Notes on: Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention by Katharopoulos, A., Vyas, A., Pappas, N., &amp; Fleuret, F. (2020) - Hugo Cisneros - Personal page">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="/img/main.jpeg">
+  <meta property="og:url" content="https://hugocisneros.com/notes/katharopoulostransformersarernns2020/">
+  <meta property="og:description" content="Notes about Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention by Katharopoulos, A., Vyas, A., Pappas, N., &amp; Fleuret, F. (2020)">
+  <meta name="Description" property="description" content="Notes about Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention by Katharopoulos, A., Vyas, A., Pappas, N., &amp; Fleuret, F. (2020)">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@cisne_hug">
+  <meta name="twitter:creator" content="@cisne_hug">
+  <link rel="stylesheet" href="https://hugocisneros.com/css/main.min.css" media="all" type="text/css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
+  <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <nav class="nav">
+        <div class="nav-main">
+          <a href="https://hugocisneros.com/" class="nav-title">Hugo Cisneros - Personal page</a>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="/blog/">Blog</a>
+          </li>
+          <li>
+            <a href="/notes/">Notes</a>
+          </li>
+          <li>
+            <a href="/projects/">Projects</a>
+          </li>
+          <li>
+            <a href="/resume/">Resume</a>
+          </li>
+          <li>
+            <a href="/contact/">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="content" role="main">
+      <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="single-note note-container">
+          <h1 class="article-title p-name" itemprop="name">Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention by Katharopoulos, A., Vyas, A., Pappas, N., & Fleuret, F. (2020)</h1>
+          <div class="article-content e-content p-name" itemprop="articleBody">
+            <dl>
+              <dt>tags</dt>
+              <dd>
+                <a href="/notes/transformers/">Transformers</a>, <a href="/notes/recurrent_neural_networks/">RNN</a>
+              </dd>
+              <dt>source</dt>
+              <dd>
+                (<a href="#org3910ffc">Katharopoulos et al. 2020</a>)
+              </dd>
+            </dl>
+            <h2 id="summary">Summary</h2>
+            <p><a href="/notes/transformers/">Transformers</a> have traditionally been described as different models from <a href="/notes/recurrent_neural_networks/">RNNs</a>. This is because instead of processing the sequence one token at a time, Transformers use <a href="/notes/attention/">attention</a> to process all elements simultaneously.</p>
+            <p>The paper introduces an interesting new formulation, replacing the softmax attention with a feature map-based dot product.</p>
+            <p>This new formulation yields better time and memory complexity as well as a model that is casual and autoregressive (similar to RNNs).</p>
+            <p>A Transformer applied on sequence \(x\) is presented as a composition of multiple Transformer layers \(T_l\), with</p>
+            <p>\[ T_l(x) = f_l(A_l(x) + x) \]</p>
+            <p>Function \(f_l\) is applied to each component independently, while attention \(A_l\) is applied to the whole input sequence.</p>
+            <p>Softmax <a href="/notes/attention/">self-attention</a> at layer \(l\) with <em>queries</em>, <em>keys</em> and <em>values</em> matrices is written</p>
+            <p>\[A_l(x) = V' = \text{softmax}\left( \dfrac{QK^{T}}{\sqrt{D}} \right) V.\]</p>
+            <p>The equation above can be generalized to any similarity function \(\text{sim}\), and if \(V'_i\) designates the $i$-th row of \(V'\),</p>
+            <p>\[ V'_i = \dfrac{\sum_{j = 1}^N \text{sim}(Q_i, K_j) V_j}{\sum_{j = 1}^N \text{sim}(Q_i, K_j)} \]</p>
+            <h3 id="linearizing-attention">Linearizing attention</h3>
+            <p>In particular, all <a href="/notes/kernel_methods/">kernels</a> \(k(x, y) = \langle\phi(x), \phi(y)\rangle_\mathcal{S} : \mathbb{R}^{2\times F} \rightarrow \mathbb{R}_+\) can be used as a similarity function, changing the equation above to</p>
+            <p>\[ V'_i = \dfrac{\phi(Q_i)^T \sum_{j = 1}^N \phi(K_j) V_j^T}{ \phi(Q_i)^T \sum_{j = 1}^N \phi(K_j)}.\]</p>
+            <p>Because the right term of the numerator and denominator above does not depend on \(i\), it can be computed once for all sequence, and time and memory complexity become \(\mathcal{O}(N)\).</p>
+            <h3 id="masking-for-autoregressive-models">Masking for autoregressive models</h3>
+            <p>By replacing \(N\) by \(i\) in the expression above, one readily obtains a formulation of the Transformer function which only depends on previous tokens. This is used to train <a href="/notes/language_modeling/">language models</a> in particular, because the prediction of a token can only depend on the previous tokens.</p>
+            <h3 id="transformers-are-rnns">Transformers are RNNs</h3>
+            <p>By rewriting the main kernel formulation of a Transformer above, one sees how it can actually be seen as a RNN. Timesteps of the recurrence are denoted as subscripts.</p>
+            <p>\[ \begin{aligned} & s_0 = 0, z_0 = 0 \newline & s_i = s_{i-1} + \phi(x_i W_K) (x_i W_V)^T \newline & z_i = z_{i-1} + \phi(x_i W_K) \newline & y_i = f_l \left( \dfrac{\phi(x_i W_Q)^T s_i}{\phi(x_i W_Q)^T z_i} + x_i \right) \end{aligned} \]</p>
+            <p>The resulting RNN has two hidden states, namely the attention memory \(s\) and the normalizer memory \(z\).</p>
+            <h2 id="comments">Comments</h2>
+            <p>The parallel between RNNs and Transformer models is clearly made in this paper. I believe this is significant because it give insights into why Transformers might be better at language modeling than RNN-based models.</p>
+            <p>It would seem from this new formulation that they aren’t better than RNNs but the choice of update function (in the equation above) they are equivalent to is superior.</p>
+            <p>Another possibility is that RNNs and Transformers have always had the same potential. The hype might have fuelled more effort into making Transformers models work better and have thus widened the performance gap between the two otherwise equivalent models. Recent research into RNN models also seems to have favored a few dominant models (standard RNN, LSTM and GRU) and might have slowed the discovery of other, more effective cells.</p>
+            <p>Experiments in the paper only demonstrate the performance of their new model on small tasks and I would like to see how this holds up for language modeling.</p>
+            <h2 id="bibliography">Bibliography</h2>
+            <ol class="biblio-list">
+              <a id="org3910ffc"></a>
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle"><span itemprop="author"><span itemprop="author">Katharopoulos, Angelos</span>, <span itemprop="author">Apoorv Vyas</span>, <span itemprop="author">Nikolaos Pappas</span>, and <span itemprop="author">François Fleuret</span></span>. <span datetime="2020" itemprop="datePublished">June 29, 2020</span>. "<span itemprop="name">Transformers Are RNNs: Fast Autoregressive Transformers with Linear Attention</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">arXiv:2006.16236 [Cs, Stat]</i></span>, June. http://arxiv.org/abs/2006.16236.</li>
+            </ol>
+          </div>
+          <div class="note-footer">
+            Last changed <a class="u-url" href="https://hugocisneros.com/notes/katharopoulostransformersarernns2020/"><time itemprop="datePublished" class="dt-published" datetime="2021-09-02T12:07:00+0200">02/09/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+          </div>
+        </div>
+      </article><br>
+      <a href="/notes#katharopoulostransformersarernns2020"><b>← Back to Notes</b></a>
+      <hr>
+    </main>
+    <footer class="footer">
+      <ul class="footer-links">
+        <li>
+          <a class="rss-link" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon" src="/img/RSS.svg" alt="RSS feed icon"></a>
+        </li>
+        <li>
+          <a href="https://github.com/hugcis/natrium-custom">Code</a>
+        </li>
+        <li>© Hugo Cisneros 2021</li>
+      </ul>
+    </footer>
+  </div>
+  <link rel="stylesheet" href="/js/katex/katex.min.css">
+  <script src="/js/katex/katex.min.js"></script> 
+  <script src="/js/katex/contrib/auto-render.min.js"></script> 
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        delimiters: [
+            {left: "\\[", right: "\\]", display: true},
+            {left: "$$", right: "$$", display: true},
+            {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+            {left: "$", right: "$", display: false},
+            {left: "\\(", right: "\\)", display: false},
+        ]
+  })
+    });
+  </script>
+</body>
+</html>

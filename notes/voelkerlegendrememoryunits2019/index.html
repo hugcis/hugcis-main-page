@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1">
+  <title>Notes on: Legendre Memory Units: Continuous-Time Representation in Recurrent Neural Networks by Voelker, A., Kajić, I., & Eliasmith, C. (2019) - Hugo Cisneros - Personal page</title>
+  <meta property="og:title" content="Notes on: Legendre Memory Units: Continuous-Time Representation in Recurrent Neural Networks by Voelker, A., Kajić, I., &amp; Eliasmith, C. (2019) - Hugo Cisneros - Personal page">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="/img/main.jpeg">
+  <meta property="og:url" content="https://hugocisneros.com/notes/voelkerlegendrememoryunits2019/">
+  <meta property="og:description" content="Notes about Legendre Memory Units: Continuous-Time Representation in Recurrent Neural Networks by Voelker, A., Kajić, I., &amp; Eliasmith, C. (2019)">
+  <meta name="Description" property="description" content="Notes about Legendre Memory Units: Continuous-Time Representation in Recurrent Neural Networks by Voelker, A., Kajić, I., &amp; Eliasmith, C. (2019)">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@cisne_hug">
+  <meta name="twitter:creator" content="@cisne_hug">
+  <link rel="stylesheet" href="https://hugocisneros.com/css/main.min.css" media="all" type="text/css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
+  <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <nav class="nav">
+        <div class="nav-main">
+          <a href="https://hugocisneros.com/" class="nav-title">Hugo Cisneros - Personal page</a>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="/blog/">Blog</a>
+          </li>
+          <li>
+            <a href="/notes/">Notes</a>
+          </li>
+          <li>
+            <a href="/projects/">Projects</a>
+          </li>
+          <li>
+            <a href="/resume/">Resume</a>
+          </li>
+          <li>
+            <a href="/contact/">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="content" role="main">
+      <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="single-note note-container">
+          <h1 class="article-title p-name" itemprop="name">Legendre Memory Units: Continuous-Time Representation in Recurrent Neural Networks by Voelker, A., Kajić, I., & Eliasmith, C. (2019)</h1>
+          <div class="article-content e-content p-name" itemprop="articleBody">
+            <dl>
+              <dt>tags</dt>
+              <dd>
+                <a href="/notes/recurrent_neural_networks/">Recurrent neural networks</a>
+              </dd>
+              <dt>source</dt>
+              <dd>
+                (<a href="#org9352d69">Voelker, Kajić, and Eliasmith 2019</a>)
+              </dd>
+            </dl>
+            <h2 id="summary">Summary</h2>
+            <p>This paper introduces the LMU recurrent cell. This cell is based on a similar-ish idea to LSTM to maintain a memory hidden state. The main idea of the paper is to make this memory satisfy a set of first order ordinary differential equations.</p>
+            <p>\[</p>
+            <p>\begin{equation} \theta \dot{m}(t) = Am(t) + Bu(t) \end{equation}</p>
+            <p>\]</p>
+            <p>This system has a solution which represents sliding windows of \(u\) via Legendre polynomials. This new unit is tested on a range of tasks. A memory only task, a permuted MNIST task and a dynamical chaotic system prediction task.</p>
+            <h2 id="comments">Comments</h2>
+            <p>Unfortunately, my understanding of this paper is slightly limited. The approach is interesting and has good properties, however the new RNN cell is tested on a small set of task that independently demonstrate useful properties but not all of them together (e.g. good MNIST prediction + long-term dependency).</p>
+            <h2 id="bibliography">Bibliography</h2>
+            <ol class="biblio-list">
+              <a id="org9352d69"></a>
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle"><span itemprop="author"><span itemprop="author">Voelker, Aaron</span>, <span itemprop="author">Ivana Kajić</span>, and <span itemprop="author">Chris Eliasmith</span></span>. <span datetime="2019" itemprop="datePublished">2019</span>. "<span itemprop="name">Legendre Memory Units: Continuous-Time Representation in Recurrent Neural Networks</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Advances in Neural Information Processing Systems 32</i></span>, edited by H. Wallach, H. Larochelle, A. Beygelzimer, F. d\textquotesingle Alché-Buc, E. Fox, and R. Garnett, 15544–53. Curran Associates, Inc. http://papers.nips.cc/paper/9689-legendre-memory-units-continuous-time-representation-in-recurrent-neural-networks.pdf.</li>
+            </ol>
+          </div>
+          <div class="note-footer">
+            Last changed <a class="u-url" href="https://hugocisneros.com/notes/voelkerlegendrememoryunits2019/"><time itemprop="datePublished" class="dt-published" datetime="2021-08-10T09:25:00+0200">10/08/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+          </div>
+        </div>
+      </article><br>
+      <a href="/notes#voelkerlegendrememoryunits2019"><b>← Back to Notes</b></a>
+      <hr>
+    </main>
+    <footer class="footer">
+      <ul class="footer-links">
+        <li>
+          <a class="rss-link" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon" src="/img/RSS.svg" alt="RSS feed icon"></a>
+        </li>
+        <li>
+          <a href="https://github.com/hugcis/natrium-custom">Code</a>
+        </li>
+        <li>© Hugo Cisneros 2021</li>
+      </ul>
+    </footer>
+  </div>
+  <link rel="stylesheet" href="/js/katex/katex.min.css">
+  <script src="/js/katex/katex.min.js"></script> 
+  <script src="/js/katex/contrib/auto-render.min.js"></script> 
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        delimiters: [
+            {left: "\\[", right: "\\]", display: true},
+            {left: "$$", right: "$$", display: true},
+            {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+            {left: "$", right: "$", display: false},
+            {left: "\\(", right: "\\)", display: false},
+        ]
+  })
+    });
+  </script>
+</body>
+</html>
