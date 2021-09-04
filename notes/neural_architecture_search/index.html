@@ -71,28 +71,28 @@
               <dd>The way the performance of a constructed neural network is evaluated (without actually building it or training/running it).</dd>
             </dl>
             <h2 id="reinforcement-learning--reinforcement-learning-dot-md--based-nas"><a href="/notes/reinforcement_learning/">Reinforcement learning</a>-based NAS</h2>
-            <p>The original idea was called Neural architecture search and is based on the use of a <a href="/notes/recurrent_neural_networks/">RNN</a> as a controller and generator of architectures. The search-space is pre-defined and explored in a rigid way. (<a href="#org972d7da">Zoph and Le 2017</a>).</p>
-            <p>The process of generating architectures from the first article was extremely lengthy and replaced later by a more constrained search. (<a href="#orgc958474">Zoph et al. 2018</a>).</p>
-            <p>Recent ideas include the use of parameter sharing across architectures because the main bottleneck of previous techniques was essentially in the training of each child model. This results in significant speedup of RL-based NAS. (<a href="#org1473953">Pham et al. 2018</a>)</p>
+            <p>The original idea was called Neural architecture search and is based on the use of a <a href="/notes/recurrent_neural_networks/">RNN</a> as a controller and generator of architectures. The search-space is pre-defined and explored in a rigid way. (<a href="#orgddb1fd8">Zoph and Le 2017</a>).</p>
+            <p>The process of generating architectures from the first article was extremely lengthy and replaced later by a more constrained search. (<a href="#orge8715c7">Zoph et al. 2018</a>).</p>
+            <p>Recent ideas include the use of parameter sharing across architectures because the main bottleneck of previous techniques was essentially in the training of each child model. This results in significant speedup of RL-based NAS. (<a href="#org6a5e30b">Pham et al. 2018</a>)</p>
             <h2 id="neuroevolution">Neuroevolution</h2>
-            <p>This field is more focused on <a href="/notes/evolution/">evolution</a> neural network through evolutionary methods such as e.g <a href="/notes/genetic_algorithm/">genetic algorithms</a>. One of the main work that made that field popular is <a href="/notes/neat/">NEAT</a> (<a href="#org5912165">Stanley and Miikkulainen 2002</a>).</p>
+            <p>This field is more focused on <a href="/notes/evolution/">evolution</a> neural network through evolutionary methods such as e.g <a href="/notes/genetic_algorithm/">genetic algorithms</a>. One of the main work that made that field popular is <a href="/notes/neat/">NEAT</a> (<a href="#org3bf8a9f">Stanley and Miikkulainen 2002</a>).</p>
             <h2 id="bibliography">Bibliography</h2>
             <ol class="biblio-list">
-              <a id="org1473953"></a>
+              <a id="org6a5e30b"></a>
               <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle">
-                <span itemprop="author"><span itemprop="author">Pham, Hieu</span>, <span itemprop="author">Melody Y. Guan</span>, <span itemprop="author">Barret Zoph</span>, <span itemprop="author">Quoc V. Le</span>, and <span itemprop="author">Jeff Dean</span></span>. <span datetime="2018" itemprop="datePublished">February 11, 2018</span>. "<span itemprop="name">Efficient Neural Architecture Search via Parameter Sharing</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">arXiv:1802.03268 [Cs, Stat]</i></span>, February. http://arxiv.org/abs/1802.03268.
-                <p><a id="org5912165"></a></p>
+                <span itemprop="author"><span itemprop="author">Pham, Hieu</span>, <span itemprop="author">Melody Y. Guan</span>, <span itemprop="author">Barret Zoph</span>, <span itemprop="author">Quoc V. Le</span>, and <span itemprop="author">Jeff Dean</span></span>. <span datetime="2018" itemprop="datePublished">February 11, 2018</span>. "<span itemprop="name">Efficient Neural Architecture Search via Parameter Sharing</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">arXiv:1802.03268 [Cs, Stat]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/1802.03268">http://arxiv.org/abs/1802.03268</a>.
+                <p><a id="org3bf8a9f"></a></p>
               </li>
               <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle">
                 <span itemprop="author"><span itemprop="author">Stanley, Kenneth O.</span>, and <span itemprop="author">Risto Miikkulainen</span></span>. <span datetime="2002" itemprop="datePublished">June 2002</span>. “<span itemprop="name">Evolving Neural Networks through Augmenting Topologies</span>”. <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Evolutionary Computation</i></span> 10 (2):99–127. <a itemprop="sameAs" href="https://doi.org/10.1162/106365602320169811">DOI</a>.
-                <p><a id="orgc958474"></a></p>
+                <p><a id="orge8715c7"></a></p>
               </li>
               <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle">
-                <span itemprop="author"><span itemprop="author">Zoph, Barret</span>, <span itemprop="author">Vijay Vasudevan</span>, <span itemprop="author">Jonathon Shlens</span>, and <span itemprop="author">Quoc V. Le</span></span>. <span datetime="2018" itemprop="datePublished">April 11, 2018</span>. “<span itemprop="name">Learning Transferable Architectures for Scalable Image Recognition</span>”. <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">arXiv:1707.07012 [Cs, Stat]</i></span>, April. <a href="http://arxiv.org/abs/1707.07012">http://arxiv.org/abs/1707.07012</a>.
-                <p><a id="org972d7da"></a></p>
+                <span itemprop="author"><span itemprop="author">Zoph, Barret</span>, <span itemprop="author">Vijay Vasudevan</span>, <span itemprop="author">Jonathon Shlens</span>, and <span itemprop="author">Quoc V. Le</span></span>. <span datetime="2018" itemprop="datePublished">April 11, 2018</span>. “<span itemprop="name">Learning Transferable Architectures for Scalable Image Recognition</span>”. <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">arXiv:1707.07012 [Cs, Stat]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/1707.07012"></a><a href="http://arxiv.org/abs/1707.07012">http://arxiv.org/abs/1707.07012</a>.
+                <p><a id="orgddb1fd8"></a></p>
               </li>
               <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle">
-                <span itemprop="author"><span itemprop="author">Zoph, Barret</span>, and <span itemprop="author">Quoc V. Le</span></span>. <span datetime="2017" itemprop="datePublished">February 15, 2017</span>. “<span itemprop="name">Neural Architecture Search with Reinforcement Learning</span>”. <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">arXiv:1611.01578 [Cs]</i></span>, February. <a href="http://arxiv.org/abs/1611.01578">http://arxiv.org/abs/1611.01578</a>.
+                <span itemprop="author"><span itemprop="author">Zoph, Barret</span>, and <span itemprop="author">Quoc V. Le</span></span>. <span datetime="2017" itemprop="datePublished">February 15, 2017</span>. “<span itemprop="name">Neural Architecture Search with Reinforcement Learning</span>”. <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">arXiv:1611.01578 [Cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/1611.01578"></a><a href="http://arxiv.org/abs/1611.01578">http://arxiv.org/abs/1611.01578</a>.
               </li>
             </ol>
           </div>

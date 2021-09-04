@@ -62,7 +62,7 @@
               </dd>
               <dt>source</dt>
               <dd>
-                (<a href="#orgbdf9107">Clune 2019</a>)
+                (<a href="#orgbbbd1b9">Clune 2019</a>)
               </dd>
             </dl>
             <h2 id="summary">Summary</h2>
@@ -73,7 +73,7 @@
             <p>This part is related to <a href="/notes/neural_architecture_search/">Neural architecture search</a>: algorithms learn to create the learning architectures.</p>
             <h3 id="meta-learning-the-learning-algorithms-themselves">Meta-learning the learning algorithms themselves</h3>
             <p>This part wants to avoid learning algorithms such as SGD and instead learn them directly. Ex: Model Agnostic Meta Learning (MAML) aims at finding an initial set of weights that is the fastest at learning a range of tasks.</p>
-            <p>Another idea is to use RNN (Turing complete) trained via an outer loop optimization algorithm to be the most sample-efficient learning algorithm and use it then to train other models. This has been done in (<a href="#org1bc32af">Wang et al. 2017</a>) and (<a href="#orgccd6809">Duan et al. 2016</a>) in the context of Reinforcement learning, with policy gradients as the outer loop (in nature this would be the role of evolution).</p>
+            <p>Another idea is to use RNN (Turing complete) trained via an outer loop optimization algorithm to be the most sample-efficient learning algorithm and use it then to train other models. This has been done in (<a href="#org32f0d0b">Wang et al. 2017</a>) and (<a href="#org2115688">Duan et al. 2016</a>) in the context of Reinforcement learning, with policy gradients as the outer loop (in nature this would be the role of evolution).</p>
             <p>The main question with meta-learning is: what tasks should the meta-learner learn on ? The author argues that can be learned too.</p>
             <h3 id="automatically-generating-effective-learning-environments">Automatically generating effective learning environments</h3>
             <p>We should have algorithms that can learn to generate learning environments. This includes defining a reward in this environment. This is likely the hardest of the three pillars. This is what people attempt at reproducing in Alife simulations, coevolution, self-play (Dota, Go, etc.). They all more or less fail to create this open-ended complexity explosion like what happened on Earth. This is usually due to the fact that the environmental component of the algorithm is not evolving.</p>
@@ -96,17 +96,17 @@
             <p>Overall, the goal and means to get to this goal seem very close to what many researchers are envisioning too, and I agree. However, these solutions don’t seem very promising to me , because the very system the author thinks could be generating this endless variety of environments is still undefined and remains the hardest part of the problem.</p>
             <h2 id="bibliography">Bibliography</h2>
             <ol class="biblio-list">
-              <a id="orgccd6809"></a>
+              <a id="org2115688"></a>
               <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle">
-                <span itemprop="author"><span itemprop="author">Duan, Yan</span>, <span itemprop="author">John Schulman</span>, <span itemprop="author">Xi Chen</span>, <span itemprop="author">Peter L. Bartlett</span>, <span itemprop="author">Ilya Sutskever</span>, and <span itemprop="author">Pieter Abbeel</span></span>. <span datetime="2016" itemprop="datePublished">November 9, 2016</span>. "<span itemprop="name">RL\\(^2\\): Fast Reinforcement Learning via Slow Reinforcement Learning</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">arXiv:1611.02779 [Cs, Stat]</i></span>, November. http://arxiv.org/abs/1611.02779.
-                <p><a id="org1bc32af"></a></p>
+                <span itemprop="author"><span itemprop="author">Duan, Yan</span>, <span itemprop="author">John Schulman</span>, <span itemprop="author">Xi Chen</span>, <span itemprop="author">Peter L. Bartlett</span>, <span itemprop="author">Ilya Sutskever</span>, and <span itemprop="author">Pieter Abbeel</span></span>. <span datetime="2016" itemprop="datePublished">November 9, 2016</span>. "<span itemprop="name">RL\\(^2\\): Fast Reinforcement Learning via Slow Reinforcement Learning</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">arXiv:1611.02779 [Cs, Stat]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/1611.02779">http://arxiv.org/abs/1611.02779</a>.
+                <p><a id="org32f0d0b"></a></p>
               </li>
               <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle">
-                <span itemprop="author"><span itemprop="author">Wang, Jane X.</span>, <span itemprop="author">Zeb Kurth-Nelson</span>, <span itemprop="author">Dhruva Tirumala</span>, <span itemprop="author">Hubert Soyer</span>, <span itemprop="author">Joel Z. Leibo</span>, <span itemprop="author">Remi Munos</span>, <span itemprop="author">Charles Blundell</span>, <span itemprop="author">Dharshan Kumaran</span>, and <span itemprop="author">Matt Botvinick</span></span>. <span datetime="2017" itemprop="datePublished">January 23, 2017</span>. “<span itemprop="name">Learning to Reinforcement Learn</span>”. <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">arXiv:1611.05763 [Cs, Stat]</i></span>, January. <a href="http://arxiv.org/abs/1611.05763">http://arxiv.org/abs/1611.05763</a>.
-                <p><a id="orgbdf9107"></a></p>
+                <span itemprop="author"><span itemprop="author">Wang, Jane X.</span>, <span itemprop="author">Zeb Kurth-Nelson</span>, <span itemprop="author">Dhruva Tirumala</span>, <span itemprop="author">Hubert Soyer</span>, <span itemprop="author">Joel Z. Leibo</span>, <span itemprop="author">Remi Munos</span>, <span itemprop="author">Charles Blundell</span>, <span itemprop="author">Dharshan Kumaran</span>, and <span itemprop="author">Matt Botvinick</span></span>. <span datetime="2017" itemprop="datePublished">January 23, 2017</span>. “<span itemprop="name">Learning to Reinforcement Learn</span>”. <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">arXiv:1611.05763 [Cs, Stat]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/1611.05763"></a><a href="http://arxiv.org/abs/1611.05763">http://arxiv.org/abs/1611.05763</a>.
+                <p><a id="orgbbbd1b9"></a></p>
               </li>
               <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle">
-                <span itemprop="author">Clune, Jeff</span>. <span datetime="2019" itemprop="datePublished">May 27, 2019</span>. “<span itemprop="name">AI-GAs: AI-Generating Algorithms, an Alternate Paradigm for Producing General Artificial Intelligence</span>”. <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">arXiv:1905.10985 [Cs]</i></span>, May. <a href="http://arxiv.org/abs/1905.10985">http://arxiv.org/abs/1905.10985</a>.
+                <span itemprop="author">Clune, Jeff</span>. <span datetime="2019" itemprop="datePublished">May 27, 2019</span>. “<span itemprop="name">AI-GAs: AI-Generating Algorithms, an Alternate Paradigm for Producing General Artificial Intelligence</span>”. <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">arXiv:1905.10985 [Cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/1905.10985"></a><a href="http://arxiv.org/abs/1905.10985">http://arxiv.org/abs/1905.10985</a>.
               </li>
             </ol>
           </div>

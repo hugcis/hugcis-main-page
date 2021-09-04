@@ -64,7 +64,7 @@
             <h2 id="basic-properties">Basic properties</h2>
             <p>To operate on graphs, a neural network must be invariant to isomorphism of these graphs. This translates to permutation invariance for the nodes of a graph.</p>
             <p>\[ f(\mathbf{PX}) = f(\mathbf{X}) \]</p>
-            <p>Where \(\mathbf{P}\) is a permutation matrix. For simple sets, this amounts to performing node-wise transformations and use a permutation invariant aggregator (sum/max/avg/…). This was done in (<a href="#orgbf7b284">Zaheer et al. 2018</a>).</p>
+            <p>Where \(\mathbf{P}\) is a permutation matrix. For simple sets, this amounts to performing node-wise transformations and use a permutation invariant aggregator (sum/max/avg/…). This was done in (<a href="#org0348444">Zaheer et al. 2018</a>).</p>
             <p>\[ f(\mathbf{X}) = \phi\left( \bigoplus_i \psi(\mathbf{x}_i) \right) \]</p>
             <p>In the case of GNNs, the local neighborhood of a node can also be defined, and therefore the neural network can be written:</p>
             <p>\[ f(\mathbf{X}, \mathbf{A}) = \begin{bmatrix} — g(\mathbf{x}_1 , \mathbf{X}_{\mathcal{N}_1} ) — \newline — g(\mathbf{x}_2 , \mathbf{X}_{\mathcal{N}_2} ) — \newline \vdots\newline — g(\mathbf{x}_n , \mathbf{X}_{\mathcal{N}_n} ) — \end{bmatrix} \]</p>
@@ -83,8 +83,10 @@
             </ul>
             <h2 id="bibliography">Bibliography</h2>
             <ol class="biblio-list">
-              <a id="orgbf7b284"></a>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle"><span itemprop="author"><span itemprop="author">Zaheer, Manzil</span>, <span itemprop="author">Satwik Kottur</span>, <span itemprop="author">Siamak Ravanbakhsh</span>, <span itemprop="author">Barnabas Poczos</span>, <span itemprop="author">Ruslan Salakhutdinov</span>, and <span itemprop="author">Alexander Smola</span></span>. <span datetime="2018" itemprop="datePublished">April 14, 2018</span>. "<span itemprop="name">Deep Sets</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">arXiv:1703.06114 [Cs, Stat]</i></span>, April. http://arxiv.org/abs/1703.06114.</li>
+              <a id="org0348444"></a>
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle">
+                <span itemprop="author"><span itemprop="author">Zaheer, Manzil</span>, <span itemprop="author">Satwik Kottur</span>, <span itemprop="author">Siamak Ravanbakhsh</span>, <span itemprop="author">Barnabas Poczos</span>, <span itemprop="author">Ruslan Salakhutdinov</span>, and <span itemprop="author">Alexander Smola</span></span>. <span datetime="2018" itemprop="datePublished">April 14, 2018</span>. "<span itemprop="name">Deep Sets</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">arXiv:1703.06114 [Cs, Stat]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/1703.06114">http://arxiv.org/abs/1703.06114</a>.
+              </li>
             </ol>
           </div>
           <div class="bl-section">
