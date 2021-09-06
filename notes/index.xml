@@ -6,7 +6,16 @@
     <description>Recent content in Notes on Hugo Cisneros - Personal page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 Sep 2021 15:14:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 Sep 2021 16:06:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cellular automata as recurrent neural networks</title>
+      <link>https://hugocisneros.com/notes/cellular_automata_as_recurrent_neural_networks/</link>
+      <pubDate>Mon, 06 Sep 2021 16:06:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/cellular_automata_as_recurrent_neural_networks/</guid>
+      <description>tags Cellular automata, Recurrent neural networks  Since cellular automata are a kind of dynamical system, they may also be seen as a type of recurrent neural network. They can even be seen as a recurrent-convolutional network because each of the &amp;ldquo;hidden neurons&amp;rdquo; update depends only on the neighboring neurons and the update rule is shared across the whole hidden state.</description>
+    </item>
+    
     <item>
       <title>Reductionism</title>
       <link>https://hugocisneros.com/notes/reductionism/</link>
@@ -373,15 +382,6 @@ In the context of compressed sensing, we have \(M &amp;lt; N\).</description>
       <guid>https://hugocisneros.com/notes/unker_non_linear_writing_system/</guid>
       <description>tags Language resources https://s.ai/nlws/  A fascinating writing system based on glyphs connected to each other to create meaning. The system is quite advanced and reading its grammar is like discovering some new alien language. It was created by Alex Fink and Sai in 2010.
 This is the kind of complexity that would be incredible to discover in open-ended evolving language systems. A system starting from elementary components and no particular assumption about what language should be, could come up with such exotic models (probably even more exotic in the case of a truly open-ended system).</description>
-    </item>
-    
-    <item>
-      <title>Cellular automata as recurrent neural networks</title>
-      <link>https://hugocisneros.com/notes/cellular_automata_as_recurrent_neural_networks/</link>
-      <pubDate>Mon, 16 Aug 2021 11:42:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/cellular_automata_as_recurrent_neural_networks/</guid>
-      <description>tags Cellular automata, Recurrent neural networks  Since cellular automata are a kind of dynamical system, they may also be seen as a type of recurrent neural network. They are even closer to a recurrent-convolutional network because each of the &amp;ldquo;hidden neurons&amp;rdquo; update depends only on the neighboring neurons and the update rule is shared across the whole hidden state.</description>
     </item>
     
     <item>

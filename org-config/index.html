@@ -131,6 +131,9 @@
               <li>
                 <a href="#make-markdown-mode-variable-width">Make markdown mode variable width</a>
               </li>
+              <li>
+                <a href="#use-return-to-follow-links-in-org-mode">Use return to follow links in org-mode</a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -138,15 +141,20 @@
       <p>This is my org-mode configuration. You will find the rest of my dotfiles (including my full Doom Emacs configuration) on <a href="https://github.com/hugcis/dotfiles">Github</a>.</p>
       <p>If you want to use this file for configuration, open it in Emacs and run <code>org-babel-tangle</code>, or <code>C-c C-v t</code> (you need to have org-mode and org-babel installed).</p>
       <h2 id="setting-up-todo-keywords">Setting up “TODO” keywords</h2>
-      <p>Those keywords are from <a href="https://doc.norang.ca/org-mode.html">“Organize your life in plain text!"</a>. There are three “main” keywords and a <code>WAITING</code>, <code>HOLD</code> and <code>CANCELLED</code> keyword that each require a note for justifying moving to these states.</p>
+      <p>Those keywords are from <a href="http://doc.norang.ca/org-mode.html">“Organize your life in plain text!"</a>. There are three “main” keywords and a <code>WAITING</code>, <code>HOLD</code> and <code>CANCELLED</code> keyword that each require a note for justifying moving to these states.</p>
       <div class="highlight">
         <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-todo-keywords</span>
     (<span style="color:#24909d">quote</span> ((<span style="color:#40ffff">sequence</span> <span style="color:#ed9d13">"TODO(t)"</span> <span style="color:#ed9d13">"NEXT(n)"</span> <span style="color:#ed9d13">"|"</span> <span style="color:#ed9d13">"DONE(d)"</span>)
             (<span style="color:#40ffff">sequence</span> <span style="color:#ed9d13">"WAITING(w@/!)"</span> <span style="color:#ed9d13">"HOLD(h@/!)"</span> <span style="color:#ed9d13">"|"</span> <span style="color:#ed9d13">"CANCELLED(c@/!)"</span>))))
 </code></pre>
       </div>
+      <p>This is so I cannot set a headline to <code>DONE</code> if children aren’t <code>DONE</code>.</p>
+      <div class="highlight">
+        <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(<span style="color:#24909d">setq-default</span> <span style="color:#40ffff">org-enforce-todo-dependencies</span> <span style="color:#40ffff">t</span>)
+</code></pre>
+      </div>
       <h3 id="todo-faces-and-export-settings">“TODO” faces and export settings</h3>
-      <p>This sets the colors of keywords.</p>
+      <p>This sets the colors of keywords. Not that important because I also hide them with <code>org-superstar</code>. The keywords are still shown when placing the cursor on them.</p>
       <div class="highlight">
         <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-todo-keyword-faces</span>
     (<span style="color:#24909d">quote</span> ((<span style="color:#ed9d13">"TODO"</span> <span style="color:#24909d">:foreground</span> <span style="color:#ed9d13">"red"</span> <span style="color:#24909d">:weight</span> <span style="color:#40ffff">bold</span>)
@@ -157,25 +165,22 @@
             (<span style="color:#ed9d13">"CANCELLED"</span> <span style="color:#24909d">:foreground</span> <span style="color:#ed9d13">"forest green"</span> <span style="color:#24909d">:weight</span> <span style="color:#40ffff">bold</span>)
             (<span style="color:#ed9d13">"MEETING"</span> <span style="color:#24909d">:foreground</span> <span style="color:#ed9d13">"forest green"</span> <span style="color:#24909d">:weight</span> <span style="color:#40ffff">bold</span>)
             (<span style="color:#ed9d13">"PHONE"</span> <span style="color:#24909d">:foreground</span> <span style="color:#ed9d13">"forest green"</span> <span style="color:#24909d">:weight</span> <span style="color:#40ffff">bold</span>))))
+<span style="color:#999;font-style:italic">;; I don't wan't the keywords in my exports</span>
 (<span style="color:#24909d">setq-default</span> <span style="color:#40ffff">org-export-with-todo-keywords</span> <span style="color:#40ffff">nil</span>)
-(<span style="color:#24909d">setq-default</span> <span style="color:#40ffff">org-enforce-todo-dependencies</span> <span style="color:#40ffff">t</span>)
 </code></pre>
       </div>
       <h3 id="org-todo-bullets">Org “TODO” bullets</h3>
-      <p>I use <a href="https://github.com/integral-dw/org-superstar-mode">org-superstar</a> to remove the keywords from my org files and replace them with nice icons.</p>
+      <p>I use <a href="https://github.com/integral-dw/org-superstar-mode">org-superstar</a> to remove the keywords from my org files and replace them with nice icons. This also hides the stars at the beginning of headlines. Different headline levels are recognized with the font-size, formatting and color. This is defined later.</p>
       <div class="highlight">
         <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(<span style="color:#24909d">with-eval-after-load</span> <span style="color:#ed9d13">'org-superstar</span>
-  <span style="color:#999;font-style:italic">;; Every non-TODO headline now have no bullet</span>
-  <span style="color:#999;font-style:italic">;; (setq org-superstar-headline-bullets-list '("\u200b"))</span>
-  <span style="color:#999;font-style:italic">;; (setq org-superstar-leading-bullet "\u200b")</span>
   (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-superstar-item-bullet-alist</span>
         '((<span style="color:#ed9d13">?*</span> . <span style="color:#ed9d13">?•</span>)
           (<span style="color:#ed9d13">?+</span> . <span style="color:#ed9d13">?➤</span>)
           (<span style="color:#ed9d13">?-</span> . <span style="color:#ed9d13">?•</span>)))
-  <span style="color:#999;font-style:italic">;; Enable custom bullets for TODO items</span>
   (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-superstar-headline-bullets-list</span> '(<span style="color:#ed9d13">?\s</span>))
   (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-superstar-special-todo-items</span> <span style="color:#40ffff">t</span>)
   (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-superstar-remove-leading-stars</span> <span style="color:#40ffff">t</span>)
+  <span style="color:#999;font-style:italic">;; Enable custom bullets for TODO items</span>
   (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-superstar-todo-bullet-alist</span>
         '((<span style="color:#ed9d13">"TODO"</span> . <span style="color:#ed9d13">?☐</span>)
           (<span style="color:#ed9d13">"NEXT"</span> . <span style="color:#ed9d13">?✒</span>)
@@ -191,7 +196,7 @@
       <h2 id="general-style">General style</h2>
       <p>This section covers the general look and feel of my org files.</p>
       <h3 id="proportional-width">Proportional width</h3>
-      <p>I use a function that I add as a hook to all the files I want to automatically set to variable width. You need to have the font installed for this to work.</p>
+      <p>I use a function that I add as a hook to all the files I want to automatically set to variable width (text-like font by opposition with programming fonts). You need to have the font installed for this to work.</p>
       <div class="highlight">
         <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(<span style="color:#24909d">defun</span> <span style="color:#40ffff">my/buffer-face-mode-variable</span> ()
   <span style="color:#ed9d13">"Set font to a variable width (proportional) fonts in current buffer"</span>
@@ -203,7 +208,7 @@
 </code></pre>
       </div>
       <h3 id="hide-face-characters">Hide face characters</h3>
-      <p>Hide <code>*</code> and <code>/</code> in org text.</p>
+      <p>Hide <code>*</code>, <code>~</code> and <code>/</code> in org text.</p>
       <div class="highlight">
         <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-hide-emphasis-markers</span> <span style="color:#40ffff">t</span>)
 </code></pre>
@@ -578,6 +583,8 @@
               <span style="color:#447fcf">#'</span><span style="color:#40ffff">org-roam-reflinks-insert-section</span>
               <span style="color:#447fcf">#'</span><span style="color:#40ffff">org-roam-unlinked-references-insert-section</span>))
   (<span style="color:#40ffff">org-roam-setup</span>)
+  (<span style="color:#40ffff">org-roam-db-autosync-mode</span>)
+  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-roam-v2-ack</span> <span style="color:#40ffff">t</span>)
   )
 (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-id-extra-files</span> (<span style="color:#40ffff">org-roam--list-files</span> <span style="color:#40ffff">org-roam-directory</span>))
 </code></pre>
@@ -606,6 +613,11 @@
       <p>This is not part of the org-mode configuration, but applies variable width mode to markdown files when I (rarely) edit one.</p>
       <div class="highlight">
         <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(<span style="color:#40ffff">add-hook</span> <span style="color:#ed9d13">'markdown-mode-hook</span> <span style="color:#ed9d13">'my/buffer-face-mode-variable</span>)
+</code></pre>
+      </div>
+      <h3 id="use-return-to-follow-links-in-org-mode">Use return to follow links in org-mode</h3>
+      <div class="highlight">
+        <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-return-follows-link</span> <span style="color:#40ffff">t</span>)
 </code></pre>
       </div>
     </main>
