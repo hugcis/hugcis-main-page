@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Projects on Hugo Cisneros - Personal page</title>
+    <title>Projects on Hugo Cisneros</title>
     <link>https://hugocisneros.com/projects/</link>
-    <description>Recent content in Projects on Hugo Cisneros - Personal page</description>
+    <description>Recent content in Projects on Hugo Cisneros</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 23 Apr 2021 14:24:46 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/projects/index.xml" rel="self" type="application/rss+xml" />

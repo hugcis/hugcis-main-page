@@ -2,6 +2,26 @@
     
     
     
+    {"body":" source (Adams et al. 2017) tags Open-ended Evolution, Cellular automata  Summary This paper defines two properties for dynamical systems which are claimed to be related to open-ended evolution: Unbounded evolution (UE) and Innovation (INN). The combination of these two properties makes a system open-ended according to this paper\u0026rsquo;s definition For such properties to be possible, a system has to be decomposed into two entities that interact with each other:\n an organism, an environment.  For the purpose of measuring \u0026ldquo;open-endedness\u0026rdquo;, the environment is ignored and the author wish to see if the organism can do more than what it could do if it was an isolated system.\n Figure 1: Figure 1 from the paper. Different systems might exhibit INN or UE. To go past its intrinsic Poincare recurrence time, a system needs to interact with an environment.\n  Unbounded evolution A system decomposed into an organism \\(o\\) and an environment \\(e\\) is said to exhibit UE if there exist a (state or rule) trajectory longer than the Poincaré recurrence time of the equivalent isolated organism.\nInnovation To exhibit innovation, a system \\(o + e\\) must have a trajectory not contained within the possible trajectories of an isolated version of \\(o\\).\nExperiments with CA extensions The authors experiment with a few extensions of the cellular automaton model to incorporate these organism/environment dynamics.\nComments Bibliography Adams, Alyssa, Hector Zenil, Paul C. W. Davies, and Sara Imari Walker. April 2017. \"Formal Definitions of Unbounded Evolution and Innovation Reveal Universal Mechanisms for Open-Ended Evolution in Dynamical Systems\". Scientific Reports 7 (1):997. DOI.","title":"Formal Definitions of Unbounded Evolution and Innovation Reveal Universal Mechanisms for...","url":"https://hugocisneros.com/notes/adamsformaldefinitionsunbounded2017/"}
+    
+    , 
+    
+    {"body":" tags Cryptography resources Monero  ","title":"Monero","url":"https://hugocisneros.com/notes/monero/"}
+    
+    , 
+    
+    {"body":" tags Cryptography  A ring signature is a protocol that allows a single entity from a group or public-private key pairs to sign a message in such a way that anyone can check the signature was indeed made by someone from that group but it is impossible to tell who exactly. It should also be very hard to create a fake signature without knowing any of the private keys from the group.\nThe cryptocurrency Monero uses a version of the ring signature protocol to make it very hard to know who was involved in some transaction.\n","title":"Ring signatures","url":"https://hugocisneros.com/notes/ring_signatures/"}
+    
+    , 
+    
+    {"body":" tags Dynamical systems  The Poincaré recurrence time for a finite dynamical system is the maximal theoretical time before after which the system will return to its initial state and the trajectory will repeat.\n","title":"Poincaré recurrence time","url":"https://hugocisneros.com/notes/poincare_recurrence_time/"}
+    
+    , 
+    
+    {"body":" tags Statistics  A set of numbers satisfies Benford\u0026rsquo;s law if the leading digits of these numbers occur with a probability logarithmically decreasing with the digit. More precisely, for \\(d \\in \\{1, \\ldots, 9\\}\\),\n\\[ P(d) = \\log_10 \\left(1 + \\frac{1}{d} \\right) \\]\n","title":"Benford's law","url":"https://hugocisneros.com/notes/benford_s_law/"}
+    
+    , 
+    
     {"body":" tags Cellular automata, Recurrent neural networks  Since cellular automata are a kind of dynamical system, they may also be seen as a type of recurrent neural network. They can even be seen as a recurrent-convolutional network because each of the \u0026ldquo;hidden neurons\u0026rdquo; update depends only on the neighboring neurons and the update rule is shared across the whole hidden state.\n","title":"Cellular automata as recurrent neural networks","url":"https://hugocisneros.com/notes/cellular_automata_as_recurrent_neural_networks/"}
     
     , 

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Reinforcement learning on Hugo Cisneros - Personal page</title>
+    <title>Reinforcement learning on Hugo Cisneros</title>
     <link>https://hugocisneros.com/tags/reinforcement-learning/</link>
-    <description>Recent content in Reinforcement learning on Hugo Cisneros - Personal page</description>
+    <description>Recent content in Reinforcement learning on Hugo Cisneros</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 30 Jan 2019 15:10:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/tags/reinforcement-learning/index.xml" rel="self" type="application/rss+xml" />

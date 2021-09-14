@@ -1,11 +1,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hugo Cisneros - Personal page</title>
+    <title>Hugo Cisneros</title>
     <link>https://hugocisneros.com/</link>
-    <description>Recent content on Hugo Cisneros - Personal page</description>
+    <description>Recent content on Hugo Cisneros</description>
     
     <language>en-us</language>
-    <lastBuildDate>Mon, 06 Sep 2021 16:06:00 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 14 Sep 2021 22:45:00 +0200</lastBuildDate>
     
     <atom:link href="https://hugocisneros.com/index.xml" rel="self" type="application/rss+xml" />
     
