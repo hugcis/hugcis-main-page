@@ -6,7 +6,66 @@
     <description>Recent content in Notes on Hugo Cisneros</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Sep 2021 22:50:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Sep 2021 13:54:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tropical semiring</title>
+      <link>https://hugocisneros.com/notes/tropical_semiring/</link>
+      <pubDate>Sun, 26 Sep 2021 13:54:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/tropical_semiring/</guid>
+      <description>tags Mathematics  Definition The min tropical semiring is the semiring \((\mathbb{R} \cup \{ +\infty \}, \oplus, \otimes )\) with the operations:
+ \(x \oplus y = \min(x, y)\) \(x \otimes y = x + y\)  The unit for \(\oplus\) is \(+\infty\) and the unit for \(\otimes\) is \(0\). The max tropical semiring is defined similarly by replacing \(\min\) with \(\max\).
+Relation with shortest path algorithms There is an interesting connection between the min tropical semiring and Dijkstra&amp;rsquo;s algorithm.</description>
+    </item>
+    
+    <item>
+      <title>Arithmetic coding</title>
+      <link>https://hugocisneros.com/notes/arithmetic_coding/</link>
+      <pubDate>Thu, 23 Sep 2021 09:07:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/arithmetic_coding/</guid>
+      <description>tags Compression, Entropy coding resources (Witten, Neal, and Cleary 1987)  Bibliography Witten, Ian H., Radford M. Neal, and John G. Cleary. 1987. &#34;Arithmetic Coding for Data Compression&#34;. Communications of the ACM 30 (6). ACM New York, NY, USA:520–40.</description>
+    </item>
+    
+    <item>
+      <title>Blue noise</title>
+      <link>https://hugocisneros.com/notes/blue_noise/</link>
+      <pubDate>Thu, 23 Sep 2021 09:07:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/blue_noise/</guid>
+      <description>tags Noise resources (Wong and Wong 2017)  Bibliography Wong, Kin-Ming, and Tien-Tsin Wong. June 1, 2017. &#34;Blue Noise Sampling Using an N-Body Simulation-Based Method&#34;. The Visual Computer 33 (6):823–32. DOI.</description>
+    </item>
+    
+    <item>
+      <title>Entropy coding</title>
+      <link>https://hugocisneros.com/notes/entropy_coding/</link>
+      <pubDate>Thu, 23 Sep 2021 08:50:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/entropy_coding/</guid>
+      <description> tags Compression, Entropy  </description>
+    </item>
+    
+    <item>
+      <title>Huffman coding</title>
+      <link>https://hugocisneros.com/notes/huffman_coding/</link>
+      <pubDate>Thu, 23 Sep 2021 08:45:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/huffman_coding/</guid>
+      <description> tags Compression  </description>
+    </item>
+    
+    <item>
+      <title>Variational autoencoders</title>
+      <link>https://hugocisneros.com/notes/variational_autoencoders/</link>
+      <pubDate>Wed, 22 Sep 2021 14:37:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/variational_autoencoders/</guid>
+      <description>tags Neural networks  Variational autoencoders (VAEs) are a type of generative Autoencoders.
+They use a Bayesian latent encoding for the input dataset.
+VAEs vs. GANs VAEs have fallen out of fashion when GANs became popular, because they were able to get visually interesting results more easily. However, some works a few years later seem to show that they have similar potential (Vahdat and Kautz 2020).
+Bibliography Vahdat, Arash, and Jan Kautz.</description>
+    </item>
+    
     <item>
       <title>Poincaré recurrence time</title>
       <link>https://hugocisneros.com/notes/poincare_recurrence_time/</link>
@@ -2873,17 +2932,6 @@ The study also shows that 93% of users had a unique fixed set of IP addresses du
       
       <guid>https://hugocisneros.com/notes/public_key_encryption/</guid>
       <description> tags Cryptography  RSA Diffie-Hellman Elliptic curve cryptography </description>
-    </item>
-    
-    <item>
-      <title>Variational autoencoders</title>
-      <link>https://hugocisneros.com/notes/variational_autoencoders/</link>
-      <pubDate>Mon, 13 Jul 2020 14:40:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/variational_autoencoders/</guid>
-      <description>tags Neural networks  Variational autoencoders (VAEs) are a type of generative Autoencoders.
-VAEs vs. GANs VAEs have fallen out of fashion when GANs became popular, because they were able to get visually interesting results more easily. However, some works a few years later seem to show that they have similar potential (Vahdat and Kautz 2020).
-Bibliography Vahdat, Arash, and Jan Kautz. July 8, 2020. &#34;NVAE: A Deep Hierarchical Variational Autoencoder&#34;</description>
     </item>
     
     <item>

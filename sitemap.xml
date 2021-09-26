@@ -4,12 +4,42 @@
     
     <url>
         <loc>https://hugocisneros.com/</loc>
-        <lastmod>2021-09-14T22:50:00+02:00</lastmod>
+        <lastmod>2021-09-26T13:54:00+02:00</lastmod>
     </url>
     
     <url>
         <loc>https://hugocisneros.com/notes/</loc>
-        <lastmod>2021-09-14T22:50:00+02:00</lastmod>
+        <lastmod>2021-09-26T13:54:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/tropical_semiring/</loc>
+        <lastmod>2021-09-26T13:54:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/arithmetic_coding/</loc>
+        <lastmod>2021-09-23T09:07:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/blue_noise/</loc>
+        <lastmod>2021-09-23T09:07:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/entropy_coding/</loc>
+        <lastmod>2021-09-23T08:50:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/huffman_coding/</loc>
+        <lastmod>2021-09-23T08:45:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/variational_autoencoders/</loc>
+        <lastmod>2021-09-22T14:37:00+02:00</lastmod>
     </url>
     
     <url>
@@ -1540,11 +1570,6 @@
     <url>
         <loc>https://hugocisneros.com/notes/public_key_encryption/</loc>
         <lastmod>2020-07-13T18:39:00+02:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/variational_autoencoders/</loc>
-        <lastmod>2020-07-13T14:40:00+02:00</lastmod>
     </url>
     
     <url>

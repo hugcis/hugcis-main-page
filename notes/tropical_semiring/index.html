@@ -4,13 +4,13 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1">
-  <title>Noise - Hugo Cisneros</title>
-  <meta property="og:title" content="Noise - Hugo Cisneros">
+  <title>Tropical semiring - Hugo Cisneros</title>
+  <meta property="og:title" content="Tropical semiring - Hugo Cisneros">
   <meta property="og:type" content="article">
   <meta property="og:image" content="/img/main.jpeg">
-  <meta property="og:url" content="https://hugocisneros.com/notes/noise/">
-  <meta property="og:description" content="Notes about Noise">
-  <meta name="Description" property="description" content="Notes about Noise">
+  <meta property="og:url" content="https://hugocisneros.com/notes/tropical_semiring/">
+  <meta property="og:description" content="Notes about Tropical semiring">
+  <meta name="Description" property="description" content="Notes about Tropical semiring">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@cisne_hug">
   <meta name="twitter:creator" content="@cisne_hug">
@@ -53,46 +53,33 @@
     <main class="content" role="main">
       <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
         <div class="single-note note-container">
-          <h1 class="article-title p-name" itemprop="name">Noise</h1>
+          <h1 class="article-title p-name" itemprop="name">Tropical semiring</h1>
           <div class="article-content e-content p-name" itemprop="articleBody">
             <dl>
               <dt>tags</dt>
               <dd>
-                <a href="/notes/statistics/">Statistics</a>, <a href="/notes/applied_maths/">Applied maths</a>
+                <a href="/notes/mathematics/">Mathematics</a>
               </dd>
             </dl>
-          </div>
-          <div class="bl-section">
-            <h2>Links to this note</h2>
-            <div class="backlinks">
-              <ul>
-                <li>
-                  <a href="/notes/alife_2020/">ALife 2020</a>
-                </li>
-                <li>
-                  <a href="/notes/article_uncertain_times/">Article: Uncertain times</a>
-                </li>
-                <li>
-                  <a href="/notes/blue_noise/">Blue noise</a>
-                </li>
-                <li>
-                  <a href="/notes/edge_detection/">Edge detection</a>
-                </li>
-                <li>
-                  <a href="/notes/lechnerneuralcircuitpolicies2020/">Notes on: Neural Circuit Policies Enabling Auditable Autonomy by Lechner, M., Hasani, R., Amini, A., Henzinger, T. A., Rus, D., & Grosu, R. (2020)</a>
-                </li>
-                <li>
-                  <a href="/notes/grbicsafereinforcementlearning2020/">Notes on: Safe Reinforcement Learning through Meta-learned Instincts by Grbic, D., & Risi, S. (2020)</a>
-                </li>
-              </ul>
-            </div>
+            <h2 id="definition">Definition</h2>
+            <p>The min tropical semiring is the semiring \((\mathbb{R} \cup \{ +\infty \}, \oplus, \otimes )\) with the operations:</p>
+            <ul>
+              <li>\(x \oplus y = \min(x, y)\)</li>
+              <li>\(x \otimes y = x + y\)</li>
+            </ul>
+            <p>The unit for \(\oplus\) is \(+\infty\) and the unit for \(\otimes\) is \(0\). The max tropical semiring is defined similarly by replacing \(\min\) with \(\max\).</p>
+            <h2 id="relation-with-shortest-path-algorithms">Relation with shortest path algorithms</h2>
+            <p>There is an interesting connection between the min tropical semiring and <a href="/notes/dijkstra_s_algorithm/">Dijkstra’s algorithm</a>.</p>
+            <p>Let \(G\) the weighted graph representing a shortest path problem and \(A\) its adjacency matrix (the elements of \(A\) are the weight between the nodes, or \(+\infty\) if there is no path between two node).</p>
+            <p>For \(k \in \mathbb{N}\), coefficient \(i, j\) of the matrix \(A^k\) contains the smallest cost of all path from node \(i\) to node \(j\) with \(k\) edges. Moreover, the vector \((+\infty, +\infty, …, 0, …, +\infty)A^n\) with a \(0\) in position \(p\) is the cost from any nodes to the target node \(p\).</p>
+            <p>See <a href="http://perso-laris.univ-angers.fr/~delanoue/seminar/medellin2019.pdf">these slides by Nicolas Delanoue</a> for some more details.</p>
           </div>
           <div class="note-footer">
-            Last changed <a class="u-url" href="https://hugocisneros.com/notes/noise/"><time itemprop="datePublished" class="dt-published" datetime="2020-07-27T14:03:00+0200">27/07/2020</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+            Last changed <a class="u-url" href="https://hugocisneros.com/notes/tropical_semiring/"><time itemprop="datePublished" class="dt-published" datetime="2021-09-26T13:54:00+0200">26/09/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
           </div>
         </div>
       </article><br>
-      <a href="/notes#noise"><b>← Back to Notes</b></a>
+      <a href="/notes#tropical_semiring"><b>← Back to Notes</b></a>
       <hr>
     </main>
     <footer class="footer">
