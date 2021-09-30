@@ -4,13 +4,13 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1">
-  <title>Variational autoencoders - Hugo Cisneros</title>
-  <meta property="og:title" content="Variational autoencoders - Hugo Cisneros">
+  <title>Residual neural networks - Hugo Cisneros</title>
+  <meta property="og:title" content="Residual neural networks - Hugo Cisneros">
   <meta property="og:type" content="article">
   <meta property="og:image" content="/img/main.jpeg">
-  <meta property="og:url" content="https://hugocisneros.com/notes/variational_autoencoders/">
-  <meta property="og:description" content="Notes about Variational autoencoders">
-  <meta name="Description" property="description" content="Notes about Variational autoencoders">
+  <meta property="og:url" content="https://hugocisneros.com/notes/residual_networks/">
+  <meta property="og:description" content="Notes about Residual neural networks">
+  <meta name="Description" property="description" content="Notes about Residual neural networks">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@cisne_hug">
   <meta name="twitter:creator" content="@cisne_hug">
@@ -53,23 +53,36 @@
     <main class="content" role="main">
       <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
         <div class="single-note note-container">
-          <h1 class="article-title p-name" itemprop="name">Variational autoencoders</h1>
+          <h1 class="article-title p-name" itemprop="name">Residual neural networks</h1>
           <div class="article-content e-content p-name" itemprop="articleBody">
             <dl>
               <dt>tags</dt>
               <dd>
                 <a href="/notes/neural_networks/">Neural networks</a>
               </dd>
+              <dt>resources</dt>
+              <dd>
+                (<a href="#orgddbaba5">He et al. 2016</a>)
+              </dd>
             </dl>
-            <p>Variational autoencoders (VAEs) are a type of generative <a href="/notes/autoencoders/">Autoencoders</a>.</p>
-            <p>They use a Bayesian latent encoding for the input dataset.</p>
-            <h2 id="vaes-vs-dot-gans--generative-adversarial-networks-dot-md">VAEs vs. <a href="/notes/generative_adversarial_networks/">GANs</a></h2>
-            <p>VAEs have fallen out of fashion when GANs became popular, because they were able to get visually interesting results more easily. However, some works a few years later seem to show that they have similar potential (<a href="#org873d529">Vahdat and Kautz 2020</a>).</p>
+            <p>Residual neural networks are neural networks with skip-connections (or shortcuts, residual connections) that will bypass some of the networks operations in depth.</p>
+            <h2 id="highway-networks">Highway networks</h2>
+            <p>(<a href="#org4036b02">Srivastava, Greff, and Schmidhuber 2015</a>)</p>
+            <h2 id="densenets">DenseNets</h2>
+            <p>(<a href="#orge939f08">Huang and Liu, n.d.</a>)</p>
             <h2 id="bibliography">Bibliography</h2>
             <ol class="biblio-list">
-              <a id="org873d529"></a>
+              <a id="orgddbaba5"></a>
               <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle">
-                <span itemprop="author"><span itemprop="author">Vahdat, Arash</span>, and <span itemprop="author">Jan Kautz</span></span>. <span datetime="2020" itemprop="datePublished">July 8, 2020</span>. "<span itemprop="name">NVAE: A Deep Hierarchical Variational Autoencoder</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">arXiv:2007.03898 [Cs, Stat]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2007.03898">http://arxiv.org/abs/2007.03898</a>.
+                <span itemprop="author"><span itemprop="author">He, Kaiming</span>, <span itemprop="author">Xiangyu Zhang</span>, <span itemprop="author">Shaoqing Ren</span>, and <span itemprop="author">Jian Sun</span></span>. <span datetime="2016" itemprop="datePublished">June 2016</span>. "<span itemprop="name">Deep Residual Learning for Image Recognition</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</i></span>, 770–78. Las Vegas, NV, USA: IEEE. <a itemprop="sameAs" href="https://doi.org/10.1109/CVPR.2016.90">DOI</a>.
+                <p><a id="orge939f08"></a></p>
+              </li>
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle">
+                <span itemprop="author"><span itemprop="author">Huang, Gao</span>, and <span itemprop="author">Zhuang Liu</span></span>. n.d. “<span itemprop="name">Densely Connected Convolutional Networks</span>”, 9.
+                <p><a id="org4036b02"></a></p>
+              </li>
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle">
+                <span itemprop="author"><span itemprop="author">Srivastava, Rupesh Kumar</span>, <span itemprop="author">Klaus Greff</span>, and <span itemprop="author">Jürgen Schmidhuber</span></span>. <span datetime="2015" itemprop="datePublished">November 3, 2015</span>. “<span itemprop="name">Highway Networks</span>”. <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">arXiv:1505.00387 [Cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/1505.00387"></a><a href="http://arxiv.org/abs/1505.00387">http://arxiv.org/abs/1505.00387</a>.
               </li>
             </ol>
           </div>
@@ -78,17 +91,17 @@
             <div class="backlinks">
               <ul>
                 <li>
-                  <a href="/notes/generative_adversarial_networks/">Generative adversarial networks</a>
+                  <a href="/notes/neural_networks_as_dynamical_systems/">Neural networks as dynamical systems</a>
                 </li>
               </ul>
             </div>
           </div>
           <div class="note-footer">
-            Last changed <a class="u-url" href="https://hugocisneros.com/notes/variational_autoencoders/"><time itemprop="datePublished" class="dt-published" datetime="2021-09-22T14:37:00+0200">22/09/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+            Last changed <a class="u-url" href="https://hugocisneros.com/notes/residual_networks/"><time itemprop="datePublished" class="dt-published" datetime="2021-09-30T13:26:00+0200">30/09/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
           </div>
         </div>
       </article><br>
-      <a href="/notes#variational_autoencoders"><b>← Back to Notes</b></a>
+      <a href="/notes#residual_networks"><b>← Back to Notes</b></a>
       <hr>
     </main>
     <footer class="footer">

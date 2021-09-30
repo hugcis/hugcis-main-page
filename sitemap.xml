@@ -4,17 +4,42 @@
     
     <url>
         <loc>https://hugocisneros.com/</loc>
-        <lastmod>2021-09-26T13:54:00+02:00</lastmod>
+        <lastmod>2021-09-30T14:47:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/graph_compression/</loc>
+        <lastmod>2021-09-30T14:47:00+02:00</lastmod>
     </url>
     
     <url>
         <loc>https://hugocisneros.com/notes/</loc>
-        <lastmod>2021-09-26T13:54:00+02:00</lastmod>
+        <lastmod>2021-09-30T14:47:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/neural_networks_as_dynamical_systems/</loc>
+        <lastmod>2021-09-30T14:46:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/residual_networks/</loc>
+        <lastmod>2021-09-30T13:26:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/learning_in_dynamical_systems/</loc>
+        <lastmod>2021-09-30T12:56:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/huffman_coding/</loc>
+        <lastmod>2021-09-30T12:36:00+02:00</lastmod>
     </url>
     
     <url>
         <loc>https://hugocisneros.com/notes/tropical_semiring/</loc>
-        <lastmod>2021-09-26T13:54:00+02:00</lastmod>
+        <lastmod>2021-09-30T12:36:00+02:00</lastmod>
     </url>
     
     <url>
@@ -30,11 +55,6 @@
     <url>
         <loc>https://hugocisneros.com/notes/entropy_coding/</loc>
         <lastmod>2021-09-23T08:50:00+02:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/huffman_coding/</loc>
-        <lastmod>2021-09-23T08:45:00+02:00</lastmod>
     </url>
     
     <url>
@@ -465,11 +485,6 @@
     <url>
         <loc>https://hugocisneros.com/notes/moore_penrose_inverse/</loc>
         <lastmod>2021-04-21T08:43:00+02:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/neural_networks_as_dynamical_systems/</loc>
-        <lastmod>2021-04-19T11:54:00+02:00</lastmod>
     </url>
     
     <url>
