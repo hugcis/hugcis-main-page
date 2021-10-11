@@ -6,7 +6,39 @@
     <description>Recent content in Notes on Hugo Cisneros</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Sep 2021 14:47:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 07 Oct 2021 13:37:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Variational autoencoders</title>
+      <link>https://hugocisneros.com/notes/variational_autoencoders/</link>
+      <pubDate>Thu, 07 Oct 2021 13:37:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/variational_autoencoders/</guid>
+      <description>tags Neural networks resources (Bishop 1994)  Variational autoencoders (VAEs) are a type of generative Autoencoders.
+They use a Bayesian latent encoding for the input dataset.
+VAEs vs. GANs VAEs have fallen out of fashion when GANs became popular, because they were able to get visually interesting results more easily. However, some works a few years later seem to show that they have similar potential (Vahdat and Kautz 2020).</description>
+    </item>
+    
+    <item>
+      <title>Word vectors</title>
+      <link>https://hugocisneros.com/notes/word_vectors/</link>
+      <pubDate>Thu, 07 Oct 2021 11:02:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/word_vectors/</guid>
+      <description>tags NLP  Definition Word vectors are abstract representation of words embedded in a dense space.
+They are closely related to Language modeling, since the implicit representation a language model builds for prediction can often be used as a word (or sentence) vector.
+Usage Word vectors can encode interesting information, such as semantic similarity between words. This can help for text classification tasks as it may be easier to learn a mapping between this intermediate space and a result rather than between the space of one-hot encoded words/sentences.</description>
+    </item>
+    
+    <item>
+      <title>Compression</title>
+      <link>https://hugocisneros.com/notes/compression/</link>
+      <pubDate>Tue, 05 Oct 2021 17:52:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/compression/</guid>
+      <description>Compression with Neural networks Compression can be done with the help of neural networks as estimators of the sequence&amp;rsquo;s next character probability (Schmidhuber and Heil 1996).
+Compression as a measure of Artificial Intelligence Mahoney argues in (Mahoney 1999) that being able to compress information amounts to being able to predict optimally the distribution of an inputs natural language corpus. A good compression algorithm &amp;ldquo;learns&amp;rdquo; features of the language to make better predictions.</description>
+    </item>
+    
     <item>
       <title>Graph compression</title>
       <link>https://hugocisneros.com/notes/graph_compression/</link>
@@ -94,18 +126,6 @@ Relation with shortest path algorithms There is an interesting connection betwee
       
       <guid>https://hugocisneros.com/notes/entropy_coding/</guid>
       <description> tags Compression, Entropy  </description>
-    </item>
-    
-    <item>
-      <title>Variational autoencoders</title>
-      <link>https://hugocisneros.com/notes/variational_autoencoders/</link>
-      <pubDate>Wed, 22 Sep 2021 14:37:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/variational_autoencoders/</guid>
-      <description>tags Neural networks  Variational autoencoders (VAEs) are a type of generative Autoencoders.
-They use a Bayesian latent encoding for the input dataset.
-VAEs vs. GANs VAEs have fallen out of fashion when GANs became popular, because they were able to get visually interesting results more easily. However, some works a few years later seem to show that they have similar potential (Vahdat and Kautz 2020).
-Bibliography Vahdat, Arash, and Jan Kautz.</description>
     </item>
     
     <item>
@@ -1753,17 +1773,6 @@ sed -i.bak &amp;#39;/to the/d&amp;#39; test.txt cat test.</description>
     </item>
     
     <item>
-      <title>Word vectors</title>
-      <link>https://hugocisneros.com/notes/word_vectors/</link>
-      <pubDate>Tue, 02 Mar 2021 10:12:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/word_vectors/</guid>
-      <description>tags NLP  Definition Word vectors are abstract representation of words embedded in a dense space.
-They are closely related to Language modeling, since the implicit representation a language model builds for prediction can often be used as a word (or sentence) vector.
-Usage Word vectors can encode interesting information, such as semantic similarity between words. This can help for text classification tasks as it may be easier to learn a mapping between this intermediate space and a result rather than between the space of one-hot encoded words/sentences.</description>
-    </item>
-    
-    <item>
       <title>3-SAT</title>
       <link>https://hugocisneros.com/notes/3_sat/</link>
       <pubDate>Tue, 02 Mar 2021 10:01:00 +0100</pubDate>
@@ -2135,16 +2144,6 @@ Bibliography Cook, Matthew. 2004. &#34;Universality in Elementary Cellular Autom
       <guid>https://hugocisneros.com/notes/raven_s_progressive_matrices/</guid>
       <description>tags Artificial intelligence test  It is a visual test used to estimate abstract reasoning. The patterns are often between 2x2 and 6x6 matrices of symbols. One of these symbols is usually left blank and supposed to be deduced from the others.
 The overall concept is very similar to the Abstraction and Reasoning Corpus but is much more tied to human vision. This makes the range of possible tasks much larger but also harder to integrate in an algorithm.</description>
-    </item>
-    
-    <item>
-      <title>Compression</title>
-      <link>https://hugocisneros.com/notes/compression/</link>
-      <pubDate>Wed, 07 Oct 2020 16:22:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/compression/</guid>
-      <description>Compression with Neural networks Compression can be done with the help of neural networks as estimators of the sequence&amp;rsquo;s next character probability (Schmidhuber and Heil 1996).
-Compression as a measure of Artificial Intelligence Mahoney argues in (Mahoney 1999) that being able to compress information amounts to being able to predict optimally the distribution of an inputs natural language corpus. A good compression algorithm &amp;ldquo;learns&amp;rdquo; features of the language to make better predictions.</description>
     </item>
     
     <item>

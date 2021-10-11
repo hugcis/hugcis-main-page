@@ -2,6 +2,18 @@
     
     
     
+    {"body":" tags Neural networks resources (Bishop 1994)  Variational autoencoders (VAEs) are a type of generative Autoencoders.\nThey use a Bayesian latent encoding for the input dataset.\nVAEs vs. GANs VAEs have fallen out of fashion when GANs became popular, because they were able to get visually interesting results more easily. However, some works a few years later seem to show that they have similar potential (Vahdat and Kautz 2020).\nBibliography Vahdat, Arash, and Jan Kautz. July 8, 2020. \"NVAE: A Deep Hierarchical Variational Autoencoder\". arXiv:2007.03898 [Cs, Stat]. http://arxiv.org/abs/2007.03898. Bishop, Christopher M.. 1994. \u0026ldquo;Mixture Density Networks\u0026rdquo;. Aston University.\n","title":"Variational autoencoders","url":"https://hugocisneros.com/notes/variational_autoencoders/"}
+    
+    , 
+    
+    {"body":" tags NLP  Definition Word vectors are abstract representation of words embedded in a dense space.\nThey are closely related to Language modeling, since the implicit representation a language model builds for prediction can often be used as a word (or sentence) vector.\nUsage Word vectors can encode interesting information, such as semantic similarity between words. This can help for text classification tasks as it may be easier to learn a mapping between this intermediate space and a result rather than between the space of one-hot encoded words/sentences.\n(Schütze 1993)\nBibliography Schütze, Hinrich. 1993. \"Word Space\". In Advances in Neural Information Processing Systems 5, 895–902. Morgan Kaufmann.","title":"Word vectors","url":"https://hugocisneros.com/notes/word_vectors/"}
+    
+    , 
+    
+    {"body":"Compression with Neural networks Compression can be done with the help of neural networks as estimators of the sequence\u0026rsquo;s next character probability (Schmidhuber and Heil 1996).\nCompression as a measure of Artificial Intelligence Mahoney argues in (Mahoney 1999) that being able to compress information amounts to being able to predict optimally the distribution of an inputs natural language corpus. A good compression algorithm \u0026ldquo;learns\u0026rdquo; features of the language to make better predictions. This is maybe one of the original motivation for language modeling, and can be used as an artificial intelligence test.\nCompression as a measure of Complexity Compression algorithms have long been used as a way of measuring complexity of data.\nBibliography Schmidhuber, J., and S. Heil. January 1996. \"Sequential Neural Text Compression\". IEEE Transactions on Neural Networks 7 (1):142–46. DOI. Mahoney, Matthew V. 1999. \u0026ldquo;Text Compression as a Test for Artificial Intelligence\u0026rdquo;. In Proceedings of AAAI-1999, 3.\n","title":"Compression","url":"https://hugocisneros.com/notes/compression/"}
+    
+    , 
+    
     {"body":" tags Compression, Graphs  (Bouritsas et al. 2021)\nBibliography Bouritsas, Giorgos, Andreas Loukas, Nikolaos Karalias, and Michael M. Bronstein. July 5, 2021. \"Partition and Code: Learning How to Compress Graphs\". arXiv:2107.01952 [Cs, Math, Stat]. http://arxiv.org/abs/2107.01952.","title":"Graph compression","url":"https://hugocisneros.com/notes/graph_compression/"}
     
     , 
@@ -35,10 +47,6 @@
     , 
     
     {"body":" tags Compression, Entropy  ","title":"Entropy coding","url":"https://hugocisneros.com/notes/entropy_coding/"}
-    
-    , 
-    
-    {"body":" tags Neural networks  Variational autoencoders (VAEs) are a type of generative Autoencoders.\nThey use a Bayesian latent encoding for the input dataset.\nVAEs vs. GANs VAEs have fallen out of fashion when GANs became popular, because they were able to get visually interesting results more easily. However, some works a few years later seem to show that they have similar potential (Vahdat and Kautz 2020).\nBibliography Vahdat, Arash, and Jan Kautz. July 8, 2020. \"NVAE: A Deep Hierarchical Variational Autoencoder\". arXiv:2007.03898 [Cs, Stat]. http://arxiv.org/abs/2007.03898.","title":"Variational autoencoders","url":"https://hugocisneros.com/notes/variational_autoencoders/"}
     
     , 
     
@@ -702,10 +710,6 @@
     
     , 
     
-    {"body":" tags NLP  Definition Word vectors are abstract representation of words embedded in a dense space.\nThey are closely related to Language modeling, since the implicit representation a language model builds for prediction can often be used as a word (or sentence) vector.\nUsage Word vectors can encode interesting information, such as semantic similarity between words. This can help for text classification tasks as it may be easier to learn a mapping between this intermediate space and a result rather than between the space of one-hot encoded words/sentences.\n","title":"Word vectors","url":"https://hugocisneros.com/notes/word_vectors/"}
-    
-    , 
-    
     {"body":" tags Logic  ","title":"3-SAT","url":"https://hugocisneros.com/notes/3_sat/"}
     
     , 
@@ -855,10 +859,6 @@
     , 
     
     {"body":" tags Artificial intelligence test  It is a visual test used to estimate abstract reasoning. The patterns are often between 2x2 and 6x6 matrices of symbols. One of these symbols is usually left blank and supposed to be deduced from the others.\nThe overall concept is very similar to the Abstraction and Reasoning Corpus but is much more tied to human vision. This makes the range of possible tasks much larger but also harder to integrate in an algorithm. You already need a powerful computer vision system that can convert the matrix into a usable representation before you even try to implement reasoning.\n","title":"Raven's progressive matrices","url":"https://hugocisneros.com/notes/raven_s_progressive_matrices/"}
-    
-    , 
-    
-    {"body":"Compression with Neural networks Compression can be done with the help of neural networks as estimators of the sequence\u0026rsquo;s next character probability (Schmidhuber and Heil 1996).\nCompression as a measure of Artificial Intelligence Mahoney argues in (Mahoney 1999) that being able to compress information amounts to being able to predict optimally the distribution of an inputs natural language corpus. A good compression algorithm \u0026ldquo;learns\u0026rdquo; features of the language to make better predictions. This is maybe one of the original motivation for language modeling, and can be used as an artificial intelligence test.\nCompression as a measure of Complexity Compression algorithms have long been used as a way of measuring complexity of data.\nBibliography Schmidhuber, J., and S. Heil. January 1996. \"Sequential Neural Text Compression\". IEEE Transactions on Neural Networks 7 (1):142–46. DOI. Mahoney, Matthew V. 1999. \u0026ldquo;Text Compression as a Test for Artificial Intelligence\u0026rdquo;. In Proceedings of AAAI-1999, 3.\n","title":"Compression","url":"https://hugocisneros.com/notes/compression/"}
     
     , 
     

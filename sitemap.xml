@@ -4,16 +4,31 @@
     
     <url>
         <loc>https://hugocisneros.com/</loc>
-        <lastmod>2021-09-30T14:47:00+02:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/graph_compression/</loc>
-        <lastmod>2021-09-30T14:47:00+02:00</lastmod>
+        <lastmod>2021-10-07T13:37:00+02:00</lastmod>
     </url>
     
     <url>
         <loc>https://hugocisneros.com/notes/</loc>
+        <lastmod>2021-10-07T13:37:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/variational_autoencoders/</loc>
+        <lastmod>2021-10-07T13:37:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/word_vectors/</loc>
+        <lastmod>2021-10-07T11:02:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/compression/</loc>
+        <lastmod>2021-10-05T17:52:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/graph_compression/</loc>
         <lastmod>2021-09-30T14:47:00+02:00</lastmod>
     </url>
     
@@ -55,11 +70,6 @@
     <url>
         <loc>https://hugocisneros.com/notes/entropy_coding/</loc>
         <lastmod>2021-09-23T08:50:00+02:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/variational_autoencoders/</loc>
-        <lastmod>2021-09-22T14:37:00+02:00</lastmod>
     </url>
     
     <url>
@@ -963,11 +973,6 @@
     </url>
     
     <url>
-        <loc>https://hugocisneros.com/notes/word_vectors/</loc>
-        <lastmod>2021-03-02T10:12:00+01:00</lastmod>
-    </url>
-    
-    <url>
         <loc>https://hugocisneros.com/notes/3_sat/</loc>
         <lastmod>2021-03-02T10:01:00+01:00</lastmod>
     </url>
@@ -1155,11 +1160,6 @@
     <url>
         <loc>https://hugocisneros.com/notes/raven_s_progressive_matrices/</loc>
         <lastmod>2020-10-16T10:57:00+02:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/compression/</loc>
-        <lastmod>2020-10-07T16:22:00+02:00</lastmod>
     </url>
     
     <url>
