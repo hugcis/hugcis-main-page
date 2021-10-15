@@ -6,7 +6,17 @@
     <description>Recent content in Notes on Hugo Cisneros</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 07 Oct 2021 13:37:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 15 Oct 2021 15:18:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Continual learning</title>
+      <link>https://hugocisneros.com/notes/continual_learning/</link>
+      <pubDate>Fri, 15 Oct 2021 15:18:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/continual_learning/</guid>
+      <description>tags Machine learning  Continual learning is a type of supervised learning where there is no &amp;ldquo;testing phase&amp;rdquo; associated to a decision process. Instead, training samples keep being processed by the algorithm which has to simultaneously make predictions and keep learning.
+This is challenging for a fixed neural network architecture since it has a fixed capacity and is bound to either forget things or be unable to learn anything new.</description>
+    </item>
+    
     <item>
       <title>Variational autoencoders</title>
       <link>https://hugocisneros.com/notes/variational_autoencoders/</link>
@@ -1985,17 +1995,6 @@ Universal approximation theorem Cybenko showed in 1989 that a neural network of 
       <description>tags Complexity  To study the complexity of various systems, researchers have come up with various metrics. They are based on several principles such as Information theory or Algorithmic Information theory. Many of these metrics are described in (Grassberger 1989).
 Shannon entropy and Kolmogorov Complexity The paper (Grunwald and Vitanyi, n.d.) is a great description and analysis of two of the most important Complexity metrics:
  Shannon entropy Kolmogorov complexity  Information-theoretic metrics  Shannon entropy  AIT based metrics For a Universal computer \(U\) the algorithmic information of \(S\) relative to \(U\) is defined as the length of the shortest program that yields \(S\) on \(U\).</description>
-    </item>
-    
-    <item>
-      <title>Continual learning</title>
-      <link>https://hugocisneros.com/notes/continual_learning/</link>
-      <pubDate>Fri, 27 Nov 2020 12:43:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/continual_learning/</guid>
-      <description>tags Machine learning  Continual learning is a type of supervised learning where there is no &amp;ldquo;testing phase&amp;rdquo; associated to a decision process. Instead, training samples keep being processed by the algorithm which has to simultaneously make predictions and keep learning.
-A definition from the survey (De Lange et al. 2020):
- The General Continual Learning setting considers an infinite stream of training data where at each time step, the system receives a (number of) new sample(s) drawn non i.</description>
     </item>
     
     <item>
