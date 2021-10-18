@@ -63,13 +63,13 @@
             </dl>
             <p>Continual learning is a type of <a href="/notes/supervised_learning/">supervised learning</a> where there is no “testing phase” associated to a decision process. Instead, training samples keep being processed by the <a href="/notes/algorithm/">algorithm</a> which has to simultaneously make predictions and keep learning.</p>
             <p>This is challenging for a fixed neural network architecture since it has a fixed capacity and is bound to either forget things or be unable to learn anything new.</p>
-            <p>A definition from the survey (<a href="#org0664eb0">De Lange et al. 2020</a>):</p>
+            <p>A definition from the survey (<a href="#org9681aff">De Lange et al. 2020</a>):</p>
             <blockquote>
               <p>The General Continual Learning setting considers an infinite stream of training data where at each time step, the system receives a (number of) new sample(s) drawn non i.i.d from a current distribution that could itself experience sudden of gradual changes.</p>
             </blockquote>
             <h2 id="examples-of-continual-learning-systems">Examples of continual learning systems</h2>
             <ul>
-              <li>Never Ending Language Learner (NELL) (<a href="#org77257e3">Carlson, Betteridge, and Kisiel 2010</a>)
+              <li>Never Ending Language Learner (NELL) (<a href="#orgc9e3685">Carlson, Betteridge, and Kisiel 2010</a>)
               </li>
             </ul>
             <h2 id="benchmarks">Benchmarks</h2>
@@ -85,13 +85,13 @@
                 <p>Split mini-ImageNet: a mini ImageNet (100 classes) task split into 20 5-classes tasks.</p>
               </li>
               <li>
-                <p>Continual Transfer Learning Benchmark: <a href="https://github.com/facebookresearch/CTrLBenchmark">A benchmark from Facebook AI</a>, built from 7 computer vision datasets: MNIST, CIFAR10, CIFAR100, DTD, SVHN, Rainbow-MNIST, Fashion MNIST. The tasks are all 5-classes or 10-classes classification tasks. Some example task sequence constructions from (<a href="#orgbe9f18e">Veniat, Denoyer, and Ranzato 2021</a>):</p>
+                <p>Continual Transfer Learning Benchmark: <a href="https://github.com/facebookresearch/CTrLBenchmark">A benchmark from Facebook AI</a>, built from 7 computer vision datasets: MNIST, CIFAR10, CIFAR100, DTD, SVHN, Rainbow-MNIST, Fashion MNIST. The tasks are all 5-classes or 10-classes classification tasks. Some example task sequence constructions from (<a href="#org279f533">Veniat, Denoyer, and Ranzato 2021</a>):</p>
                 <blockquote>
                   <p>The last task of \(S_out\) consists of a shuffling of the output labels of the first task. The last task of \(S_in\) is the same as its first task except that MNIST images have a different background color. \(S_long\) has 100 tasks, and it is constructed by first sampling a dataset, then 5 classes at random, and finally the amount of training data from a distribution that favors small tasks by the end of the learning experience.</p>
                 </blockquote>
               </li>
               <li>
-                <p>Permuted MNIST: here for each different task the pixels of the MNIST digits are permuted, generating a new task of equal difficulty as the original one but different solution. This task is not suitable if the model has some spatial prior (like a <a href="/notes/convolutional_neural_networks/">CNN</a>). Used first in (<a href="#org3ba778f">Kirkpatrick et al. 2017</a>).</p>
+                <p>Permuted MNIST: here for each different task the pixels of the MNIST digits are permuted, generating a new task of equal difficulty as the original one but different solution. This task is not suitable if the model has some spatial prior (like a <a href="/notes/convolutional_neural_networks/">CNN</a>). Used first in (<a href="#orgf446669">Kirkpatrick et al. 2017</a>).</p>
               </li>
               <li>
                 <p>Rotated MNIST: each task contains digits rotated by a fixed angle between 0 and 180 degrees.</p>
@@ -99,18 +99,18 @@
             </ul>
             <h2 id="bibliography">Bibliography</h2>
             <ol class="biblio-list">
-              <a id="org77257e3"></a>
+              <a id="orgc9e3685"></a>
               <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle">
                 <span itemprop="author"><span itemprop="author">Carlson, Andrew</span>, <span itemprop="author">Justin Betteridge</span>, and <span itemprop="author">Bryan Kisiel</span></span>. <span datetime="2010" itemprop="datePublished">2010</span>. "<span itemprop="name">Toward an Architecture for Never-Ending Language Learning.</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">In Proceedings of the Conference on Artificial Intelligence (AAAI) (2010)</i></span>, 1306–13. <a itemprop="sameAs" href="https://doi.org/10.1002/ajp.20927">DOI</a>.
-                <p><a id="org0664eb0"></a></p>
+                <p><a id="org9681aff"></a></p>
               </li>
               <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle">
                 <span itemprop="author"><span itemprop="author">De Lange, Matthias</span>, <span itemprop="author">Rahaf Aljundi</span>, <span itemprop="author">Marc Masana</span>, <span itemprop="author">Sarah Parisot</span>, <span itemprop="author">Xu Jia</span>, <span itemprop="author">Ales Leonardis</span>, <span itemprop="author">Gregory Slabaugh</span>, and <span itemprop="author">Tinne Tuytelaars</span></span>. <span datetime="2020" itemprop="datePublished">May 26, 2020</span>. “<span itemprop="name">A Continual Learning Survey: Defying Forgetting in Classification Tasks</span>”. <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">arXiv:1909.08383 [Cs, Stat]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/1909.08383"></a><a href="http://arxiv.org/abs/1909.08383">http://arxiv.org/abs/1909.08383</a>.
-                <p><a id="org3ba778f"></a></p>
+                <p><a id="orgf446669"></a></p>
               </li>
               <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle">
                 <span itemprop="author"><span itemprop="author">Kirkpatrick, James</span>, <span itemprop="author">Razvan Pascanu</span>, <span itemprop="author">Neil Rabinowitz</span>, <span itemprop="author">Joel Veness</span>, <span itemprop="author">Guillaume Desjardins</span>, <span itemprop="author">Andrei A. Rusu</span>, <span itemprop="author">Kieran Milan</span>, et al.</span>. <span datetime="2017" itemprop="datePublished">January 25, 2017</span>. “<span itemprop="name">Overcoming Catastrophic Forgetting in Neural Networks</span>”. <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">arXiv:1612.00796 [Cs, Stat]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/1612.00796"></a><a href="http://arxiv.org/abs/1612.00796">http://arxiv.org/abs/1612.00796</a>.
-                <p><a id="orgbe9f18e"></a></p>
+                <p><a id="org279f533"></a></p>
               </li>
               <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle">
                 <span itemprop="author"><span itemprop="author">Veniat, Tom</span>, <span itemprop="author">Ludovic Denoyer</span>, and <span itemprop="author">Marc’Aurelio Ranzato</span></span>. <span datetime="2021" itemprop="datePublished">February 12, 2021</span>. “<span itemprop="name">Efficient Continual Learning with Modular Networks and Task-Driven Priors</span>”. <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">arXiv:2012.12631 [Cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2012.12631"></a><a href="http://arxiv.org/abs/2012.12631">http://arxiv.org/abs/2012.12631</a>.
@@ -121,6 +121,9 @@
             <h2>Links to this note</h2>
             <div class="backlinks">
               <ul>
+                <li>
+                  <a href="/notes/catastrophic_forgetting/">Catastrophic forgetting</a>
+                </li>
                 <li>
                   <a href="/notes/hudrinkingfirehosecontinual2020/">Notes on: Drinking from a Firehose: Continual Learning with Web-scale Natural Language by Hu, H., Sener, O., Sha, F., & Koltun, V. (2020)</a>
                 </li>

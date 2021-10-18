@@ -6,7 +6,28 @@
     <description>Recent content in Notes on Hugo Cisneros</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 15 Oct 2021 15:18:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 18 Oct 2021 09:53:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Catastrophic forgetting</title>
+      <link>https://hugocisneros.com/notes/catastrophic_forgetting/</link>
+      <pubDate>Mon, 18 Oct 2021 09:53:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/catastrophic_forgetting/</guid>
+      <description>tags Machine learning  Catastrophic forgetting is the name given to a common problem of machine learning models: when training on some new data from a new distribution (a new &amp;ldquo;task&amp;rdquo;), many models forget what they learned from the first task.
+This isn&amp;rsquo;t surprising since models are following a loss function that is often applied solely on the task at hand, and not constraining the model to retain past information.</description>
+    </item>
+    
+    <item>
+      <title>Conway&#39;s Game of Life</title>
+      <link>https://hugocisneros.com/notes/conway_s_game_of_life/</link>
+      <pubDate>Mon, 18 Oct 2021 08:56:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/conway_s_game_of_life/</guid>
+      <description>tags Cellular automata resources (Gardner 1970)  It is one of the most famous Cellular automata rule, invented as a game by mathematician John Conway.
+Learn the game of life with a neural network This paper investigates how hard it is for neural networks to approximate the Game of Life rule (Springer and Kenyon 2020).
+Bibliography Springer, Jacob M., and Garrett T. Kenyon. September 2, 2020. &#34;It’s Hard for Neural Networks to Learn the Game of Life&#34;</description>
+    </item>
+    
     <item>
       <title>Continual learning</title>
       <link>https://hugocisneros.com/notes/continual_learning/</link>
@@ -499,17 +520,6 @@ One can use these biases in randomly initialized networks as a basis for interes
       <description>tags NLP, Computer science source (Weiss, Goldberg, and Yahav 2021)  Summary This paper introduces a programming language that is inspired by the way Transformers process input data. The language is called Restricted Access Sequence Processing Language (RASP).
 Data is represented as sequences, which is the structure transformers manipulate (since they have been designed for NLP applications). The language has two types of internal data representation:
  Sequence operators (s-ops) are functions that translate sequences into sequences.</description>
-    </item>
-    
-    <item>
-      <title>Conway&#39;s Game of Life</title>
-      <link>https://hugocisneros.com/notes/conway_s_game_of_life/</link>
-      <pubDate>Wed, 25 Aug 2021 14:49:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/conway_s_game_of_life/</guid>
-      <description>tags Cellular automata resources (Gardner 1970)  It is one of the most famous Cellular automata rule, invented as a game by mathematician John Conway.
-Learn the game of life with a neural network (Springer and Kenyon 2020)
-Bibliography Springer, Jacob M., and Garrett T. Kenyon. September 2, 2020. &#34;It’s Hard for Neural Networks to Learn the Game of Life&#34;. arXiv:2009.01398 [Cs, Stat]. http://arxiv.org/abs/2009.01398. Gardner, Martin. October 1970. &amp;ldquo;Mathematical Games&amp;rdquo;.</description>
     </item>
     
     <item>
