@@ -123,6 +123,9 @@
             <a href="#org-caldav">Org Caldav</a>
           </li>
           <li>
+            <a href="#org-journal">Org journal</a>
+          </li>
+          <li>
             <a href="#misc">Misc</a>
             <ul>
               <li>
@@ -214,8 +217,10 @@
 </code></pre>
       </div>
       <h3 id="faces-setup">Faces setup</h3>
+      <p>We define a few functions that will be run when we open an org file to style it.</p>
+      <p>The first one sets the text to be variable pitch but revert it back to fixed-pitch for code block, properties, etc.</p>
       <div class="highlight">
-        <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(<span style="color:#24909d">defun</span> <span style="color:#40ffff">my/style-org</span> ()
+        <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(<span style="color:#24909d">defun</span> <span style="color:#40ffff">my/set-general-faces-org</span> ()
   <span style="color:#999;font-style:italic">;; I have removed indentation to make the file look cleaner</span>
   (<span style="color:#40ffff">org-indent-mode</span> <span style="color:#3677a9">-1</span>)
   (<span style="color:#40ffff">my/buffer-face-mode-variable</span>)
@@ -247,9 +252,12 @@
          <span style="color:#ed9d13">'org-meta-line</span>
          <span style="color:#ed9d13">'org-drawer</span>
          <span style="color:#ed9d13">'org-property-value</span>
-         ))
-  <span style="color:#999;font-style:italic">;; (set-face-attribute 'org-indent nil</span>
-  <span style="color:#999;font-style:italic">;; :inherit '(org-hide fixed-pitch))</span>
+         )))
+</code></pre>
+      </div>
+      <p>This function set the colors and size of headlines.</p>
+      <div class="highlight">
+        <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(<span style="color:#24909d">defun</span> <span style="color:#40ffff">my/set-specific-faces-org</span> ()
   (<span style="color:#40ffff">set-face-attribute</span> <span style="color:#ed9d13">'org-code</span> <span style="color:#40ffff">nil</span>
                       <span style="color:#24909d">:inherit</span> '(<span style="color:#40ffff">shadow</span> <span style="color:#40ffff">fixed-pitch</span>))
   <span style="color:#999;font-style:italic">;; Without indentation the headlines need to be different to be visible</span>
@@ -278,7 +286,12 @@
   (<span style="color:#40ffff">set-face-attribute</span> <span style="color:#ed9d13">'org-ellipsis</span> <span style="color:#40ffff">nil</span>
                       <span style="color:#24909d">:foreground</span> <span style="color:#ed9d13">"#4f747a"</span> <span style="color:#24909d">:underline</span> <span style="color:#40ffff">nil</span>)
   (<span style="color:#40ffff">set-face-attribute</span> <span style="color:#ed9d13">'variable-pitch</span> <span style="color:#40ffff">nil</span>
-                      <span style="color:#24909d">:family</span> <span style="color:#ed9d13">"Roboto Slab"</span> <span style="color:#24909d">:height</span> <span style="color:#3677a9">1.2</span>)
+                      <span style="color:#24909d">:family</span> <span style="color:#ed9d13">"Roboto Slab"</span> <span style="color:#24909d">:height</span> <span style="color:#3677a9">1.2</span>))
+</code></pre>
+      </div>
+      <p>This function will hide some TODO keywords and other keywords and replace them with special symbols.</p>
+      <div class="highlight">
+        <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(<span style="color:#24909d">defun</span> <span style="color:#40ffff">my/set-keyword-faces-org</span> ()
   (<span style="color:#447fcf">mapc</span> (<span style="color:#24909d">lambda</span> (<span style="color:#40ffff">pair</span>) (<span style="color:#24909d">push</span> <span style="color:#40ffff">pair</span> <span style="color:#40ffff">prettify-symbols-alist</span>))
         '(<span style="color:#999;font-style:italic">;; Syntax</span>
           (<span style="color:#ed9d13">"TODO"</span> .     <span style="color:#ed9d13">""</span>)
@@ -293,6 +306,11 @@
   (<span style="color:#40ffff">org-superstar-mode</span> <span style="color:#3677a9">+1</span>)
   )
 
+(<span style="color:#24909d">defun</span> <span style="color:#40ffff">my/style-org</span> ()
+  (<span style="color:#40ffff">my/set-general-faces-org</span>)
+  (<span style="color:#40ffff">my/set-specific-faces-org</span>)
+  (<span style="color:#40ffff">my/set-keyword-faces-org</span>)
+  )
 (<span style="color:#40ffff">add-hook</span> <span style="color:#ed9d13">'org-mode-hook</span> <span style="color:#ed9d13">'my/style-org</span>)
 </code></pre>
       </div>
@@ -491,7 +509,6 @@
           (<span style="color:#24909d">lambda</span> ()
             (<span style="color:#447fcf">define-key</span> <span style="color:#40ffff">org-journal-mode-map</span>
               (<span style="color:#40ffff">kbd</span> <span style="color:#ed9d13">"C-x C-s"</span>) <span style="color:#ed9d13">'org-journal-save-entry-and-exit</span>)))
-(<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-journal-dir</span> <span style="color:#ed9d13">"~/org/journal/"</span>)
 </code></pre>
       </div>
       <h2 id="org-ref-and-bibtex">Org Ref and Bibtex</h2>
@@ -602,6 +619,13 @@
         (<span style="color:#40ffff">org-caldav-url</span> <span style="color:#ed9d13">"https://cld.hugocisneros.com/remote.php/dav/calendars/ncp/"</span>)
         (<span style="color:#40ffff">org-caldav-files</span> '(<span style="color:#ed9d13">"~/org/calendar.org"</span>)))
     (<span style="color:#447fcf">call-interactively</span> <span style="color:#ed9d13">'org-caldav-sync</span>)))
+</code></pre>
+      </div>
+      <h2 id="org-journal">Org journal</h2>
+      <p><a href="https://github.com/bastibe/org-journal">Org journal</a> is a package to create and maintain a journal/diary within Emacs. Here I set some of the options: the base directory for the journal and GPG encryption of journal files (uses org-crypt).</p>
+      <div class="highlight">
+        <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-journal-dir</span> <span style="color:#ed9d13">"~/org/journal/"</span>)
+(<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-journal-enable-encryption</span> <span style="color:#40ffff">t</span>)
 </code></pre>
       </div>
       <h2 id="misc">Misc</h2>

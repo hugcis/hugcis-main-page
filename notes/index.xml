@@ -6,7 +6,18 @@
     <description>Recent content in Notes on Hugo Cisneros</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 18 Oct 2021 09:53:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 27 Oct 2021 10:01:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Word vectors</title>
+      <link>https://hugocisneros.com/notes/word_vectors/</link>
+      <pubDate>Wed, 27 Oct 2021 10:01:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/word_vectors/</guid>
+      <description>tags NLP  Definition Word vectors are abstract representation of words embedded in a dense space.
+They are closely related to Language modeling, since the implicit representation a language model builds for prediction can often be used as a word (or sentence) vector.
+Usage Word vectors can encode interesting information, such as semantic similarity between words. This can help for text classification tasks as it may be easier to learn a mapping between this intermediate space and a result rather than between the space of one-hot encoded words/sentences.</description>
+    </item>
+    
     <item>
       <title>Catastrophic forgetting</title>
       <link>https://hugocisneros.com/notes/catastrophic_forgetting/</link>
@@ -23,9 +34,9 @@ This isn&amp;rsquo;t surprising since models are following a loss function that 
       <pubDate>Mon, 18 Oct 2021 08:56:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/conway_s_game_of_life/</guid>
-      <description>tags Cellular automata resources (Gardner 1970)  It is one of the most famous Cellular automata rule, invented as a game by mathematician John Conway.
-Learn the game of life with a neural network This paper investigates how hard it is for neural networks to approximate the Game of Life rule (Springer and Kenyon 2020).
-Bibliography Springer, Jacob M., and Garrett T. Kenyon. September 2, 2020. &#34;It’s Hard for Neural Networks to Learn the Game of Life&#34;</description>
+      <description>tags Cellular automata resources    It is one of the most famous Cellular automata rule, invented as a game by mathematician John Conway.
+Learn the game of life with a neural network This paper investigates how hard it is for neural networks to approximate the Game of Life rule .
+&amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -47,17 +58,6 @@ This is challenging for a fixed neural network architecture since it has a fixed
       <description>tags Neural networks resources (Bishop 1994)  Variational autoencoders (VAEs) are a type of generative Autoencoders.
 They use a Bayesian latent encoding for the input dataset.
 VAEs vs. GANs VAEs have fallen out of fashion when GANs became popular, because they were able to get visually interesting results more easily. However, some works a few years later seem to show that they have similar potential (Vahdat and Kautz 2020).</description>
-    </item>
-    
-    <item>
-      <title>Word vectors</title>
-      <link>https://hugocisneros.com/notes/word_vectors/</link>
-      <pubDate>Thu, 07 Oct 2021 11:02:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/word_vectors/</guid>
-      <description>tags NLP  Definition Word vectors are abstract representation of words embedded in a dense space.
-They are closely related to Language modeling, since the implicit representation a language model builds for prediction can often be used as a word (or sentence) vector.
-Usage Word vectors can encode interesting information, such as semantic similarity between words. This can help for text classification tasks as it may be easier to learn a mapping between this intermediate space and a result rather than between the space of one-hot encoded words/sentences.</description>
     </item>
     
     <item>
@@ -3493,6 +3493,16 @@ A colony of cells cooperates to form a multicellular organism under the directio
       
       <guid>https://hugocisneros.com/notes/ising_model/</guid>
       <description> tags Complex Systems, Physics  </description>
+    </item>
+    
+    <item>
+      <title>2021-10-27</title>
+      <link>https://hugocisneros.com/notes/2021-10-27/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/2021-10-27/</guid>
+      <description>Optimal control Bellman J*(x) = min_u {c(x, u) + J*(F(x, u))} == Dynamic programming equation
+We define the Q fn as such J*(x) = min_u Q*(x, u)</description>
     </item>
     
   </channel>
