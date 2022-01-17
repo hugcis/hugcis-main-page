@@ -141,7 +141,7 @@
           </li>
         </ul>
       </div><!--endtoc-->
-      <p>This is my org-mode configuration. You will find the rest of my dotfiles (including my full Doom Emacs configuration) on <a href="https://github.com/hugcis/dotfiles">Github</a>.</p>
+      <p>This is my org-mode configuration that you can <a href="https://github.com/hugcis/dotfiles/blob/master/.doom.d/org-config.org">download as an org file</a>. You will find the rest of my dotfiles (including my full Doom Emacs configuration) on <a href="https://github.com/hugcis/dotfiles">Github</a>.</p>
       <p>If you want to use this file for configuration, open it in Emacs and run <code>org-babel-tangle</code>, or <code>C-c C-v t</code> (you need to have org-mode and org-babel installed).</p>
       <h2 id="setting-up-todo-keywords">Setting up “TODO” keywords</h2>
       <p>Those keywords are from <a href="http://doc.norang.ca/org-mode.html">“Organize your life in plain text!"</a>. There are three “main” keywords and a <code>WAITING</code>, <code>HOLD</code> and <code>CANCELLED</code> keyword that each require a note for justifying moving to these states.</p>
@@ -516,19 +516,29 @@
         <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-cite-global-bibliography</span> '(<span style="color:#ed9d13">"~/Papers/library.json"</span>))
 (<span style="color:#24909d">require</span> <span style="color:#ed9d13">'oc-csl</span>)
 (<span style="color:#24909d">with-eval-after-load</span> <span style="color:#ed9d13">'org-ref</span>
-  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">reftex-default-bibliography</span> '(<span style="color:#ed9d13">"~/Papers/library.bib"</span>))
-  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-ref-default-bibliography</span> '(<span style="color:#ed9d13">"~/Papers/library.bib"</span>)
-        <span style="color:#40ffff">org-ref-pdf-directory</span> <span style="color:#ed9d13">"~/Papers/pdf/"</span>
-        <span style="color:#40ffff">org-ref-bibliography-notes</span> <span style="color:#ed9d13">"~/org/roam/notes"</span>)
-  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-ref-notes-function</span>
-        (<span style="color:#24909d">lambda</span> (<span style="color:#40ffff">thekey</span>)
-          (<span style="color:#24909d">let</span> ((<span style="color:#40ffff">bibtex-completion-bibliography</span> (<span style="color:#40ffff">org-ref-find-bibliography</span>)))
-            (<span style="color:#40ffff">bibtex-completion-edit-notes</span>
-             (<span style="color:#447fcf">list</span> (<span style="color:#447fcf">car</span> (<span style="color:#40ffff">org-ref-get-bibtex-key-and-file</span> <span style="color:#40ffff">thekey</span>)))))))
+  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">bibtex-completion-bibliography</span> '(<span style="color:#ed9d13">"~/Papers/library.json"</span>)
+        <span style="color:#40ffff">bibtex-completion-library-path</span> '(<span style="color:#ed9d13">"~/Papers/pdf/"</span>)
+        <span style="color:#40ffff">bibtex-completion-notes-path</span> <span style="color:#ed9d13">"~/org/roam/notes"</span>
+        <span style="color:#40ffff">bibtex-completion-additional-search-fields</span> '(<span style="color:#40ffff">keywords</span>)
+        <span style="color:#40ffff">bibtex-completion-display-formats</span>
+        '((<span style="color:#40ffff">article</span>       . <span style="color:#ed9d13">"${=has-pdf=:1}${=has-note=:1} ${year:4} ${author:36} ${title:*} ${journal:40}"</span>)
+          (<span style="color:#40ffff">inbook</span>        . <span style="color:#ed9d13">"${=has-pdf=:1}${=has-note=:1} ${year:4} ${author:36} ${title:*} Chapter ${chapter:32}"</span>)
+          (<span style="color:#40ffff">incollection</span>  . <span style="color:#ed9d13">"${=has-pdf=:1}${=has-note=:1} ${year:4} ${author:36} ${title:*} ${booktitle:40}"</span>)
+          (<span style="color:#40ffff">inproceedings</span> . <span style="color:#ed9d13">"${=has-pdf=:1}${=has-note=:1} ${year:4} ${author:36} ${title:*} ${booktitle:40}"</span>)
+          (<span style="color:#40ffff">t</span>             . <span style="color:#ed9d13">"${=has-pdf=:1}${=has-note=:1} ${year:4} ${author:36} ${title:*}"</span>))
+        <span style="color:#40ffff">bibtex-completion-pdf-open-function</span>
+        (<span style="color:#24909d">lambda</span> (<span style="color:#40ffff">fpath</span>)
+          (<span style="color:#447fcf">call-process</span> <span style="color:#ed9d13">"open"</span> <span style="color:#40ffff">nil</span> <span style="color:#3677a9">0</span> <span style="color:#40ffff">nil</span> <span style="color:#40ffff">fpath</span>)))
+  (<span style="color:#24909d">require</span> <span style="color:#ed9d13">'org-ref-helm</span>)
+  (<span style="color:#447fcf">define-key</span> <span style="color:#40ffff">org-mode-map</span> (<span style="color:#40ffff">kbd</span> <span style="color:#ed9d13">"C-c ]"</span>) <span style="color:#ed9d13">'org-ref-insert-link</span>)
+  (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-ref-insert-link-function</span> <span style="color:#ed9d13">'org-ref-insert-link-hydra/body</span>
+        <span style="color:#40ffff">org-ref-insert-cite-function</span> <span style="color:#ed9d13">'org-ref-cite-insert-helm</span>
+        <span style="color:#40ffff">org-ref-insert-label-function</span> <span style="color:#ed9d13">'org-ref-insert-label-link</span>
+        <span style="color:#40ffff">org-ref-insert-ref-function</span> <span style="color:#ed9d13">'org-ref-insert-ref-link</span>
+        <span style="color:#40ffff">org-ref-cite-onclick-function</span> (<span style="color:#24909d">lambda</span> (<span style="color:#40ffff">_</span>) (<span style="color:#40ffff">org-ref-citation-hydra/body</span>)))
   )
 
 <span style="color:#999;font-style:italic">;; Bibtex setup</span>
-(<span style="color:#24909d">setq</span> <span style="color:#40ffff">bibtex-completion-notes-path</span> <span style="color:#ed9d13">"~/org/roam/notes"</span>)
 (<span style="color:#24909d">setq</span> <span style="color:#40ffff">bibtex-completion-pdf-open-function</span>
       (<span style="color:#24909d">lambda</span> (<span style="color:#40ffff">fpath</span>)
         (<span style="color:#24909d">cond</span> ((<span style="color:#447fcf">eq</span> <span style="color:#40ffff">system-type</span> <span style="color:#ed9d13">'darwin</span>) (<span style="color:#447fcf">start-process</span> <span style="color:#ed9d13">"open"</span> <span style="color:#ed9d13">"*open*"</span> <span style="color:#ed9d13">"open"</span> <span style="color:#40ffff">fpath</span>))
@@ -538,8 +548,8 @@
 (<span style="color:#24909d">setq</span> <span style="color:#40ffff">bibtex-completion-notes-symbol</span> <span style="color:#ed9d13">"✎"</span>)
 (<span style="color:#24909d">setq</span> <span style="color:#40ffff">bibtex-completion-notes-template-multiple-files</span>
       <span style="color:#ed9d13">":PROPERTIES:\n:ROAM_REFS: cite:${=key=}\n:END:\n#+TITLE: Notes on: ${title} by ${author-or-editor} (${year})\n#+hugo_lastmod: Time-stamp: &lt;&gt;\n#+ROAM_KEY: cite:${=key=}\n\n- source :: cite:${=key=}
-</span><span style="color:#ed9d13">\n\n* TODO Summary\n* TODO Comments\n\n
-</span><span style="color:#ed9d13">bibliography:~/Papers/library_bibtex.bib"</span>)
+</span><span style="color:#ed9d13">  \n\n* TODO Summary\n* TODO Comments\n\n
+</span><span style="color:#ed9d13">  bibliography:~/Papers/library_bibtex.bib"</span>)
 </code></pre>
       </div>
       <h2 id="org-capture">Org capture</h2>
@@ -570,7 +580,9 @@
       <h3 id="configuration">Configuration</h3>
       <p>You’ll find the exported notes on <a href="https://hugocisneros.com/notes/">my notes page</a>.</p>
       <div class="highlight">
-        <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(<span style="color:#24909d">with-eval-after-load</span> <span style="color:#ed9d13">'org-roam</span>
+        <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="color:#999;font-style:italic">;; V2 displays a warning message</span>
+(<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-roam-v2-ack</span> <span style="color:#40ffff">t</span>)
+(<span style="color:#24909d">with-eval-after-load</span> <span style="color:#ed9d13">'org-roam</span>
   <span style="color:#999;font-style:italic">;; Roam is always one level deep in my org-directory</span>
   (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-roam-directory</span> (<span style="color:#447fcf">expand-file-name</span> <span style="color:#ed9d13">"~/org/roam"</span>))
   (<span style="color:#24909d">setq</span> <span style="color:#40ffff">org-id-link-to-org-use-id</span> <span style="color:#40ffff">t</span>)
@@ -655,7 +667,7 @@
         <li>
           <a href="https://github.com/hugcis/natrium-custom">Code</a>
         </li>
-        <li>© Hugo Cisneros 2021</li>
+        <li>© Hugo Cisneros 2022</li>
       </ul>
     </footer>
   </div>

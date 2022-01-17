@@ -14,7 +14,7 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@cisne_hug">
   <meta name="twitter:creator" content="@cisne_hug">
-  <meta property="keywords" content="Optimal transport, Data science, Theory">
+  <meta property="keywords" content="optimal transport, data science, theory">
   <link rel="stylesheet" href="https://hugocisneros.com/css/main.min.css" media="all" type="text/css">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -130,7 +130,7 @@
           <p>\[ \mathbf{U}(\mathbf{a}, \mathbf{b}) = \left\{\mathbf{P} \in \mathbb{R}_{+}^{n \times m}: \mathbf{P}\mathbb{1}_m = \mathbf{a} \text{ and } \mathbf{P}^\text{T}\mathbb{1}_n = \mathbf{b} \right\} \]</p>
           <p>This new formulation, contrary to the Monge formulation, is <strong>symmetric</strong>. This means that we can reverse the irreversible mapping of the problem above, because if $\mathbf{P} \in \mathbf{U}(\mathbf{a}, \mathbf{b})$, then $\mathbf{P}^{\text{T}} \in \mathbf{U}(\mathbf{b}, \mathbf{a})$.</p>
           <p>We can now formulate the problem in a mathematically cleaner way, and it reads:</p>
-          <p>\[ L_\mathbf{C}(\mathbf{a}, \mathbf{b}) = \min_{\mathbf{P}\in\mathbf{U}(\mathbf{b}, \mathbf{a})} \sum_{i,j} \mathbf{C}_{i,j}\mathbf{P}_{i,j} = \min_{\mathbf{P}\in\mathbf{U}(\mathbf{b}, \mathbf{a})} \langle \mathbf{C}, \mathbf{P} \rangle \]</p>
+          <p>\[ L_\mathbf{C}(\mathbf{a}, \mathbf{b}) = \min_{\mathbf{P}\in\mathbf{U}(\mathbf{b}, \mathbf{a})} \sum_{i,j} \mathbf{C}<em>{i,j}\mathbf{P}</em>{i,j} = \min_{\mathbf{P}\in\mathbf{U}(\mathbf{b}, \mathbf{a})} \langle \mathbf{C}, \mathbf{P} \rangle \]</p>
           <p>If you are familiar with optimization, you might have recognized a <a href="https://en.wikipedia.org/wiki/Linear_programming"><strong>linear program</strong></a>, where the constraints are a set of $m+n$ equality constraints — or $2(m+n)$ inequalities, which are contained in the admissible set of solutions. These constraints define a convex polytope.</p>
           <p>This is good news, because we have moved from the dreadful realm of <strong>combinatorics</strong> to the comfortable world of <strong>convex optimization</strong>. Optimization over a matrix space might sound hard but it is usually much simpler than searching among a set of possible assignments.</p>
           <p>I will not go into the details of the tools used to solve this problem because they are widely used and taught in optimization and operations research courses. You will find a detailed explanation of the <strong>simplex algorithm</strong>, and other algorithmic tools to solve the OT problem, such as dual ascent methods or the Auction algorithm in <a href="#computational">[1]</a>.</p>
@@ -223,7 +223,7 @@
         <li>
           <a href="https://github.com/hugcis/natrium-custom">Code</a>
         </li>
-        <li>© Hugo Cisneros 2021</li>
+        <li>© Hugo Cisneros 2022</li>
       </ul>
     </footer>
   </div>

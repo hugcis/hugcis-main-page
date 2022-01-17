@@ -4,12 +4,27 @@
     
     <url>
         <loc>https://hugocisneros.com/</loc>
-        <lastmod>2021-10-27T10:01:00+02:00</lastmod>
+        <lastmod>2022-01-17T13:44:00+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/intrinsic_motivation/</loc>
+        <lastmod>2022-01-17T13:44:00+01:00</lastmod>
     </url>
     
     <url>
         <loc>https://hugocisneros.com/notes/</loc>
-        <lastmod>2021-10-27T10:01:00+02:00</lastmod>
+        <lastmod>2022-01-17T13:44:00+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/implicit_neural_representations/</loc>
+        <lastmod>2021-11-24T10:22:00+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/supervised_learning/</loc>
+        <lastmod>2021-11-04T14:23:00+01:00</lastmod>
     </url>
     
     <url>
@@ -228,11 +243,6 @@
     </url>
     
     <url>
-        <loc>https://hugocisneros.com/notes/implicit_neural_representations/</loc>
-        <lastmod>2021-08-29T21:42:00+02:00</lastmod>
-    </url>
-    
-    <url>
         <loc>https://hugocisneros.com/notes/softmax/</loc>
         <lastmod>2021-08-27T15:41:00+02:00</lastmod>
     </url>
@@ -313,12 +323,17 @@
     </url>
     
     <url>
-        <loc>https://hugocisneros.com/tags/org-mode/</loc>
+        <loc>https://hugocisneros.com/tags/org/</loc>
         <lastmod>2021-08-05T10:40:00+02:00</lastmod>
     </url>
     
     <url>
         <loc>https://hugocisneros.com/tags/org-roam/</loc>
+        <lastmod>2021-08-05T10:40:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/tags/org-mode/</loc>
         <lastmod>2021-08-05T10:40:00+02:00</lastmod>
     </url>
     
@@ -1628,11 +1643,6 @@
     </url>
     
     <url>
-        <loc>https://hugocisneros.com/notes/supervised_learning/</loc>
-        <lastmod>2020-07-09T17:29:00+02:00</lastmod>
-    </url>
-    
-    <url>
         <loc>https://hugocisneros.com/notes/rice_s_theorem/</loc>
         <lastmod>2020-07-09T14:31:00+02:00</lastmod>
     </url>
@@ -1979,10 +1989,6 @@
     
     <url>
         <loc>https://hugocisneros.com/resume/</loc>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/2021-10-27/</loc>
     </url>
     
     <url>

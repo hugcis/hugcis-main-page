@@ -5,7 +5,7 @@
     <description>Recent content on Hugo Cisneros</description>
     
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 Oct 2021 10:01:00 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 17 Jan 2022 13:44:00 +0100</lastBuildDate>
     
     <atom:link href="https://hugocisneros.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,11 +14,11 @@
     
     
     <item>
-      <title>My Org-roam Notes Workflow</title>
+      <title>My Org Roam Notes Workflow</title>
       <link>https://hugocisneros.com/blog/my-org-roam-notes-workflow/</link>
       <pubDate>Thu, 05 Aug 2021 10:40:00 +0200</pubDate>
       <guid>https://hugocisneros.com/blog/my-org-roam-notes-workflow/</guid>
-      <description>Some people expressed interest in my org-roam notes workflow. Setting this up has been an interesting project, teaching me about Emacs, org-mode and a little about web frontend. This post will describe my current workflow in as much details as possible.
+      <description>Some people expressed interest in my org roam notes workflow. Setting this up has been an interesting project, teaching me about Emacs, org-mode and a little about web frontend. This post will describe my current workflow in as much details as possible.
 Hopefully, you&amp;rsquo;ll learn to create an automated build script to publish your notes on the web and convert your org-roam note network into a graph like the one below.</description>
     </item>
     

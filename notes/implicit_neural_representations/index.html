@@ -61,26 +61,24 @@
                 <a href="/notes/data_representation/">Data representation</a>, <a href="/notes/neural_networks/">Neural networks</a>
               </dd>
             </dl>
-            <p>Implicit neural representations is about parameterizing a continuous differentiable signal with a neural network. The signal is encoded within the neural network, providing a possibly more compact representation. This is a type of <a href="/notes/machine_learning/">regression</a> problem.</p>
+            <p>Implicit neural representations is about parameterizing a continuous differentiable signal with a neural network. The signal is encoded within the neural network, providing a possibly more compact representation or allowing smooth parameter-based manipulation of that signal. This is a type of <a href="/notes/machine_learning/#regression">regression</a> problem.</p>
             <p>Applications of these learned representations range from simple <a href="/notes/compression/">compression</a>, to 3D scene reconstruction from 2D images, semantic information inference, etc.</p>
-            <p><a href="/notes/cppn/">CPPN</a> is an early example of a implicit neural representation implementation mainly used for pattern generation . It uses a neural network to generate patterns parameterized by two (or more) coordinates .</p>
+            <p><a href="/notes/cppn/">CPPN</a> is an early example of a implicit neural representation implementation mainly used for pattern generation . It uses a neural network to generate patterns parameterized by two (or more) coordinates.</p>
+            <p>Usually a coordinate system is used as input for the network which will attempt to produce the signal’s value at each coordinate.</p>
             <h2 id="implicit-neural-representations-for-high-frequency-data">Implicit neural representations for high frequency data</h2>
-            <p>To encode potentially high frequency data such as sound or <a href="/notes/image_processing/">images</a>, it is much more efficient to start from periodic feature transformations. This can be achieved with periodic activation functions (<a href="#orgd682c65">Sitzmann et al. 2020</a>) or by using a Fourier feature mapping (<a href="#orgbdf17ac">Tancik et al. 2020</a>) .</p>
+            <p>To encode potentially high frequency data such as sound or <a href="/notes/image_processing/">images</a>, it is much more efficient to start from periodic feature transformations. This can be achieved with periodic activation functions (<a href="#sitzmannImplicitNeuralRepresentations2020"><cite itemprop="citation" itemscope itemid="key:sitzmannImplicitNeuralRepresentations2020">Sitzmann et al. 2020</cite></a>) or by using a Fourier feature mapping (<a href="#tancikFourierFeaturesLet2020"><cite itemprop="citation" itemscope itemid="key:tancikFourierFeaturesLet2020">Tancik et al. 2020</cite></a>) .</p>
             <h2 id="neural-radiance-fields">Neural radiance fields</h2>
-            <p>(<a href="#org36a6837">Mildenhall et al. 2020</a>)</p>
+            <p>(<a href="#mildenhallNeRFRepresentingScenes2020"><cite itemprop="citation" itemscope itemid="key:mildenhallNeRFRepresentingScenes2020">Mildenhall et al. 2020</cite></a>)</p>
             <h2 id="bibliography">Bibliography</h2>
             <ol class="biblio-list">
-              <a id="org36a6837"></a>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle">
-                <span itemprop="author"><span itemprop="author">Mildenhall, Ben</span>, <span itemprop="author">Pratul P. Srinivasan</span>, <span itemprop="author">Matthew Tancik</span>, <span itemprop="author">Jonathan T. Barron</span>, <span itemprop="author">Ravi Ramamoorthi</span>, and <span itemprop="author">Ren Ng</span></span>. <span datetime="2020" itemprop="datePublished">August 3, 2020</span>. "<span itemprop="name">NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">arXiv:2003.08934 [Cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2003.08934">http://arxiv.org/abs/2003.08934</a>.
-                <p><a id="orgd682c65"></a></p>
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="sitzmannImplicitNeuralRepresentations2020">
+                <span itemprop="author">Sitzmann, Vincent, Julien N. P. Martel, Alexander W. Bergman, David B. Lindelland Gordon Wetzstein</span>. <span datetime="2020" itemprop="datePublished">June 17, 2020</span>. "<span itemprop="name">Implicit Neural Representations with Periodic Activation Functions</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:2006.09661 [cs, Eess]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2006.09661">http://arxiv.org/abs/2006.09661</a>.
               </li>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle">
-                <span itemprop="author"><span itemprop="author">Sitzmann, Vincent</span>, <span itemprop="author">Julien N. P. Martel</span>, <span itemprop="author">Alexander W. Bergman</span>, <span itemprop="author">David B. Lindell</span>, and <span itemprop="author">Gordon Wetzstein</span></span>. <span datetime="2020" itemprop="datePublished">June 17, 2020</span>. “<span itemprop="name">Implicit Neural Representations with Periodic Activation Functions</span>”. <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">arXiv:2006.09661 [Cs, Eess]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2006.09661"></a><a href="http://arxiv.org/abs/2006.09661">http://arxiv.org/abs/2006.09661</a>.
-                <p><a id="orgbdf17ac"></a></p>
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="tancikFourierFeaturesLet2020">
+                <span itemprop="author">Tancik, Matthew, Pratul P. Srinivasan, Ben Mildenhall, Sara Fridovich-Keil, Nithin Raghavan, Utkarsh Singhal, Ravi Ramamoorthi, Jonathan T. Barronand Ren Ng</span>. <span datetime="2020" itemprop="datePublished">June 18, 2020</span>. "<span itemprop="name">Fourier Features Let Networks Learn High Frequency Functions in Low Dimensional Domains</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:2006.10739 [cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2006.10739">http://arxiv.org/abs/2006.10739</a>.
               </li>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle">
-                <span itemprop="author"><span itemprop="author">Tancik, Matthew</span>, <span itemprop="author">Pratul P. Srinivasan</span>, <span itemprop="author">Ben Mildenhall</span>, <span itemprop="author">Sara Fridovich-Keil</span>, <span itemprop="author">Nithin Raghavan</span>, <span itemprop="author">Utkarsh Singhal</span>, <span itemprop="author">Ravi Ramamoorthi</span>, <span itemprop="author">Jonathan T. Barron</span>, and <span itemprop="author">Ren Ng</span></span>. <span datetime="2020" itemprop="datePublished">June 18, 2020</span>. “<span itemprop="name">Fourier Features Let Networks Learn High Frequency Functions in Low Dimensional Domains</span>”. <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">arXiv:2006.10739 [Cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2006.10739"></a><a href="http://arxiv.org/abs/2006.10739">http://arxiv.org/abs/2006.10739</a>.
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="mildenhallNeRFRepresentingScenes2020">
+                <span itemprop="author">Mildenhall, Ben, Pratul P. Srinivasan, Matthew Tancik, Jonathan T. Barron, Ravi Ramamoorthiand Ren Ng</span>. <span datetime="2020" itemprop="datePublished">August 3, 2020</span>. "<span itemprop="name">Nerf: Representing Scenes as Neural Radiance Fields for View Synthesis</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:2003.08934 [cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2003.08934">http://arxiv.org/abs/2003.08934</a>.
               </li>
             </ol>
           </div>
@@ -98,7 +96,7 @@
             </div>
           </div>
           <div class="note-footer">
-            Last changed <a class="u-url" href="https://hugocisneros.com/notes/implicit_neural_representations/"><time itemprop="datePublished" class="dt-published" datetime="2021-08-29T21:42:00+0200">29/08/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+            Last changed <a class="u-url" href="https://hugocisneros.com/notes/implicit_neural_representations/"><time itemprop="datePublished" class="dt-published" datetime="2021-11-24T10:22:00+0100">24/11/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
           </div>
         </div>
       </article><br>
@@ -113,7 +111,7 @@
         <li>
           <a href="https://github.com/hugcis/natrium-custom">Code</a>
         </li>
-        <li>© Hugo Cisneros 2021</li>
+        <li>© Hugo Cisneros 2022</li>
       </ul>
     </footer>
   </div>

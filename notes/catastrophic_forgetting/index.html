@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1">
+  <title>Catastrophic forgetting - Hugo Cisneros</title>
+  <meta property="og:title" content="Catastrophic forgetting - Hugo Cisneros">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="/img/main.jpeg">
+  <meta property="og:url" content="https://hugocisneros.com/notes/catastrophic_forgetting/">
+  <meta property="og:description" content="Notes about Catastrophic forgetting">
+  <meta name="Description" property="description" content="Notes about Catastrophic forgetting">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@cisne_hug">
+  <meta name="twitter:creator" content="@cisne_hug">
+  <link rel="stylesheet" href="https://hugocisneros.com/css/main.min.css" media="all" type="text/css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
+  <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <nav class="nav">
+        <div class="nav-main">
+          <a href="https://hugocisneros.com/" class="nav-title">Hugo Cisneros</a>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="/blog/">Blog</a>
+          </li>
+          <li>
+            <a href="/notes/">Notes</a>
+          </li>
+          <li>
+            <a href="/projects/">Projects</a>
+          </li>
+          <li>
+            <a href="/resume/">Resume</a>
+          </li>
+          <li>
+            <a href="/contact/">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="content" role="main">
+      <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="single-note note-container">
+          <h1 class="article-title p-name" itemprop="name">Catastrophic forgetting</h1>
+          <div class="article-content e-content p-name" itemprop="articleBody">
+            <dl>
+              <dt>tags</dt>
+              <dd>
+                <a href="/notes/machine_learning/">Machine learning</a>
+              </dd>
+            </dl>
+            <p>Catastrophic forgetting is the name given to a common problem of <a href="/notes/machine_learning/">machine learning</a> models: when training on some new data from a new distribution (a new “task”), many models forget what they learned from the first task.</p>
+            <p>This isn’t surprising since models are following a loss function that is often applied solely on the task at hand, and not constraining the model to retain past information.</p>
+            <p>The field of <a href="/notes/continual_learning/">continual learning</a> is an effort to counteract catastrophic forgetting in machine learning.</p>
+            <h2 id="catastrophic-forgetting-in-neural-networks">Catastrophic forgetting in neural networks</h2>
+            <p>This phenomenon is common in <a href="/notes/neural_networks/">neural networks</a>. It was strongly identified in (<a href="#frenchCatastrophicForgettingConnectionist1999"><cite itemprop="citation" itemscope itemid="doi:10.1016/S1364-6613(99)01294-2">French 1999</cite></a>) and investigated in &lt;robinsCatastrophicForgettingNeural1993,goodfellowEmpiricalInvestigationCatastrophic2015&gt;.</p>
+            <h2 id="bibliography">Bibliography</h2>
+            <ol class="biblio-list">
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="frenchCatastrophicForgettingConnectionist1999" itemid="doi:10.1016/S1364-6613(99)01294-2">
+                <span itemprop="author">French, Robert M.</span>. <span datetime="1999" itemprop="datePublished">April 1, 1999</span>. "<span itemprop="name">Catastrophic Forgetting in Connectionist Networks</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Trends in Cognitive Sciences</i></span> 3 (4):128–35. <a itemprop="sameAs" href="https://doi.org/10.1016/S1364-6613(99)01294-2">DOI</a>.
+              </li>
+            </ol>
+          </div>
+          <div class="note-footer">
+            Last changed <a class="u-url" href="https://hugocisneros.com/notes/catastrophic_forgetting/"><time itemprop="datePublished" class="dt-published" datetime="2021-10-18T09:53:00+0200">18/10/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+          </div>
+        </div>
+      </article><br>
+      <a href="/notes#catastrophic_forgetting"><b>← Back to Notes</b></a>
+      <hr>
+    </main>
+    <footer class="footer">
+      <ul class="footer-links">
+        <li>
+          <a class="rss-link" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon" src="/img/RSS.svg" alt="RSS feed icon"></a>
+        </li>
+        <li>
+          <a href="https://github.com/hugcis/natrium-custom">Code</a>
+        </li>
+        <li>© Hugo Cisneros 2022</li>
+      </ul>
+    </footer>
+  </div>
+  <link rel="stylesheet" href="/js/katex/katex.min.css">
+  <script src="/js/katex/katex.min.js"></script> 
+  <script src="/js/katex/contrib/auto-render.min.js"></script> 
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        delimiters: [
+            {left: "\\[", right: "\\]", display: true},
+            {left: "$$", right: "$$", display: true},
+            {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+            {left: "$", right: "$", display: false},
+            {left: "\\(", right: "\\)", display: false},
+        ]
+  })
+    });
+  </script>
+</body>
+</html>
