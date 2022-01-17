@@ -6,7 +6,17 @@
     <description>Recent content in Notes on Hugo Cisneros</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 17 Jan 2022 13:44:00 +0100</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 17 Jan 2022 16:44:00 +0100</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cellular neural networks</title>
+      <link>https://hugocisneros.com/notes/cellular_neural_networks/</link>
+      <pubDate>Mon, 17 Jan 2022 16:44:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/cellular_neural_networks/</guid>
+      <description> tags Cellular automata, Neural networks resources Scholarpedia,  &amp;lt;chuaCellularNeuralNetworks1988,chuaCellularNeuralNetworks1988a&amp;gt;
+Bibliography  </description>
+    </item>
+    
     <item>
       <title>Intrinsic motivation</title>
       <link>https://hugocisneros.com/notes/intrinsic_motivation/</link>
@@ -356,15 +366,6 @@ This new formulation yields better time and memory complexity as well as a model
       <guid>https://hugocisneros.com/notes/cellular_automata_as_cnns/</guid>
       <description>tags Cellular automata, Convolutional neural networks  Motivation Cellular automata are computational models based on several principles such as translation-invariance and parallelism of computations. These principles also motivated the creation of Convolutional neural networks &amp;mdash; used initially for images and text &amp;mdash;, making this model well-suited to reason about cellular automata.
 There is indeed a deep connection between the two models, making it seem like there are two expressions of the same idea: spatially organized information can be processed locally in parallel.</description>
-    </item>
-    
-    <item>
-      <title>Cellular neural networks</title>
-      <link>https://hugocisneros.com/notes/cellular_neural_networks/</link>
-      <pubDate>Wed, 01 Sep 2021 17:30:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/cellular_neural_networks/</guid>
-      <description>tags Cellular automata, Neural networks resources Scholarpedia, (Chua and Yang n.d., 1988)  Bibliography Chua, L.O., and L. Yang. October 1988. &#34;Cellular Neural Networks: Theory&#34;. IEEE Transactions on Circuits and Systems 35 (10):1257–72. DOI. ———. n.d. &amp;ldquo;Cellular Neural Networks: Applications&amp;rdquo;. IEEE Transactions on Circuits and Systems 35 (10):1273–90. Accessed July 1, 2020DOI.</description>
     </item>
     
     <item>
