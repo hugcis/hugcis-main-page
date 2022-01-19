@@ -6,7 +6,91 @@
     <description>Recent content in Notes on Hugo Cisneros</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 17 Jan 2022 17:08:00 +0100</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 19 Jan 2022 12:14:00 +0100</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Generative adversarial networks</title>
+      <link>https://hugocisneros.com/notes/generative_adversarial_networks/</link>
+      <pubDate>Wed, 19 Jan 2022 12:14:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/generative_adversarial_networks/</guid>
+      <description>tags Neural networks, Generative modelling  Generative adversarial networks are a type of generative model. It is close in spirit to Variational autoencoders, but has key differences. The main one is the way the model is trained, which uses an adversarial equilibrium between training a generator and training a discriminator.
+Are GANs glorified PCA? (Richardson and Weiss 2020) This paper seems to show that image-to-image translation models are ill-posed and imply the image transformation should always be very local.</description>
+    </item>
+    
+    <item>
+      <title>ALife Conference</title>
+      <link>https://hugocisneros.com/notes/alife_conference/</link>
+      <pubDate>Wed, 19 Jan 2022 12:13:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/alife_conference/</guid>
+      <description> tags Artificial life  The ALife conference is about artificial life in its many forms. This includes topics like cellular automata, complex Systems, biological life, etc.
+ALife 2020 </description>
+    </item>
+    
+    <item>
+      <title>Artificial life</title>
+      <link>https://hugocisneros.com/notes/artificial_life/</link>
+      <pubDate>Wed, 19 Jan 2022 12:12:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/artificial_life/</guid>
+      <description>Artificial life could be thought of as attempts at re-creating biological Life or other types of life. It uses different tools such as biology, physics, chemistry, computer science, etc.
+Creating artificial life seems like a possible way to create AI, since most living systems on Earth seem to exhibit some form of robust intelligent behavior.
+Definition of artificial life from Carlos Gershenson in (Gershenson 2021)
+ Beginning in the mid-1980s, ALife has studied living systems using a synthetic approach: building life to understand it better (Aguilar et al.</description>
+    </item>
+    
+    <item>
+      <title>Coding</title>
+      <link>https://hugocisneros.com/notes/coding/</link>
+      <pubDate>Wed, 19 Jan 2022 12:11:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/coding/</guid>
+      <description>tags Computer science, Programming languages  For compiled programming languages, code has to be translated to machine code through a process called compilation</description>
+    </item>
+    
+    <item>
+      <title>Cellular automata</title>
+      <link>https://hugocisneros.com/notes/cellular_automata/</link>
+      <pubDate>Wed, 19 Jan 2022 12:10:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/cellular_automata/</guid>
+      <description>tags Emergence, Chaos, Artificial Intelligence resources Wikipedia, (Von Neumann and Burks 1966; Wolfram 2002)  Definition A cellular automaton is a computational model defined with respect to a regular grid of individual elements (called cells). Each of those cells can be in one of a finite number of states &amp;mdash; alive or dead, \(\{1, 2, 3\}\), etc.
+A cellular automaton&amp;rsquo;s evolution is simulated in discrete timesteps. At each new timestep, cells are updated according to a local evolution rule.</description>
+    </item>
+    
+    <item>
+      <title>Life</title>
+      <link>https://hugocisneros.com/notes/life/</link>
+      <pubDate>Wed, 19 Jan 2022 12:10:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/life/</guid>
+      <description>From Sara Walker&amp;rsquo;s keynote at Alife 2020: The Natural History of Information:
+ Life is a process whereby information structures matter across space and time.
+ Why should life be an emergent process? An answer from (Krakauer et al. 2020):
+ The fact that physics and chemistry are universal—ongoing in stars, solar systems, and galaxies—whereas to the best of our knowledge biology is exclusively a property of earth, supports the view that life is emergent.</description>
+    </item>
+    
+    <item>
+      <title>Complex Systems</title>
+      <link>https://hugocisneros.com/notes/complex_systems/</link>
+      <pubDate>Wed, 19 Jan 2022 12:07:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/complex_systems/</guid>
+      <description>Bottomless wonders spring from simple rules, which are repeated without end.
+ &amp;mdash; Mandelbrot, ~1980
+When we talk about complex systems in time, we often used the term complex dynamical systems.
+Example of complex systems  The economy (Anderson and Evolutionary Paths of the Global Economy Workshop 1996) Boolean networks Cellular automata Neural networks Many physical systems  Can complex systems evolve? The biosphere is a striking example of very large and intricate complex system.</description>
+    </item>
+    
+    <item>
+      <title>Notes on: Formal Definitions of Unbounded Evolution and Innovation Reveal Universal Mechanisms for Open-Ended Evolution in Dynamical Systems by Adams, A., Zenil, H., Davies, P. C. W., &amp; Walker, S. I. (2017)</title>
+      <link>https://hugocisneros.com/notes/adamsformaldefinitionsunbounded2017/</link>
+      <pubDate>Wed, 19 Jan 2022 12:01:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/adamsformaldefinitionsunbounded2017/</guid>
+      <description>source (Adams et al. 2017) tags Open-ended Evolution, Cellular automata  Summary This paper defines two properties for dynamical systems which are claimed to be related to open-ended evolution: Unbounded evolution (UE) and Innovation (INN). The combination of these two properties makes a system open-ended according to this paper&amp;rsquo;s definition For such properties to be possible, a system has to be decomposed into two entities that interact with each other:</description>
+    </item>
+    
     <item>
       <title>Graph cellular automata</title>
       <link>https://hugocisneros.com/notes/graph_cellular_automata/</link>
@@ -226,16 +310,6 @@ In the case of a cellular automaton on a grid of size \(n\) with \(k\) possible 
     </item>
     
     <item>
-      <title>Notes on: Formal Definitions of Unbounded Evolution and Innovation Reveal Universal Mechanisms for Open-Ended Evolution in Dynamical Systems by Adams, A., Zenil, H., Davies, P. C. W., &amp; Walker, S. I. (2017)</title>
-      <link>https://hugocisneros.com/notes/adamsformaldefinitionsunbounded2017/</link>
-      <pubDate>Tue, 14 Sep 2021 22:45:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/adamsformaldefinitionsunbounded2017/</guid>
-      <description>source   tags Open-ended Evolution, Cellular automata  Summary This paper defines two properties for dynamical systems which are claimed to be related to open-ended evolution: Unbounded evolution (UE) and Innovation (INN). The combination of these two properties makes a system open-ended according to this paper&amp;rsquo;s definition For such properties to be possible, a system has to be decomposed into two entities that interact with each other:
- an organism, an environment.</description>
-    </item>
-    
-    <item>
       <title>Monero</title>
       <link>https://hugocisneros.com/notes/monero/</link>
       <pubDate>Tue, 14 Sep 2021 22:05:00 +0200</pubDate>
@@ -280,16 +354,6 @@ In the case of a cellular automaton on a grid of size \(n\) with \(k\) possible 
       <guid>https://hugocisneros.com/notes/reductionism/</guid>
       <description>tags Philosophy, Physics  Reductionism is a philosophy according to which the laws of physics are relatively simple and could be expressed concisely. If we were to understand and model all those laws we could explain any given phenomenon by breaking it down into its smaller parts until we just need to apply these simple laws.
 With the current state of physics, it seems we are close to understanding many of these fundamental laws (although major shortcomings remain in the theory).</description>
-    </item>
-    
-    <item>
-      <title>Cellular automata</title>
-      <link>https://hugocisneros.com/notes/cellular_automata/</link>
-      <pubDate>Fri, 03 Sep 2021 14:09:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/cellular_automata/</guid>
-      <description>tags Emergence, Chaos, Artificial Intelligence resources Wikipedia, (Von Neumann and Burks 1966; Wolfram 2002)  Definition A cellular automaton is a computational model defined with respect to a regular grid of individual elements (called cells). Each of those cells can be in one of a finite number of states &amp;mdash; alive or dead, \(\{1, 2, 3\}\), etc.
-A cellular automaton&amp;rsquo;s evolution is simulated in discrete timesteps. At each new timestep, cells are updated according to a local evolution rule.</description>
     </item>
     
     <item>
@@ -643,16 +707,6 @@ Then the author argues that self-organization can be seen as the opposite of eme
     </item>
     
     <item>
-      <title>Generative adversarial networks</title>
-      <link>https://hugocisneros.com/notes/generative_adversarial_networks/</link>
-      <pubDate>Thu, 17 Jun 2021 10:18:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/generative_adversarial_networks/</guid>
-      <description>tags Neural networks, Generative modelling  Generative adversarial networks are a type of generative model. It is close in spirit to Variational autoencoders, but has key differences. The main one is the way the model is trained, which uses an adversarial equilibrium between training a generator and training a discriminator.
-Are GANs glorified PCA? (Richardson and Weiss 2020) This paper seems to show that image-to-image translation models are ill-posed and imply the image transformation should always be very local.</description>
-    </item>
-    
-    <item>
       <title>Generative modelling</title>
       <link>https://hugocisneros.com/notes/generative_modelling/</link>
       <pubDate>Thu, 17 Jun 2021 10:18:00 +0200</pubDate>
@@ -781,18 +835,6 @@ Each of those \(2^3\) neighborhoods of size 3 can be mapped to either state 1 or
       <guid>https://hugocisneros.com/notes/org_mode/</guid>
       <description>tags Emacs, Writing  Org is a markup language similar to Markdown. It was designed to be used in the Emacs editor, which offers special features for working with files in the Org format.
 Org mode can be used as an agenda, task manager, writing and publishing tool, and many other things. Extensions in the form of Emacs package offer even more features to make org-mode more powerful.</description>
-    </item>
-    
-    <item>
-      <title>Artificial life</title>
-      <link>https://hugocisneros.com/notes/artificial_life/</link>
-      <pubDate>Sun, 16 May 2021 18:28:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/artificial_life/</guid>
-      <description>Artificial life could be thought of as attempts at re-creating biological Life or other types of life. It uses different tools such as biology, physics, chemistry, computer science, etc.
-Creating artificial life seems like a possible way to create AI, since most living systems on Earth seem to exhibit some form of robust intelligent behavior.
-Definition of artificial life from Carlos Gershenson in (Gershenson 2021)
- Beginning in the mid-1980s, ALife has studied living systems using a synthetic approach: building life to understand it better (Aguilar et al.</description>
     </item>
     
     <item>
@@ -1053,15 +1095,6 @@ However a crucial issue is: Is there any shortcut in this approach?</description
       <description>tags NLP  The process of byte-pair encoding can be summarized as follow:
  Each character is a token Find pairs that occur most often Create a new token that encoded those common pairs Repeat the process until target vocabulary size is reached  The output of this process is both a vocabulary and a set of merging rules for tokens to be used to process more data.
 This technique has many advantages:</description>
-    </item>
-    
-    <item>
-      <title>Coding</title>
-      <link>https://hugocisneros.com/notes/coding/</link>
-      <pubDate>Thu, 25 Mar 2021 09:58:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/coding/</guid>
-      <description> tags Computer science, Programming languages  </description>
     </item>
     
     <item>
@@ -1678,18 +1711,6 @@ It has two main interpretations:
     </item>
     
     <item>
-      <title>Life</title>
-      <link>https://hugocisneros.com/notes/life/</link>
-      <pubDate>Thu, 25 Mar 2021 09:56:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/life/</guid>
-      <description>From Sara Walker&amp;rsquo;s keynote at Alife 2020: The Natural History of Information:
- Life is a process whereby information structures matter across space and time.
- Why should life be an emergent process? An answer from (Krakauer et al. 2020):
- The fact that physics and chemistry are universal—ongoing in stars, solar systems, and galaxies—whereas to the best of our knowledge biology is exclusively a property of earth, supports the view that life is emergent.</description>
-    </item>
-    
-    <item>
       <title>Neural architecture search</title>
       <link>https://hugocisneros.com/notes/neural_architecture_search/</link>
       <pubDate>Thu, 25 Mar 2021 09:56:00 +0100</pubDate>
@@ -1855,18 +1876,6 @@ sed -i.bak &amp;#39;/to the/d&amp;#39; test.txt cat test.</description>
       
       <guid>https://hugocisneros.com/notes/attention_graph_networks/</guid>
       <description> tags Graph neural networks, Attention  </description>
-    </item>
-    
-    <item>
-      <title>Complex Systems</title>
-      <link>https://hugocisneros.com/notes/complex_systems/</link>
-      <pubDate>Mon, 22 Feb 2021 13:51:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/complex_systems/</guid>
-      <description>Bottomless wonders spring from simple rules, which are repeated without end.
- &amp;mdash; Mandelbrot, ~1980
-When we talk about complex systems in time, we often used the term complex dynamical systems.
-Example of complex systems  The economy (Anderson and Evolutionary Paths of the Global Economy Workshop 1996) Boolean networks Cellular automata Neural networks  Can complex systems evolve? The biosphere is a striking example of very large and intricate complex system.</description>
     </item>
     
     <item>
@@ -2678,15 +2687,6 @@ This is done by outputting an extra halting probability at each update step, and
       
       <guid>https://hugocisneros.com/notes/abstraction_and_reasoning_corpus/</guid>
       <description> tags Artificial intelligence test  </description>
-    </item>
-    
-    <item>
-      <title>ALife Conference</title>
-      <link>https://hugocisneros.com/notes/alife_conference/</link>
-      <pubDate>Fri, 17 Jul 2020 10:59:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/alife_conference/</guid>
-      <description> tags Artificial life  ALife 2020 </description>
     </item>
     
     <item>

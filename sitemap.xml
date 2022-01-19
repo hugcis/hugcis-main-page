@@ -4,16 +4,56 @@
     
     <url>
         <loc>https://hugocisneros.com/</loc>
-        <lastmod>2022-01-17T17:08:00+01:00</lastmod>
+        <lastmod>2022-01-19T12:14:00+01:00</lastmod>
     </url>
     
     <url>
-        <loc>https://hugocisneros.com/notes/graph_cellular_automata/</loc>
-        <lastmod>2022-01-17T17:08:00+01:00</lastmod>
+        <loc>https://hugocisneros.com/notes/generative_adversarial_networks/</loc>
+        <lastmod>2022-01-19T12:14:00+01:00</lastmod>
     </url>
     
     <url>
         <loc>https://hugocisneros.com/notes/</loc>
+        <lastmod>2022-01-19T12:14:00+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/alife_conference/</loc>
+        <lastmod>2022-01-19T12:13:00+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/artificial_life/</loc>
+        <lastmod>2022-01-19T12:12:00+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/coding/</loc>
+        <lastmod>2022-01-19T12:11:00+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/cellular_automata/</loc>
+        <lastmod>2022-01-19T12:10:00+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/life/</loc>
+        <lastmod>2022-01-19T12:10:00+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/complex_systems/</loc>
+        <lastmod>2022-01-19T12:07:00+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/adamsformaldefinitionsunbounded2017/</loc>
+        <lastmod>2022-01-19T12:01:00+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/graph_cellular_automata/</loc>
         <lastmod>2022-01-17T17:08:00+01:00</lastmod>
     </url>
     
@@ -118,11 +158,6 @@
     </url>
     
     <url>
-        <loc>https://hugocisneros.com/notes/adamsformaldefinitionsunbounded2017/</loc>
-        <lastmod>2021-09-14T22:45:00+02:00</lastmod>
-    </url>
-    
-    <url>
         <loc>https://hugocisneros.com/notes/monero/</loc>
         <lastmod>2021-09-14T22:05:00+02:00</lastmod>
     </url>
@@ -145,11 +180,6 @@
     <url>
         <loc>https://hugocisneros.com/notes/reductionism/</loc>
         <lastmod>2021-09-03T15:14:00+02:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/cellular_automata/</loc>
-        <lastmod>2021-09-03T14:09:00+02:00</lastmod>
     </url>
     
     <url>
@@ -393,11 +423,6 @@
     </url>
     
     <url>
-        <loc>https://hugocisneros.com/notes/generative_adversarial_networks/</loc>
-        <lastmod>2021-06-17T10:18:00+02:00</lastmod>
-    </url>
-    
-    <url>
         <loc>https://hugocisneros.com/notes/generative_modelling/</loc>
         <lastmod>2021-06-17T10:18:00+02:00</lastmod>
     </url>
@@ -460,11 +485,6 @@
     <url>
         <loc>https://hugocisneros.com/notes/org_mode/</loc>
         <lastmod>2021-05-18T15:00:00+02:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/artificial_life/</loc>
-        <lastmod>2021-05-16T18:28:00+02:00</lastmod>
     </url>
     
     <url>
@@ -599,11 +619,6 @@
     
     <url>
         <loc>https://hugocisneros.com/notes/byte_pair_encoding/</loc>
-        <lastmod>2021-03-25T09:58:00+01:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/coding/</loc>
         <lastmod>2021-03-25T09:58:00+01:00</lastmod>
     </url>
     
@@ -923,11 +938,6 @@
     </url>
     
     <url>
-        <loc>https://hugocisneros.com/notes/life/</loc>
-        <lastmod>2021-03-25T09:56:00+01:00</lastmod>
-    </url>
-    
-    <url>
         <loc>https://hugocisneros.com/notes/neural_architecture_search/</loc>
         <lastmod>2021-03-25T09:56:00+01:00</lastmod>
     </url>
@@ -1015,11 +1025,6 @@
     <url>
         <loc>https://hugocisneros.com/notes/attention_graph_networks/</loc>
         <lastmod>2021-02-24T11:32:00+01:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/complex_systems/</loc>
-        <lastmod>2021-02-22T13:51:00+01:00</lastmod>
     </url>
     
     <url>
@@ -1435,11 +1440,6 @@
     <url>
         <loc>https://hugocisneros.com/notes/abstraction_and_reasoning_corpus/</loc>
         <lastmod>2020-07-17T13:44:00+02:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/alife_conference/</loc>
-        <lastmod>2020-07-17T10:59:00+02:00</lastmod>
     </url>
     
     <url>
