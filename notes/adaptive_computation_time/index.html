@@ -61,7 +61,7 @@
                 <a href="/notes/neural_networks/">Neural networks</a>, <a href="/notes/algorithm/">Algorithm</a>
               </dd>
             </dl>
-            <p>Adaptive computation time (ACT) was introduced in (<a href="#org23e86a9">Graves 2017</a>) as a way to make computations in <a href="/notes/recurrent_neural_networks/">RNN</a> adaptive. The network learns how many computational steps to use before emitting an output.</p>
+            <p>Adaptive computation time (ACT) was introduced in (<a href="#gravesAdaptiveComputationTime2017"><cite itemprop="citation" itemscope itemid="key:gravesAdaptiveComputationTime2017">Graves 2017</cite></a>) as a way to make computations in <a href="/notes/recurrent_neural_networks/">RNN</a> adaptive. The network learns how many computational steps to use before emitting an output.</p>
             <p>This is done by outputting an extra <em>halting probability</em> at each update step, and considering two timelines:</p>
             <ul>
               <li>the input timeline which plays the role of an outer loop, at each of those step, a new input symbol is fed to the RNN. This step outputs a single output vector.</li>
@@ -69,9 +69,8 @@
             </ul>
             <h2 id="bibliography">Bibliography</h2>
             <ol class="biblio-list">
-              <a id="org23e86a9"></a>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle">
-                <span itemprop="author">Graves, Alex</span>. <span datetime="2017" itemprop="datePublished">February 21, 2017</span>. "<span itemprop="name">Adaptive Computation Time for Recurrent Neural Networks</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">arXiv:1603.08983 [Cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/1603.08983">http://arxiv.org/abs/1603.08983</a>.
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="gravesAdaptiveComputationTime2017">
+                <span itemprop="author">Graves, Alex</span>. <span datetime="2017" itemprop="datePublished">February 21, 2017</span>. "<span itemprop="name">Adaptive Computation Time for Recurrent Neural Networks</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:1603.08983 [cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/1603.08983">http://arxiv.org/abs/1603.08983</a>.
               </li>
             </ol>
           </div>

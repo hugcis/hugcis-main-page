@@ -58,7 +58,7 @@
             <dl>
               <dt>source</dt>
               <dd>
-                (<a href="#orgf2d85e8">Grbic and Risi 2020</a>)
+                (<a href="#grbicSafeReinforcementLearning2020"><cite itemprop="citation" itemscope itemid="key:grbicSafeReinforcementLearning2020">Grbic and Risi 2020</cite></a>)
               </dd>
               <dt>tags</dt>
               <dd>
@@ -67,19 +67,13 @@
             </dl>
             <h2 id="summary">Summary</h2>
             <p>In RL an important goal is to find agents that can quickly adapt to changing environments while avoiding unsafe states. However, in deep RL, there is often noise added to explore the action space: this can lead to unsafe part of the state-action space.</p>
-            <figure class="center" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-              <img itemprop="url" src="/img/grbicslide.jpeg" alt="Slide from the Alife talk" width="200" style="">
-              <figcaption>
-                <h4 itemprop="name">Slide from the Alife talk</h4>
-              </figcaption>
-            </figure>
+            <p>{{&lt; img src="/img/grbicslide.jpeg" title=“Slide from the Alife talk” width=200 alt=“Slide from the Alife talk” class=“center” &gt;}}</p>
             <p>The meta-learning setting of MAML is adapted to RL, with a policy network learning the policy in a standard way and a “instinctual network” which is fixed for a group of tasks and modulates the regular policy with its own action vector.</p>
             <p>They show results on a navigation tasks with and without hazards and with and without instincts. It seems that instincts makes convergence slower when there are no hazards in the navigation task but allows to reach better fitness in the presence of hazards.</p>
             <h2 id="bibliography">Bibliography</h2>
             <ol class="biblio-list">
-              <a id="orgf2d85e8"></a>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle">
-                <span itemprop="author"><span itemprop="author">Grbic, Djordje</span>, and <span itemprop="author">Sebastian Risi</span></span>. <span datetime="2020" itemprop="datePublished">May 6, 2020</span>. "<span itemprop="name">Safe Reinforcement Learning through Meta-Learned Instincts</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">arXiv:2005.03233 [Cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2005.03233">http://arxiv.org/abs/2005.03233</a>.
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="grbicSafeReinforcementLearning2020">
+                <span itemprop="author">Grbic, Djordjeand Sebastian Risi</span>. <span datetime="2020" itemprop="datePublished">May 6, 2020</span>. "<span itemprop="name">Safe Reinforcement Learning Through Meta-learned Instincts</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:2005.03233 [cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2005.03233">http://arxiv.org/abs/2005.03233</a>.
               </li>
             </ol>
           </div>
@@ -89,6 +83,9 @@
               <ul>
                 <li>
                   <a href="/notes/alife_2020/">ALife 2020</a>
+                </li>
+                <li>
+                  <a href="/notes/grbicsafereinforcementlearning2020/">Notes on: Safe Reinforcement Learning through Meta-learned Instincts by Grbic, D., & Risi, S. (2020)</a>
                 </li>
               </ul>
             </div>

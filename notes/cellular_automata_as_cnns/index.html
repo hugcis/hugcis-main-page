@@ -73,10 +73,10 @@
               </figcaption>
             </figure>
             <h2 id="relevant-literature">Relevant literature</h2>
-            <p>Cellular automata can easily be represented as Convolutional Neural Networks (CNNs). This relation has already been investigated in (<a href="#orgc915bde">Gilpin 2018</a>) or (<a href="#org2a0b779">Mordvintsev et al. 2020</a>) for instance. This idea has advantages and drawbacks:</p>
+            <p>Cellular automata can easily be represented as Convolutional Neural Networks (CNNs). This relation has already been investigated in (<a href="#gilpinCellularAutomataConvolutional2018"><cite itemprop="citation" itemscope itemid="key:gilpinCellularAutomataConvolutional2018">Gilpin 2018</cite></a>) or (<a href="#mordvintsevGrowingNeuralCellular2020"><cite itemprop="citation" itemscope itemid="doi:10.23915/distill.00023">Mordvintsev et al. 2020</cite></a>) for instance. This idea has advantages and drawbacks:</p>
             <ul>
               <li>Computational cost of using floating points operations is higher than discrete operations.</li>
-              <li>Discrete operations can lead to exponential growth of the number of possible configurations and update rules in a CA. This is why rules aren’t represented as bijective tables matching neighborhoods to states anymore in (<a href="#org2a0b779">Mordvintsev et al. 2020</a>).
+              <li>Discrete operations can lead to exponential growth of the number of possible configurations and update rules in a CA. This is why rules aren’t represented as bijective tables matching neighborhoods to states anymore in (<a href="#mordvintsevGrowingNeuralCellular2020"><cite itemprop="citation" itemscope itemid="doi:10.23915/distill.00023">Mordvintsev et al. 2020</cite></a>).
               </li>
               <li>The use of floating point operations is mainly there to be able to compute gradients for gradient based optimization. This is against a <em>non-supervised</em> philosophy I am trying to work on. Training cellular automata is basically re-implementing a “recurrent convolutional neural network”: this might lead to interesting models but isn’t exploiting all the potential of those computational models</li>
               <li>Ultimately computations in a computer are discrete and Mordvintsev et al. eventually use quantization to discretize the CA, resulting in an approximation of a discrete automaton.</li>
@@ -88,13 +88,11 @@
             <p><a href="/notes/turing_completeness/">Turing-completeness</a> of convolutional neural networks can be directly inferred from this close relation with cellular automata. The condition is to consider a <em>recurrent-convolutional</em> network where the output is fed back to the network at each step. A simple <a href="/notes/elementary_cellular_automata/">ECA</a> rule such as rule 110 is easily implemented in this type of convolutional neural network, hence <a href="/notes/turing_completeness_of_cellular_automata/">Turing-completeness</a>.</p>
             <h2 id="bibliography">Bibliography</h2>
             <ol class="biblio-list">
-              <a id="org2a0b779"></a>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle">
-                <span itemprop="author"><span itemprop="author">Mordvintsev, Alexander</span>, <span itemprop="author">Ettore Randazzo</span>, <span itemprop="author">Eyvind Niklasson</span>, and <span itemprop="author">Michael Levin</span></span>. <span datetime="2020" itemprop="datePublished">February 11, 2020</span>. "<span itemprop="name">Growing Neural Cellular Automata</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Distill</i></span> 5 (2):e23. <a itemprop="sameAs" href="https://doi.org/10.23915/distill.00023">DOI</a>.
-                <p><a id="orgc915bde"></a></p>
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="gilpinCellularAutomataConvolutional2018">
+                <span itemprop="author">Gilpin, William</span>. <span datetime="2018" itemprop="datePublished">September 9, 2018</span>. "<span itemprop="name">Cellular Automata as Convolutional Neural Networks</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:1809.02942 [cond-mat, Physics:nlin, Physics:physics]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/1809.02942">http://arxiv.org/abs/1809.02942</a>.
               </li>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle">
-                <span itemprop="author">Gilpin, William</span>. <span datetime="2018" itemprop="datePublished">September 9, 2018</span>. “<span itemprop="name">Cellular Automata as Convolutional Neural Networks</span>”. <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">arXiv:1809.02942 [Cond-Mat, Physics:Nlin, Physics:Physics]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/1809.02942"></a><a href="http://arxiv.org/abs/1809.02942">http://arxiv.org/abs/1809.02942</a>.
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="mordvintsevGrowingNeuralCellular2020" itemid="doi:10.23915/distill.00023">
+                <span itemprop="author">Mordvintsev, Alexander, Ettore Randazzo, Eyvind Niklassonand Michael Levin</span>. <span datetime="2020" itemprop="datePublished">February 11, 2020</span>. "<span itemprop="name">Growing Neural Cellular Automata</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Distill</i></span> 5 (2):e23. <a itemprop="sameAs" href="https://doi.org/10.23915/distill.00023">DOI</a>.
               </li>
             </ol>
           </div>

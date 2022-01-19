@@ -66,21 +66,20 @@
               </dd>
               <dt>papers</dt>
               <dd>
-                (<a href="#org8ec7bab">Frankle and Carbin 2018</a>)
+                (<a href="#frankleLotteryTicketHypothesis2018"><cite itemprop="citation" itemscope itemid="key:frankleLotteryTicketHypothesis2018">Frankle and Carbin 2018</cite></a>)
               </dd>
             </dl>
             <p>When training very large <a href="/notes/neural_networks/">neural networks</a>, the obtained net might have a lot of unused neurons. It is possible, through <a href="/notes/neural_network_pruning/">neural network pruning</a>, to remove a lot of those unused connections to make the overall architecture lighter and faster to run on some hardware.</p>
             <p>However, once you have the pruned architecture, it will often not be able to learn anything interesting when it is trained from scratch. The lottery ticket hypothesis is about the reason some of these randomly initialized neurons became more important than others. It is possible that random initialization is actually very important for a neuron to be useful after training, and the lottery ticket hypothesis is about finding this “magic” initialization to use it on small networks.</p>
-            <p>From (<a href="#org8ec7bab">Frankle and Carbin 2018</a>):</p>
+            <p>From (<a href="#frankleLotteryTicketHypothesis2018"><cite itemprop="citation" itemscope itemid="key:frankleLotteryTicketHypothesis2018">Frankle and Carbin 2018</cite></a>):</p>
             <blockquote>
               <p><strong>The Lottery Ticket Hypothesis.</strong> A randomly-initialized, dense neural network contains a subnetwork that is initialized such that — when trained in isolation — it can match the test accuracy of the original network after training for at most the same number of iterations.</p>
             </blockquote>
             <p>It turns out restarting pruned small network training from the exact initialization the initial network started from achieves excellent results. However, this hypothesis holds mostly for small neural networks. In larger networks, the pruned network is usually found more early in training.</p>
             <h2 id="bibliography">Bibliography</h2>
             <ol class="biblio-list">
-              <a id="org8ec7bab"></a>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle">
-                <span itemprop="author"><span itemprop="author">Frankle, Jonathan</span>, and <span itemprop="author">Michael Carbin</span></span>. <span datetime="2018" itemprop="datePublished">March 9, 2018</span>. "<span itemprop="name">The Lottery Ticket Hypothesis: Finding Sparse, Trainable Neural Networks</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">arXiv:1803.03635 [Cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/1803.03635">http://arxiv.org/abs/1803.03635</a>.
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="frankleLotteryTicketHypothesis2018">
+                <span itemprop="author">Frankle, Jonathanand Michael Carbin</span>. <span datetime="2018" itemprop="datePublished">March 9, 2018</span>. "<span itemprop="name">The Lottery Ticket Hypothesis: Finding Sparse, Trainable Neural Networks</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:1803.03635 [cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/1803.03635">http://arxiv.org/abs/1803.03635</a>.
               </li>
             </ol>
           </div>

@@ -62,48 +62,35 @@
               </dd>
             </dl>
             <h2 id="lm-with-rnn--recurrent-neural-networks-dot-md--s">LM with <a href="/notes/recurrent_neural_networks/">RNN</a>s</h2>
-            <p>Different models have been studied, starting from the initial <a href="/notes/recurrent_neural_networks/">Recurrent neural network</a> based language model (<a href="#org4f06f92">Mikolov et al. 2011</a>).</p>
-            <p>LSTM were then used with more success than previous models (<a href="#orge9384a8">Zaremba, Sutskever, and Vinyals 2015</a>).</p>
-            <p>Recently, <a href="#lm-with-transformers--relref-transformers-dot-md">transformers seem to have dominated language modeling</a>. However it is not clear if this is due to their real superiority over RNNs or their practical scalability (<a href="#org0b657be">Merity 2019</a>).</p>
+            <p>Different models have been studied, starting from the initial <a href="/notes/recurrent_neural_networks/">Recurrent neural network</a> based language model (<a href="#mikolovRecurrentNeuralNetwork2011"><cite itemprop="citation" itemscope itemid="key:mikolovRecurrentNeuralNetwork2011">Mikolov et al. 2011</cite></a>).</p>
+            <p>LSTM were then used with more success than previous models (<a href="#zarembaRecurrentNeuralNetwork2015"><cite itemprop="citation" itemscope itemid="key:zarembaRecurrentNeuralNetwork2015">Zaremba, Sutskeverand Vinyals 2015</cite></a>).</p>
+            <p>Recently, <a href="#lm-with-transformers--relref-transformers-dot-md">transformers seem to have dominated language modeling</a>. However it is not clear if this is due to their real superiority over RNNs or their practical scalability (<a href="#meritySingleHeadedAttention2019"><cite itemprop="citation" itemscope itemid="key:meritySingleHeadedAttention2019">Merity 2019</cite></a>).</p>
             <h2 id="lm-with-transformers--transformers-dot-md">LM with <a href="/notes/transformers/">Transformers</a></h2>
             <h2 id="language-modeling-and-compression--compression-dot-md">Language modeling and <a href="/notes/compression/">Compression</a></h2>
             <h2 id="text-generation">Text generation</h2>
-            <p>Language models can be used to generate text from a prompt or starting sentence. This is the kind of examples that made models like GPT-2 and GPT-3 famous, because of their ability to generate long sequences of apparently coherent text (<a href="#orgb8a75e5">Radford et al. 2019</a>; <a href="#org9b6f6f8">Brown et al. 2020</a>).</p>
+            <p>Language models can be used to generate text from a prompt or starting sentence. This is the kind of examples that made models like GPT-2 and GPT-3 famous, because of their ability to generate long sequences of apparently coherent text (<a href="#radfordLanguageModelsAre2019"><cite itemprop="citation" itemscope itemid="key:radfordLanguageModelsAre2019">Radford et al. 2019</cite></a>; <a href="#brownLanguageModelsAre2020"><cite itemprop="citation" itemscope itemid="key:brownLanguageModelsAre2020">Brown et al. 2020</cite></a>).</p>
             <h2 id="other-applications">Other applications</h2>
             <h3 id="language-modeling-for-automated-theorem-proving--automated-theorem-proving-dot-md">Language modeling for <a href="/notes/automated_theorem_proving/">Automated theorem proving</a></h3>
-            <p>(<a href="#orgf2278ca">Polu and Sutskever 2020</a>)</p>
+            <p>(<a href="#poluGenerativeLanguageModeling2020"><cite itemprop="citation" itemscope itemid="key:poluGenerativeLanguageModeling2020">Polu and Sutskever 2020</cite></a>)</p>
             <h3 id="language-modeling-for-reinforcement-learning--reinforcement-learning-dot-md">Language modeling for <a href="/notes/reinforcement_learning/">Reinforcement Learning</a></h3>
-            <p>(<a href="#orgc5401ac">Janner, Li, and Levine, n.d.</a>)</p>
+            <p>(<a href="#jannerReinforcementLearningOne">&lt;cite itemprop=“citation” itemscope=““Janner, Liand Levine,n.d.</a>)</p>
             <h2 id="bibliography">Bibliography</h2>
             <ol class="biblio-list">
-              <a id="org9b6f6f8"></a>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle">
-                <span itemprop="author"><span itemprop="author">Brown, Tom B.</span>, <span itemprop="author">Benjamin Mann</span>, <span itemprop="author">Nick Ryder</span>, <span itemprop="author">Melanie Subbiah</span>, <span itemprop="author">Jared Kaplan</span>, <span itemprop="author">Prafulla Dhariwal</span>, <span itemprop="author">Arvind Neelakantan</span>, et al.</span>. <span datetime="2020" itemprop="datePublished">June 4, 2020</span>. "<span itemprop="name">Language Models Are Few-Shot Learners</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">arXiv:2005.14165 [Cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2005.14165">http://arxiv.org/abs/2005.14165</a>.
-                <p><a id="orgc5401ac"></a></p>
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="mikolovRecurrentNeuralNetwork2011"><span itemprop="author">Mikolov, Tomas, Martin Karafiat, Lukas Burget, Jan Cernockyand Sanjeev Khudanpur</span>. <span datetime="2011" itemprop="datePublished">2011</span>. "<span itemprop="name">Recurrent Neural Network Based Language Model</span>". In , 4.</li>
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="zarembaRecurrentNeuralNetwork2015">
+                <span itemprop="author">Zaremba, Wojciech, Ilya Sutskeverand Oriol Vinyals</span>. <span datetime="2015" itemprop="datePublished">February 19, 2015</span>. "<span itemprop="name">Recurrent Neural Network Regularization</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:1409.2329 [cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/1409.2329">http://arxiv.org/abs/1409.2329</a>.
               </li>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle">
-                <span itemprop="author"><span itemprop="author">Janner, Michael</span>, <span itemprop="author">Qiyang Li</span>, and <span itemprop="author">Sergey Levine</span></span>. n.d. “<span itemprop="name">Reinforcement Learning as One Big Sequence Modeling Problem</span>”, 15.
-                <p><a id="org4f06f92"></a></p>
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="meritySingleHeadedAttention2019">
+                <span itemprop="author">Merity, Stephen</span>. <span datetime="2019" itemprop="datePublished">November 26, 2019</span>. "<span itemprop="name">Single Headed Attention RNN: Stop Thinking with Your Head</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:1911.11423 [cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/1911.11423">http://arxiv.org/abs/1911.11423</a>.
               </li>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle">
-                <span itemprop="author"><span itemprop="author">Mikolov, Tomas</span>, <span itemprop="author">Martin Karafiat</span>, <span itemprop="author">Lukas Burget</span>, <span itemprop="author">Jan Cernocky</span>, and <span itemprop="author">Sanjeev Khudanpur</span></span>. <span datetime="2011" itemprop="datePublished">2011</span>. “<span itemprop="name">Recurrent Neural Network Based Language Model</span>”, 4.
-                <p><a id="orgf2278ca"></a></p>
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="radfordLanguageModelsAre2019"><span itemprop="author">Radford, Alec, Jeffrey Wu, Rewon Child, David Luan, Dario Amodeiand Ilya Sutskever</span>. <span datetime="2019" itemprop="datePublished">2019</span>. "<span itemprop="name">Language Models Are Unsupervised Multitask Learners</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Openai Blog</i></span> 1 (8):9.</li>
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="brownLanguageModelsAre2020">
+                <span itemprop="author">Brown, Tom B., Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared Kaplan, Prafulla Dhariwal, Arvind Neelakantan, et al.</span>. <span datetime="2020" itemprop="datePublished">June 4, 2020</span>. "<span itemprop="name">Language Models Are Few-shot Learners</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:2005.14165 [cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2005.14165">http://arxiv.org/abs/2005.14165</a>.
               </li>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle">
-                <span itemprop="author"><span itemprop="author">Polu, Stanislas</span>, and <span itemprop="author">Ilya Sutskever</span></span>. <span datetime="2020" itemprop="datePublished">September 7, 2020</span>. “<span itemprop="name">Generative Language Modeling for Automated Theorem Proving</span>”. <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">arXiv:2009.03393 [Cs, Stat]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2009.03393"></a><a href="http://arxiv.org/abs/2009.03393">http://arxiv.org/abs/2009.03393</a>.
-                <p><a id="orgb8a75e5"></a></p>
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="poluGenerativeLanguageModeling2020">
+                <span itemprop="author">Polu, Stanislasand Ilya Sutskever</span>. <span datetime="2020" itemprop="datePublished">September 7, 2020</span>. "<span itemprop="name">Generative Language Modeling for Automated Theorem Proving</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:2009.03393 [cs, Stat]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2009.03393">http://arxiv.org/abs/2009.03393</a>.
               </li>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle">
-                <span itemprop="author"><span itemprop="author">Radford, Alec</span>, <span itemprop="author">Jeffrey Wu</span>, <span itemprop="author">Rewon Child</span>, <span itemprop="author">David Luan</span>, <span itemprop="author">Dario Amodei</span>, and <span itemprop="author">Ilya Sutskever</span></span>. <span datetime="2019" itemprop="datePublished">2019</span>. “<span itemprop="name">Language Models Are Unsupervised Multitask Learners</span>”. <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">OpenAI Blog</i></span> 1 (8):9.
-                <p><a id="orge9384a8"></a></p>
-              </li>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle">
-                <span itemprop="author"><span itemprop="author">Zaremba, Wojciech</span>, <span itemprop="author">Ilya Sutskever</span>, and <span itemprop="author">Oriol Vinyals</span></span>. <span datetime="2015" itemprop="datePublished">February 19, 2015</span>. “<span itemprop="name">Recurrent Neural Network Regularization</span>”. <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">arXiv:1409.2329 [Cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/1409.2329"></a><a href="http://arxiv.org/abs/1409.2329">http://arxiv.org/abs/1409.2329</a>.
-                <p><a id="org0b657be"></a></p>
-              </li>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle">
-                <span itemprop="author">Merity, Stephen</span>. <span datetime="2019" itemprop="datePublished">November 26, 2019</span>. “<span itemprop="name">Single Headed Attention RNN: Stop Thinking with Your Head</span>”. <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">arXiv:1911.11423 [Cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/1911.11423"></a><a href="http://arxiv.org/abs/1911.11423">http://arxiv.org/abs/1911.11423</a>.
-              </li>
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="jannerReinforcementLearningOne"><span itemprop="author">Janner, Michael, Qiyang Liand Sergey Levine</span>. n.d.. "<span itemprop="name">Reinforcement Learning as One Big Sequence Modeling Problem</span>", 15.</li>
             </ol>
           </div>
           <div class="bl-section">
