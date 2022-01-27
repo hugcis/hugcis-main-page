@@ -2,6 +2,22 @@
     
     
     
+    {"body":" source   tags Reservoir computing  Summary This paper bases itself on the demonstration that Reservoir computers are mathematically identical to nonlinear vector autoregression (NVAR) machines \u0026lt;\u0026amp;bolltExplainingSurprisingSuccess2021\u0026gt;. A NVAR is just a regression over a feature vector composed of \\(k\\) time-delay observations of the dynamical system to be learned and nonlinear functions of these observations.\nThe authors introduce Next-Generation Reservoir computing (NG-RC) which is essentially a NVAR. Instead of the standard RC setup, they regress the outer layer over a vector\n\\[\\mathbb{O}_{\\text{total} }= c + \\mathbb{O}_{\\text{lin}} + \\mathbb{O}_{\\text{nonlin}}\\]\nwhere \\(c\\) is a constant, \\(\\mathbb{O}_{\\text{lin}}\\) is the vector of time delayed input observations and \\(\\mathbb{O}_{\\text{nonlin}}\\) is a vector of non-linear transformations of these observations.\nThen, the output layer computes the NVAR output as a linear transformation of the feature vector, through \\(\\mathbf{Y}_i = \\mathbf{W}_{\\text{out}} \\mathbb{O}_{\\text{total}, i}\\).\nFor a training dataset \\(\\mathbf{Y}_d\\), output \\(\\mathbf{Y}\\) is matched to it by solving a least-square linear regression problem.\nThe authors then evaluate the NG-RC model on two chaotic dynamical systems and show some performance scores and a few train/test trajectories comparisons.\nComments There doesn\u0026rsquo;t seem to be any comparison against standard RC, which is what this model is supposed to replace.\n\u0026lt;~/Papers/library_bibtex.bib\u0026gt;\n","title":"Next Generation Reservoir Computing by Gauthier, D. J., Bollt, E., Griffith, A., \u0026...","url":"https://hugocisneros.com/notes/gauthiernextgenerationreservoir2021/"}
+    
+    , 
+    
+    {"body":" tags Mathematics  The MP inverse exists and is unique for any matrix \\(A\\). When \\(A\\) has linearly independent columns, the MP inverse \\(A^+\\) is \\[ A^+ = (A^* A)^{-1 } A^* \\]\nWhere \\(A^*\\) is the conjugate transpose of \\(A\\).\nIf the rows are linearly independent, \\[ A^+ = A^* (AA^*)^{-1} \\].\n","title":"Moore-Penrose inverse","url":"https://hugocisneros.com/notes/moore_penrose_inverse/"}
+    
+    , 
+    
+    {"body":" tags Emacs, Org-mode website Org-roam  Org-roam is an org-mode package that implements features similar to Roam research:\n Bi-directional links between notes \u0026mdash; a link from a note to another note is also a \u0026ldquo;backlink\u0026rdquo; from the latter to the former. Possibility to reference whole notes or subtrees transparently Citation and references as links And many others  It was created by Jethro Kuan.\nOrg roam is useful to manage a personal knowledge base in plain text, while taking advantage of the powerful features of Org-mode.\nI use this software to build my notes. Its configuration is detailed on my configuration page and I wrote a blog post explaining how I export the notes to my website.\n","title":"Org-roam","url":"https://hugocisneros.com/notes/org_roam/"}
+    
+    , 
+    
+    {"body":" website Personal website  Jethro Kuan is a developer from Singapore. He developed Org-roam.\n","title":"Jethro Kuan","url":"https://hugocisneros.com/notes/jethro_kuan/"}
+    
+    , 
+    
     {"body":" tags Neural networks, Generative modelling  Generative adversarial networks are a type of generative model. It is close in spirit to Variational autoencoders, but has key differences. The main one is the way the model is trained, which uses an adversarial equilibrium between training a generator and training a discriminator.\nAre GANs glorified PCA? (Richardson and Weiss 2020) This paper seems to show that image-to-image translation models are ill-posed and imply the image transformation should always be very local.\nThe authors propose a simple linear model for solving complex image-to-image translation tasks which seems to yield competitive results.\nBibliography Richardson, Eitanand Yair Weiss. July 24, 2020. \"The Surprising Effectiveness of Linear Unsupervised Image-to-image Translation\". Arxiv:2007.12568 [cs]. http://arxiv.org/abs/2007.12568.  ","title":"Generative adversarial networks","url":"https://hugocisneros.com/notes/generative_adversarial_networks/"}
     
     , 
@@ -310,10 +326,6 @@
     
     , 
     
-    {"body":" tags Emacs, Org-mode website Org-roam  Org-roam is an org-mode package that implements features similar to Roam research:\n Bi-directional links between notes \u0026mdash; a link from a note to another note is also a \u0026ldquo;backlink\u0026rdquo; from the latter to the former. Possibility to reference whole notes or subtrees transparently Citation and references as links And many others  ","title":"Org-roam","url":"https://hugocisneros.com/notes/org_roam/"}
-    
-    , 
-    
     {"body":" tags Writing  ","title":"Roam research","url":"https://hugocisneros.com/notes/roam_research/"}
     
     , 
@@ -355,10 +367,6 @@
     , 
     
     {"body":" tags Mathematics  LU Factorization  resources Nick Higham\u0026rsquo;s blog  An LU factorization of a \\(n \\times n\\) matrix \\(A\\) is a factorization \\(A = LU\\), where \\(L\\) is lower triangular and \\(U\\) is upper triangular\nLUP factorization LU factorization with partial pivoting: \\(PA = LU\\) with \\(P\\) a permutation matrix.\nLDU factorization Lower-diagonal upper factorization: \\(A = LDU\\) with \\(D\\) a diagonal matrix and \\(L\\) and \\(U\\) are uni-triangular (triangular with diagonal one).\n","title":"Matrix factorization","url":"https://hugocisneros.com/notes/matrix_factorization/"}
-    
-    , 
-    
-    {"body":" tags Mathematics  ","title":"Moore-Penrose inverse","url":"https://hugocisneros.com/notes/moore_penrose_inverse/"}
     
     , 
     
