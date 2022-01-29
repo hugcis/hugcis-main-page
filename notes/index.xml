@@ -6,15 +6,44 @@
     <description>Recent content in Notes on Hugo Cisneros</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 Jan 2022 10:19:00 +0100</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 29 Jan 2022 14:51:00 +0100</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Notes on: Next Generation Reservoir Computing by Gauthier, D. J., Bollt, E., Griffith, A., &amp; Barbosa, W. A. S. (2021)</title>
       <link>https://hugocisneros.com/notes/gauthiernextgenerationreservoir2021/</link>
-      <pubDate>Thu, 27 Jan 2022 10:19:00 +0100</pubDate>
+      <pubDate>Sat, 29 Jan 2022 14:51:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/gauthiernextgenerationreservoir2021/</guid>
-      <description>source   tags Reservoir computing  Summary This paper bases itself on the demonstration that Reservoir computers are mathematically identical to nonlinear vector autoregression (NVAR) machines &amp;lt;&amp;amp;bolltExplainingSurprisingSuccess2021&amp;gt;. A NVAR is just a regression over a feature vector composed of \(k\) time-delay observations of the dynamical system to be learned and nonlinear functions of these observations.
-The authors introduce Next-Generation Reservoir computing (NG-RC) which is essentially a NVAR. Instead of the standard RC setup, they regress the outer layer over a vector</description>
+      <description>source (Gauthier et al. 2021) tags Reservoir computing  Summary This paper bases itself on the demonstration that some reservoir computers (echo-state networks) are mathematically identical to nonlinear vector autoregression (NVAR) machines (Bollt 2021). A NVAR is just a regression over a feature vector composed of \(k\) time-delay observations of the dynamical system to be learned and nonlinear functions of these observations.
+The authors introduce Next-Generation Reservoir computing (NG-RC) which is essentially a NVAR.</description>
+    </item>
+    
+    <item>
+      <title>Notes on: One model for the learning of language by Yang, Y., &amp; Piantadosi, S. T. (2022)</title>
+      <link>https://hugocisneros.com/notes/yangonemodellearning2022/</link>
+      <pubDate>Sat, 29 Jan 2022 14:46:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/yangonemodellearning2022/</guid>
+      <description>source (Yang and Piantadosi 2022) tags NLP, Artificial Intelligence, Machine learning  Summary This paper introduces a model for learning language from few examples while generalizing effectively.
+This model builds sentences with function that are combinations of elementary functions, including:
+ pair(L, C) : Concatenates character C onto list L first(L) : Return the first character of L flip(P) : Return true with probability P if(B, X, Y) : Return X if B else return Y (X and Y may be lists, sets, or probabilities) etc.</description>
+    </item>
+    
+    <item>
+      <title>Linear programming</title>
+      <link>https://hugocisneros.com/notes/linear_programming/</link>
+      <pubDate>Thu, 27 Jan 2022 17:12:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/linear_programming/</guid>
+      <description>tags Optimization  Linear programs are problems that can be expressed as \[\begin{align} &amp;amp; \text{Find a vector} &amp;amp;&amp;amp; \mathbf{x} \\ &amp;amp; \text{that maximizes} &amp;amp;&amp;amp; \mathbf{c}^T \mathbf{x}\\ &amp;amp; \text{subject to} &amp;amp;&amp;amp; A \mathbf{x} \leq \mathbf{b} \\ &amp;amp; \text{and} &amp;amp;&amp;amp; \mathbf{x} \ge \mathbf{0}. \end{align} \]</description>
+    </item>
+    
+    <item>
+      <title>Notes on: Formal Definitions of Unbounded Evolution and Innovation Reveal Universal Mechanisms for Open-Ended Evolution in Dynamical Systems by Adams, A., Zenil, H., Davies, P. C. W., &amp; Walker, S. I. (2017)</title>
+      <link>https://hugocisneros.com/notes/adamsformaldefinitionsunbounded2017/</link>
+      <pubDate>Thu, 27 Jan 2022 12:05:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/adamsformaldefinitionsunbounded2017/</guid>
+      <description>source (Adams et al. 2017) tags Open-ended Evolution, Cellular automata  Summary This paper defines two properties for dynamical systems which are claimed to be related to open-ended evolution: Unbounded evolution (UE) and Innovation (INN). The combination of these two properties makes a system open-ended according to this paper&amp;rsquo;s definition For such properties to be possible, a system has to be decomposed into two entities that interact with each other:</description>
     </item>
     
     <item>
@@ -121,15 +150,6 @@ A cellular automaton&amp;rsquo;s evolution is simulated in discrete timesteps. A
  &amp;mdash; Mandelbrot, ~1980
 When we talk about complex systems in time, we often used the term complex dynamical systems.
 Example of complex systems  The economy (Anderson and Evolutionary Paths of the Global Economy Workshop 1996) Boolean networks Cellular automata Neural networks Many physical systems  Can complex systems evolve? The biosphere is a striking example of very large and intricate complex system.</description>
-    </item>
-    
-    <item>
-      <title>Notes on: Formal Definitions of Unbounded Evolution and Innovation Reveal Universal Mechanisms for Open-Ended Evolution in Dynamical Systems by Adams, A., Zenil, H., Davies, P. C. W., &amp; Walker, S. I. (2017)</title>
-      <link>https://hugocisneros.com/notes/adamsformaldefinitionsunbounded2017/</link>
-      <pubDate>Wed, 19 Jan 2022 12:01:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/adamsformaldefinitionsunbounded2017/</guid>
-      <description>source (Adams et al. 2017) tags Open-ended Evolution, Cellular automata  Summary This paper defines two properties for dynamical systems which are claimed to be related to open-ended evolution: Unbounded evolution (UE) and Innovation (INN). The combination of these two properties makes a system open-ended according to this paper&amp;rsquo;s definition For such properties to be possible, a system has to be decomposed into two entities that interact with each other:</description>
     </item>
     
     <item>
