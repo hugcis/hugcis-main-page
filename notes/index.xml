@@ -13,7 +13,7 @@
       <pubDate>Wed, 02 Feb 2022 09:05:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/cellular_automata/</guid>
-      <description>tags Emergence, Chaos, Artificial Intelligence resources Wikipedia, (Von Neumann and Burks 1966; Wolfram 2002)  Definition A cellular automaton is a computational model defined with respect to a regular grid of individual elements (called cells). Each of those cells can be in one of a finite number of states &amp;mdash; alive or dead, \(\{1, 2, 3\}\), etc.
+      <description>tags Emergence, Chaos, Artificial Intelligence resources Wikipedia, &amp;lt;vonneumannTheorySelfreproducingAutomata1966,wolframNewKindScience2002&amp;gt;  Definition A cellular automaton is a computational model defined with respect to a regular grid of individual elements (called cells). Each of those cells can be in one of a finite number of states &amp;mdash; alive or dead, \(\{1, 2, 3\}\), etc.
 A cellular automaton&amp;rsquo;s evolution is simulated in discrete timesteps. At each new timestep, cells are updated according to a local evolution rule.</description>
     </item>
     
@@ -23,7 +23,7 @@ A cellular automaton&amp;rsquo;s evolution is simulated in discrete timesteps. A
       <pubDate>Mon, 31 Jan 2022 13:55:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/yangonemodellearning2022/</guid>
-      <description>source (Yang and Piantadosi 2022) tags NLP, Artificial Intelligence, Machine learning  Summary This paper introduces a model for learning language from few examples while generalizing effectively.
+      <description>source   tags NLP, Artificial Intelligence, Machine learning  Summary This paper introduces a model for learning language from few examples while generalizing effectively.
 This model builds sentences with function that are combinations of elementary functions, including:
  pair(L, C) : Concatenates character C onto list L first(L) : Return the first character of L flip(P) : Return true with probability P if(B, X, Y) : Return X if B else return Y (X and Y may be lists, sets, or probabilities) etc.</description>
     </item>
@@ -44,7 +44,7 @@ Applications of these learned representations range from simple compression, to 
       <pubDate>Sat, 29 Jan 2022 14:51:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/gauthiernextgenerationreservoir2021/</guid>
-      <description>source (Gauthier et al. 2021) tags Reservoir computing  Summary This paper bases itself on the demonstration that some reservoir computers (echo-state networks) are mathematically identical to nonlinear vector autoregression (NVAR) machines (Bollt 2021). A NVAR is just a regression over a feature vector composed of \(k\) time-delay observations of the dynamical system to be learned and nonlinear functions of these observations.
+      <description>source   tags Reservoir computing  Summary This paper bases itself on the demonstration that some reservoir computers (echo-state networks) are mathematically identical to nonlinear vector autoregression (NVAR) machines &amp;lt;&amp;amp;bolltExplainingSurprisingSuccess2021&amp;gt;. A NVAR is just a regression over a feature vector composed of \(k\) time-delay observations of the dynamical system to be learned and nonlinear functions of these observations.
 The authors introduce Next-Generation Reservoir computing (NG-RC) which is essentially a NVAR.</description>
     </item>
     
@@ -63,7 +63,8 @@ The authors introduce Next-Generation Reservoir computing (NG-RC) which is essen
       <pubDate>Thu, 27 Jan 2022 12:05:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/adamsformaldefinitionsunbounded2017/</guid>
-      <description>source (Adams et al. 2017) tags Open-ended Evolution, Cellular automata  Summary This paper defines two properties for dynamical systems which are claimed to be related to open-ended evolution: Unbounded evolution (UE) and Innovation (INN). The combination of these two properties makes a system open-ended according to this paper&amp;rsquo;s definition For such properties to be possible, a system has to be decomposed into two entities that interact with each other:</description>
+      <description>source   tags Open-ended Evolution, Cellular automata  Summary This paper defines two properties for dynamical systems which are claimed to be related to open-ended evolution: Unbounded evolution (UE) and Innovation (INN). The combination of these two properties makes a system open-ended according to this paper&amp;rsquo;s definition For such properties to be possible, a system has to be decomposed into two entities that interact with each other:
+ an organism, an environment.</description>
     </item>
     
     <item>
@@ -104,7 +105,7 @@ Org roam is useful to manage a personal knowledge base in plain text, while taki
       
       <guid>https://hugocisneros.com/notes/generative_adversarial_networks/</guid>
       <description>tags Neural networks, Generative modelling  Generative adversarial networks are a type of generative model. It is close in spirit to Variational autoencoders, but has key differences. The main one is the way the model is trained, which uses an adversarial equilibrium between training a generator and training a discriminator.
-Are GANs glorified PCA? (Richardson and Weiss 2020) This paper seems to show that image-to-image translation models are ill-posed and imply the image transformation should always be very local.</description>
+Are GANs glorified PCA?  This paper seems to show that image-to-image translation models are ill-posed and imply the image transformation should always be very local.</description>
     </item>
     
     <item>
@@ -125,8 +126,8 @@ ALife 2020 </description>
       <guid>https://hugocisneros.com/notes/artificial_life/</guid>
       <description>Artificial life could be thought of as attempts at re-creating biological Life or other types of life. It uses different tools such as biology, physics, chemistry, computer science, etc.
 Creating artificial life seems like a possible way to create AI, since most living systems on Earth seem to exhibit some form of robust intelligent behavior.
-Definition of artificial life from Carlos Gershenson in (Gershenson 2021)
- Beginning in the mid-1980s, ALife has studied living systems using a synthetic approach: building life to understand it better (Aguilar et al.</description>
+Definition of artificial life from Carlos Gershenson in 
+ Beginning in the mid-1980s, ALife has studied living systems using a synthetic approach: building life to understand it better .</description>
     </item>
     
     <item>
@@ -146,7 +147,7 @@ Definition of artificial life from Carlos Gershenson in (Gershenson 2021)
       <guid>https://hugocisneros.com/notes/life/</guid>
       <description>From Sara Walker&amp;rsquo;s keynote at Alife 2020: The Natural History of Information:
  Life is a process whereby information structures matter across space and time.
- Why should life be an emergent process? An answer from (Krakauer et al. 2020):
+ Why should life be an emergent process? An answer from :
  The fact that physics and chemistry are universal—ongoing in stars, solar systems, and galaxies—whereas to the best of our knowledge biology is exclusively a property of earth, supports the view that life is emergent.</description>
     </item>
     
@@ -159,7 +160,7 @@ Definition of artificial life from Carlos Gershenson in (Gershenson 2021)
       <description>Bottomless wonders spring from simple rules, which are repeated without end.
  &amp;mdash; Mandelbrot, ~1980
 When we talk about complex systems in time, we often used the term complex dynamical systems.
-Example of complex systems  The economy (Anderson and Evolutionary Paths of the Global Economy Workshop 1996) Boolean networks Cellular automata Neural networks Many physical systems  Can complex systems evolve? The biosphere is a striking example of very large and intricate complex system.</description>
+Example of complex systems  The economy  Boolean networks Cellular automata Neural networks Many physical systems  Can complex systems evolve? The biosphere is a striking example of very large and intricate complex system. One of its most impressive feature is the fact that it has allowed for intelligent life to develop through evolution.</description>
     </item>
     
     <item>
@@ -168,9 +169,9 @@ Example of complex systems  The economy (Anderson and Evolutionary Paths of the 
       <pubDate>Mon, 17 Jan 2022 17:08:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/graph_cellular_automata/</guid>
-      <description>tags Cellular automata, Graphs  This concept was mentioned in (O&amp;rsquo;Sullivan 2001), although it may not be the first ever mention of it.
+      <description>tags Cellular automata, Graphs  This concept was mentioned in , although it may not be the first ever mention of it.
 The idea is also similar to graph convolutional networks and other graph neural networks, where the goal is to construct an update function for a node that doesn&amp;rsquo;t depend on the number of neighboring nodes. This enables running cellular automata on non-grid structures.
-This idea was recently published at NeurIPS 2021 (Grattarola, Liviand Alippi 2021).</description>
+This idea was recently published at NeurIPS 2021 &amp;lt;&amp;amp;grattarolaLearningGraphCellular2021&amp;gt;.</description>
     </item>
     
     <item>
@@ -179,8 +180,8 @@ This idea was recently published at NeurIPS 2021 (Grattarola, Liviand Alippi 202
       <pubDate>Mon, 17 Jan 2022 16:44:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/cellular_neural_networks/</guid>
-      <description> tags Cellular automata, Neural networks resources Scholarpedia,  (Chua and Yang 1988; Chua and Yang 1988)
-Bibliography Chua, L.O.and L. Yang. October 1988. &#34;Cellular Neural Networks: Applications&#34;. IEEE Transactions on Circuits and Systems 35 (10):1273–90. DOI. Chua, L.O.and L. Yang. October 1988. &#34;Cellular Neural Networks: Theory&#34;. IEEE Transactions on Circuits and Systems 35 (10):1257–72. DOI.  </description>
+      <description>tags Cellular automata, Neural networks resources Scholarpedia,  &amp;lt;chuaCellularNeuralNetworks1988,chuaCellularNeuralNetworks1988a&amp;gt;
+&amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -190,9 +191,10 @@ Bibliography Chua, L.O.and L. Yang. October 1988. &#34;Cellular Neural Networks:
       
       <guid>https://hugocisneros.com/notes/intrinsic_motivation/</guid>
       <description>tags Reinforcement learning, Robotics  references :
-According to (Ryan and Deci 2000) (pp. 56),
+According to  (pp. 56),
  Intrinsic motivation is defined as the doing of an activity for its inherent satisfaction rather than for some separable consequence. When intrinsically motivated, a person is moved to act for the fun or challenge entailed rather than because of external products, pressures, or rewards.
- It is defined by contrast with extrinsic motivation</description>
+ It is defined by contrast with extrinsic motivation
+ Extrinsic motivation is a construct that pertains whenever an activity is done in order to attain some separable outcome.</description>
     </item>
     
     <item>
@@ -235,9 +237,9 @@ This isn&amp;rsquo;t surprising since models are following a loss function that 
       <pubDate>Mon, 18 Oct 2021 08:56:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/conway_s_game_of_life/</guid>
-      <description>tags Cellular automata resources (Gardner 1970)  It is one of the most famous Cellular automata rule, invented as a game by mathematician John Conway.
-Learn the game of life with a neural network This paper investigates how hard it is for neural networks to approximate the Game of Life rule (Springer and Kenyon 2020).
-Bibliography Gardner, Martin. October 1970. &#34;Mathematical Games&#34;. Scientific American 223 (4):120–23. DOI. Springer, Jacob M.</description>
+      <description>tags Cellular automata resources    It is one of the most famous Cellular automata rule, invented as a game by mathematician John Conway.
+Learn the game of life with a neural network This paper investigates how hard it is for neural networks to approximate the Game of Life rule .
+&amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -256,9 +258,10 @@ This is challenging for a fixed neural network architecture since it has a fixed
       <pubDate>Thu, 07 Oct 2021 13:37:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/variational_autoencoders/</guid>
-      <description>tags Neural networks resources (Bishop 1994)  Variational autoencoders (VAEs) are a type of generative Autoencoders.
+      <description>tags Neural networks resources    Variational autoencoders (VAEs) are a type of generative Autoencoders.
 They use a Bayesian latent encoding for the input dataset.
-VAEs vs. GANs VAEs have fallen out of fashion when GANs became popular, because they were able to get visually interesting results more easily. However, some works a few years later seem to show that they have similar potential (Vahdat and Kautz 2020).</description>
+VAEs vs. GANs VAEs have fallen out of fashion when GANs became popular, because they were able to get visually interesting results more easily. However, some works a few years later seem to show that they have similar potential .
+&amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -267,8 +270,8 @@ VAEs vs. GANs VAEs have fallen out of fashion when GANs became popular, because 
       <pubDate>Tue, 05 Oct 2021 17:52:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/compression/</guid>
-      <description>Compression with Neural networks Compression can be done with the help of neural networks as estimators of the sequence&amp;rsquo;s next character probability (Schmidhuber and Heil 1996).
-Compression as a measure of Artificial Intelligence Mahoney argues in (Mahoney 1999) that being able to compress information amounts to being able to predict optimally the distribution of an inputs natural language corpus. A good compression algorithm &amp;ldquo;learns&amp;rdquo; features of the language to make better predictions.</description>
+      <description>Compression with Neural networks Compression can be done with the help of neural networks as estimators of the sequence&amp;rsquo;s next character probability .
+Compression as a measure of Artificial Intelligence Mahoney argues in  that being able to compress information amounts to being able to predict optimally the distribution of an inputs natural language corpus. A good compression algorithm &amp;ldquo;learns&amp;rdquo; features of the language to make better predictions. This is maybe one of the original motivation for language modeling, and can be used as an artificial intelligence test.</description>
     </item>
     
     <item>
@@ -277,8 +280,7 @@ Compression as a measure of Artificial Intelligence Mahoney argues in (Mahoney 1
       <pubDate>Thu, 30 Sep 2021 14:47:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/graph_compression/</guid>
-      <description> tags Compression, Graphs  (Bouritsas et al. 2021)
-Bibliography Bouritsas, Giorgos, Andreas Loukas, Nikolaos Karaliasand Michael M. Bronstein. July 5, 2021. &#34;Partition and Code: Learning How to Compress Graphs&#34;. Arxiv:2107.01952 [cs, Math, Stat]. http://arxiv.org/abs/2107.01952.  </description>
+      <description>tags Compression, Graphs   &amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -298,10 +300,8 @@ The notion of attractor can be defined for such networks, making them related to
       <pubDate>Thu, 30 Sep 2021 13:26:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/residual_networks/</guid>
-      <description>tags Neural networks resources (He et al. 2016)  Residual neural networks are neural networks with skip-connections (or shortcuts, residual connections) that will bypass some of the networks operations in depth.
-Highway networks (Srivastava, Greffand Schmidhuber 2015)
-DenseNets (&amp;lt;cite itemprop=&amp;ldquo;citation&amp;rdquo; itemscope=&amp;ldquo;&amp;ldquo;Huang and Liu,n.d.)
-Bibliography He, Kaiming, Xiangyu Zhang, Shaoqing Renand Jian Sun. June 2016. &#34;Deep Residual Learning for Image Recognition&#34;. In 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 770–78.</description>
+      <description>tags Neural networks resources    Residual neural networks are neural networks with skip-connections (or shortcuts, residual connections) that will bypass some of the networks operations in depth.
+Highway networks  DenseNets  &amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -310,7 +310,7 @@ Bibliography He, Kaiming, Xiangyu Zhang, Shaoqing Renand Jian Sun. June 2016. &#
       <pubDate>Thu, 30 Sep 2021 12:56:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/learning_in_dynamical_systems/</guid>
-      <description> tags Machine learning, Dynamical systems resources (Weinan 2017)  Bibliography Weinan, E. March 2017. &#34;A Proposal on Machine Learning via Dynamical Systems&#34;. Communications in Mathematics and Statistics 5 (1):1–11. DOI.  </description>
+      <description>tags Machine learning, Dynamical systems resources    &amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -339,7 +339,7 @@ Relation with shortest path algorithms There is an interesting connection betwee
       <pubDate>Thu, 23 Sep 2021 09:07:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/arithmetic_coding/</guid>
-      <description> tags Compression, Entropy coding resources (Witten, Nealand Cleary 1987)  Bibliography Witten, Ian H., Radford M. Nealand John G. Cleary. 1987. &#34;Arithmetic Coding for Data Compression&#34;. Communications of the ACM 30 (6). ACM New York, NY, USA:520–40.  </description>
+      <description>tags Compression, Entropy coding resources    &amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -348,7 +348,7 @@ Relation with shortest path algorithms There is an interesting connection betwee
       <pubDate>Thu, 23 Sep 2021 09:07:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/blue_noise/</guid>
-      <description> tags Noise resources (Wong and Wong 2017)  Bibliography Wong, Kin-Mingand Tien-Tsin Wong. June 1, 2017. &#34;Blue Noise Sampling Using an N-body Simulation-based Method&#34;. The Visual Computer 33 (6):823–32. DOI.  </description>
+      <description>tags Noise resources    &amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -423,7 +423,7 @@ With the current state of physics, it seems we are close to understanding many o
       <pubDate>Thu, 02 Sep 2021 12:52:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/xiongnystromformernystr2021/</guid>
-      <description>tags Transformers source (Xiong et al. 2021)  Summary This paper describes a way of applying the Nyström method for approximating matrix multiplication to transformers. More precisely, the approximation is used in the self-attention mechanism&amp;rsquo;s softmax calculation.
+      <description>tags Transformers source    Summary This paper describes a way of applying the Nyström method for approximating matrix multiplication to transformers. More precisely, the approximation is used in the self-attention mechanism&amp;rsquo;s softmax calculation.
 This approximation adresses one of the biggest downside of attention: its computational complexity. The authors claim that their method reduces it from \(O(n^2)\) to \(O(n)\).
 The goal of the method is to efficiently approximate the matrix</description>
     </item>
@@ -436,7 +436,7 @@ The goal of the method is to efficiently approximate the matrix</description>
       <guid>https://hugocisneros.com/notes/graph_neural_networks/</guid>
       <description>tags Neural networks, Graphs  Basic properties To operate on graphs, a neural network must be invariant to isomorphism of these graphs. This translates to permutation invariance for the nodes of a graph.
 \[ f(\mathbf{PX}) = f(\mathbf{X}) \]
-Where \(\mathbf{P}\) is a permutation matrix. For simple sets, this amounts to performing node-wise transformations and use a permutation invariant aggregator (sum/max/avg/&amp;hellip;). This was done in (Zaheer et al. 2018).
+Where \(\mathbf{P}\) is a permutation matrix. For simple sets, this amounts to performing node-wise transformations and use a permutation invariant aggregator (sum/max/avg/&amp;hellip;). This was done in .
 \[ f(\mathbf{X}) = \phi\left( \bigoplus_i \psi(\mathbf{x}_i) \right) \]</description>
     </item>
     
@@ -457,7 +457,7 @@ This is based on the standard first-order approximation of the function \(g\). I
       <pubDate>Thu, 02 Sep 2021 12:46:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/krakauerinformationtheoryindividuality2020/</guid>
-      <description>tags Information theory, Life source (Krakauer et al. 2020)  Summary This paper introduces an information theoretic definition of individuality for complex systems.
+      <description>tags Information theory, Life source    Summary This paper introduces an information theoretic definition of individuality for complex systems.
 In a few words, the authors idea of individuality is based on the amount of information transmitted through time.
  If the information transmitted forward in time is close to maximal, we take that as evidence for individuality.
  Formally, a system \(\mathcal{S}\) is considered in interaction with an environment \(\mathcal{E}\).</description>
@@ -480,7 +480,7 @@ Definition Nodes have indexes \(i \in \{1, \cdots, n\}\) and are in state \(s_i 
       <pubDate>Thu, 02 Sep 2021 12:07:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/katharopoulostransformersarernns2020/</guid>
-      <description>tags Transformers, RNN source (Katharopoulos et al. 2020)  Summary Transformers have traditionally been described as different models from RNNs. This is because instead of processing the sequence one token at a time, Transformers use attention to process all elements simultaneously.
+      <description>tags Transformers, RNN source    Summary Transformers have traditionally been described as different models from RNNs. This is because instead of processing the sequence one token at a time, Transformers use attention to process all elements simultaneously.
 The paper introduces an interesting new formulation, replacing the softmax attention with a feature map-based dot product.
 This new formulation yields better time and memory complexity as well as a model that is casual and autoregressive (similar to RNNs).</description>
     </item>
@@ -491,7 +491,7 @@ This new formulation yields better time and memory complexity as well as a model
       <pubDate>Wed, 01 Sep 2021 17:31:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/mordvintsevgrowingneuralcellular2020/</guid>
-      <description>tags Cellular automata source (Mordvintsev et al. 2020)  Summary This paper introduces interesting ideas for training cellular automata as CNNs to have self-repairing stable structures. The automata have 16 dimensional continuous states. The main modeling ideas are:
+      <description>tags Cellular automata source    Summary This paper introduces interesting ideas for training cellular automata as CNNs to have self-repairing stable structures. The automata have 16 dimensional continuous states. The main modeling ideas are:
  Use hard-coded filters for the initial perception step. The filters are Sobel convolutions and those two are concatenated with the current state. Update rules are then 1D convolutions applied to the \(3 * 16 = 48\) dimensional state vector.</description>
     </item>
     
@@ -511,8 +511,8 @@ There is indeed a deep connection between the two models, making it seem like th
       <pubDate>Wed, 01 Sep 2021 17:30:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/computing_in_cellular_automata/</guid>
-      <description>tags Unconventional computing, Cellular automata resources (Mitchell 2005; Wolfram 2002)  Cellular automata are computational models capable of interesting emergent behavior. A major challenge is to understand which CA rules are doing useful or efficient computations. It is not clear how these systems could be programmed or made to compute a particular function.
-Hand-engineered CA rules Below images show CA rules that can compute non trivial functions (Images are from (Wolfram 2002), see A new kind of science online ).</description>
+      <description>tags Unconventional computing, Cellular automata resources &amp;lt;mitchellComputationCellularAutomata2005,wolframNewKindScience2002&amp;gt;  Cellular automata are computational models capable of interesting emergent behavior. A major challenge is to understand which CA rules are doing useful or efficient computations. It is not clear how these systems could be programmed or made to compute a particular function.
+Hand-engineered CA rules Below images show CA rules that can compute non trivial functions (Images are from , see A new kind of science online ).</description>
     </item>
     
     <item>
@@ -521,8 +521,7 @@ Hand-engineered CA rules Below images show CA rules that can compute non trivial
       <pubDate>Wed, 01 Sep 2021 17:30:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/epsilon_machines/</guid>
-      <description>(Crutchfield and Young 1989)
-Bibliography Crutchfield, James P.and Karl Young. July 10, 1989. &#34;Inferring Statistical Complexity&#34;. Physical Review Letters 63 (2):105–8. DOI.  </description>
+      <description>&amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -532,7 +531,8 @@ Bibliography Crutchfield, James P.and Karl Young. July 10, 1989. &#34;Inferring 
       
       <guid>https://hugocisneros.com/notes/style_transfer/</guid>
       <description>tags Computer vision  Style transfer is the process of transferring some visual features from one image to another image while preserving the latter&amp;rsquo;s content information. Since both these notions may be considered subjective, the problem of style transfer is not well defined and may be approached in many ways.
-Style transfer with CNNs This is an early example of style transfer with convolutional neural networks: (Gatys, Eckerand Bethge 2016)</description>
+Style transfer with CNNs This is an early example of style transfer with convolutional neural networks: 
+&amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -563,7 +563,7 @@ Reservoir computing with cellular automata Reservoir computing can use cellular 
       <pubDate>Mon, 30 Aug 2021 22:02:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/dongreservoircomputingmeets2020/</guid>
-      <description>source (Dong et al. 2020) tags Reservoir computing, Kernel Methods  Summary This paper presents a connection between large size reservoir computing and kernel methods.
+      <description>source   tags Reservoir computing, Kernel Methods  Summary This paper presents a connection between large size reservoir computing and kernel methods.
 The authors formulate a reservoir computing model as a form of recurrent kernel iteration. If the reservoir update is written \[ x^{(t+1)} = \dfrac{1}{\sqrt{N}} f \left(W_r x^{(t)} + W_i i^{(t)} \right) \] with \(x^{(t)}\) the state of the reservoir at time \(t\) and \(i^{(t)}\) sequential input at time \(t\), \(W_r \in \mathbb{R}^{N\times N}\) and \(W_i \in \mathbb{R}^{N\times d}\), we may re-frame it as a random feature embedding of the vector \(\left[ x^{(t)} , i^{(t)} \right]\) with the matrix \(W = [W_r, W_i]\).</description>
     </item>
     
@@ -582,9 +582,9 @@ The authors formulate a reservoir computing model as a form of recurrent kernel 
       <pubDate>Sun, 29 Aug 2021 21:45:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/language_modeling/</guid>
-      <description>tags NLP  LM with RNNs Different models have been studied, starting from the initial Recurrent neural network based language model (Mikolov et al. 2011).
-LSTM were then used with more success than previous models (Zaremba, Sutskeverand Vinyals 2015).
-Recently, transformers seem to have dominated language modeling. However it is not clear if this is due to their real superiority over RNNs or their practical scalability (Merity 2019).
+      <description>tags NLP  LM with RNNs Different models have been studied, starting from the initial Recurrent neural network based language model .
+LSTM were then used with more success than previous models .
+Recently, transformers seem to have dominated language modeling. However it is not clear if this is due to their real superiority over RNNs or their practical scalability .
 LM with Transformers Language modeling and Compression Text generation Language models can be used to generate text from a prompt or starting sentence.</description>
     </item>
     
@@ -625,7 +625,7 @@ He created a particular cellular automata: the langton loop.</description>
       <pubDate>Wed, 25 Aug 2021 16:39:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/tanciklearnedinitializationsoptimizing2021/</guid>
-      <description>tags Neural radiance fields, Meta-learning source (Tancik et al. 2021)  Summary This paper explores meta-learning techniques for improving the quality and speed of convergence of learned implicit neural representations.
+      <description>tags Neural radiance fields, Meta-learning source    Summary This paper explores meta-learning techniques for improving the quality and speed of convergence of learned implicit neural representations.
 The authors use meta-learning to optimize the initial weights \(\theta_0\) of the neural networks such that it minimizes the loss \(L(\theta_m)\) when the network is optimized on a new unseen observations.
 As a meta-learning problem, there is an inner loop and an outer loop:</description>
     </item>
@@ -636,12 +636,9 @@ As a meta-learning problem, there is an inner loop and an outer loop:</descripti
       <pubDate>Wed, 25 Aug 2021 16:00:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/meta_learning/</guid>
-      <description>tags Machine learning  Constrained meta-learning (Kirsch and Schmidhuber 2021)
-Meta-learning of initialization The goal is to learn the initialization of neural network parameters or recurrent neural network initial states in order to make the training faster or less prone to getting stuck in local minima.
-Example for implicit neural representations: (Tancik et al. 2021)
-Meta-learning algorithms MAML (Finn, Abbeeland Levine 2017)
-Reptile (Nichol, Achiamand Schulman 2018)
-Bibliography Kirsch, Louisand Jürgen Schmidhuber.</description>
+      <description>tags Machine learning  Constrained meta-learning  Meta-learning of initialization The goal is to learn the initialization of neural network parameters or recurrent neural network initial states in order to make the training faster or less prone to getting stuck in local minima.
+Example for implicit neural representations: 
+Meta-learning algorithms MAML  Reptile  &amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -660,7 +657,7 @@ Melanie Mitchell, keynote Lecture This talk was very similar to another one I wa
       <pubDate>Wed, 25 Aug 2021 15:19:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/lupretrainedtransformersuniversal2021/</guid>
-      <description>source (Lu et al. 2021) tags Transformers  Summary Different types of neural network architecture encode different kinds of biases. For example, convolutional neural networks perform local, translation-invariant operations and recurrent neural networks operate on sequential data.
+      <description>source   tags Transformers  Summary Different types of neural network architecture encode different kinds of biases. For example, convolutional neural networks perform local, translation-invariant operations and recurrent neural networks operate on sequential data.
 One can use these biases in randomly initialized networks as a basis for interesting computations. This is on of the motivation for reservoir computing with echo-state networks, which uses fixed random recurrent neural network and a simple trainable linear transformation to perform complex computations.</description>
     </item>
     
@@ -670,7 +667,7 @@ One can use these biases in randomly initialized networks as a basis for interes
       <pubDate>Wed, 25 Aug 2021 15:19:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/weissthinkingtransformers2021/</guid>
-      <description>tags NLP, Computer science source (Weiss, Goldbergand Yahav 2021)  Summary This paper introduces a programming language that is inspired by the way Transformers process input data. The language is called Restricted Access Sequence Processing Language (RASP).
+      <description>tags NLP, Computer science source    Summary This paper introduces a programming language that is inspired by the way Transformers process input data. The language is called Restricted Access Sequence Processing Language (RASP).
 Data is represented as sequences, which is the structure transformers manipulate (since they have been designed for NLP applications). The language has two types of internal data representation:
  Sequence operators (s-ops) are functions that translate sequences into sequences.</description>
     </item>
@@ -731,7 +728,7 @@ This is the kind of complexity that would be incredible to discover in open-ende
       <pubDate>Tue, 10 Aug 2021 09:25:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/voelkerlegendrememoryunits2019/</guid>
-      <description>tags Recurrent neural networks source (Voelker, Kajićand Eliasmith 2019)  Summary This paper introduces the LMU recurrent cell. This cell is based on a similar-ish idea to LSTM to maintain a memory hidden state. The main idea of the paper is to make this memory satisfy a set of first order ordinary differential equations.
+      <description>tags Recurrent neural networks source    Summary This paper introduces the LMU recurrent cell. This cell is based on a similar-ish idea to LSTM to maintain a memory hidden state. The main idea of the paper is to make this memory satisfy a set of first order ordinary differential equations.
 \[
 \begin{equation} \theta \dot{m}(t) = Am(t) + Bu(t) \end{equation}
 \]
@@ -744,7 +741,7 @@ This system has a solution which represents sliding windows of \(u\) via Legendr
       <pubDate>Tue, 03 Aug 2021 10:45:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/gershensonemergenceartificiallife2021/</guid>
-      <description>tags Artificial life, Emergence source (Gershenson 2021)  Summary The paper introduces a complexity metric based on information. emergence is first measured with Shannon&amp;rsquo;s information: \[E = - K \sum_{i} p_i \log p_i\]
+      <description>tags Artificial life, Emergence source    Summary The paper introduces a complexity metric based on information. emergence is first measured with Shannon&amp;rsquo;s information: \[E = - K \sum_{i} p_i \log p_i\]
 Then the author argues that self-organization can be seen as the opposite of emergence, and measured with \[S = 1 - E\]
  [&amp;hellip;] complex systems tend to exhibit both emergence and self-organization. Extreme emergence implies chaos, while extreme self-organization implies immutability.</description>
     </item>
@@ -782,7 +779,7 @@ Then the author argues that self-organization can be seen as the opposite of eme
       <pubDate>Tue, 15 Jun 2021 09:58:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/zuse_s_thesis/</guid>
-      <description>tags Physics, Philosophy resources Juergen Schmidhuber&amp;rsquo;s page, (Schmidhuber 1999)  Zuse&amp;rsquo;s thesis is the idea that the Universe could be running within a digital computer. It was formulated by Konrad Zuse in Rechnender Raum (Calculating Space) in 1969. The computer could be a very large Cellular automaton according to Zuse.
+      <description>tags Physics, Philosophy resources Juergen Schmidhuber&amp;rsquo;s page,   Zuse&amp;rsquo;s thesis is the idea that the Universe could be running within a digital computer. It was formulated by Konrad Zuse in Rechnender Raum (Calculating Space) in 1969. The computer could be a very large Cellular automaton according to Zuse.
 A computer program to simulate our Universe (and all the others)  Systematically create and execute all programs for a universal computer, such as a Turing machine or a CA; the first program is run for one instruction every second step on average, the next for one instruction every second of the remaining steps on average, and so on.</description>
     </item>
     
@@ -805,7 +802,8 @@ An agent can be anything from a fixed set of if-else statements to a deep neural
       <guid>https://hugocisneros.com/notes/distillation/</guid>
       <description>tags Machine learning, Neural networks, Transfer learning  Distillation is used to describe the process of transferring performances from a large trained teacher neural network to a untrained student network.
 Instead of training the target network to score best according the task&amp;rsquo;s loss function, distillation optimizes for the target network to match the output distribution or neuron activation patterns of the teacher network.
-A review: (Beyer et al. 2021).</description>
+A review: .
+&amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -855,8 +853,7 @@ New candidate solutions for a problem are constructed by randomly combining and 
       <guid>https://hugocisneros.com/notes/alternative_learning_mechanisms/</guid>
       <description>tags Machine learning Many people, including Geoffrey Hinton, have raised concerns about the back-propagation algorithm and the fact that it&amp;rsquo;s likely not a promising way to achieve Artificial Intelligence (see this Axios blog post).
   Alternative mechanisms for learning have been and are currently studied to try and approach the learning problem in a more effective way.
-Direct feedback alignment (Nøkland 2016)
-Hebbian learning The theory is sometimes summarized as &amp;ldquo;Cells that fire together wire together.</description>
+Direct feedback alignment  Hebbian learning The theory is sometimes summarized as &amp;ldquo;Cells that fire together wire together.</description>
     </item>
     
     <item>
@@ -904,7 +901,7 @@ Implications for Zuse&amp;rsquo;s thesis An interesting implication of the Churc
       <pubDate>Sun, 16 May 2021 14:37:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/andersonmoredifferent1972/</guid>
-      <description>tags Complexity, Philosophy source (Anderson 1972)  This is a fundamental paper discussing the fundamental laws of Physics and their relations with complexity.
+      <description>tags Complexity, Philosophy source    This is a fundamental paper discussing the fundamental laws of Physics and their relations with complexity.
 Reductionism doesn&amp;rsquo;t imply constructionism It is generally accepted that the fundamental laws governing our Universe are relatively simple. We feel we understand many of these laws quite well. However, understanding these fundamental laws are far from enough to actually describe and reconstruct all phenomena we witness.</description>
     </item>
     
@@ -914,7 +911,7 @@ Reductionism doesn&amp;rsquo;t imply constructionism It is generally accepted th
       <pubDate>Sun, 16 May 2021 14:23:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/emergence_in_artificial_life/</guid>
-      <description> tags Artificial life, Emergence resources (Gershenson 2021)  Bibliography Gershenson, Carlos. April 30, 2021. &#34;Emergence in Artificial Life&#34;. Arxiv:2105.03216 [physics]. http://arxiv.org/abs/2105.03216. See notes  </description>
+      <description>tags Artificial life, Emergence resources    &amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -923,8 +920,8 @@ Reductionism doesn&amp;rsquo;t imply constructionism It is generally accepted th
       <pubDate>Wed, 05 May 2021 16:26:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/ramsauerhopfieldnetworksall2020/</guid>
-      <description> tags Hopfield Networks, Attention source (Ramsauer et al. 2020) resources Blog post  Summary This quote summarizes the paper well: &amp;ldquo;In order to integrate modern Hopfield networks into deep learning architectures, we have to make them continuous&amp;rdquo;.
-Comments Bibliography Ramsauer, Hubert, Bernhard Schäfl, Johannes Lehner, Philipp Seidl, Michael Widrich, Lukas Gruber, Markus Holzleitner, et al.. July 16, 2020. &#34;Hopfield Networks Is All You Need&#34;. Arxiv:2008.02217 [cs, Stat]. http://arxiv.org/abs/2008.02217.  </description>
+      <description>tags Hopfield Networks, Attention source   resources Blog post  Summary This quote summarizes the paper well: &amp;ldquo;In order to integrate modern Hopfield networks into deep learning architectures, we have to make them continuous&amp;rdquo;.
+Comments &amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -933,7 +930,8 @@ Comments Bibliography Ramsauer, Hubert, Bernhard Schäfl, Johannes Lehner, Phili
       <pubDate>Tue, 04 May 2021 09:22:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/lempel_ziv_welch_algorithm/</guid>
-      <description>tags Compression, Complexity papers (Lempel and Ziv 1976; Ziv and Lempel 1977; Ziv and Lempel 1978; Welch 1984; Storer and Szymanski 1982)  Context The LZW algorithm was originally designed as a complexity (&amp;ldquo;randomness&amp;rdquo;) metric for finite sequences (Lempel and Ziv 1976). It was then extended as a compression algorithm by the same authors to LZ77 (Ziv and Lempel 1977) and LZ78 (Ziv and Lempel 1978). Those last two are the basis of many well known and widely used compression utilities such as GIF, compress (LZW (Welch 1984) ) or DEFLATE, gzip (LZSS (Storer and Szymanski 1982)), etc.</description>
+      <description>tags Compression, Complexity papers &amp;lt;lempelComplexityFiniteSequences1976,zivUniversalAlgorithmSequential1977,zivCompressionIndividualSequences1978,welchTechniqueHighPerformanceData1984,storerDataCompressionTextual1982&amp;gt;  Context The LZW algorithm was originally designed as a complexity (&amp;ldquo;randomness&amp;rdquo;) metric for finite sequences . It was then extended as a compression algorithm by the same authors to LZ77  and LZ78 . Those last two are the basis of many well known and widely used compression utilities such as GIF, compress (LZW  ) or DEFLATE, gzip (LZSS ), etc.
+Description The base idea of these algorithms is to build a dictionary of words in the input sequence.</description>
     </item>
     
     <item>
@@ -942,7 +940,7 @@ Comments Bibliography Ramsauer, Hubert, Bernhard Schäfl, Johannes Lehner, Phili
       <pubDate>Mon, 26 Apr 2021 20:53:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/aachgeneralizationdifferentcellular2021/</guid>
-      <description>source (Aach, Goebbertand Jitsev 2021) tags Cellular automata, Neural networks  Summary This paper studies the generalization abilities of neural networks on tasks involving learning the dynamics of cellular automata rules from examples.
+      <description>source   tags Cellular automata, Neural networks  Summary This paper studies the generalization abilities of neural networks on tasks involving learning the dynamics of cellular automata rules from examples.
 Neural networks are trained to predict the next state of a CA from the three previous timesteps. Different training examples for a single rule corresponds to different initialization.
 The authors study three kinds of generalization:
  Simple generalization: The network is trained on 300 different CA rules and tested on more unseen initial configurations from those 300 rules.</description>
@@ -963,7 +961,7 @@ The authors study three kinds of generalization:
       <pubDate>Fri, 23 Apr 2021 11:13:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/cluneaigasaigeneratingalgorithms2019/</guid>
-      <description>tags Artificial Intelligence, Genetic algorithms, Open-ended Evolution source (Clune 2019)  Summary Nowadays, the design of AI systems is approached through one main way (more or less): the implementation of some elementary building blocks &amp;mdash; like convolutions, skip connections, activation functions, attention, etc. We currently have no clear idea how to combine these relatively successful blocks into a global system that would take advantage of each and every one of them.</description>
+      <description>tags Artificial Intelligence, Genetic algorithms, Open-ended Evolution source    Summary Nowadays, the design of AI systems is approached through one main way (more or less): the implementation of some elementary building blocks &amp;mdash; like convolutions, skip connections, activation functions, attention, etc. We currently have no clear idea how to combine these relatively successful blocks into a global system that would take advantage of each and every one of them.</description>
     </item>
     
     <item>
@@ -1005,7 +1003,7 @@ Like for cellular automata, cells (or nodes) don&amp;rsquo;t have to be in just 
       <guid>https://hugocisneros.com/notes/art_with_cellular_automata/</guid>
       <description>Cellular automata have been used a lot to create various forms of Generative art.
 Here is a collection of some interesting examples:
-Examples based on Neural CA  Self organizing textures: (Niklasson et al. 2021) Dialogue: an art project using interacting Neural CA to generate patterns  Revisiting classical CA  Crosshatch CA  CA Music  Wolfram tones  Bibliography Niklasson, Eyvind, Alexander Mordvintsev, Ettore Randazzoand Michael Levin. February 11, 2021.</description>
+Examples based on Neural CA  Self organizing textures:  Dialogue: an art project using interacting Neural CA to generate patterns  Revisiting classical CA  Crosshatch CA  CA Music  Wolfram tones  &amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -1092,7 +1090,7 @@ If this trend is a fundamental principle (which is what the article argues) it w
       <pubDate>Mon, 29 Mar 2021 14:35:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/brooksintelligencerepresentation1991/</guid>
-      <description>tags Artificial Intelligence source (Brooks 1991)  Summary What is intelligence Intelligence cannot be thought of as a collection of building blocks that may one fall into place to form a coherent whole.
+      <description>tags Artificial Intelligence source    Summary What is intelligence Intelligence cannot be thought of as a collection of building blocks that may one fall into place to form a coherent whole.
 The authors argue for another approach to build artificially intelligent systems:
  Build the systems incrementally, with complete systems each step of the way to ensure that the pieces and their interfaces are valid. Build intelligent systems at each step of the way that should be let loose in the real world with real sensing and action.</description>
     </item>
@@ -1103,8 +1101,8 @@ The authors argue for another approach to build artificially intelligent systems
       <pubDate>Thu, 25 Mar 2021 15:43:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/lenia/</guid>
-      <description> tags Cellular automata papers (Chan 2019; Chan 2020)  Lenia is a continuous cellular automaton. It is sometimes referred to as a &amp;ldquo;continuous Conway&amp;rsquo;s Game of Life&amp;rdquo;.
-Bibliography Chan, Bert Wang-Chak. May 4, 2019. &#34;Lenia - Biology of Artificial Life&#34;. Arxiv:1812.05433 [nlin]. http://arxiv.org/abs/1812.05433. Chan, Bert Wang-Chak. May 7, 2020. &#34;Lenia and Expanded Universe&#34;. Arxiv:2005.03742 [nlin]. http://arxiv.org/abs/2005.03742.  </description>
+      <description>tags Cellular automata papers &amp;lt;chanLeniaBiologyArtificial2019a,chanLeniaExpandedUniverse2020&amp;gt;  Lenia is a continuous cellular automaton. It is sometimes referred to as a &amp;ldquo;continuous Conway&amp;rsquo;s Game of Life&amp;rdquo;.
+&amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -1113,7 +1111,7 @@ Bibliography Chan, Bert Wang-Chak. May 4, 2019. &#34;Lenia - Biology of Artifici
       <pubDate>Thu, 25 Mar 2021 10:20:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/aitkengeometryintegrationtext2020/</guid>
-      <description>tags RNN, NLP source (Aitken et al. 2020)  Summary This paper takes a dynamical system based approach to study learning in RNNs. Gradient descent optimization in RNNs allows them to learn a simplified form of memory and information processing.
+      <description>tags RNN, NLP source    Summary This paper takes a dynamical system based approach to study learning in RNNs. Gradient descent optimization in RNNs allows them to learn a simplified form of memory and information processing.
 The authors use simple text classification tasks to try and understand if these learned properties can be understood by looking at the state dynamics of RNNs.
 The RNNs usually behave like attractor networks, with the hidden state lying on a low-dimensional manifold.</description>
     </item>
@@ -1164,7 +1162,7 @@ This technique has many advantages:</description>
       <pubDate>Thu, 25 Mar 2021 09:58:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/cppn/</guid>
-      <description> tags Neural networks, Genetic algorithms papers (Stanley 2007) resources Wikipedia  Bibliography Stanley, Kenneth O.. June 6, 2007. &#34;Compositional Pattern Producing Networks: A Novel Abstraction of Development&#34;. Genetic Programming and Evolvable Machines 8 (2):131–62. DOI.  </description>
+      <description>tags Neural networks, Genetic algorithms papers   resources Wikipedia  &amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -1182,8 +1180,9 @@ This technique has many advantages:</description>
       <pubDate>Thu, 25 Mar 2021 09:58:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/entropy/</guid>
-      <description>tags Complexity metrics references (Shannon and Weaver 1975)  For a discrete random variable \(X\) with outcomes \(x_i\), \(P(X=x_i) = P_i\), the entropy or uncertainty function of \(X\) is defined as \[ H(X) = -\sum_{i=1}^{N} P_i \log P_i \]
-Entropy is always positive, and is maximized when the uncertainty is maximal, that is when \(P_1 = P_2 = &amp;hellip; = P_N = \frac{1}{N}\) entropy in that case is \(\log N\).</description>
+      <description>tags Complexity metrics references    For a discrete random variable \(X\) with outcomes \(x_i\), \(P(X=x_i) = P_i\), the entropy or uncertainty function of \(X\) is defined as \[ H(X) = -\sum_{i=1}^{N} P_i \log P_i \]
+Entropy is always positive, and is maximized when the uncertainty is maximal, that is when \(P_1 = P_2 = &amp;hellip; = P_N = \frac{1}{N}\) entropy in that case is \(\log N\).
+Interpretations:</description>
     </item>
     
     <item>
@@ -1202,7 +1201,7 @@ In other words, there is always a bounded difference between the Kolmogorov comp
       <pubDate>Thu, 25 Mar 2021 09:58:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/minimum_description_length/</guid>
-      <description> tags Complexity, Algorithmic Information theory papers (Grunwald 2007; Grunwald 2004)  Bibliography Grunwald, Peter. 2007. The Minimum Description Length Principle. Adaptive Computation and Machine Learning. Cambridge, Mass: MIT Press. Grunwald, Peter. June 4, 2004. &#34;A Tutorial Introduction to the Minimum Description Length Principle&#34;. Arxiv:math/0406077. http://arxiv.org/abs/math/0406077.  </description>
+      <description>tags Complexity, Algorithmic Information theory papers &amp;lt;grunwaldMinimumDescriptionLength2007,grunwaldTutorialIntroductionMinimum2004&amp;gt;  &amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -1221,7 +1220,7 @@ Therefore, the time derivative of \(y\) is \[ \dot{y}(w) = \nabla y(w)^T \dot{w}
       <pubDate>Thu, 25 Mar 2021 09:58:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/raimbaultmodelurbanevolution2020/</guid>
-      <description>source (Raimbault 2020) tags ALife 2020, Complex Systems, Evolution, Urban science  Summary This paper studies the concept of innovation diffusion and how this could be seen as a way cities evolve.
+      <description>source   tags ALife 2020, Complex Systems, Evolution, Urban science  Summary This paper studies the concept of innovation diffusion and how this could be seen as a way cities evolve.
 Modeling this enables finding that global integration of cities (fully connected city graph on a territory) is not optimal for efficiently diffusing innovation that can spontaneously appear in any city.
 I am interested in taking an ALife inspired approach to studying cities, as it can show cities as they could be.</description>
     </item>
@@ -1232,7 +1231,7 @@ I am interested in taking an ALife inspired approach to studying cities, as it c
       <pubDate>Thu, 25 Mar 2021 09:58:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/millerevolvingselfrepairingselfregulating2004/</guid>
-      <description> tags Cellular automata source (Miller 2004)  Summary Comments Bibliography Miller, Julian Francis. 2004. &#34;Evolving a Self-repairing, Self-regulating, French Flag Organism&#34;. In Genetic and Evolutionary Computation Conference, 129–39. Springer. https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.98.1049&amp;rep=rep1&amp;type=pdf.  </description>
+      <description>tags Cellular automata source    Summary Comments &amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -1241,7 +1240,7 @@ I am interested in taking an ALife inspired approach to studying cities, as it c
       <pubDate>Thu, 25 Mar 2021 09:58:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/stanleyevolvingneuralnetworks2002/</guid>
-      <description>tags Neural networks, Genetic algorithms, NAS source (Stanley and Miikkulainen 2002)  Summary This is the main paper introducing the NEAT system. This system is a direct-encoding based way of dealing with neuroevolution (evolution of ANNs). The encoding is based on a genome sequentially specifying each of the connections between modules of the network. Several tickes are used to make it possible applying GA methods to evolve networks:
+      <description>tags Neural networks, Genetic algorithms, NAS source    Summary This is the main paper introducing the NEAT system. This system is a direct-encoding based way of dealing with neuroevolution (evolution of ANNs). The encoding is based on a genome sequentially specifying each of the connections between modules of the network. Several tickes are used to make it possible applying GA methods to evolve networks:
  Historical tracking of genes to be able to align architectures and mate them.</description>
     </item>
     
@@ -1251,7 +1250,7 @@ I am interested in taking an ALife inspired approach to studying cities, as it c
       <pubDate>Thu, 25 Mar 2021 09:58:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/reinkeintrinsicallymotivateddiscovery2020/</guid>
-      <description>source (Reinke, Etcheverryand Oudeyer 2020)  Summary The authors address the problem of automated discovery of diverse self-organized patterns in high-dimensional and complex game-of-life types of dynamical systems. They conduct experiments on Lenia.
+      <description>source    Summary The authors address the problem of automated discovery of diverse self-organized patterns in high-dimensional and complex game-of-life types of dynamical systems. They conduct experiments on Lenia.
 Their goal is to use an IMGEP algorithm to represent interesting patterns and discover them.
 Problem setting Goal: With a budget of \(N\) experiments, maximize diversity of observations.
 Parameter space \(\Theta\) of available parameters \(\theta\). An observation space \(O\) of observations.</description>
@@ -1263,7 +1262,7 @@ Parameter space \(\Theta\) of available parameters \(\theta\). An observation sp
       <pubDate>Thu, 25 Mar 2021 09:58:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/yenetworkdeconvolution2020/</guid>
-      <description>tags Convolutional neural networks, Neural network training source (Ye et al. 2020)  Summary This paper introduces so-called Network Deconvolution, advertised as a way to remove pixel-wise and channel-wise correlation in deep neural networks.
+      <description>tags Convolutional neural networks, Neural network training source    Summary This paper introduces so-called Network Deconvolution, advertised as a way to remove pixel-wise and channel-wise correlation in deep neural networks.
 The authors base their new operator on the optimal configuration for \(L_2\) linear regression, where gradient descent converges in one single step if and only if:
 \[ \frac{1}{N}X^t X = I \] where \(X\) is the feature matrix and \(N\) the number of samples.</description>
     </item>
@@ -1274,7 +1273,7 @@ The authors base their new operator on the optimal configuration for \(L_2\) lin
       <pubDate>Thu, 25 Mar 2021 09:58:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/floreanoneuroevolutionarchitectureslearning2008/</guid>
-      <description> tags NAS source (Floreano, Dürrand Mattiussi 2008)  Summary Comments Bibliography Floreano, Dario, Peter Dürrand Claudio Mattiussi. March 1, 2008. &#34;Neuroevolution: From Architectures to Learning&#34;. Evolutionary Intelligence 1 (1):47–62. DOI.  </description>
+      <description>tags NAS source    Summary Comments &amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -1283,7 +1282,7 @@ The authors base their new operator on the optimal configuration for \(L_2\) lin
       <pubDate>Thu, 25 Mar 2021 09:58:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/felleisenexpressivepowerprogramming1991/</guid>
-      <description>source (Felleisen 1991) tags Programming languages resources PWL Conf talk  Summary Programming languages have different levels of expressiveness. While can be used to create for loops, binary if statements can implement multi-if statements, etc.
+      <description>source   tags Programming languages resources PWL Conf talk  Summary Programming languages have different levels of expressiveness. While can be used to create for loops, binary if statements can implement multi-if statements, etc.
 Turing tarpit: once we get to programming languages that are universal, everything can be re-written into anything and the notion of &amp;ldquo;expressiveness&amp;rdquo; of programming languages doesn&amp;rsquo;t make much sense.
 For a language \(L\) and \(F + L\) the addition of some features, can we say the second is more expressive than the first?</description>
     </item>
@@ -1294,7 +1293,7 @@ For a language \(L\) and \(F + L\) the addition of some features, can we say the
       <pubDate>Thu, 25 Mar 2021 09:58:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/greydanusscalingdeeplearning2020/</guid>
-      <description>tags Neural networks source (Greydanus 2020)  Summary This paper introduces a minimalist 1D version of the MNIST dataset for studying some basic properties of neural networks. The authors simplify the MNIST dataset by assigning a 1D glyph to each digit. These glyphs are padded, translated, sheared and blurred to build a dataset of multiple different objects.
+      <description>tags Neural networks source    Summary This paper introduces a minimalist 1D version of the MNIST dataset for studying some basic properties of neural networks. The authors simplify the MNIST dataset by assigning a 1D glyph to each digit. These glyphs are padded, translated, sheared and blurred to build a dataset of multiple different objects.
 The figure from the paper shown below illustrates this dataset&amp;rsquo;s construction:
 {{&amp;lt; img src=&amp;quot;/img/greydanusScalingDeepLearning2020.</description>
     </item>
@@ -1314,9 +1313,10 @@ The figure from the paper shown below illustrates this dataset&amp;rsquo;s const
       <pubDate>Thu, 25 Mar 2021 09:58:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/quality_diversity/</guid>
-      <description>tags Evolution, Reinforcement learning, Search algorithms papers (Pugh, Sorosand Stanley 2016; Cully and Demiris 2017)  QD is about creating algorithms that favor diversity in searching the space. In QD, one needs to both:
+      <description>tags Evolution, Reinforcement learning, Search algorithms papers &amp;lt;pughQualityDiversityNew2016,cullyQualityDiversityOptimization2017&amp;gt;  QD is about creating algorithms that favor diversity in searching the space. In QD, one needs to both:
  Measure the quality of a solution Have a way to describe the effect of a solution  Solutions in QD have to be good in the two above ways.
-QD is also a form of novelty search.</description>
+QD is also a form of novelty search.
+&amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -1355,7 +1355,7 @@ Examples of Turing complete systems  Some cellular automata Most Programming lan
       <pubDate>Thu, 25 Mar 2021 09:58:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/unconventional_computing/</guid>
-      <description> papers (Stepney 2012)  Bibliography Stepney, Susan. 2012. &#34;Nonclassical Computation — A Dynamical Systems Perspective&#34;. In Handbook of Natural Computing, edited by Grzegorz Rozenberg, Thomas Bäck, and Joost N. Kok, 1979–2025. Berlin, Heidelberg: Springer Berlin Heidelberg. DOI.  </description>
+      <description>papers    &amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -1364,8 +1364,8 @@ Examples of Turing complete systems  Some cellular automata Most Programming lan
       <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/assembly_theory/</guid>
-      <description>tags Complexity metrics papers (Marshall et al. 2019)  This complexity metric is based on ideas similar to Logical depth, where instead of just looking at the general process that led to the creation of an object, we also look at the number of elementary steps in that process.
-Bibliography Marshall, Stuart M, Douglas G Moore, Alastair R G Murrayand Sara I Walker. July 2019. &#34;Quantifying the Pathways to Life Using Assembly Spaces&#34;</description>
+      <description>tags Complexity metrics papers    This complexity metric is based on ideas similar to Logical depth, where instead of just looking at the general process that led to the creation of an object, we also look at the number of elementary steps in that process.
+&amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -1383,7 +1383,7 @@ Bibliography Marshall, Stuart M, Douglas G Moore, Alastair R G Murrayand Sara I 
       <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/schmidhubercomputerscientistview1999/</guid>
-      <description> tags Zuse&amp;rsquo;s thesis source (Schmidhuber 1999)  Summary Comments Bibliography Schmidhuber, Juergen. April 13, 1999. &#34;A Computer Scientist&#39;s View of Life, the Universe, and Everything&#34;. Arxiv:quant-ph/9904050. http://arxiv.org/abs/quant-ph/9904050.  </description>
+      <description>tags Zuse&amp;rsquo;s thesis source    Summary Comments &amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -1392,8 +1392,8 @@ Bibliography Marshall, Stuart M, Douglas G Moore, Alastair R G Murrayand Sara I 
       <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/sayamanewstructurallydissolvable1999/</guid>
-      <description>source (Sayama 1999) tags Cellular automata, Evolution  Summary This work presents a simple evolutionary system based on Langton&amp;rsquo;s self-reproducing loop. This is entirely done with a normal state-transition rule based CA. The initial structure of the loop was modified to catch variations. An interesting consequence of this system evolving is its natural tendency to evolve towards smaller loops despite no stochastic mutation being hard-coded.
-Bibliography Sayama, H.. 1999. &#34;</description>
+      <description>source   tags Cellular automata, Evolution  Summary This work presents a simple evolutionary system based on Langton&amp;rsquo;s self-reproducing loop. This is entirely done with a normal state-transition rule based CA. The initial structure of the loop was modified to catch variations. An interesting consequence of this system evolving is its natural tendency to evolve towards smaller loops despite no stochastic mutation being hard-coded.
+&amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -1402,7 +1402,7 @@ Bibliography Sayama, H.. 1999. &#34;</description>
       <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/tutumadaptingunseenenvironments2020/</guid>
-      <description>source (Tutum and Miikkulainen 2020) tags Meta-learning, Reinforcement learning, ALife 2020  Summary This work introduces the idea of Context-Skill networks for continuous RL tasks. Experiments are done on a Flappy bird like game.
+      <description>source   tags Meta-learning, Reinforcement learning, ALife 2020  Summary This work introduces the idea of Context-Skill networks for continuous RL tasks. Experiments are done on a Flappy bird like game.
 The authors use a LSTM as a context network to make part of the prediction and a feed-forward neural network as a skill network. They are able to demonstrate that in that game, better performances are achieved by using both networks compared to a single one.</description>
     </item>
     
@@ -1412,7 +1412,7 @@ The authors use a LSTM as a context network to make part of the prediction and a
       <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/beerintegratedperspectiveconstitutive2020/</guid>
-      <description>tags Emergence, Life, Cellular automata source (Beer 2020)  Summary Constitution: &amp;ldquo;How emergent individuals are put together and maintained&amp;rdquo; Interaction: &amp;ldquo;How emergent individuals as a whole engage with the environment&amp;rdquo;
+      <description>tags Emergence, Life, Cellular automata source    Summary Constitution: &amp;ldquo;How emergent individuals are put together and maintained&amp;rdquo; Interaction: &amp;ldquo;How emergent individuals as a whole engage with the environment&amp;rdquo;
 Use Conway&amp;rsquo;s Game of Life as a toy model where each cell and update rule is like the Physics of the universe and this physics gives rise to a simple chemistry which can in turn support self-sustaining networks of reactions and some form of biology.</description>
     </item>
     
@@ -1422,7 +1422,7 @@ Use Conway&amp;rsquo;s Game of Life as a toy model where each cell and update ru
       <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/gilpincellularautomataconvolutional2018/</guid>
-      <description>tags Cellular automata as CNNs source (Gilpin 2018)  Summary This is one of the only attempt to represent a CA rule as a CNN I have come across. The author uses a deep CNN to learn a rule and studies various information-theoretic quantities in the activation patterns to evaluate the complexity of the rules.
+      <description>tags Cellular automata as CNNs source    Summary This is one of the only attempt to represent a CA rule as a CNN I have come across. The author uses a deep CNN to learn a rule and studies various information-theoretic quantities in the activation patterns to evaluate the complexity of the rules.
 Comments I am personally very interested by the paper since it is an interesting direction for creating neural-network based rules that can be sampled and efficiently stored and applied.</description>
     </item>
     
@@ -1432,7 +1432,7 @@ Comments I am personally very interested by the paper since it is an interesting
       <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/benderclimbingnlumeaning2020/</guid>
-      <description>source (Bender and Koller 2020) tags NLP, Artificial Intelligence, Evaluating NLP  Summary The main point of the article could be summarized like so:
+      <description>source   tags NLP, Artificial Intelligence, Evaluating NLP  Summary The main point of the article could be summarized like so:
  We argue that the language modeling task, because it only uses form as training data, cannot in principle lead to learning of meaning. We take the term language model to refer to any system trained only on the task of string prediction, whether it operates over characters, words or sentences, and sequentially or not.</description>
     </item>
     
@@ -1442,8 +1442,8 @@ Comments I am personally very interested by the paper since it is an interesting
       <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/kruszewskicombinatorychemistrysimple2020/</guid>
-      <description>tags Artificial life, Combinatory logic source (Kruszewski and Mikolov 2020)  Summary This is Kruszewski&amp;rsquo;s approach to artificial life, based on artificial chemistry. Combinatory logic is used as a basis for this system. Conservation laws are added on top of the set of rules that make combinatory logic Turing complete. This is then used to observe interesting dynamics and pre-life-like processes.
-Comments Bibliography Kruszewski, Germánand Tomas Mikolov. March 17, 2020.</description>
+      <description>tags Artificial life, Combinatory logic source    Summary This is Kruszewski&amp;rsquo;s approach to artificial life, based on artificial chemistry. Combinatory logic is used as a basis for this system. Conservation laws are added on top of the set of rules that make combinatory logic Turing complete. This is then used to observe interesting dynamics and pre-life-like processes.
+Comments &amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -1452,7 +1452,7 @@ Comments Bibliography Kruszewski, Germánand Tomas Mikolov. March 17, 2020.</des
       <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/mcsheacomplexityevolutionwhat1991/</guid>
-      <description> tags Evolution, Complexity source (McShea 1991)  Summary Comments Bibliography McShea, Daniel W.. July 1991. &#34;Complexity and Evolution: What Everybody Knows&#34;. Biology &amp; Philosophy 6 (3):303–24. DOI.  </description>
+      <description>tags Evolution, Complexity source    Summary Comments &amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -1461,8 +1461,9 @@ Comments Bibliography Kruszewski, Germánand Tomas Mikolov. March 17, 2020.</des
       <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/pathakcuriositydrivenexplorationselfsupervised2017/</guid>
-      <description>tags Reinforcement learning source (Pathak et al. 2017)  Summary This paper presents a curiosity-based method for training RL agents. These agents are given a reward \(r_t\) which is the sum of an intrinsic and an extrinsic rewards. The latter is mostly (if not always) 0, while the former is constructed progressively during exploration by an Intrisic Curiosity Module (ICM).
-The module is illustrated below (figure from the paper).</description>
+      <description>tags Reinforcement learning source    Summary This paper presents a curiosity-based method for training RL agents. These agents are given a reward \(r_t\) which is the sum of an intrinsic and an extrinsic rewards. The latter is mostly (if not always) 0, while the former is constructed progressively during exploration by an Intrisic Curiosity Module (ICM).
+The module is illustrated below (figure from the paper).
+ The left part of the figure represents a standard RL setup where actions are taken according to a policy and they affect the state of the agent.</description>
     </item>
     
     <item>
@@ -1471,7 +1472,7 @@ The module is illustrated below (figure from the paper).</description>
       <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/lehredevelopmentalmappingsphenotypic2003/</guid>
-      <description>tags Cellular automata source (Lehre and Haddow 2003)  Summary The approach of the paper is to use a genotype/phenotype distance correlation plot to study the complexity of a system that is determined by a genotype and exhibits som ephenotypic behavior. This is equivalent to simply plotting the distance of two phenotypes (Hamming of the state after 100 iteration starting from a single activated cell for CAs) against the distance between two genotypes (Hamming distance between the rules for a CA).</description>
+      <description>tags Cellular automata source    Summary The approach of the paper is to use a genotype/phenotype distance correlation plot to study the complexity of a system that is determined by a genotype and exhibits som ephenotypic behavior. This is equivalent to simply plotting the distance of two phenotypes (Hamming of the state after 100 iteration starting from a single activated cell for CAs) against the distance between two genotypes (Hamming distance between the rules for a CA).</description>
     </item>
     
     <item>
@@ -1480,7 +1481,7 @@ The module is illustrated below (figure from the paper).</description>
       <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/brantdiversitypreservationminimal2020/</guid>
-      <description> source (Brant and Stanley 2020) tags Co-evolution, Evolutionary algorithms  Summary Comments Bibliography Brant, Jonathan C.and Kenneth O. Stanley. June 25, 2020. &#34;Diversity Preservation in Minimal Criterion Coevolution Through Resource Limitation&#34;. In Proceedings of the 2020 Genetic and Evolutionary Computation Conference, 58–66. Cancún Mexico: ACM. DOI.  </description>
+      <description>source   tags Co-evolution, Evolutionary algorithms  Summary Comments &amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -1489,7 +1490,7 @@ The module is illustrated below (figure from the paper).</description>
       <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/hudrinkingfirehosecontinual2020/</guid>
-      <description>tags Continual learning source (Hu et al. 2020)  Summary This paper focuses on the problem of (self-)supervised continual learning with deep neural networks. The Firehose dataset introduced by the authors is a large database of timestamped tweets. The goal is to learn a language model for each user from the dataset, which is called Personalized online language learning (POLL).
+      <description>tags Continual learning source    Summary This paper focuses on the problem of (self-)supervised continual learning with deep neural networks. The Firehose dataset introduced by the authors is a large database of timestamped tweets. The goal is to learn a language model for each user from the dataset, which is called Personalized online language learning (POLL).
 The authors also introduce a new extension of gradient descent for continual learning.</description>
     </item>
     
@@ -1499,7 +1500,7 @@ The authors also introduce a new extension of gradient descent for continual lea
       <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/phamefficientneuralarchitecture2018/</guid>
-      <description>source (Pham et al. 2018)  Summary Like other papers, the controller is a RNN that generates each part of the architecture in sequence. The main contribution of this paper is to introduce parameter sharing in child models. For, this, it represents all possible architectures in a single DAG of operations and share weights between same operations. They explain how to design a RNN cell with their model, a convolutional network (and convolutional cell to build a CNN) and how to train.</description>
+      <description>source    Summary Like other papers, the controller is a RNN that generates each part of the architecture in sequence. The main contribution of this paper is to introduce parameter sharing in child models. For, this, it represents all possible architectures in a single DAG of operations and share weights between same operations. They explain how to design a RNN cell with their model, a convolutional network (and convolutional cell to build a CNN) and how to train.</description>
     </item>
     
     <item>
@@ -1508,8 +1509,9 @@ The authors also introduce a new extension of gradient descent for continual lea
       <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/nehanivevolutionasynchronouscellular2003/</guid>
-      <description>tags Cellular automata, Evolution source (Nehaniv 2003)  Summary This paper proposes a general asynchronous extension of CA rules and show that they can be made equivalent to the original CA rule. Applying this extension to H. Sayama&amp;rsquo;s Evoloop cellular automaton (Sayama 1999), the author creates the first asynchronous implementation of evolution of self-replicators.
-One hope formulated by the author is that asynchronicity could help achieve fault-tolerance and self-repair.</description>
+      <description>tags Cellular automata, Evolution source    Summary This paper proposes a general asynchronous extension of CA rules and show that they can be made equivalent to the original CA rule. Applying this extension to H. Sayama&amp;rsquo;s Evoloop cellular automaton , the author creates the first asynchronous implementation of evolution of self-replicators.
+One hope formulated by the author is that asynchronicity could help achieve fault-tolerance and self-repair.
+&amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -1518,7 +1520,7 @@ One hope formulated by the author is that asynchronicity could help achieve faul
       <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/patteeevolvedopenendednessnot2019/</guid>
-      <description>source (Pattee and Sayama 2019)  Summary Evolution need not have been inherently open-ended in nature, because from a simple cell evolving in a complex self-organising environment new mechanisms might have been created by the organisms themself, effectively rendering them &amp;ldquo;more&amp;rdquo; open-ended. Symbolic languages are a striking example of this phenomenon: an open-ended descriptive power where the complexity of the environment is not limiting because language can refer itself recursively to build on its complexity.</description>
+      <description>source    Summary Evolution need not have been inherently open-ended in nature, because from a simple cell evolving in a complex self-organising environment new mechanisms might have been created by the organisms themself, effectively rendering them &amp;ldquo;more&amp;rdquo; open-ended. Symbolic languages are a striking example of this phenomenon: an open-ended descriptive power where the complexity of the environment is not limiting because language can refer itself recursively to build on its complexity.</description>
     </item>
     
     <item>
@@ -1527,8 +1529,9 @@ One hope formulated by the author is that asynchronicity could help achieve faul
       <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/flageatfaststablemapelites2020/</guid>
-      <description>source (Flageat and Cully 2020) tags ALife 2020, MAP-Elites, Quality diversity  Summary MAP-Elites can be problematic in face of uncertainty because:
- individuals can be unexpectedly lucky the behavior space can be hard to estimate and result in misplacing individuals.  Some mitigation techniques have been explored, e.g in (Justesen, Risiand Mouret 2019) and this paper is about introducing another way of dealing with noisy domains without using sampling.</description>
+      <description>source   tags ALife 2020, MAP-Elites, Quality diversity  Summary MAP-Elites can be problematic in face of uncertainty because:
+ individuals can be unexpectedly lucky the behavior space can be hard to estimate and result in misplacing individuals.  Some mitigation techniques have been explored, e.g in  and this paper is about introducing another way of dealing with noisy domains without using sampling.
+Here the main idea is to replace the MAP-elites grid by a &amp;ldquo;deep grid&amp;rdquo; with another dimension.</description>
     </item>
     
     <item>
@@ -1537,7 +1540,7 @@ One hope formulated by the author is that asynchronicity could help achieve faul
       <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/voitainformationtheoreticprobingminimum2020/</guid>
-      <description> tags Evaluating NLP, Transformers, Minimum description length source (Voita and Titov 2020)  Summary Comments Bibliography Voita, Elenaand Ivan Titov. March 27, 2020. &#34;Information-theoretic Probing with Minimum Description Length&#34;. Arxiv:2003.12298 [cs]. http://arxiv.org/abs/2003.12298.  </description>
+      <description>tags Evaluating NLP, Transformers, Minimum description length source    Summary Comments &amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -1546,7 +1549,7 @@ One hope formulated by the author is that asynchronicity could help achieve faul
       <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/zophlearningtransferablearchitectures2018/</guid>
-      <description>tags NAS source (Zoph et al. 2018)  Summary This paper is more or less a follow up of (Zoph and Le 2017) where the search space get at the same time widened and more constraints are added (division between normal cell for processing and reduction cell for pooling/downsampling). Normal cells get stacked \(N\) times resulting in very big architectures. NASNet is created by searching for thos cells but the actual number of cells stacked and number of filters of the penultimate layer are searched separately.</description>
+      <description>tags NAS source    Summary This paper is more or less a follow up of  where the search space get at the same time widened and more constraints are added (division between normal cell for processing and reduction cell for pooling/downsampling). Normal cells get stacked \(N\) times resulting in very big architectures. NASNet is created by searching for thos cells but the actual number of cells stacked and number of filters of the penultimate layer are searched separately.</description>
     </item>
     
     <item>
@@ -1555,7 +1558,7 @@ One hope formulated by the author is that asynchronicity could help achieve faul
       <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/wierstramodelingsystemsinternal2005/</guid>
-      <description> tags Genetic algorithms, Recurrent neural networks source (Wierstra, Gomezand Schmidhuber 2005)  Summary Comments Bibliography Wierstra, Daan, Faustino J. Gomezand Jürgen Schmidhuber. 2005. &#34;Modeling Systems with Internal State Using Evolino&#34;. In Proceedings of the 2005 Conference on Genetic and Evolutionary Computation - GECCO &#39;05, 1795. Washington DC, USA: ACM Press. DOI.  </description>
+      <description>tags Genetic algorithms, Recurrent neural networks source    Summary Comments &amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -1564,7 +1567,7 @@ One hope formulated by the author is that asynchronicity could help achieve faul
       <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/maziarkamoleculeattentiontransformer2020/</guid>
-      <description> tags Neural networks source (Maziarka et al. 2020)  Summary Comments Bibliography Maziarka, Łukasz, Tomasz Danel, Sławomir Mucha, Krzysztof Rataj, Jacek Taborand Stanisław Jastrzębski. February 19, 2020. &#34;Molecule Attention Transformer&#34;. Arxiv:2002.08264 [physics, Stat]. http://arxiv.org/abs/2002.08264.  </description>
+      <description>tags Neural networks source    Summary Comments &amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -1573,7 +1576,7 @@ One hope formulated by the author is that asynchronicity could help achieve faul
       <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/zophneuralarchitecturesearch2017/</guid>
-      <description>tags NAS source (Zoph and Le 2017)  Summary This paper introduces the idea of using a RNN controller system to generate the operations of a neural network. In a first setting the authors use this method to construct CNNs. The controller samples an architecture, the architecture is built and trained and the controller is rewarded with the maximum validation accuracy of the last 5 epochs cubed (??).
+      <description>tags NAS source    Summary This paper introduces the idea of using a RNN controller system to generate the operations of a neural network. In a first setting the authors use this method to construct CNNs. The controller samples an architecture, the architecture is built and trained and the controller is rewarded with the maximum validation accuracy of the last 5 epochs cubed (??).
 Another experiment uses this exploration method to produce recurrent cell through a complicated model based on a tree of units, for each of which the controller samples an operation.</description>
     </item>
     
@@ -1583,8 +1586,8 @@ Another experiment uses this exploration method to produce recurrent cell throug
       <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/lechnerneuralcircuitpolicies2020/</guid>
-      <description>source (Lechner et al. 2020) tags Neural networks  Summary This article introduces a type of RNN called Neural Circuit Policies (NCP). This architecture is said to be inspired from the wiring diagram of the C. elegans nematode.
-The main building block is a Recurrent neural network called liquid time constant (LTC) introduced in (Hasani et al. 2020).
+      <description>source   tags Neural networks  Summary This article introduces a type of RNN called Neural Circuit Policies (NCP). This architecture is said to be inspired from the wiring diagram of the C. elegans nematode.
+The main building block is a Recurrent neural network called liquid time constant (LTC) introduced in .
 LTC Neurons These neurons are bio-inspired. For a given neuron in state x_i(t), the continuous temporal evolution is described by an ODE: \[ \dot{x}_i = - \left(\frac{1}{\tau_i} + \frac{w_{ij}}{C_{m_i}} \sigma_i(x_j) \right) x_i + \left( \frac{x_{\text{leak}_i}}{\tau_i}+ \frac{w_{ij}}{C_{m_i}} \sigma_i(x_j) E_{ij} \right) \]</description>
     </item>
     
@@ -1594,7 +1597,7 @@ LTC Neurons These neurons are bio-inspired. For a given neuron in state x_i(t), 
       <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/beckhamadversarialmixupresynthesis2019/</guid>
-      <description> tags Autoencoders source (Beckham et al. 2019)  Summary Comments Bibliography Beckham, Christopher, Sina Honari, Vikas Verma, Alex Lamb, Farnoosh Ghadiri, R. Devon Hjelm, Yoshua Bengioand Christopher Pal. October 23, 2019. &#34;On Adversarial Mixup Resynthesis&#34;. Arxiv:1903.02709 [cs, Stat]. http://arxiv.org/abs/1903.02709.  </description>
+      <description>tags Autoencoders source    Summary Comments &amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -1603,7 +1606,7 @@ LTC Neurons These neurons are bio-inspired. For a given neuron in state x_i(t), 
       <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/khalifapcgrlproceduralcontent2020/</guid>
-      <description> tags Reinforcement learning source (Khalifa et al. 2020)  Summary Comments Bibliography Khalifa, Ahmed, Philip Bontrager, Sam Earleand Julian Togelius. January 24, 2020. &#34;PCGRL: Procedural Content Generation via Reinforcement Learning&#34;. Arxiv:2001.09212 [cs, Stat]. http://arxiv.org/abs/2001.09212.  </description>
+      <description>tags Reinforcement learning source    Summary Comments &amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -1612,7 +1615,7 @@ LTC Neurons These neurons are bio-inspired. For a given neuron in state x_i(t), 
       <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/wangpoetopenendedcoevolution2019/</guid>
-      <description>tags Open-ended Evolution, Reinforcement learning source (Wang et al. 2019)  Summary This paper is about introducing the POET architecture. The core idea behind this framework is to build a system that can make agents learn complex behavior through joint evolution of agents and the environment. The better the agent, the more complex environment we can give it.
+      <description>tags Open-ended Evolution, Reinforcement learning source    Summary This paper is about introducing the POET architecture. The core idea behind this framework is to build a system that can make agents learn complex behavior through joint evolution of agents and the environment. The better the agent, the more complex environment we can give it.
 There are 3 main components to the algorithm: an evolutionary strategy (ES) for the environment itself, resembling genetic algorithm, another ES for the agents (although these agents might also be trained with RL), and a transfer mechanism whereby agents trained in a particular environment can be trained on another one.</description>
     </item>
     
@@ -1622,8 +1625,8 @@ There are 3 main components to the algorithm: an evolutionary strategy (ES) for 
       <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/horiberegeneratingsoftrobots2021/</guid>
-      <description>tags Cellular automata, Reinforcement learning source (Horibe, Walkerand Risi 2021)  Summary The authors explore neural cellular automata (Mordvintsev et al. 2020) as a framework for growing soft robots.
-Comments Bibliography Horibe, Kazuya, Kathryn Walkerand Sebastian Risi. February 7, 2021. &#34;Regenerating Soft Robots Through Neural Cellular Automata&#34;. Arxiv:2102.02579 [cs, Q-bio]. http://arxiv.org/abs/2102.02579. Mordvintsev, Alexander, Ettore Randazzo, Eyvind Niklassonand Michael Levin. February 11, 2020. &#34;Growing Neural Cellular Automata&#34;. Distill 5 (2):e23. DOI.</description>
+      <description>tags Cellular automata, Reinforcement learning source    Summary The authors explore neural cellular automata  as a framework for growing soft robots.
+Comments &amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -1632,7 +1635,7 @@ Comments Bibliography Horibe, Kazuya, Kathryn Walkerand Sebastian Risi. February
       <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/jensenreservoircomputingartificial2020/</guid>
-      <description>source (Jensen and Tufte 2020) tags Reservoir computing, Complex Systems  Summary This talk is about artificial spin ice. This model is based on a grid of coupled magnets that can be controlled with a magnetic field. The geometry of that grid can very greatly the kind of behavior one may observe in such systems.
+      <description>source   tags Reservoir computing, Complex Systems  Summary This talk is about artificial spin ice. This model is based on a grid of coupled magnets that can be controlled with a magnetic field. The geometry of that grid can very greatly the kind of behavior one may observe in such systems.
 The authors want to use the spin ice model for reservoir computing. They measure useful quantities such as kernel quality \(K\) (ability to separate inputs) and generalization capabilities \(G\) (how similar inputs yield similar results).</description>
     </item>
     
@@ -1642,7 +1645,7 @@ The authors want to use the spin ice model for reservoir computing. They measure
       <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/cikaresilientlifeexploration2020/</guid>
-      <description>tags ALife 2020, Cellular automata, Autopoiesis source (Cika et al. 2020)  Summary This paper is about the possible resistance of GoL patterns to perturbations and the structures that could enable this to happen. They also want to know if resilience is a universal property of computational systems.
+      <description>tags ALife 2020, Cellular automata, Autopoiesis source    Summary This paper is about the possible resistance of GoL patterns to perturbations and the structures that could enable this to happen. They also want to know if resilience is a universal property of computational systems.
 They test two types of resilience:
  Additive (add one or two live cells to the pattern) Negative (&amp;ldquo;kill&amp;rdquo; one or two live cells from the pattern)  They use 3 metrics for resilience:</description>
     </item>
@@ -1653,7 +1656,7 @@ They test two types of resilience:
       <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/grbicsafereinforcementlearning2020/</guid>
-      <description>source (Grbic and Risi 2020) tags Meta-learning, Reinforcement learning, ALife 2020  Summary In RL an important goal is to find agents that can quickly adapt to changing environments while avoiding unsafe states. However, in deep RL, there is often noise added to explore the action space: this can lead to unsafe part of the state-action space.
+      <description>source   tags Meta-learning, Reinforcement learning, ALife 2020  Summary In RL an important goal is to find agents that can quickly adapt to changing environments while avoiding unsafe states. However, in deep RL, there is often noise added to explore the action space: this can lead to unsafe part of the state-action space.
 {{&amp;lt; img src=&amp;quot;/img/grbicslide.jpeg&amp;quot; title=&amp;ldquo;Slide from the Alife talk&amp;rdquo; width=200 alt=&amp;ldquo;Slide from the Alife talk&amp;rdquo; class=&amp;ldquo;center&amp;rdquo; &amp;gt;}}</description>
     </item>
     
@@ -1663,7 +1666,7 @@ They test two types of resilience:
       <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/sayamaseekingopenendedevolution2011/</guid>
-      <description> tags Open-ended Evolution source (Sayama 2011)  Summary Comments Bibliography Sayama, Hiroki. April 2011. &#34;Seeking Open-ended Evolution in Swarm Chemistry&#34;. In 2011 IEEE Symposium on Artificial Life (ALIFE), 186–93. Paris, France: IEEE. DOI.  </description>
+      <description>tags Open-ended Evolution source    Summary Comments &amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -1672,7 +1675,7 @@ They test two types of resilience:
       <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/horowitzspontaneousfinetuningenvironment2017/</guid>
-      <description> tags Chemical reaction network, Biological life source (Horowitz and England 2017)  Summary Comments Bibliography Horowitz, Jordan M.and Jeremy L. England. July 18, 2017. &#34;Spontaneous Fine-tuning to Environment in Many-species Chemical Reaction Networks&#34;. Proceedings of the National Academy of Sciences 114 (29). National Academy of Sciences:7565–70. DOI.  </description>
+      <description>tags Chemical reaction network, Biological life source    Summary Comments &amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -1681,7 +1684,7 @@ They test two types of resilience:
       <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/simonarchitecturecomplexity1962/</guid>
-      <description>tags Complexity, Complex Systems source (Simon 1962)  Complex systems  In such systems, the whole is more than the sum of the parts, not in an ultimate, metaphysical sense, but in the important pragmatic sense that, given the properties of the parts and the laws of their interaction, it is not a trivial matter to infer the properties of the whole. In the face of complexity, an in-principle reductionist may be at the same time a pragmatic holist.</description>
+      <description>tags Complexity, Complex Systems source    Complex systems  In such systems, the whole is more than the sum of the parts, not in an ultimate, metaphysical sense, but in the important pragmatic sense that, given the properties of the parts and the laws of their interaction, it is not a trivial matter to infer the properties of the whole. In the face of complexity, an in-principle reductionist may be at the same time a pragmatic holist.</description>
     </item>
     
     <item>
@@ -1690,7 +1693,7 @@ They test two types of resilience:
       <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/litransitionphenomenacellular1990/</guid>
-      <description>tags Cellular automata source (Li, Packardand Langton 1990)  Summary This foundational paper follows Langton&amp;rsquo;s work on chaos and the lambda parameter. It uses information-theoretic measures to try and understand the structure of the space of CA rules. The authors come up with a classification in 6 classes:
+      <description>tags Cellular automata source    Summary This foundational paper follows Langton&amp;rsquo;s work on chaos and the lambda parameter. It uses information-theoretic measures to try and understand the structure of the space of CA rules. The authors come up with a classification in 6 classes:
  Spatially homogeneous fixed points Spatially inhomogeneous fixed points Periodic behavior Locally chaotic behavior Chaotic behavior Complex behavior  Wolfram&amp;rsquo;s class I is equivalent to class 1, class II is equivalent to class 2, 3 and 4.</description>
     </item>
     
@@ -1982,8 +1985,8 @@ Some compiled languages  C Programming language Rust C++  </description>
       <pubDate>Wed, 10 Feb 2021 09:36:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/nystrom_method/</guid>
-      <description> tags Applied maths  This method was introduced as a way to speed-up kernel machines in (Williams and Seeger 2001).
-Bibliography Williams, Christopherand Matthias Seeger. 2001. &#34;Using the Nyström Method to Speed up Kernel Machines&#34;. In Advances in Neural Information Processing Systems, edited by T. Leen, T. Dietterich, and V. Tresp, 13:682–88. MIT Press. https://proceedings.neurips.cc/paper/2000/file/19de10adbaa1b2ee13f77f679fa1483a-Paper.pdf.  </description>
+      <description>tags Applied maths  This method was introduced as a way to speed-up kernel machines in .
+&amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -2042,8 +2045,8 @@ Two layer neural network Even simple neural network models are very difficult to
       
       <guid>https://hugocisneros.com/notes/privacy_preserving_machine_learning/</guid>
       <description>tags Machine learning, Online privacy  This is a kind of machine learning where one wants to train a model or perform inference without transmitting sensitive information.
-This information could leak because of data transmission to an untrusted computing server, or because the model itself reveals the structure of its training data (Ateniese et al. 2013; Song, Ristenpartand Shmatikov 2017).
-Bibliography Ateniese, Giuseppe, Giovanni Felici, Luigi V. Mancini, Angelo Spognardi, Antonio Villaniand Domenico Vitali.</description>
+This information could leak because of data transmission to an untrusted computing server, or because the model itself reveals the structure of its training data &amp;lt;atenieseHackingSmartMachines2013,songMachineLearningModels2017&amp;gt;.
+&amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -2064,7 +2067,7 @@ This idea is similar in spirit to Privacy-preserving machine learning, or federa
       <guid>https://hugocisneros.com/notes/neural_networks/</guid>
       <description>tags Machine learning  Two-layers neural network Mathematically, a simple two-layers neural network with relu non-linearities can be written like below. For an input vector \(x \in \mathbb{R}^D\), \(\mathbf{a} = (a_1, \cdots, a_N)\in \mathbb{R}^M\) are the output weights, \(\mathbf{b} = (b_1, \cdots, b_N)\in \mathbb{R}^D\) are the input weights
 \[ h(x) = \frac{1}{m} \sum_{i=1}^m a_i \max\{ b_i^\top x,0\}, \]
-Universal approximation theorem Cybenko showed in 1989 that a neural network of arbitrary width with sigmoid activation function could approximate any continuous function (Cybenko 1989).</description>
+Universal approximation theorem Cybenko showed in 1989 that a neural network of arbitrary width with sigmoid activation function could approximate any continuous function .</description>
     </item>
     
     <item>
@@ -2082,8 +2085,8 @@ Universal approximation theorem Cybenko showed in 1989 that a neural network of 
       <pubDate>Mon, 30 Nov 2020 16:27:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/complexity_metrics/</guid>
-      <description>tags Complexity  To study the complexity of various systems, researchers have come up with various metrics. They are based on several principles such as Information theory or Algorithmic Information theory. Many of these metrics are described in (Grassberger 1989).
-Shannon entropy and Kolmogorov Complexity The paper (&amp;lt;cite itemprop=&amp;ldquo;citation&amp;rdquo; itemscope=&amp;ldquo;&amp;ldquo;Grunwald and Vitanyi,n.d.) is a great description and analysis of two of the most important Complexity metrics:
+      <description>tags Complexity  To study the complexity of various systems, researchers have come up with various metrics. They are based on several principles such as Information theory or Algorithmic Information theory. Many of these metrics are described in .
+Shannon entropy and Kolmogorov Complexity The paper  is a great description and analysis of two of the most important Complexity metrics:
  Shannon entropy Kolmogorov complexity  Information-theoretic metrics  Shannon entropy  AIT based metrics For a Universal computer \(U\) the algorithmic information of \(S\) relative to \(U\) is defined as the length of the shortest program that yields \(S\) on \(U\).</description>
     </item>
     
@@ -2093,9 +2096,9 @@ Shannon entropy and Kolmogorov Complexity The paper (&amp;lt;cite itemprop=&amp;
       <pubDate>Wed, 25 Nov 2020 09:20:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/complexity_of_cellular_automata/</guid>
-      <description> tags Complexity, Cellular automata  Measuring complexity created by cellular automata is a vast subject.
-Using Entropy In (3.0.CO;2-V&#34;Wuensche 1999), the author uses the entropy of rule table lookup frequencies to evaluate the complexity of a CA.
-Bibliography 3.0.CO;2-V&#34;Wuensche, Andrew. 1999. &#34;Classifying Cellular Automata Automatically: Finding Gliders, Filtering, and Relating Space-time Patterns, Attractor Basins, and the Z Parameter&#34;. Complexity 4 (3):47–66. 3.0.CO;2-V&#34;DOI.  </description>
+      <description>tags Complexity, Cellular automata  Measuring complexity created by cellular automata is a vast subject.
+Using Entropy In , the author uses the entropy of rule table lookup frequencies to evaluate the complexity of a CA.
+&amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -2113,9 +2116,9 @@ Bibliography 3.0.CO;2-V&#34;Wuensche, Andrew. 1999. &#34;Classifying Cellular Au
       <pubDate>Thu, 12 Nov 2020 11:49:00 +0100</pubDate>
       
       <guid>https://hugocisneros.com/notes/self_replication/</guid>
-      <description> tags Complexity, Self-organization  An early example of artificial self-replication is Von Neumann&amp;rsquo;s self-reproducing CA which is a cellular automaton.
-Self-replication in neural networks can be done with neural network quines (Chang and Lipson 2018).
-Bibliography Chang, Oscarand Hod Lipson. May 24, 2018. &#34;Neural Network Quine&#34;. Arxiv:1803.05859 [cs]. http://arxiv.org/abs/1803.05859.  </description>
+      <description>tags Complexity, Self-organization  An early example of artificial self-replication is Von Neumann&amp;rsquo;s self-reproducing CA which is a cellular automaton.
+Self-replication in neural networks can be done with neural network quines .
+&amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -2210,10 +2213,10 @@ In such a framework, the goal of training the neural network is to reach a form 
       <pubDate>Tue, 20 Oct 2020 08:20:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/turing_completeness_of_cellular_automata/</guid>
-      <description> tags Cellular automata, Turing-completeness  Rule 110 Elementary cellular automaton rule 110 is universal (Cook 2004).
+      <description>tags Cellular automata, Turing-completeness  Rule 110 Elementary cellular automaton rule 110 is universal .
 Game of Life Conway&amp;rsquo;s Game of Life has also been show to be Turing-complete. Gliders can be used to implement logic gates.
 A working computer in Game of Life
-Bibliography Cook, Matthew. 2004. &#34;Universality in Elementary Cellular Automata&#34;. Complex Systems, 40.  </description>
+&amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -2271,8 +2274,8 @@ General definition A Turing Machine is usually composed of four main components:
       
       <guid>https://hugocisneros.com/notes/echo_state_networks/</guid>
       <description>tags Recurrent neural networks, Unsupervised learning resources Scholarpedia  Principle An echo state network is usually a standard RNN with fixed random weights. The output from this RNN is used as a high dimensional feature map to be fed into a machine learning system.
-(Jaeger 2004; Jaeger, Maassand Principe 2007; Jaeger 2012)
-Bibliography Jaeger, H.. April 2, 2004. &#34;Harnessing Nonlinearity: Predicting Chaotic Systems and Saving Energy in Wireless Communication&#34;. Science 304 (5667):78–80.</description>
+&amp;lt;jaegerHarnessingNonlinearityPredicting2004,jaegerSpecialIssueEcho2007,jaegerLongShortTermMemory2012&amp;gt;
+&amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -2302,7 +2305,7 @@ import numpy as np a = np.random.randrange(5, size=10) one_hot_a = np.eye(5)[a] 
       
       <guid>https://hugocisneros.com/notes/self_organization/</guid>
       <description>Self-organization is an emergent phenomenon
-Open questions in self-organization From (Gershenson et al. 2020)
+Open questions in self-organization From 
 How can self-organization be programmed? This question is fundamental. It is one thing to have systems that exhibit beautiful and surprising self-organization, but its a different thing to be able to steer it in the right direction and use it.
 Can the macroscopic outcomes of self-organization be predicted? What is the role of self-organization in the open problems of ALife?</description>
     </item>
@@ -2437,7 +2440,7 @@ Objections to RNA:
       <pubDate>Mon, 24 Aug 2020 09:17:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/what_is_an_individual_biology_seeks_clues_in_information_theory/</guid>
-      <description>tags Life resources (Krakauer et al. 2020) source Quanta Magazine   “In a way, [biology] is a science of individuality,” said Melanie Mitchell, a computer scientist at the Santa Fe Institute.
+      <description>tags Life resources   source Quanta Magazine   “In a way, [biology] is a science of individuality,” said Melanie Mitchell, a computer scientist at the Santa Fe Institute.
 And yet, the notion of what it means to be an individual often gets glossed over. “So far we have a concept of ‘individual’ that’s very much like the concept of ‘pile,’” said Maxwell Ramstead, a postdoctoral researcher at McGill University.</description>
     </item>
     
@@ -2456,7 +2459,7 @@ And yet, the notion of what it means to be an individual often gets glossed over
       <pubDate>Wed, 29 Jul 2020 14:24:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/statistical_complexity/</guid>
-      <description>tags Complexity metrics papers (Crutchfield and Young 1989)  One interpretation of the statistical complexity is that it is the minimum amount of historical information required to make optimal forecasts of bits in \(x\) at the error rate \(h_\mu\).
+      <description>tags Complexity metrics papers    One interpretation of the statistical complexity is that it is the minimum amount of historical information required to make optimal forecasts of bits in \(x\) at the error rate \(h_\mu\).
 For periodic sequences, \(C_\mu(x) = 0\) and for ideal random sequences \(C_\mu(x) = 0\) too.
 Several researchers have tried to capture the properties of statistical complexity with practical alternatives. The resulting complexity metrics include:</description>
     </item>
@@ -2549,9 +2552,9 @@ Compilation is a type of program synthesis where both the source language and th
       <pubDate>Mon, 27 Jul 2020 13:24:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/map_elites/</guid>
-      <description>tags Quality diversity, Reinforcement learning papers (Mouret and Clune 2015; Cully et al. 2015)  MAP-Elites are an example of QD algorithm. The behavior space is discretized in cells and during exploration, only the best &amp;ldquo;elite&amp;rdquo; for each cell is kept.
+      <description>tags Quality diversity, Reinforcement learning papers &amp;lt;mouretIlluminatingSearchSpaces2015,cullyRobotsThatCan2015&amp;gt;  MAP-Elites are an example of QD algorithm. The behavior space is discretized in cells and during exploration, only the best &amp;ldquo;elite&amp;rdquo; for each cell is kept.
 Individuals are added to the grid if they:
- fill an empty space are better than an existing elite  Bibliography Mouret, Jean-Baptisteand Jeff Clune. April 19, 2015. &#34;</description>
+ fill an empty space are better than an existing elite  &amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -2644,7 +2647,7 @@ Where is the large-scale pattern specified?</description>
       <pubDate>Tue, 21 Jul 2020 08:54:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/adaptive_computation_time/</guid>
-      <description>tags Neural networks, Algorithm  Adaptive computation time (ACT) was introduced in (Graves 2017) as a way to make computations in RNN adaptive. The network learns how many computational steps to use before emitting an output.
+      <description>tags Neural networks, Algorithm  Adaptive computation time (ACT) was introduced in  as a way to make computations in RNN adaptive. The network learns how many computational steps to use before emitting an output.
 This is done by outputting an extra halting probability at each update step, and considering two timelines:
  the input timeline which plays the role of an outer loop, at each of those step, a new input symbol is fed to the RNN.</description>
     </item>
@@ -2755,8 +2758,8 @@ This is done by outputting an extra halting probability at each update step, and
       <pubDate>Tue, 14 Jul 2020 08:33:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/automated_discovery_in_complex_systems/</guid>
-      <description>tags Complex Systems  Evolutionary algorithms and CAs Evolutionary algorithms have been used to find Cellular automata rules with specific behavior (Mitchell et al. 1996; Sapin, Bailleuxand Jean-Jacques 2003) . The objective is to optimize a fitness function (majority of cells, presence of gliders and periodic patterns, etc.).
-Bibliography Mitchell, Melanie, Hyde Park Road, Rajarshi Dasand P O Box. 1996. &#34;Evolving Cellular Automata with Genetic Algorithms: A Review of Recent Work&#34;</description>
+      <description>tags Complex Systems  Evolutionary algorithms and CAs Evolutionary algorithms have been used to find Cellular automata rules with specific behavior &amp;lt;mitchellEvolvingCellularAutomata1996,sapinResearchCellularAutomaton2003&amp;gt; . The objective is to optimize a fitness function (majority of cells, presence of gliders and periodic patterns, etc.).
+&amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -2794,9 +2797,9 @@ Resolution An interesting study and resolution of Berry&amp;rsquo;s paradox</des
       <pubDate>Tue, 14 Jul 2020 08:32:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/combinatory_logic/</guid>
-      <description> tags Logic papers (&amp;lt;cite itemprop=&amp;ldquo;citation&amp;rdquo; itemscope=&amp;ldquo;&amp;ldquo;Cardone and Hindley,n.d.)  It was independently invented by Moses Schönfinkel, John Von Neumann and Haskell Curry.
+      <description>tags Logic papers    It was independently invented by Moses Schönfinkel, John Von Neumann and Haskell Curry.
 A Turing-complete basis of operators is:
- \(If\quad\triangleright\quad f\) \(Kfg \quad\triangleright\quad f\) \(Sfgx \quad\triangleright\quad fx(gx)\)  Bibliography Cardone, Feliceand J Roger Hindley. n.d.. &#34;History of Lambda-calculus and Combinatory Logic&#34;, 95.  </description>
+ \(If\quad\triangleright\quad f\) \(Kfg \quad\triangleright\quad f\) \(Sfgx \quad\triangleright\quad fx(gx)\)  &amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -2925,7 +2928,7 @@ Tips Delete buffers in helm view In helm buffer list view, individual buffers ca
       <pubDate>Tue, 14 Jul 2020 08:26:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/jevons_paradox/</guid>
-      <description>tags Economics, Climate resources (York and McGee 2016; Polimeni et al. 2015), Wikipedia, Real climate economics blog posts (Jim Barrett)  Definition Jevons Paradox is used to describe the situation where an increase in resource efficiency triggered by technological innovation has the counter-intuitive effect of raising the demand and increasing the overall consumption.
+      <description>tags Economics, Climate resources &amp;lt;yorkUnderstandingJevonsParadox2016,polimeniJevonsParadoxMyth2015&amp;gt;, Wikipedia, Real climate economics blog posts (Jim Barrett)  Definition Jevons Paradox is used to describe the situation where an increase in resource efficiency triggered by technological innovation has the counter-intuitive effect of raising the demand and increasing the overall consumption.
 It was first described in W. S. Jenvons&#39; book The Coal question in 1865.
 It is closely to another paradox well known in road planning (Downs–Thomson paradox) and Wirth&amp;rsquo;s law in software engineering.</description>
     </item>
@@ -2985,8 +2988,8 @@ He suggested in 1967 in his book Calculating space that the universe is running 
       <pubDate>Tue, 14 Jul 2020 08:21:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/logical_depth/</guid>
-      <description>tags Complexity metrics references (Bennett 1995)  Logical depth can be defined as the run time of the Turing Machine that uses the minimal representation for an input \(x\), \(M_{\min}(x)\) &amp;mdash; which is also its Kolmogorov complexity . It is therefore uncomputable (because the minimal representation is uncomputable).
-Bibliography Bennett, Charles H.. 1995. &#34;Logical Depth and Physical Complexity&#34;. In The Universal Turing Machine A Half-century Survey, edited by Rolf Herken, 2:207–35.</description>
+      <description>tags Complexity metrics references    Logical depth can be defined as the run time of the Turing Machine that uses the minimal representation for an input \(x\), \(M_{\min}(x)\) &amp;mdash; which is also its Kolmogorov complexity . It is therefore uncomputable (because the minimal representation is uncomputable).
+&amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -3023,7 +3026,7 @@ Bibliography Bennett, Charles H.. 1995. &#34;Logical Depth and Physical Complexi
       <pubDate>Mon, 13 Jul 2020 18:40:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/online_privacy/</guid>
-      <description>IP Addresses In (Mishra et al. 2020), the authors analyze a set of users&#39; internet traffic for more than 100 days. They observed a little more than 11% of the 34,488 IP addresses they collected were present for more than a month. Many of them were reused throughout the whole experience, making long-term tracking of users possible.
+      <description>IP Addresses In , the authors analyze a set of users&#39; internet traffic for more than 100 days. They observed a little more than 11% of the 34,488 IP addresses they collected were present for more than a month. Many of them were reused throughout the whole experience, making long-term tracking of users possible.
 The study also shows that 93% of users had a unique fixed set of IP addresses during the whole experiment, making it easy to track them between home, work, etc.</description>
     </item>
     
@@ -3051,7 +3054,7 @@ The study also shows that 93% of users had a unique fixed set of IP addresses du
       <pubDate>Mon, 13 Jul 2020 10:19:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/autoencoders/</guid>
-      <description>tags Neural networks, Data representation  Autoencoders and PCA The relation between Autoencoders and PCA is strong. In particular, a very small autoencoder with only linear activations seems intuitively very close to PCA decomposition. (Bourlard and Kamp 1988) gives an interesting analysis of the uselessness of the activation functions in the encoding layers of an autoencoder when there is no activations in the output layers. In that case, autoencoding is closely related to a sinigular value decomposition of the input data.</description>
+      <description>tags Neural networks, Data representation  Autoencoders and PCA The relation between Autoencoders and PCA is strong. In particular, a very small autoencoder with only linear activations seems intuitively very close to PCA decomposition.  gives an interesting analysis of the uselessness of the activation functions in the encoding layers of an autoencoder when there is no activations in the output layers. In that case, autoencoding is closely related to a sinigular value decomposition of the input data.</description>
     </item>
     
     <item>
@@ -3239,7 +3242,7 @@ Goal is to cover many combinatorial problems, TSP multi-cut, etc.
       <pubDate>Thu, 09 Jul 2020 12:42:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/the_lottery_ticket_hypothesis/</guid>
-      <description>tags Neural network training resources The AI podcast papers (Frankle and Carbin 2018)  When training very large neural networks, the obtained net might have a lot of unused neurons. It is possible, through neural network pruning, to remove a lot of those unused connections to make the overall architecture lighter and faster to run on some hardware.
+      <description>tags Neural network training resources The AI podcast papers    When training very large neural networks, the obtained net might have a lot of unused neurons. It is possible, through neural network pruning, to remove a lot of those unused connections to make the overall architecture lighter and faster to run on some hardware.
 However, once you have the pruned architecture, it will often not be able to learn anything interesting when it is trained from scratch.</description>
     </item>
     
@@ -3369,7 +3372,7 @@ In the case of Decentralization, an almost immediate effect is the decrease of p
       <pubDate>Thu, 02 Jul 2020 10:20:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/neural_network_pruning/</guid>
-      <description>tags Neural networks papers (LeCun, Denkerand Solla 1990; Hassibi and Stork 1993; Han et al. 2015; Li et al. 2016)  Bibliography LeCun, Yann, John S. Denkerand Sara A. Solla. 1990. &#34;Optimal Brain Damage&#34;. In Advances in Neural Information Processing Systems, 598–605. Hassibi, Babakand David G. Stork. 1993. &#34;Second Order Derivatives for Network Pruning: Optimal Brain Surgeon&#34;. In Advances in Neural Information Processing Systems, 164–71. Han, Song, Jeff Pool, John Tranand William Dally.</description>
+      <description>tags Neural networks papers &amp;lt;lecunOptimalBrainDamage1990,hassibiSecondOrderDerivatives1993,hanLearningBothWeights2015,liPruningFiltersEfficient2016&amp;gt;  &amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -3433,7 +3436,7 @@ In the case of Decentralization, an almost immediate effect is the decrease of p
       
       <guid>https://hugocisneros.com/notes/chaos/</guid>
       <description>tags Physics  Chaos is a striking example of emergence. Deterministic equations of motions lead to completely unpredictable over time. Randomness has emerged from these deterministic laws.
-From (Crutchfield 1994):
+From :
  Where in the determinism did the randomness come from? The answer is that the effective dynamic, which maps from initial conditions to states at a later time, becomes so complicated that an observer can neither measure the system accurately enough nor compute with sufficient power to predict the future behavior when given an initial condition.</description>
     </item>
     
@@ -3463,9 +3466,9 @@ With GNU Make 4.0 or later, it is possible to set the prefix to some other fixed
       <pubDate>Wed, 01 Jul 2020 14:20:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/cellular_automata_as_regular_languages/</guid>
-      <description>tags Cellular automata, Finite state machines  From (Hanson and Crutchfield 1997):
+      <description>tags Cellular automata, Finite state machines  From :
  Finite state machines are appropriate for investigating pattern dynamics of CAs for a number of reasons, among which we may note the following:
- FAs encompass the full range of behavior types from periodic to complex to random; Characterization of patterns using FAs makes possible a definition of pattern complexity which is both natural and computable in practice; Ensemble evolution in the space of regular languages is closed under the CA rule; The CA update rule is itself an FST; Automated inference techniques exist for reconstructing FAs from experimental data   Bibliography Hanson, James E.</description>
+ FAs encompass the full range of behavior types from periodic to complex to random; Characterization of patterns using FAs makes possible a definition of pattern complexity which is both natural and computable in practice; Ensemble evolution in the space of regular languages is closed under the CA rule; The CA update rule is itself an FST; Automated inference techniques exist for reconstructing FAs from experimental data   &amp;lt;~/Papers/library.</description>
     </item>
     
     <item>
@@ -3530,8 +3533,7 @@ Kerberos </description>
       <pubDate>Fri, 26 Jun 2020 11:13:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/text_classification/</guid>
-      <description> tags NLP  (Minaee et al. 2020)
-Bibliography Minaee, Shervin, Nal Kalchbrenner, Erik Cambria, Narjes Nikzad, Meysam Chenaghluand Jianfeng Gao. April 5, 2020. &#34;Deep Learning Based Text Classification: A Comprehensive Review&#34;. Arxiv:2004.03705 [cs, Stat]. http://arxiv.org/abs/2004.03705.  </description>
+      <description>tags NLP   &amp;lt;~/Papers/library.json&amp;gt;</description>
     </item>
     
     <item>
@@ -3540,9 +3542,9 @@ Bibliography Minaee, Shervin, Nal Kalchbrenner, Erik Cambria, Narjes Nikzad, Mey
       <pubDate>Fri, 26 Jun 2020 11:12:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/amorphous_computing/</guid>
-      <description>tags Unconventional computing papers (Abelson et al. 2000) resources Wikipedia, CSAIL&amp;rsquo;s website   From (Abelson et al. 2000):
+      <description>tags Unconventional computing papers   resources Wikipedia, CSAIL&amp;rsquo;s website   From :
 A colony of cells cooperates to form a multicellular organism under the direction of a genetic program shared by the members of the colony. A swarm of bees cooperates to construct a hive. Humans group together to build towns, cities, and nations.
- Amorphous computing was coined by Abelson, Knight, Sussman et al.</description>
+ Amorphous computing was coined by Abelson, Knight, Sussman et al. It refers to computational systems composed of a large number of identical parallel devices (processors) with limited computational capacity.</description>
     </item>
     
     <item>
