@@ -6,7 +6,28 @@
     <description>Recent content in Notes on Hugo Cisneros</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 30 Jan 2022 17:42:00 +0100</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 02 Feb 2022 09:05:00 +0100</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cellular automata</title>
+      <link>https://hugocisneros.com/notes/cellular_automata/</link>
+      <pubDate>Wed, 02 Feb 2022 09:05:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/cellular_automata/</guid>
+      <description>tags Emergence, Chaos, Artificial Intelligence resources Wikipedia, (Von Neumann and Burks 1966; Wolfram 2002)  Definition A cellular automaton is a computational model defined with respect to a regular grid of individual elements (called cells). Each of those cells can be in one of a finite number of states &amp;mdash; alive or dead, \(\{1, 2, 3\}\), etc.
+A cellular automaton&amp;rsquo;s evolution is simulated in discrete timesteps. At each new timestep, cells are updated according to a local evolution rule.</description>
+    </item>
+    
+    <item>
+      <title>Notes on: One model for the learning of language by Yang, Y., &amp; Piantadosi, S. T. (2022)</title>
+      <link>https://hugocisneros.com/notes/yangonemodellearning2022/</link>
+      <pubDate>Mon, 31 Jan 2022 13:55:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/yangonemodellearning2022/</guid>
+      <description>source (Yang and Piantadosi 2022) tags NLP, Artificial Intelligence, Machine learning  Summary This paper introduces a model for learning language from few examples while generalizing effectively.
+This model builds sentences with function that are combinations of elementary functions, including:
+ pair(L, C) : Concatenates character C onto list L first(L) : Return the first character of L flip(P) : Return true with probability P if(B, X, Y) : Return X if B else return Y (X and Y may be lists, sets, or probabilities) etc.</description>
+    </item>
+    
     <item>
       <title>Implicit neural representations</title>
       <link>https://hugocisneros.com/notes/implicit_neural_representations/</link>
@@ -25,17 +46,6 @@ Applications of these learned representations range from simple compression, to 
       <guid>https://hugocisneros.com/notes/gauthiernextgenerationreservoir2021/</guid>
       <description>source (Gauthier et al. 2021) tags Reservoir computing  Summary This paper bases itself on the demonstration that some reservoir computers (echo-state networks) are mathematically identical to nonlinear vector autoregression (NVAR) machines (Bollt 2021). A NVAR is just a regression over a feature vector composed of \(k\) time-delay observations of the dynamical system to be learned and nonlinear functions of these observations.
 The authors introduce Next-Generation Reservoir computing (NG-RC) which is essentially a NVAR.</description>
-    </item>
-    
-    <item>
-      <title>Notes on: One model for the learning of language by Yang, Y., &amp; Piantadosi, S. T. (2022)</title>
-      <link>https://hugocisneros.com/notes/yangonemodellearning2022/</link>
-      <pubDate>Sat, 29 Jan 2022 14:46:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/yangonemodellearning2022/</guid>
-      <description>source (Yang and Piantadosi 2022) tags NLP, Artificial Intelligence, Machine learning  Summary This paper introduces a model for learning language from few examples while generalizing effectively.
-This model builds sentences with function that are combinations of elementary functions, including:
- pair(L, C) : Concatenates character C onto list L first(L) : Return the first character of L flip(P) : Return true with probability P if(B, X, Y) : Return X if B else return Y (X and Y may be lists, sets, or probabilities) etc.</description>
     </item>
     
     <item>
@@ -126,16 +136,6 @@ Definition of artificial life from Carlos Gershenson in (Gershenson 2021)
       
       <guid>https://hugocisneros.com/notes/coding/</guid>
       <description>tags Computer science, Programming languages  For compiled programming languages, code has to be translated to machine code through a process called compilation</description>
-    </item>
-    
-    <item>
-      <title>Cellular automata</title>
-      <link>https://hugocisneros.com/notes/cellular_automata/</link>
-      <pubDate>Wed, 19 Jan 2022 12:10:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/cellular_automata/</guid>
-      <description>tags Emergence, Chaos, Artificial Intelligence resources Wikipedia, (Von Neumann and Burks 1966; Wolfram 2002)  Definition A cellular automaton is a computational model defined with respect to a regular grid of individual elements (called cells). Each of those cells can be in one of a finite number of states &amp;mdash; alive or dead, \(\{1, 2, 3\}\), etc.
-A cellular automaton&amp;rsquo;s evolution is simulated in discrete timesteps. At each new timestep, cells are updated according to a local evolution rule.</description>
     </item>
     
     <item>
@@ -914,7 +914,7 @@ Reductionism doesn&amp;rsquo;t imply constructionism It is generally accepted th
       <pubDate>Sun, 16 May 2021 14:23:00 +0200</pubDate>
       
       <guid>https://hugocisneros.com/notes/emergence_in_artificial_life/</guid>
-      <description> tags Artificial life, Emergence resources (Gershenson 2021)  Bibliography Gershenson, Carlos. April 30, 2021. &#34;Emergence in Artificial Life&#34;. Arxiv:2105.03216 [physics]. http://arxiv.org/abs/2105.03216.  </description>
+      <description> tags Artificial life, Emergence resources (Gershenson 2021)  Bibliography Gershenson, Carlos. April 30, 2021. &#34;Emergence in Artificial Life&#34;. Arxiv:2105.03216 [physics]. http://arxiv.org/abs/2105.03216.See notes  </description>
     </item>
     
     <item>

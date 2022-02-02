@@ -76,7 +76,17 @@
               <li>etc.</li>
             </ul>
             <p>(See Table 1 in (<a href="#yangOneModelLearning2022"><cite itemprop="citation" itemscope itemid="doi:10.1073/pnas.2021865119">Yang and Piantadosi 2022</cite></a>) for the complete list)</p>
+            <p>The space of possible functions constructed by composing the elementary ones above is denoted \(H\). The method wants to compute a posterior distribution over hypotheses \(P(H |D)\) given an example string set \(D\). This is estimated using Bayes rule: \[ P(H|D) \propto P(D | H) P(H) \]</p>
+            <p>\(P(H)\) is given by a probabilistic context-free grammar a priori and the other term is estimated by maximizing likelihood.</p>
+            <h3 id="innovations">Innovations</h3>
+            <ul>
+              <li>The authors propose a special definition of that likelihood \(P(D|H)\) such that it can be used incrementally on parts of a string only. Therefore if \(H\) generates strings similar but not equal to \(D\) it still benefits from it.</li>
+              <li>Hypotheses can be constructed from multiple other sub-hypotheses.</li>
+              <li>For non-deterministic expressions, multiple execution path are considered simultaneously.</li>
+            </ul>
             <h2 id="comments">Comments</h2>
+            <p>It is hard to tell how scalable the method is. Also relatively few details are given about the inference and how it is performed.</p>
+            <p>I think it is very cool to see “constructive” models of language that can “compute” the language instead of simply predicting the next token statistically. It also feels like this has a much better potential to be a data efficient language model.</p>
             <h2 id="bibliography">Bibliography</h2>
             <ol class="biblio-list">
               <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="yangOneModelLearning2022" itemid="doi:10.1073/pnas.2021865119">
@@ -95,7 +105,7 @@
             </div>
           </div>
           <div class="note-footer">
-            Last changed <a class="u-url" href="https://hugocisneros.com/notes/yangonemodellearning2022/"><time itemprop="datePublished" class="dt-published" datetime="2022-01-29T14:46:00+0100">29/01/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+            Last changed <a class="u-url" href="https://hugocisneros.com/notes/yangonemodellearning2022/"><time itemprop="datePublished" class="dt-published" datetime="2022-01-31T13:55:00+0100">31/01/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
           </div>
         </div>
       </article>
