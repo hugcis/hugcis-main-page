@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1">
+  <title>Elementary cellular automata - Hugo Cisneros</title>
+  <meta property="og:title" content="Elementary cellular automata - Hugo Cisneros">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="/img/rule30.png">
+  <meta property="og:url" content="https://hugocisneros.com/notes/elementary_cellular_automata/">
+  <meta property="og:description" content="Notes about Elementary cellular automata">
+  <meta name="Description" property="description" content="Notes about Elementary cellular automata">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@cisne_hug">
+  <meta name="twitter:creator" content="@cisne_hug">
+  <link rel="stylesheet" href="https://hugocisneros.com/css/main.min.css" media="all" type="text/css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
+  <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <nav class="nav">
+        <div class="nav-main">
+          <a href="https://hugocisneros.com/" class="nav-title">Hugo Cisneros</a>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="/blog/">Blog</a>
+          </li>
+          <li>
+            <a href="/notes/">Notes</a>
+          </li>
+          <li>
+            <a href="/projects/">Projects</a>
+          </li>
+          <li>
+            <a href="/resume/">Resume</a>
+          </li>
+          <li>
+            <a href="/contact/">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="content" role="main">
+      <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="single-note note-container">
+          <div class="title-image"><img src="/img/rule30.png" alt="Elementary cellular automaton rule 30" style="width:100%"></div>
+          <h1 class="article-title p-name" itemprop="name">Elementary cellular automata</h1>
+          <div class="article-content e-content p-name" itemprop="articleBody">
+            <dl>
+              <dt>tags</dt>
+              <dd>
+                <a href="/notes/cellular_automata/">Cellular automata</a>
+              </dd>
+              <dt>resources</dt>
+              <dd>
+                <a href="https://mathworld.wolfram.com/ElementaryCellularAutomaton.html">Wolfram Mathworld</a>, <a href="https://en.wikipedia.org/wiki/Elementary%5Fcellular%5Fautomaton">Wikipedia</a>
+              </dd>
+            </dl>
+            <p>ECA are one of the simplest form of 1D cellular automata possible. The grid is a 1-dimensional array of cells in state <code>0</code> or <code>1</code> (<code>dead</code> or <code>alive</code>). The size of the neighborhood being used for the update is 3 (one cell to the left, the main cell and one cell to the right).</p>
+            <p>Each of those \(2^3\) neighborhoods of size 3 can be mapped to either state <code>1</code> or <code>0</code>. There are \(2^{2^3} = 2^8 = 256\) possible mappings and therefore 256 possible ECA rules.</p>
+            <p>From this very simple definition, rules with various unexpected behavior emerge. Wolfram constructed a classification of those behavior, known as Wolfram’s classification (<a href="#wolframNewKindScience2002"><cite itemprop="citation" itemscope itemid="key:wolframNewKindScience2002">Wolfram 2002</cite></a>).</p>
+            <h2 id="simple-implementation">Simple implementation</h2>
+            <p>In <a href="/notes/python/">Python</a>, taking advantage of Numpy’s array manipulation. This implementation is much faster than looping through elements of the grid to update them, but uses slightly more memory. The <a href="/notes/algorithm/">algorithm</a> is simply based on the standard ECA update.</p>
+            <div class="highlight">
+              <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">numpy</span> <span style="color:#6ab825;font-weight:bold">as</span> <span style="color:#447fcf;text-decoration:underline">np</span>
+<span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">matplotlib</span>
+<span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">matplotlib.pyplot</span> <span style="color:#6ab825;font-weight:bold">as</span> <span style="color:#447fcf;text-decoration:underline">plt</span>
+fig, ax = plt.subplots(figsize=(<span style="color:#3677a9">3</span>,<span style="color:#3677a9">2</span>))
+
+N = <span style="color:#3677a9">100</span> <span style="color:#999;font-style:italic"># Number of cells in the cellular automaton</span>
+T = <span style="color:#3677a9">50</span> <span style="color:#999;font-style:italic"># Number of steps to run for</span>
+rule = <span style="color:#3677a9">54</span> <span style="color:#999;font-style:italic"># Rule code</span>
+rule_list = <span style="color:#24909d">bin</span>(rule)[<span style="color:#3677a9">2</span>:]
+<span style="color:#999;font-style:italic"># Zero padding of the rule</span>
+rule_list = [<span style="color:#3677a9">0</span>] * (<span style="color:#3677a9">8</span> - <span style="color:#24909d">len</span>(rule_list)) + [<span style="color:#24909d">int</span>(i) <span style="color:#6ab825;font-weight:bold">for</span> i <span style="color:#6ab825;font-weight:bold">in</span> rule_list]
+<span style="color:#999;font-style:italic"># Convert to array and reverse the list</span>
+rule_array = np.array(rule_list[::-<span style="color:#3677a9">1</span>])
+
+<span style="color:#999;font-style:italic"># Initial state</span>
+init = np.random.randint(<span style="color:#3677a9">2</span>, size=N)
+
+<span style="color:#999;font-style:italic"># We initialize a grid with T rows and N columns</span>
+grid = np.zeros((T, N), dtype=np.int)
+grid[<span style="color:#3677a9">0</span>, :] = init
+
+<span style="color:#6ab825;font-weight:bold">for</span> i <span style="color:#6ab825;font-weight:bold">in</span> <span style="color:#24909d">range</span>(<span style="color:#3677a9">1</span>, T):
+    next_step = rule_array[np.roll(grid[i-<span style="color:#3677a9">1</span>, :], -<span style="color:#3677a9">1</span>) +
+                           <span style="color:#3677a9">2</span> * grid[i-<span style="color:#3677a9">1</span>, :] +
+                           <span style="color:#3677a9">4</span> * np.roll(grid[i-<span style="color:#3677a9">1</span>, :], <span style="color:#3677a9">1</span>)]
+    grid[i, :] = next_step
+
+<span style="color:#999;font-style:italic"># Plotting the results</span>
+ax.matshow(grid, cmap=<span style="color:#ed9d13">'Greys'</span>)
+fig.tight_layout()
+fig.savefig(<span style="color:#ed9d13">'img/plots/ca_rule54.png'</span>)
+</code></pre>
+            </div>
+            <p>Results:</p>
+            <figure>
+              <img src="/img/plots/ca_rule54.png">
+            </figure>
+            <h2 id="bibliography">Bibliography</h2>
+            <ol class="biblio-list">
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="wolframNewKindScience2002">
+                <span itemprop="author">Wolfram, Stephen</span>. <time datetime="2002" itemprop="datePublished">2002</time>. <i>A New Kind of Science</i>. Champaign, IL: Wolfram Media. <a itemprop="sameAs" href="https://www.wolframscience.com/nks/">https://www.wolframscience.com/nks/</a>.
+              </li>
+            </ol>
+          </div>
+          <div class="bl-section">
+            <h2>Links to this note</h2>
+            <div class="backlinks">
+              <ul>
+                <li>
+                  <a href="/notes/cellular_automata/">Cellular automata</a>
+                </li>
+                <li>
+                  <a href="/notes/cellular_automata_as_cnns/">Cellular automata as convolutional neural networks</a>
+                </li>
+                <li>
+                  <a href="/notes/reinkeintrinsicallymotivateddiscovery2020/">Notes on: Intrinsically Motivated Discovery of Diverse Patterns in Self-Organizing Systems by Reinke, C., Etcheverry, M., & Oudeyer, P. (2020)</a>
+                </li>
+                <li>
+                  <a href="/notes/turing_completeness_of_cellular_automata/">Turing completeness of cellular automata</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="note-footer">
+            Last changed <a class="u-url" href="https://hugocisneros.com/notes/elementary_cellular_automata/"><time itemprop="datePublished" class="dt-published" datetime="2021-05-24T09:14:00+0200">24/05/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+          </div>
+        </div>
+      </article>
+      <h3>Comments</h3>
+      <script data-isso="//comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="//comment.hugocisneros.com/js/embed.min.js"></script>
+      <section id="isso-thread"></section><br>
+      <a href="/notes#elementary_cellular_automata"><b>← Back to Notes</b></a>
+      <hr>
+    </main>
+    <footer class="footer">
+      <ul class="footer-links">
+        <li>
+          <a class="rss-link" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon" src="/img/RSS.svg" alt="RSS feed icon"></a>
+        </li>
+        <li>
+          <a href="https://github.com/hugcis/natrium-custom">Code</a>
+        </li>
+        <li>© Hugo Cisneros 2022</li>
+      </ul>
+    </footer>
+  </div>
+  <link rel="stylesheet" href="/js/katex/katex.min.css">
+  <script src="/js/katex/katex.min.js"></script> 
+  <script src="/js/katex/contrib/auto-render.min.js"></script> 
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        delimiters: [
+            {left: "\\[", right: "\\]", display: true},
+            {left: "$$", right: "$$", display: true},
+            {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+            {left: "$", right: "$", display: false},
+            {left: "\\(", right: "\\)", display: false},
+        ]
+  })
+    });
+  </script>
+</body>
+</html>

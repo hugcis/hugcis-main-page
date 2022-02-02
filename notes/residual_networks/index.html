@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1">
+  <title>Residual neural networks - Hugo Cisneros</title>
+  <meta property="og:title" content="Residual neural networks - Hugo Cisneros">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="/img/main.jpeg">
+  <meta property="og:url" content="https://hugocisneros.com/notes/residual_networks/">
+  <meta property="og:description" content="Notes about Residual neural networks">
+  <meta name="Description" property="description" content="Notes about Residual neural networks">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@cisne_hug">
+  <meta name="twitter:creator" content="@cisne_hug">
+  <link rel="stylesheet" href="https://hugocisneros.com/css/main.min.css" media="all" type="text/css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
+  <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <nav class="nav">
+        <div class="nav-main">
+          <a href="https://hugocisneros.com/" class="nav-title">Hugo Cisneros</a>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="/blog/">Blog</a>
+          </li>
+          <li>
+            <a href="/notes/">Notes</a>
+          </li>
+          <li>
+            <a href="/projects/">Projects</a>
+          </li>
+          <li>
+            <a href="/resume/">Resume</a>
+          </li>
+          <li>
+            <a href="/contact/">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="content" role="main">
+      <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="single-note note-container">
+          <h1 class="article-title p-name" itemprop="name">Residual neural networks</h1>
+          <div class="article-content e-content p-name" itemprop="articleBody">
+            <dl>
+              <dt>tags</dt>
+              <dd>
+                <a href="/notes/neural_networks/">Neural networks</a>
+              </dd>
+              <dt>resources</dt>
+              <dd>
+                (<a href="#heDeepResidualLearning2016"><cite itemprop="citation" itemscope itemid="doi:10.1109/CVPR.2016.90">He et al. 2016</cite></a>)
+              </dd>
+            </dl>
+            <p>Residual neural networks are neural networks with skip-connections (or shortcuts, residual connections) that will bypass some of the networks operations in depth.</p>
+            <h2 id="highway-networks">Highway networks</h2>
+            <p>(<a href="#srivastavaHighwayNetworks2015"><cite itemprop="citation" itemscope itemid="key:srivastavaHighwayNetworks2015">Srivastava, Greffand Schmidhuber 2015</cite></a>)</p>
+            <h2 id="densenets">DenseNets</h2>
+            <p>(<a href="#huangDenselyConnectedConvolutional">&lt;cite itemprop=“citation” itemscope=““Huang and Liu,n.d.</a>)</p>
+            <h2 id="bibliography">Bibliography</h2>
+            <ol class="biblio-list">
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="heDeepResidualLearning2016" itemid="doi:10.1109/CVPR.2016.90">
+                <span itemprop="author">He, Kaiming, Xiangyu Zhang, Shaoqing Renand Jian Sun</span>. <time datetime="2016" itemprop="datePublished">June 2016</time>. "<span itemprop="name">Deep Residual Learning for Image Recognition</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</i></span>, 770–78. Las Vegas, NV, USA: IEEE. <a itemprop="sameAs" href="https://doi.org/10.1109/CVPR.2016.90">DOI</a>.
+              </li>
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="srivastavaHighwayNetworks2015">
+                <span itemprop="author">Srivastava, Rupesh Kumar, Klaus Greffand Jürgen Schmidhuber</span>. <time datetime="2015" itemprop="datePublished">November 3, 2015</time>. "<span itemprop="name">Highway Networks</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:1505.00387 [cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/1505.00387">http://arxiv.org/abs/1505.00387</a>.
+              </li>
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="huangDenselyConnectedConvolutional"><span itemprop="author">Huang, Gaoand Zhuang Liu</span>. n.d.. "<span itemprop="name">Densely Connected Convolutional Networks</span>", 9.</li>
+            </ol>
+          </div>
+          <div class="bl-section">
+            <h2>Links to this note</h2>
+            <div class="backlinks">
+              <ul>
+                <li>
+                  <a href="/notes/neural_networks_as_dynamical_systems/">Neural networks as dynamical systems</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="note-footer">
+            Last changed <a class="u-url" href="https://hugocisneros.com/notes/residual_networks/"><time itemprop="datePublished" class="dt-published" datetime="2021-09-30T13:26:00+0200">30/09/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+          </div>
+        </div>
+      </article>
+      <h3>Comments</h3>
+      <script data-isso="//comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="//comment.hugocisneros.com/js/embed.min.js"></script>
+      <section id="isso-thread"></section><br>
+      <a href="/notes#residual_networks"><b>← Back to Notes</b></a>
+      <hr>
+    </main>
+    <footer class="footer">
+      <ul class="footer-links">
+        <li>
+          <a class="rss-link" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon" src="/img/RSS.svg" alt="RSS feed icon"></a>
+        </li>
+        <li>
+          <a href="https://github.com/hugcis/natrium-custom">Code</a>
+        </li>
+        <li>© Hugo Cisneros 2022</li>
+      </ul>
+    </footer>
+  </div>
+  <link rel="stylesheet" href="/js/katex/katex.min.css">
+  <script src="/js/katex/katex.min.js"></script> 
+  <script src="/js/katex/contrib/auto-render.min.js"></script> 
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        delimiters: [
+            {left: "\\[", right: "\\]", display: true},
+            {left: "$$", right: "$$", display: true},
+            {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+            {left: "$", right: "$", display: false},
+            {left: "\\(", right: "\\)", display: false},
+        ]
+  })
+    });
+  </script>
+</body>
+</html>

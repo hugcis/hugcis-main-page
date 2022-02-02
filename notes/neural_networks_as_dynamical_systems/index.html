@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1">
+  <title>Neural networks as dynamical systems - Hugo Cisneros</title>
+  <meta property="og:title" content="Neural networks as dynamical systems - Hugo Cisneros">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="/img/main.jpeg">
+  <meta property="og:url" content="https://hugocisneros.com/notes/neural_networks_as_dynamical_systems/">
+  <meta property="og:description" content="Notes about Neural networks as dynamical systems">
+  <meta name="Description" property="description" content="Notes about Neural networks as dynamical systems">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@cisne_hug">
+  <meta name="twitter:creator" content="@cisne_hug">
+  <link rel="stylesheet" href="https://hugocisneros.com/css/main.min.css" media="all" type="text/css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
+  <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <nav class="nav">
+        <div class="nav-main">
+          <a href="https://hugocisneros.com/" class="nav-title">Hugo Cisneros</a>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="/blog/">Blog</a>
+          </li>
+          <li>
+            <a href="/notes/">Notes</a>
+          </li>
+          <li>
+            <a href="/projects/">Projects</a>
+          </li>
+          <li>
+            <a href="/resume/">Resume</a>
+          </li>
+          <li>
+            <a href="/contact/">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="content" role="main">
+      <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="single-note note-container">
+          <h1 class="article-title p-name" itemprop="name">Neural networks as dynamical systems</h1>
+          <div class="article-content e-content p-name" itemprop="articleBody">
+            <dl>
+              <dt>tags</dt>
+              <dd>
+                <a href="/notes/neural_networks/">Neural networks</a>, <a href="/notes/dynamical_systems/">Dynamical systems</a>
+              </dd>
+            </dl>
+            <p>Neural networks can be seen as dynamical systems in different contexts.</p>
+            <h2 id="recurrent-networks">Recurrent networks</h2>
+            <p>With <a href="/notes/recurrent_neural_networks/">Recurrent neural networks</a>, the continuous dynamical system analogy is very striking. These networks evolve progressively in time by updating an internal state with a fixed <a href="/notes/algorithm/">algorithm</a>. Usually the state dynamics are not studied because the recurrent networks is designed to complete some fixed task.</p>
+            <p>The notion of attractor can be defined for such networks, making them related to the notion of <a href="/notes/attractor_networks/">attractor networks</a>.</p>
+            <h2 id="training-as-a-dynamical-system">Training as a dynamical system</h2>
+            <p>For a neural network with parameters \(\theta\) trained with example pairs \((x_i, y_i)\), the parameters trajectory \(\theta_0, \theta_1, \ldots, \theta_n\) until convergence can be interpreted as the evolution of a dynamical system.</p>
+            <p>One may study the various attractors of that dynamical system and how the training examples affect them.</p>
+            <p>This can be thought of as a sort of <a href="/notes/learning_in_dynamical_systems/">learning in dynamical systems</a>.</p>
+            <h2 id="residual-networks-as-dynamical-systems">Residual networks as dynamical systems</h2>
+            <p><a href="/notes/residual_networks/">Residual neural networks</a> may be seen as discretized dynamical systems. In the limit of small step sizes, it becomes a continuous resnet, we get Neural ordinary differential equations (<a href="#chenNeuralOrdinaryDifferential2019"><cite itemprop="citation" itemscope itemid="key:chenNeuralOrdinaryDifferential2019">Chen et al. 2019</cite></a>).</p>
+            <h2 id="bibliography">Bibliography</h2>
+            <ol class="biblio-list">
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="chenNeuralOrdinaryDifferential2019">
+                <span itemprop="author">Chen, Ricky T. Q., Yulia Rubanova, Jesse Bettencourtand David Duvenaud</span>. <time datetime="2019" itemprop="datePublished">December 13, 2019</time>. "<span itemprop="name">Neural Ordinary Differential Equations</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:1806.07366 [cs, Stat]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/1806.07366">http://arxiv.org/abs/1806.07366</a>.
+              </li>
+            </ol>
+          </div>
+          <div class="note-footer">
+            Last changed <a class="u-url" href="https://hugocisneros.com/notes/neural_networks_as_dynamical_systems/"><time itemprop="datePublished" class="dt-published" datetime="2021-09-30T14:46:00+0200">30/09/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+          </div>
+        </div>
+      </article>
+      <h3>Comments</h3>
+      <script data-isso="//comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="//comment.hugocisneros.com/js/embed.min.js"></script>
+      <section id="isso-thread"></section><br>
+      <a href="/notes#neural_networks_as_dynamical_systems"><b>← Back to Notes</b></a>
+      <hr>
+    </main>
+    <footer class="footer">
+      <ul class="footer-links">
+        <li>
+          <a class="rss-link" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon" src="/img/RSS.svg" alt="RSS feed icon"></a>
+        </li>
+        <li>
+          <a href="https://github.com/hugcis/natrium-custom">Code</a>
+        </li>
+        <li>© Hugo Cisneros 2022</li>
+      </ul>
+    </footer>
+  </div>
+  <link rel="stylesheet" href="/js/katex/katex.min.css">
+  <script src="/js/katex/katex.min.js"></script> 
+  <script src="/js/katex/contrib/auto-render.min.js"></script> 
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        delimiters: [
+            {left: "\\[", right: "\\]", display: true},
+            {left: "$$", right: "$$", display: true},
+            {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+            {left: "$", right: "$", display: false},
+            {left: "\\(", right: "\\)", display: false},
+        ]
+  })
+    });
+  </script>
+</body>
+</html>

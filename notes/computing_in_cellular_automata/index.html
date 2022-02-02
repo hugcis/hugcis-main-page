@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1">
+  <title>Computing in cellular automata - Hugo Cisneros</title>
+  <meta property="og:title" content="Computing in cellular automata - Hugo Cisneros">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="/img/main.jpeg">
+  <meta property="og:url" content="https://hugocisneros.com/notes/computing_in_cellular_automata/">
+  <meta property="og:description" content="Notes about Computing in cellular automata">
+  <meta name="Description" property="description" content="Notes about Computing in cellular automata">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@cisne_hug">
+  <meta name="twitter:creator" content="@cisne_hug">
+  <link rel="stylesheet" href="https://hugocisneros.com/css/main.min.css" media="all" type="text/css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
+  <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <nav class="nav">
+        <div class="nav-main">
+          <a href="https://hugocisneros.com/" class="nav-title">Hugo Cisneros</a>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="/blog/">Blog</a>
+          </li>
+          <li>
+            <a href="/notes/">Notes</a>
+          </li>
+          <li>
+            <a href="/projects/">Projects</a>
+          </li>
+          <li>
+            <a href="/resume/">Resume</a>
+          </li>
+          <li>
+            <a href="/contact/">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="content" role="main">
+      <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="single-note note-container">
+          <h1 class="article-title p-name" itemprop="name">Computing in cellular automata</h1>
+          <div class="article-content e-content p-name" itemprop="articleBody">
+            <dl>
+              <dt>tags</dt>
+              <dd>
+                <a href="/notes/unconventional_computing/">Unconventional computing</a>, <a href="/notes/cellular_automata/">Cellular automata</a>
+              </dd>
+              <dt>resources</dt>
+              <dd>
+                (<a href="#mitchellComputationCellularAutomata2005"><cite itemprop="citation" itemscope itemid="doi:10.1002/3527602968.ch4">Mitchell 2005</cite></a>; <a href="#wolframNewKindScience2002"><cite itemprop="citation" itemscope itemid="key:wolframNewKindScience2002">Wolfram 2002</cite></a>)
+              </dd>
+            </dl>
+            <p><a href="/notes/cellular_automata/">Cellular automata</a> are computational models capable of interesting emergent behavior. A major challenge is to understand which CA rules are doing useful or efficient computations. It is not clear how these systems could be programmed or made to compute a particular function.</p>
+            <h2 id="hand-engineered-ca-rules">Hand-engineered CA rules</h2>
+            <p>Below images show CA rules that can compute non trivial functions (Images are from (<a href="#wolframNewKindScience2002"><cite itemprop="citation" itemscope itemid="key:wolframNewKindScience2002">Wolfram 2002</cite></a>), see <a href="https://www.wolframscience.com/nks/p638--computations-in-cellular-automata/">A new kind of science online</a> ). These examples are nice but likely challenging to produce for complex computations.</p>
+            <p><strong>Binary adder CA rule</strong> <img src="/ox-hugo/bin_ca.jpg" alt=""></p>
+            <p><strong>Square CA rule</strong> <img src="/ox-hugo/square_ca.jpg" alt=""></p>
+            <p><strong>Prime CA rule</strong> (sieve of Eratosthenes) <img src="/ox-hugo/prime_ca.jpg" alt=""></p>
+            <h3 id="hyperbolic-space">Hyperbolic space</h3>
+            <p>A cellular automaton can solve the <a href="/notes/3_sat/">3-SAT</a> problem in polynomial time on a pentagrid — grids of pentagons — in <a href="/notes/hyperbolic_geometry/">hyperbolic space</a> (<a href="#margensternPolynomialSolution3SAT1999"><cite itemprop="citation" itemscope itemid="doi:10.3217/jucs-005-09-0563">Margenstern 1999</cite></a>).</p>
+            <h2 id="evolution-of-ca-rules">Evolution of CA rules</h2>
+            <p>CA rules can also be evolved with <a href="/notes/genetic_algorithm/">Genetic algorithms</a> to perform a particular type of computation. Because it uses a genetic algorithm, this method requires a clear reward/objective function to be effective, which might not be achievable for complex functions were input/output pairs aren’t enough of a signal for finding a solution. (<a href="#packardAdaptationEdgeChaos1988"><cite itemprop="citation" itemscope itemid="key:packardAdaptationEdgeChaos1988">Packard 1988</cite></a>; <a href="#mitchellEvolvingCellularAutomata1997"><cite itemprop="citation" itemscope itemid="doi:10.1887/0750308958/b386c92">Mitchell, Crutchfieldand Das 1997</cite></a>)</p>
+            <h2 id="link-with-reservoir-computing--reservoir-computing-dot-md">Link with <a href="/notes/reservoir_computing/">reservoir computing</a></h2>
+            <p>Computation in cellular automata are difficult to construct and control finely, which is why many have tried to use the <a href="/notes/reservoir_computing/#reservoir-computing-with-cellular-automata">reservoir computing with cellular automata</a> framework to try and discover useful computations in cellular automata.</p>
+            <h2 id="bibliography">Bibliography</h2>
+            <ol class="biblio-list">
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="mitchellComputationCellularAutomata2005" itemid="doi:10.1002/3527602968.ch4">
+                <span itemprop="author">Mitchell, Melanie</span>. <time datetime="2005" itemprop="datePublished">January 24, 2005</time>. "<span itemprop="name">Computation in Cellular Automata: A Selected Review</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Non-standard Computation</i></span>, 95–140. Weinheim, FRG: Wiley-VCH Verlag GmbH & Co. KGaA. <a itemprop="sameAs" href="https://doi.org/10.1002/3527602968.ch4">DOI</a>.
+              </li>
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="wolframNewKindScience2002">
+                <span itemprop="author">Wolfram, Stephen</span>. <time datetime="2002" itemprop="datePublished">2002</time>. <i>A New Kind of Science</i>. Champaign, IL: Wolfram Media. <a itemprop="sameAs" href="https://www.wolframscience.com/nks/">https://www.wolframscience.com/nks/</a>.
+              </li>
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="margensternPolynomialSolution3SAT1999" itemid="doi:10.3217/jucs-005-09-0563">
+                <span itemprop="author">Margenstern, Maurice</span>. <time datetime="1999" itemprop="datePublished">1999</time>. "<span itemprop="name">A Polynomial Solution for 3-SAT in the Space of Cellular Automata in the Hyperbolic Plane.</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">J. UCS</i></span> 5 (9):563–73. <a itemprop="sameAs" href="https://doi.org/10.3217/jucs-005-09-0563">DOI</a>.
+              </li>
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="packardAdaptationEdgeChaos1988"><span itemprop="author">Packard, Norman H.</span>. <time datetime="1988" itemprop="datePublished">1988</time>. "<span itemprop="name">Adaptation Toward the Edge of Chaos</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Dynamic Patterns in Complex Systems</i></span> 212. World Scientific:293.</li>
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="mitchellEvolvingCellularAutomata1997" itemid="doi:10.1887/0750308958/b386c92">
+                <span itemprop="author">Mitchell, Melanie, James P Crutchfieldand Rajarshi Das</span>. <time datetime="1997" itemprop="datePublished">1997</time>. "<span itemprop="name">Evolving Cellular Automata to Perform Computations</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Handbook of Evolutionary Computation</i></span>, edited by Thomas B�ck, David B Fogel, and Zbigniew Michalewicz. IOP Publishing Ltd. <a itemprop="sameAs" href="https://doi.org/10.1887/0750308958/b386c92">DOI</a>.
+              </li>
+            </ol>
+          </div>
+          <div class="note-footer">
+            Last changed <a class="u-url" href="https://hugocisneros.com/notes/computing_in_cellular_automata/"><time itemprop="datePublished" class="dt-published" datetime="2021-09-01T17:30:00+0200">01/09/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+          </div>
+        </div>
+      </article>
+      <h3>Comments</h3>
+      <script data-isso="//comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="//comment.hugocisneros.com/js/embed.min.js"></script>
+      <section id="isso-thread"></section><br>
+      <a href="/notes#computing_in_cellular_automata"><b>← Back to Notes</b></a>
+      <hr>
+    </main>
+    <footer class="footer">
+      <ul class="footer-links">
+        <li>
+          <a class="rss-link" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon" src="/img/RSS.svg" alt="RSS feed icon"></a>
+        </li>
+        <li>
+          <a href="https://github.com/hugcis/natrium-custom">Code</a>
+        </li>
+        <li>© Hugo Cisneros 2022</li>
+      </ul>
+    </footer>
+  </div>
+  <link rel="stylesheet" href="/js/katex/katex.min.css">
+  <script src="/js/katex/katex.min.js"></script> 
+  <script src="/js/katex/contrib/auto-render.min.js"></script> 
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        delimiters: [
+            {left: "\\[", right: "\\]", display: true},
+            {left: "$$", right: "$$", display: true},
+            {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+            {left: "$", right: "$", display: false},
+            {left: "\\(", right: "\\)", display: false},
+        ]
+  })
+    });
+  </script>
+</body>
+</html>

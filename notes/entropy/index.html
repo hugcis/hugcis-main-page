@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1">
+  <title>Entropy - Hugo Cisneros</title>
+  <meta property="og:title" content="Entropy - Hugo Cisneros">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="/img/main.jpeg">
+  <meta property="og:url" content="https://hugocisneros.com/notes/entropy/">
+  <meta property="og:description" content="Notes about Entropy">
+  <meta name="Description" property="description" content="Notes about Entropy">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@cisne_hug">
+  <meta name="twitter:creator" content="@cisne_hug">
+  <link rel="stylesheet" href="https://hugocisneros.com/css/main.min.css" media="all" type="text/css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
+  <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <nav class="nav">
+        <div class="nav-main">
+          <a href="https://hugocisneros.com/" class="nav-title">Hugo Cisneros</a>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="/blog/">Blog</a>
+          </li>
+          <li>
+            <a href="/notes/">Notes</a>
+          </li>
+          <li>
+            <a href="/projects/">Projects</a>
+          </li>
+          <li>
+            <a href="/resume/">Resume</a>
+          </li>
+          <li>
+            <a href="/contact/">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="content" role="main">
+      <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="single-note note-container">
+          <h1 class="article-title p-name" itemprop="name">Entropy</h1>
+          <div class="article-content e-content p-name" itemprop="articleBody">
+            <dl>
+              <dt>tags</dt>
+              <dd>
+                <a href="/notes/complexity_metrics/">Complexity metrics</a>
+              </dd>
+              <dt>references</dt>
+              <dd>
+                (<a href="#shannonMathematicalTheoryCommunication1975"><cite itemprop="citation" itemscope itemid="key:shannonMathematicalTheoryCommunication1975">Shannon and Weaver 1975</cite></a>)
+              </dd>
+            </dl>
+            <p>For a discrete random variable \(X\) with outcomes \(x_i\), \(P(X=x_i) = P_i\), the <strong>entropy</strong> or <strong>uncertainty function</strong> of \(X\) is defined as \[ H(X) = -\sum_{i=1}^{N} P_i \log P_i \]</p>
+            <p>Entropy is always positive, and is maximized when the uncertainty is maximal, that is when \(P_1 = P_2 = … = P_N = \frac{1}{N}\) entropy in that case is \(\log N\).</p>
+            <p>Interpretations:</p>
+            <ul>
+              <li>\(H\) measures uncertainty of a process (or the average number of yes/no answers one needs to specify the value of \(i\)).</li>
+              <li>Average information received by an observer when reading the outcomes of \(X\).</li>
+            </ul>
+            <p>If we encode the random variable \(X\) with an erroneous encoding \(P_i'\), the resulting code length is \(\sum P_i \log \frac{1}{P_i'}\). The difference between this encoding and the optimal encoding is the <a href="/notes/kullback_leibler_divergence/">Kullback-leibler divergence</a>.</p>
+            <h2 id="shannon-entropy-for-a-sequence">Shannon entropy for a sequence</h2>
+            <p>In the case of a sequence of symbols $s_1, …, s_i, …$, following a translation invariant distribution (for any \(n\) and \(k\), \(P(s_1s_2…s_n) = P(s_{1+k}s_{2+k}…s_{n+k})\)).</p>
+            <p>We can define the block entropy of the $n$-tuple random variable \(S=(S_1…S_n)\) like above \[ H_n = \sum_{s_1…s_n} P(s_1…s_n) \log P(s_1…s_n) \]</p>
+            <p>Then, we can define the average length of the description per symbol of the sequence as \[ h =\lim_{n \rightarrow \infty} h_n \] \[ h_n =H_{n+1} - H_n \]</p>
+            <p>\(h\) is called by Shannon the entropy of the source emitting the sequence, or entropy of the sequence.</p>
+            <h2 id="bibliography">Bibliography</h2>
+            <ol class="biblio-list">
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="shannonMathematicalTheoryCommunication1975"><span itemprop="author">Shannon, Claude E.and Warren Weaver</span>. <time datetime="1975" itemprop="datePublished">1975</time>. <i>The Mathematical Theory of Communication</i>. Urbana: University of Illinois Press.</li>
+            </ol>
+          </div>
+          <div class="bl-section">
+            <h2>Links to this note</h2>
+            <div class="backlinks">
+              <ul>
+                <li>
+                  <a href="/notes/arithmetic_coding/">Arithmetic coding</a>
+                </li>
+                <li>
+                  <a href="/notes/boltzmann_brain/">Boltzmann brain</a>
+                </li>
+                <li>
+                  <a href="/notes/complexity_metrics/">Complexity metrics</a>
+                </li>
+                <li>
+                  <a href="/notes/complexity_of_cellular_automata/">Complexity of cellular automata</a>
+                </li>
+                <li>
+                  <a href="/notes/entropy/">Entropy</a>
+                </li>
+                <li>
+                  <a href="/notes/entropy_coding/">Entropy coding</a>
+                </li>
+                <li>
+                  <a href="/notes/evaluating_nlp/">Evaluating NLP</a>
+                </li>
+                <li>
+                  <a href="/notes/huffman_coding/">Huffman coding</a>
+                </li>
+                <li>
+                  <a href="/notes/gershensonemergenceartificiallife2021/">Notes on: Emergence in artificial life by Gershenson, C. (2021)</a>
+                </li>
+                <li>
+                  <a href="/notes/simonarchitecturecomplexity1962/">Notes on: The Architecture of Complexity by Simon, H. A. (1962)</a>
+                </li>
+                <li>
+                  <a href="/notes/krakauerinformationtheoryindividuality2020/">Notes on: The information theory of individuality by Krakauer, D., Bertschinger, N., Olbrich, E., Flack, J. C., & Ay, N. (2020)</a>
+                </li>
+                <li>
+                  <a href="/notes/talk_alife_2020_keynote_lee_cronin_a_top_down_chemically_embodied_artificial_life_computation/">Talk: Alife 2020 keynote Lee Cronin - A Top Down Chemically Embodied Artificial Life Computation</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="note-footer">
+            Last changed <a class="u-url" href="https://hugocisneros.com/notes/entropy/"><time itemprop="datePublished" class="dt-published" datetime="2021-03-25T09:58:00+0100">25/03/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+          </div>
+        </div>
+      </article>
+      <h3>Comments</h3>
+      <script data-isso="//comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="//comment.hugocisneros.com/js/embed.min.js"></script>
+      <section id="isso-thread"></section><br>
+      <a href="/notes#entropy"><b>← Back to Notes</b></a>
+      <hr>
+    </main>
+    <footer class="footer">
+      <ul class="footer-links">
+        <li>
+          <a class="rss-link" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon" src="/img/RSS.svg" alt="RSS feed icon"></a>
+        </li>
+        <li>
+          <a href="https://github.com/hugcis/natrium-custom">Code</a>
+        </li>
+        <li>© Hugo Cisneros 2022</li>
+      </ul>
+    </footer>
+  </div>
+  <link rel="stylesheet" href="/js/katex/katex.min.css">
+  <script src="/js/katex/katex.min.js"></script> 
+  <script src="/js/katex/contrib/auto-render.min.js"></script> 
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        delimiters: [
+            {left: "\\[", right: "\\]", display: true},
+            {left: "$$", right: "$$", display: true},
+            {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+            {left: "$", right: "$", display: false},
+            {left: "\\(", right: "\\)", display: false},
+        ]
+  })
+    });
+  </script>
+</body>
+</html>
