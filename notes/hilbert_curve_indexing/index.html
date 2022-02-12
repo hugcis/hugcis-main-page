@@ -14,7 +14,7 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@cisne_hug">
   <meta name="twitter:creator" content="@cisne_hug">
-  <link rel="stylesheet" href="https://hugocisneros.com/css/main.min.css" media="all" type="text/css">
+  <link rel="stylesheet" href="https://hugocisneros.com/main.min.css" media="all" type="text/css">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -65,44 +65,44 @@
             <p>{{&lt; img src="/img/hilbertcurve.jpg" title=“Hilbert curve with different number of iterations” width=600 alt=“Hilbert curve with different number of iterations” class=“center” &gt;}}</p>
             <p>C implementation from <a href="https://en.wikipedia.org/wiki/Hilbert%5Fcurve#Applications%5Fand%5Fmapping%5Falgorithms">Wikipedia</a> to convert <code>(x,y)</code> coordinates to linear ones and vice versa:</p>
             <div class="highlight">
-              <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#999;font-style:italic">//convert (x,y) to d
-</span><span style="color:#6ab825;font-weight:bold">int</span> <span style="color:#447fcf">xy2d</span> (<span style="color:#6ab825;font-weight:bold">int</span> n, <span style="color:#6ab825;font-weight:bold">int</span> x, <span style="color:#6ab825;font-weight:bold">int</span> y) {
-    <span style="color:#6ab825;font-weight:bold">int</span> rx, ry, s, d=<span style="color:#3677a9">0</span>;
-    <span style="color:#6ab825;font-weight:bold">for</span> (s=n/<span style="color:#3677a9">2</span>; s&gt;<span style="color:#3677a9">0</span>; s/=<span style="color:#3677a9">2</span>) {
-        rx = (x & s) &gt; <span style="color:#3677a9">0</span>;
-        ry = (y & s) &gt; <span style="color:#3677a9">0</span>;
-        d += s * s * ((<span style="color:#3677a9">3</span> * rx) ^ ry);
-        rot(n, &amp;x, &amp;y, rx, ry);
+              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#586e75">//convert (x,y) to d
+</span><span style="color:#dc322f">int</span> <span style="color:#268bd2">xy2d</span> (<span style="color:#dc322f">int</span> n, <span style="color:#dc322f">int</span> x, <span style="color:#dc322f">int</span> y) {
+    <span style="color:#dc322f">int</span> rx, ry, s, d<span style="color:#719e07">=</span><span style="color:#2aa198">0</span>;
+    <span style="color:#719e07">for</span> (s<span style="color:#719e07">=</span>n<span style="color:#719e07">/</span><span style="color:#2aa198">2</span>; s<span style="color:#719e07">&gt;</span><span style="color:#2aa198">0</span>; s<span style="color:#719e07">/=</span><span style="color:#2aa198">2</span>) {
+        rx <span style="color:#719e07">=</span> (x <span style="color:#719e07">&</span> s) <span style="color:#719e07">&gt;</span> <span style="color:#2aa198">0</span>;
+        ry <span style="color:#719e07">=</span> (y <span style="color:#719e07">&</span> s) <span style="color:#719e07">&gt;</span> <span style="color:#2aa198">0</span>;
+        d <span style="color:#719e07">+=</span> s <span style="color:#719e07">*</span> s <span style="color:#719e07">*</span> ((<span style="color:#2aa198">3</span> <span style="color:#719e07">*</span> rx) <span style="color:#719e07">^</span> ry);
+        rot(n, <span style="color:#719e07">&</span>x, <span style="color:#719e07">&</span>y, rx, ry);
     }
-    <span style="color:#6ab825;font-weight:bold">return</span> d;
+    <span style="color:#719e07">return</span> d;
 }
 
-<span style="color:#999;font-style:italic">//convert d to (x,y)
-</span><span style="color:#6ab825;font-weight:bold">void</span> <span style="color:#447fcf">d2xy</span>(<span style="color:#6ab825;font-weight:bold">int</span> n, <span style="color:#6ab825;font-weight:bold">int</span> d, <span style="color:#6ab825;font-weight:bold">int</span> *x, <span style="color:#6ab825;font-weight:bold">int</span> *y) {
-    <span style="color:#6ab825;font-weight:bold">int</span> rx, ry, s, t=d;
-    *x = *y = <span style="color:#3677a9">0</span>;
-    <span style="color:#6ab825;font-weight:bold">for</span> (s=<span style="color:#3677a9">1</span>; s&lt;n; s*=<span style="color:#3677a9">2</span>) {
-        rx = <span style="color:#3677a9">1</span> & (t/<span style="color:#3677a9">2</span>);
-        ry = <span style="color:#3677a9">1</span> & (t ^ rx);
+<span style="color:#586e75">//convert d to (x,y)
+</span><span style="color:#dc322f">void</span> <span style="color:#268bd2">d2xy</span>(<span style="color:#dc322f">int</span> n, <span style="color:#dc322f">int</span> d, <span style="color:#dc322f">int</span> <span style="color:#719e07">*</span>x, <span style="color:#dc322f">int</span> <span style="color:#719e07">*</span>y) {
+    <span style="color:#dc322f">int</span> rx, ry, s, t<span style="color:#719e07">=</span>d;
+    <span style="color:#719e07">*</span>x <span style="color:#719e07">=</span> <span style="color:#719e07">*</span>y <span style="color:#719e07">=</span> <span style="color:#2aa198">0</span>;
+    <span style="color:#719e07">for</span> (s<span style="color:#719e07">=</span><span style="color:#2aa198">1</span>; s<span style="color:#719e07">&lt;</span>n; s<span style="color:#719e07">*=</span><span style="color:#2aa198">2</span>) {
+        rx <span style="color:#719e07">=</span> <span style="color:#2aa198">1</span> <span style="color:#719e07">&</span> (t<span style="color:#719e07">/</span><span style="color:#2aa198">2</span>);
+        ry <span style="color:#719e07">=</span> <span style="color:#2aa198">1</span> <span style="color:#719e07">&</span> (t <span style="color:#719e07">^</span> rx);
         rot(s, x, y, rx, ry);
-        *x += s * rx;
-        *y += s * ry;
-        t /= <span style="color:#3677a9">4</span>;
+        <span style="color:#719e07">*</span>x <span style="color:#719e07">+=</span> s <span style="color:#719e07">*</span> rx;
+        <span style="color:#719e07">*</span>y <span style="color:#719e07">+=</span> s <span style="color:#719e07">*</span> ry;
+        t <span style="color:#719e07">/=</span> <span style="color:#2aa198">4</span>;
     }
 }
 
-<span style="color:#999;font-style:italic">//rotate/flip a quadrant appropriately
-</span><span style="color:#6ab825;font-weight:bold">void</span> <span style="color:#447fcf">rot</span>(<span style="color:#6ab825;font-weight:bold">int</span> n, <span style="color:#6ab825;font-weight:bold">int</span> *x, <span style="color:#6ab825;font-weight:bold">int</span> *y, <span style="color:#6ab825;font-weight:bold">int</span> rx, <span style="color:#6ab825;font-weight:bold">int</span> ry) {
-    <span style="color:#6ab825;font-weight:bold">if</span> (ry == <span style="color:#3677a9">0</span>) {
-        <span style="color:#6ab825;font-weight:bold">if</span> (rx == <span style="color:#3677a9">1</span>) {
-            *x = n-<span style="color:#3677a9">1</span> - *x;
-            *y = n-<span style="color:#3677a9">1</span> - *y;
+<span style="color:#586e75">//rotate/flip a quadrant appropriately
+</span><span style="color:#dc322f">void</span> <span style="color:#268bd2">rot</span>(<span style="color:#dc322f">int</span> n, <span style="color:#dc322f">int</span> <span style="color:#719e07">*</span>x, <span style="color:#dc322f">int</span> <span style="color:#719e07">*</span>y, <span style="color:#dc322f">int</span> rx, <span style="color:#dc322f">int</span> ry) {
+    <span style="color:#719e07">if</span> (ry <span style="color:#719e07">==</span> <span style="color:#2aa198">0</span>) {
+        <span style="color:#719e07">if</span> (rx <span style="color:#719e07">==</span> <span style="color:#2aa198">1</span>) {
+            <span style="color:#719e07">*</span>x <span style="color:#719e07">=</span> n<span style="color:#719e07">-</span><span style="color:#2aa198">1</span> <span style="color:#719e07">-</span> <span style="color:#719e07">*</span>x;
+            <span style="color:#719e07">*</span>y <span style="color:#719e07">=</span> n<span style="color:#719e07">-</span><span style="color:#2aa198">1</span> <span style="color:#719e07">-</span> <span style="color:#719e07">*</span>y;
         }
 
-        <span style="color:#999;font-style:italic">//Swap x and y
-</span>        <span style="color:#6ab825;font-weight:bold">int</span> t  = *x;
-        *x = *y;
-        *y = t;
+        <span style="color:#586e75">//Swap x and y
+</span>        <span style="color:#dc322f">int</span> t  <span style="color:#719e07">=</span> <span style="color:#719e07">*</span>x;
+        <span style="color:#719e07">*</span>x <span style="color:#719e07">=</span> <span style="color:#719e07">*</span>y;
+        <span style="color:#719e07">*</span>y <span style="color:#719e07">=</span> t;
     }
 }
 </code></pre>
@@ -125,7 +125,7 @@
           <a class="rss-link" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon" src="/img/RSS.svg" alt="RSS feed icon"></a>
         </li>
         <li>
-          <a href="https://github.com/hugcis/natrium-custom">Code</a>
+          <a href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
         </li>
         <li>© Hugo Cisneros 2022</li>
       </ul>

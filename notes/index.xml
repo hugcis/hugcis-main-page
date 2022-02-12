@@ -6,7 +6,17 @@
     <description>Recent content in Notes on Hugo Cisneros</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 02 Feb 2022 09:05:00 +0100</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 06 Feb 2022 13:49:00 +0100</lastBuildDate><atom:link href="https://hugocisneros.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Continual learning</title>
+      <link>https://hugocisneros.com/notes/continual_learning/</link>
+      <pubDate>Sun, 06 Feb 2022 13:49:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/continual_learning/</guid>
+      <description>tags Machine learning  Continual learning is a type of supervised learning where there is no &amp;ldquo;testing phase&amp;rdquo; associated to a decision process. Instead, training samples keep being processed by the algorithm which has to simultaneously make predictions and keep learning.
+This is challenging for a fixed neural network architecture since it has a fixed capacity and is bound to either forget things or be unable to learn anything new.</description>
+    </item>
+    
     <item>
       <title>Cellular automata</title>
       <link>https://hugocisneros.com/notes/cellular_automata/</link>
@@ -238,16 +248,6 @@ This isn&amp;rsquo;t surprising since models are following a loss function that 
       <description>tags Cellular automata resources (Gardner 1970)  It is one of the most famous Cellular automata rule, invented as a game by mathematician John Conway.
 Learn the game of life with a neural network This paper investigates how hard it is for neural networks to approximate the Game of Life rule (Springer and Kenyon 2020).
 Bibliography Gardner, Martin. October 1970. &#34;Mathematical Games&#34;. Scientific American 223 (4):120–23. DOI. Springer, Jacob M.</description>
-    </item>
-    
-    <item>
-      <title>Continual learning</title>
-      <link>https://hugocisneros.com/notes/continual_learning/</link>
-      <pubDate>Fri, 15 Oct 2021 15:18:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/continual_learning/</guid>
-      <description>tags Machine learning  Continual learning is a type of supervised learning where there is no &amp;ldquo;testing phase&amp;rdquo; associated to a decision process. Instead, training samples keep being processed by the algorithm which has to simultaneously make predictions and keep learning.
-This is challenging for a fixed neural network architecture since it has a fixed capacity and is bound to either forget things or be unable to learn anything new.</description>
     </item>
     
     <item>

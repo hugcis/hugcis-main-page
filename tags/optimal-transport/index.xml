@@ -8,17 +8,6 @@
     <language>en-us</language>
     <lastBuildDate>Sat, 07 Dec 2019 23:20:20 +0100</lastBuildDate><atom:link href="https://hugocisneros.com/tags/optimal-transport/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>The Elegance of Optimal Transport</title>
-      <link>https://hugocisneros.com/blog/the-elegance-of-optimal-transport/</link>
-      <pubDate>Sat, 07 Dec 2019 23:20:20 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/blog/the-elegance-of-optimal-transport/</guid>
-      <description>This post was largely inspired by Gabriel Peyré and Marco Cuturi&amp;rsquo;s excellent book about Computational Optimal Transport, which is free, (arXiv link, ref: [1]).
-A simple problem? Let&amp;rsquo;s start at the beginning: what is Optimal transport (OT)?
-It all begins with Gaspard Monge, reading his mémoire [2] in front of eminent scientists and engineers of the time &amp;mdash; including famous Enlightenment philosopher Condorcet &amp;mdash; at the French Académie Royale des Sciences in 1776.</description>
-    </item>
-    
-    <item>
       <title>Stochastic optimization for large scale optimal transport</title>
       <link>https://hugocisneros.com/projects/stochastic_optimization_for_large_scale_optimal_transport/</link>
       <pubDate>Mon, 07 Jan 2019 12:00:00 +0000</pubDate>
@@ -30,6 +19,17 @@ It all begins with Gaspard Monge, reading his mémoire [2] in front of eminent s
 &lt;li&gt;&lt;a href=&#34;https://hugocisneros.com/pdf/Cisneros_report_Stochastic_OT.pdf&#34;&gt;PDF project report&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/hugcis/large-scale-optimal-transport&#34;&gt;Github&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>The Elegance of Optimal Transport</title>
+      <link>https://hugocisneros.com/blog/the-elegance-of-optimal-transport/</link>
+      <pubDate>Sat, 07 Dec 2019 23:20:20 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/blog/the-elegance-of-optimal-transport/</guid>
+      <description>This post was largely inspired by Gabriel Peyré and Marco Cuturi&amp;rsquo;s excellent book about Computational Optimal Transport, which is free, (arXiv link, ref: [1]).
+A simple problem? Let&amp;rsquo;s start at the beginning: what is Optimal transport (OT)?
+It all begins with Gaspard Monge, reading his mémoire [2] in front of eminent scientists and engineers of the time &amp;mdash; including famous Enlightenment philosopher Condorcet &amp;mdash; at the French Académie Royale des Sciences in 1776.</description>
     </item>
     
     <item>

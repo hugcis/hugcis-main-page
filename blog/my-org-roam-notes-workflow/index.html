@@ -15,7 +15,7 @@
   <meta name="twitter:site" content="@cisne_hug">
   <meta name="twitter:creator" content="@cisne_hug">
   <meta property="keywords" content="emacs, org-roam, org-mode, web, notes, org, org roam">
-  <link rel="stylesheet" href="https://hugocisneros.com/css/main.min.css" media="all" type="text/css">
+  <link rel="stylesheet" href="https://hugocisneros.com/main.min.css" media="all" type="text/css">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -90,23 +90,23 @@
           <p>There are plenty of different techniques for taking notes with a tool like this, but I don’t follow any particular one.</p>
           <p>This is what an org-roam note looks like as raw source (Emacs makes this much prettier in practice):</p>
           <div class="highlight">
-            <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-org" data-lang="org"><span style="color:#999;font-style:italic">:PROPERTIES:
-</span><span style="color:#e50808;background-color:#520000;font-weight:bold">:ID:       9fd080fa-a9a1-4d85-a6bf-682b41a67b72
-</span><span style="color:#e50808;background-color:#520000;font-weight:bold">:ROAM_ALIASES: "ML"
-</span><span style="color:#999;font-style:italic">:END:</span>
-<span style="color:#e50808;background-color:#520000;font-weight:bold">#+TITLE</span><span style="color:#999;font-style:italic">: Machine learning</span>
+            <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-org" data-lang="org"><span style="color:#586e75">:PROPERTIES:
+</span><span style="color:#719e07">:ID:       9fd080fa-a9a1-4d85-a6bf-682b41a67b72
+</span><span style="color:#719e07">:ROAM_ALIASES: "ML"
+</span><span style="color:#586e75">:END:</span>
+<span style="color:#719e07">#+TITLE</span><span style="color:#586e75">: Machine learning</span>
 
-<span style="color:#6ab825;font-weight:bold">- tags ::</span> [[<span style="color:#bbb">id:1b23dc1d-c276-4f95-866a-ad8e37dd544f</span>][<span style="color:#6ab825;font-weight:bold">Artificial Intelligence</span>]]
+<span style="color:#719e07">- tags ::</span> [[id:1b23dc1d-c276-4f95-866a-ad8e37dd544f][<span style="color:#268bd2">Artificial Intelligence</span>]]
 
 Machine learning is about constructing algorithms that can approximate complex
 functions from observations of input/output pairs. Machine learning is related to
-[[<span style="color:#bbb">id:ce8b2ebe-f42e-4e4b-b0af-2a4563ef9fc0</span>][<span style="color:#6ab825;font-weight:bold">Statistics</span>]] since its goal is to make 
+[[id:ce8b2ebe-f42e-4e4b-b0af-2a4563ef9fc0][<span style="color:#268bd2">Statistics</span>]] since its goal is to make 
 predictions based on data.
 
 Examples of such functions include:
-<span style="color:#6ab825;font-weight:bold">- </span>[[<span style="color:#bbb">id:33ebc467-8c6c-43bc-b8b4-ba1971c75a37</span>][<span style="color:#6ab825;font-weight:bold">Image classification</span>]]
-<span style="color:#6ab825;font-weight:bold">- </span>Time-series prediction
-<span style="color:#6ab825;font-weight:bold">- </span>[[<span style="color:#bbb">id:e72f23c2-d3a7-47df-87a6-5de09f820ecf</span>][<span style="color:#6ab825;font-weight:bold">Language modeling</span>]]
+<span style="color:#719e07">- </span>[[id:33ebc467-8c6c-43bc-b8b4-ba1971c75a37][<span style="color:#268bd2">Image classification</span>]]
+<span style="color:#719e07">- </span>Time-series prediction
+<span style="color:#719e07">- </span>[[id:e72f23c2-d3a7-47df-87a6-5de09f820ecf][<span style="color:#268bd2">Language modeling</span>]]
 </code></pre>
           </div>
           <p>The first 5 lines are a header containing the title of the note, an alias (an alternative name I can use to search for the note within org-roam) and an ID (automatically generated with <code>org-id</code>).</p>
@@ -137,38 +137,38 @@ Examples of such functions include:
           <p>My org-roam database is at <code>~/.emacs.d/org-roam.db</code>. Here is the code that extracts all the information to build my note graph from the DB with 2 SQL queries and constructs a Python graph with the networkx library.</p>
           <p>SQL experts might scream at this.. these queries were the first that came to mind but there might be a better way of doing this! I’m dealing with small databases so performance isn’t a problem.</p>
           <div class="highlight">
-            <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">networkx</span> <span style="color:#6ab825;font-weight:bold">as</span> <span style="color:#447fcf;text-decoration:underline">nx</span>
-<span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">pathlib</span>
-<span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">sqlite3</span>
+            <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#719e07">import</span> networkx <span style="color:#719e07">as</span> nx
+<span style="color:#719e07">import</span> pathlib
+<span style="color:#719e07">import</span> sqlite3
 
 
-<span style="color:#6ab825;font-weight:bold">def</span> <span style="color:#447fcf">to_rellink</span>(inp: <span style="color:#24909d">str</span>) -&gt; <span style="color:#24909d">str</span>:
-    <span style="color:#6ab825;font-weight:bold">return</span> pathlib.Path(inp).stem
+<span style="color:#719e07">def</span> <span style="color:#268bd2">to_rellink</span>(inp: <span style="color:#b58900">str</span>) <span style="color:#719e07">-&gt;</span> <span style="color:#b58900">str</span>:
+    <span style="color:#719e07">return</span> pathlib<span style="color:#719e07">.</span>Path(inp)<span style="color:#719e07">.</span>stem
 
 
-<span style="color:#6ab825;font-weight:bold">def</span> <span style="color:#447fcf">build_graph</span>() -&gt; nx.Digraph:
-    <span style="color:#ed9d13">"""Build a graph from the org-roam database."""</span>
-    graph = nx.DiGraph()
-    home = pathlib.Path.home()
-    conn = sqlite3.connect(home / <span style="color:#ed9d13">".emacs.d"</span> / <span style="color:#ed9d13">"org-roam.db"</span>)
+<span style="color:#719e07">def</span> <span style="color:#268bd2">build_graph</span>() <span style="color:#719e07">-&gt;</span> nx<span style="color:#719e07">.</span>Digraph:
+    <span style="color:#2aa198">"""Build a graph from the org-roam database."""</span>
+    graph <span style="color:#719e07">=</span> nx<span style="color:#719e07">.</span>DiGraph()
+    home <span style="color:#719e07">=</span> pathlib<span style="color:#719e07">.</span>Path<span style="color:#719e07">.</span>home()
+    conn <span style="color:#719e07">=</span> sqlite3<span style="color:#719e07">.</span>connect(home <span style="color:#719e07">/</span> <span style="color:#2aa198">".emacs.d"</span> <span style="color:#719e07">/</span> <span style="color:#2aa198">"org-roam.db"</span>)
 
-    <span style="color:#999;font-style:italic"># Query all nodes first</span>
-    nodes = conn.execute(<span style="color:#ed9d13">"SELECT file, id, title FROM nodes WHERE level = 0;"</span>)
-    <span style="color:#999;font-style:italic"># A double JOIN to get all nodes that are connected by a link</span>
-    links = conn.execute(<span style="color:#ed9d13">"SELECT n1.id, nodes.id FROM ((nodes AS n1) "</span>
-                         <span style="color:#ed9d13">"JOIN links ON n1.id = links.source) "</span>
-                         <span style="color:#ed9d13">"JOIN (nodes AS n2) ON links.dest = nodes.id "</span>
-                         <span style="color:#ed9d13">"WHERE links.type = '</span><span style="color:#ed9d13">\"</span><span style="color:#ed9d13">id</span><span style="color:#ed9d13">\"</span><span style="color:#ed9d13">';"</span>)
-    <span style="color:#999;font-style:italic"># Populate the graph</span>
-    graph.add_nodes_from((n[<span style="color:#3677a9">1</span>], {
-        <span style="color:#ed9d13">"label"</span>: n[<span style="color:#3677a9">2</span>].strip(<span style="color:#ed9d13">"</span><span style="color:#ed9d13">\"</span><span style="color:#ed9d13">"</span>),
-        <span style="color:#ed9d13">"tooltip"</span>: n[<span style="color:#3677a9">2</span>].strip(<span style="color:#ed9d13">"</span><span style="color:#ed9d13">\"</span><span style="color:#ed9d13">"</span>),
-        <span style="color:#ed9d13">"lnk"</span>: to_rellink(n[<span style="color:#3677a9">0</span>]).lower(),
-        <span style="color:#ed9d13">"id"</span>: n[<span style="color:#3677a9">1</span>].strip(<span style="color:#ed9d13">"</span><span style="color:#ed9d13">\"</span><span style="color:#ed9d13">"</span>)
-    }) <span style="color:#6ab825;font-weight:bold">for</span> n <span style="color:#6ab825;font-weight:bold">in</span>  nodes)
-    graph.add_edges_from(n <span style="color:#6ab825;font-weight:bold">for</span> n <span style="color:#6ab825;font-weight:bold">in</span> links <span style="color:#6ab825;font-weight:bold">if</span> n[<span style="color:#3677a9">0</span>] <span style="color:#6ab825;font-weight:bold">in</span> graph.nodes <span style="color:#6ab825;font-weight:bold">and</span> n[<span style="color:#3677a9">1</span>] <span style="color:#6ab825;font-weight:bold">in</span> graph.nodes)
-    conn.close()
-    <span style="color:#6ab825;font-weight:bold">return</span> graph
+    <span style="color:#586e75"># Query all nodes first</span>
+    nodes <span style="color:#719e07">=</span> conn<span style="color:#719e07">.</span>execute(<span style="color:#2aa198">"SELECT file, id, title FROM nodes WHERE level = 0;"</span>)
+    <span style="color:#586e75"># A double JOIN to get all nodes that are connected by a link</span>
+    links <span style="color:#719e07">=</span> conn<span style="color:#719e07">.</span>execute(<span style="color:#2aa198">"SELECT n1.id, nodes.id FROM ((nodes AS n1) "</span>
+                         <span style="color:#2aa198">"JOIN links ON n1.id = links.source) "</span>
+                         <span style="color:#2aa198">"JOIN (nodes AS n2) ON links.dest = nodes.id "</span>
+                         <span style="color:#2aa198">"WHERE links.type = '</span><span style="color:#cb4b16">\"</span><span style="color:#2aa198">id</span><span style="color:#cb4b16">\"</span><span style="color:#2aa198">';"</span>)
+    <span style="color:#586e75"># Populate the graph</span>
+    graph<span style="color:#719e07">.</span>add_nodes_from((n[<span style="color:#2aa198">1</span>], {
+        <span style="color:#2aa198">"label"</span>: n[<span style="color:#2aa198">2</span>]<span style="color:#719e07">.</span>strip(<span style="color:#2aa198">"</span><span style="color:#cb4b16">\"</span><span style="color:#2aa198">"</span>),
+        <span style="color:#2aa198">"tooltip"</span>: n[<span style="color:#2aa198">2</span>]<span style="color:#719e07">.</span>strip(<span style="color:#2aa198">"</span><span style="color:#cb4b16">\"</span><span style="color:#2aa198">"</span>),
+        <span style="color:#2aa198">"lnk"</span>: to_rellink(n[<span style="color:#2aa198">0</span>])<span style="color:#719e07">.</span>lower(),
+        <span style="color:#2aa198">"id"</span>: n[<span style="color:#2aa198">1</span>]<span style="color:#719e07">.</span>strip(<span style="color:#2aa198">"</span><span style="color:#cb4b16">\"</span><span style="color:#2aa198">"</span>)
+    }) <span style="color:#719e07">for</span> n <span style="color:#719e07">in</span>  nodes)
+    graph<span style="color:#719e07">.</span>add_edges_from(n <span style="color:#719e07">for</span> n <span style="color:#719e07">in</span> links <span style="color:#719e07">if</span> n[<span style="color:#2aa198">0</span>] <span style="color:#719e07">in</span> graph<span style="color:#719e07">.</span>nodes <span style="color:#719e07">and</span> n[<span style="color:#2aa198">1</span>] <span style="color:#719e07">in</span> graph<span style="color:#719e07">.</span>nodes)
+    conn<span style="color:#719e07">.</span>close()
+    <span style="color:#719e07">return</span> graph
 </code></pre>
           </div>
           <h3 id="some-graph-analysis">Some graph analysis</h3>
@@ -180,107 +180,107 @@ Examples of such functions include:
             </li>
           </ul>
           <div class="highlight">
-            <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">itertools</span>
-<span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">json</span>
-<span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">sys</span>
+            <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#719e07">import</span> itertools
+<span style="color:#719e07">import</span> json
+<span style="color:#719e07">import</span> sys
 
-<span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">networkx</span> <span style="color:#6ab825;font-weight:bold">as</span> <span style="color:#447fcf;text-decoration:underline">nx</span>
-<span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">networkx.algorithms.link_analysis.pagerank_alg</span> <span style="color:#6ab825;font-weight:bold">as</span> <span style="color:#447fcf;text-decoration:underline">pag</span>
-<span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">networkx.algorithms.community</span> <span style="color:#6ab825;font-weight:bold">as</span> <span style="color:#447fcf;text-decoration:underline">com</span>
-<span style="color:#6ab825;font-weight:bold">from</span> <span style="color:#447fcf;text-decoration:underline">networkx.drawing.nx_pydot</span> <span style="color:#6ab825;font-weight:bold">import</span> read_dot
-<span style="color:#6ab825;font-weight:bold">from</span> <span style="color:#447fcf;text-decoration:underline">networkx.readwrite</span> <span style="color:#6ab825;font-weight:bold">import</span> json_graph
+<span style="color:#719e07">import</span> networkx <span style="color:#719e07">as</span> nx
+<span style="color:#719e07">import</span> networkx.algorithms.link_analysis.pagerank_alg <span style="color:#719e07">as</span> pag
+<span style="color:#719e07">import</span> networkx.algorithms.community <span style="color:#719e07">as</span> com
+<span style="color:#719e07">from</span> networkx.drawing.nx_pydot <span style="color:#719e07">import</span> read_dot
+<span style="color:#719e07">from</span> networkx.readwrite <span style="color:#719e07">import</span> json_graph
 
-<span style="color:#6ab825;font-weight:bold">from</span> <span style="color:#447fcf;text-decoration:underline">build_graph_from_org_roam_db</span> <span style="color:#6ab825;font-weight:bold">import</span> build_graph
+<span style="color:#719e07">from</span> build_graph_from_org_roam_db <span style="color:#719e07">import</span> build_graph
 
-N_COM = <span style="color:#3677a9">7</span>  <span style="color:#999;font-style:italic"># Desired number of communities</span>
-N_MISSING = <span style="color:#3677a9">20</span>  <span style="color:#999;font-style:italic"># Number of predicted missing links</span>
-MAX_NODES = <span style="color:#3677a9">200</span>  <span style="color:#999;font-style:italic"># Number of nodes in the final graph </span>
+N_COM <span style="color:#719e07">=</span> <span style="color:#2aa198">7</span>  <span style="color:#586e75"># Desired number of communities</span>
+N_MISSING <span style="color:#719e07">=</span> <span style="color:#2aa198">20</span>  <span style="color:#586e75"># Number of predicted missing links</span>
+MAX_NODES <span style="color:#719e07">=</span> <span style="color:#2aa198">200</span>  <span style="color:#586e75"># Number of nodes in the final graph </span>
 
-<span style="color:#6ab825;font-weight:bold">def</span> <span style="color:#447fcf">compute_centrality</span>(dot_graph: nx.DiGraph) -&gt; <span style="color:#6ab825;font-weight:bold">None</span>:
-    <span style="color:#ed9d13">"""Add a `centrality` attribute to each node with its PageRank score.
-</span><span style="color:#ed9d13">    """</span>
-    simp_graph = nx.Graph(dot_graph)
-    central = pag.pagerank(simp_graph)
-    min_cent = <span style="color:#24909d">min</span>(central.values())
-    central = {i: central[i] - min_cent <span style="color:#6ab825;font-weight:bold">for</span> i <span style="color:#6ab825;font-weight:bold">in</span> central}
-    max_cent = <span style="color:#24909d">max</span>(central.values())
-    central = {i: central[i] / max_cent <span style="color:#6ab825;font-weight:bold">for</span> i <span style="color:#6ab825;font-weight:bold">in</span> central}
-    nx.set_node_attributes(dot_graph, central, <span style="color:#ed9d13">"centrality"</span>)
-    sorted_cent = <span style="color:#24909d">sorted</span>(dot_graph, key=<span style="color:#6ab825;font-weight:bold">lambda</span> x: dot_graph.nodes[x][<span style="color:#ed9d13">"centrality"</span>])
-    <span style="color:#6ab825;font-weight:bold">for</span> n <span style="color:#6ab825;font-weight:bold">in</span> sorted_cent[:-MAX_NODES]:
-        dot_graph.remove_node(n)
-
-
-<span style="color:#6ab825;font-weight:bold">def</span> <span style="color:#447fcf">compute_communities</span>(dot_graph: nx.DiGraph, n_com: <span style="color:#24909d">int</span>) -&gt; <span style="color:#6ab825;font-weight:bold">None</span>:
-    <span style="color:#ed9d13">"""Add a `communityLabel` attribute to each node according to their
-</span><span style="color:#ed9d13">    computed community.
-</span><span style="color:#ed9d13">    """</span>
-    simp_graph = nx.Graph(dot_graph)
-    communities = com.girvan_newman(simp_graph)
-    labels = [<span style="color:#24909d">tuple</span>(<span style="color:#24909d">sorted</span>(c) <span style="color:#6ab825;font-weight:bold">for</span> c <span style="color:#6ab825;font-weight:bold">in</span> unities) <span style="color:#6ab825;font-weight:bold">for</span> unities <span style="color:#6ab825;font-weight:bold">in</span>
-              itertools.islice(communities, n_com - <span style="color:#3677a9">1</span>, n_com)][<span style="color:#3677a9">0</span>]
-    label_dict = {l_key: i <span style="color:#6ab825;font-weight:bold">for</span> i <span style="color:#6ab825;font-weight:bold">in</span> <span style="color:#24909d">range</span>(<span style="color:#24909d">len</span>(labels)) <span style="color:#6ab825;font-weight:bold">for</span> l_key <span style="color:#6ab825;font-weight:bold">in</span> labels[i]}
-    nx.set_node_attributes(dot_graph, label_dict, <span style="color:#ed9d13">"communityLabel"</span>)
+<span style="color:#719e07">def</span> <span style="color:#268bd2">compute_centrality</span>(dot_graph: nx<span style="color:#719e07">.</span>DiGraph) <span style="color:#719e07">-&gt;</span> <span style="color:#cb4b16">None</span>:
+    <span style="color:#2aa198">"""Add a `centrality` attribute to each node with its PageRank score.
+</span><span style="color:#2aa198">    """</span>
+    simp_graph <span style="color:#719e07">=</span> nx<span style="color:#719e07">.</span>Graph(dot_graph)
+    central <span style="color:#719e07">=</span> pag<span style="color:#719e07">.</span>pagerank(simp_graph)
+    min_cent <span style="color:#719e07">=</span> <span style="color:#b58900">min</span>(central<span style="color:#719e07">.</span>values())
+    central <span style="color:#719e07">=</span> {i: central[i] <span style="color:#719e07">-</span> min_cent <span style="color:#719e07">for</span> i <span style="color:#719e07">in</span> central}
+    max_cent <span style="color:#719e07">=</span> <span style="color:#b58900">max</span>(central<span style="color:#719e07">.</span>values())
+    central <span style="color:#719e07">=</span> {i: central[i] <span style="color:#719e07">/</span> max_cent <span style="color:#719e07">for</span> i <span style="color:#719e07">in</span> central}
+    nx<span style="color:#719e07">.</span>set_node_attributes(dot_graph, central, <span style="color:#2aa198">"centrality"</span>)
+    sorted_cent <span style="color:#719e07">=</span> <span style="color:#b58900">sorted</span>(dot_graph, key<span style="color:#719e07">=</span><span style="color:#719e07">lambda</span> x: dot_graph<span style="color:#719e07">.</span>nodes[x][<span style="color:#2aa198">"centrality"</span>])
+    <span style="color:#719e07">for</span> n <span style="color:#719e07">in</span> sorted_cent[:<span style="color:#719e07">-</span>MAX_NODES]:
+        dot_graph<span style="color:#719e07">.</span>remove_node(n)
 
 
-<span style="color:#6ab825;font-weight:bold">def</span> <span style="color:#447fcf">add_missing_links</span>(dot_graph: nx.DiGraph, n_missing: <span style="color:#24909d">int</span>) -&gt; <span style="color:#6ab825;font-weight:bold">None</span>:
-    <span style="color:#ed9d13">"""Add some missing links to the graph by using top ranking inexisting
-</span><span style="color:#ed9d13">    links by ressource allocation index.
-</span><span style="color:#ed9d13">    """</span>
-    simp_graph = nx.Graph(dot_graph)
-    preds = nx.ra_index_soundarajan_hopcroft(simp_graph, community=<span style="color:#ed9d13">"communityLabel"</span>)
-    new = <span style="color:#24909d">sorted</span>(preds, key=<span style="color:#6ab825;font-weight:bold">lambda</span> x: -x[<span style="color:#3677a9">2</span>])[:n_missing]
-    <span style="color:#6ab825;font-weight:bold">for</span> link <span style="color:#6ab825;font-weight:bold">in</span> new:
-        sys.stderr.write(<span style="color:#ed9d13">f</span><span style="color:#ed9d13">"Predicted edge </span><span style="color:#ed9d13">{</span>link[<span style="color:#3677a9">0</span>]<span style="color:#ed9d13">}</span><span style="color:#ed9d13"> </span><span style="color:#ed9d13">{</span>link[<span style="color:#3677a9">1</span>]<span style="color:#ed9d13">}</span><span style="color:#ed9d13">\n</span><span style="color:#ed9d13">"</span>)
-        dot_graph.add_edge(link[<span style="color:#3677a9">0</span>], link[<span style="color:#3677a9">1</span>], predicted=link[<span style="color:#3677a9">2</span>])
+<span style="color:#719e07">def</span> <span style="color:#268bd2">compute_communities</span>(dot_graph: nx<span style="color:#719e07">.</span>DiGraph, n_com: <span style="color:#b58900">int</span>) <span style="color:#719e07">-&gt;</span> <span style="color:#cb4b16">None</span>:
+    <span style="color:#2aa198">"""Add a `communityLabel` attribute to each node according to their
+</span><span style="color:#2aa198">    computed community.
+</span><span style="color:#2aa198">    """</span>
+    simp_graph <span style="color:#719e07">=</span> nx<span style="color:#719e07">.</span>Graph(dot_graph)
+    communities <span style="color:#719e07">=</span> com<span style="color:#719e07">.</span>girvan_newman(simp_graph)
+    labels <span style="color:#719e07">=</span> [<span style="color:#b58900">tuple</span>(<span style="color:#b58900">sorted</span>(c) <span style="color:#719e07">for</span> c <span style="color:#719e07">in</span> unities) <span style="color:#719e07">for</span> unities <span style="color:#719e07">in</span>
+              itertools<span style="color:#719e07">.</span>islice(communities, n_com <span style="color:#719e07">-</span> <span style="color:#2aa198">1</span>, n_com)][<span style="color:#2aa198">0</span>]
+    label_dict <span style="color:#719e07">=</span> {l_key: i <span style="color:#719e07">for</span> i <span style="color:#719e07">in</span> <span style="color:#b58900">range</span>(<span style="color:#b58900">len</span>(labels)) <span style="color:#719e07">for</span> l_key <span style="color:#719e07">in</span> labels[i]}
+    nx<span style="color:#719e07">.</span>set_node_attributes(dot_graph, label_dict, <span style="color:#2aa198">"communityLabel"</span>)
 
 
-<span style="color:#6ab825;font-weight:bold">if</span> __name__ == <span style="color:#ed9d13">"__main__"</span>:
-    sys.stderr.write(<span style="color:#ed9d13">"Reading graph..."</span>)
-    DOT_GRAPH = build_graph()
+<span style="color:#719e07">def</span> <span style="color:#268bd2">add_missing_links</span>(dot_graph: nx<span style="color:#719e07">.</span>DiGraph, n_missing: <span style="color:#b58900">int</span>) <span style="color:#719e07">-&gt;</span> <span style="color:#cb4b16">None</span>:
+    <span style="color:#2aa198">"""Add some missing links to the graph by using top ranking inexisting
+</span><span style="color:#2aa198">    links by ressource allocation index.
+</span><span style="color:#2aa198">    """</span>
+    simp_graph <span style="color:#719e07">=</span> nx<span style="color:#719e07">.</span>Graph(dot_graph)
+    preds <span style="color:#719e07">=</span> nx<span style="color:#719e07">.</span>ra_index_soundarajan_hopcroft(simp_graph, community<span style="color:#719e07">=</span><span style="color:#2aa198">"communityLabel"</span>)
+    new <span style="color:#719e07">=</span> <span style="color:#b58900">sorted</span>(preds, key<span style="color:#719e07">=</span><span style="color:#719e07">lambda</span> x: <span style="color:#719e07">-</span>x[<span style="color:#2aa198">2</span>])[:n_missing]
+    <span style="color:#719e07">for</span> link <span style="color:#719e07">in</span> new:
+        sys<span style="color:#719e07">.</span>stderr<span style="color:#719e07">.</span>write(<span style="color:#2aa198">f</span><span style="color:#2aa198">"Predicted edge </span><span style="color:#2aa198">{</span>link[<span style="color:#2aa198">0</span>]<span style="color:#2aa198">}</span><span style="color:#2aa198"> </span><span style="color:#2aa198">{</span>link[<span style="color:#2aa198">1</span>]<span style="color:#2aa198">}</span><span style="color:#cb4b16">\n</span><span style="color:#2aa198">"</span>)
+        dot_graph<span style="color:#719e07">.</span>add_edge(link[<span style="color:#2aa198">0</span>], link[<span style="color:#2aa198">1</span>], predicted<span style="color:#719e07">=</span>link[<span style="color:#2aa198">2</span>])
+
+
+<span style="color:#719e07">if</span> __name__ <span style="color:#719e07">==</span> <span style="color:#2aa198">"__main__"</span>:
+    sys<span style="color:#719e07">.</span>stderr<span style="color:#719e07">.</span>write(<span style="color:#2aa198">"Reading graph..."</span>)
+    DOT_GRAPH <span style="color:#719e07">=</span> build_graph()
     compute_centrality(DOT_GRAPH)
     compute_communities(DOT_GRAPH, N_COM)
     add_missing_links(DOT_GRAPH, N_MISSING)
-    sys.stderr.write(<span style="color:#ed9d13">"Done</span><span style="color:#ed9d13">\n</span><span style="color:#ed9d13">"</span>)
-    JS_GRAPH = json_graph.node_link_data(DOT_GRAPH)
-    sys.stdout.write(json.dumps(JS_GRAPH))
+    sys<span style="color:#719e07">.</span>stderr<span style="color:#719e07">.</span>write(<span style="color:#2aa198">"Done</span><span style="color:#cb4b16">\n</span><span style="color:#2aa198">"</span>)
+    JS_GRAPH <span style="color:#719e07">=</span> json_graph<span style="color:#719e07">.</span>node_link_data(DOT_GRAPH)
+    sys<span style="color:#719e07">.</span>stdout<span style="color:#719e07">.</span>write(json<span style="color:#719e07">.</span>dumps(JS_GRAPH))
 </code></pre>
           </div>
           <p>The script writes the graph in JSON format to <code>stdout</code> with <code>networkx</code>’s JSON export function. It looks something like this (you can find the actual graph represented on my notes page <a href="/js/graph.json">here</a>):</p>
           <div class="highlight">
-            <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-   <span style="color:#6ab825;font-weight:bold">"directed"</span> : <span style="color:#6ab825;font-weight:bold">true</span>,
-   <span style="color:#6ab825;font-weight:bold">"graph"</span> : {},
-   <span style="color:#6ab825;font-weight:bold">"links"</span> : [
+            <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+   <span style="color:#268bd2">"directed"</span> : <span style="color:#cb4b16">true</span>,
+   <span style="color:#268bd2">"graph"</span> : {},
+   <span style="color:#268bd2">"links"</span> : [
       {
-         <span style="color:#6ab825;font-weight:bold">"source"</span> : <span style="color:#ed9d13">"012f1087-bae9-4bbf-b468-114169782b5b"</span>,
-         <span style="color:#6ab825;font-weight:bold">"target"</span> : <span style="color:#ed9d13">"2fc873e6-d61d-43e3-9dd1-635f54b4114f"</span>,
-         <span style="color:#6ab825;font-weight:bold">"predicted"</span> : <span style="color:#3677a9">0.676190476190476</span>,
+         <span style="color:#268bd2">"source"</span> : <span style="color:#2aa198">"012f1087-bae9-4bbf-b468-114169782b5b"</span>,
+         <span style="color:#268bd2">"target"</span> : <span style="color:#2aa198">"2fc873e6-d61d-43e3-9dd1-635f54b4114f"</span>,
+         <span style="color:#268bd2">"predicted"</span> : <span style="color:#2aa198">0.676190476190476</span>,
       },
       {
-         <span style="color:#6ab825;font-weight:bold">"source"</span> : <span style="color:#ed9d13">"012f1087-bae9-4bbf-b468-114169782b5b"</span>,
-         <span style="color:#6ab825;font-weight:bold">"target"</span> : <span style="color:#ed9d13">"89569187-fcdc-4ebf-8608-75bfb129e8c2"</span>
+         <span style="color:#268bd2">"source"</span> : <span style="color:#2aa198">"012f1087-bae9-4bbf-b468-114169782b5b"</span>,
+         <span style="color:#268bd2">"target"</span> : <span style="color:#2aa198">"89569187-fcdc-4ebf-8608-75bfb129e8c2"</span>
       },
-      <span style="color:#a61717;background-color:#e3d2d2">...</span>
+      ...
    ],
-   <span style="color:#6ab825;font-weight:bold">"nodes"</span>: [
+   <span style="color:#268bd2">"nodes"</span>: [
       {
-         <span style="color:#6ab825;font-weight:bold">"centrality"</span> : <span style="color:#3677a9">0.0848734602948687</span>,
-         <span style="color:#6ab825;font-weight:bold">"communityLabel"</span> : <span style="color:#3677a9">0</span>,
-         <span style="color:#6ab825;font-weight:bold">"id"</span> : <span style="color:#ed9d13">"012f1087-bae9-4bbf-b468-114169782b5b"</span>,
-         <span style="color:#6ab825;font-weight:bold">"label"</span> : <span style="color:#ed9d13">"CPPN"</span>,
-         <span style="color:#6ab825;font-weight:bold">"lnk"</span> : <span style="color:#ed9d13">"cppn"</span>,
-         <span style="color:#6ab825;font-weight:bold">"tooltip"</span> : <span style="color:#ed9d13">"CPPN"</span>
+         <span style="color:#268bd2">"centrality"</span> : <span style="color:#2aa198">0.0848734602948687</span>,
+         <span style="color:#268bd2">"communityLabel"</span> : <span style="color:#2aa198">0</span>,
+         <span style="color:#268bd2">"id"</span> : <span style="color:#2aa198">"012f1087-bae9-4bbf-b468-114169782b5b"</span>,
+         <span style="color:#268bd2">"label"</span> : <span style="color:#2aa198">"CPPN"</span>,
+         <span style="color:#268bd2">"lnk"</span> : <span style="color:#2aa198">"cppn"</span>,
+         <span style="color:#268bd2">"tooltip"</span> : <span style="color:#2aa198">"CPPN"</span>
       },
       {
-         <span style="color:#6ab825;font-weight:bold">"centrality"</span> : <span style="color:#3677a9">0.0593788434729073</span>,
-         <span style="color:#6ab825;font-weight:bold">"communityLabel"</span> : <span style="color:#3677a9">0</span>,
-         <span style="color:#6ab825;font-weight:bold">"id"</span> : <span style="color:#ed9d13">"b495ae71-9ed6-4ef1-8917-45b490bca56f"</span>,
-         <span style="color:#6ab825;font-weight:bold">"label"</span> : <span style="color:#ed9d13">"Neural tangent kernel"</span>,
-         <span style="color:#6ab825;font-weight:bold">"lnk"</span> : <span style="color:#ed9d13">"neural_tangent_kernel"</span>,
-         <span style="color:#6ab825;font-weight:bold">"tooltip"</span> : <span style="color:#ed9d13">"Neural tangent kernel"</span>
+         <span style="color:#268bd2">"centrality"</span> : <span style="color:#2aa198">0.0593788434729073</span>,
+         <span style="color:#268bd2">"communityLabel"</span> : <span style="color:#2aa198">0</span>,
+         <span style="color:#268bd2">"id"</span> : <span style="color:#2aa198">"b495ae71-9ed6-4ef1-8917-45b490bca56f"</span>,
+         <span style="color:#268bd2">"label"</span> : <span style="color:#2aa198">"Neural tangent kernel"</span>,
+         <span style="color:#268bd2">"lnk"</span> : <span style="color:#2aa198">"neural_tangent_kernel"</span>,
+         <span style="color:#268bd2">"tooltip"</span> : <span style="color:#2aa198">"Neural tangent kernel"</span>
       },
-      <span style="color:#a61717;background-color:#e3d2d2">...</span>
+      ...
    ]
 }
 </code></pre>
@@ -290,12 +290,12 @@ MAX_NODES = <span style="color:#3677a9">200</span>  <span style="color:#999;font
           <p>The main SVG source where the graph is drawn is defined in the <code>&lt;div&gt;</code> with id <code>main-graph</code> <a href="https://github.com/hugcis/hugcis.github.io/blob/master/notes/index.html#L56-L65">here</a>. There are two components in there: a filter definition and the main rectangle where the graph is drawn.</p>
           <p>The filter is shown below. I use it for the tooltips when you point a vertex with your mouse. The tooltips are composed of two elements: the text and a background, that is a rectangle bounding box around the text with the text cut out (it’s what the filter does).</p>
           <div class="highlight">
-            <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-svg" data-lang="svg"><span style="color:#6ab825;font-weight:bold">&lt;defs&gt;</span>
-    <span style="color:#6ab825;font-weight:bold">&lt;filter</span> <span style="color:#bbb">x=</span><span style="color:#ed9d13">"0"</span> <span style="color:#bbb">y=</span><span style="color:#ed9d13">"0"</span> <span style="color:#bbb">width=</span><span style="color:#ed9d13">"1"</span> <span style="color:#bbb">height=</span><span style="color:#ed9d13">"1"</span> <span style="color:#bbb">id=</span><span style="color:#ed9d13">"solid"</span><span style="color:#6ab825;font-weight:bold">&gt;</span>
-        <span style="color:#6ab825;font-weight:bold">&lt;feFlood</span> <span style="color:#bbb">flood-color=</span><span style="color:#ed9d13">"#f7f7f7"</span> <span style="color:#bbb">flood-opacity=</span><span style="color:#ed9d13">"0.9"</span><span style="color:#6ab825;font-weight:bold">/&gt;</span>
-        <span style="color:#6ab825;font-weight:bold">&lt;feComposite</span> <span style="color:#bbb">in=</span><span style="color:#ed9d13">"SourceGraphic"</span> <span style="color:#bbb">operator=</span><span style="color:#ed9d13">"xor"</span> <span style="color:#6ab825;font-weight:bold">/&gt;</span>
-    <span style="color:#6ab825;font-weight:bold">&lt;/filter&gt;</span>
-<span style="color:#6ab825;font-weight:bold">&lt;/defs&gt;</span>
+            <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-svg" data-lang="svg"><span style="color:#268bd2">&lt;defs&gt;</span>
+    <span style="color:#268bd2">&lt;filter</span> x=<span style="color:#2aa198">"0"</span> y=<span style="color:#2aa198">"0"</span> width=<span style="color:#2aa198">"1"</span> height=<span style="color:#2aa198">"1"</span> id=<span style="color:#2aa198">"solid"</span><span style="color:#268bd2">&gt;</span>
+        <span style="color:#268bd2">&lt;feFlood</span> flood-color=<span style="color:#2aa198">"#f7f7f7"</span> flood-opacity=<span style="color:#2aa198">"0.9"</span><span style="color:#268bd2">/&gt;</span>
+        <span style="color:#268bd2">&lt;feComposite</span> in=<span style="color:#2aa198">"SourceGraphic"</span> operator=<span style="color:#2aa198">"xor"</span> <span style="color:#268bd2">/&gt;</span>
+    <span style="color:#268bd2">&lt;/filter&gt;</span>
+<span style="color:#268bd2">&lt;/defs&gt;</span>
 </code></pre>
           </div>
           <h2 id="conclusion">Conclusion</h2>
@@ -304,9 +304,7 @@ MAX_NODES = <span style="color:#3677a9">200</span>  <span style="color:#999;font
           <p>I hope this post was informative, and it will help you get a nice note website up and running! Enjoy!</p>
         </div>
         <ul class="article-taxonomy">
-          <h3>Tags</h3>
-          <li>
-            <a href="/tags/emacs"><span class="tag-item"><img class="tag-logo" src="/img/tag.svg" alt="Logo of a tag: indicates that a tag item follows.">Emacs</span></a> <a href="/tags/org-roam"><span class="tag-item"><img class="tag-logo" src="/img/tag.svg" alt="Logo of a tag: indicates that a tag item follows.">Org-roam</span></a> <a href="/tags/org-mode"><span class="tag-item"><img class="tag-logo" src="/img/tag.svg" alt="Logo of a tag: indicates that a tag item follows.">Org-mode</span></a> <a href="/tags/web"><span class="tag-item"><img class="tag-logo" src="/img/tag.svg" alt="Logo of a tag: indicates that a tag item follows.">Web</span></a> <a href="/tags/notes"><span class="tag-item"><img class="tag-logo" src="/img/tag.svg" alt="Logo of a tag: indicates that a tag item follows.">Notes</span></a> <a href="/tags/org"><span class="tag-item"><img class="tag-logo" src="/img/tag.svg" alt="Logo of a tag: indicates that a tag item follows.">Org</span></a> <a href="/tags/org-roam"><span class="tag-item"><img class="tag-logo" src="/img/tag.svg" alt="Logo of a tag: indicates that a tag item follows.">Org roam</span></a>
+          <li>Tags: <a href="/tags/emacs"><span class="tag-item"><img class="tag-logo" src="https://hugocisneros.com/images/tag_logo.svg" alt="Logo of a tag: indicates that a tag item follows."> Emacs</span></a> <a href="/tags/org-roam"><span class="tag-item"><img class="tag-logo" src="https://hugocisneros.com/images/tag_logo.svg" alt="Logo of a tag: indicates that a tag item follows."> Org-roam</span></a> <a href="/tags/org-mode"><span class="tag-item"><img class="tag-logo" src="https://hugocisneros.com/images/tag_logo.svg" alt="Logo of a tag: indicates that a tag item follows."> Org-mode</span></a> <a href="/tags/web"><span class="tag-item"><img class="tag-logo" src="https://hugocisneros.com/images/tag_logo.svg" alt="Logo of a tag: indicates that a tag item follows."> Web</span></a> <a href="/tags/notes"><span class="tag-item"><img class="tag-logo" src="https://hugocisneros.com/images/tag_logo.svg" alt="Logo of a tag: indicates that a tag item follows."> Notes</span></a> <a href="/tags/org"><span class="tag-item"><img class="tag-logo" src="https://hugocisneros.com/images/tag_logo.svg" alt="Logo of a tag: indicates that a tag item follows."> Org</span></a> <a href="/tags/org-roam"><span class="tag-item"><img class="tag-logo" src="https://hugocisneros.com/images/tag_logo.svg" alt="Logo of a tag: indicates that a tag item follows."> Org roam</span></a>
           </li>
         </ul>
         <div class="article-date-modified">
@@ -324,7 +322,7 @@ MAX_NODES = <span style="color:#3677a9">200</span>  <span style="color:#999;font
           <a class="rss-link" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon" src="/img/RSS.svg" alt="RSS feed icon"></a>
         </li>
         <li>
-          <a href="https://github.com/hugcis/natrium-custom">Code</a>
+          <a href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
         </li>
         <li>© Hugo Cisneros 2022</li>
       </ul>

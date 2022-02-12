@@ -8,26 +8,17 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 23 Apr 2021 14:24:46 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Posos Challenge</title>
-      <link>https://hugocisneros.com/projects/posos_dl/</link>
-      <pubDate>Mon, 25 Mar 2019 12:00:00 +0000</pubDate>
+      <title>Stochastic optimization for large scale optimal transport</title>
+      <link>https://hugocisneros.com/projects/stochastic_optimization_for_large_scale_optimal_transport/</link>
+      <pubDate>Mon, 07 Jan 2019 12:00:00 +0000</pubDate>
       
-      <guid>https://hugocisneros.com/projects/posos_dl/</guid>
+      <guid>https://hugocisneros.com/projects/stochastic_optimization_for_large_scale_optimal_transport/</guid>
       <description>&lt;h3 id=&#34;links&#34;&gt;Links&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://hugocisneros.com/pdf/Cisneros_slides_posos.pdf&#34;&gt;Project slides&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://hugocisneros.com/pdf/Cisneros_report_posos.pdf&#34;&gt;PDF project report&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://hugocisneros.com/pdf/Cisneros_Slides_Stochastic_OT.pdf&#34;&gt;Project slides&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://hugocisneros.com/pdf/Cisneros_report_Stochastic_OT.pdf&#34;&gt;PDF project report&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/hugcis/large-scale-optimal-transport&#34;&gt;Github&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Adversarial examples in reinforcement learning</title>
-      <link>https://hugocisneros.com/projects/adversarial_rl/</link>
-      <pubDate>Wed, 30 Jan 2019 15:10:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/projects/adversarial_rl/</guid>
-      <description>Links  Project slides Project report  Description The goal of this project was to write a review of adversarial examples in RL as of January 2019. It was also made into a talk for which the slides can be found above.
-This project was a collaboration with Clément Acher, part of a reinforcement learning course taught by Alessandro Lazaric and Matteo Pirotta.</description>
     </item>
     
     <item>
@@ -44,6 +35,29 @@ This project was a collaboration with Clément Acher, part of a reinforcement le
     </item>
     
     <item>
+      <title>Adversarial examples in reinforcement learning</title>
+      <link>https://hugocisneros.com/projects/adversarial_rl/</link>
+      <pubDate>Wed, 30 Jan 2019 15:10:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/projects/adversarial_rl/</guid>
+      <description>Links  Project slides Project report  Description The goal of this project was to write a review of adversarial examples in RL as of January 2019. It was also made into a talk for which the slides can be found above.
+This project was a collaboration with Clément Acher, part of a reinforcement learning course taught by Alessandro Lazaric and Matteo Pirotta.</description>
+    </item>
+    
+    <item>
+      <title>Posos Challenge</title>
+      <link>https://hugocisneros.com/projects/posos_dl/</link>
+      <pubDate>Mon, 25 Mar 2019 12:00:00 +0000</pubDate>
+      
+      <guid>https://hugocisneros.com/projects/posos_dl/</guid>
+      <description>&lt;h3 id=&#34;links&#34;&gt;Links&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://hugocisneros.com/pdf/Cisneros_slides_posos.pdf&#34;&gt;Project slides&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://hugocisneros.com/pdf/Cisneros_report_posos.pdf&#34;&gt;PDF project report&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
       <title>Style transfer with generative adversarial neural networks</title>
       <link>https://hugocisneros.com/projects/style_transfer_gans/</link>
       <pubDate>Tue, 15 Jan 2019 15:14:57 +0200</pubDate>
@@ -51,20 +65,6 @@ This project was a collaboration with Clément Acher, part of a reinforcement le
       <guid>https://hugocisneros.com/projects/style_transfer_gans/</guid>
       <description>Links  Project slides Project report  Description This project&amp;rsquo;s goal was to implement style transfer techniques based on GANs. We applied several algorithms on our own datasets of landscape pictures scraped from Flickr and frames from anime extracted automatically.
 This project was a collaboration with Clément Acher and was part of the course Object recognition and computer vision taught by Jean Ponce, Ivan Laptev, Cordelia Schmid and Josef Sivic.</description>
-    </item>
-    
-    <item>
-      <title>Stochastic optimization for large scale optimal transport</title>
-      <link>https://hugocisneros.com/projects/stochastic_optimization_for_large_scale_optimal_transport/</link>
-      <pubDate>Mon, 07 Jan 2019 12:00:00 +0000</pubDate>
-      
-      <guid>https://hugocisneros.com/projects/stochastic_optimization_for_large_scale_optimal_transport/</guid>
-      <description>&lt;h3 id=&#34;links&#34;&gt;Links&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://hugocisneros.com/pdf/Cisneros_Slides_Stochastic_OT.pdf&#34;&gt;Project slides&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://hugocisneros.com/pdf/Cisneros_report_Stochastic_OT.pdf&#34;&gt;PDF project report&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/hugcis/large-scale-optimal-transport&#34;&gt;Github&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
     </item>
     
     <item>

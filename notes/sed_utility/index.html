@@ -14,7 +14,7 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@cisne_hug">
   <meta name="twitter:creator" content="@cisne_hug">
-  <link rel="stylesheet" href="https://hugocisneros.com/css/main.min.css" media="all" type="text/css">
+  <link rel="stylesheet" href="https://hugocisneros.com/main.min.css" media="all" type="text/css">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -65,24 +65,24 @@
             <h3 id="delete-the-same-line-in-many-files">Delete the same line in many files</h3>
             <p>Let’s start by creating a simple text file with three lines. This is what it looks like:</p>
             <div class="highlight">
-              <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh"><span style="color:#24909d">echo</span> <span style="color:#ed9d13">"Hello\nto the\nworld"</span> &gt; test.txt
+              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh"><span style="color:#b58900">echo</span> <span style="color:#2aa198">"Hello\nto the\nworld"</span> &gt; test.txt
 cat test.txt
 </code></pre>
             </div>
             <div class="highlight">
-              <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Hello
+              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Hello
 to the
 world
 </code></pre>
             </div>
             <p>We use <code>sed</code> to remove lines in the file matching some <a href="/notes/regular_expressions/">regex</a>. The -<code>i.bak</code> option ensures the file is modified in place.</p>
             <div class="highlight">
-              <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">sed -i.bak <span style="color:#ed9d13">'/to the/d'</span> test.txt
+              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">sed -i.bak <span style="color:#2aa198">'/to the/d'</span> test.txt
 cat test.txt
 </code></pre>
             </div>
             <div class="highlight">
-              <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Hello
+              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Hello
 world
 </code></pre>
             </div>
@@ -105,7 +105,7 @@ world
           <a class="rss-link" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon" src="/img/RSS.svg" alt="RSS feed icon"></a>
         </li>
         <li>
-          <a href="https://github.com/hugcis/natrium-custom">Code</a>
+          <a href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
         </li>
         <li>© Hugo Cisneros 2022</li>
       </ul>

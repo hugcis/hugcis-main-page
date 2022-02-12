@@ -3,17 +3,37 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
     
     <url>
-        <loc>https://hugocisneros.com/</loc>
-        <lastmod>2022-02-02T09:05:00+01:00</lastmod>
+        <loc>https://hugocisneros.com/projects/stochastic_optimization_for_large_scale_optimal_transport/</loc>
+        <lastmod>2019-01-07T12:00:00+00:00</lastmod>
     </url>
     
     <url>
-        <loc>https://hugocisneros.com/notes/cellular_automata/</loc>
-        <lastmod>2022-02-02T09:05:00+01:00</lastmod>
+        <loc>https://hugocisneros.com/projects/graph_nn_for_influence_maximization/</loc>
+        <lastmod>2019-01-24T12:00:00+00:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/projects/adversarial_rl/</loc>
+        <lastmod>2019-01-30T15:10:00+02:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/</loc>
+        <lastmod>2022-02-06T13:49:00+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/continual_learning/</loc>
+        <lastmod>2022-02-06T13:49:00+01:00</lastmod>
     </url>
     
     <url>
         <loc>https://hugocisneros.com/notes/</loc>
+        <lastmod>2022-02-06T13:49:00+01:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/notes/cellular_automata/</loc>
         <lastmod>2022-02-02T09:05:00+01:00</lastmod>
     </url>
     
@@ -120,11 +140,6 @@
     <url>
         <loc>https://hugocisneros.com/notes/conway_s_game_of_life/</loc>
         <lastmod>2021-10-18T08:56:00+02:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/notes/continual_learning/</loc>
-        <lastmod>2021-10-15T15:18:00+02:00</lastmod>
     </url>
     
     <url>
@@ -1938,22 +1953,12 @@
     </url>
     
     <url>
-        <loc>https://hugocisneros.com/projects/adversarial_rl/</loc>
-        <lastmod>2019-01-30T15:10:00+02:00</lastmod>
-    </url>
-    
-    <url>
         <loc>https://hugocisneros.com/tags/reinforcement-learning/</loc>
         <lastmod>2019-01-30T15:10:00+02:00</lastmod>
     </url>
     
     <url>
         <loc>https://hugocisneros.com/tags/graph-neural-networks/</loc>
-        <lastmod>2019-01-24T12:00:00+00:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://hugocisneros.com/projects/graph_nn_for_influence_maximization/</loc>
         <lastmod>2019-01-24T12:00:00+00:00</lastmod>
     </url>
     
@@ -1988,11 +1993,6 @@
     </url>
     
     <url>
-        <loc>https://hugocisneros.com/projects/stochastic_optimization_for_large_scale_optimal_transport/</loc>
-        <lastmod>2019-01-07T12:00:00+00:00</lastmod>
-    </url>
-    
-    <url>
         <loc>https://hugocisneros.com/tags/data-journalism/</loc>
         <lastmod>2018-10-29T12:00:00+00:00</lastmod>
     </url>
@@ -2012,15 +2012,15 @@
     </url>
     
     <url>
-        <loc>https://hugocisneros.com/contact/</loc>
-    </url>
-    
-    <url>
         <loc>https://hugocisneros.com/tags/blog/</loc>
     </url>
     
     <url>
         <loc>https://hugocisneros.com/bookmarks/</loc>
+    </url>
+    
+    <url>
+        <loc>https://hugocisneros.com/contact/</loc>
     </url>
     
     <url>

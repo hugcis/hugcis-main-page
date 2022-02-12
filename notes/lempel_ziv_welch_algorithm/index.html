@@ -14,7 +14,7 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@cisne_hug">
   <meta name="twitter:creator" content="@cisne_hug">
-  <link rel="stylesheet" href="https://hugocisneros.com/css/main.min.css" media="all" type="text/css">
+  <link rel="stylesheet" href="https://hugocisneros.com/main.min.css" media="all" type="text/css">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -71,29 +71,29 @@
             <p>The base idea of these algorithms is to build a dictionary of words in the input sequence. A given sequence is scanned and an empty dictionary is initialized. Each new word is the shortest next word not in the dictionary. It is registered by using a previous word and adding a single digit in the form \((j, s_{last})\). This encoding allows a unique decoding of the original sequence. When encoding <strong>or</strong> decoding the string the same dictionary of words is built. For sequences with string repetitions, the length of each new word increases fast and the numbers of needed pairs to encode increases very slowly.</p>
             <p>Example implementation of the LZ algorithm in Python:</p>
             <div class="highlight">
-              <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#6ab825;font-weight:bold">def</span> <span style="color:#447fcf">compress</span>(string):
-    dic = {<span style="color:#ed9d13">'0'</span>: <span style="color:#3677a9">0</span>, <span style="color:#ed9d13">'1'</span>: <span style="color:#3677a9">1</span>}
-    word = <span style="color:#ed9d13">""</span>
-    result = []
-    <span style="color:#6ab825;font-weight:bold">for</span> c <span style="color:#6ab825;font-weight:bold">in</span> string:
-        wc = word + c
-        <span style="color:#6ab825;font-weight:bold">if</span> wc <span style="color:#6ab825;font-weight:bold">in</span> dic:
-            word = wc
-        <span style="color:#6ab825;font-weight:bold">else</span>:
-            result.append(dic[word])
-            dic[wc] = <span style="color:#24909d">len</span>(dic)
-            word = c
-    <span style="color:#6ab825;font-weight:bold">if</span> word:
-        result.append(dic[word])
-        <span style="color:#6ab825;font-weight:bold">return</span> result
+              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#719e07">def</span> <span style="color:#268bd2">compress</span>(string):
+    dic <span style="color:#719e07">=</span> {<span style="color:#2aa198">'0'</span>: <span style="color:#2aa198">0</span>, <span style="color:#2aa198">'1'</span>: <span style="color:#2aa198">1</span>}
+    word <span style="color:#719e07">=</span> <span style="color:#2aa198">""</span>
+    result <span style="color:#719e07">=</span> []
+    <span style="color:#719e07">for</span> c <span style="color:#719e07">in</span> string:
+        wc <span style="color:#719e07">=</span> word <span style="color:#719e07">+</span> c
+        <span style="color:#719e07">if</span> wc <span style="color:#719e07">in</span> dic:
+            word <span style="color:#719e07">=</span> wc
+        <span style="color:#719e07">else</span>:
+            result<span style="color:#719e07">.</span>append(dic[word])
+            dic[wc] <span style="color:#719e07">=</span> <span style="color:#b58900">len</span>(dic)
+            word <span style="color:#719e07">=</span> c
+    <span style="color:#719e07">if</span> word:
+        result<span style="color:#719e07">.</span>append(dic[word])
+        <span style="color:#719e07">return</span> result
 
-<span style="color:#24909d">print</span>(compress(<span style="color:#ed9d13">"1101010101011101010001110100"</span>))
-<span style="color:#24909d">print</span>(compress(<span style="color:#ed9d13">"1010101010101010101010101010"</span>))
+<span style="color:#b58900">print</span>(compress(<span style="color:#2aa198">"1101010101011101010001110100"</span>))
+<span style="color:#b58900">print</span>(compress(<span style="color:#2aa198">"1010101010101010101010101010"</span>))
 </code></pre>
             </div>
             <p>Results:</p>
             <div class="highlight">
-              <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">[1, 1, 0, 3, 5, 4, 4, 2, 7, 3, 0, 8, 6, 0]
+              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">[1, 1, 0, 3, 5, 4, 4, 2, 7, 3, 0, 8, 6, 0]
 [1, 0, 2, 4, 3, 6, 5, 8, 7, 6]
 </code></pre>
             </div>
@@ -143,7 +143,7 @@
           <a class="rss-link" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon" src="/img/RSS.svg" alt="RSS feed icon"></a>
         </li>
         <li>
-          <a href="https://github.com/hugcis/natrium-custom">Code</a>
+          <a href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
         </li>
         <li>© Hugo Cisneros 2022</li>
       </ul>

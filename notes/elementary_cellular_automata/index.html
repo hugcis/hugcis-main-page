@@ -14,7 +14,7 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@cisne_hug">
   <meta name="twitter:creator" content="@cisne_hug">
-  <link rel="stylesheet" href="https://hugocisneros.com/css/main.min.css" media="all" type="text/css">
+  <link rel="stylesheet" href="https://hugocisneros.com/main.min.css" media="all" type="text/css">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -72,37 +72,37 @@
             <h2 id="simple-implementation">Simple implementation</h2>
             <p>In <a href="/notes/python/">Python</a>, taking advantage of Numpy’s array manipulation. This implementation is much faster than looping through elements of the grid to update them, but uses slightly more memory. The <a href="/notes/algorithm/">algorithm</a> is simply based on the standard ECA update.</p>
             <div class="highlight">
-              <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">numpy</span> <span style="color:#6ab825;font-weight:bold">as</span> <span style="color:#447fcf;text-decoration:underline">np</span>
-<span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">matplotlib</span>
-<span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">matplotlib.pyplot</span> <span style="color:#6ab825;font-weight:bold">as</span> <span style="color:#447fcf;text-decoration:underline">plt</span>
-fig, ax = plt.subplots(figsize=(<span style="color:#3677a9">3</span>,<span style="color:#3677a9">2</span>))
+              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#719e07">import</span> numpy <span style="color:#719e07">as</span> np
+<span style="color:#719e07">import</span> matplotlib
+<span style="color:#719e07">import</span> matplotlib.pyplot <span style="color:#719e07">as</span> plt
+fig, ax <span style="color:#719e07">=</span> plt<span style="color:#719e07">.</span>subplots(figsize<span style="color:#719e07">=</span>(<span style="color:#2aa198">3</span>,<span style="color:#2aa198">2</span>))
 
-N = <span style="color:#3677a9">100</span> <span style="color:#999;font-style:italic"># Number of cells in the cellular automaton</span>
-T = <span style="color:#3677a9">50</span> <span style="color:#999;font-style:italic"># Number of steps to run for</span>
-rule = <span style="color:#3677a9">54</span> <span style="color:#999;font-style:italic"># Rule code</span>
-rule_list = <span style="color:#24909d">bin</span>(rule)[<span style="color:#3677a9">2</span>:]
-<span style="color:#999;font-style:italic"># Zero padding of the rule</span>
-rule_list = [<span style="color:#3677a9">0</span>] * (<span style="color:#3677a9">8</span> - <span style="color:#24909d">len</span>(rule_list)) + [<span style="color:#24909d">int</span>(i) <span style="color:#6ab825;font-weight:bold">for</span> i <span style="color:#6ab825;font-weight:bold">in</span> rule_list]
-<span style="color:#999;font-style:italic"># Convert to array and reverse the list</span>
-rule_array = np.array(rule_list[::-<span style="color:#3677a9">1</span>])
+N <span style="color:#719e07">=</span> <span style="color:#2aa198">100</span> <span style="color:#586e75"># Number of cells in the cellular automaton</span>
+T <span style="color:#719e07">=</span> <span style="color:#2aa198">50</span> <span style="color:#586e75"># Number of steps to run for</span>
+rule <span style="color:#719e07">=</span> <span style="color:#2aa198">54</span> <span style="color:#586e75"># Rule code</span>
+rule_list <span style="color:#719e07">=</span> <span style="color:#b58900">bin</span>(rule)[<span style="color:#2aa198">2</span>:]
+<span style="color:#586e75"># Zero padding of the rule</span>
+rule_list <span style="color:#719e07">=</span> [<span style="color:#2aa198">0</span>] <span style="color:#719e07">*</span> (<span style="color:#2aa198">8</span> <span style="color:#719e07">-</span> <span style="color:#b58900">len</span>(rule_list)) <span style="color:#719e07">+</span> [<span style="color:#b58900">int</span>(i) <span style="color:#719e07">for</span> i <span style="color:#719e07">in</span> rule_list]
+<span style="color:#586e75"># Convert to array and reverse the list</span>
+rule_array <span style="color:#719e07">=</span> np<span style="color:#719e07">.</span>array(rule_list[::<span style="color:#719e07">-</span><span style="color:#2aa198">1</span>])
 
-<span style="color:#999;font-style:italic"># Initial state</span>
-init = np.random.randint(<span style="color:#3677a9">2</span>, size=N)
+<span style="color:#586e75"># Initial state</span>
+init <span style="color:#719e07">=</span> np<span style="color:#719e07">.</span>random<span style="color:#719e07">.</span>randint(<span style="color:#2aa198">2</span>, size<span style="color:#719e07">=</span>N)
 
-<span style="color:#999;font-style:italic"># We initialize a grid with T rows and N columns</span>
-grid = np.zeros((T, N), dtype=np.int)
-grid[<span style="color:#3677a9">0</span>, :] = init
+<span style="color:#586e75"># We initialize a grid with T rows and N columns</span>
+grid <span style="color:#719e07">=</span> np<span style="color:#719e07">.</span>zeros((T, N), dtype<span style="color:#719e07">=</span>np<span style="color:#719e07">.</span>int)
+grid[<span style="color:#2aa198">0</span>, :] <span style="color:#719e07">=</span> init
 
-<span style="color:#6ab825;font-weight:bold">for</span> i <span style="color:#6ab825;font-weight:bold">in</span> <span style="color:#24909d">range</span>(<span style="color:#3677a9">1</span>, T):
-    next_step = rule_array[np.roll(grid[i-<span style="color:#3677a9">1</span>, :], -<span style="color:#3677a9">1</span>) +
-                           <span style="color:#3677a9">2</span> * grid[i-<span style="color:#3677a9">1</span>, :] +
-                           <span style="color:#3677a9">4</span> * np.roll(grid[i-<span style="color:#3677a9">1</span>, :], <span style="color:#3677a9">1</span>)]
-    grid[i, :] = next_step
+<span style="color:#719e07">for</span> i <span style="color:#719e07">in</span> <span style="color:#b58900">range</span>(<span style="color:#2aa198">1</span>, T):
+    next_step <span style="color:#719e07">=</span> rule_array[np<span style="color:#719e07">.</span>roll(grid[i<span style="color:#719e07">-</span><span style="color:#2aa198">1</span>, :], <span style="color:#719e07">-</span><span style="color:#2aa198">1</span>) <span style="color:#719e07">+</span>
+                           <span style="color:#2aa198">2</span> <span style="color:#719e07">*</span> grid[i<span style="color:#719e07">-</span><span style="color:#2aa198">1</span>, :] <span style="color:#719e07">+</span>
+                           <span style="color:#2aa198">4</span> <span style="color:#719e07">*</span> np<span style="color:#719e07">.</span>roll(grid[i<span style="color:#719e07">-</span><span style="color:#2aa198">1</span>, :], <span style="color:#2aa198">1</span>)]
+    grid[i, :] <span style="color:#719e07">=</span> next_step
 
-<span style="color:#999;font-style:italic"># Plotting the results</span>
-ax.matshow(grid, cmap=<span style="color:#ed9d13">'Greys'</span>)
-fig.tight_layout()
-fig.savefig(<span style="color:#ed9d13">'img/plots/ca_rule54.png'</span>)
+<span style="color:#586e75"># Plotting the results</span>
+ax<span style="color:#719e07">.</span>matshow(grid, cmap<span style="color:#719e07">=</span><span style="color:#2aa198">'Greys'</span>)
+fig<span style="color:#719e07">.</span>tight_layout()
+fig<span style="color:#719e07">.</span>savefig(<span style="color:#2aa198">'img/plots/ca_rule54.png'</span>)
 </code></pre>
             </div>
             <p>Results:</p>
@@ -152,7 +152,7 @@ fig.savefig(<span style="color:#ed9d13">'img/plots/ca_rule54.png'</span>)
           <a class="rss-link" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon" src="/img/RSS.svg" alt="RSS feed icon"></a>
         </li>
         <li>
-          <a href="https://github.com/hugcis/natrium-custom">Code</a>
+          <a href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
         </li>
         <li>© Hugo Cisneros 2022</li>
       </ul>
