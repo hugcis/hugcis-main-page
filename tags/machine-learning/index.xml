@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Machine learning on Hugo Cisneros</title>
+    <link>https://hugocisneros.com/tags/machine-learning/</link>
+    <description>Recent content in Machine learning on Hugo Cisneros</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 06 Feb 2022 13:49:00 +0100</lastBuildDate><atom:link href="https://hugocisneros.com/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Continual learning</title>
+      <link>https://hugocisneros.com/notes/continual_learning/</link>
+      <pubDate>Sun, 06 Feb 2022 13:49:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/continual_learning/</guid>
+      <description>tags Machine learning  Continual learning is a type of supervised learning where there is no &amp;ldquo;testing phase&amp;rdquo; associated to a decision process. Instead, training samples keep being processed by the algorithm which has to simultaneously make predictions and keep learning.
+This is challenging for a fixed neural network architecture since it has a fixed capacity and is bound to either forget things or be unable to learn anything new.</description>
+    </item>
+    
+    <item>
+      <title>Notes on: One model for the learning of language by Yang, Y., &amp; Piantadosi, S. T. (2022)</title>
+      <link>https://hugocisneros.com/notes/yangonemodellearning2022/</link>
+      <pubDate>Mon, 31 Jan 2022 13:55:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/yangonemodellearning2022/</guid>
+      <description>source (Yang and Piantadosi 2022) tags NLP, Artificial Intelligence, Machine learning  Summary This paper introduces a model for learning language from few examples while generalizing effectively.
+This model builds sentences with function that are combinations of elementary functions, including:
+ pair(L, C) : Concatenates character C onto list L first(L) : Return the first character of L flip(P) : Return true with probability P if(B, X, Y) : Return X if B else return Y (X and Y may be lists, sets, or probabilities) etc.</description>
+    </item>
+    
+    <item>
+      <title>Supervised learning</title>
+      <link>https://hugocisneros.com/notes/supervised_learning/</link>
+      <pubDate>Thu, 04 Nov 2021 14:23:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/supervised_learning/</guid>
+      <description>tags Machine learning  Data Input/output example pairs: \[ \{(x_i, y_i)\}_{i\leq n} \sim_{iid} \mathbb{P}, \quad \mathbb{P} \in \mathcal{P}(\mathcal{X} \times \mathcal{Y}) \text{ unknown} \]
+Mapping We search for a mapping \(f: \mathcal{X} \rightarrow \mathcal{Y}\). It is also common to parameterize this mapping with a parameter \(\theta \in \mathbb{R}^d\) and write \(h: \mathcal{X} \times \mathbb{R}^d \rightarrow \mathcal{Y}\).
+The prediction \(\hat{y}\) is written
+\[ \hat{y} = f(x) = h(x, \theta) \]
+Objective The goal is to find the above mapping such as to minimize an objective.</description>
+    </item>
+    
+    <item>
+      <title>Catastrophic forgetting</title>
+      <link>https://hugocisneros.com/notes/catastrophic_forgetting/</link>
+      <pubDate>Mon, 18 Oct 2021 09:53:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/catastrophic_forgetting/</guid>
+      <description>tags Machine learning  Catastrophic forgetting is the name given to a common problem of machine learning models: when training on some new data from a new distribution (a new &amp;ldquo;task&amp;rdquo;), many models forget what they learned from the first task.
+This isn&amp;rsquo;t surprising since models are following a loss function that is often applied solely on the task at hand, and not constraining the model to retain past information.</description>
+    </item>
+    
+    <item>
+      <title>Learning in dynamical systems</title>
+      <link>https://hugocisneros.com/notes/learning_in_dynamical_systems/</link>
+      <pubDate>Thu, 30 Sep 2021 12:56:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/learning_in_dynamical_systems/</guid>
+      <description> tags Machine learning, Dynamical systems resources (Weinan 2017)  Bibliography Weinan, E. March 2017. &#34;A Proposal on Machine Learning via Dynamical Systems&#34;. Communications in Mathematics and Statistics 5 (1):1–11. DOI.  </description>
+    </item>
+    
+    <item>
+      <title>Reservoir computing</title>
+      <link>https://hugocisneros.com/notes/reservoir_computing/</link>
+      <pubDate>Wed, 01 Sep 2021 17:29:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/reservoir_computing/</guid>
+      <description>tags Machine learning, Unconventional computing, Unsupervised learning  Reservoir computing is a term used to describe a class of machine learning algorithms that rely on transient dynamics of a dynamical system to implement and manipulate goal-related information.
+The most famous example is echo-state networks, which uses random recurrent neural networks as reservoirs, but other dynamical systems can also be used.
+Reservoir computing with cellular automata Reservoir computing can use cellular automata as the reservoir.</description>
+    </item>
+    
+    <item>
+      <title>Meta-learning</title>
+      <link>https://hugocisneros.com/notes/meta_learning/</link>
+      <pubDate>Wed, 25 Aug 2021 16:00:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/meta_learning/</guid>
+      <description>tags Machine learning  Constrained meta-learning (Kirsch and Schmidhuber 2021)
+Meta-learning of initialization The goal is to learn the initialization of neural network parameters or recurrent neural network initial states in order to make the training faster or less prone to getting stuck in local minima.
+Example for implicit neural representations: (Tancik et al. 2021)
+Meta-learning algorithms MAML (Finn, Abbeeland Levine 2017)
+Reptile (Nichol, Achiamand Schulman 2018)
+Bibliography Kirsch, Louisand Jürgen Schmidhuber.</description>
+    </item>
+    
+    <item>
+      <title>Generative modelling</title>
+      <link>https://hugocisneros.com/notes/generative_modelling/</link>
+      <pubDate>Thu, 17 Jun 2021 10:18:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/generative_modelling/</guid>
+      <description> tags Machine learning  </description>
+    </item>
+    
+    <item>
+      <title>Reinforcement learning</title>
+      <link>https://hugocisneros.com/notes/reinforcement_learning/</link>
+      <pubDate>Mon, 14 Jun 2021 21:54:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/reinforcement_learning/</guid>
+      <description>tags Machine learning  In reinforcement learning, agents take actions within an environment. Usually, both the agent and environment states change in reaction to this action. A reward is given to the agent to tell it if the action was positive or negative.
+The goal of a learning agent is to act so as to maximize that reward.
+An agent can be anything from a fixed set of if-else statements to a deep neural network.</description>
+    </item>
+    
+    <item>
+      <title>Distillation</title>
+      <link>https://hugocisneros.com/notes/distillation/</link>
+      <pubDate>Mon, 14 Jun 2021 11:54:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/distillation/</guid>
+      <description>tags Machine learning, Neural networks, Transfer learning  Distillation is used to describe the process of transferring performances from a large trained teacher neural network to a untrained student network.
+Instead of training the target network to score best according the task&amp;rsquo;s loss function, distillation optimizes for the target network to match the output distribution or neuron activation patterns of the teacher network.
+A review: (Beyer et al. 2021).</description>
+    </item>
+    
+    <item>
+      <title>Transfer learning</title>
+      <link>https://hugocisneros.com/notes/transfer_learning/</link>
+      <pubDate>Mon, 14 Jun 2021 11:46:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/transfer_learning/</guid>
+      <description> tags Machine learning  </description>
+    </item>
+    
+    <item>
+      <title>Alternative learning mechanisms</title>
+      <link>https://hugocisneros.com/notes/alternative_learning_mechanisms/</link>
+      <pubDate>Mon, 14 Jun 2021 10:06:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/alternative_learning_mechanisms/</guid>
+      <description>tags Machine learning Many people, including Geoffrey Hinton, have raised concerns about the back-propagation algorithm and the fact that it&amp;rsquo;s likely not a promising way to achieve Artificial Intelligence (see this Axios blog post).
+  Alternative mechanisms for learning have been and are currently studied to try and approach the learning problem in a more effective way.
+Direct feedback alignment (Nøkland 2016)
+Hebbian learning The theory is sometimes summarized as &amp;ldquo;Cells that fire together wire together.</description>
+    </item>
+    
+    <item>
+      <title>Generalization in Machine learning</title>
+      <link>https://hugocisneros.com/notes/generalization_in_machine_learning/</link>
+      <pubDate>Fri, 23 Apr 2021 11:26:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/generalization_in_machine_learning/</guid>
+      <description> tags Machine learning, Applied maths  </description>
+    </item>
+    
+    <item>
+      <title>The Bitter Lesson</title>
+      <link>https://hugocisneros.com/notes/the_bitter_lesson/</link>
+      <pubDate>Thu, 08 Apr 2021 10:35:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/the_bitter_lesson/</guid>
+      <description>tags Machine learning, Artificial Intelligence author Richard Sutton resources Link  The Bitter Lesson is a pattern that can be observed in several areas of machine learning: many hard problems involving some form of artificial intelligence have seen dramatic progress at some point in the last 50 years, which was mostly driven by data and computations as opposed to &amp;ldquo;clever&amp;rdquo; human engineering.
+If this trend is a fundamental principle (which is what the article argues) it would mean that most of the time spent on engineering features and task-specific representations is wasted.</description>
+    </item>
+    
+    <item>
+      <title>Computer vision</title>
+      <link>https://hugocisneros.com/notes/computer_vision/</link>
+      <pubDate>Thu, 25 Mar 2021 09:58:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/computer_vision/</guid>
+      <description> tags Machine learning, Image processing  </description>
+    </item>
+    
+    <item>
+      <title>Self-supervised learning</title>
+      <link>https://hugocisneros.com/notes/self_supervised_learning/</link>
+      <pubDate>Thu, 25 Mar 2021 09:58:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/self_supervised_learning/</guid>
+      <description>tags Machine learning  Definition Self supervised learning (SSL) is a learning paradigm based on the idea of using information contained within the training data to build better representations of it. Self-supervised models are usually trained to predict hidden parts of the input data from its visible parts.
+SSL in NLP Self-supervised learning has been used for a long time in NLP. In Language modeling, one tries to predict words from previous ones.</description>
+    </item>
+    
+    <item>
+      <title>Recurrent neural networks</title>
+      <link>https://hugocisneros.com/notes/recurrent_neural_networks/</link>
+      <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/recurrent_neural_networks/</guid>
+      <description> tags Neural networks, Machine learning  </description>
+    </item>
+    
+    <item>
+      <title>NLP</title>
+      <link>https://hugocisneros.com/notes/nlp/</link>
+      <pubDate>Thu, 25 Mar 2021 09:56:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/nlp/</guid>
+      <description> tags Machine learning, Language  NLP is about creating algorithms that can manipulate and use language. It is often thought that having functioning NLP algorithms that provably &amp;ldquo;understand&amp;rdquo; language would be equivalent to reaching human-level Artificial Intelligence.
+Tasks Language modeling Text classification Question answering Data manipulation There are several ways to encode text data.
+ One-hot encoding of characters One-hot encoding of words Byte-pair encoding which can be seen as being a compromise between the two  </description>
+    </item>
+    
+    <item>
+      <title>Privacy-preserving machine learning</title>
+      <link>https://hugocisneros.com/notes/privacy_preserving_machine_learning/</link>
+      <pubDate>Wed, 02 Dec 2020 11:16:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/privacy_preserving_machine_learning/</guid>
+      <description>tags Machine learning, Online privacy  This is a kind of machine learning where one wants to train a model or perform inference without transmitting sensitive information.
+This information could leak because of data transmission to an untrusted computing server, or because the model itself reveals the structure of its training data (Ateniese et al. 2013; Song, Ristenpartand Shmatikov 2017).
+Bibliography Ateniese, Giuseppe, Giovanni Felici, Luigi V. Mancini, Angelo Spognardi, Antonio Villaniand Domenico Vitali.</description>
+    </item>
+    
+    <item>
+      <title>Neural networks</title>
+      <link>https://hugocisneros.com/notes/neural_networks/</link>
+      <pubDate>Wed, 02 Dec 2020 09:42:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/neural_networks/</guid>
+      <description>tags Machine learning  Two-layers neural network Mathematically, a simple two-layers neural network with relu non-linearities can be written like below. For an input vector \(x \in \mathbb{R}^D\), \(\mathbf{a} = (a_1, \cdots, a_N)\in \mathbb{R}^M\) are the output weights, \(\mathbf{b} = (b_1, \cdots, b_N)\in \mathbb{R}^D\) are the input weights
+\[ h(x) = \frac{1}{m} \sum_{i=1}^m a_i \max\{ b_i^\top x,0\}, \]
+Universal approximation theorem Cybenko showed in 1989 that a neural network of arbitrary width with sigmoid activation function could approximate any continuous function (Cybenko 1989).</description>
+    </item>
+    
+    <item>
+      <title>Neural network training</title>
+      <link>https://hugocisneros.com/notes/neural_network_training/</link>
+      <pubDate>Wed, 28 Oct 2020 09:32:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/neural_network_training/</guid>
+      <description>tags Neural networks, Machine learning, Optimization  Neural network training as development in program space A neural network as a whole can be seen as a dynamical system. Its state is the collection of its parameters, and its evolution function is the optimization step taken when training the network.
+In such a framework, the goal of training the neural network is to reach a form of attractor further optimization steps don&amp;rsquo;t change the state of the neural network.</description>
+    </item>
+    
+    <item>
+      <title>Unsupervised learning</title>
+      <link>https://hugocisneros.com/notes/unsupervised_learning/</link>
+      <pubDate>Fri, 02 Oct 2020 09:16:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/unsupervised_learning/</guid>
+      <description> tags Machine learning  </description>
+    </item>
+    
+    <item>
+      <title>Federated learning</title>
+      <link>https://hugocisneros.com/notes/federated_learning/</link>
+      <pubDate>Sun, 26 Jul 2020 17:37:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/federated_learning/</guid>
+      <description> tags Machine learning  </description>
+    </item>
+    
+    <item>
+      <title>Gaussian Processes</title>
+      <link>https://hugocisneros.com/notes/gaussian_processes/</link>
+      <pubDate>Tue, 14 Jul 2020 08:28:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/gaussian_processes/</guid>
+      <description> tags Machine learning resources K. Bailey&amp;rsquo;s blog post  </description>
+    </item>
+    
+    <item>
+      <title>Talk: Differentiation of black-box combinatorial solvers</title>
+      <link>https://hugocisneros.com/notes/talk_differentiation_of_black_box_combinatorial_solvers/</link>
+      <pubDate>Thu, 09 Jul 2020 12:43:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/talk_differentiation_of_black_box_combinatorial_solvers/</guid>
+      <description>presenter Michal Rolinek tags Combinatorics, Machine learning  The goal is to merge combinatorial optimization and deep learning.
+Make use of strong battle tested optimization methods. Some of those can find almost-optimal solutions to NP-hard problems in ~quadratic time.
+Goal is to cover many combinatorial problems, TSP multi-cut, etc.
+ fast backward pass theoretically sound easy to use  But the goal is not to take a combinatorial problem but just relax it to make it differentiable, because there is often a huge price to pay for this.</description>
+    </item>
+    
+    <item>
+      <title>Data representation</title>
+      <link>https://hugocisneros.com/notes/data_representation/</link>
+      <pubDate>Thu, 02 Jul 2020 10:22:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/data_representation/</guid>
+      <description>tags Machine learning  Data representation is about finding compact representation of high dimensional data (such as images, videos, 3D shapes, etc.)
+Several methods have been developed for this purpose such as PCA, Neural networks-based representation, Autoencoders.</description>
+    </item>
+    
+    <item>
+      <title>Adversarial examples</title>
+      <link>https://hugocisneros.com/notes/adversarial_examples/</link>
+      <pubDate>Thu, 02 Jul 2020 10:17:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/adversarial_examples/</guid>
+      <description> tags Machine learning, Neural networks  Adversarial examples in Reinforcement learning </description>
+    </item>
+    
+    <item>
+      <title>Kernel Methods</title>
+      <link>https://hugocisneros.com/notes/kernel_methods/</link>
+      <pubDate>Wed, 01 Jul 2020 08:14:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/kernel_methods/</guid>
+      <description> tags Machine learning  </description>
+    </item>
+    
+  </channel>
+</rss>

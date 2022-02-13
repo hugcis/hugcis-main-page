@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Combinatorics on Hugo Cisneros</title>
+    <link>https://hugocisneros.com/tags/combinatorics/</link>
+    <description>Recent content in Combinatorics on Hugo Cisneros</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 09 Jul 2020 12:43:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/tags/combinatorics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Talk: Differentiation of black-box combinatorial solvers</title>
+      <link>https://hugocisneros.com/notes/talk_differentiation_of_black_box_combinatorial_solvers/</link>
+      <pubDate>Thu, 09 Jul 2020 12:43:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/talk_differentiation_of_black_box_combinatorial_solvers/</guid>
+      <description>presenter Michal Rolinek tags Combinatorics, Machine learning  The goal is to merge combinatorial optimization and deep learning.
+Make use of strong battle tested optimization methods. Some of those can find almost-optimal solutions to NP-hard problems in ~quadratic time.
+Goal is to cover many combinatorial problems, TSP multi-cut, etc.
+ fast backward pass theoretically sound easy to use  But the goal is not to take a combinatorial problem but just relax it to make it differentiable, because there is often a huge price to pay for this.</description>
+    </item>
+    
+  </channel>
+</rss>

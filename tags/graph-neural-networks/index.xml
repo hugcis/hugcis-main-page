@@ -6,7 +6,7 @@
     <description>Recent content in Graph neural networks on Hugo Cisneros</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 24 Jan 2019 12:00:00 +0000</lastBuildDate><atom:link href="https://hugocisneros.com/tags/graph-neural-networks/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 24 Feb 2021 11:33:00 +0100</lastBuildDate><atom:link href="https://hugocisneros.com/tags/graph-neural-networks/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Graph neural networks for influence maximization</title>
       <link>https://hugocisneros.com/projects/graph_nn_for_influence_maximization/</link>
@@ -18,6 +18,33 @@
 &lt;li&gt;&lt;a href=&#34;https://hugocisneros.com/pdf/Cisneros_slides_graph_nn_im.pdf&#34;&gt;Project slides&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://hugocisneros.com/pdf/Cisneros_report_graph_nn_im.pdf&#34;&gt;PDF project report&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Message-passing graph networks</title>
+      <link>https://hugocisneros.com/notes/message_passing_graph_networks/</link>
+      <pubDate>Wed, 24 Feb 2021 11:33:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/message_passing_graph_networks/</guid>
+      <description> tags Graph neural networks  </description>
+    </item>
+    
+    <item>
+      <title>Attention graph networks</title>
+      <link>https://hugocisneros.com/notes/attention_graph_networks/</link>
+      <pubDate>Wed, 24 Feb 2021 11:32:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/attention_graph_networks/</guid>
+      <description> tags Graph neural networks, Attention  </description>
+    </item>
+    
+    <item>
+      <title>Graph convolutional networks</title>
+      <link>https://hugocisneros.com/notes/graph_convolutional_networks/</link>
+      <pubDate>Tue, 01 Dec 2020 15:34:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/graph_convolutional_networks/</guid>
+      <description> tags Convolutional neural networks, Graph neural networks  </description>
     </item>
     
   </channel>

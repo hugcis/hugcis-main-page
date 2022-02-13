@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Convolutional neural networks on Hugo Cisneros</title>
+    <link>https://hugocisneros.com/tags/convolutional-neural-networks/</link>
+    <description>Recent content in Convolutional neural networks on Hugo Cisneros</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 25 Mar 2021 09:58:00 +0100</lastBuildDate><atom:link href="https://hugocisneros.com/tags/convolutional-neural-networks/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Notes on: Network Deconvolution by Ye, C., Evanusa, M., He, H., Mitrokhin, A., Goldstein, T., Yorke, J. A., Fermuller, Cornelia, … (2020)</title>
+      <link>https://hugocisneros.com/notes/yenetworkdeconvolution2020/</link>
+      <pubDate>Thu, 25 Mar 2021 09:58:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/yenetworkdeconvolution2020/</guid>
+      <description>tags Convolutional neural networks, Neural network training source (Ye et al. 2020)  Summary This paper introduces so-called Network Deconvolution, advertised as a way to remove pixel-wise and channel-wise correlation in deep neural networks.
+The authors base their new operator on the optimal configuration for \(L_2\) linear regression, where gradient descent converges in one single step if and only if:
+\[ \frac{1}{N}X^t X = I \] where \(X\) is the feature matrix and \(N\) the number of samples.</description>
+    </item>
+    
+    <item>
+      <title>Graph convolutional networks</title>
+      <link>https://hugocisneros.com/notes/graph_convolutional_networks/</link>
+      <pubDate>Tue, 01 Dec 2020 15:34:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/graph_convolutional_networks/</guid>
+      <description> tags Convolutional neural networks, Graph neural networks  </description>
+    </item>
+    
+  </channel>
+</rss>

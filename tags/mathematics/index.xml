@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mathematics on Hugo Cisneros</title>
+    <link>https://hugocisneros.com/tags/mathematics/</link>
+    <description>Recent content in Mathematics on Hugo Cisneros</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 27 Jan 2022 09:53:00 +0100</lastBuildDate><atom:link href="https://hugocisneros.com/tags/mathematics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Moore-Penrose inverse</title>
+      <link>https://hugocisneros.com/notes/moore_penrose_inverse/</link>
+      <pubDate>Thu, 27 Jan 2022 09:53:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/moore_penrose_inverse/</guid>
+      <description>tags Mathematics  The MP inverse exists and is unique for any matrix \(A\). When \(A\) has linearly independent columns, the MP inverse \(A^+\) is \[ A^+ = (A^* A)^{-1 } A^* \]
+Where \(A^*\) is the conjugate transpose of \(A\).
+If the rows are linearly independent, \[ A^+ = A^* (AA^*)^{-1} \].</description>
+    </item>
+    
+    <item>
+      <title>Tropical semiring</title>
+      <link>https://hugocisneros.com/notes/tropical_semiring/</link>
+      <pubDate>Thu, 30 Sep 2021 12:36:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/tropical_semiring/</guid>
+      <description>tags Mathematics  Definition The min tropical semiring is the semiring \((\mathbb{R} \cup \{ +\infty \}, \oplus, \otimes )\) with the operations:
+ \(x \oplus y = \min(x, y)\) \(x \otimes y = x + y\)  The unit for \(\oplus\) is \(+\infty\) and the unit for \(\otimes\) is \(0\). The max tropical semiring is defined similarly by replacing \(\min\) with \(\max\).
+Relation with shortest path algorithms There is an interesting connection between the min tropical semiring and Dijkstra&amp;rsquo;s algorithm.</description>
+    </item>
+    
+    <item>
+      <title>Differential equations</title>
+      <link>https://hugocisneros.com/notes/differential_equations/</link>
+      <pubDate>Mon, 30 Aug 2021 17:12:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/differential_equations/</guid>
+      <description> tags Mathematics  </description>
+    </item>
+    
+    <item>
+      <title>Automated theorem proving</title>
+      <link>https://hugocisneros.com/notes/automated_theorem_proving/</link>
+      <pubDate>Mon, 14 Jun 2021 11:25:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/automated_theorem_proving/</guid>
+      <description> tags Mathematics  Machine learning for theorem proving </description>
+    </item>
+    
+    <item>
+      <title>Matrix factorization</title>
+      <link>https://hugocisneros.com/notes/matrix_factorization/</link>
+      <pubDate>Wed, 21 Apr 2021 15:34:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/matrix_factorization/</guid>
+      <description>tags Mathematics  LU Factorization  resources Nick Higham&amp;rsquo;s blog  An LU factorization of a \(n \times n\) matrix \(A\) is a factorization \(A = LU\), where \(L\) is lower triangular and \(U\) is upper triangular
+LUP factorization LU factorization with partial pivoting: \(PA = LU\) with \(P\) a permutation matrix.
+LDU factorization Lower-diagonal upper factorization: \(A = LDU\) with \(D\) a diagonal matrix and \(L\) and \(U\) are uni-triangular (triangular with diagonal one).</description>
+    </item>
+    
+    <item>
+      <title>Graphs</title>
+      <link>https://hugocisneros.com/notes/graphs/</link>
+      <pubDate>Wed, 24 Feb 2021 11:33:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/graphs/</guid>
+      <description> tags Mathematics, Computer science  </description>
+    </item>
+    
+    <item>
+      <title>Optimization</title>
+      <link>https://hugocisneros.com/notes/optimization/</link>
+      <pubDate>Fri, 02 Oct 2020 16:43:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/optimization/</guid>
+      <description> tags Mathematics, Applied maths  </description>
+    </item>
+    
+    <item>
+      <title>Fractional calculus</title>
+      <link>https://hugocisneros.com/notes/fractional_calculus/</link>
+      <pubDate>Tue, 28 Jul 2020 17:29:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/fractional_calculus/</guid>
+      <description> tags Mathematics resources Wikipedia  </description>
+    </item>
+    
+    <item>
+      <title>Applied maths</title>
+      <link>https://hugocisneros.com/notes/applied_maths/</link>
+      <pubDate>Tue, 14 Jul 2020 08:34:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/applied_maths/</guid>
+      <description> tags Mathematics  </description>
+    </item>
+    
+    <item>
+      <title>Combinatorics</title>
+      <link>https://hugocisneros.com/notes/combinatorics/</link>
+      <pubDate>Thu, 02 Jul 2020 10:20:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/combinatorics/</guid>
+      <description> tags Mathematics  </description>
+    </item>
+    
+    <item>
+      <title>John Conway</title>
+      <link>https://hugocisneros.com/notes/john_conway/</link>
+      <pubDate>Thu, 02 Jul 2020 10:20:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/john_conway/</guid>
+      <description> tags Mathematics  </description>
+    </item>
+    
+    <item>
+      <title>Hyperbolic geometry</title>
+      <link>https://hugocisneros.com/notes/hyperbolic_geometry/</link>
+      <pubDate>Thu, 02 Jul 2020 09:46:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/hyperbolic_geometry/</guid>
+      <description> tags Mathematics  </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Coding on Hugo Cisneros</title>
+    <link>https://hugocisneros.com/tags/coding/</link>
+    <description>Recent content in Coding on Hugo Cisneros</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 25 Mar 2021 09:56:00 +0100</lastBuildDate><atom:link href="https://hugocisneros.com/tags/coding/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sed utility</title>
+      <link>https://hugocisneros.com/notes/sed_utility/</link>
+      <pubDate>Thu, 25 Mar 2021 09:56:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/sed_utility/</guid>
+      <description>tags Coding  In-place batch file manipulation Delete the same line in many files Let&amp;rsquo;s start by creating a simple text file with three lines. This is what it looks like:
+echo &amp;#34;Hello\nto the\nworld&amp;#34; &amp;gt; test.txt cat test.txt Hello to the world We use sed to remove lines in the file matching some regex. The -i.bak option ensures the file is modified in place.
+sed -i.bak &amp;#39;/to the/d&amp;#39; test.txt cat test.</description>
+    </item>
+    
+    <item>
+      <title>Why programming is a good medium for expressing poorly understood and sloppily-formulated ideas</title>
+      <link>https://hugocisneros.com/notes/why_programming_is_a_good_medium/</link>
+      <pubDate>Tue, 02 Mar 2021 10:17:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/why_programming_is_a_good_medium/</guid>
+      <description>source Link tags Artificial Intelligence, Coding author Marvin Minsky  What can computers do?  The fallacy under discussion is the widespread superstition that we can&amp;rsquo;t write a computer program to do something unless one has an extremely clear, precise formulation of what is to be done, and exactly how to do it.
+ It is generally believed that computer programs cannot be more than a set of rules and instructions for what to do in a given computer state.</description>
+    </item>
+    
+    <item>
+      <title>Regular expressions</title>
+      <link>https://hugocisneros.com/notes/regular_expressions/</link>
+      <pubDate>Tue, 16 Feb 2021 21:10:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/regular_expressions/</guid>
+      <description> tags Coding, NLP  </description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://hugocisneros.com/notes/python/</link>
+      <pubDate>Mon, 28 Sep 2020 10:32:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/python/</guid>
+      <description>tags Programming languages, Coding  Code tips Categories to one-hot This is a handy technique but can be very resource intensive for large arrays.
+import numpy as np a = np.random.randrange(5, size=10) one_hot_a = np.eye(5)[a] Side-output for jupyter notebooks Insert the following block in a notebook cell and execute as code (From Twitter). This will put the output of each cell on the side of the code.
+%%html &amp;lt;style&amp;gt; #notebook-container {width: 100%; background-color: #EEE} .</description>
+    </item>
+    
+    <item>
+      <title>Hilbert curve indexing</title>
+      <link>https://hugocisneros.com/notes/hilbert_curve_indexing/</link>
+      <pubDate>Wed, 02 Sep 2020 09:47:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/hilbert_curve_indexing/</guid>
+      <description>tags Coding  Hilbert curves can be used for an interesting trick involving 2D arrays indexing. Because of the way the Hilbert curve traverses the 2D space, indexing a 2D array this way can be a more cache-friendly solution when frequently accessing neighbors of an array element.
+{{&amp;lt; img src=&amp;quot;/img/hilbertcurve.jpg&amp;quot; title=&amp;ldquo;Hilbert curve with different number of iterations&amp;rdquo; width=600 alt=&amp;ldquo;Hilbert curve with different number of iterations&amp;rdquo; class=&amp;ldquo;center&amp;rdquo; &amp;gt;}}
+C implementation from Wikipedia to convert (x,y) coordinates to linear ones and vice versa:</description>
+    </item>
+    
+    <item>
+      <title>Program synthesis</title>
+      <link>https://hugocisneros.com/notes/program_synthesis/</link>
+      <pubDate>Mon, 27 Jul 2020 15:28:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/program_synthesis/</guid>
+      <description>tags Computer science, Coding  Program synthesis is the task of writing programs automatically for a given tasks. This is widely considered a very hard problem in the general case, as the computational languages we manipulate as human are hard to manipulate &amp;ldquo;smoothly&amp;rdquo;.
+Compilation is a type of program synthesis where both the source language and the target language are well defined. A compiler is written for a given source language/target language pair and is therefore doing well specified program synthesis.</description>
+    </item>
+    
+    <item>
+      <title>Functional programming</title>
+      <link>https://hugocisneros.com/notes/functional_programming/</link>
+      <pubDate>Wed, 22 Jul 2020 10:15:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/functional_programming/</guid>
+      <description> tags Computer science, Coding  Example of functional programming languages  Lisp Haskell  </description>
+    </item>
+    
+    <item>
+      <title>Haskell</title>
+      <link>https://hugocisneros.com/notes/haskell/</link>
+      <pubDate>Wed, 22 Jul 2020 10:14:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/haskell/</guid>
+      <description> tags Programming languages, Coding  </description>
+    </item>
+    
+    <item>
+      <title>Emacs</title>
+      <link>https://hugocisneros.com/notes/emacs/</link>
+      <pubDate>Tue, 14 Jul 2020 08:29:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/emacs/</guid>
+      <description>tags Coding  Emacs uses ELisp to write configuration code and for scripting.
+Tips Delete buffers in helm view In helm buffer list view, individual buffers can be selected with C-Space. Once the buffers you want to delete are selected, M-D will delete them and close helm.</description>
+    </item>
+    
+    <item>
+      <title>Java</title>
+      <link>https://hugocisneros.com/notes/java/</link>
+      <pubDate>Tue, 14 Jul 2020 08:27:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/java/</guid>
+      <description> tags Programming languages, Coding  </description>
+    </item>
+    
+    <item>
+      <title>Javascript</title>
+      <link>https://hugocisneros.com/notes/javascript/</link>
+      <pubDate>Tue, 14 Jul 2020 08:27:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/javascript/</guid>
+      <description> tags Programming languages, Coding  </description>
+    </item>
+    
+    <item>
+      <title>Algorithm</title>
+      <link>https://hugocisneros.com/notes/algorithm/</link>
+      <pubDate>Fri, 10 Jul 2020 09:13:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/algorithm/</guid>
+      <description> tags Computer science, Coding  </description>
+    </item>
+    
+    <item>
+      <title>Rust</title>
+      <link>https://hugocisneros.com/notes/rust/</link>
+      <pubDate>Thu, 09 Jul 2020 14:31:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/rust/</guid>
+      <description> tags Programming languages, Coding  </description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;</title>
+      <link>https://hugocisneros.com/notes/c/</link>
+      <pubDate>Thu, 09 Jul 2020 12:44:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/c/</guid>
+      <description> tags Programming languages, Coding  </description>
+    </item>
+    
+    <item>
+      <title>Ruby</title>
+      <link>https://hugocisneros.com/notes/ruby/</link>
+      <pubDate>Thu, 02 Jul 2020 10:20:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/ruby/</guid>
+      <description> tags Programming languages, Coding  </description>
+    </item>
+    
+    <item>
+      <title>Scala</title>
+      <link>https://hugocisneros.com/notes/scala/</link>
+      <pubDate>Thu, 02 Jul 2020 10:20:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/scala/</guid>
+      <description> tags Programming languages, Coding  </description>
+    </item>
+    
+    <item>
+      <title>Make</title>
+      <link>https://hugocisneros.com/notes/make/</link>
+      <pubDate>Wed, 01 Jul 2020 20:23:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/make/</guid>
+      <description>tags Coding  Make is a build automation tool.
+Don&amp;rsquo;t deal with tabs I have been annoyed with tabs in Makefiles many times. Some editors or copy-pasting functions automatically convert tabs to space and vice-versa and this can break your Makefile.
+With GNU Make 4.0 or later, it is possible to set the prefix to some other fixed token. To use &amp;gt; as a prefix, put this at the beginning of your Makefile:</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ising model on Hugo Cisneros</title>
+    <link>https://hugocisneros.com/tags/ising-model/</link>
+    <description>Recent content in Ising model on Hugo Cisneros</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 24 Aug 2020 09:18:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/tags/ising-model/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Article: The Cartoon Picture of Magnets That Has Transformed Science</title>
+      <link>https://hugocisneros.com/notes/the_cartoon_picture_of_magnets_that_has_transformed_science/</link>
+      <pubDate>Mon, 24 Aug 2020 09:18:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/the_cartoon_picture_of_magnets_that_has_transformed_science/</guid>
+      <description>tags Ising model, Complex Systems source Quanta magazine  The Ising model is an example of very simply defined model that makes complex behavior emerge.
+Originally introduced by Wilhelm Lenz and his graduate student Ernst Ising, its purpose was to understand why magnets lose their attractive power when heated past a certain temperature. The model was first tried in 1D, where it fails to show that a magnet stays magnetized, and therefore abandoned.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cellular automata as CNNs on Hugo Cisneros</title>
+    <link>https://hugocisneros.com/tags/cellular-automata-as-cnns/</link>
+    <description>Recent content in Cellular automata as CNNs on Hugo Cisneros</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 25 Mar 2021 09:57:00 +0100</lastBuildDate><atom:link href="https://hugocisneros.com/tags/cellular-automata-as-cnns/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Notes on: Cellular automata as convolutional neural networks by Gilpin, W. (2018)</title>
+      <link>https://hugocisneros.com/notes/gilpincellularautomataconvolutional2018/</link>
+      <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/gilpincellularautomataconvolutional2018/</guid>
+      <description>tags Cellular automata as CNNs source (Gilpin 2018)  Summary This is one of the only attempt to represent a CA rule as a CNN I have come across. The author uses a deep CNN to learn a rule and studies various information-theoretic quantities in the activation patterns to evaluate the complexity of the rules.
+Comments I am personally very interested by the paper since it is an interesting direction for creating neural-network based rules that can be sampled and efficiently stored and applied.</description>
+    </item>
+    
+  </channel>
+</rss>

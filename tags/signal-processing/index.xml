@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Signal processing on Hugo Cisneros</title>
+    <link>https://hugocisneros.com/tags/signal-processing/</link>
+    <description>Recent content in Signal processing on Hugo Cisneros</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 24 Aug 2021 11:34:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/tags/signal-processing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Compressed sensing</title>
+      <link>https://hugocisneros.com/notes/compressed_sensing/</link>
+      <pubDate>Tue, 24 Aug 2021 11:34:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/compressed_sensing/</guid>
+      <description>tags Signal processing  Description Compressed sensing is a technique to recover a sparse signal from partial observations.
+The signal is described as a $N$-dimensional vector \(\textbf{s}\). We make \(M\) measurements, where a measurements means a projection of the signal \(\textbf{s}\) onto some known vector. The result of all these measurements can be written as \(\textbf{y} = \textbf{Fs}\), where \(\textbf{F}\) is a \(M \times N\) matrix.
+In the context of compressed sensing, we have \(M &amp;lt; N\).</description>
+    </item>
+    
+    <item>
+      <title>Wavelets</title>
+      <link>https://hugocisneros.com/notes/wavelets/</link>
+      <pubDate>Wed, 04 Nov 2020 09:23:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/wavelets/</guid>
+      <description> tags Applied maths, Signal processing  Wavelets are functions with specific properties that make them useful when dealing with images. They are used for lossy image compression.
+Types of wavelets Haar wavelets Daubechies wavelets </description>
+    </item>
+    
+    <item>
+      <title>Image processing</title>
+      <link>https://hugocisneros.com/notes/image_processing/</link>
+      <pubDate>Wed, 04 Nov 2020 09:17:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/image_processing/</guid>
+      <description>tags Applied maths, Signal processing  Scale an image with no interpolation Imagemagick documentation
+convert source.[png|gif|...] -scale 400% target.[png|gif|...] The scale option can also take integer parameters (without the percent sign) to indicate the target size.
+Remove metadata from an image Useful for preserving Online privacy when publishing images. Pictures taken with smartphones and other modern devices often contain large amounts of data about location, time and date and device type.</description>
+    </item>
+    
+  </channel>
+</rss>

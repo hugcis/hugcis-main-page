@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programming languages on Hugo Cisneros</title>
+    <link>https://hugocisneros.com/tags/programming-languages/</link>
+    <description>Recent content in Programming languages on Hugo Cisneros</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 19 Jan 2022 12:11:00 +0100</lastBuildDate><atom:link href="https://hugocisneros.com/tags/programming-languages/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Coding</title>
+      <link>https://hugocisneros.com/notes/coding/</link>
+      <pubDate>Wed, 19 Jan 2022 12:11:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/coding/</guid>
+      <description>tags Computer science, Programming languages  For compiled programming languages, code has to be translated to machine code through a process called compilation</description>
+    </item>
+    
+    <item>
+      <title>Notes on: On the expressive power of programming languages by Felleisen, M. (1991)</title>
+      <link>https://hugocisneros.com/notes/felleisenexpressivepowerprogramming1991/</link>
+      <pubDate>Thu, 25 Mar 2021 09:58:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/felleisenexpressivepowerprogramming1991/</guid>
+      <description>source (Felleisen 1991) tags Programming languages resources PWL Conf talk  Summary Programming languages have different levels of expressiveness. While can be used to create for loops, binary if statements can implement multi-if statements, etc.
+Turing tarpit: once we get to programming languages that are universal, everything can be re-written into anything and the notion of &amp;ldquo;expressiveness&amp;rdquo; of programming languages doesn&amp;rsquo;t make much sense.
+For a language \(L\) and \(F + L\) the addition of some features, can we say the second is more expressive than the first?</description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://hugocisneros.com/notes/python/</link>
+      <pubDate>Mon, 28 Sep 2020 10:32:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/python/</guid>
+      <description>tags Programming languages, Coding  Code tips Categories to one-hot This is a handy technique but can be very resource intensive for large arrays.
+import numpy as np a = np.random.randrange(5, size=10) one_hot_a = np.eye(5)[a] Side-output for jupyter notebooks Insert the following block in a notebook cell and execute as code (From Twitter). This will put the output of each cell on the side of the code.
+%%html &amp;lt;style&amp;gt; #notebook-container {width: 100%; background-color: #EEE} .</description>
+    </item>
+    
+    <item>
+      <title>Assembly language</title>
+      <link>https://hugocisneros.com/notes/assembly_language/</link>
+      <pubDate>Sun, 26 Jul 2020 19:09:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/assembly_language/</guid>
+      <description> tags Programming languages  </description>
+    </item>
+    
+    <item>
+      <title>Haskell</title>
+      <link>https://hugocisneros.com/notes/haskell/</link>
+      <pubDate>Wed, 22 Jul 2020 10:14:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/haskell/</guid>
+      <description> tags Programming languages, Coding  </description>
+    </item>
+    
+    <item>
+      <title>Java</title>
+      <link>https://hugocisneros.com/notes/java/</link>
+      <pubDate>Tue, 14 Jul 2020 08:27:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/java/</guid>
+      <description> tags Programming languages, Coding  </description>
+    </item>
+    
+    <item>
+      <title>Javascript</title>
+      <link>https://hugocisneros.com/notes/javascript/</link>
+      <pubDate>Tue, 14 Jul 2020 08:27:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/javascript/</guid>
+      <description> tags Programming languages, Coding  </description>
+    </item>
+    
+    <item>
+      <title>Lisp</title>
+      <link>https://hugocisneros.com/notes/lisp/</link>
+      <pubDate>Fri, 10 Jul 2020 11:17:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/lisp/</guid>
+      <description>tags Programming languages  Lisp has been a popular set of language for Artificial Intelligence research, from the 1970s to the 1990s.</description>
+    </item>
+    
+    <item>
+      <title>Rust</title>
+      <link>https://hugocisneros.com/notes/rust/</link>
+      <pubDate>Thu, 09 Jul 2020 14:31:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/rust/</guid>
+      <description> tags Programming languages, Coding  </description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;</title>
+      <link>https://hugocisneros.com/notes/c/</link>
+      <pubDate>Thu, 09 Jul 2020 12:44:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/c/</guid>
+      <description> tags Programming languages, Coding  </description>
+    </item>
+    
+    <item>
+      <title>Ruby</title>
+      <link>https://hugocisneros.com/notes/ruby/</link>
+      <pubDate>Thu, 02 Jul 2020 10:20:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/ruby/</guid>
+      <description> tags Programming languages, Coding  </description>
+    </item>
+    
+    <item>
+      <title>Scala</title>
+      <link>https://hugocisneros.com/notes/scala/</link>
+      <pubDate>Thu, 02 Jul 2020 10:20:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/scala/</guid>
+      <description> tags Programming languages, Coding  </description>
+    </item>
+    
+  </channel>
+</rss>

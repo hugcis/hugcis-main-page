@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Climate on Hugo Cisneros</title>
+    <link>https://hugocisneros.com/tags/climate/</link>
+    <description>Recent content in Climate on Hugo Cisneros</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 14 Jul 2020 08:26:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/tags/climate/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Jevons paradox</title>
+      <link>https://hugocisneros.com/notes/jevons_paradox/</link>
+      <pubDate>Tue, 14 Jul 2020 08:26:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/jevons_paradox/</guid>
+      <description>tags Economics, Climate resources (York and McGee 2016; Polimeni et al. 2015), Wikipedia, Real climate economics blog posts (Jim Barrett)  Definition Jevons Paradox is used to describe the situation where an increase in resource efficiency triggered by technological innovation has the counter-intuitive effect of raising the demand and increasing the overall consumption.
+It was first described in W. S. Jenvons&#39; book The Coal question in 1865.
+It is closely to another paradox well known in road planning (Downs–Thomson paradox) and Wirth&amp;rsquo;s law in software engineering.</description>
+    </item>
+    
+    <item>
+      <title>Kaya identity</title>
+      <link>https://hugocisneros.com/notes/kaya_identity/</link>
+      <pubDate>Tue, 14 Jul 2020 08:24:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/kaya_identity/</guid>
+      <description>tags Climate  Definition It was developed by Japanese economist Yoichi Kaya.
+\(F\) is global CO2 emissions from human sources, \(P\) is global population, \(G\) is GPD, \(E\) is global energy consumption. \[ F = P \times \frac{G}{P} \times \frac{E}{G} \times \frac{F}{E} \]
+The fractional terms correspond to well studied quantities:
+ \(G/P\) is the GDP per capita \(E/G\) is the energy intensity of the GDP \(F/E\) is the carbon footprint of energy  Interpretation This identity is simply a rewrite of \(F=F\) in terms of commonly used quantities to highlight several levers one could act on to reduce CO2 emissions.</description>
+    </item>
+    
+  </channel>
+</rss>

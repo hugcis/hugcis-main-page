@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data representation on Hugo Cisneros</title>
+    <link>https://hugocisneros.com/tags/data-representation/</link>
+    <description>Recent content in Data representation on Hugo Cisneros</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 30 Jan 2022 17:42:00 +0100</lastBuildDate><atom:link href="https://hugocisneros.com/tags/data-representation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Implicit neural representations</title>
+      <link>https://hugocisneros.com/notes/implicit_neural_representations/</link>
+      <pubDate>Sun, 30 Jan 2022 17:42:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/implicit_neural_representations/</guid>
+      <description>tags Data representation, Neural networks resources Sitzmann&amp;rsquo;s Awesome Implicit Neural Representations github page  Implicit neural representations is about parameterizing a continuous differentiable signal with a neural network. The signal is encoded within the neural network, providing a possibly more compact representation or allowing smooth parameter-based manipulation of that signal. This is a type of regression problem.
+Applications of these learned representations range from simple compression, to 3D scene reconstruction from 2D images, super-resolution, semantic information inference, etc.</description>
+    </item>
+    
+    <item>
+      <title>PCA</title>
+      <link>https://hugocisneros.com/notes/pca/</link>
+      <pubDate>Thu, 25 Mar 2021 09:58:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/pca/</guid>
+      <description> tags Data representation  </description>
+    </item>
+    
+    <item>
+      <title>Autoencoders</title>
+      <link>https://hugocisneros.com/notes/autoencoders/</link>
+      <pubDate>Mon, 13 Jul 2020 10:19:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/autoencoders/</guid>
+      <description>tags Neural networks, Data representation  Autoencoders and PCA The relation between Autoencoders and PCA is strong. In particular, a very small autoencoder with only linear activations seems intuitively very close to PCA decomposition. (Bourlard and Kamp 1988) gives an interesting analysis of the uselessness of the activation functions in the encoding layers of an autoencoder when there is no activations in the output layers. In that case, autoencoding is closely related to a sinigular value decomposition of the input data.</description>
+    </item>
+    
+  </channel>
+</rss>

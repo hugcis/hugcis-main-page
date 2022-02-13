@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Optimization on Hugo Cisneros</title>
+    <link>https://hugocisneros.com/tags/optimization/</link>
+    <description>Recent content in Optimization on Hugo Cisneros</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 27 Jan 2022 17:12:00 +0100</lastBuildDate><atom:link href="https://hugocisneros.com/tags/optimization/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linear programming</title>
+      <link>https://hugocisneros.com/notes/linear_programming/</link>
+      <pubDate>Thu, 27 Jan 2022 17:12:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/linear_programming/</guid>
+      <description>tags Optimization  Linear programs are problems that can be expressed as \[\begin{align} &amp;amp; \text{Find a vector} &amp;amp;&amp;amp; \mathbf{x} \\ &amp;amp; \text{that maximizes} &amp;amp;&amp;amp; \mathbf{c}^T \mathbf{x}\\ &amp;amp; \text{subject to} &amp;amp;&amp;amp; A \mathbf{x} \leq \mathbf{b} \\ &amp;amp; \text{and} &amp;amp;&amp;amp; \mathbf{x} \ge \mathbf{0}. \end{align} \]</description>
+    </item>
+    
+    <item>
+      <title>Gradient descent</title>
+      <link>https://hugocisneros.com/notes/gradient_descent/</link>
+      <pubDate>Thu, 02 Sep 2021 12:48:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/gradient_descent/</guid>
+      <description>tags Optimization, Algorithm resources Slides by Christian S. Perone  Fixed learning rate The simplest way to apply the gradient descent algorithm on a function \(g\) convex and $L-$smooth on \(\mathbb{R}^d\) is to use the parameter update:
+\[ \theta_t = \theta_{t-1} - \gamma g&#39;(\theta_{t-1}) \]
+This is based on the standard first-order approximation of the function \(g\). It can be very sensitive to the learning rate and suffer from pathological curvature.</description>
+    </item>
+    
+    <item>
+      <title>Ordinary least squares</title>
+      <link>https://hugocisneros.com/notes/ordinary_least_squares/</link>
+      <pubDate>Thu, 25 Mar 2021 09:56:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/ordinary_least_squares/</guid>
+      <description> tags Applied maths, Optimization  </description>
+    </item>
+    
+    <item>
+      <title>Automatic differentiation</title>
+      <link>https://hugocisneros.com/notes/automatic_differentiation/</link>
+      <pubDate>Wed, 03 Mar 2021 08:43:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/automatic_differentiation/</guid>
+      <description> tags Applied maths, Optimization  </description>
+    </item>
+    
+    <item>
+      <title>Gradient descent for wide two-layer neural networks – I : Global convergence</title>
+      <link>https://hugocisneros.com/notes/gradient_descent_for_wide_two_layer_neural_networks_i_global_convergence/</link>
+      <pubDate>Wed, 09 Dec 2020 14:11:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/gradient_descent_for_wide_two_layer_neural_networks_i_global_convergence/</guid>
+      <description>tags Neural networks, Optimization authors Francis Bach, Lénaïc Chizat source Francis Bach&amp;rsquo;s blog  In the rest, we use the mathematical definition of a neural network from Neural networks.
+Two layer neural network Even simple neural network models are very difficult to analyze. This is primarily due to two difficulties:
+ Non-linearity: the problem is typically non-convex, which in general is a bad thing in optimization. Overparametrization: there are often a lot of parameters, sometimes many more parameters than observations.</description>
+    </item>
+    
+    <item>
+      <title>Gradient flow</title>
+      <link>https://hugocisneros.com/notes/gradient_flow/</link>
+      <pubDate>Wed, 09 Dec 2020 14:11:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/gradient_flow/</guid>
+      <description>tags Gradient descent, Optimization  The gradient flow for a model parametrized by parameters \(w\) and a loss function \(L\) is written:
+\[ \dot{w} = - \nabla L (w(t)) \]</description>
+    </item>
+    
+    <item>
+      <title>Neural network training</title>
+      <link>https://hugocisneros.com/notes/neural_network_training/</link>
+      <pubDate>Wed, 28 Oct 2020 09:32:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/neural_network_training/</guid>
+      <description>tags Neural networks, Machine learning, Optimization  Neural network training as development in program space A neural network as a whole can be seen as a dynamical system. Its state is the collection of its parameters, and its evolution function is the optimization step taken when training the network.
+In such a framework, the goal of training the neural network is to reach a form of attractor further optimization steps don&amp;rsquo;t change the state of the neural network.</description>
+    </item>
+    
+  </channel>
+</rss>

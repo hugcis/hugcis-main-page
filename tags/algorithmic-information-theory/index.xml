@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Algorithmic Information theory on Hugo Cisneros</title>
+    <link>https://hugocisneros.com/tags/algorithmic-information-theory/</link>
+    <description>Recent content in Algorithmic Information theory on Hugo Cisneros</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 25 Mar 2021 09:58:00 +0100</lastBuildDate><atom:link href="https://hugocisneros.com/tags/algorithmic-information-theory/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kolmogorov complexity</title>
+      <link>https://hugocisneros.com/notes/kolmogorov_complexity/</link>
+      <pubDate>Thu, 25 Mar 2021 09:58:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/kolmogorov_complexity/</guid>
+      <description>tags Complexity, Algorithmic Information theory, Computability theory  Definition Invariance theorem For two descriptive languages \(L_1\) and \(L_2\) and their respective associated Kolmogorov complexity functions \(K_1\) and \(K_2\), there exist a constant \(c\) &amp;mdash; dependant only on \(L_1, L_2\) such that \[ \forall s, -c \leq K_1(s) - K_2(s) \leq c \]
+In other words, there is always a bounded difference between the Kolmogorov complexity in two separate description languages.</description>
+    </item>
+    
+    <item>
+      <title>Minimum description length</title>
+      <link>https://hugocisneros.com/notes/minimum_description_length/</link>
+      <pubDate>Thu, 25 Mar 2021 09:58:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/minimum_description_length/</guid>
+      <description> tags Complexity, Algorithmic Information theory papers (Grunwald 2007; Grunwald 2004)  Bibliography Grunwald, Peter. 2007. The Minimum Description Length Principle. Adaptive Computation and Machine Learning. Cambridge, Mass: MIT Press. Grunwald, Peter. June 4, 2004. &#34;A Tutorial Introduction to the Minimum Description Length Principle&#34;. Arxiv:math/0406077. http://arxiv.org/abs/math/0406077.  </description>
+    </item>
+    
+    <item>
+      <title>Halting probability</title>
+      <link>https://hugocisneros.com/notes/halting_probability/</link>
+      <pubDate>Thu, 25 Mar 2021 09:56:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/halting_probability/</guid>
+      <description> tags Computability theory, Algorithmic Information theory, Halting problem  </description>
+    </item>
+    
+    <item>
+      <title>Algorithmic probability</title>
+      <link>https://hugocisneros.com/notes/algorithmic_probability/</link>
+      <pubDate>Tue, 14 Jul 2020 08:34:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/algorithmic_probability/</guid>
+      <description> tags Complexity, Algorithmic Information theory  </description>
+    </item>
+    
+  </channel>
+</rss>

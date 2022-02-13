@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Neural cellular automata on Hugo Cisneros</title>
+    <link>https://hugocisneros.com/tags/neural-cellular-automata/</link>
+    <description>Recent content in Neural cellular automata on Hugo Cisneros</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 20 Aug 2021 15:30:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/tags/neural-cellular-automata/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Neural cellular automata and implicit representations</title>
+      <link>https://hugocisneros.com/notes/neural_cellular_automata_and_implicit_representations/</link>
+      <pubDate>Fri, 20 Aug 2021 15:30:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/neural_cellular_automata_and_implicit_representations/</guid>
+      <description> tags Cellular automata, Neural cellular automata  </description>
+    </item>
+    
+  </channel>
+</rss>

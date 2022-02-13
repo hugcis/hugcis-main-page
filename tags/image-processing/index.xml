@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Image processing on Hugo Cisneros</title>
+    <link>https://hugocisneros.com/tags/image-processing/</link>
+    <description>Recent content in Image processing on Hugo Cisneros</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 25 Mar 2021 09:58:00 +0100</lastBuildDate><atom:link href="https://hugocisneros.com/tags/image-processing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Computer vision</title>
+      <link>https://hugocisneros.com/notes/computer_vision/</link>
+      <pubDate>Thu, 25 Mar 2021 09:58:00 +0100</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/computer_vision/</guid>
+      <description> tags Machine learning, Image processing  </description>
+    </item>
+    
+    <item>
+      <title>Edge detection</title>
+      <link>https://hugocisneros.com/notes/edge_detection/</link>
+      <pubDate>Tue, 14 Jul 2020 08:30:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/edge_detection/</guid>
+      <description>tags Image processing  Canny edge detection Canny edge detection in the most famous edge detection algorithm, originally developed by John Canny in 1986.
+The algorithm has 5 steps:
+ Smooth the image with Gaussian filtering. Intensity gradients. First derivative in the horizontal (\(\mathbf{G}_x\)) and vertical (\(\mathbf{G}_y\)) directions are computed. Gradient intensity \(\mathbf{G} = \sqrt{\mathbf{G}_x^2 + \mathbf{G}_y^2}\) and direction \(\mathbf{\Theta} = \text{atan2}(\mathbf{G}_y, \mathbf{G}_x)\) are then computed. Edge thinning to reduce blurring from the first two steps.</description>
+    </item>
+    
+  </channel>
+</rss>

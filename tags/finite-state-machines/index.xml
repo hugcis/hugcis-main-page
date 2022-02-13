@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Finite state machines on Hugo Cisneros</title>
+    <link>https://hugocisneros.com/tags/finite-state-machines/</link>
+    <description>Recent content in Finite state machines on Hugo Cisneros</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 01 Jul 2020 14:20:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/tags/finite-state-machines/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cellular automata as regular languages</title>
+      <link>https://hugocisneros.com/notes/cellular_automata_as_regular_languages/</link>
+      <pubDate>Wed, 01 Jul 2020 14:20:00 +0200</pubDate>
+      
+      <guid>https://hugocisneros.com/notes/cellular_automata_as_regular_languages/</guid>
+      <description>tags Cellular automata, Finite state machines  From (Hanson and Crutchfield 1997):
+ Finite state machines are appropriate for investigating pattern dynamics of CAs for a number of reasons, among which we may note the following:
+ FAs encompass the full range of behavior types from periodic to complex to random; Characterization of patterns using FAs makes possible a definition of pattern complexity which is both natural and computable in practice; Ensemble evolution in the space of regular languages is closed under the CA rule; The CA update rule is itself an FST; Automated inference techniques exist for reconstructing FAs from experimental data   Bibliography Hanson, James E.</description>
+    </item>
+    
+  </channel>
+</rss>
