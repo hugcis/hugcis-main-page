@@ -5,6 +5,7 @@
   
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1">
+  <base href="https://hugocisneros.com/">
   <title>Hugo Cisneros</title>
   <meta property="og:title" content="Hugo Cisneros">
   <meta property="og:type" content="website">
@@ -135,7 +136,7 @@
       <div id="#open-modal-visualizing-computation-in-large-scale-cellular-automata" class="modal-window">
         <div>
           <a id="#close-modal-visualizing-computation-in-large-scale-cellular-automata" title="Close" class="modal-close">✕</a>
-          <h3>Cite <i>Visualizing computation in large-scale cellular automata</i></h3>
+          <h3>Cite <i>Visualizing computation in large-scale cellular automata</i></h3><button>Copy to clipboard</button>
           <pre><code>@article{doi:10.1162/isal a 00277,
  author = {Cisneros, Hugo and Sivic, Josef and Mikolov, Tomas},
  title = {Visualizing computation in large-scale cellular automata},
@@ -153,7 +154,7 @@
       <div id="#open-modal-evolving-structures-in-complex-systems" class="modal-window">
         <div>
           <a id="#close-modal-evolving-structures-in-complex-systems" title="Close" class="modal-close">✕</a>
-          <h3>Cite <i>Evolving Structures in Complex Systems</i></h3>
+          <h3>Cite <i>Evolving Structures in Complex Systems</i></h3><button>Copy to clipboard</button>
           <pre><code>@inproceedings{9002840,
  author={H. {Cisneros} and J. {Sivic} and T. {Mikolov}},
  booktitle={2019 IEEE Symposium Series on Computational Intelligence (SSCI)},
@@ -193,12 +194,19 @@
   var list = document.getElementsByClassName("open-modal");
   for (let item of list) {
      var id = item.attributes["data-target"].textContent;
-                 var modWin = document.getElementById(id);
+         var modWin = document.getElementById(id);
      var closeButton = document.getElementById(id.replace("open", "close"));
 
-           item.addEventListener('click', toggleModal(modWin));
+         item.addEventListener('click', toggleModal(modWin));
      closeButton.addEventListener('click', toggleModal(modWin));
      modWin.addEventListener('click', toggleModal(modWin));
+  }
+  function copyCitationContent() {
+     navigator.clipboard.writeText("<empty clipboard>").then(function() {
+          
+     }, function() {
+          
+     });
   }
   </script>
 </body>
