@@ -4,7 +4,7 @@
 
   
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
   <base href="https://hugocisneros.com/">
   <title>Hugo Cisneros</title>
   <meta property="og:title" content="Hugo Cisneros">
@@ -97,7 +97,7 @@
       </ul>
       <h2 id="publications">Publications</h2>
       <div class="pub-wrapper" id="visualizing-computation-in-large-scale-cellular-automata" itemscope itemtype="http://schema.org/ScholarlyArticle">
-        <div class="pub-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img alt="Visualizing computation in large-scale cellular automata paper illustration" itemprop="url" src="/img/visualize_paper_illustration.jpg" style="width: 100%;"></div>
+        <div class="pub-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img alt="Visualizing computation in large-scale cellular automata paper illustration" itemprop="url" src="/img/visualize_paper_illustration.jpg" style="width:100%"></div>
         <div class="publication">
           <b><span itemprop="author">H. Cisneros</span></b>, <span itemprop="author">J. Sivic</span> <span itemprop="author">T. Mikolov</span><br>
           <b><a href="/pdf/visualizing_computation.pdf"><span itemprop="name">Visualizing computation in large-scale cellular automata</span></a></b>
@@ -115,7 +115,7 @@
         </div>
       </div>
       <div class="pub-wrapper" id="evolving-structures-in-complex-systems" itemscope itemtype="http://schema.org/ScholarlyArticle">
-        <div class="pub-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img alt="Evolving Structures in Complex Systems paper illustration" itemprop="url" src="/img/nn_archi.svg" style="width: 100%;"></div>
+        <div class="pub-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img alt="Evolving Structures in Complex Systems paper illustration" itemprop="url" src="/img/nn_archi.svg" style="width:100%"></div>
         <div class="publication">
           <b><span itemprop="author">H. Cisneros</span></b>, <span itemprop="author">J. Sivic</span> <span itemprop="author">T. Mikolov</span><br>
           <b><a href="/pdf/evolving_structures.pdf"><span itemprop="name">Evolving Structures in Complex Systems</span></a></b>
@@ -180,34 +180,7 @@
     </footer>
   </div>
   <script>
-
-  function toggleModal(win) {
-     return ((event) => {
-         if (event.target.id.startsWith("#open-modal") || 
-             event.target.id.startsWith("#close-modal") || 
-             event.target.className == "open-modal") {
-             event.stopPropagation();
-             win.classList.toggle("closed")
-         }
-     });
-  }
-  var list = document.getElementsByClassName("open-modal");
-  for (let item of list) {
-     var id = item.attributes["data-target"].textContent;
-         var modWin = document.getElementById(id);
-     var closeButton = document.getElementById(id.replace("open", "close"));
-
-         item.addEventListener('click', toggleModal(modWin));
-     closeButton.addEventListener('click', toggleModal(modWin));
-     modWin.addEventListener('click', toggleModal(modWin));
-  }
-  function copyCitationContent() {
-     navigator.clipboard.writeText("<empty clipboard>").then(function() {
-          
-     }, function() {
-          
-     });
-  }
+  var list,id,modWin,closeButton;function toggleModal(a){return b=>{(b.target.id.startsWith("#open-modal")||b.target.id.startsWith("#close-modal")||b.target.className=="open-modal")&&(b.stopPropagation(),a.classList.toggle("closed"))}}list=document.getElementsByClassName("open-modal");for(let a of list)id=a.attributes["data-target"].textContent,modWin=document.getElementById(id),closeButton=document.getElementById(id.replace("open","close")),a.addEventListener('click',toggleModal(modWin)),closeButton.addEventListener('click',toggleModal(modWin)),modWin.addEventListener('click',toggleModal(modWin));function copyCitationContent(){navigator.clipboard.writeText("<empty clipboard>").then(function(){},function(){})}
   </script>
 </body>
 </html>

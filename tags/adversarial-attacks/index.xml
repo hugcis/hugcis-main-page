@@ -1,21 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Adversarial attacks on Hugo Cisneros</title>
-    <link>https://hugocisneros.com/tags/adversarial-attacks/</link>
-    <description>Recent content in Adversarial attacks on Hugo Cisneros</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 30 Jan 2019 15:10:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/tags/adversarial-attacks/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Adversarial examples in reinforcement learning</title>
-      <link>https://hugocisneros.com/projects/adversarial_rl/</link>
-      <pubDate>Wed, 30 Jan 2019 15:10:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/projects/adversarial_rl/</guid>
-      <description>Links  Project slides Project report  Description The goal of this project was to write a review of adversarial examples in RL as of January 2019. It was also made into a talk for which the slides can be found above.
-This project was a collaboration with Clément Acher, part of a reinforcement learning course taught by Alessandro Lazaric and Matteo Pirotta.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Adversarial attacks on Hugo Cisneros</title><link>https://hugocisneros.com/tags/adversarial-attacks/</link><description>Recent content in Adversarial attacks on Hugo Cisneros</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 30 Jan 2019 15:10:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/tags/adversarial-attacks/index.xml" rel="self" type="application/rss+xml"/><item><title>Adversarial examples in reinforcement learning</title><link>https://hugocisneros.com/projects/adversarial_rl/</link><pubDate>Wed, 30 Jan 2019 15:10:00 +0200</pubDate><guid>https://hugocisneros.com/projects/adversarial_rl/</guid><description>Links Project slides Project report Description The goal of this project was to write a review of adversarial examples in RL as of January 2019. It was also made into a talk for which the slides can be found above.
+This project was a collaboration with Clément Acher, part of a reinforcement learning course taught by Alessandro Lazaric and Matteo Pirotta.</description></item></channel></rss>

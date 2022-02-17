@@ -1,254 +1,28 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Cellular automata on Hugo Cisneros</title>
-    <link>https://hugocisneros.com/tags/cellular-automata/</link>
-    <description>Recent content in Cellular automata on Hugo Cisneros</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 17 Jan 2022 17:08:00 +0100</lastBuildDate><atom:link href="https://hugocisneros.com/tags/cellular-automata/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Graph cellular automata</title>
-      <link>https://hugocisneros.com/notes/graph_cellular_automata/</link>
-      <pubDate>Mon, 17 Jan 2022 17:08:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/graph_cellular_automata/</guid>
-      <description>tags Cellular automata, Graphs  This concept was mentioned in (O&amp;rsquo;Sullivan 2001), although it may not be the first ever mention of it.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cellular automata on Hugo Cisneros</title><link>https://hugocisneros.com/tags/cellular-automata/</link><description>Recent content in Cellular automata on Hugo Cisneros</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 17 Jan 2022 17:08:00 +0100</lastBuildDate><atom:link href="https://hugocisneros.com/tags/cellular-automata/index.xml" rel="self" type="application/rss+xml"/><item><title>Graph cellular automata</title><link>https://hugocisneros.com/notes/graph_cellular_automata/</link><pubDate>Mon, 17 Jan 2022 17:08:00 +0100</pubDate><guid>https://hugocisneros.com/notes/graph_cellular_automata/</guid><description>tags Cellular automata, Graphs This concept was mentioned in (O&amp;rsquo;Sullivan 2001), although it may not be the first ever mention of it.
 The idea is also similar to graph convolutional networks and other graph neural networks, where the goal is to construct an update function for a node that doesn&amp;rsquo;t depend on the number of neighboring nodes. This enables running cellular automata on non-grid structures.
-This idea was recently published at NeurIPS 2021 (Grattarola, Liviand Alippi 2021).</description>
-    </item>
-    
-    <item>
-      <title>Cellular neural networks</title>
-      <link>https://hugocisneros.com/notes/cellular_neural_networks/</link>
-      <pubDate>Mon, 17 Jan 2022 16:44:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/cellular_neural_networks/</guid>
-      <description> tags Cellular automata, Neural networks resources Scholarpedia,  (Chua and Yang 1988; Chua and Yang 1988)
-Bibliography Chua, L.O.and L. Yang. October 1988. &#34;Cellular Neural Networks: Applications&#34;. IEEE Transactions on Circuits and Systems 35 (10):1273–90. DOI. Chua, L.O.and L. Yang. October 1988. &#34;Cellular Neural Networks: Theory&#34;. IEEE Transactions on Circuits and Systems 35 (10):1257–72. DOI.  </description>
-    </item>
-    
-    <item>
-      <title>Conway&#39;s Game of Life</title>
-      <link>https://hugocisneros.com/notes/conway_s_game_of_life/</link>
-      <pubDate>Mon, 18 Oct 2021 08:56:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/conway_s_game_of_life/</guid>
-      <description>tags Cellular automata resources (Gardner 1970)  It is one of the most famous Cellular automata rule, invented as a game by mathematician John Conway.
+This idea was recently published at NeurIPS 2021 (Grattarola, Liviand Alippi 2021).</description></item><item><title>Cellular neural networks</title><link>https://hugocisneros.com/notes/cellular_neural_networks/</link><pubDate>Mon, 17 Jan 2022 16:44:00 +0100</pubDate><guid>https://hugocisneros.com/notes/cellular_neural_networks/</guid><description> tags Cellular automata, Neural networks resources Scholarpedia, (Chua and Yang 1988; Chua and Yang 1988)
+Bibliography Chua, L.O.and L. Yang. October 1988. "Cellular Neural Networks: Applications". IEEE Transactions on Circuits and Systems 35 (10):1273–90. DOI. Chua, L.O.and L. Yang. October 1988. "Cellular Neural Networks: Theory". IEEE Transactions on Circuits and Systems 35 (10):1257–72. DOI.</description></item><item><title>Conway's Game of Life</title><link>https://hugocisneros.com/notes/conway_s_game_of_life/</link><pubDate>Mon, 18 Oct 2021 08:56:00 +0200</pubDate><guid>https://hugocisneros.com/notes/conway_s_game_of_life/</guid><description>tags Cellular automata resources (Gardner 1970) It is one of the most famous Cellular automata rule, invented as a game by mathematician John Conway.
 Learn the game of life with a neural network This paper investigates how hard it is for neural networks to approximate the Game of Life rule (Springer and Kenyon 2020).
-Bibliography Gardner, Martin. October 1970. &#34;Mathematical Games&#34;. Scientific American 223 (4):120–23. DOI. Springer, Jacob M.</description>
-    </item>
-    
-    <item>
-      <title>Notes on: Growing Neural Cellular Automata by Mordvintsev, A., Randazzo, E., Niklasson, E., &amp; Levin, M. (2020)</title>
-      <link>https://hugocisneros.com/notes/mordvintsevgrowingneuralcellular2020/</link>
-      <pubDate>Wed, 01 Sep 2021 17:31:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/mordvintsevgrowingneuralcellular2020/</guid>
-      <description>tags Cellular automata source (Mordvintsev et al. 2020)  Summary This paper introduces interesting ideas for training cellular automata as CNNs to have self-repairing stable structures. The automata have 16 dimensional continuous states. The main modeling ideas are:
- Use hard-coded filters for the initial perception step. The filters are Sobel convolutions and those two are concatenated with the current state. Update rules are then 1D convolutions applied to the \(3 * 16 = 48\) dimensional state vector.</description>
-    </item>
-    
-    <item>
-      <title>Computing in cellular automata</title>
-      <link>https://hugocisneros.com/notes/computing_in_cellular_automata/</link>
-      <pubDate>Wed, 01 Sep 2021 17:30:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/computing_in_cellular_automata/</guid>
-      <description>tags Unconventional computing, Cellular automata resources (Mitchell 2005; Wolfram 2002)  Cellular automata are computational models capable of interesting emergent behavior. A major challenge is to understand which CA rules are doing useful or efficient computations. It is not clear how these systems could be programmed or made to compute a particular function.
-Hand-engineered CA rules Below images show CA rules that can compute non trivial functions (Images are from (Wolfram 2002), see A new kind of science online ).</description>
-    </item>
-    
-    <item>
-      <title>Neural cellular automata and implicit representations</title>
-      <link>https://hugocisneros.com/notes/neural_cellular_automata_and_implicit_representations/</link>
-      <pubDate>Fri, 20 Aug 2021 15:30:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/neural_cellular_automata_and_implicit_representations/</guid>
-      <description> tags Cellular automata, Neural cellular automata  </description>
-    </item>
-    
-    <item>
-      <title>Open-ended creation of hybrid creatures with Neural Cellular Automata</title>
-      <link>https://hugocisneros.com/blog/open-ended-creation-of-hybrid-creatures-with-neural-cellular-automata/</link>
-      <pubDate>Wed, 04 Aug 2021 15:25:56 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/blog/open-ended-creation-of-hybrid-creatures-with-neural-cellular-automata/</guid>
-      <description>This post describes my submission to the Minecraft Open-endedness challenge 2021. The submission was evaluated with the video below and the code here. This post will detail the methods and tools used for the submission and give hints for future work.
+Bibliography Gardner, Martin. October 1970. "Mathematical Games". Scientific American 223 (4):120–23. DOI. Springer, Jacob M.</description></item><item><title>Notes on: Growing Neural Cellular Automata by Mordvintsev, A., Randazzo, E., Niklasson, E., &amp; Levin, M. (2020)</title><link>https://hugocisneros.com/notes/mordvintsevgrowingneuralcellular2020/</link><pubDate>Wed, 01 Sep 2021 17:31:00 +0200</pubDate><guid>https://hugocisneros.com/notes/mordvintsevgrowingneuralcellular2020/</guid><description>tags Cellular automata source (Mordvintsev et al. 2020) Summary This paper introduces interesting ideas for training cellular automata as CNNs to have self-repairing stable structures. The automata have 16 dimensional continuous states. The main modeling ideas are:
+Use hard-coded filters for the initial perception step. The filters are Sobel convolutions and those two are concatenated with the current state. Update rules are then 1D convolutions applied to the \(3 * 16 = 48\) dimensional state vector.</description></item><item><title>Computing in cellular automata</title><link>https://hugocisneros.com/notes/computing_in_cellular_automata/</link><pubDate>Wed, 01 Sep 2021 17:30:00 +0200</pubDate><guid>https://hugocisneros.com/notes/computing_in_cellular_automata/</guid><description>tags Unconventional computing, Cellular automata resources (Mitchell 2005; Wolfram 2002) Cellular automata are computational models capable of interesting emergent behavior. A major challenge is to understand which CA rules are doing useful or efficient computations. It is not clear how these systems could be programmed or made to compute a particular function.
+Hand-engineered CA rules Below images show CA rules that can compute non trivial functions (Images are from (Wolfram 2002), see A new kind of science online ).</description></item><item><title>Neural cellular automata and implicit representations</title><link>https://hugocisneros.com/notes/neural_cellular_automata_and_implicit_representations/</link><pubDate>Fri, 20 Aug 2021 15:30:00 +0200</pubDate><guid>https://hugocisneros.com/notes/neural_cellular_automata_and_implicit_representations/</guid><description> tags Cellular automata, Neural cellular automata</description></item><item><title>Open-ended creation of hybrid creatures with Neural Cellular Automata</title><link>https://hugocisneros.com/blog/open-ended-creation-of-hybrid-creatures-with-neural-cellular-automata/</link><pubDate>Wed, 04 Aug 2021 15:25:56 +0200</pubDate><guid>https://hugocisneros.com/blog/open-ended-creation-of-hybrid-creatures-with-neural-cellular-automata/</guid><description>This post describes my submission to the Minecraft Open-endedness challenge 2021. The submission was evaluated with the video below and the code here. This post will detail the methods and tools used for the submission and give hints for future work.
 If you want a quick description of the work, have a look at the video:
- Introduction Motivation My current research deals with evolution in complex systems and specifically cellular automata (CA).</description>
-    </item>
-    
-    <item>
-      <title>Notes on: Generalization over different cellular automata rules learned by a deep feed-forward neural network by Aach, M., Goebbert, J. H., &amp; Jitsev, J. (2021)</title>
-      <link>https://hugocisneros.com/notes/aachgeneralizationdifferentcellular2021/</link>
-      <pubDate>Mon, 26 Apr 2021 20:53:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/aachgeneralizationdifferentcellular2021/</guid>
-      <description>source (Aach, Goebbertand Jitsev 2021) tags Cellular automata, Neural networks  Summary This paper studies the generalization abilities of neural networks on tasks involving learning the dynamics of cellular automata rules from examples.
+Introduction Motivation My current research deals with evolution in complex systems and specifically cellular automata (CA).</description></item><item><title>Notes on: Generalization over different cellular automata rules learned by a deep feed-forward neural network by Aach, M., Goebbert, J. H., &amp; Jitsev, J. (2021)</title><link>https://hugocisneros.com/notes/aachgeneralizationdifferentcellular2021/</link><pubDate>Mon, 26 Apr 2021 20:53:00 +0200</pubDate><guid>https://hugocisneros.com/notes/aachgeneralizationdifferentcellular2021/</guid><description>source (Aach, Goebbertand Jitsev 2021) tags Cellular automata, Neural networks Summary This paper studies the generalization abilities of neural networks on tasks involving learning the dynamics of cellular automata rules from examples.
 Neural networks are trained to predict the next state of a CA from the three previous timesteps. Different training examples for a single rule corresponds to different initialization.
 The authors study three kinds of generalization:
- Simple generalization: The network is trained on 300 different CA rules and tested on more unseen initial configurations from those 300 rules.</description>
-    </item>
-    
-    <item>
-      <title>Lenia</title>
-      <link>https://hugocisneros.com/notes/lenia/</link>
-      <pubDate>Thu, 25 Mar 2021 15:43:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/lenia/</guid>
-      <description> tags Cellular automata papers (Chan 2019; Chan 2020)  Lenia is a continuous cellular automaton. It is sometimes referred to as a &amp;ldquo;continuous Conway&amp;rsquo;s Game of Life&amp;rdquo;.
-Bibliography Chan, Bert Wang-Chak. May 4, 2019. &#34;Lenia - Biology of Artificial Life&#34;. Arxiv:1812.05433 [nlin]. http://arxiv.org/abs/1812.05433. Chan, Bert Wang-Chak. May 7, 2020. &#34;Lenia and Expanded Universe&#34;. Arxiv:2005.03742 [nlin]. http://arxiv.org/abs/2005.03742.  </description>
-    </item>
-    
-    <item>
-      <title>Notes on: Evolving a self-repairing, self-regulating, French flag organism by Miller, J. F. (2004)</title>
-      <link>https://hugocisneros.com/notes/millerevolvingselfrepairingselfregulating2004/</link>
-      <pubDate>Thu, 25 Mar 2021 09:58:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/millerevolvingselfrepairingselfregulating2004/</guid>
-      <description> tags Cellular automata source (Miller 2004)  Summary Comments Bibliography Miller, Julian Francis. 2004. &#34;Evolving a Self-repairing, Self-regulating, French Flag Organism&#34;. In Genetic and Evolutionary Computation Conference, 129–39. Springer. https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.98.1049&amp;rep=rep1&amp;type=pdf.  </description>
-    </item>
-    
-    <item>
-      <title>Notes on: A new structurally dissolvable self-reproducing loop evolving in a simple cellular automata space by Sayama, H. (1999)</title>
-      <link>https://hugocisneros.com/notes/sayamanewstructurallydissolvable1999/</link>
-      <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/sayamanewstructurallydissolvable1999/</guid>
-      <description>source (Sayama 1999) tags Cellular automata, Evolution  Summary This work presents a simple evolutionary system based on Langton&amp;rsquo;s self-reproducing loop. This is entirely done with a normal state-transition rule based CA. The initial structure of the loop was modified to catch variations. An interesting consequence of this system evolving is its natural tendency to evolve towards smaller loops despite no stochastic mutation being hard-coded.
-Bibliography Sayama, H.. 1999. &#34;</description>
-    </item>
-    
-    <item>
-      <title>Notes on: An Integrated Perspective on the Constitutive and Interactive Dimensions of Autonomy by Beer, R. D. (2020)</title>
-      <link>https://hugocisneros.com/notes/beerintegratedperspectiveconstitutive2020/</link>
-      <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/beerintegratedperspectiveconstitutive2020/</guid>
-      <description>tags Emergence, Life, Cellular automata source (Beer 2020)  Summary Constitution: &amp;ldquo;How emergent individuals are put together and maintained&amp;rdquo; Interaction: &amp;ldquo;How emergent individuals as a whole engage with the environment&amp;rdquo;
-Use Conway&amp;rsquo;s Game of Life as a toy model where each cell and update rule is like the Physics of the universe and this physics gives rise to a simple chemistry which can in turn support self-sustaining networks of reactions and some form of biology.</description>
-    </item>
-    
-    <item>
-      <title>Notes on: Developmental mappings and phenotypic complexity by Lehre, P. K., &amp; Haddow, P. C. (2003)</title>
-      <link>https://hugocisneros.com/notes/lehredevelopmentalmappingsphenotypic2003/</link>
-      <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/lehredevelopmentalmappingsphenotypic2003/</guid>
-      <description>tags Cellular automata source (Lehre and Haddow 2003)  Summary The approach of the paper is to use a genotype/phenotype distance correlation plot to study the complexity of a system that is determined by a genotype and exhibits som ephenotypic behavior. This is equivalent to simply plotting the distance of two phenotypes (Hamming of the state after 100 iteration starting from a single activated cell for CAs) against the distance between two genotypes (Hamming distance between the rules for a CA).</description>
-    </item>
-    
-    <item>
-      <title>Notes on: Evolution in asynchronous cellular automata by Nehaniv, C. L. (2003)</title>
-      <link>https://hugocisneros.com/notes/nehanivevolutionasynchronouscellular2003/</link>
-      <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/nehanivevolutionasynchronouscellular2003/</guid>
-      <description>tags Cellular automata, Evolution source (Nehaniv 2003)  Summary This paper proposes a general asynchronous extension of CA rules and show that they can be made equivalent to the original CA rule. Applying this extension to H. Sayama&amp;rsquo;s Evoloop cellular automaton (Sayama 1999), the author creates the first asynchronous implementation of evolution of self-replicators.
-One hope formulated by the author is that asynchronicity could help achieve fault-tolerance and self-repair.</description>
-    </item>
-    
-    <item>
-      <title>Notes on: Regenerating Soft Robots through Neural Cellular Automata by Horibe, K., Walker, K., &amp; Risi, S. (2021)</title>
-      <link>https://hugocisneros.com/notes/horiberegeneratingsoftrobots2021/</link>
-      <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/horiberegeneratingsoftrobots2021/</guid>
-      <description>tags Cellular automata, Reinforcement learning source (Horibe, Walkerand Risi 2021)  Summary The authors explore neural cellular automata (Mordvintsev et al. 2020) as a framework for growing soft robots.
-Comments Bibliography Horibe, Kazuya, Kathryn Walkerand Sebastian Risi. February 7, 2021. &#34;Regenerating Soft Robots Through Neural Cellular Automata&#34;. Arxiv:2102.02579 [cs, Q-bio]. http://arxiv.org/abs/2102.02579. Mordvintsev, Alexander, Ettore Randazzo, Eyvind Niklassonand Michael Levin. February 11, 2020. &#34;Growing Neural Cellular Automata&#34;. Distill 5 (2):e23. DOI.</description>
-    </item>
-    
-    <item>
-      <title>Notes on: Resilient Life: An Exploration of Perturbed Autopoietic Patterns in Conway&#39;s Game of Life by Cika, A., Cohen, E., Kruszewski, G., Seet, L., Steinmann, P., &amp; Yin, W. (2020)</title>
-      <link>https://hugocisneros.com/notes/cikaresilientlifeexploration2020/</link>
-      <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/cikaresilientlifeexploration2020/</guid>
-      <description>tags ALife 2020, Cellular automata, Autopoiesis source (Cika et al. 2020)  Summary This paper is about the possible resistance of GoL patterns to perturbations and the structures that could enable this to happen. They also want to know if resilience is a universal property of computational systems.
+Simple generalization: The network is trained on 300 different CA rules and tested on more unseen initial configurations from those 300 rules.</description></item><item><title>Lenia</title><link>https://hugocisneros.com/notes/lenia/</link><pubDate>Thu, 25 Mar 2021 15:43:00 +0100</pubDate><guid>https://hugocisneros.com/notes/lenia/</guid><description> tags Cellular automata papers (Chan 2019; Chan 2020) Lenia is a continuous cellular automaton. It is sometimes referred to as a &amp;ldquo;continuous Conway&amp;rsquo;s Game of Life&amp;rdquo;.
+Bibliography Chan, Bert Wang-Chak. May 4, 2019. "Lenia - Biology of Artificial Life". Arxiv:1812.05433 [nlin]. http://arxiv.org/abs/1812.05433. Chan, Bert Wang-Chak. May 7, 2020. "Lenia and Expanded Universe". Arxiv:2005.03742 [nlin]. http://arxiv.org/abs/2005.03742.</description></item><item><title>Notes on: Evolving a self-repairing, self-regulating, French flag organism by Miller, J. F. (2004)</title><link>https://hugocisneros.com/notes/millerevolvingselfrepairingselfregulating2004/</link><pubDate>Thu, 25 Mar 2021 09:58:00 +0100</pubDate><guid>https://hugocisneros.com/notes/millerevolvingselfrepairingselfregulating2004/</guid><description> tags Cellular automata source (Miller 2004) Summary Comments Bibliography Miller, Julian Francis. 2004. "Evolving a Self-repairing, Self-regulating, French Flag Organism". In Genetic and Evolutionary Computation Conference, 129–39. Springer. https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.98.1049&amp;rep=rep1&amp;type=pdf.</description></item><item><title>Notes on: A new structurally dissolvable self-reproducing loop evolving in a simple cellular automata space by Sayama, H. (1999)</title><link>https://hugocisneros.com/notes/sayamanewstructurallydissolvable1999/</link><pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate><guid>https://hugocisneros.com/notes/sayamanewstructurallydissolvable1999/</guid><description>source (Sayama 1999) tags Cellular automata, Evolution Summary This work presents a simple evolutionary system based on Langton&amp;rsquo;s self-reproducing loop. This is entirely done with a normal state-transition rule based CA. The initial structure of the loop was modified to catch variations. An interesting consequence of this system evolving is its natural tendency to evolve towards smaller loops despite no stochastic mutation being hard-coded.
+Bibliography Sayama, H.. 1999. "</description></item><item><title>Notes on: An Integrated Perspective on the Constitutive and Interactive Dimensions of Autonomy by Beer, R. D. (2020)</title><link>https://hugocisneros.com/notes/beerintegratedperspectiveconstitutive2020/</link><pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate><guid>https://hugocisneros.com/notes/beerintegratedperspectiveconstitutive2020/</guid><description>tags Emergence, Life, Cellular automata source (Beer 2020) Summary Constitution: &amp;ldquo;How emergent individuals are put together and maintained&amp;rdquo; Interaction: &amp;ldquo;How emergent individuals as a whole engage with the environment&amp;rdquo;
+Use Conway&amp;rsquo;s Game of Life as a toy model where each cell and update rule is like the Physics of the universe and this physics gives rise to a simple chemistry which can in turn support self-sustaining networks of reactions and some form of biology.</description></item><item><title>Notes on: Developmental mappings and phenotypic complexity by Lehre, P. K., &amp; Haddow, P. C. (2003)</title><link>https://hugocisneros.com/notes/lehredevelopmentalmappingsphenotypic2003/</link><pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate><guid>https://hugocisneros.com/notes/lehredevelopmentalmappingsphenotypic2003/</guid><description>tags Cellular automata source (Lehre and Haddow 2003) Summary The approach of the paper is to use a genotype/phenotype distance correlation plot to study the complexity of a system that is determined by a genotype and exhibits som ephenotypic behavior. This is equivalent to simply plotting the distance of two phenotypes (Hamming of the state after 100 iteration starting from a single activated cell for CAs) against the distance between two genotypes (Hamming distance between the rules for a CA).</description></item><item><title>Notes on: Evolution in asynchronous cellular automata by Nehaniv, C. L. (2003)</title><link>https://hugocisneros.com/notes/nehanivevolutionasynchronouscellular2003/</link><pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate><guid>https://hugocisneros.com/notes/nehanivevolutionasynchronouscellular2003/</guid><description>tags Cellular automata, Evolution source (Nehaniv 2003) Summary This paper proposes a general asynchronous extension of CA rules and show that they can be made equivalent to the original CA rule. Applying this extension to H. Sayama&amp;rsquo;s Evoloop cellular automaton (Sayama 1999), the author creates the first asynchronous implementation of evolution of self-replicators.
+One hope formulated by the author is that asynchronicity could help achieve fault-tolerance and self-repair.</description></item><item><title>Notes on: Regenerating Soft Robots through Neural Cellular Automata by Horibe, K., Walker, K., &amp; Risi, S. (2021)</title><link>https://hugocisneros.com/notes/horiberegeneratingsoftrobots2021/</link><pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate><guid>https://hugocisneros.com/notes/horiberegeneratingsoftrobots2021/</guid><description>tags Cellular automata, Reinforcement learning source (Horibe, Walkerand Risi 2021) Summary The authors explore neural cellular automata (Mordvintsev et al. 2020) as a framework for growing soft robots.
+Comments Bibliography Horibe, Kazuya, Kathryn Walkerand Sebastian Risi. February 7, 2021. "Regenerating Soft Robots Through Neural Cellular Automata". Arxiv:2102.02579 [cs, Q-bio]. http://arxiv.org/abs/2102.02579. Mordvintsev, Alexander, Ettore Randazzo, Eyvind Niklassonand Michael Levin. February 11, 2020. "Growing Neural Cellular Automata". Distill 5 (2):e23. DOI.</description></item><item><title>Notes on: Resilient Life: An Exploration of Perturbed Autopoietic Patterns in Conway's Game of Life by Cika, A., Cohen, E., Kruszewski, G., Seet, L., Steinmann, P., &amp; Yin, W. (2020)</title><link>https://hugocisneros.com/notes/cikaresilientlifeexploration2020/</link><pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate><guid>https://hugocisneros.com/notes/cikaresilientlifeexploration2020/</guid><description>tags ALife 2020, Cellular automata, Autopoiesis source (Cika et al. 2020) Summary This paper is about the possible resistance of GoL patterns to perturbations and the structures that could enable this to happen. They also want to know if resilience is a universal property of computational systems.
 They test two types of resilience:
- Additive (add one or two live cells to the pattern) Negative (&amp;ldquo;kill&amp;rdquo; one or two live cells from the pattern)  They use 3 metrics for resilience:</description>
-    </item>
-    
-    <item>
-      <title>Notes on: Transition phenomena in cellular automata rule space by Li, W., Packard, N. H., &amp; Langton, C. G. (1990)</title>
-      <link>https://hugocisneros.com/notes/litransitionphenomenacellular1990/</link>
-      <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/litransitionphenomenacellular1990/</guid>
-      <description>tags Cellular automata source (Li, Packardand Langton 1990)  Summary This foundational paper follows Langton&amp;rsquo;s work on chaos and the lambda parameter. It uses information-theoretic measures to try and understand the structure of the space of CA rules. The authors come up with a classification in 6 classes:
- Spatially homogeneous fixed points Spatially inhomogeneous fixed points Periodic behavior Locally chaotic behavior Chaotic behavior Complex behavior  Wolfram&amp;rsquo;s class I is equivalent to class 1, class II is equivalent to class 2, 3 and 4.</description>
-    </item>
-    
-    <item>
-      <title>Complexity of cellular automata</title>
-      <link>https://hugocisneros.com/notes/complexity_of_cellular_automata/</link>
-      <pubDate>Wed, 25 Nov 2020 09:20:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/complexity_of_cellular_automata/</guid>
-      <description> tags Complexity, Cellular automata  Measuring complexity created by cellular automata is a vast subject.
-Using Entropy In (3.0.CO;2-V&#34;Wuensche 1999), the author uses the entropy of rule table lookup frequencies to evaluate the complexity of a CA.
-Bibliography 3.0.CO;2-V&#34;Wuensche, Andrew. 1999. &#34;Classifying Cellular Automata Automatically: Finding Gliders, Filtering, and Relating Space-time Patterns, Attractor Basins, and the Z Parameter&#34;. Complexity 4 (3):47–66. 3.0.CO;2-V&#34;DOI.  </description>
-    </item>
-    
-    <item>
-      <title>Turing completeness of cellular automata</title>
-      <link>https://hugocisneros.com/notes/turing_completeness_of_cellular_automata/</link>
-      <pubDate>Tue, 20 Oct 2020 08:20:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/turing_completeness_of_cellular_automata/</guid>
-      <description> tags Cellular automata, Turing-completeness  Rule 110 Elementary cellular automaton rule 110 is universal (Cook 2004).
+Additive (add one or two live cells to the pattern) Negative (&amp;ldquo;kill&amp;rdquo; one or two live cells from the pattern) They use 3 metrics for resilience:</description></item><item><title>Notes on: Transition phenomena in cellular automata rule space by Li, W., Packard, N. H., &amp; Langton, C. G. (1990)</title><link>https://hugocisneros.com/notes/litransitionphenomenacellular1990/</link><pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate><guid>https://hugocisneros.com/notes/litransitionphenomenacellular1990/</guid><description>tags Cellular automata source (Li, Packardand Langton 1990) Summary This foundational paper follows Langton&amp;rsquo;s work on chaos and the lambda parameter. It uses information-theoretic measures to try and understand the structure of the space of CA rules. The authors come up with a classification in 6 classes:
+Spatially homogeneous fixed points Spatially inhomogeneous fixed points Periodic behavior Locally chaotic behavior Chaotic behavior Complex behavior Wolfram&amp;rsquo;s class I is equivalent to class 1, class II is equivalent to class 2, 3 and 4.</description></item><item><title>Complexity of cellular automata</title><link>https://hugocisneros.com/notes/complexity_of_cellular_automata/</link><pubDate>Wed, 25 Nov 2020 09:20:00 +0100</pubDate><guid>https://hugocisneros.com/notes/complexity_of_cellular_automata/</guid><description> tags Complexity, Cellular automata Measuring complexity created by cellular automata is a vast subject.
+Using Entropy In (3.0.CO;2-V"Wuensche 1999), the author uses the entropy of rule table lookup frequencies to evaluate the complexity of a CA.
+Bibliography 3.0.CO;2-V"Wuensche, Andrew. 1999. "Classifying Cellular Automata Automatically: Finding Gliders, Filtering, and Relating Space-time Patterns, Attractor Basins, and the Z Parameter". Complexity 4 (3):47–66. 3.0.CO;2-V"DOI.</description></item><item><title>Turing completeness of cellular automata</title><link>https://hugocisneros.com/notes/turing_completeness_of_cellular_automata/</link><pubDate>Tue, 20 Oct 2020 08:20:00 +0200</pubDate><guid>https://hugocisneros.com/notes/turing_completeness_of_cellular_automata/</guid><description> tags Cellular automata, Turing-completeness Rule 110 Elementary cellular automaton rule 110 is universal (Cook 2004).
 Game of Life Conway&amp;rsquo;s Game of Life has also been show to be Turing-complete. Gliders can be used to implement logic gates.
 A working computer in Game of Life
-Bibliography Cook, Matthew. 2004. &#34;Universality in Elementary Cellular Automata&#34;. Complex Systems, 40.  </description>
-    </item>
-    
-    <item>
-      <title>Reversible cellular automata</title>
-      <link>https://hugocisneros.com/notes/reversible_cellular_automata/</link>
-      <pubDate>Fri, 16 Oct 2020 14:11:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/reversible_cellular_automata/</guid>
-      <description> tags Cellular automata  Second-order CA Block CA </description>
-    </item>
-    
-    <item>
-      <title>Crosshatch automata</title>
-      <link>https://hugocisneros.com/notes/crosshatch_automata/</link>
-      <pubDate>Mon, 24 Aug 2020 10:33:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/crosshatch_automata/</guid>
-      <description> resources Medium article tags Cellular automata  </description>
-    </item>
-    
-    <item>
-      <title>Langton&#39;s loop</title>
-      <link>https://hugocisneros.com/notes/langton_s_loop/</link>
-      <pubDate>Sat, 25 Jul 2020 22:35:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/langton_s_loop/</guid>
-      <description> tags Christopher Langton, Cellular automata  </description>
-    </item>
-    
-    <item>
-      <title>Abelian sandpile model</title>
-      <link>https://hugocisneros.com/notes/abelian_sandpile_model/</link>
-      <pubDate>Thu, 02 Jul 2020 10:09:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/abelian_sandpile_model/</guid>
-      <description> tags Cellular automata resources Wikipedia  </description>
-    </item>
-    
-    <item>
-      <title>Cellular automata as regular languages</title>
-      <link>https://hugocisneros.com/notes/cellular_automata_as_regular_languages/</link>
-      <pubDate>Wed, 01 Jul 2020 14:20:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/cellular_automata_as_regular_languages/</guid>
-      <description>tags Cellular automata, Finite state machines  From (Hanson and Crutchfield 1997):
- Finite state machines are appropriate for investigating pattern dynamics of CAs for a number of reasons, among which we may note the following:
- FAs encompass the full range of behavior types from periodic to complex to random; Characterization of patterns using FAs makes possible a definition of pattern complexity which is both natural and computable in practice; Ensemble evolution in the space of regular languages is closed under the CA rule; The CA update rule is itself an FST; Automated inference techniques exist for reconstructing FAs from experimental data   Bibliography Hanson, James E.</description>
-    </item>
-    
-  </channel>
-</rss>
+Bibliography Cook, Matthew. 2004. "Universality in Elementary Cellular Automata". Complex Systems, 40.</description></item><item><title>Reversible cellular automata</title><link>https://hugocisneros.com/notes/reversible_cellular_automata/</link><pubDate>Fri, 16 Oct 2020 14:11:00 +0200</pubDate><guid>https://hugocisneros.com/notes/reversible_cellular_automata/</guid><description> tags Cellular automata Second-order CA Block CA</description></item><item><title>Crosshatch automata</title><link>https://hugocisneros.com/notes/crosshatch_automata/</link><pubDate>Mon, 24 Aug 2020 10:33:00 +0200</pubDate><guid>https://hugocisneros.com/notes/crosshatch_automata/</guid><description> resources Medium article tags Cellular automata</description></item><item><title>Langton's loop</title><link>https://hugocisneros.com/notes/langton_s_loop/</link><pubDate>Sat, 25 Jul 2020 22:35:00 +0200</pubDate><guid>https://hugocisneros.com/notes/langton_s_loop/</guid><description> tags Christopher Langton, Cellular automata</description></item><item><title>Abelian sandpile model</title><link>https://hugocisneros.com/notes/abelian_sandpile_model/</link><pubDate>Thu, 02 Jul 2020 10:09:00 +0200</pubDate><guid>https://hugocisneros.com/notes/abelian_sandpile_model/</guid><description> tags Cellular automata resources Wikipedia</description></item><item><title>Cellular automata as regular languages</title><link>https://hugocisneros.com/notes/cellular_automata_as_regular_languages/</link><pubDate>Wed, 01 Jul 2020 14:20:00 +0200</pubDate><guid>https://hugocisneros.com/notes/cellular_automata_as_regular_languages/</guid><description>tags Cellular automata, Finite state machines From (Hanson and Crutchfield 1997):
+Finite state machines are appropriate for investigating pattern dynamics of CAs for a number of reasons, among which we may note the following:
+FAs encompass the full range of behavior types from periodic to complex to random; Characterization of patterns using FAs makes possible a definition of pattern complexity which is both natural and computable in practice; Ensemble evolution in the space of regular languages is closed under the CA rule; The CA update rule is itself an FST; Automated inference techniques exist for reconstructing FAs from experimental data Bibliography Hanson, James E.</description></item></channel></rss>

@@ -1,86 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Life on Hugo Cisneros</title>
-    <link>https://hugocisneros.com/tags/life/</link>
-    <description>Recent content in Life on Hugo Cisneros</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 02 Sep 2021 12:46:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/tags/life/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Notes on: The information theory of individuality by Krakauer, D., Bertschinger, N., Olbrich, E., Flack, J. C., &amp; Ay, N. (2020)</title>
-      <link>https://hugocisneros.com/notes/krakauerinformationtheoryindividuality2020/</link>
-      <pubDate>Thu, 02 Sep 2021 12:46:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/krakauerinformationtheoryindividuality2020/</guid>
-      <description>tags Information theory, Life source (Krakauer et al. 2020)  Summary This paper introduces an information theoretic definition of individuality for complex systems.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Life on Hugo Cisneros</title><link>https://hugocisneros.com/tags/life/</link><description>Recent content in Life on Hugo Cisneros</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 02 Sep 2021 12:46:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/tags/life/index.xml" rel="self" type="application/rss+xml"/><item><title>Notes on: The information theory of individuality by Krakauer, D., Bertschinger, N., Olbrich, E., Flack, J. C., &amp; Ay, N. (2020)</title><link>https://hugocisneros.com/notes/krakauerinformationtheoryindividuality2020/</link><pubDate>Thu, 02 Sep 2021 12:46:00 +0200</pubDate><guid>https://hugocisneros.com/notes/krakauerinformationtheoryindividuality2020/</guid><description>tags Information theory, Life source (Krakauer et al. 2020) Summary This paper introduces an information theoretic definition of individuality for complex systems.
 In a few words, the authors idea of individuality is based on the amount of information transmitted through time.
- If the information transmitted forward in time is close to maximal, we take that as evidence for individuality.
- Formally, a system \(\mathcal{S}\) is considered in interaction with an environment \(\mathcal{E}\).</description>
-    </item>
-    
-    <item>
-      <title>Notes on: An Integrated Perspective on the Constitutive and Interactive Dimensions of Autonomy by Beer, R. D. (2020)</title>
-      <link>https://hugocisneros.com/notes/beerintegratedperspectiveconstitutive2020/</link>
-      <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/beerintegratedperspectiveconstitutive2020/</guid>
-      <description>tags Emergence, Life, Cellular automata source (Beer 2020)  Summary Constitution: &amp;ldquo;How emergent individuals are put together and maintained&amp;rdquo; Interaction: &amp;ldquo;How emergent individuals as a whole engage with the environment&amp;rdquo;
-Use Conway&amp;rsquo;s Game of Life as a toy model where each cell and update rule is like the Physics of the universe and this physics gives rise to a simple chemistry which can in turn support self-sustaining networks of reactions and some form of biology.</description>
-    </item>
-    
-    <item>
-      <title>Article: What Is an Individual? Biology Seeks Clues in Information Theory.</title>
-      <link>https://hugocisneros.com/notes/what_is_an_individual_biology_seeks_clues_in_information_theory/</link>
-      <pubDate>Mon, 24 Aug 2020 09:17:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/what_is_an_individual_biology_seeks_clues_in_information_theory/</guid>
-      <description>tags Life resources (Krakauer et al. 2020) source Quanta Magazine   “In a way, [biology] is a science of individuality,” said Melanie Mitchell, a computer scientist at the Santa Fe Institute.
-And yet, the notion of what it means to be an individual often gets glossed over. “So far we have a concept of ‘individual’ that’s very much like the concept of ‘pile,’” said Maxwell Ramstead, a postdoctoral researcher at McGill University.</description>
-    </item>
-    
-    <item>
-      <title>Talk: Alife 2020 keynote Lee Cronin - A Top Down Chemically Embodied Artificial Life Computation</title>
-      <link>https://hugocisneros.com/notes/talk_alife_2020_keynote_lee_cronin_a_top_down_chemically_embodied_artificial_life_computation/</link>
-      <pubDate>Wed, 29 Jul 2020 14:24:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/talk_alife_2020_keynote_lee_cronin_a_top_down_chemically_embodied_artificial_life_computation/</guid>
-      <description>tags Life, ALife 2020  Complex molecules are bio-signatures, they are the sign of complex (evolutionary?) processes that have been going on.
+If the information transmitted forward in time is close to maximal, we take that as evidence for individuality.
+Formally, a system \(\mathcal{S}\) is considered in interaction with an environment \(\mathcal{E}\).</description></item><item><title>Notes on: An Integrated Perspective on the Constitutive and Interactive Dimensions of Autonomy by Beer, R. D. (2020)</title><link>https://hugocisneros.com/notes/beerintegratedperspectiveconstitutive2020/</link><pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate><guid>https://hugocisneros.com/notes/beerintegratedperspectiveconstitutive2020/</guid><description>tags Emergence, Life, Cellular automata source (Beer 2020) Summary Constitution: &amp;ldquo;How emergent individuals are put together and maintained&amp;rdquo; Interaction: &amp;ldquo;How emergent individuals as a whole engage with the environment&amp;rdquo;
+Use Conway&amp;rsquo;s Game of Life as a toy model where each cell and update rule is like the Physics of the universe and this physics gives rise to a simple chemistry which can in turn support self-sustaining networks of reactions and some form of biology.</description></item><item><title>Article: What Is an Individual? Biology Seeks Clues in Information Theory.</title><link>https://hugocisneros.com/notes/what_is_an_individual_biology_seeks_clues_in_information_theory/</link><pubDate>Mon, 24 Aug 2020 09:17:00 +0200</pubDate><guid>https://hugocisneros.com/notes/what_is_an_individual_biology_seeks_clues_in_information_theory/</guid><description>tags Life resources (Krakauer et al. 2020) source Quanta Magazine “In a way, [biology] is a science of individuality,” said Melanie Mitchell, a computer scientist at the Santa Fe Institute.
+And yet, the notion of what it means to be an individual often gets glossed over. “So far we have a concept of ‘individual’ that’s very much like the concept of ‘pile,’” said Maxwell Ramstead, a postdoctoral researcher at McGill University.</description></item><item><title>Talk: Alife 2020 keynote Lee Cronin - A Top Down Chemically Embodied Artificial Life Computation</title><link>https://hugocisneros.com/notes/talk_alife_2020_keynote_lee_cronin_a_top_down_chemically_embodied_artificial_life_computation/</link><pubDate>Wed, 29 Jul 2020 14:24:00 +0200</pubDate><guid>https://hugocisneros.com/notes/talk_alife_2020_keynote_lee_cronin_a_top_down_chemically_embodied_artificial_life_computation/</guid><description>tags Life, ALife 2020 Complex molecules are bio-signatures, they are the sign of complex (evolutionary?) processes that have been going on.
 Assembly theory Exploring complexity: Lee is showing some theoretical idea about a complexity metric. Like many other metrics, he starts from the observation that neither entropy nor Kolmogorov complexity are suitable for considering the history of an object.
-Instead of thinking in terms of disorder or complexity, why not ask simply about &amp;ldquo;how has this object been assembled?</description>
-    </item>
-    
-    <item>
-      <title>Talk: Alife 2020 keynote Sara Walker - The Natural History of Information</title>
-      <link>https://hugocisneros.com/notes/talk_alife_2020_keynote_sara_walker_the_natural_history_of_information/</link>
-      <pubDate>Tue, 28 Jul 2020 15:04:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/talk_alife_2020_keynote_sara_walker_the_natural_history_of_information/</guid>
-      <description>tags Life  The problem of defining life Definitions of life have always been elusive.
- Life does not exist.
- &amp;mdash; Andrew Ellington (American Chemical Society 2012).
- as one focuses experimentally on any of the &amp;lsquo;defining&amp;rsquo; properties of &amp;lsquo;life&amp;rsquo;, the sharp boundary seems to blur, splitting into finer and finer sub-divisions
- &amp;mdash; Jack Szostak (J. Biomolecular Struc. Dyn. 29.4 (2012) : 599-600.)
-When looking at matter down to the chemical level, it&amp;rsquo;s hard to tell what is fundamentally different between living and non-living matter.</description>
-    </item>
-    
-    <item>
-      <title>Autopoiesis</title>
-      <link>https://hugocisneros.com/notes/autopoiesis/</link>
-      <pubDate>Mon, 20 Jul 2020 21:35:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/autopoiesis/</guid>
-      <description> tags Life  </description>
-    </item>
-    
-    <item>
-      <title>Evolution</title>
-      <link>https://hugocisneros.com/notes/evolution/</link>
-      <pubDate>Thu, 02 Jul 2020 10:22:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/evolution/</guid>
-      <description> tags Artificial life, Life  </description>
-    </item>
-    
-  </channel>
-</rss>
+Instead of thinking in terms of disorder or complexity, why not ask simply about &amp;ldquo;how has this object been assembled?</description></item><item><title>Talk: Alife 2020 keynote Sara Walker - The Natural History of Information</title><link>https://hugocisneros.com/notes/talk_alife_2020_keynote_sara_walker_the_natural_history_of_information/</link><pubDate>Tue, 28 Jul 2020 15:04:00 +0200</pubDate><guid>https://hugocisneros.com/notes/talk_alife_2020_keynote_sara_walker_the_natural_history_of_information/</guid><description>tags Life The problem of defining life Definitions of life have always been elusive.
+Life does not exist.
+&amp;mdash; Andrew Ellington (American Chemical Society 2012).
+as one focuses experimentally on any of the &amp;lsquo;defining&amp;rsquo; properties of &amp;lsquo;life&amp;rsquo;, the sharp boundary seems to blur, splitting into finer and finer sub-divisions
+&amp;mdash; Jack Szostak (J. Biomolecular Struc. Dyn. 29.4 (2012) : 599-600.)
+When looking at matter down to the chemical level, it&amp;rsquo;s hard to tell what is fundamentally different between living and non-living matter.</description></item><item><title>Autopoiesis</title><link>https://hugocisneros.com/notes/autopoiesis/</link><pubDate>Mon, 20 Jul 2020 21:35:00 +0200</pubDate><guid>https://hugocisneros.com/notes/autopoiesis/</guid><description> tags Life</description></item><item><title>Evolution</title><link>https://hugocisneros.com/notes/evolution/</link><pubDate>Thu, 02 Jul 2020 10:22:00 +0200</pubDate><guid>https://hugocisneros.com/notes/evolution/</guid><description> tags Artificial life, Life</description></item></channel></rss>

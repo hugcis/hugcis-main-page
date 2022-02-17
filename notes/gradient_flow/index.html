@@ -3,7 +3,7 @@
 <head>
 
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
   <base href="https://hugocisneros.com/">
   <title>Gradient flow - Hugo Cisneros</title>
   <meta property="og:title" content="Gradient flow - Hugo Cisneros">
@@ -106,18 +106,7 @@
   <script src="/js/katex/katex.min.js"></script> 
   <script src="/js/katex/contrib/auto-render.min.js"></script> 
   <script>
-
-    document.addEventListener("DOMContentLoaded", function() {
-    renderMathInElement(document.body, {
-        delimiters: [
-            {left: "\\[", right: "\\]", display: true},
-            {left: "$$", right: "$$", display: true},
-            {left: "\\begin{equation}", right: "\\end{equation}", display: true},
-            {left: "$", right: "$", display: false},
-            {left: "\\(", right: "\\)", display: false},
-        ]
-  })
-    });
+  document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"\\[",right:"\\]",display:!0},{left:"$$",right:"$$",display:!0},{left:"\\begin{equation}",right:"\\end{equation}",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1}]})})
   </script>
 </body>
 </html>

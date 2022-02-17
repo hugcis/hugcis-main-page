@@ -3,7 +3,7 @@
 <head>
 
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
   <base href="https://hugocisneros.com/">
   <title>The Elegance of Optimal Transport - Hugo Cisneros</title>
   <meta property="og:title" content="The Elegance of Optimal Transport - Hugo Cisneros">
@@ -99,7 +99,7 @@
           <p>The result of this search is called the <strong>optimal assignment</strong>. As you may already know, there are exactly $N!$ possible solutions to this problem, which makes it very difficult to solve when $N$ grows large: e.g, with a histogram of size 20, there are already $2.43\times10^{18}$ possible solutions.</p>
           <p>It is interesting to note that this assignment is <strong>not unique</strong>, as shown in the example below where 2 elements are mapped to 2 others that form together the four corners of a 2D square with sides of size 1.</p>
           <figure class="center" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-            <img itemprop="url" src="/img/monge1.svg" alt="Non-uniqueness of solution illustration" width="200" style="">
+            <img itemprop="url" src="/img/monge1.svg" alt="Non-uniqueness of solution illustration" width="200">
             <figcaption>
               <h4 itemprop="name">Non-unique assignment. The other solution is dashed.</h4>
             </figcaption>
@@ -109,7 +109,7 @@
           <p>In that case, the mapping between inputs and outputs is no longer a permutation, but a surjective map $T$. If points $x_1, …, x_n$ have weights $\mathbf{a} = (a_1, …, a_n)$ and points $y_1, …, y_m$ have weights $\mathbf{b} = (b_1, …, b_m)$, $T$ must verify:</p>
           <p>\[ \forall j \in \{1, … m\},\quad b_j = \sum_{i:T(x_i) = y_j} a_i \]</p>
           <figure class="center" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-            <img itemprop="url" src="/img/monge2.svg" alt="Monge problem illustration. Optimal transport between asymmetric histograms" width="200" style="">
+            <img itemprop="url" src="/img/monge2.svg" alt="Monge problem illustration. Optimal transport between asymmetric histograms" width="200">
             <figcaption>
               <h4 itemprop="name">Monge problem</h4>
             </figcaption>
@@ -122,7 +122,7 @@
             <p>When several factories supply a product to a number of cities we desire the least costly manner of distribution. Due to freight rates and other matters the cost of a ton of product to a particular city will vary according to which factory supplies it, and will also vary from city to city.</p>
           </blockquote>
           <figure class="center" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-            <img itemprop="url" src="/img/logistic.svg" alt="Logistic problem illustration. Factories with different supply capacities have to deliver goods to cities with various demands." width="300" style="">
+            <img itemprop="url" src="/img/logistic.svg" alt="Logistic problem illustration. Factories with different supply capacities have to deliver goods to cities with various demands." width="300">
             <figcaption>
               <h4 itemprop="name">Factories with different supply capacities have to deliver goods to cities with various demands.</h4>
             </figcaption>
@@ -156,7 +156,7 @@
           <p>The machine learning community is getting excited by the possibilities that optimal transport has to offer. Wasserstein distances (more on this <a href="#wasserstein-distances">here</a>) can be used as a loss function, leveraging <strong>physical and geometric ideas</strong> — such as mass displacement, ground cost, etc. — that are more natural than information based divergence between probability measures (such as <a href="https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence">Kullback-Leibler divergence</a>). This excitement is illustrated by the <strong>number of papers accepted at NeurIPS</strong> mentioning the concept.</p>
           <p>With more than a thousands citation in 2018-2019 (according to Semantic scholar), Wasserstein Generative Adversarial Networks (WGANs) are a good illustration of optimal transport ideas going mainstream — although the fact that it is a paper about GANs might account more for those citations than the maths.</p>
           <figure class="center" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-            <img itemprop="url" src="/img/bar_plot.svg" alt="Bar plot of mentions of optimal transport in NeurIPS papers" style="">
+            <img itemprop="url" src="/img/bar_plot.svg" alt="Bar plot of mentions of optimal transport in NeurIPS papers">
             <figcaption>
               <h4 itemprop="name">Mentions of "wasserstein" and "optimal transport" in NeurIPS paper titles over time</h4>
             </figcaption>
@@ -171,7 +171,7 @@
           <p>When using Wasserstein distances as a loss function, the main technical challenge lies in <strong>differentiating it efficiently</strong>. Many algorithmic and mathematical tricks enable it in some settings, unlocking very interesting applications.</p>
           <p>For example in <a href="#solomon">[9]</a>, the authors are able to compute <strong>Wasserstein barycenters</strong> between 2D or 3D shapes. This barycenter is a intermediate shape, equidistant from a weighted set of starting shapes — where the distance is the Wasserstein distance — with a very natural looking “mass displacement” resembling interpolation. The figure below is from this paper.</p>
           <figure class="center" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-            <img itemprop="url" src="/img/cowducktorus.jpg" alt="Interpolation between a cow, a duck and a torus 3D shapes" style="">
+            <img itemprop="url" src="/img/cowducktorus.jpg" alt="Interpolation between a cow, a duck and a torus 3D shapes">
             <figcaption>
               <h4 itemprop="name">Interpolation between a cow, a duck and a torus</h4>
             </figcaption>
@@ -233,18 +233,7 @@
   <script src="/js/katex/katex.min.js"></script> 
   <script src="/js/katex/contrib/auto-render.min.js"></script> 
   <script>
-
-    document.addEventListener("DOMContentLoaded", function() {
-    renderMathInElement(document.body, {
-        delimiters: [
-            {left: "\\[", right: "\\]", display: true},
-            {left: "$$", right: "$$", display: true},
-            {left: "\\begin{equation}", right: "\\end{equation}", display: true},
-            {left: "$", right: "$", display: false},
-            {left: "\\(", right: "\\)", display: false},
-        ]
-  })
-    });
+  document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"\\[",right:"\\]",display:!0},{left:"$$",right:"$$",display:!0},{left:"\\begin{equation}",right:"\\end{equation}",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1}]})})
   </script>
 </body>
 </html>

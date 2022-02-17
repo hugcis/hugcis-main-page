@@ -1,41 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Neural network training on Hugo Cisneros</title>
-    <link>https://hugocisneros.com/tags/neural-network-training/</link>
-    <description>Recent content in Neural network training on Hugo Cisneros</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 25 Mar 2021 09:58:00 +0100</lastBuildDate><atom:link href="https://hugocisneros.com/tags/neural-network-training/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Notes on: Network Deconvolution by Ye, C., Evanusa, M., He, H., Mitrokhin, A., Goldstein, T., Yorke, J. A., Fermuller, Cornelia, … (2020)</title>
-      <link>https://hugocisneros.com/notes/yenetworkdeconvolution2020/</link>
-      <pubDate>Thu, 25 Mar 2021 09:58:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/yenetworkdeconvolution2020/</guid>
-      <description>tags Convolutional neural networks, Neural network training source (Ye et al. 2020)  Summary This paper introduces so-called Network Deconvolution, advertised as a way to remove pixel-wise and channel-wise correlation in deep neural networks.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Neural network training on Hugo Cisneros</title><link>https://hugocisneros.com/tags/neural-network-training/</link><description>Recent content in Neural network training on Hugo Cisneros</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 25 Mar 2021 09:58:00 +0100</lastBuildDate><atom:link href="https://hugocisneros.com/tags/neural-network-training/index.xml" rel="self" type="application/rss+xml"/><item><title>Notes on: Network Deconvolution by Ye, C., Evanusa, M., He, H., Mitrokhin, A., Goldstein, T., Yorke, J. A., Fermuller, Cornelia, … (2020)</title><link>https://hugocisneros.com/notes/yenetworkdeconvolution2020/</link><pubDate>Thu, 25 Mar 2021 09:58:00 +0100</pubDate><guid>https://hugocisneros.com/notes/yenetworkdeconvolution2020/</guid><description>tags Convolutional neural networks, Neural network training source (Ye et al. 2020) Summary This paper introduces so-called Network Deconvolution, advertised as a way to remove pixel-wise and channel-wise correlation in deep neural networks.
 The authors base their new operator on the optimal configuration for \(L_2\) linear regression, where gradient descent converges in one single step if and only if:
-\[ \frac{1}{N}X^t X = I \] where \(X\) is the feature matrix and \(N\) the number of samples.</description>
-    </item>
-    
-    <item>
-      <title>Double descent</title>
-      <link>https://hugocisneros.com/notes/double_descent/</link>
-      <pubDate>Wed, 02 Dec 2020 18:59:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/double_descent/</guid>
-      <description> tags Neural network training  </description>
-    </item>
-    
-    <item>
-      <title>The Lottery ticket hypothesis</title>
-      <link>https://hugocisneros.com/notes/the_lottery_ticket_hypothesis/</link>
-      <pubDate>Thu, 09 Jul 2020 12:42:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/the_lottery_ticket_hypothesis/</guid>
-      <description>tags Neural network training resources The AI podcast papers (Frankle and Carbin 2018)  When training very large neural networks, the obtained net might have a lot of unused neurons. It is possible, through neural network pruning, to remove a lot of those unused connections to make the overall architecture lighter and faster to run on some hardware.
-However, once you have the pruned architecture, it will often not be able to learn anything interesting when it is trained from scratch.</description>
-    </item>
-    
-  </channel>
-</rss>
+\[ \frac{1}{N}X^t X = I \] where \(X\) is the feature matrix and \(N\) the number of samples.</description></item><item><title>Double descent</title><link>https://hugocisneros.com/notes/double_descent/</link><pubDate>Wed, 02 Dec 2020 18:59:00 +0100</pubDate><guid>https://hugocisneros.com/notes/double_descent/</guid><description> tags Neural network training</description></item><item><title>The Lottery ticket hypothesis</title><link>https://hugocisneros.com/notes/the_lottery_ticket_hypothesis/</link><pubDate>Thu, 09 Jul 2020 12:42:00 +0200</pubDate><guid>https://hugocisneros.com/notes/the_lottery_ticket_hypothesis/</guid><description>tags Neural network training resources The AI podcast papers (Frankle and Carbin 2018) When training very large neural networks, the obtained net might have a lot of unused neurons. It is possible, through neural network pruning, to remove a lot of those unused connections to make the overall architecture lighter and faster to run on some hardware.
+However, once you have the pruned architecture, it will often not be able to learn anything interesting when it is trained from scratch.</description></item></channel></rss>

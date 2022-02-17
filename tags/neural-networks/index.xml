@@ -1,308 +1,37 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Neural networks on Hugo Cisneros</title>
-    <link>https://hugocisneros.com/tags/neural-networks/</link>
-    <description>Recent content in Neural networks on Hugo Cisneros</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 30 Jan 2022 17:42:00 +0100</lastBuildDate><atom:link href="https://hugocisneros.com/tags/neural-networks/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Implicit neural representations</title>
-      <link>https://hugocisneros.com/notes/implicit_neural_representations/</link>
-      <pubDate>Sun, 30 Jan 2022 17:42:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/implicit_neural_representations/</guid>
-      <description>tags Data representation, Neural networks resources Sitzmann&amp;rsquo;s Awesome Implicit Neural Representations github page  Implicit neural representations is about parameterizing a continuous differentiable signal with a neural network. The signal is encoded within the neural network, providing a possibly more compact representation or allowing smooth parameter-based manipulation of that signal. This is a type of regression problem.
-Applications of these learned representations range from simple compression, to 3D scene reconstruction from 2D images, super-resolution, semantic information inference, etc.</description>
-    </item>
-    
-    <item>
-      <title>Generative adversarial networks</title>
-      <link>https://hugocisneros.com/notes/generative_adversarial_networks/</link>
-      <pubDate>Wed, 19 Jan 2022 12:14:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/generative_adversarial_networks/</guid>
-      <description>tags Neural networks, Generative modelling  Generative adversarial networks are a type of generative model. It is close in spirit to Variational autoencoders, but has key differences. The main one is the way the model is trained, which uses an adversarial equilibrium between training a generator and training a discriminator.
-Are GANs glorified PCA? (Richardson and Weiss 2020) This paper seems to show that image-to-image translation models are ill-posed and imply the image transformation should always be very local.</description>
-    </item>
-    
-    <item>
-      <title>Cellular neural networks</title>
-      <link>https://hugocisneros.com/notes/cellular_neural_networks/</link>
-      <pubDate>Mon, 17 Jan 2022 16:44:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/cellular_neural_networks/</guid>
-      <description> tags Cellular automata, Neural networks resources Scholarpedia,  (Chua and Yang 1988; Chua and Yang 1988)
-Bibliography Chua, L.O.and L. Yang. October 1988. &#34;Cellular Neural Networks: Applications&#34;. IEEE Transactions on Circuits and Systems 35 (10):1273–90. DOI. Chua, L.O.and L. Yang. October 1988. &#34;Cellular Neural Networks: Theory&#34;. IEEE Transactions on Circuits and Systems 35 (10):1257–72. DOI.  </description>
-    </item>
-    
-    <item>
-      <title>Variational autoencoders</title>
-      <link>https://hugocisneros.com/notes/variational_autoencoders/</link>
-      <pubDate>Thu, 07 Oct 2021 13:37:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/variational_autoencoders/</guid>
-      <description>tags Neural networks resources (Bishop 1994)  Variational autoencoders (VAEs) are a type of generative Autoencoders.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Neural networks on Hugo Cisneros</title><link>https://hugocisneros.com/tags/neural-networks/</link><description>Recent content in Neural networks on Hugo Cisneros</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 30 Jan 2022 17:42:00 +0100</lastBuildDate><atom:link href="https://hugocisneros.com/tags/neural-networks/index.xml" rel="self" type="application/rss+xml"/><item><title>Implicit neural representations</title><link>https://hugocisneros.com/notes/implicit_neural_representations/</link><pubDate>Sun, 30 Jan 2022 17:42:00 +0100</pubDate><guid>https://hugocisneros.com/notes/implicit_neural_representations/</guid><description>tags Data representation, Neural networks resources Sitzmann&amp;rsquo;s Awesome Implicit Neural Representations github page Implicit neural representations is about parameterizing a continuous differentiable signal with a neural network. The signal is encoded within the neural network, providing a possibly more compact representation or allowing smooth parameter-based manipulation of that signal. This is a type of regression problem.
+Applications of these learned representations range from simple compression, to 3D scene reconstruction from 2D images, super-resolution, semantic information inference, etc.</description></item><item><title>Generative adversarial networks</title><link>https://hugocisneros.com/notes/generative_adversarial_networks/</link><pubDate>Wed, 19 Jan 2022 12:14:00 +0100</pubDate><guid>https://hugocisneros.com/notes/generative_adversarial_networks/</guid><description>tags Neural networks, Generative modelling Generative adversarial networks are a type of generative model. It is close in spirit to Variational autoencoders, but has key differences. The main one is the way the model is trained, which uses an adversarial equilibrium between training a generator and training a discriminator.
+Are GANs glorified PCA? (Richardson and Weiss 2020) This paper seems to show that image-to-image translation models are ill-posed and imply the image transformation should always be very local.</description></item><item><title>Cellular neural networks</title><link>https://hugocisneros.com/notes/cellular_neural_networks/</link><pubDate>Mon, 17 Jan 2022 16:44:00 +0100</pubDate><guid>https://hugocisneros.com/notes/cellular_neural_networks/</guid><description> tags Cellular automata, Neural networks resources Scholarpedia, (Chua and Yang 1988; Chua and Yang 1988)
+Bibliography Chua, L.O.and L. Yang. October 1988. "Cellular Neural Networks: Applications". IEEE Transactions on Circuits and Systems 35 (10):1273–90. DOI. Chua, L.O.and L. Yang. October 1988. "Cellular Neural Networks: Theory". IEEE Transactions on Circuits and Systems 35 (10):1257–72. DOI.</description></item><item><title>Variational autoencoders</title><link>https://hugocisneros.com/notes/variational_autoencoders/</link><pubDate>Thu, 07 Oct 2021 13:37:00 +0200</pubDate><guid>https://hugocisneros.com/notes/variational_autoencoders/</guid><description>tags Neural networks resources (Bishop 1994) Variational autoencoders (VAEs) are a type of generative Autoencoders.
 They use a Bayesian latent encoding for the input dataset.
-VAEs vs. GANs VAEs have fallen out of fashion when GANs became popular, because they were able to get visually interesting results more easily. However, some works a few years later seem to show that they have similar potential (Vahdat and Kautz 2020).</description>
-    </item>
-    
-    <item>
-      <title>Neural networks as dynamical systems</title>
-      <link>https://hugocisneros.com/notes/neural_networks_as_dynamical_systems/</link>
-      <pubDate>Thu, 30 Sep 2021 14:46:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/neural_networks_as_dynamical_systems/</guid>
-      <description>tags Neural networks, Dynamical systems  Neural networks can be seen as dynamical systems in different contexts.
+VAEs vs. GANs VAEs have fallen out of fashion when GANs became popular, because they were able to get visually interesting results more easily. However, some works a few years later seem to show that they have similar potential (Vahdat and Kautz 2020).</description></item><item><title>Neural networks as dynamical systems</title><link>https://hugocisneros.com/notes/neural_networks_as_dynamical_systems/</link><pubDate>Thu, 30 Sep 2021 14:46:00 +0200</pubDate><guid>https://hugocisneros.com/notes/neural_networks_as_dynamical_systems/</guid><description>tags Neural networks, Dynamical systems Neural networks can be seen as dynamical systems in different contexts.
 Recurrent networks With Recurrent neural networks, the continuous dynamical system analogy is very striking. These networks evolve progressively in time by updating an internal state with a fixed algorithm. Usually the state dynamics are not studied because the recurrent networks is designed to complete some fixed task.
-The notion of attractor can be defined for such networks, making them related to the notion of attractor networks.</description>
-    </item>
-    
-    <item>
-      <title>Residual neural networks</title>
-      <link>https://hugocisneros.com/notes/residual_networks/</link>
-      <pubDate>Thu, 30 Sep 2021 13:26:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/residual_networks/</guid>
-      <description>tags Neural networks resources (He et al. 2016)  Residual neural networks are neural networks with skip-connections (or shortcuts, residual connections) that will bypass some of the networks operations in depth.
+The notion of attractor can be defined for such networks, making them related to the notion of attractor networks.</description></item><item><title>Residual neural networks</title><link>https://hugocisneros.com/notes/residual_networks/</link><pubDate>Thu, 30 Sep 2021 13:26:00 +0200</pubDate><guid>https://hugocisneros.com/notes/residual_networks/</guid><description>tags Neural networks resources (He et al. 2016) Residual neural networks are neural networks with skip-connections (or shortcuts, residual connections) that will bypass some of the networks operations in depth.
 Highway networks (Srivastava, Greffand Schmidhuber 2015)
 DenseNets (&amp;lt;cite itemprop=&amp;ldquo;citation&amp;rdquo; itemscope=&amp;ldquo;&amp;ldquo;Huang and Liu,n.d.)
-Bibliography He, Kaiming, Xiangyu Zhang, Shaoqing Renand Jian Sun. June 2016. &#34;Deep Residual Learning for Image Recognition&#34;. In 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 770–78.</description>
-    </item>
-    
-    <item>
-      <title>Graph neural networks</title>
-      <link>https://hugocisneros.com/notes/graph_neural_networks/</link>
-      <pubDate>Thu, 02 Sep 2021 12:49:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/graph_neural_networks/</guid>
-      <description>tags Neural networks, Graphs  Basic properties To operate on graphs, a neural network must be invariant to isomorphism of these graphs. This translates to permutation invariance for the nodes of a graph.
+Bibliography He, Kaiming, Xiangyu Zhang, Shaoqing Renand Jian Sun. June 2016. "Deep Residual Learning for Image Recognition". In 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 770–78.</description></item><item><title>Graph neural networks</title><link>https://hugocisneros.com/notes/graph_neural_networks/</link><pubDate>Thu, 02 Sep 2021 12:49:00 +0200</pubDate><guid>https://hugocisneros.com/notes/graph_neural_networks/</guid><description>tags Neural networks, Graphs Basic properties To operate on graphs, a neural network must be invariant to isomorphism of these graphs. This translates to permutation invariance for the nodes of a graph.
 \[ f(\mathbf{PX}) = f(\mathbf{X}) \]
 Where \(\mathbf{P}\) is a permutation matrix. For simple sets, this amounts to performing node-wise transformations and use a permutation invariant aggregator (sum/max/avg/&amp;hellip;). This was done in (Zaheer et al. 2018).
-\[ f(\mathbf{X}) = \phi\left( \bigoplus_i \psi(\mathbf{x}_i) \right) \]</description>
-    </item>
-    
-    <item>
-      <title>Hopfield Networks</title>
-      <link>https://hugocisneros.com/notes/hopfield_networks/</link>
-      <pubDate>Thu, 02 Sep 2021 12:45:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/hopfield_networks/</guid>
-      <description>tags Neural networks  Hopfield networks are a kind of recurrent neural network with binary threshold nodes.
+\[ f(\mathbf{X}) = \phi\left( \bigoplus_i \psi(\mathbf{x}_i) \right) \]</description></item><item><title>Hopfield Networks</title><link>https://hugocisneros.com/notes/hopfield_networks/</link><pubDate>Thu, 02 Sep 2021 12:45:00 +0200</pubDate><guid>https://hugocisneros.com/notes/hopfield_networks/</guid><description>tags Neural networks Hopfield networks are a kind of recurrent neural network with binary threshold nodes.
 Definition Nodes have indexes \(i \in \{1, \cdots, n\}\) and are in state \(s_i \in \{-1, 1\}\). Nodes have connections between them, characterized by a weight \(w_{ij}\). Each node also has an associated threshold \(\theta_i\) such that
-\[\begin{equation*} s_i \leftarrow \begin{cases} +1 &amp;amp; \text{if}\ \sum_j w_{ij} s_j \geq \theta_i, \newline -1 &amp;amp; \text{otherwise}.</description>
-    </item>
-    
-    <item>
-      <title>Distillation</title>
-      <link>https://hugocisneros.com/notes/distillation/</link>
-      <pubDate>Mon, 14 Jun 2021 11:54:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/distillation/</guid>
-      <description>tags Machine learning, Neural networks, Transfer learning  Distillation is used to describe the process of transferring performances from a large trained teacher neural network to a untrained student network.
+\[\begin{equation*} s_i \leftarrow \begin{cases} +1 &amp;amp; \text{if}\ \sum_j w_{ij} s_j \geq \theta_i, \newline -1 &amp;amp; \text{otherwise}.</description></item><item><title>Distillation</title><link>https://hugocisneros.com/notes/distillation/</link><pubDate>Mon, 14 Jun 2021 11:54:00 +0200</pubDate><guid>https://hugocisneros.com/notes/distillation/</guid><description>tags Machine learning, Neural networks, Transfer learning Distillation is used to describe the process of transferring performances from a large trained teacher neural network to a untrained student network.
 Instead of training the target network to score best according the task&amp;rsquo;s loss function, distillation optimizes for the target network to match the output distribution or neuron activation patterns of the teacher network.
-A review: (Beyer et al. 2021).</description>
-    </item>
-    
-    <item>
-      <title>Attention</title>
-      <link>https://hugocisneros.com/notes/attention/</link>
-      <pubDate>Mon, 14 Jun 2021 10:29:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/attention/</guid>
-      <description>tags Neural networks  Implementation Self-attention is a weighted average of all input elements from a sequence, with a weight proportional to a similarity score between representations. The input \(x \in \mathbb{R}^{L \times F}\) is projected by matrices \(W_Q \in \mathbb{R}^{F \times D}\), \(W_K \in \mathbb{R}^{F\times D}\) and \(W_V \in \mathbb{R}^{F\times M}\) to representations \(Q\) (queries), \(K\) (keys) and \(V\) (values).
-\[ Q = xW_Q\] \[ K = xW_K\] \[ V = xW_V\]</description>
-    </item>
-    
-    <item>
-      <title>Notes on: Generalization over different cellular automata rules learned by a deep feed-forward neural network by Aach, M., Goebbert, J. H., &amp; Jitsev, J. (2021)</title>
-      <link>https://hugocisneros.com/notes/aachgeneralizationdifferentcellular2021/</link>
-      <pubDate>Mon, 26 Apr 2021 20:53:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/aachgeneralizationdifferentcellular2021/</guid>
-      <description>source (Aach, Goebbertand Jitsev 2021) tags Cellular automata, Neural networks  Summary This paper studies the generalization abilities of neural networks on tasks involving learning the dynamics of cellular automata rules from examples.
+A review: (Beyer et al. 2021).</description></item><item><title>Attention</title><link>https://hugocisneros.com/notes/attention/</link><pubDate>Mon, 14 Jun 2021 10:29:00 +0200</pubDate><guid>https://hugocisneros.com/notes/attention/</guid><description>tags Neural networks Implementation Self-attention is a weighted average of all input elements from a sequence, with a weight proportional to a similarity score between representations. The input \(x \in \mathbb{R}^{L \times F}\) is projected by matrices \(W_Q \in \mathbb{R}^{F \times D}\), \(W_K \in \mathbb{R}^{F\times D}\) and \(W_V \in \mathbb{R}^{F\times M}\) to representations \(Q\) (queries), \(K\) (keys) and \(V\) (values).
+\[ Q = xW_Q\] \[ K = xW_K\] \[ V = xW_V\]</description></item><item><title>Notes on: Generalization over different cellular automata rules learned by a deep feed-forward neural network by Aach, M., Goebbert, J. H., &amp; Jitsev, J. (2021)</title><link>https://hugocisneros.com/notes/aachgeneralizationdifferentcellular2021/</link><pubDate>Mon, 26 Apr 2021 20:53:00 +0200</pubDate><guid>https://hugocisneros.com/notes/aachgeneralizationdifferentcellular2021/</guid><description>source (Aach, Goebbertand Jitsev 2021) tags Cellular automata, Neural networks Summary This paper studies the generalization abilities of neural networks on tasks involving learning the dynamics of cellular automata rules from examples.
 Neural networks are trained to predict the next state of a CA from the three previous timesteps. Different training examples for a single rule corresponds to different initialization.
 The authors study three kinds of generalization:
- Simple generalization: The network is trained on 300 different CA rules and tested on more unseen initial configurations from those 300 rules.</description>
-    </item>
-    
-    <item>
-      <title>Attractor networks</title>
-      <link>https://hugocisneros.com/notes/attractor_networks/</link>
-      <pubDate>Mon, 19 Apr 2021 11:24:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/attractor_networks/</guid>
-      <description>tags Physics, Applied maths, Neural networks resources Scholarpedia  Attractor networks are sets of nodes connected in such a way that their dynamics are stable in a small subspace of their phase space. The network state usually resides on this smaller manifold after a few evolution steps.
-These networks are often recurrent.</description>
-    </item>
-    
-    <item>
-      <title>CPPN</title>
-      <link>https://hugocisneros.com/notes/cppn/</link>
-      <pubDate>Thu, 25 Mar 2021 09:58:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/cppn/</guid>
-      <description> tags Neural networks, Genetic algorithms papers (Stanley 2007) resources Wikipedia  Bibliography Stanley, Kenneth O.. June 6, 2007. &#34;Compositional Pattern Producing Networks: A Novel Abstraction of Development&#34;. Genetic Programming and Evolvable Machines 8 (2):131–62. DOI.  </description>
-    </item>
-    
-    <item>
-      <title>Neural tangent kernel</title>
-      <link>https://hugocisneros.com/notes/neural_tangent_kernel/</link>
-      <pubDate>Thu, 25 Mar 2021 09:58:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/neural_tangent_kernel/</guid>
-      <description>tags Neural networks  For a neural network trying to minimize a quadratic loss, the gradient flow can be re-written from \[ \dot{w} = - \nabla L (w(t)) \] to \[ \dot{w} = - \nabla y(w) (y(w) - \bar{y}) \]
-Therefore, the time derivative of \(y\) is \[ \dot{y}(w) = \nabla y(w)^T \dot{w} = - \nabla y(w)^T \nabla y(w) (y(w) - \bar{y}) \] The NTK is the quantity to the left of the last term: \(\nabla y(w)^T \nabla y(w)\).</description>
-    </item>
-    
-    <item>
-      <title>Notes on: Evolving Neural Networks through Augmenting Topologies by Stanley, K. O., &amp; Miikkulainen, R. (2002)</title>
-      <link>https://hugocisneros.com/notes/stanleyevolvingneuralnetworks2002/</link>
-      <pubDate>Thu, 25 Mar 2021 09:58:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/stanleyevolvingneuralnetworks2002/</guid>
-      <description>tags Neural networks, Genetic algorithms, NAS source (Stanley and Miikkulainen 2002)  Summary This is the main paper introducing the NEAT system. This system is a direct-encoding based way of dealing with neuroevolution (evolution of ANNs). The encoding is based on a genome sequentially specifying each of the connections between modules of the network. Several tickes are used to make it possible applying GA methods to evolve networks:
- Historical tracking of genes to be able to align architectures and mate them.</description>
-    </item>
-    
-    <item>
-      <title>Notes on: Scaling down Deep Learning by Greydanus, S. (2020)</title>
-      <link>https://hugocisneros.com/notes/greydanusscalingdeeplearning2020/</link>
-      <pubDate>Thu, 25 Mar 2021 09:58:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/greydanusscalingdeeplearning2020/</guid>
-      <description>tags Neural networks source (Greydanus 2020)  Summary This paper introduces a minimalist 1D version of the MNIST dataset for studying some basic properties of neural networks. The authors simplify the MNIST dataset by assigning a 1D glyph to each digit. These glyphs are padded, translated, sheared and blurred to build a dataset of multiple different objects.
+Simple generalization: The network is trained on 300 different CA rules and tested on more unseen initial configurations from those 300 rules.</description></item><item><title>Attractor networks</title><link>https://hugocisneros.com/notes/attractor_networks/</link><pubDate>Mon, 19 Apr 2021 11:24:00 +0200</pubDate><guid>https://hugocisneros.com/notes/attractor_networks/</guid><description>tags Physics, Applied maths, Neural networks resources Scholarpedia Attractor networks are sets of nodes connected in such a way that their dynamics are stable in a small subspace of their phase space. The network state usually resides on this smaller manifold after a few evolution steps.
+These networks are often recurrent.</description></item><item><title>CPPN</title><link>https://hugocisneros.com/notes/cppn/</link><pubDate>Thu, 25 Mar 2021 09:58:00 +0100</pubDate><guid>https://hugocisneros.com/notes/cppn/</guid><description> tags Neural networks, Genetic algorithms papers (Stanley 2007) resources Wikipedia Bibliography Stanley, Kenneth O.. June 6, 2007. "Compositional Pattern Producing Networks: A Novel Abstraction of Development". Genetic Programming and Evolvable Machines 8 (2):131–62. DOI.</description></item><item><title>Neural tangent kernel</title><link>https://hugocisneros.com/notes/neural_tangent_kernel/</link><pubDate>Thu, 25 Mar 2021 09:58:00 +0100</pubDate><guid>https://hugocisneros.com/notes/neural_tangent_kernel/</guid><description>tags Neural networks For a neural network trying to minimize a quadratic loss, the gradient flow can be re-written from \[ \dot{w} = - \nabla L (w(t)) \] to \[ \dot{w} = - \nabla y(w) (y(w) - \bar{y}) \]
+Therefore, the time derivative of \(y\) is \[ \dot{y}(w) = \nabla y(w)^T \dot{w} = - \nabla y(w)^T \nabla y(w) (y(w) - \bar{y}) \] The NTK is the quantity to the left of the last term: \(\nabla y(w)^T \nabla y(w)\).</description></item><item><title>Notes on: Evolving Neural Networks through Augmenting Topologies by Stanley, K. O., &amp; Miikkulainen, R. (2002)</title><link>https://hugocisneros.com/notes/stanleyevolvingneuralnetworks2002/</link><pubDate>Thu, 25 Mar 2021 09:58:00 +0100</pubDate><guid>https://hugocisneros.com/notes/stanleyevolvingneuralnetworks2002/</guid><description>tags Neural networks, Genetic algorithms, NAS source (Stanley and Miikkulainen 2002) Summary This is the main paper introducing the NEAT system. This system is a direct-encoding based way of dealing with neuroevolution (evolution of ANNs). The encoding is based on a genome sequentially specifying each of the connections between modules of the network. Several tickes are used to make it possible applying GA methods to evolve networks:
+Historical tracking of genes to be able to align architectures and mate them.</description></item><item><title>Notes on: Scaling down Deep Learning by Greydanus, S. (2020)</title><link>https://hugocisneros.com/notes/greydanusscalingdeeplearning2020/</link><pubDate>Thu, 25 Mar 2021 09:58:00 +0100</pubDate><guid>https://hugocisneros.com/notes/greydanusscalingdeeplearning2020/</guid><description>tags Neural networks source (Greydanus 2020) Summary This paper introduces a minimalist 1D version of the MNIST dataset for studying some basic properties of neural networks. The authors simplify the MNIST dataset by assigning a 1D glyph to each digit. These glyphs are padded, translated, sheared and blurred to build a dataset of multiple different objects.
 The figure from the paper shown below illustrates this dataset&amp;rsquo;s construction:
-{{&amp;lt; img src=&amp;quot;/img/greydanusScalingDeepLearning2020.</description>
-    </item>
-    
-    <item>
-      <title>Notes on: Molecule Attention Transformer by Maziarka, Ł., Danel, T., Mucha, S., Rataj, K., Tabor, J., &amp; Jastrzębski, S. (2020)</title>
-      <link>https://hugocisneros.com/notes/maziarkamoleculeattentiontransformer2020/</link>
-      <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/maziarkamoleculeattentiontransformer2020/</guid>
-      <description> tags Neural networks source (Maziarka et al. 2020)  Summary Comments Bibliography Maziarka, Łukasz, Tomasz Danel, Sławomir Mucha, Krzysztof Rataj, Jacek Taborand Stanisław Jastrzębski. February 19, 2020. &#34;Molecule Attention Transformer&#34;. Arxiv:2002.08264 [physics, Stat]. http://arxiv.org/abs/2002.08264.  </description>
-    </item>
-    
-    <item>
-      <title>Notes on: Neural Circuit Policies Enabling Auditable Autonomy by Lechner, M., Hasani, R., Amini, A., Henzinger, T. A., Rus, D., &amp; Grosu, R. (2020)</title>
-      <link>https://hugocisneros.com/notes/lechnerneuralcircuitpolicies2020/</link>
-      <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/lechnerneuralcircuitpolicies2020/</guid>
-      <description>source (Lechner et al. 2020) tags Neural networks  Summary This article introduces a type of RNN called Neural Circuit Policies (NCP). This architecture is said to be inspired from the wiring diagram of the C. elegans nematode.
+{{&amp;lt; img src=&amp;quot;/img/greydanusScalingDeepLearning2020.</description></item><item><title>Notes on: Molecule Attention Transformer by Maziarka, Ł., Danel, T., Mucha, S., Rataj, K., Tabor, J., &amp; Jastrzębski, S. (2020)</title><link>https://hugocisneros.com/notes/maziarkamoleculeattentiontransformer2020/</link><pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate><guid>https://hugocisneros.com/notes/maziarkamoleculeattentiontransformer2020/</guid><description> tags Neural networks source (Maziarka et al. 2020) Summary Comments Bibliography Maziarka, Łukasz, Tomasz Danel, Sławomir Mucha, Krzysztof Rataj, Jacek Taborand Stanisław Jastrzębski. February 19, 2020. "Molecule Attention Transformer". Arxiv:2002.08264 [physics, Stat]. http://arxiv.org/abs/2002.08264.</description></item><item><title>Notes on: Neural Circuit Policies Enabling Auditable Autonomy by Lechner, M., Hasani, R., Amini, A., Henzinger, T. A., Rus, D., &amp; Grosu, R. (2020)</title><link>https://hugocisneros.com/notes/lechnerneuralcircuitpolicies2020/</link><pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate><guid>https://hugocisneros.com/notes/lechnerneuralcircuitpolicies2020/</guid><description>source (Lechner et al. 2020) tags Neural networks Summary This article introduces a type of RNN called Neural Circuit Policies (NCP). This architecture is said to be inspired from the wiring diagram of the C. elegans nematode.
 The main building block is a Recurrent neural network called liquid time constant (LTC) introduced in (Hasani et al. 2020).
-LTC Neurons These neurons are bio-inspired. For a given neuron in state x_i(t), the continuous temporal evolution is described by an ODE: \[ \dot{x}_i = - \left(\frac{1}{\tau_i} + \frac{w_{ij}}{C_{m_i}} \sigma_i(x_j) \right) x_i + \left( \frac{x_{\text{leak}_i}}{\tau_i}+ \frac{w_{ij}}{C_{m_i}} \sigma_i(x_j) E_{ij} \right) \]</description>
-    </item>
-    
-    <item>
-      <title>Recurrent neural networks</title>
-      <link>https://hugocisneros.com/notes/recurrent_neural_networks/</link>
-      <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/recurrent_neural_networks/</guid>
-      <description> tags Neural networks, Machine learning  </description>
-    </item>
-    
-    <item>
-      <title>Convolutional neural networks</title>
-      <link>https://hugocisneros.com/notes/convolutional_neural_networks/</link>
-      <pubDate>Thu, 25 Mar 2021 09:56:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/convolutional_neural_networks/</guid>
-      <description> tags Neural networks  </description>
-    </item>
-    
-    <item>
-      <title>Neural architecture search</title>
-      <link>https://hugocisneros.com/notes/neural_architecture_search/</link>
-      <pubDate>Thu, 25 Mar 2021 09:56:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/neural_architecture_search/</guid>
-      <description>tags Search, Neural networks  Neural architecture search (NAS) is a method for finding neural networks architectures. It is usually based on three main components:
- Search space Type of network that can be built. Search strategy The approach for exploring the space. Performance estimation strategy The way the performance of a constructed neural network is evaluated (without actually building it or training/running it).  Reinforcement learning-based NAS The original idea was called Neural architecture search and is based on the use of a RNN as a controller and generator of architectures.</description>
-    </item>
-    
-    <item>
-      <title>Transformers</title>
-      <link>https://hugocisneros.com/notes/transformers/</link>
-      <pubDate>Wed, 03 Feb 2021 11:04:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/transformers/</guid>
-      <description>tags Neural networks  Transformers are a neural network architecture based on a mechanism called Attention.
-They have been particularly successful for NLP applications and also penetrated other fields of machine learning such as Computer vision.</description>
-    </item>
-    
-    <item>
-      <title>Gradient descent for wide two-layer neural networks – I : Global convergence</title>
-      <link>https://hugocisneros.com/notes/gradient_descent_for_wide_two_layer_neural_networks_i_global_convergence/</link>
-      <pubDate>Wed, 09 Dec 2020 14:11:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/gradient_descent_for_wide_two_layer_neural_networks_i_global_convergence/</guid>
-      <description>tags Neural networks, Optimization authors Francis Bach, Lénaïc Chizat source Francis Bach&amp;rsquo;s blog  In the rest, we use the mathematical definition of a neural network from Neural networks.
+LTC Neurons These neurons are bio-inspired. For a given neuron in state x_i(t), the continuous temporal evolution is described by an ODE: \[ \dot{x}_i = - \left(\frac{1}{\tau_i} + \frac{w_{ij}}{C_{m_i}} \sigma_i(x_j) \right) x_i + \left( \frac{x_{\text{leak}_i}}{\tau_i}+ \frac{w_{ij}}{C_{m_i}} \sigma_i(x_j) E_{ij} \right) \]</description></item><item><title>Recurrent neural networks</title><link>https://hugocisneros.com/notes/recurrent_neural_networks/</link><pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate><guid>https://hugocisneros.com/notes/recurrent_neural_networks/</guid><description> tags Neural networks, Machine learning</description></item><item><title>Convolutional neural networks</title><link>https://hugocisneros.com/notes/convolutional_neural_networks/</link><pubDate>Thu, 25 Mar 2021 09:56:00 +0100</pubDate><guid>https://hugocisneros.com/notes/convolutional_neural_networks/</guid><description> tags Neural networks</description></item><item><title>Neural architecture search</title><link>https://hugocisneros.com/notes/neural_architecture_search/</link><pubDate>Thu, 25 Mar 2021 09:56:00 +0100</pubDate><guid>https://hugocisneros.com/notes/neural_architecture_search/</guid><description>tags Search, Neural networks Neural architecture search (NAS) is a method for finding neural networks architectures. It is usually based on three main components:
+Search space Type of network that can be built. Search strategy The approach for exploring the space. Performance estimation strategy The way the performance of a constructed neural network is evaluated (without actually building it or training/running it). Reinforcement learning-based NAS The original idea was called Neural architecture search and is based on the use of a RNN as a controller and generator of architectures.</description></item><item><title>Transformers</title><link>https://hugocisneros.com/notes/transformers/</link><pubDate>Wed, 03 Feb 2021 11:04:00 +0100</pubDate><guid>https://hugocisneros.com/notes/transformers/</guid><description>tags Neural networks Transformers are a neural network architecture based on a mechanism called Attention.
+They have been particularly successful for NLP applications and also penetrated other fields of machine learning such as Computer vision.</description></item><item><title>Gradient descent for wide two-layer neural networks – I : Global convergence</title><link>https://hugocisneros.com/notes/gradient_descent_for_wide_two_layer_neural_networks_i_global_convergence/</link><pubDate>Wed, 09 Dec 2020 14:11:00 +0100</pubDate><guid>https://hugocisneros.com/notes/gradient_descent_for_wide_two_layer_neural_networks_i_global_convergence/</guid><description>tags Neural networks, Optimization authors Francis Bach, Lénaïc Chizat source Francis Bach&amp;rsquo;s blog In the rest, we use the mathematical definition of a neural network from Neural networks.
 Two layer neural network Even simple neural network models are very difficult to analyze. This is primarily due to two difficulties:
- Non-linearity: the problem is typically non-convex, which in general is a bad thing in optimization. Overparametrization: there are often a lot of parameters, sometimes many more parameters than observations.</description>
-    </item>
-    
-    <item>
-      <title>Neural network training</title>
-      <link>https://hugocisneros.com/notes/neural_network_training/</link>
-      <pubDate>Wed, 28 Oct 2020 09:32:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/neural_network_training/</guid>
-      <description>tags Neural networks, Machine learning, Optimization  Neural network training as development in program space A neural network as a whole can be seen as a dynamical system. Its state is the collection of its parameters, and its evolution function is the optimization step taken when training the network.
-In such a framework, the goal of training the neural network is to reach a form of attractor further optimization steps don&amp;rsquo;t change the state of the neural network.</description>
-    </item>
-    
-    <item>
-      <title>Adaptive Computation Time</title>
-      <link>https://hugocisneros.com/notes/adaptive_computation_time/</link>
-      <pubDate>Tue, 21 Jul 2020 08:54:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/adaptive_computation_time/</guid>
-      <description>tags Neural networks, Algorithm  Adaptive computation time (ACT) was introduced in (Graves 2017) as a way to make computations in RNN adaptive. The network learns how many computational steps to use before emitting an output.
+Non-linearity: the problem is typically non-convex, which in general is a bad thing in optimization. Overparametrization: there are often a lot of parameters, sometimes many more parameters than observations.</description></item><item><title>Neural network training</title><link>https://hugocisneros.com/notes/neural_network_training/</link><pubDate>Wed, 28 Oct 2020 09:32:00 +0100</pubDate><guid>https://hugocisneros.com/notes/neural_network_training/</guid><description>tags Neural networks, Machine learning, Optimization Neural network training as development in program space A neural network as a whole can be seen as a dynamical system. Its state is the collection of its parameters, and its evolution function is the optimization step taken when training the network.
+In such a framework, the goal of training the neural network is to reach a form of attractor further optimization steps don&amp;rsquo;t change the state of the neural network.</description></item><item><title>Adaptive Computation Time</title><link>https://hugocisneros.com/notes/adaptive_computation_time/</link><pubDate>Tue, 21 Jul 2020 08:54:00 +0200</pubDate><guid>https://hugocisneros.com/notes/adaptive_computation_time/</guid><description>tags Neural networks, Algorithm Adaptive computation time (ACT) was introduced in (Graves 2017) as a way to make computations in RNN adaptive. The network learns how many computational steps to use before emitting an output.
 This is done by outputting an extra halting probability at each update step, and considering two timelines:
- the input timeline which plays the role of an outer loop, at each of those step, a new input symbol is fed to the RNN.</description>
-    </item>
-    
-    <item>
-      <title>Mean field theory of neural networks (talk)</title>
-      <link>https://hugocisneros.com/notes/mean_field_theory_of_neural_networks/</link>
-      <pubDate>Tue, 14 Jul 2020 08:21:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/mean_field_theory_of_neural_networks/</guid>
-      <description>speaker Andrea Montanari tags Neural networks  Two layers Neural nets to Wasserstein gradient flows Classical Supervised learning setting
-**</description>
-    </item>
-    
-    <item>
-      <title>Autoencoders</title>
-      <link>https://hugocisneros.com/notes/autoencoders/</link>
-      <pubDate>Mon, 13 Jul 2020 10:19:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/autoencoders/</guid>
-      <description>tags Neural networks, Data representation  Autoencoders and PCA The relation between Autoencoders and PCA is strong. In particular, a very small autoencoder with only linear activations seems intuitively very close to PCA decomposition. (Bourlard and Kamp 1988) gives an interesting analysis of the uselessness of the activation functions in the encoding layers of an autoencoder when there is no activations in the output layers. In that case, autoencoding is closely related to a sinigular value decomposition of the input data.</description>
-    </item>
-    
-    <item>
-      <title>Neural network pruning</title>
-      <link>https://hugocisneros.com/notes/neural_network_pruning/</link>
-      <pubDate>Thu, 02 Jul 2020 10:20:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/neural_network_pruning/</guid>
-      <description>tags Neural networks papers (LeCun, Denkerand Solla 1990; Hassibi and Stork 1993; Han et al. 2015; Li et al. 2016)  Bibliography LeCun, Yann, John S. Denkerand Sara A. Solla. 1990. &#34;Optimal Brain Damage&#34;. In Advances in Neural Information Processing Systems, 598–605. Hassibi, Babakand David G. Stork. 1993. &#34;Second Order Derivatives for Network Pruning: Optimal Brain Surgeon&#34;. In Advances in Neural Information Processing Systems, 164–71. Han, Song, Jeff Pool, John Tranand William Dally.</description>
-    </item>
-    
-    <item>
-      <title>Adversarial examples</title>
-      <link>https://hugocisneros.com/notes/adversarial_examples/</link>
-      <pubDate>Thu, 02 Jul 2020 10:17:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/adversarial_examples/</guid>
-      <description> tags Machine learning, Neural networks  Adversarial examples in Reinforcement learning </description>
-    </item>
-    
-  </channel>
-</rss>
+the input timeline which plays the role of an outer loop, at each of those step, a new input symbol is fed to the RNN.</description></item><item><title>Mean field theory of neural networks (talk)</title><link>https://hugocisneros.com/notes/mean_field_theory_of_neural_networks/</link><pubDate>Tue, 14 Jul 2020 08:21:00 +0200</pubDate><guid>https://hugocisneros.com/notes/mean_field_theory_of_neural_networks/</guid><description>speaker Andrea Montanari tags Neural networks Two layers Neural nets to Wasserstein gradient flows Classical Supervised learning setting
+**</description></item><item><title>Autoencoders</title><link>https://hugocisneros.com/notes/autoencoders/</link><pubDate>Mon, 13 Jul 2020 10:19:00 +0200</pubDate><guid>https://hugocisneros.com/notes/autoencoders/</guid><description>tags Neural networks, Data representation Autoencoders and PCA The relation between Autoencoders and PCA is strong. In particular, a very small autoencoder with only linear activations seems intuitively very close to PCA decomposition. (Bourlard and Kamp 1988) gives an interesting analysis of the uselessness of the activation functions in the encoding layers of an autoencoder when there is no activations in the output layers. In that case, autoencoding is closely related to a sinigular value decomposition of the input data.</description></item><item><title>Neural network pruning</title><link>https://hugocisneros.com/notes/neural_network_pruning/</link><pubDate>Thu, 02 Jul 2020 10:20:00 +0200</pubDate><guid>https://hugocisneros.com/notes/neural_network_pruning/</guid><description>tags Neural networks papers (LeCun, Denkerand Solla 1990; Hassibi and Stork 1993; Han et al. 2015; Li et al. 2016) Bibliography LeCun, Yann, John S. Denkerand Sara A. Solla. 1990. "Optimal Brain Damage". In Advances in Neural Information Processing Systems, 598–605. Hassibi, Babakand David G. Stork. 1993. "Second Order Derivatives for Network Pruning: Optimal Brain Surgeon". In Advances in Neural Information Processing Systems, 164–71. Han, Song, Jeff Pool, John Tranand William Dally.</description></item><item><title>Adversarial examples</title><link>https://hugocisneros.com/notes/adversarial_examples/</link><pubDate>Thu, 02 Jul 2020 10:17:00 +0200</pubDate><guid>https://hugocisneros.com/notes/adversarial_examples/</guid><description> tags Machine learning, Neural networks Adversarial examples in Reinforcement learning</description></item></channel></rss>

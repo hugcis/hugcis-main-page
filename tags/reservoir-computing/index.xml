@@ -1,41 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Reservoir computing on Hugo Cisneros</title>
-    <link>https://hugocisneros.com/tags/reservoir-computing/</link>
-    <description>Recent content in Reservoir computing on Hugo Cisneros</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 29 Jan 2022 14:51:00 +0100</lastBuildDate><atom:link href="https://hugocisneros.com/tags/reservoir-computing/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Notes on: Next Generation Reservoir Computing by Gauthier, D. J., Bollt, E., Griffith, A., &amp; Barbosa, W. A. S. (2021)</title>
-      <link>https://hugocisneros.com/notes/gauthiernextgenerationreservoir2021/</link>
-      <pubDate>Sat, 29 Jan 2022 14:51:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/gauthiernextgenerationreservoir2021/</guid>
-      <description>source (Gauthier et al. 2021) tags Reservoir computing  Summary This paper bases itself on the demonstration that some reservoir computers (echo-state networks) are mathematically identical to nonlinear vector autoregression (NVAR) machines (Bollt 2021). A NVAR is just a regression over a feature vector composed of \(k\) time-delay observations of the dynamical system to be learned and nonlinear functions of these observations.
-The authors introduce Next-Generation Reservoir computing (NG-RC) which is essentially a NVAR.</description>
-    </item>
-    
-    <item>
-      <title>Notes on: Reservoir Computing meets Recurrent Kernels and Structured Transforms by Dong, J., Ohana, R., Rafayelyan, M., &amp; Krzakala, F. (2020)</title>
-      <link>https://hugocisneros.com/notes/dongreservoircomputingmeets2020/</link>
-      <pubDate>Mon, 30 Aug 2021 22:02:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/dongreservoircomputingmeets2020/</guid>
-      <description>source (Dong et al. 2020) tags Reservoir computing, Kernel Methods  Summary This paper presents a connection between large size reservoir computing and kernel methods.
-The authors formulate a reservoir computing model as a form of recurrent kernel iteration. If the reservoir update is written \[ x^{(t+1)} = \dfrac{1}{\sqrt{N}} f \left(W_r x^{(t)} + W_i i^{(t)} \right) \] with \(x^{(t)}\) the state of the reservoir at time \(t\) and \(i^{(t)}\) sequential input at time \(t\), \(W_r \in \mathbb{R}^{N\times N}\) and \(W_i \in \mathbb{R}^{N\times d}\), we may re-frame it as a random feature embedding of the vector \(\left[ x^{(t)} , i^{(t)} \right]\) with the matrix \(W = [W_r, W_i]\).</description>
-    </item>
-    
-    <item>
-      <title>Notes on: Reservoir Computing in Artificial Spin Ice by Jensen, J. H., &amp; Tufte, G. (2020)</title>
-      <link>https://hugocisneros.com/notes/jensenreservoircomputingartificial2020/</link>
-      <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/jensenreservoircomputingartificial2020/</guid>
-      <description>source (Jensen and Tufte 2020) tags Reservoir computing, Complex Systems  Summary This talk is about artificial spin ice. This model is based on a grid of coupled magnets that can be controlled with a magnetic field. The geometry of that grid can very greatly the kind of behavior one may observe in such systems.
-The authors want to use the spin ice model for reservoir computing. They measure useful quantities such as kernel quality \(K\) (ability to separate inputs) and generalization capabilities \(G\) (how similar inputs yield similar results).</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Reservoir computing on Hugo Cisneros</title><link>https://hugocisneros.com/tags/reservoir-computing/</link><description>Recent content in Reservoir computing on Hugo Cisneros</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 29 Jan 2022 14:51:00 +0100</lastBuildDate><atom:link href="https://hugocisneros.com/tags/reservoir-computing/index.xml" rel="self" type="application/rss+xml"/><item><title>Notes on: Next Generation Reservoir Computing by Gauthier, D. J., Bollt, E., Griffith, A., &amp; Barbosa, W. A. S. (2021)</title><link>https://hugocisneros.com/notes/gauthiernextgenerationreservoir2021/</link><pubDate>Sat, 29 Jan 2022 14:51:00 +0100</pubDate><guid>https://hugocisneros.com/notes/gauthiernextgenerationreservoir2021/</guid><description>source (Gauthier et al. 2021) tags Reservoir computing Summary This paper bases itself on the demonstration that some reservoir computers (echo-state networks) are mathematically identical to nonlinear vector autoregression (NVAR) machines (Bollt 2021). A NVAR is just a regression over a feature vector composed of \(k\) time-delay observations of the dynamical system to be learned and nonlinear functions of these observations.
+The authors introduce Next-Generation Reservoir computing (NG-RC) which is essentially a NVAR.</description></item><item><title>Notes on: Reservoir Computing meets Recurrent Kernels and Structured Transforms by Dong, J., Ohana, R., Rafayelyan, M., &amp; Krzakala, F. (2020)</title><link>https://hugocisneros.com/notes/dongreservoircomputingmeets2020/</link><pubDate>Mon, 30 Aug 2021 22:02:00 +0200</pubDate><guid>https://hugocisneros.com/notes/dongreservoircomputingmeets2020/</guid><description>source (Dong et al. 2020) tags Reservoir computing, Kernel Methods Summary This paper presents a connection between large size reservoir computing and kernel methods.
+The authors formulate a reservoir computing model as a form of recurrent kernel iteration. If the reservoir update is written \[ x^{(t+1)} = \dfrac{1}{\sqrt{N}} f \left(W_r x^{(t)} + W_i i^{(t)} \right) \] with \(x^{(t)}\) the state of the reservoir at time \(t\) and \(i^{(t)}\) sequential input at time \(t\), \(W_r \in \mathbb{R}^{N\times N}\) and \(W_i \in \mathbb{R}^{N\times d}\), we may re-frame it as a random feature embedding of the vector \(\left[ x^{(t)} , i^{(t)} \right]\) with the matrix \(W = [W_r, W_i]\).</description></item><item><title>Notes on: Reservoir Computing in Artificial Spin Ice by Jensen, J. H., &amp; Tufte, G. (2020)</title><link>https://hugocisneros.com/notes/jensenreservoircomputingartificial2020/</link><pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate><guid>https://hugocisneros.com/notes/jensenreservoircomputingartificial2020/</guid><description>source (Jensen and Tufte 2020) tags Reservoir computing, Complex Systems Summary This talk is about artificial spin ice. This model is based on a grid of coupled magnets that can be controlled with a magnetic field. The geometry of that grid can very greatly the kind of behavior one may observe in such systems.
+The authors want to use the spin ice model for reservoir computing. They measure useful quantities such as kernel quality \(K\) (ability to separate inputs) and generalization capabilities \(G\) (how similar inputs yield similar results).</description></item></channel></rss>

@@ -1,57 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Graphs on Hugo Cisneros</title>
-    <link>https://hugocisneros.com/tags/graphs/</link>
-    <description>Recent content in Graphs on Hugo Cisneros</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 17 Jan 2022 17:08:00 +0100</lastBuildDate><atom:link href="https://hugocisneros.com/tags/graphs/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Graph neural networks for influence maximization</title>
-      <link>https://hugocisneros.com/projects/graph_nn_for_influence_maximization/</link>
-      <pubDate>Thu, 24 Jan 2019 12:00:00 +0000</pubDate>
-      
-      <guid>https://hugocisneros.com/projects/graph_nn_for_influence_maximization/</guid>
-      <description>&lt;h3 id=&#34;links&#34;&gt;Links&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://hugocisneros.com/pdf/Cisneros_slides_graph_nn_im.pdf&#34;&gt;Project slides&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://hugocisneros.com/pdf/Cisneros_report_graph_nn_im.pdf&#34;&gt;PDF project report&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Graph cellular automata</title>
-      <link>https://hugocisneros.com/notes/graph_cellular_automata/</link>
-      <pubDate>Mon, 17 Jan 2022 17:08:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/graph_cellular_automata/</guid>
-      <description>tags Cellular automata, Graphs  This concept was mentioned in (O&amp;rsquo;Sullivan 2001), although it may not be the first ever mention of it.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Graphs on Hugo Cisneros</title><link>https://hugocisneros.com/tags/graphs/</link><description>Recent content in Graphs on Hugo Cisneros</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 17 Jan 2022 17:08:00 +0100</lastBuildDate><atom:link href="https://hugocisneros.com/tags/graphs/index.xml" rel="self" type="application/rss+xml"/><item><title>Graph neural networks for influence maximization</title><link>https://hugocisneros.com/projects/graph_nn_for_influence_maximization/</link><pubDate>Thu, 24 Jan 2019 12:00:00 +0000</pubDate><guid>https://hugocisneros.com/projects/graph_nn_for_influence_maximization/</guid><description>&lt;h3 id="links">Links&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="https://hugocisneros.com/pdf/Cisneros_slides_graph_nn_im.pdf">Project slides&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://hugocisneros.com/pdf/Cisneros_report_graph_nn_im.pdf">PDF project report&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Graph cellular automata</title><link>https://hugocisneros.com/notes/graph_cellular_automata/</link><pubDate>Mon, 17 Jan 2022 17:08:00 +0100</pubDate><guid>https://hugocisneros.com/notes/graph_cellular_automata/</guid><description>tags Cellular automata, Graphs This concept was mentioned in (O&amp;rsquo;Sullivan 2001), although it may not be the first ever mention of it.
 The idea is also similar to graph convolutional networks and other graph neural networks, where the goal is to construct an update function for a node that doesn&amp;rsquo;t depend on the number of neighboring nodes. This enables running cellular automata on non-grid structures.
-This idea was recently published at NeurIPS 2021 (Grattarola, Liviand Alippi 2021).</description>
-    </item>
-    
-    <item>
-      <title>Graph compression</title>
-      <link>https://hugocisneros.com/notes/graph_compression/</link>
-      <pubDate>Thu, 30 Sep 2021 14:47:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/graph_compression/</guid>
-      <description> tags Compression, Graphs  (Bouritsas et al. 2021)
-Bibliography Bouritsas, Giorgos, Andreas Loukas, Nikolaos Karaliasand Michael M. Bronstein. July 5, 2021. &#34;Partition and Code: Learning How to Compress Graphs&#34;. Arxiv:2107.01952 [cs, Math, Stat]. http://arxiv.org/abs/2107.01952.  </description>
-    </item>
-    
-    <item>
-      <title>Graph neural networks</title>
-      <link>https://hugocisneros.com/notes/graph_neural_networks/</link>
-      <pubDate>Thu, 02 Sep 2021 12:49:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/graph_neural_networks/</guid>
-      <description>tags Neural networks, Graphs  Basic properties To operate on graphs, a neural network must be invariant to isomorphism of these graphs. This translates to permutation invariance for the nodes of a graph.
+This idea was recently published at NeurIPS 2021 (Grattarola, Liviand Alippi 2021).</description></item><item><title>Graph compression</title><link>https://hugocisneros.com/notes/graph_compression/</link><pubDate>Thu, 30 Sep 2021 14:47:00 +0200</pubDate><guid>https://hugocisneros.com/notes/graph_compression/</guid><description> tags Compression, Graphs (Bouritsas et al. 2021)
+Bibliography Bouritsas, Giorgos, Andreas Loukas, Nikolaos Karaliasand Michael M. Bronstein. July 5, 2021. "Partition and Code: Learning How to Compress Graphs". Arxiv:2107.01952 [cs, Math, Stat]. http://arxiv.org/abs/2107.01952.</description></item><item><title>Graph neural networks</title><link>https://hugocisneros.com/notes/graph_neural_networks/</link><pubDate>Thu, 02 Sep 2021 12:49:00 +0200</pubDate><guid>https://hugocisneros.com/notes/graph_neural_networks/</guid><description>tags Neural networks, Graphs Basic properties To operate on graphs, a neural network must be invariant to isomorphism of these graphs. This translates to permutation invariance for the nodes of a graph.
 \[ f(\mathbf{PX}) = f(\mathbf{X}) \]
 Where \(\mathbf{P}\) is a permutation matrix. For simple sets, this amounts to performing node-wise transformations and use a permutation invariant aggregator (sum/max/avg/&amp;hellip;). This was done in (Zaheer et al. 2018).
-\[ f(\mathbf{X}) = \phi\left( \bigoplus_i \psi(\mathbf{x}_i) \right) \]</description>
-    </item>
-    
-  </channel>
-</rss>
+\[ f(\mathbf{X}) = \phi\left( \bigoplus_i \psi(\mathbf{x}_i) \right) \]</description></item></channel></rss>

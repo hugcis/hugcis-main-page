@@ -1,33 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>RNN on Hugo Cisneros</title>
-    <link>https://hugocisneros.com/tags/rnn/</link>
-    <description>Recent content in RNN on Hugo Cisneros</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 02 Sep 2021 12:07:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/tags/rnn/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Notes on: Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention by Katharopoulos, A., Vyas, A., Pappas, N., &amp; Fleuret, F. (2020)</title>
-      <link>https://hugocisneros.com/notes/katharopoulostransformersarernns2020/</link>
-      <pubDate>Thu, 02 Sep 2021 12:07:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/katharopoulostransformersarernns2020/</guid>
-      <description>tags Transformers, RNN source (Katharopoulos et al. 2020)  Summary Transformers have traditionally been described as different models from RNNs. This is because instead of processing the sequence one token at a time, Transformers use attention to process all elements simultaneously.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>RNN on Hugo Cisneros</title><link>https://hugocisneros.com/tags/rnn/</link><description>Recent content in RNN on Hugo Cisneros</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 02 Sep 2021 12:07:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/tags/rnn/index.xml" rel="self" type="application/rss+xml"/><item><title>Notes on: Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention by Katharopoulos, A., Vyas, A., Pappas, N., &amp; Fleuret, F. (2020)</title><link>https://hugocisneros.com/notes/katharopoulostransformersarernns2020/</link><pubDate>Thu, 02 Sep 2021 12:07:00 +0200</pubDate><guid>https://hugocisneros.com/notes/katharopoulostransformersarernns2020/</guid><description>tags Transformers, RNN source (Katharopoulos et al. 2020) Summary Transformers have traditionally been described as different models from RNNs. This is because instead of processing the sequence one token at a time, Transformers use attention to process all elements simultaneously.
 The paper introduces an interesting new formulation, replacing the softmax attention with a feature map-based dot product.
-This new formulation yields better time and memory complexity as well as a model that is casual and autoregressive (similar to RNNs).</description>
-    </item>
-    
-    <item>
-      <title>Notes on: The geometry of integration in text classification RNNs by Aitken, K., Ramasesh, V. V., Garg, A., Cao, Y., Sussillo, D., &amp; Maheswaranathan, N. (2020)</title>
-      <link>https://hugocisneros.com/notes/aitkengeometryintegrationtext2020/</link>
-      <pubDate>Thu, 25 Mar 2021 10:20:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/aitkengeometryintegrationtext2020/</guid>
-      <description>tags RNN, NLP source (Aitken et al. 2020)  Summary This paper takes a dynamical system based approach to study learning in RNNs. Gradient descent optimization in RNNs allows them to learn a simplified form of memory and information processing.
+This new formulation yields better time and memory complexity as well as a model that is casual and autoregressive (similar to RNNs).</description></item><item><title>Notes on: The geometry of integration in text classification RNNs by Aitken, K., Ramasesh, V. V., Garg, A., Cao, Y., Sussillo, D., &amp; Maheswaranathan, N. (2020)</title><link>https://hugocisneros.com/notes/aitkengeometryintegrationtext2020/</link><pubDate>Thu, 25 Mar 2021 10:20:00 +0100</pubDate><guid>https://hugocisneros.com/notes/aitkengeometryintegrationtext2020/</guid><description>tags RNN, NLP source (Aitken et al. 2020) Summary This paper takes a dynamical system based approach to study learning in RNNs. Gradient descent optimization in RNNs allows them to learn a simplified form of memory and information processing.
 The authors use simple text classification tasks to try and understand if these learned properties can be understood by looking at the state dynamics of RNNs.
-The RNNs usually behave like attractor networks, with the hidden state lying on a low-dimensional manifold.</description>
-    </item>
-    
-  </channel>
-</rss>
+The RNNs usually behave like attractor networks, with the hidden state lying on a low-dimensional manifold.</description></item></channel></rss>

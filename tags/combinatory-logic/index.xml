@@ -1,21 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Combinatory logic on Hugo Cisneros</title>
-    <link>https://hugocisneros.com/tags/combinatory-logic/</link>
-    <description>Recent content in Combinatory logic on Hugo Cisneros</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 25 Mar 2021 09:57:00 +0100</lastBuildDate><atom:link href="https://hugocisneros.com/tags/combinatory-logic/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Notes on: Combinatory Chemistry: Towards a Simple Model of Emergent Evolution by Kruszewski, G., &amp; Mikolov, T. (2020)</title>
-      <link>https://hugocisneros.com/notes/kruszewskicombinatorychemistrysimple2020/</link>
-      <pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/kruszewskicombinatorychemistrysimple2020/</guid>
-      <description>tags Artificial life, Combinatory logic source (Kruszewski and Mikolov 2020)  Summary This is Kruszewski&amp;rsquo;s approach to artificial life, based on artificial chemistry. Combinatory logic is used as a basis for this system. Conservation laws are added on top of the set of rules that make combinatory logic Turing complete. This is then used to observe interesting dynamics and pre-life-like processes.
-Comments Bibliography Kruszewski, Germánand Tomas Mikolov. March 17, 2020.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Combinatory logic on Hugo Cisneros</title><link>https://hugocisneros.com/tags/combinatory-logic/</link><description>Recent content in Combinatory logic on Hugo Cisneros</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 25 Mar 2021 09:57:00 +0100</lastBuildDate><atom:link href="https://hugocisneros.com/tags/combinatory-logic/index.xml" rel="self" type="application/rss+xml"/><item><title>Notes on: Combinatory Chemistry: Towards a Simple Model of Emergent Evolution by Kruszewski, G., &amp; Mikolov, T. (2020)</title><link>https://hugocisneros.com/notes/kruszewskicombinatorychemistrysimple2020/</link><pubDate>Thu, 25 Mar 2021 09:57:00 +0100</pubDate><guid>https://hugocisneros.com/notes/kruszewskicombinatorychemistrysimple2020/</guid><description>tags Artificial life, Combinatory logic source (Kruszewski and Mikolov 2020) Summary This is Kruszewski&amp;rsquo;s approach to artificial life, based on artificial chemistry. Combinatory logic is used as a basis for this system. Conservation laws are added on top of the set of rules that make combinatory logic Turing complete. This is then used to observe interesting dynamics and pre-life-like processes.
+Comments Bibliography Kruszewski, Germánand Tomas Mikolov. March 17, 2020.</description></item></channel></rss>

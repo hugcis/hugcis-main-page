@@ -3,7 +3,7 @@
 <head>
 
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
   <base href="https://hugocisneros.com/">
   <title>Open-ended creation of hybrid creatures with Neural Cellular Automata - Hugo Cisneros</title>
   <meta property="og:title" content="Open-ended creation of hybrid creatures with Neural Cellular Automata - Hugo Cisneros">
@@ -78,7 +78,7 @@
           </figure>
           <p>In each of the examples above, a separate CA was trained on a pattern starting from a single black pixel. We extend this by training a single NCA on multiple patterns from <strong>different</strong> seeds. Instead of a single black cell, a small number of cells are arranged into simple shapes.</p>
           <figure class="center" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-            <img itemprop="url" src="/img/nca_seed.png" alt="Example seed patterns" width="300" style="image-rendering: crisp-edges">
+            <img itemprop="url" src="/img/nca_seed.png" alt="Example seed patterns" width="300" style="image-rendering:crisp-edges">
             <figcaption>
               <h4 itemprop="name">Example seed patterns</h4>
             </figcaption>
@@ -131,14 +131,14 @@
           <h3 id="modular-seeds">Modular seeds</h3>
           <p>The patterns learned by NCA may have different spatial symmetries and structures. By using seed patterns that take advantage of these structures we can help making the hybrids modular.</p>
           <figure class="center" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-            <img itemprop="url" src="/img/seed_overlay.jpeg" alt="Seed displayed on top of the target giraffe pattern" width="300" style="">
+            <img itemprop="url" src="/img/seed_overlay.jpeg" alt="Seed displayed on top of the target giraffe pattern" width="300">
             <figcaption>
               <h4 itemprop="name">Seed displayed on top of the target pattern. One part of the seed should code for the body and the other for the head</h4>
             </figcaption>
           </figure>
           <p>In the example above, the NCA learns to grow the pattern from this “double” seed: a head-seed and a body-seed. Because the fully trained NCA know how to repair a damaged pattern, it can actually grow the full pattern from each of these two sub-seeds. When two or more patterns are learned, we can swap sub-seeds to create hybrids.</p>
           <figure class="center" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-            <img itemprop="url" src="/img/hybrid.jpg" alt="Hybrid giraffe-gorilla obtained by using the head-seed of a giraffe and the body-seed of a gorilla" width="300" style="">
+            <img itemprop="url" src="/img/hybrid.jpg" alt="Hybrid giraffe-gorilla obtained by using the head-seed of a giraffe and the body-seed of a gorilla" width="300">
             <figcaption>
               <h4 itemprop="name">Hybrid giraffe-gorilla obtained by using the head-seed of a giraffe and the body-seed of a gorilla</h4>
             </figcaption>
@@ -146,7 +146,7 @@
           <h3 id="genome-seeds">Genome seeds</h3>
           <p>We also try another way of encoding information about the patterns in a compact and modular form: genome seeds.</p>
           <figure class="center" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-            <img itemprop="url" src="/img/genome_seeds.png" alt="Genome seeds: unique patterns of cells" width="300" style="image-rendering: crisp-edges">
+            <img itemprop="url" src="/img/genome_seeds.png" alt="Genome seeds: unique patterns of cells" width="300" style="image-rendering:crisp-edges">
             <figcaption>
               <h4 itemprop="name">Genome seeds: unique patterns of cells</h4>
             </figcaption>

@@ -1,21 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>ALife Conference on Hugo Cisneros</title>
-    <link>https://hugocisneros.com/tags/alife-conference/</link>
-    <description>Recent content in ALife Conference on Hugo Cisneros</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 25 Aug 2021 15:20:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/tags/alife-conference/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>ALife 2020</title>
-      <link>https://hugocisneros.com/notes/alife_2020/</link>
-      <pubDate>Wed, 25 Aug 2021 15:20:00 +0200</pubDate>
-      
-      <guid>https://hugocisneros.com/notes/alife_2020/</guid>
-      <description>tags ALife Conference  Day 1 Tutorial - Functional programming for artificial life Tutorial - Visualization Principles and Techniques for Research in ALife Mike Levin - Keynote Lecture Day 2 Sara Walker, keynote Lecture About what life means and how it can be defined from the point of view of physics/information theory, etc.
-Melanie Mitchell, keynote Lecture This talk was very similar to another one I watched from Santa Fe Institute which promotes her book: Artificial Intelligence: A Guide for Thinking Humans.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ALife Conference on Hugo Cisneros</title><link>https://hugocisneros.com/tags/alife-conference/</link><description>Recent content in ALife Conference on Hugo Cisneros</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 25 Aug 2021 15:20:00 +0200</lastBuildDate><atom:link href="https://hugocisneros.com/tags/alife-conference/index.xml" rel="self" type="application/rss+xml"/><item><title>ALife 2020</title><link>https://hugocisneros.com/notes/alife_2020/</link><pubDate>Wed, 25 Aug 2021 15:20:00 +0200</pubDate><guid>https://hugocisneros.com/notes/alife_2020/</guid><description>tags ALife Conference Day 1 Tutorial - Functional programming for artificial life Tutorial - Visualization Principles and Techniques for Research in ALife Mike Levin - Keynote Lecture Day 2 Sara Walker, keynote Lecture About what life means and how it can be defined from the point of view of physics/information theory, etc.
+Melanie Mitchell, keynote Lecture This talk was very similar to another one I watched from Santa Fe Institute which promotes her book: Artificial Intelligence: A Guide for Thinking Humans.</description></item></channel></rss>

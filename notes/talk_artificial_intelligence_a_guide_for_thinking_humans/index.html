@@ -3,7 +3,7 @@
 <head>
 
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
   <base href="https://hugocisneros.com/">
   <title>Talk: Artificial Intelligence: A Guide for Thinking Humans - Hugo Cisneros</title>
   <meta property="og:title" content="Talk: Artificial Intelligence: A Guide for Thinking Humans - Hugo Cisneros">
@@ -73,7 +73,7 @@
             <p>Chess was thought to be the pinnacle of intelligence until a brute-force approach was found to beat any human intelligent approach.</p>
             <blockquote>
               <p>The study of the common sense world and how a system can find out how to achieve its goals. — John McCarthy, 1988</p>
-            </blockquote><!--quoteend-->
+            </blockquote>
             <blockquote>
               <p>An anarchy of methods. — (<a href="#lehmanAnarchyMethodsCurrent2014"><cite itemprop="citation" itemscope itemid="key:lehmanAnarchyMethodsCurrent2014">Lehman, Cluneand Risi 2014</cite></a>)</p>
             </blockquote>
@@ -115,7 +115,7 @@
             <blockquote>
               <p>Without concepts there can be no thoughts, and without analogies there can be no concepts.</p>
               <p>— D. Hofstadter & E. Sander, <em>Surfaces and essences</em> (2013)</p>
-            </blockquote><!--quoteend-->
+            </blockquote>
             <blockquote>
               <p>How to form and fluidly use concepts is the most important open problem in AI.</p>
             </blockquote>
@@ -161,18 +161,7 @@
   <script src="/js/katex/katex.min.js"></script> 
   <script src="/js/katex/contrib/auto-render.min.js"></script> 
   <script>
-
-    document.addEventListener("DOMContentLoaded", function() {
-    renderMathInElement(document.body, {
-        delimiters: [
-            {left: "\\[", right: "\\]", display: true},
-            {left: "$$", right: "$$", display: true},
-            {left: "\\begin{equation}", right: "\\end{equation}", display: true},
-            {left: "$", right: "$", display: false},
-            {left: "\\(", right: "\\)", display: false},
-        ]
-  })
-    });
+  document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"\\[",right:"\\]",display:!0},{left:"$$",right:"$$",display:!0},{left:"\\begin{equation}",right:"\\end{equation}",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1}]})})
   </script>
 </body>
 </html>

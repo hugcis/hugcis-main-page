@@ -1,46 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Optimal transport on Hugo Cisneros</title>
-    <link>https://hugocisneros.com/tags/optimal-transport/</link>
-    <description>Recent content in Optimal transport on Hugo Cisneros</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 07 Dec 2019 23:20:20 +0100</lastBuildDate><atom:link href="https://hugocisneros.com/tags/optimal-transport/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Stochastic optimization for large scale optimal transport</title>
-      <link>https://hugocisneros.com/projects/stochastic_optimization_for_large_scale_optimal_transport/</link>
-      <pubDate>Mon, 07 Jan 2019 12:00:00 +0000</pubDate>
-      
-      <guid>https://hugocisneros.com/projects/stochastic_optimization_for_large_scale_optimal_transport/</guid>
-      <description>&lt;h3 id=&#34;links&#34;&gt;Links&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://hugocisneros.com/pdf/Cisneros_Slides_Stochastic_OT.pdf&#34;&gt;Project slides&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://hugocisneros.com/pdf/Cisneros_report_Stochastic_OT.pdf&#34;&gt;PDF project report&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/hugcis/large-scale-optimal-transport&#34;&gt;Github&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>The Elegance of Optimal Transport</title>
-      <link>https://hugocisneros.com/blog/the-elegance-of-optimal-transport/</link>
-      <pubDate>Sat, 07 Dec 2019 23:20:20 +0100</pubDate>
-      
-      <guid>https://hugocisneros.com/blog/the-elegance-of-optimal-transport/</guid>
-      <description>This post was largely inspired by Gabriel Peyré and Marco Cuturi&amp;rsquo;s excellent book about Computational Optimal Transport, which is free, (arXiv link, ref: [1]).
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Optimal transport on Hugo Cisneros</title><link>https://hugocisneros.com/tags/optimal-transport/</link><description>Recent content in Optimal transport on Hugo Cisneros</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 07 Dec 2019 23:20:20 +0100</lastBuildDate><atom:link href="https://hugocisneros.com/tags/optimal-transport/index.xml" rel="self" type="application/rss+xml"/><item><title>Stochastic optimization for large scale optimal transport</title><link>https://hugocisneros.com/projects/stochastic_optimization_for_large_scale_optimal_transport/</link><pubDate>Mon, 07 Jan 2019 12:00:00 +0000</pubDate><guid>https://hugocisneros.com/projects/stochastic_optimization_for_large_scale_optimal_transport/</guid><description>&lt;h3 id="links">Links&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="https://hugocisneros.com/pdf/Cisneros_Slides_Stochastic_OT.pdf">Project slides&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://hugocisneros.com/pdf/Cisneros_report_Stochastic_OT.pdf">PDF project report&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/hugcis/large-scale-optimal-transport">Github&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>The Elegance of Optimal Transport</title><link>https://hugocisneros.com/blog/the-elegance-of-optimal-transport/</link><pubDate>Sat, 07 Dec 2019 23:20:20 +0100</pubDate><guid>https://hugocisneros.com/blog/the-elegance-of-optimal-transport/</guid><description>This post was largely inspired by Gabriel Peyré and Marco Cuturi&amp;rsquo;s excellent book about Computational Optimal Transport, which is free, (arXiv link, ref: [1]).
 A simple problem? Let&amp;rsquo;s start at the beginning: what is Optimal transport (OT)?
-It all begins with Gaspard Monge, reading his mémoire [2] in front of eminent scientists and engineers of the time &amp;mdash; including famous Enlightenment philosopher Condorcet &amp;mdash; at the French Académie Royale des Sciences in 1776.</description>
-    </item>
-    
-    <item>
-      <title>Arxiv explorer</title>
-      <link>https://hugocisneros.com/projects/arxiv_explorer/</link>
-      <pubDate>Fri, 26 Oct 2018 12:00:00 +0000</pubDate>
-      
-      <guid>https://hugocisneros.com/projects/arxiv_explorer/</guid>
-      <description>Github repo  Description This project was about creating a tool similar to Arxiv Sanity with additional NLP functionalities for finding similar papers from their abstract.
-I used a concept from [1], which uses earth mover&amp;rsquo;s distance metric between documents represented as normalized bag-of-words. The underlying transport cost between two words is given by their distance in a pre-trained word vector space. The app trains word vectors on all Arxiv abstracts and uses the EMD based metric to compute similarities between papers.</description>
-    </item>
-    
-  </channel>
-</rss>
+It all begins with Gaspard Monge, reading his mémoire [2] in front of eminent scientists and engineers of the time &amp;mdash; including famous Enlightenment philosopher Condorcet &amp;mdash; at the French Académie Royale des Sciences in 1776.</description></item><item><title>Arxiv explorer</title><link>https://hugocisneros.com/projects/arxiv_explorer/</link><pubDate>Fri, 26 Oct 2018 12:00:00 +0000</pubDate><guid>https://hugocisneros.com/projects/arxiv_explorer/</guid><description>Github repo Description This project was about creating a tool similar to Arxiv Sanity with additional NLP functionalities for finding similar papers from their abstract.
+I used a concept from [1], which uses earth mover&amp;rsquo;s distance metric between documents represented as normalized bag-of-words. The underlying transport cost between two words is given by their distance in a pre-trained word vector space. The app trains word vectors on all Arxiv abstracts and uses the EMD based metric to compute similarities between papers.</description></item></channel></rss>

@@ -1,25 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Data journalism on Hugo Cisneros</title>
-    <link>https://hugocisneros.com/tags/data-journalism/</link>
-    <description>Recent content in Data journalism on Hugo Cisneros</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 29 Oct 2018 12:00:00 +0000</lastBuildDate><atom:link href="https://hugocisneros.com/tags/data-journalism/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Data journalism extractor</title>
-      <link>https://hugocisneros.com/projects/data_journalism_extractor/</link>
-      <pubDate>Mon, 29 Oct 2018 12:00:00 +0000</pubDate>
-      
-      <guid>https://hugocisneros.com/projects/data_journalism_extractor/</guid>
-      <description>&lt;h3 id=&#34;links&#34;&gt;Links&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/hugcis/data_journalism_extractor&#34;&gt;Github repo&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://data-journalism-extractor.readthedocs.io/en/latest/&#34;&gt;Online documentation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://hugocisneros.com/pdf/report_data_journalism.pdf&#34;&gt;Report (in French)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Data journalism on Hugo Cisneros</title><link>https://hugocisneros.com/tags/data-journalism/</link><description>Recent content in Data journalism on Hugo Cisneros</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 29 Oct 2018 12:00:00 +0000</lastBuildDate><atom:link href="https://hugocisneros.com/tags/data-journalism/index.xml" rel="self" type="application/rss+xml"/><item><title>Data journalism extractor</title><link>https://hugocisneros.com/projects/data_journalism_extractor/</link><pubDate>Mon, 29 Oct 2018 12:00:00 +0000</pubDate><guid>https://hugocisneros.com/projects/data_journalism_extractor/</guid><description>&lt;h3 id="links">Links&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/hugcis/data_journalism_extractor">Github repo&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://data-journalism-extractor.readthedocs.io/en/latest/">Online documentation&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://hugocisneros.com/pdf/report_data_journalism.pdf">Report (in French)&lt;/a>&lt;/li>
+&lt;/ul></description></item></channel></rss>
