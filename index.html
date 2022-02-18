@@ -136,8 +136,8 @@
       <div id="#open-modal-visualizing-computation-in-large-scale-cellular-automata" class="modal-window">
         <div>
           <a id="#close-modal-visualizing-computation-in-large-scale-cellular-automata" title="Close" class="modal-close">✕</a>
-          <h3>Cite <i>Visualizing computation in large-scale cellular automata</i></h3><button>Copy to clipboard</button>
-          <pre><code>@article{doi:10.1162/isal a 00277,
+          <h3>Cite <i>Visualizing computation in large-scale cellular automata</i></h3><button class="modal-copy-citation" id="#copy-5dbe8d51">Copy to clipboard</button>
+          <pre><code id="5dbe8d51">@article{doi:10.1162/isal_a_00277,
  author = {Cisneros, Hugo and Sivic, Josef and Mikolov, Tomas},
  title = {Visualizing computation in large-scale cellular automata},
  journal = {Artificial Life Conference Proceedings},
@@ -145,7 +145,7 @@
  number = {32},
  pages = {239-247},
  year = {2020},
- doi = {10.1162/isal a 00277},
+ doi = {10.1162/isal_a_00277},
  URL = {https://www.mitpressjournals.org/doi/abs/10.1162/isal_a_00277},
  eprint = {https://www.mitpressjournals.org/doi/pdf/10.1162/isal_a_00277} ,
  }</code></pre>
@@ -154,8 +154,8 @@
       <div id="#open-modal-evolving-structures-in-complex-systems" class="modal-window">
         <div>
           <a id="#close-modal-evolving-structures-in-complex-systems" title="Close" class="modal-close">✕</a>
-          <h3>Cite <i>Evolving Structures in Complex Systems</i></h3><button>Copy to clipboard</button>
-          <pre><code>@inproceedings{9002840,
+          <h3>Cite <i>Evolving Structures in Complex Systems</i></h3><button class="modal-copy-citation" id="#copy-56ef4e4c">Copy to clipboard</button>
+          <pre><code id="56ef4e4c">@inproceedings{9002840,
  author={H. {Cisneros} and J. {Sivic} and T. {Mikolov}},
  booktitle={2019 IEEE Symposium Series on Computational Intelligence (SSCI)},
  title={Evolving Structures in Complex Systems},
@@ -180,7 +180,7 @@
     </footer>
   </div>
   <script>
-  var list,id,modWin,closeButton;function toggleModal(a){return b=>{(b.target.id.startsWith("#open-modal")||b.target.id.startsWith("#close-modal")||b.target.className=="open-modal")&&(b.stopPropagation(),a.classList.toggle("closed"))}}list=document.getElementsByClassName("open-modal");for(let a of list)id=a.attributes["data-target"].textContent,modWin=document.getElementById(id),closeButton=document.getElementById(id.replace("open","close")),a.addEventListener('click',toggleModal(modWin)),closeButton.addEventListener('click',toggleModal(modWin)),modWin.addEventListener('click',toggleModal(modWin));function copyCitationContent(){navigator.clipboard.writeText("<empty clipboard>").then(function(){},function(){})}
+  var list,id,modWin,closeButton,clipboardCopyButtons;function toggleModal(a){return b=>{(b.target.id.startsWith("#open-modal")||b.target.id.startsWith("#close-modal")||b.target.className=="open-modal")&&(b.stopPropagation(),a.classList.toggle("closed"))}}list=document.getElementsByClassName("open-modal");for(let a of list)id=a.attributes["data-target"].textContent,modWin=document.getElementById(id),closeButton=document.getElementById(id.replace("open","close")),a.addEventListener('click',toggleModal(modWin)),closeButton.addEventListener('click',toggleModal(modWin)),modWin.addEventListener('click',toggleModal(modWin));clipboardCopyButtons=document.getElementsByClassName("modal-copy-citation");for(let a of clipboardCopyButtons){let b=a.id.replace("#copy-",""),c=document.getElementById(b);a.addEventListener('click',function(a){return function(){if(!a){var b=this.innerHTML;navigator.clipboard.writeText(c.innerHTML).then(()=>{this.innerHTML="Copied!"},()=>{this.innerHTML="Error copying!"}),a=!0,setTimeout(function(){this.innerHTML=b,a=!1}.bind(this),1e3)}}}(!1),this)}
   </script>
 </body>
 </html>
