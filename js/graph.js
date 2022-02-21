@@ -130,7 +130,7 @@ d3.json("/js/graph.json").then(function(data) {
           .data(nodes)
           .join("a")
           .attr("xlink:href", d => {
-              return "./" + d.lnk;
+              return "/notes/" + d.lnk;
           })
           .attr("id", d => "circle_" + d.lnk)
           .append("circle")
