@@ -11,9 +11,11 @@
   <meta property="og:url" content="https://hugocisneros.com/notes/double_descent/">
   <meta property="og:description" content="Notes about Double descent">
   <meta name="Description" property="description" content="Notes about Double descent">
+  <link rel="me" href="https://twitter.com/@cisne_hug">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@cisne_hug">
   <meta name="twitter:creator" content="@cisne_hug">
+  <link rel="me" href="https://github.com/hugcis/">
   <meta property="keywords" content="neural network training">
   <link rel="stylesheet" href="https://hugocisneros.com/main.min.css" media="all" type="text/css">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -61,7 +63,24 @@
               <dd>
                 <a href="/notes/neural_network_training/">Neural network training</a>
               </dd>
+              <dt>resources</dt>
+              <dd>
+                (<a href="#belkinReconcilingModernMachine2019"><cite itemprop="citation" itemscope itemid="key:belkinReconcilingModernMachine2019">Belkin et al. 2019</cite></a>)
+              </dd>
             </dl>
+            <p>From (caption is also adapted from the paper) (<a href="#belkinReconcilingModernMachine2019"><cite itemprop="citation" itemscope itemid="key:belkinReconcilingModernMachine2019">Belkin et al. 2019</cite></a>):</p>
+            <figure>
+              <img src="~/img/doubledescent.png" alt="This shows training and test risk curves as a function of the capacity. The curve follows the usual bias-variance tradeoff but then starts going down again">
+              <figcaption>
+                <p><span class="figure-number">Figure 1:</span> Illustration of the double descent effect in deep neural networks. The double descent risk curve, which incorporates the U-shaped risk curve (i.e., the “classical” regime) together with the observed behavior from using high capacity function classes (i.e., the “modern” interpolating regime), separated by the interpolation threshold. The predictors to the right of the interpolation threshold have zero training risk.</p>
+              </figcaption>
+            </figure>
+            <h2 id="bibliography">Bibliography</h2>
+            <ol class="biblio-list">
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="belkinReconcilingModernMachine2019">
+                <span itemprop="author">Belkin, Mikhail, Daniel Hsu, Siyuan Maand Soumik Mandal</span>. <time datetime="2019" itemprop="datePublished">September 10, 2019</time>. "<span itemprop="name">Reconciling Modern Machine Learning Practice and the Bias-variance Trade-off</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:1812.11118 [cs, Stat]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/1812.11118">http://arxiv.org/abs/1812.11118</a>.
+              </li>
+            </ol>
           </div>
           <div class="bl-section">
             <h2>Links to this note</h2>
@@ -74,7 +93,7 @@
             </div>
           </div>
           <div class="note-footer">
-            Last changed <a class="u-url" href="https://hugocisneros.com/notes/double_descent/"><time itemprop="datePublished" class="dt-published" datetime="2020-12-02T18:59:00+0100">02/12/2020</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+            Last changed <a class="u-url" href="https://hugocisneros.com/notes/double_descent/"><time itemprop="datePublished" class="dt-published" datetime="2022-03-07T11:38:00+0100">07/03/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
           </div>
         </div>
       </article>
