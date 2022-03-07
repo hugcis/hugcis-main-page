@@ -4,19 +4,19 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
-  <title>Compressed sensing - Hugo Cisneros</title>
-  <meta property="og:title" content="Compressed sensing - Hugo Cisneros">
+  <title>Rademacher complexity - Hugo Cisneros</title>
+  <meta property="og:title" content="Rademacher complexity - Hugo Cisneros">
   <meta property="og:type" content="article">
   <meta property="og:image" content="/img/main.jpeg">
-  <meta property="og:url" content="https://hugocisneros.com/notes/compressed_sensing/">
-  <meta property="og:description" content="Notes about Compressed sensing">
-  <meta name="Description" property="description" content="Notes about Compressed sensing">
+  <meta property="og:url" content="https://hugocisneros.com/notes/rademacher_complexity/">
+  <meta property="og:description" content="Notes about Rademacher complexity">
+  <meta name="Description" property="description" content="Notes about Rademacher complexity">
   <link rel="me" href="https://twitter.com/@cisne_hug">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@cisne_hug">
   <meta name="twitter:creator" content="@cisne_hug">
   <link rel="me" href="https://github.com/hugcis">
-  <meta property="keywords" content="signal processing">
+  <meta property="keywords" content="machine learning">
   <link rel="stylesheet" href="https://hugocisneros.com/main.min.css" media="all" type="text/css">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -56,38 +56,37 @@
     <main class="content" role="main">
       <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
         <div class="single-note note-container">
-          <h1 class="article-title p-name" itemprop="name">Compressed sensing</h1>
+          <h1 class="article-title p-name" itemprop="name">Rademacher complexity</h1>
           <div class="article-content e-content p-name" itemprop="articleBody">
             <dl>
               <dt>tags</dt>
               <dd>
-                <a href="/notes/signal_processing/">Signal processing</a>
-              </dd>
-              <dt>resources</dt>
-              <dd>
-                (<a href="#candesRobustUncertaintyPrinciples2006"><cite itemprop="citation" itemscope itemid="doi:10.1109/TIT.2005.862083">Candes, Rombergand Tao 2006</cite></a>)
+                <a href="/notes/machine_learning/">Machine learning</a>
               </dd>
             </dl>
-            <h2 id="description">Description</h2>
-            <p>Compressed sensing is a technique to recover a sparse signal from partial observations.</p>
-            <p>The signal is described as a $N$-dimensional vector \(\textbf{s}\). We make \(M\) measurements, where a measurements means a projection of the signal \(\textbf{s}\) onto some known vector. The result of all these measurements can be written as \(\textbf{y} = \textbf{Fs}\), where \(\textbf{F}\) is a \(M \times N\) matrix.</p>
-            <p>In the context of compressed sensing, we have \(M &lt; N\). This results in an <a href="/notes/system_of_linear_equations/#underdetermined-systems">underdetermined linear system</a> which usually has an infinite number of solutions.</p>
+            <h2 id="definition">Definition</h2>
+            <p>Given a function class \(f_w\) and random iid \(y_\mu \in \{\pm 1\}\), the Rademacher complexity is \[ \mathscr{R}_n = \mathbb{E}_{y, X }\text{sup}_w \frac{1}{n} \sum_{\mu = 1}^n y_\mu f_w(X_\mu) \]</p>
+            <p>It measures how well a function can approximate a dataset with random labels.</p>
+            <p>(<a href="#bartlettRademacherGaussianComplexities2002"><cite itemprop="citation" itemscope itemid="key:bartlettRademacherGaussianComplexities2002">Bartlett and Mendelson 2002</cite></a>) shows bounds for the Rademacher complexity in terms of \(\ell_1\) norm bounds on the weights of the network. However, (<a href="#zhangUnderstandingDeepLearning2017"><cite itemprop="citation" itemscope itemid="key:zhangUnderstandingDeepLearning2017">Zhang et al. 2017</cite></a>) showed that these bound are mostly void as deep neural networks have no trouble fitting random labels but still generalize relatively well.</p>
             <h2 id="bibliography">Bibliography</h2>
             <ol class="biblio-list">
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="candesRobustUncertaintyPrinciples2006" itemid="doi:10.1109/TIT.2005.862083">
-                <span itemprop="author">Candes, E.J., J. Rombergand T. Tao</span>. <time datetime="2006" itemprop="datePublished">February 2006</time>. "<span itemprop="name">Robust Uncertainty Principles: Exact Signal Reconstruction from Highly Incomplete Frequency Information</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">IEEE Transactions on Information Theory</i></span> 52 (2):489–509. <a itemprop="sameAs" href="https://doi.org/10.1109/TIT.2005.862083">DOI</a>.
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="bartlettRademacherGaussianComplexities2002">
+                <span itemprop="author">Bartlett, Peter L.and Shahar Mendelson</span>. <time datetime="2002" itemprop="datePublished">2002</time>. "<span itemprop="name">Rademacher and Gaussian Complexities: Risk Bounds and Structural Results</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">J. Mach. Learn. Res.</i></span> 3:463–82. <a itemprop="sameAs" href="http://jmlr.org/papers/v3/bartlett02a.html">http://jmlr.org/papers/v3/bartlett02a.html</a>.
+              </li>
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="zhangUnderstandingDeepLearning2017">
+                <span itemprop="author">Zhang, Chiyuan, Samy Bengio, Moritz Hardt, Benjamin Rechtand Oriol Vinyals</span>. <time datetime="2017" itemprop="datePublished">2017</time>. "<span itemprop="name">Understanding Deep Learning Requires Rethinking Generalization</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">5th International Conference on Learning Representations, ICLR 2017, Toulon, France, April 24-26, 2017, Conference Track Proceedings</i></span>. OpenReview.net. <a itemprop="sameAs" href="https://openreview.net/forum?id=Sy8gdB9xx">https://openreview.net/forum?id=Sy8gdB9xx</a>.
               </li>
             </ol>
           </div>
           <div class="note-footer">
-            Last changed <a class="u-url" href="https://hugocisneros.com/notes/compressed_sensing/"><time itemprop="datePublished" class="dt-published" datetime="2022-03-07T16:07:00+0100">07/03/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+            Last changed <a class="u-url" href="https://hugocisneros.com/notes/rademacher_complexity/"><time itemprop="datePublished" class="dt-published" datetime="2022-03-07T16:44:00+0100">07/03/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
           </div>
         </div>
       </article>
       <h3>Comments</h3>
       <script data-isso="//comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="//comment.hugocisneros.com/js/embed.min.js"></script>
       <section id="isso-thread"></section><br>
-      <a href="/notes#compressed_sensing"><b>← Back to Notes</b></a>
+      <a href="/notes#rademacher_complexity"><b>← Back to Notes</b></a>
       <hr>
     </main>
     <footer class="footer">
