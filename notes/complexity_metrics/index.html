@@ -66,7 +66,7 @@
             </dl>
             <p>To study the complexity of various systems, researchers have come up with various metrics. They are based on several principles such as <a href="/notes/information_theory/">Information theory</a> or <a href="/notes/algorithmic_information_theory/">Algorithmic Information theory</a>. Many of these metrics are described in (<a href="#grassbergerRandomnessInformationComplexity1989"><cite itemprop="citation" itemscope itemid="key:grassbergerRandomnessInformationComplexity1989">Grassberger 1989</cite></a>).</p>
             <h2 id="shannon-entropy-and-kolmogorov-complexity">Shannon entropy and Kolmogorov Complexity</h2>
-            <p>The paper (<a href="#grunwaldShannonInformationKolmogorov">&lt;cite itemprop=“citation” itemscope=““Grunwald and Vitanyi,n.d.</a>) is a great description and analysis of two of the most important <a href="/notes/complexity/">Complexity</a> metrics:</p>
+            <p>The paper (<a href="#grunwaldShannonInformationKolmogorov2004"><cite itemprop="citation" itemscope itemid="key:grunwaldShannonInformationKolmogorov2004">Grunwald, Vitányi 2004</cite></a>) is a great description and analysis of two of the most important <a href="/notes/complexity/">Complexity</a> metrics:</p>
             <ul>
               <li>
                 <a href="/notes/entropy/">Shannon entropy</a>
@@ -85,7 +85,7 @@
             <p>For a <a href="/notes/turing_completeness/">Universal computer</a> \(U\) the algorithmic information of \(S\) relative to \(U\) is defined as the length of the shortest program that yields \(S\) on \(U\). \[ C_U(S) = \min_{Prog_U(S)} \text{Len}[Prog_U(S)] \]</p>
             <p>This quantity is called algorithmic information, or <a href="/notes/kolmogorov_complexity/">Solomonoff–Kolmogorov–Chaitin complexity</a>.</p>
             <h2 id="compression-based-metrics">Compression-based metrics</h2>
-            <p>It is not possible for a given sequence to estimate reliably its algorithmic information, because we cannot know if we have found the shortest description. A solution is to restrict the encoding method, and <a href="/notes/lempel_ziv_welch_algorithm/">LZW algorithm</a> complexity is one of them (<a href="#lempelComplexityFiniteSequences1976"><cite itemprop="citation" itemscope itemid="doi:10.1109/TIT.1976.1055501">Lempel and Ziv 1976</cite></a>).</p>
+            <p>It is not possible for a given sequence to estimate reliably its algorithmic information, because we cannot know if we have found the shortest description. A solution is to restrict the encoding method, and <a href="/notes/lempel_ziv_welch_algorithm/">LZW algorithm</a> complexity is one of them (<a href="#lempelComplexityFiniteSequences1976"><cite itemprop="citation" itemscope itemid="doi:10.1109/TIT.1976.1055501">Lempel, Ziv 1976</cite></a>).</p>
             <h2 id="others">Others</h2>
             <ul>
               <li>
@@ -94,20 +94,20 @@
               <li>
                 <a href="/notes/statistical_complexity/">Statistical complexity</a>
               </li>
-              <li>In (<a href="#cisnerosEvolvingStructuresComplex2019"><cite itemprop="citation" itemscope itemid="doi:10.1109/SSCI44817.2019.9002840">Cisneros, Sivicand Mikolov 2019</cite></a>), we propose a complexity metric which is based on the compression quality of a local neural network based prediction model.
+              <li>In (<a href="#cisnerosEvolvingStructuresComplex2019"><cite itemprop="citation" itemscope itemid="doi:10.1109/SSCI44817.2019.9002840">Cisneros et al. 2019</cite></a>), we propose a complexity metric which is based on the compression quality of a local neural network based prediction model.
               </li>
             </ul>
             <h2 id="bibliography">Bibliography</h2>
             <ol class="biblio-list">
               <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="grassbergerRandomnessInformationComplexity1989">
-                <span itemprop="author">Grassberger, Peter</span>. <time datetime="1989" itemprop="datePublished">1989</time>. "<span itemprop="name">Randomness, Information, and Complexity</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Proceedings of the 5th Mexican School on Statistical Physics</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/1208.3459">http://arxiv.org/abs/1208.3459</a>.
+                <span itemprop="author">Peter Grassberger</span>. <time datetime="1989" itemprop="datePublished">1989</time>. "<span itemprop="name">Randomness, Information, and Complexity</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Proceedings of the 5th Mexican School on Statistical Physics</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/1208.3459">http://arxiv.org/abs/1208.3459</a>.
               </li>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="grunwaldShannonInformationKolmogorov"><span itemprop="author">Grunwald, Peterand Paul Vitanyi</span>. n.d.. "<span itemprop="name">Shannon Information and Kolmogorov Complexity</span>", 51.</li>
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="grunwaldShannonInformationKolmogorov2004"><span itemprop="author">Peter Grunwald, Paul Vitányi</span>. <time datetime="2004" itemprop="datePublished">2004</time>. "<span itemprop="name">Shannon Information and Kolmogorov Complexity</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv Preprint Cs/0410002</i></span>.</li>
               <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="lempelComplexityFiniteSequences1976" itemid="doi:10.1109/TIT.1976.1055501">
-                <span itemprop="author">Lempel, A.and J. Ziv</span>. <time datetime="1976" itemprop="datePublished">January 1976</time>. "<span itemprop="name">On the Complexity of Finite Sequences</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">IEEE Transactions on Information Theory</i></span> 22 (1):75–81. <a itemprop="sameAs" href="https://doi.org/10.1109/TIT.1976.1055501">DOI</a>.
+                <span itemprop="author">A. Lempel, J. Ziv</span>. <time datetime="1976" itemprop="datePublished">January 1976</time>. "<span itemprop="name">On the Complexity of Finite Sequences</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">IEEE Transactions on Information Theory</i></span> 22 (1):75–81. <a itemprop="sameAs" href="https://doi.org/10.1109/TIT.1976.1055501">DOI</a>.
               </li>
               <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="cisnerosEvolvingStructuresComplex2019" itemid="doi:10.1109/SSCI44817.2019.9002840">
-                <span itemprop="author">Cisneros, Hugo, Josef Sivicand Tomas Mikolov</span>. <time datetime="2019" itemprop="datePublished">December 2019</time>. "<span itemprop="name">Evolving Structures in Complex Systems</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">2019 IEEE Symposium Series on Computational Intelligence (SSCI)</i></span>, 230–37. Xiamen, China: IEEE. <a itemprop="sameAs" href="https://doi.org/10.1109/SSCI44817.2019.9002840">DOI</a>.
+                <span itemprop="author">Hugo Cisneros, Josef Sivic, Tomas Mikolov</span>. <time datetime="2019" itemprop="datePublished">December 2019</time>. "<span itemprop="name">Evolving Structures in Complex Systems</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">2019 IEEE Symposium Series on Computational Intelligence (SSCI)</i></span>, 230–37. Xiamen, China: IEEE. <a itemprop="sameAs" href="https://doi.org/10.1109/SSCI44817.2019.9002840">DOI</a>.
               </li>
             </ol>
           </div>
@@ -143,7 +143,7 @@
             </div>
           </div>
           <div class="note-footer">
-            Last changed <a class="u-url" href="https://hugocisneros.com/notes/complexity_metrics/"><time itemprop="datePublished" class="dt-published" datetime="2020-11-30T16:27:00+0100">30/11/2020</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+            Last changed <a class="u-url" href="https://hugocisneros.com/notes/complexity_metrics/"><time itemprop="datePublished" class="dt-published" datetime="2022-04-12T07:50:00+0200">12/04/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
           </div>
         </div>
       </article>

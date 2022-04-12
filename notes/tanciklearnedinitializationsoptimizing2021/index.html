@@ -61,7 +61,7 @@
             <dl>
               <dt>tags</dt>
               <dd>
-                <a href="/notes/implicit_neural_representations/#implicit-neural-representations-for-high-frequency-data">Neural radiance fields</a>, <a href="/notes/meta_learning/">Meta-learning</a>
+                <a href="/notes/implicit_neural_representations/#neural-radiance-fields">Neural radiance fields</a>, <a href="/notes/meta_learning/">Meta-learning</a>
               </dd>
               <dt>source</dt>
               <dd>
@@ -80,10 +80,10 @@
             <p>Two algorithms are considered for that outer-loop:</p>
             <ul>
               <li>
-                <a href="/notes/meta_learning/#meta-learning-algorithms">MAML</a> where the update \(\theta_0^{(j+1)} = \theta_0^j - \beta\nabla_\theta L(\theta_m(\theta, T_j))\) is computed by taking inner-loop steps with different step sizes
+                <a href="/notes/meta_learning/#maml">MAML</a> where the update \(\theta_0^{(j+1)} = \theta_0^j - \beta\nabla_\theta L(\theta_m(\theta, T_j))\) is computed by taking inner-loop steps with different step sizes
               </li>
               <li>
-                <a href="/notes/meta_learning/#meta-learning-algorithms">Reptile</a> where the update \(\theta_0^{(j+1)} = \theta_0^j - \beta\left( \theta_m(\theta_0^j, T_j) - \theta_0^j \right)\) is a step towards the optimized weights from an observation
+                <a href="/notes/meta_learning/#reptile">Reptile</a> where the update \(\theta_0^{(j+1)} = \theta_0^j - \beta\left( \theta_m(\theta_0^j, T_j) - \theta_0^j \right)\) is a step towards the optimized weights from an observation
               </li>
             </ul>
             <p>This setup gives very good results. The training of neural representations is faster and of better quality than with other types of initialization (even initialization trained to match the output of the met-learned one).</p>
@@ -91,7 +91,7 @@
             <h2 id="bibliography">Bibliography</h2>
             <ol class="biblio-list">
               <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="tancikLearnedInitializationsOptimizing2021">
-                <span itemprop="author">Tancik, Matthew, Ben Mildenhall, Terrance Wang, Divi Schmidt, Pratul P. Srinivasan, Jonathan T. Barronand Ren Ng</span>. <time datetime="2021" itemprop="datePublished">March 23, 2021</time>. "<span itemprop="name">Learned Initializations for Optimizing Coordinate-based Neural Representations</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:2012.02189 [cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2012.02189">http://arxiv.org/abs/2012.02189</a>.
+                <span itemprop="author">Matthew Tancik, Ben Mildenhall, Terrance Wang, Divi Schmidt, Pratul P. Srinivasan, Jonathan T. Barron, Ren Ng</span>. <time datetime="2021" itemprop="datePublished">March 23, 2021</time>. "<span itemprop="name">Learned Initializations for Optimizing Coordinate-based Neural Representations</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:2012.02189 [cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2012.02189">http://arxiv.org/abs/2012.02189</a>.
               </li>
             </ol>
           </div>
