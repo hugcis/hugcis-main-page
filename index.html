@@ -183,6 +183,6 @@
   <script>
   var list,id,modWin,closeButton,clipboardCopyButtons;function toggleModal(a){return b=>{(b.target.id.startsWith("#open-modal")||b.target.id.startsWith("#close-modal")||b.target.className=="open-modal")&&(b.stopPropagation(),a.classList.toggle("closed"))}}list=document.getElementsByClassName("open-modal");for(let a of list)id=a.attributes["data-target"].textContent,modWin=document.getElementById(id),closeButton=document.getElementById(id.replace("open","close")),a.addEventListener('click',toggleModal(modWin)),closeButton.addEventListener('click',toggleModal(modWin)),modWin.addEventListener('click',toggleModal(modWin));clipboardCopyButtons=document.getElementsByClassName("modal-copy-citation");for(let a of clipboardCopyButtons){let b=a.id.replace("#copy-",""),c=document.getElementById(b);a.addEventListener('click',function(a){return function(){if(!a){var b=this.innerHTML;navigator.clipboard.writeText(c.innerHTML).then(()=>{this.innerHTML="Copied!"},()=>{this.innerHTML="Error copying!"}),a=!0,setTimeout(function(){this.innerHTML=b,a=!1}.bind(this),1e3)}}}(!1),this)}
   </script> 
-  <script data-goatcounter="https://stats.hugocisneros.com/count" async src="/js/count.js"></script>
+  <script data-goatcounter="https://stats.hugocisneros.com/count" async src="//stats.hugocisneros.com/count.js"></script>
 </body>
 </html>
