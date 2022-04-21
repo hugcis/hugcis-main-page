@@ -66,8 +66,9 @@
             </dl>
             <h2 id="neural-network-training-as-development-in-program-space">Neural network training as development in program space</h2>
             <p>A neural network as a whole can be seen as a <a href="/notes/dynamical_systems/">dynamical system</a>. Its state is the collection of its parameters, and its evolution function is the <a href="/notes/optimization/">optimization</a> step taken when training the network.</p>
-            <p>In such a framework, the goal of training the neural network is to reach a form of attractor further optimization steps don’t change the state of the neural network.</p>
-            <p>This attractor should correspond to useful functional properties for the network, a measured by a cost function. <a href="/notes/meta_learning/">Meta-learning</a> corresponds to learning the evolution function itself to make the dynamical system converge to better attractors faster.</p>
+            <p>A neural network has parameters \(\theta_t\) at time \(t\) which can be seen as its state. In standard <a href="/notes/supervised_learning/">supervised learning</a>, the parameters are updated by the chosen <a href="/notes/optimization/">optimization</a> <a href="/notes/algorithm/">algorithm</a> and a set of training pairs \((\bm{X}_t, \bm{Y}_t)\). This is the update rule changing the state of that dynamical system at each training step.</p>
+            <p>In such a framework, the goal of training the neural network is to reach a form of <a href="/notes/attractor/">attractor</a>: further optimization steps don’t change the state (parameters) of the neural network.</p>
+            <p>This attractor should correspond to useful functional properties for the network, a measured by a cost function. <a href="/notes/meta_learning/">Meta-learning</a> can be used to learn the evolution function itself to make the dynamical system converge to better attractors in the least amount of steps.</p>
             <h3 id="program-evolution">Program evolution</h3>
             <p>A neural network is a program, an <a href="/notes/algorithm/">algorithm</a>. Its parameters specify a sequence of steps from input data to output prediction. Training a neural network is like moving in the algorithmic space towards programs with better performance according to a given cost function.</p>
           </div>
@@ -88,7 +89,7 @@
             </div>
           </div>
           <div class="note-footer">
-            Last changed <a class="u-url" href="https://hugocisneros.com/notes/neural_network_training/"><time itemprop="datePublished" class="dt-published" datetime="2020-10-28T09:32:00+0100">28/10/2020</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+            Last changed <a class="u-url" href="https://hugocisneros.com/notes/neural_network_training/"><time itemprop="datePublished" class="dt-published" datetime="2022-04-14T20:12:00+0200">14/04/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
           </div>
         </div>
       </article>

@@ -63,7 +63,21 @@
               <dd>
                 <a href="/notes/machine_learning/">Machine learning</a>, <a href="/notes/transfer_learning/">Transfer learning</a>
               </dd>
+              <dt>resources</dt>
+              <dd>
+                <a href="https://research.aimultiple.com/few-shot-learning/">AI Multiple post</a>
+              </dd>
             </dl>
+            <p>Few-shot learning (FSL) can be considered as a kind of <a href="/notes/meta_learning/">meta-learning</a> problem where the model learns how to learn to solve different problems.</p>
+            <p>FSL tasks are referred to as N-way K-shots, where N corresponds to the number of examples in each training classes and K is the number of separate training tasks for the model meta-training. A test time, the model will only see N examples of each of the classes it has to learn. One specific case if one-shot learning, where a model only sees a single image before being tested.</p>
+            <h2 id="datasets">Datasets</h2>
+            <p>A typical task for few-shot learning is <a href="/notes/image_classification/">image classification</a> on multiple sets of classes. For example, the <a href="https://github.com/yaoyao-liu/mini-imagenet-tools">mini-ImageNet Dataset</a> (<a href="#vinyalsMatchingNetworksOne2016"><cite itemprop="citation" itemscope itemid="key:vinyalsMatchingNetworksOne2016">Vinyals et al. 2016</cite></a>) is an image dataset with 64 meta-training, 16 meta-validation and 20 meta-testing classes. To evaluate a FSL model on mini-ImageNet, one trains the model on the meta-training classes and tests on the meta-testing ones.</p>
+            <h2 id="bibliography">Bibliography</h2>
+            <ol class="biblio-list">
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="vinyalsMatchingNetworksOne2016">
+                <span itemprop="author">Oriol Vinyals, Charles Blundell, Tim Lillicrap, Koray Kavukcuoglu, Daan Wierstra</span>. <time datetime="2016" itemprop="datePublished">2016</time>. "<span itemprop="name">Matching Networks for One Shot Learning</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Advances in Neural Information Processing Systems 29: Annual Conference on Neural Information Processing Systems 2016, December 5-10, 2016, Barcelona, Spain</i></span>, edited by Daniel D. Lee, Masashi Sugiyama, Ulrike von Luxburg, Isabelle Guyon, and Roman Garnett, 3630–38. <a itemprop="sameAs" href="https://proceedings.neurips.cc/paper/2016/hash/90e1357833654983612fb05e3ec9148c-Abstract.html">https://proceedings.neurips.cc/paper/2016/hash/90e1357833654983612fb05e3ec9148c-Abstract.html</a>.
+              </li>
+            </ol>
           </div>
           <div class="bl-section">
             <h2>Links to this note</h2>
@@ -76,7 +90,7 @@
             </div>
           </div>
           <div class="note-footer">
-            Last changed <a class="u-url" href="https://hugocisneros.com/notes/few_shot_learning/"><time itemprop="datePublished" class="dt-published" datetime="2022-03-05T12:40:00+0100">05/03/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+            Last changed <a class="u-url" href="https://hugocisneros.com/notes/few_shot_learning/"><time itemprop="datePublished" class="dt-published" datetime="2022-04-19T13:31:00+0200">19/04/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
           </div>
         </div>
       </article>
