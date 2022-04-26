@@ -61,7 +61,7 @@
             <dl>
               <dt>tags</dt>
               <dd>
-                <a href="/notes/implicit_neural_representations/">Implicit neural representations</a>, <a href="/notes/implicit_neural_representations/#neural-radiance-fields">NERF</a>
+                <a href="/notes/implicit_neural_representations/">Implicit neural representations</a>, <a href="/notes/implicit_neural_representations/#neural-radiance-fields">NeRF</a>
               </dd>
               <dt>source</dt>
               <dd>
@@ -73,6 +73,8 @@
               </dd>
             </dl>
             <h2 id="summary">Summary</h2>
+            <p>This paper introduces a positional embedding-free <a href="/notes/implicit_neural_representations/#neural-radiance-fields">NeRF</a> architecture which uses gaussian activation functions. These activation functions were introduced as part of Gaussian-MLPs in (<a href="#ramasinghePeriodicityUnifyingFramework2022"><cite itemprop="citation" itemscope itemid="key:ramasinghePeriodicityUnifyingFramework2022">Ramasinghe, Lucey 2022</cite></a>).</p>
+            <p>This alternative activation function enables GARF to model first derivatives of the target signal better than Positional embeddings MLPs (PE-MLPs) (<a href="#mildenhallNeRFRepresentingScenes2020"><cite itemprop="citation" itemscope itemid="key:mildenhallNeRFRepresentingScenes2020">Mildenhall et al. 2020</cite></a>; <a href="#sitzmannImplicitNeuralRepresentations2020"><cite itemprop="citation" itemscope itemid="key:sitzmannImplicitNeuralRepresentations2020">Sitzmann et al. 2020</cite></a>). It also overcomes the initialization issues with SIRENs (<a href="#sitzmannImplicitNeuralRepresentations2020"><cite itemprop="citation" itemscope itemid="key:sitzmannImplicitNeuralRepresentations2020">Sitzmann et al. 2020</cite></a>) without using a specific initialization scheme.</p>
             <h2 id="comments">Comments</h2>
             <h3 id="implementation">Implementation</h3>
             <p>We give a very simple implementation of this paper’s main idea on a 2D image to show how straightforward it is to use it.</p>
@@ -177,6 +179,15 @@ plt<span style="color:#719e07">.</span>savefig(<span style="color:#2aa198">"~/im
               <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="chngGARFGaussianActivated2022">
                 <span itemprop="author">Shin-Fang Chng, Sameera Ramasinghe, Jamie Sherrah, Simon Lucey</span>. <time datetime="2022" itemprop="datePublished">April 12, 2022</time>. "<span itemprop="name">GARF: Gaussian Activated Radiance Fields for High Fidelity Reconstruction and Pose Estimation</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:2204.05735 [cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2204.05735">http://arxiv.org/abs/2204.05735</a>.
               </li>
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="ramasinghePeriodicityUnifyingFramework2022">
+                <span itemprop="author">Sameera Ramasinghe, Simon Lucey</span>. <time datetime="2022" itemprop="datePublished">March 17, 2022</time>. "<span itemprop="name">Beyond Periodicity: Towards a Unifying Framework for Activations in Coordinate-mlps</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:2111.15135 [cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2111.15135">http://arxiv.org/abs/2111.15135</a>.
+              </li>
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="mildenhallNeRFRepresentingScenes2020">
+                <span itemprop="author">Ben Mildenhall, Pratul P. Srinivasan, Matthew Tancik, Jonathan T. Barron, Ravi Ramamoorthi, Ren Ng</span>. <time datetime="2020" itemprop="datePublished">August 3, 2020</time>. "<span itemprop="name">Nerf: Representing Scenes as Neural Radiance Fields for View Synthesis</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:2003.08934 [cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2003.08934">http://arxiv.org/abs/2003.08934</a>.
+              </li>
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="sitzmannImplicitNeuralRepresentations2020">
+                <span itemprop="author">Vincent Sitzmann, Julien N. P. Martel, Alexander W. Bergman, David B. Lindell, Gordon Wetzstein</span>. <time datetime="2020" itemprop="datePublished">June 17, 2020</time>. "<span itemprop="name">Implicit Neural Representations with Periodic Activation Functions</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:2006.09661 [cs, Eess]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2006.09661">http://arxiv.org/abs/2006.09661</a>.
+              </li>
             </ol>
           </div>
           <div class="bl-section">
@@ -193,7 +204,7 @@ plt<span style="color:#719e07">.</span>savefig(<span style="color:#2aa198">"~/im
             </div>
           </div>
           <div class="note-footer">
-            Last changed <a class="u-url" href="https://hugocisneros.com/notes/chnggarfgaussianactivated2022/"><time itemprop="datePublished" class="dt-published" datetime="2022-04-19T08:59:00+0200">19/04/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+            Last changed <a class="u-url" href="https://hugocisneros.com/notes/chnggarfgaussianactivated2022/"><time itemprop="datePublished" class="dt-published" datetime="2022-04-26T12:33:00+0200">26/04/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
           </div>
         </div>
       </article>
