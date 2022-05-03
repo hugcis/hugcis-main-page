@@ -1,9 +1,32 @@
-d3.json("/js/graph.json").then(function(data) {
+let is_full = false;
+let graph_name = "/js/graph.json";
+
+function toggle_full_graph() {
+  if (!is_full) {
+    graph_name = "/js/graph_full.json";
+    d3.selectAll("g").remove();
+    // Canvas size
+    height = 1600;
+    width = 2200;
+    draw_graph(graph_name, height, width);
+    is_full = true;
+  }
+  else {
+    graph_name = "/js/graph.json";
+    d3.selectAll("g").remove();
     // Canvas size
     height = 1100;
     width = 1600;
-    scale = 1.;
+    draw_graph(graph_name, height, width);
+    is_full = false;
+
+  }
+}
+
+function draw_graph(graph_name, height, width) {
+d3.json(graph_name).then(function(data) {
     // Radius function for nodes. Node radius are function of centrality
+    scale = 1.;
     radius = d => {
         if (!d.radius) {
             d.radius = 11 + 24 * Math.pow(d.centrality, 4/5);
@@ -194,3 +217,8 @@ d3.json("/js/graph.json").then(function(data) {
             .attr("y", d => d.y);
     });
 });
+}
+
+height = 1100;
+width = 1600;
+draw_graph(graph_name, height, width);
