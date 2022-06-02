@@ -4,19 +4,20 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
-  <title>Online privacy - Hugo Cisneros</title>
-  <meta property="og:title" content="Online privacy - Hugo Cisneros">
+  <title>Greenhouse gas emissions - Hugo Cisneros</title>
+  <meta property="og:title" content="Greenhouse gas emissions - Hugo Cisneros">
   <meta property="og:type" content="article">
   <meta property="og:image" content="/img/main.jpeg">
-  <meta property="og:url" content="https://hugocisneros.com/notes/online_privacy/">
-  <meta property="og:description" content="Notes about Online privacy">
-  <meta name="Description" property="description" content="Notes about Online privacy">
+  <meta property="og:url" content="https://hugocisneros.com/notes/greenhouse_gas_emissions/">
+  <meta property="og:description" content="Notes about Greenhouse gas emissions">
+  <meta name="Description" property="description" content="Notes about Greenhouse gas emissions">
   <link rel="me" href="https://twitter.com/@cisne_hug">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@cisne_hug">
   <meta name="twitter:creator" content="@cisne_hug">
   <link rel="me" href="https://scholar.social/@hugcis">
   <link rel="me" href="https://github.com/hugcis">
+  <meta property="keywords" content="climate">
   <link rel="stylesheet" href="https://hugocisneros.com/main.min.css" media="all" type="text/css">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -56,43 +57,89 @@
     <main class="content" role="main">
       <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
         <div class="single-note note-container">
-          <h1 class="article-title p-name" itemprop="name">Online privacy</h1>
+          <h1 class="article-title p-name" itemprop="name">Greenhouse gas emissions</h1>
           <div class="article-content e-content p-name" itemprop="articleBody">
-            <h2 id="ip-addresses">IP Addresses</h2>
-            <p>In (<a href="#mishraDonCountMe2020"><cite itemprop="citation" itemscope itemid="key:mishraDonCountMe2020">Mishra et al. 2020</cite></a>), the authors analyze a set of users' internet traffic for more than 100 days. They observed a little more than 11% of the 34,488 IP addresses they collected were present for more than a month. Many of them were reused throughout the whole experience, making long-term tracking of users possible.</p>
-            <p>The study also shows that 93% of users had a unique fixed set of IP addresses during the whole experiment, making it easy to track them between home, work, etc.</p>
-            <p>It seems from this analysis that IP address-based tracking of users is still relevant in 2020 and not defended against systematically.</p>
-            <p>The only easy way that comes to mind for the general public to prevent IP tracking is a VPN. But it is certainly not perfect either, and not sufficient to avoid all forms of online tracking.</p>
-            <h2 id="bibliography">Bibliography</h2>
-            <ol class="biblio-list">
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="mishraDonCountMe2020"><span itemprop="author">Vikas Mishra, Pierre Laperdrix, Antoine Vastel, Walter Rudametkin, Romain Rouvoy, Martin Lopatka</span>. <time datetime="2020" itemprop="datePublished">2020</time>. "<span itemprop="name">Don't Count Me Out: On the Relevance of IP Addresses in the Tracking Ecosystem</span>", 9.</li>
-            </ol>
-          </div>
-          <div class="bl-section">
-            <h2>Links to this note</h2>
-            <div class="backlinks">
-              <ul>
-                <li>
-                  <a href="/notes/image_processing/">Image processing</a>
-                </li>
-                <li>
-                  <a href="/notes/kerberos/">Kerberos</a>
-                </li>
-                <li>
-                  <a href="/notes/privacy_preserving_machine_learning/">Privacy-preserving machine learning</a>
-                </li>
-              </ul>
-            </div>
+            <dl>
+              <dt>tags</dt>
+              <dd>
+                <a href="/notes/climate/">Climate</a>
+              </dd>
+            </dl>
+            <h2 id="scopes">Scopes</h2>
+            <p>Greenhouse gas emissions are often classified in 3 scopes, which roughly correspond to how “direct” the emission is, or how close is the actual source emitting the gas.</p>
+            <ul>
+              <li>Scope 1 are the direct emissions from combustion of fuel and direct use of</li>
+            </ul>
+            <p>fossil fuels.</p>
+            <ul>
+              <li>Scope 2 corresponds to indirect emission from energy usage. This includes any</li>
+            </ul>
+            <p>electricity that was produced from a fossil fuel source.</p>
+            <ul>
+              <li>Scope 3 is all the other indirect emissions anywhere in the value chain. Those</li>
+            </ul>
+            <p>are often the hardest to count</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Scope 1</th>
+                  <th>Scope 2</th>
+                  <th>Scope 3</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Fuel combustion</td>
+                  <td>Purchased electricity</td>
+                  <td>Purchased goods and services</td>
+                </tr>
+                <tr>
+                  <td>Company vehicles</td>
+                  <td>Purchased heat</td>
+                  <td>Business travel</td>
+                </tr>
+                <tr>
+                  <td>Fugitive emissions</td>
+                  <td>Purchased steam</td>
+                  <td>Employee commuting</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td>Waste disposal</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td>Use of sold products</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td>Transportation & distribution (up & downstream)</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td>Investments</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td>Leased assets and franchises</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
           <div class="note-footer">
-            Last changed <a class="u-url" href="https://hugocisneros.com/notes/online_privacy/"><time itemprop="datePublished" class="dt-published" datetime="2022-05-26T10:26:00+0200">26/05/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+            Last changed <a class="u-url" href="https://hugocisneros.com/notes/greenhouse_gas_emissions/"><time itemprop="datePublished" class="dt-published" datetime="2022-06-01T20:37:00+0200">01/06/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
           </div>
         </div>
       </article>
       <h3>Comments</h3>
       <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
       <section id="isso-thread"></section><br>
-      <a href="/notes#online_privacy"><b>← Back to Notes</b></a>
+      <a href="/notes#greenhouse_gas_emissions"><b>← Back to Notes</b></a>
       <hr>
     </main>
     <footer class="footer">
