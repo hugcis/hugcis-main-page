@@ -18,7 +18,7 @@
   <link rel="me" href="https://scholar.social/@hugcis">
   <link rel="me" href="https://github.com/hugcis">
   <meta property="keywords" content="evolution, complexity, artificial intelligence">
-  <link rel="stylesheet" href="https://hugocisneros.com/main.min.css" media="all" type="text/css">
+  <link rel="stylesheet" href="https://hugocisneros.com/css/style.css">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -30,26 +30,26 @@
 </head>
 <body>
   <div class="wrapper">
-    <header class="header">
-      <nav class="nav">
-        <div class="nav-main">
-          <a href="https://hugocisneros.com/" class="nav-title">Hugo Cisneros</a>
+    <header class="header mt-2.5">
+      <nav class="nav m-auto flex flex-row flex-wrap justify-between container items-center">
+        <div class="nav-main my-2.5">
+          <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 hover:border-b-0">Hugo Cisneros</a>
         </div>
-        <ul class="nav-links">
-          <li>
-            <a href="/blog/">Blog</a>
+        <ul class="nav-links flex flex-row flex-wrap justify-between text-lg my-2.5">
+          <li class="p-2.5 first:pl-0 last:pr-0 list-none">
+            <a class="text-zinc-600 hover:border-b-0" href="/blog/">Blog</a>
           </li>
-          <li>
-            <a href="/notes/">Notes</a>
+          <li class="p-2.5 first:pl-0 last:pr-0 list-none">
+            <a class="text-zinc-600 hover:border-b-0" href="/notes/">Notes</a>
           </li>
-          <li>
-            <a href="/projects/">Projects</a>
+          <li class="p-2.5 first:pl-0 last:pr-0 list-none">
+            <a class="text-zinc-600 hover:border-b-0" href="/projects/">Projects</a>
           </li>
-          <li>
-            <a href="/resume/">Resume</a>
+          <li class="p-2.5 first:pl-0 last:pr-0 list-none">
+            <a class="text-zinc-600 hover:border-b-0" href="/resume/">Resume</a>
           </li>
-          <li>
-            <a href="/contact/">Contact</a>
+          <li class="p-2.5 first:pl-0 last:pr-0 list-none">
+            <a class="text-zinc-600 hover:border-b-0" href="/contact/">Contact</a>
           </li>
         </ul>
       </nav>
@@ -69,6 +69,8 @@
                 <a href="/notes/open_endedness_the_last_grand_challenge_you_ve_never_heard_of/">Open-endedness: The last grand challenge you’ve never heard of</a>
               </dd>
             </dl>
+            <h2 id="objectives-and-open-endedness">Objectives and open-endedness</h2>
+            <p>Objective functions are commonly used in all areas of <a href="/notes/machine_learning/">machine learning</a> (even so-called <a href="/notes/unsupervised_learning/">unsupervised learning</a>, or <a href="/notes/genetic_algorithm/">evolutionary strategies</a>). However this seems to be fundamentally opposed to how <a href="/notes/evolution/">natural evolution</a> proceeds. Innovations appear without a priori objectives and it isn’t clear if setting such objectives for ourselves is slowing down progress by putting the focus on too narrow paths to a solution (<a href="#woolleyDeleteriousEffectsPriori2011"><cite itemprop="citation" itemscope itemid="doi:10.1145/2001576.2001707">Woolley, Stanley 2011</cite></a>; <a href="#stanleyWhyGreatnessCannot2015"><cite itemprop="citation" itemscope itemid="key:stanleyWhyGreatnessCannot2015">Stanley, Lehman 2015</cite></a>).</p>
             <h2 id="my-idea-of-open-ended-evolution">My idea of Open Ended evolution <span class="tag"><span class="thoughts">thoughts</span><span class="open_ended_evolution">open-ended-evolution</span></span></h2>
             <p>As part of my research, I have been thinking a lot about open-ended evolution and what this concept means to me. Although it is still early in my research journey, I will go into the process of <a href="/notes/writing/">writing</a> down my thoughts about this very challenging concept in order to have material on which I will be able to reflect later and understand how my beliefs have changed.</p>
             <p>I see open-ended evolution (OEE) as the holy grail of <a href="/notes/artificial_life/">Artificial life</a> (and maybe <a href="/notes/artificial_intelligence/">Artificial Intelligence</a>) research. The only manifestation of intelligence we know of has emerged through a long and <a href="/notes/complexity/">complex</a> process, which inner workings we seem to understand. This process is often called <a href="/notes/evolution/">evolution</a> and sometimes reduced to one of its components: <a href="https://en.wikipedia.org/wiki/Natural_selection">Natural Selection</a>. Evolution obviously encompasses much more, starting from the process through which new characters and behaviors can emerge.</p>
@@ -83,6 +85,10 @@
             <p>Interesting idea presented in a paper by Sayama and Pattee (<a href="#patteeEvolvedOpenEndednessNot2019"><cite itemprop="citation" itemscope itemid="doi:10.1162/artl_a_00276">Pattee, Sayama 2019</cite></a>).</p>
             <h2 id="bibliography">Bibliography</h2>
             <ol class="biblio-list">
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="woolleyDeleteriousEffectsPriori2011" itemid="doi:10.1145/2001576.2001707">
+                <span itemprop="author">Brian G. Woolley, Kenneth O. Stanley</span>. <time datetime="2011" itemprop="datePublished">July 12, 2011</time>. "<span itemprop="name">On the Deleterious Effects of a Priori Objectives on Evolution and Representation</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Proceedings of the 13th Annual Conference on Genetic and Evolutionary Computation</i></span>, 957–64. GECCO '11. New York, NY, USA: Association for Computing Machinery. <a itemprop="sameAs" href="https://doi.org/10.1145/2001576.2001707">DOI</a>.
+              </li>
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="stanleyWhyGreatnessCannot2015"><span itemprop="author">Kenneth O. Stanley, Joel Lehman</span>. <time datetime="2015" itemprop="datePublished">2015</time>. <i>Why Greatness Cannot Be Planned: The Myth of the Objective</i>. Cham, Switzerland: Springer International Publishing.</li>
               <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="patteeEvolvedOpenEndednessNot2019" itemid="doi:10.1162/artl_a_00276">
                 <span itemprop="author">Howard H. Pattee, Hiroki Sayama</span>. <time datetime="2019" itemprop="datePublished">April 2019</time>. "<span itemprop="name">Evolved Open-endedness, Not Open-ended Evolution</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Artificial Life</i></span> 25 (1):4–8. <a itemprop="sameAs" href="https://doi.org/10.1162/artl_a_00276">DOI</a>.&nbsp;<a href="/notes/patteeevolvedopenendednessnot2019/">See notes</a>
               </li>
@@ -147,7 +153,7 @@
             </div>
           </div>
           <div class="note-footer">
-            Last changed <a class="u-url" href="https://hugocisneros.com/notes/open_ended_evolution/"><time itemprop="datePublished" class="dt-published" datetime="2021-04-12T14:56:00+0200">12/04/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+            Last changed <a class="u-url" href="https://hugocisneros.com/notes/open_ended_evolution/"><time itemprop="datePublished" class="dt-published" datetime="2022-06-06T16:03:00+0200">06/06/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
           </div>
         </div>
       </article>
@@ -157,15 +163,15 @@
       <a href="/notes#open_ended_evolution"><b>← Back to Notes</b></a>
       <hr>
     </main>
-    <footer class="footer">
+    <footer class="footer container h-10 text-center">
       <ul class="footer-links">
-        <li>
-          <a class="rss-link" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon" src="/img/RSS.svg" alt="RSS feed icon"></a>
+        <li class="inline-block list-none">
+          <a class="rss-link inline-block" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="/img/RSS.svg" alt="RSS feed icon"></a>
         </li>
-        <li>
+        <li class="inline-block">
           <a href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
         </li>
-        <li>© Hugo Cisneros 2022</li>
+        <li class="inline-block">© Hugo Cisneros 2022</li>
       </ul>
     </footer>
   </div>
