@@ -77,12 +77,12 @@
             <p>\[ T_l(x) = f_l(A_l(x) + x) \]</p>
             <p>Function \(f_l\) is applied to each component independently, while attention \(A_l\) is applied to the whole input sequence.</p>
             <p>Softmax <a href="/notes/attention/">self-attention</a> at layer \(l\) with <em>queries</em>, <em>keys</em> and <em>values</em> matrices is written</p>
-            <p>\[A_l(x) = V' = \text{softmax}\left( \dfrac{QK^{T}}{\sqrt{D}} \right) V.\]</p>
-            <p>The equation above can be generalized to any similarity function \(\text{sim}\), and if \(V'_i\) designates the $i$-th row of \(V'\),</p>
-            <p>\[ V'_i = \dfrac{\sum_{j = 1}^N \text{sim}(Q_i, K_j) V_j}{\sum_{j = 1}^N \text{sim}(Q_i, K_j)} \]</p>
+            <p>\[A_l(x) = V’ = \text{softmax}\left( \dfrac{QK^{T}}{\sqrt{D}} \right) V.\]</p>
+            <p>The equation above can be generalized to any similarity function \(\text{sim}\), and if \(V’_i\) designates the $i$-th row of \(V’\),</p>
+            <p>\[ V’_i = \dfrac{\sum_{j = 1}^N \text{sim}(Q_i, K_j) V_j}{\sum_{j = 1}^N \text{sim}(Q_i, K_j)} \]</p>
             <h3 id="linearizing-attention">Linearizing attention</h3>
             <p>In particular, all <a href="/notes/kernel_methods/">kernels</a> \(k(x, y) = \langle\phi(x), \phi(y)\rangle_\mathcal{S} : \mathbb{R}^{2\times F} \rightarrow \mathbb{R}_+\) can be used as a similarity function, changing the equation above to</p>
-            <p>\[ V'_i = \dfrac{\phi(Q_i)^T \sum_{j = 1}^N \phi(K_j) V_j^T}{ \phi(Q_i)^T \sum_{j = 1}^N \phi(K_j)}.\]</p>
+            <p>\[ V’_i = \dfrac{\phi(Q_i)^T \sum_{j = 1}^N \phi(K_j) V_j^T}{ \phi(Q_i)^T \sum_{j = 1}^N \phi(K_j)}.\]</p>
             <p>Because the right term of the numerator and denominator above does not depend on \(i\), it can be computed once for all sequence, and time and memory complexity become \(\mathcal{O}(N)\).</p>
             <h3 id="masking-for-autoregressive-models">Masking for autoregressive models</h3>
             <p>By replacing \(N\) by \(i\) in the expression above, one readily obtains a formulation of the Transformer function which only depends on previous tokens. This is used to train <a href="/notes/language_modeling/">language models</a> in particular, because the prediction of a token can only depend on the previous tokens.</p>
@@ -143,7 +143,7 @@
   <script src="/js/katex/contrib/auto-render.min.js"></script> 
   <script>
   document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"\\[",right:"\\]",display:!0},{left:"$$",right:"$$",display:!0},{left:"\\begin{equation}",right:"\\end{equation}",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1}]})})
-  </script> 
+  </script>
   <script data-goatcounter="https://stats.hugocisneros.com/count" async src="//stats.hugocisneros.com/count.js"></script>
 </body>
 </html>

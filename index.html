@@ -57,7 +57,7 @@
     <main class="content h-card">
       <div class="head" itemscope itemtype="http://schema.org/Person">
         <div class="picture" itemscope itemtype="http://schema.org/ImageObject">
-          <picture><source srcset="/img/main.jpeg"> <img class="main-image u-photo" itemprop="contentUrl" alt="Main picture" src="/img/main.jpeg"></picture>
+          <picture><source srcset="/img/main.jpeg"><img class="main-image u-photo" itemprop="contentUrl" alt="Main picture" src="/img/main.jpeg"></picture>
         </div>
         <div class="contact-info">
           <a class="u-url" rel="me" itemprop="url" href="https://hugocisneros.com/">
@@ -73,7 +73,7 @@
             <span itemprop="streetAddress">Czech Institute of Informatics, Robotics and Cybernetics<br>
             Jugoslávských partyzánů 1580/3</span><br>
             <span itemprop="postalCode">160 00</span> <span itemprop="addressLocality">Prague 6, Dejvice, Czech Republic</span><br>
-            <picture><source srcset="/img/email_dark.jpg" class="email" alt="Email screenshot" media="(prefers-color-scheme: dark)"> <img class="email" src="/img/email_light.jpg" alt="Email screenshot"></picture><br>
+            <picture><source srcset="/img/email_dark.jpg" class="email" alt="Email screenshot" media="(prefers-color-scheme: dark)"><img class="email" src="/img/email_light.jpg" alt="Email screenshot"></picture><br>
           </div>
         </div>
       </div>
@@ -178,8 +178,8 @@
     </footer>
   </div>
   <script>
-  var list,id,modWin,closeButton,clipboardCopyButtons;function toggleModal(a){return b=>{(b.target.id.startsWith("#open-modal")||b.target.id.startsWith("#close-modal")||b.target.className=="open-modal")&&(b.stopPropagation(),a.classList.toggle("closed"))}}list=document.getElementsByClassName("open-modal");for(let a of list)id=a.attributes["data-target"].textContent,modWin=document.getElementById(id),closeButton=document.getElementById(id.replace("open","close")),a.addEventListener('click',toggleModal(modWin)),closeButton.addEventListener('click',toggleModal(modWin)),modWin.addEventListener('click',toggleModal(modWin));clipboardCopyButtons=document.getElementsByClassName("modal-copy-citation");for(let a of clipboardCopyButtons){let b=a.id.replace("#copy-",""),c=document.getElementById(b);a.addEventListener('click',function(a){return function(){if(!a){var b=this.innerHTML;navigator.clipboard.writeText(c.innerHTML).then(()=>{this.innerHTML="Copied!"},()=>{this.innerHTML="Error copying!"}),a=!0,setTimeout(function(){this.innerHTML=b,a=!1}.bind(this),1e3)}}}(!1),this)}
-  </script> 
+  function toggleModal(e){return t=>{(t.target.id.startsWith("#open-modal")||t.target.id.startsWith("#close-modal")||t.target.className=="open-modal")&&(t.stopPropagation(),e.classList.toggle("closed"))}}var list=document.getElementsByClassName("open-modal"),id,modWin,closeButton,clipboardCopyButtons;for(let e of list)id=e.attributes["data-target"].textContent,modWin=document.getElementById(id),closeButton=document.getElementById(id.replace("open","close")),e.addEventListener('click',toggleModal(modWin)),closeButton.addEventListener('click',toggleModal(modWin)),modWin.addEventListener('click',toggleModal(modWin));clipboardCopyButtons=document.getElementsByClassName("modal-copy-citation");for(let e of clipboardCopyButtons){let t=e.id.replace("#copy-",""),n=document.getElementById(t);e.addEventListener('click',function(e){return function(){if(!e){var t=this.innerHTML;navigator.clipboard.writeText(n.innerHTML).then(()=>{this.innerHTML="Copied!"},()=>{this.innerHTML="Error copying!"}),e=!0,setTimeout(function(){this.innerHTML=t,e=!1}.bind(this),1e3)}}}(!1),this)}
+  </script>
   <script data-goatcounter="https://stats.hugocisneros.com/count" async src="//stats.hugocisneros.com/count.js"></script>
 </body>
 </html>

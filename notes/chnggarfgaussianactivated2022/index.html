@@ -80,96 +80,96 @@
             <h3 id="implementation">Implementation</h3>
             <p>We give a very simple implementation of this paper’s main idea on a 2D image to show how straightforward it is to use it.</p>
             <div class="highlight">
-              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#719e07">import</span> skimage
-<span style="color:#719e07">import</span> matplotlib.pyplot <span style="color:#719e07">as</span> plt
-<span style="color:#719e07">import</span> tensorflow <span style="color:#719e07">as</span> tf
-<span style="color:#719e07">import</span> tensorflow.keras <span style="color:#719e07">as</span> keras
-<span style="color:#719e07">import</span> tensorflow.keras.layers <span style="color:#719e07">as</span> kl
-
-img <span style="color:#719e07">=</span> skimage<span style="color:#719e07">.</span>data<span style="color:#719e07">.</span>camera()<span style="color:#719e07">.</span>astype(<span style="color:#2aa198">'f4'</span>) <span style="color:#719e07">/</span> <span style="color:#2aa198">256.0</span>
-plt<span style="color:#719e07">.</span>imshow(img, cmap<span style="color:#719e07">=</span><span style="color:#2aa198">'gray'</span>)
-plt<span style="color:#719e07">.</span>savefig(<span style="color:#2aa198">"~/img/garf1.png"</span>)
-</code></pre>
+              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="display:flex"><span><span style="color:#719e07">import</span> skimage
+</span></span><span style="display:flex"><span><span style="color:#719e07">import</span> matplotlib.pyplot <span style="color:#719e07">as</span> plt
+</span></span><span style="display:flex"><span><span style="color:#719e07">import</span> tensorflow <span style="color:#719e07">as</span> tf
+</span></span><span style="display:flex"><span><span style="color:#719e07">import</span> tensorflow.keras <span style="color:#719e07">as</span> keras
+</span></span><span style="display:flex"><span><span style="color:#719e07">import</span> tensorflow.keras.layers <span style="color:#719e07">as</span> kl
+</span></span><span style="display:flex"><span>
+</span></span><span style="display:flex"><span>img <span style="color:#719e07">=</span> skimage<span style="color:#719e07">.</span>data<span style="color:#719e07">.</span>camera()<span style="color:#719e07">.</span>astype(<span style="color:#2aa198">'f4'</span>) <span style="color:#719e07">/</span> <span style="color:#2aa198">256.0</span>
+</span></span><span style="display:flex"><span>plt<span style="color:#719e07">.</span>imshow(img, cmap<span style="color:#719e07">=</span><span style="color:#2aa198">'gray'</span>)
+</span></span><span style="display:flex"><span>plt<span style="color:#719e07">.</span>savefig(<span style="color:#2aa198">"~/img/garf1.png"</span>)
+</span></span></code></pre>
             </div>
             <figure>
               <img src="/ox-hugo/garf1.png">
             </figure>
             <p><a id="code-snippet--create-model"></a></p>
             <div class="highlight">
-              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#586e75"># Make a meshgrid</span>
-normalized_grid <span style="color:#719e07">=</span> (np<span style="color:#719e07">.</span>mgrid[:img<span style="color:#719e07">.</span>shape[<span style="color:#2aa198">0</span>], :img<span style="color:#719e07">.</span>shape[<span style="color:#2aa198">1</span>]] <span style="color:#719e07">/</span> <span style="color:#b58900">len</span>(img))
-X <span style="color:#719e07">=</span> normalized_grid<span style="color:#719e07">.</span>reshape((<span style="color:#2aa198">2</span>, <span style="color:#719e07">-</span><span style="color:#2aa198">1</span>))<span style="color:#719e07">.</span>T<span style="color:#719e07">.</span>astype(<span style="color:#2aa198">"f4"</span>) <span style="color:#719e07">*</span> <span style="color:#2aa198">2</span> <span style="color:#719e07">-</span> <span style="color:#2aa198">1</span>
-X <span style="color:#719e07">*=</span> <span style="color:#2aa198">32</span> <span style="color:#586e75"># this scaling factor make the training easier</span>
-y <span style="color:#719e07">=</span> img<span style="color:#719e07">.</span>reshape((<span style="color:#719e07">-</span><span style="color:#2aa198">1</span>, <span style="color:#2aa198">1</span>))
-
-<span style="color:#719e07">def</span> <span style="color:#268bd2">make_model</span>(activation):
-    <span style="color:#719e07">return</span> keras<span style="color:#719e07">.</span>Sequential([
-        kl<span style="color:#719e07">.</span>InputLayer((<span style="color:#2aa198">2</span>,)),
-        kl<span style="color:#719e07">.</span>Dense(<span style="color:#2aa198">300</span>),
-        activation(),
-        kl<span style="color:#719e07">.</span>Dense(<span style="color:#2aa198">300</span>),
-        activation(),
-        kl<span style="color:#719e07">.</span>Dense(<span style="color:#2aa198">300</span>),
-        activation(),
-        kl<span style="color:#719e07">.</span>Dense(<span style="color:#2aa198">1</span>),
-        kl<span style="color:#719e07">.</span>Activation(tf<span style="color:#719e07">.</span>nn<span style="color:#719e07">.</span>sigmoid)
-    ])
-<span style="color:#586e75"># The gaussian activation function from the paper</span>
-activation <span style="color:#719e07">=</span> <span style="color:#719e07">lambda</span>: kl<span style="color:#719e07">.</span>Activation(<span style="color:#719e07">lambda</span> x: tf<span style="color:#719e07">.</span>math<span style="color:#719e07">.</span>exp(<span style="color:#719e07">-</span>x<span style="color:#719e07">*</span>x))
-
-model <span style="color:#719e07">=</span> make_model(activation)
-model<span style="color:#719e07">.</span>compile(loss<span style="color:#719e07">=</span><span style="color:#2aa198">'mse'</span>, optimizer<span style="color:#719e07">=</span><span style="color:#2aa198">'adam'</span>)
-model<span style="color:#719e07">.</span>summary()
-</code></pre>
+              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="display:flex"><span><span style="color:#586e75"># Make a meshgrid</span>
+</span></span><span style="display:flex"><span>normalized_grid <span style="color:#719e07">=</span> (np<span style="color:#719e07">.</span>mgrid[:img<span style="color:#719e07">.</span>shape[<span style="color:#2aa198">0</span>], :img<span style="color:#719e07">.</span>shape[<span style="color:#2aa198">1</span>]] <span style="color:#719e07">/</span> <span style="color:#b58900">len</span>(img))
+</span></span><span style="display:flex"><span>X <span style="color:#719e07">=</span> normalized_grid<span style="color:#719e07">.</span>reshape((<span style="color:#2aa198">2</span>, <span style="color:#719e07">-</span><span style="color:#2aa198">1</span>))<span style="color:#719e07">.</span>T<span style="color:#719e07">.</span>astype(<span style="color:#2aa198">"f4"</span>) <span style="color:#719e07">*</span> <span style="color:#2aa198">2</span> <span style="color:#719e07">-</span> <span style="color:#2aa198">1</span>
+</span></span><span style="display:flex"><span>X <span style="color:#719e07">*=</span> <span style="color:#2aa198">32</span> <span style="color:#586e75"># this scaling factor make the training easier</span>
+</span></span><span style="display:flex"><span>y <span style="color:#719e07">=</span> img<span style="color:#719e07">.</span>reshape((<span style="color:#719e07">-</span><span style="color:#2aa198">1</span>, <span style="color:#2aa198">1</span>))
+</span></span><span style="display:flex"><span>
+</span></span><span style="display:flex"><span><span style="color:#719e07">def</span> <span style="color:#268bd2">make_model</span>(activation):
+</span></span><span style="display:flex"><span>    <span style="color:#719e07">return</span> keras<span style="color:#719e07">.</span>Sequential([
+</span></span><span style="display:flex"><span>        kl<span style="color:#719e07">.</span>InputLayer((<span style="color:#2aa198">2</span>,)),
+</span></span><span style="display:flex"><span>        kl<span style="color:#719e07">.</span>Dense(<span style="color:#2aa198">300</span>),
+</span></span><span style="display:flex"><span>        activation(),
+</span></span><span style="display:flex"><span>        kl<span style="color:#719e07">.</span>Dense(<span style="color:#2aa198">300</span>),
+</span></span><span style="display:flex"><span>        activation(),
+</span></span><span style="display:flex"><span>        kl<span style="color:#719e07">.</span>Dense(<span style="color:#2aa198">300</span>),
+</span></span><span style="display:flex"><span>        activation(),
+</span></span><span style="display:flex"><span>        kl<span style="color:#719e07">.</span>Dense(<span style="color:#2aa198">1</span>),
+</span></span><span style="display:flex"><span>        kl<span style="color:#719e07">.</span>Activation(tf<span style="color:#719e07">.</span>nn<span style="color:#719e07">.</span>sigmoid)
+</span></span><span style="display:flex"><span>    ])
+</span></span><span style="display:flex"><span><span style="color:#586e75"># The gaussian activation function from the paper</span>
+</span></span><span style="display:flex"><span>activation <span style="color:#719e07">=</span> <span style="color:#719e07">lambda</span>: kl<span style="color:#719e07">.</span>Activation(<span style="color:#719e07">lambda</span> x: tf<span style="color:#719e07">.</span>math<span style="color:#719e07">.</span>exp(<span style="color:#719e07">-</span>x<span style="color:#719e07">*</span>x))
+</span></span><span style="display:flex"><span>
+</span></span><span style="display:flex"><span>model <span style="color:#719e07">=</span> make_model(activation)
+</span></span><span style="display:flex"><span>model<span style="color:#719e07">.</span>compile(loss<span style="color:#719e07">=</span><span style="color:#2aa198">'mse'</span>, optimizer<span style="color:#719e07">=</span><span style="color:#2aa198">'adam'</span>)
+</span></span><span style="display:flex"><span>model<span style="color:#719e07">.</span>summary()
+</span></span></code></pre>
             </div>
             <p>We get the following simple model description:</p>
             <div class="highlight">
-              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Model: "sequential_3"
-_________________________________________________________________
-Layer (type)                Output Shape              Param #
-================================================================
-dense_12 (Dense)            (None, 300)               900
-
-activation_12 (Activation)  (None, 300)               0
-
-dense_13 (Dense)            (None, 300)               90300
-
-activation_13 (Activation)  (None, 300)               0
-
-dense_14 (Dense)            (None, 300)               90300
-
-activation_14 (Activation)  (None, 300)               0
-
-dense_15 (Dense)            (None, 1)                 301
-
-activation_15 (Activation)  (None, 1)                 0
-
-================================================================
-Total params: 181,801
-Trainable params: 181,801
-Non-trainable params: 0
-________________________________________________________________
-</code></pre>
+              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text"><span style="display:flex"><span>Model: "sequential_3"
+</span></span><span style="display:flex"><span>_________________________________________________________________
+</span></span><span style="display:flex"><span>Layer (type)                Output Shape              Param #
+</span></span><span style="display:flex"><span>================================================================
+</span></span><span style="display:flex"><span>dense_12 (Dense)            (None, 300)               900
+</span></span><span style="display:flex"><span>
+</span></span><span style="display:flex"><span>activation_12 (Activation)  (None, 300)               0
+</span></span><span style="display:flex"><span>
+</span></span><span style="display:flex"><span>dense_13 (Dense)            (None, 300)               90300
+</span></span><span style="display:flex"><span>
+</span></span><span style="display:flex"><span>activation_13 (Activation)  (None, 300)               0
+</span></span><span style="display:flex"><span>
+</span></span><span style="display:flex"><span>dense_14 (Dense)            (None, 300)               90300
+</span></span><span style="display:flex"><span>
+</span></span><span style="display:flex"><span>activation_14 (Activation)  (None, 300)               0
+</span></span><span style="display:flex"><span>
+</span></span><span style="display:flex"><span>dense_15 (Dense)            (None, 1)                 301
+</span></span><span style="display:flex"><span>
+</span></span><span style="display:flex"><span>activation_15 (Activation)  (None, 1)                 0
+</span></span><span style="display:flex"><span>
+</span></span><span style="display:flex"><span>================================================================
+</span></span><span style="display:flex"><span>Total params: 181,801
+</span></span><span style="display:flex"><span>Trainable params: 181,801
+</span></span><span style="display:flex"><span>Non-trainable params: 0
+</span></span><span style="display:flex"><span>________________________________________________________________
+</span></span></code></pre>
             </div>
             <p>We now fit the model (with a large batch size since each batch is a single pixel).</p>
             <div class="highlight">
-              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">model<span style="color:#719e07">.</span>fit(X, y, batch_size<span style="color:#719e07">=</span><span style="color:#2aa198">1024</span>, epochs<span style="color:#719e07">=</span><span style="color:#2aa198">100</span>)
-</code></pre>
+              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="display:flex"><span>model<span style="color:#719e07">.</span>fit(X, y, batch_size<span style="color:#719e07">=</span><span style="color:#2aa198">1024</span>, epochs<span style="color:#719e07">=</span><span style="color:#2aa198">100</span>)
+</span></span></code></pre>
             </div>
             <p>Finally we show the results for our fitted image as well as its neighbor “imagined” pixels.</p>
             <p><a id="code-snippet--result-img"></a></p>
             <div class="highlight">
-              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#586e75"># Scale the grid by a factor of 2 for predicting pixels outside</span>
-<span style="color:#586e75"># of the original image</span>
-y_pred <span style="color:#719e07">=</span> model<span style="color:#719e07">.</span>predict(X <span style="color:#719e07">*</span> <span style="color:#2aa198">2</span>, batch_size<span style="color:#719e07">=</span><span style="color:#2aa198">8192</span>)
-plt<span style="color:#719e07">.</span>figure(figsize<span style="color:#719e07">=</span>(<span style="color:#2aa198">10</span>, <span style="color:#2aa198">10</span>))
-plt<span style="color:#719e07">.</span>imshow(y_pred<span style="color:#719e07">.</span>reshape(img<span style="color:#719e07">.</span>shape), cmap<span style="color:#719e07">=</span><span style="color:#2aa198">"gray"</span>)
-<span style="color:#586e75"># Add a red square around the original image</span>
-plt<span style="color:#719e07">.</span>gca()<span style="color:#719e07">.</span>add_patch(matplotlib<span style="color:#719e07">.</span>patches<span style="color:#719e07">.</span>Rectangle(
-    (<span style="color:#2aa198">128</span>, <span style="color:#2aa198">128</span>), <span style="color:#2aa198">256</span>, <span style="color:#2aa198">256</span>, linewidth<span style="color:#719e07">=</span><span style="color:#2aa198">1</span>, edgecolor<span style="color:#719e07">=</span><span style="color:#2aa198">"r"</span>, facecolor<span style="color:#719e07">=</span><span style="color:#2aa198">"none"</span>
-))
-plt<span style="color:#719e07">.</span>savefig(<span style="color:#2aa198">"~/img/garf2.png"</span>)
-</code></pre>
+              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="display:flex"><span><span style="color:#586e75"># Scale the grid by a factor of 2 for predicting pixels outside</span>
+</span></span><span style="display:flex"><span><span style="color:#586e75"># of the original image</span>
+</span></span><span style="display:flex"><span>y_pred <span style="color:#719e07">=</span> model<span style="color:#719e07">.</span>predict(X <span style="color:#719e07">*</span> <span style="color:#2aa198">2</span>, batch_size<span style="color:#719e07">=</span><span style="color:#2aa198">8192</span>)
+</span></span><span style="display:flex"><span>plt<span style="color:#719e07">.</span>figure(figsize<span style="color:#719e07">=</span>(<span style="color:#2aa198">10</span>, <span style="color:#2aa198">10</span>))
+</span></span><span style="display:flex"><span>plt<span style="color:#719e07">.</span>imshow(y_pred<span style="color:#719e07">.</span>reshape(img<span style="color:#719e07">.</span>shape), cmap<span style="color:#719e07">=</span><span style="color:#2aa198">"gray"</span>)
+</span></span><span style="display:flex"><span><span style="color:#586e75"># Add a red square around the original image</span>
+</span></span><span style="display:flex"><span>plt<span style="color:#719e07">.</span>gca()<span style="color:#719e07">.</span>add_patch(matplotlib<span style="color:#719e07">.</span>patches<span style="color:#719e07">.</span>Rectangle(
+</span></span><span style="display:flex"><span>    (<span style="color:#2aa198">128</span>, <span style="color:#2aa198">128</span>), <span style="color:#2aa198">256</span>, <span style="color:#2aa198">256</span>, linewidth<span style="color:#719e07">=</span><span style="color:#2aa198">1</span>, edgecolor<span style="color:#719e07">=</span><span style="color:#2aa198">"r"</span>, facecolor<span style="color:#719e07">=</span><span style="color:#2aa198">"none"</span>
+</span></span><span style="display:flex"><span>))
+</span></span><span style="display:flex"><span>plt<span style="color:#719e07">.</span>savefig(<span style="color:#2aa198">"~/img/garf2.png"</span>)
+</span></span></code></pre>
             </div>
             <p>The output is relatively good for the image itself but the impressive part is how natural looking is the rest of imagined pixels. And all this without any specific initialization scheme or positional embeddings.</p>
             <figure>
@@ -232,7 +232,7 @@ plt<span style="color:#719e07">.</span>savefig(<span style="color:#2aa198">"~/im
   <script src="/js/katex/contrib/auto-render.min.js"></script> 
   <script>
   document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"\\[",right:"\\]",display:!0},{left:"$$",right:"$$",display:!0},{left:"\\begin{equation}",right:"\\end{equation}",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1}]})})
-  </script> 
+  </script>
   <script data-goatcounter="https://stats.hugocisneros.com/count" async src="//stats.hugocisneros.com/count.js"></script>
 </body>
 </html>

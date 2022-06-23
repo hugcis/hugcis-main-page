@@ -69,26 +69,26 @@
             <h3 id="delete-the-same-line-in-many-files">Delete the same line in many files</h3>
             <p>Let’s start by creating a simple text file with three lines. This is what it looks like:</p>
             <div class="highlight">
-              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh"><span style="color:#b58900">echo</span> <span style="color:#2aa198">"Hello\nto the\nworld"</span> &gt; test.txt
-cat test.txt
-</code></pre>
+              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh"><span style="display:flex"><span><span style="color:#b58900">echo</span> <span style="color:#2aa198">"Hello\nto the\nworld"</span> &gt; test.txt
+</span></span><span style="display:flex"><span>cat test.txt
+</span></span></code></pre>
             </div>
             <div class="highlight">
-              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Hello
-to the
-world
-</code></pre>
+              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text"><span style="display:flex"><span>Hello
+</span></span><span style="display:flex"><span>to the
+</span></span><span style="display:flex"><span>world
+</span></span></code></pre>
             </div>
             <p>We use <code>sed</code> to remove lines in the file matching some <a href="/notes/regular_expressions/">regex</a>. The -<code>i.bak</code> option ensures the file is modified in place.</p>
             <div class="highlight">
-              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh">sed -i.bak <span style="color:#2aa198">'/to the/d'</span> test.txt
-cat test.txt
-</code></pre>
+              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-zsh" data-lang="zsh"><span style="display:flex"><span>sed -i.bak <span style="color:#2aa198">'/to the/d'</span> test.txt
+</span></span><span style="display:flex"><span>cat test.txt
+</span></span></code></pre>
             </div>
             <div class="highlight">
-              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Hello
-world
-</code></pre>
+              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text"><span style="display:flex"><span>Hello
+</span></span><span style="display:flex"><span>world
+</span></span></code></pre>
             </div>
             <p>We get the file with the removed line in place of our original file. The same principle applies to several files and this allows batching.</p>
           </div>
@@ -120,7 +120,7 @@ world
   <script src="/js/katex/contrib/auto-render.min.js"></script> 
   <script>
   document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"\\[",right:"\\]",display:!0},{left:"$$",right:"$$",display:!0},{left:"\\begin{equation}",right:"\\end{equation}",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1}]})})
-  </script> 
+  </script>
   <script data-goatcounter="https://stats.hugocisneros.com/count" async src="//stats.hugocisneros.com/count.js"></script>
 </body>
 </html>

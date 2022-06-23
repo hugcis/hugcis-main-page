@@ -71,13 +71,13 @@
             </dl>
             <h2 id="fixed-learning-rate">Fixed learning rate</h2>
             <p>The simplest way to apply the gradient descent algorithm on a function \(g\) convex and $L-$smooth on \(\mathbb{R}^d\) is to use the parameter update:</p>
-            <p>\[ \theta_t = \theta_{t-1} - \gamma g'(\theta_{t-1}) \]</p>
+            <p>\[ \theta_t = \theta_{t-1} - \gamma g’(\theta_{t-1}) \]</p>
             <p>This is based on the standard first-order approximation of the function \(g\). It can be very sensitive to the learning rate and suffer from pathological curvature.</p>
             <h3 id="momentum">Momentum</h3>
             <p>Momentum has been introduced in the gradient descent algorithm to dampen oscillations in the pathological cases and accelerating descent. Trajectories are less sensitive to changes in the loss landscape.</p>
-            <p>\[ \begin{align} V_{t + 1} = \beta V_t + g'(\theta_{t})\newline \theta_{t + 1} = \theta_t - \gamma V_{t + 1} \end{align}\]</p>
+            <p>\[ \begin{align} V_{t + 1} = \beta V_t + g’(\theta_{t})\newline \theta_{t + 1} = \theta_t - \gamma V_{t + 1} \end{align}\]</p>
             <h2 id="line-search">Line search</h2>
-            <p>Another common way to apply the gradient descent algorithm with non fixed learning rate is to use line search at each step. This corresponds to searching for the best \(\gamma\) to use in \(\theta_{} + \gamma \Delta\theta\) (in gradient descent, \(\Delta\theta = - g'(\theta)\)).</p>
+            <p>Another common way to apply the gradient descent algorithm with non fixed learning rate is to use line search at each step. This corresponds to searching for the best \(\gamma\) to use in \(\theta_{} + \gamma \Delta\theta\) (in gradient descent, \(\Delta\theta = - g’(\theta)\)).</p>
             <h3 id="exact-line-search">Exact line search</h3>
             <p>For exact line search, we take \(\gamma = \arg\min_{s\geq 0} g(\theta + s \Delta \theta)\). This method is used when the cost of minimizing the function above is low compared to computing the search direction \(\Delta\theta\).</p>
             <h3 id="backtracking-line-search">Backtracking line search</h3>
@@ -155,7 +155,7 @@
   <script src="/js/katex/contrib/auto-render.min.js"></script> 
   <script>
   document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"\\[",right:"\\]",display:!0},{left:"$$",right:"$$",display:!0},{left:"\\begin{equation}",right:"\\end{equation}",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1}]})})
-  </script> 
+  </script>
   <script data-goatcounter="https://stats.hugocisneros.com/count" async src="//stats.hugocisneros.com/count.js"></script>
 </body>
 </html>

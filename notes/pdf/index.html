@@ -68,12 +68,12 @@
             <h2 id="tips">Tips</h2>
             <h3 id="make-a-pdf-look-scanned">Make a PDF look scanned</h3>
             <div class="highlight">
-              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">convert -density <span style="color:#2aa198">150</span> input.pdf -colorspace gray -linear-stretch 3.5%x10% -blur 0x0.5 <span style="color:#cb4b16">\
-</span>    -attenuate 0.25 +noise Gaussian -rotate 0.5 temp.pdf gs -dSAFER -dBATCH -dNOPAUSE <span style="color:#cb4b16">\
-</span>    -dNOCACHE -sDEVICE<span style="color:#719e07">=</span>pdfwrite -sColorConversionStrategy<span style="color:#719e07">=</span>LeaveColorUnchanged <span style="color:#cb4b16">\
-</span>    <span style="color:#268bd2">dAutoFilterColorImages</span><span style="color:#719e07">=</span><span style="color:#b58900">true</span> -dAutoFilterGrayImages<span style="color:#719e07">=</span><span style="color:#b58900">true</span> -dDownsampleMonoImages<span style="color:#719e07">=</span><span style="color:#b58900">true</span> <span style="color:#cb4b16">\
-</span>    -dDownsampleGrayImages<span style="color:#719e07">=</span><span style="color:#b58900">true</span> -dDownsampleColorImages<span style="color:#719e07">=</span><span style="color:#b58900">true</span> -sOutputFile<span style="color:#719e07">=</span>output.pdf temp.pdf
-</code></pre>
+              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="display:flex"><span>convert -density <span style="color:#2aa198">150</span> input.pdf -colorspace gray -linear-stretch 3.5%x10% -blur 0x0.5 <span style="color:#cb4b16">\
+</span></span></span><span style="display:flex"><span>    -attenuate 0.25 +noise Gaussian -rotate 0.5 temp.pdf gs -dSAFER -dBATCH -dNOPAUSE <span style="color:#cb4b16">\
+</span></span></span><span style="display:flex"><span>    -dNOCACHE -sDEVICE<span style="color:#719e07">=</span>pdfwrite -sColorConversionStrategy<span style="color:#719e07">=</span>LeaveColorUnchanged <span style="color:#cb4b16">\
+</span></span></span><span style="display:flex"><span>    <span style="color:#268bd2">dAutoFilterColorImages</span><span style="color:#719e07">=</span><span style="color:#b58900">true</span> -dAutoFilterGrayImages<span style="color:#719e07">=</span><span style="color:#b58900">true</span> -dDownsampleMonoImages<span style="color:#719e07">=</span><span style="color:#b58900">true</span> <span style="color:#cb4b16">\
+</span></span></span><span style="display:flex"><span>    -dDownsampleGrayImages<span style="color:#719e07">=</span><span style="color:#b58900">true</span> -dDownsampleColorImages<span style="color:#719e07">=</span><span style="color:#b58900">true</span> -sOutputFile<span style="color:#719e07">=</span>output.pdf temp.pdf
+</span></span></code></pre>
             </div>
           </div>
           <div class="bl-section">
@@ -138,7 +138,7 @@
   <script src="/js/katex/contrib/auto-render.min.js"></script> 
   <script>
   document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"\\[",right:"\\]",display:!0},{left:"$$",right:"$$",display:!0},{left:"\\begin{equation}",right:"\\end{equation}",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1}]})})
-  </script> 
+  </script>
   <script data-goatcounter="https://stats.hugocisneros.com/count" async src="//stats.hugocisneros.com/count.js"></script>
 </body>
 </html>

@@ -69,53 +69,53 @@
             <h3 id="categories-to-one-hot">Categories to one-hot</h3>
             <p>This is a handy technique but can be very resource intensive for large arrays.</p>
             <div class="highlight">
-              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#719e07">import</span> numpy <span style="color:#719e07">as</span> np
-a <span style="color:#719e07">=</span> np<span style="color:#719e07">.</span>random<span style="color:#719e07">.</span>randrange(<span style="color:#2aa198">5</span>, size<span style="color:#719e07">=</span><span style="color:#2aa198">10</span>)
-one_hot_a <span style="color:#719e07">=</span> np<span style="color:#719e07">.</span>eye(<span style="color:#2aa198">5</span>)[a]
-</code></pre>
+              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="display:flex"><span><span style="color:#719e07">import</span> numpy <span style="color:#719e07">as</span> np
+</span></span><span style="display:flex"><span>a <span style="color:#719e07">=</span> np<span style="color:#719e07">.</span>random<span style="color:#719e07">.</span>randrange(<span style="color:#2aa198">5</span>, size<span style="color:#719e07">=</span><span style="color:#2aa198">10</span>)
+</span></span><span style="display:flex"><span>one_hot_a <span style="color:#719e07">=</span> np<span style="color:#719e07">.</span>eye(<span style="color:#2aa198">5</span>)[a]
+</span></span></code></pre>
             </div>
             <h3 id="side-output-for-jupyter-notebooks">Side-output for jupyter notebooks</h3>
             <p>Insert the following block in a notebook cell and execute as code (From <a href="https://twitter.com/jrking0/status/1199704651085430785">Twitter</a>). This will put the output of each cell on the side of the code.</p>
             <div class="highlight">
-              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">%%html
-&lt;<span style="color:#268bd2">style</span>&gt;
-#notebook-container {<span style="color:#719e07">width</span>: <span style="color:#2aa198">100</span><span style="color:#dc322f">%</span>; <span style="color:#719e07">background-color</span>: <span style="color:#2aa198">#EEE</span>}
-.<span style="color:#268bd2">code_cell</span> {<span style="color:#719e07">flex-direction</span>: <span style="color:#cb4b16">row</span> <span style="color:#719e07">!important</span>;}
-.<span style="color:#268bd2">code_cell</span> .<span style="color:#268bd2">output_wrapper</span> {<span style="color:#719e07">width</span>: <span style="color:#2aa198">50</span><span style="color:#dc322f">%</span>;<span style="color:#719e07">background-color</span>: <span style="color:#2aa198">#FFF</span>}
-.<span style="color:#268bd2">code_cell</span> .<span style="color:#268bd2">input</span> {<span style="color:#719e07">width</span>: <span style="color:#2aa198">50</span><span style="color:#dc322f">%</span>;<span style="color:#719e07">background-color</span>: <span style="color:#2aa198">#FFF</span>}
-&lt;/<span style="color:#268bd2">style</span>&gt;
-</code></pre>
+              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="display:flex"><span>%%html
+</span></span><span style="display:flex"><span>&lt;<span style="color:#268bd2">style</span>&gt;
+</span></span><span style="display:flex"><span>#notebook-container {<span style="color:#719e07">width</span>: <span style="color:#2aa198">100</span><span style="color:#dc322f">%</span>; <span style="color:#719e07">background-color</span>: <span style="color:#2aa198">#EEE</span>}
+</span></span><span style="display:flex"><span>.<span style="color:#268bd2">code_cell</span> {<span style="color:#719e07">flex-direction</span>: <span style="color:#cb4b16">row</span> <span style="color:#719e07">!important</span>;}
+</span></span><span style="display:flex"><span>.<span style="color:#268bd2">code_cell</span> .<span style="color:#268bd2">output_wrapper</span> {<span style="color:#719e07">width</span>: <span style="color:#2aa198">50</span><span style="color:#dc322f">%</span>;<span style="color:#719e07">background-color</span>: <span style="color:#2aa198">#FFF</span>}
+</span></span><span style="display:flex"><span>.<span style="color:#268bd2">code_cell</span> .<span style="color:#268bd2">input</span> {<span style="color:#719e07">width</span>: <span style="color:#2aa198">50</span><span style="color:#dc322f">%</span>;<span style="color:#719e07">background-color</span>: <span style="color:#2aa198">#FFF</span>}
+</span></span><span style="display:flex"><span>&lt;/<span style="color:#268bd2">style</span>&gt;
+</span></span></code></pre>
             </div>
             <p>Convert the code cell to markdown to cancel.</p>
             <h3 id="dataclasses">Dataclasses</h3>
             <p>Dataclass can be used to automatically generate special methods like <code>__init__()</code> and <code>__repr__()</code> for a python class.</p>
             <div class="highlight">
-              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#719e07">from</span> dataclasses <span style="color:#719e07">import</span> dataclass
-
-<span style="color:#268bd2">@dataclass</span>
-<span style="color:#719e07">class</span> <span style="color:#268bd2">InventoryItem</span>:
-    <span style="color:#2aa198">"""Class for keeping track of an item in inventory."""</span>
-    name: <span style="color:#b58900">str</span>
-    unit_price: <span style="color:#b58900">float</span>
-    quantity_on_hand: <span style="color:#b58900">int</span> <span style="color:#719e07">=</span> <span style="color:#2aa198">0</span>
-
-    <span style="color:#719e07">def</span> <span style="color:#268bd2">total_cost</span>(<span style="color:#268bd2">self</span>) <span style="color:#719e07">-&gt;</span> <span style="color:#b58900">float</span>:
-        <span style="color:#719e07">return</span> <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>unit_price <span style="color:#719e07">*</span> <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>quantity_on_hand
-</code></pre>
+              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="display:flex"><span><span style="color:#719e07">from</span> dataclasses <span style="color:#719e07">import</span> dataclass
+</span></span><span style="display:flex"><span>
+</span></span><span style="display:flex"><span><span style="color:#268bd2">@dataclass</span>
+</span></span><span style="display:flex"><span><span style="color:#719e07">class</span> <span style="color:#268bd2">InventoryItem</span>:
+</span></span><span style="display:flex"><span>    <span style="color:#2aa198">"""Class for keeping track of an item in inventory."""</span>
+</span></span><span style="display:flex"><span>    name: <span style="color:#b58900">str</span>
+</span></span><span style="display:flex"><span>    unit_price: <span style="color:#b58900">float</span>
+</span></span><span style="display:flex"><span>    quantity_on_hand: <span style="color:#b58900">int</span> <span style="color:#719e07">=</span> <span style="color:#2aa198">0</span>
+</span></span><span style="display:flex"><span>
+</span></span><span style="display:flex"><span>    <span style="color:#719e07">def</span> <span style="color:#268bd2">total_cost</span>(<span style="color:#268bd2">self</span>) <span style="color:#719e07">-&gt;</span> <span style="color:#b58900">float</span>:
+</span></span><span style="display:flex"><span>        <span style="color:#719e07">return</span> <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>unit_price <span style="color:#719e07">*</span> <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>quantity_on_hand
+</span></span></code></pre>
             </div>
             <h3 id="pathlib">Pathlib</h3>
             <p>Pathlib is an extremely useful library for manipulating paths. It is less cumbersome than using <code>os.path.join()</code> repeatedly.</p>
             <div class="highlight">
-              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#719e07">from</span> pathlib <span style="color:#719e07">import</span> Path
-p <span style="color:#719e07">=</span> Path(<span style="color:#2aa198">'/'</span>)
-<span style="color:#b58900">print</span>(<span style="color:#2aa198">"List subdir:"</span>, [x <span style="color:#719e07">for</span> x <span style="color:#719e07">in</span> p<span style="color:#719e07">.</span>iterdir() <span style="color:#719e07">if</span> x<span style="color:#719e07">.</span>is_dir()])
-q <span style="color:#719e07">=</span> p <span style="color:#719e07">/</span> <span style="color:#2aa198">'init.d'</span> <span style="color:#719e07">/</span> <span style="color:#2aa198">'reboot'</span>
-<span style="color:#b58900">print</span>(q)
-<span style="color:#b58900">print</span>(q<span style="color:#719e07">.</span>resolve())
-<span style="color:#b58900">print</span>(q<span style="color:#719e07">.</span>exists())
-<span style="color:#b58900">print</span>(q<span style="color:#719e07">.</span>is_dir())
-<span style="color:#719e07">with</span> q<span style="color:#719e07">.</span>open() <span style="color:#719e07">as</span> f: f<span style="color:#719e07">.</span>readline()
-</code></pre>
+              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="display:flex"><span><span style="color:#719e07">from</span> pathlib <span style="color:#719e07">import</span> Path
+</span></span><span style="display:flex"><span>p <span style="color:#719e07">=</span> Path(<span style="color:#2aa198">'/'</span>)
+</span></span><span style="display:flex"><span><span style="color:#b58900">print</span>(<span style="color:#2aa198">"List subdir:"</span>, [x <span style="color:#719e07">for</span> x <span style="color:#719e07">in</span> p<span style="color:#719e07">.</span>iterdir() <span style="color:#719e07">if</span> x<span style="color:#719e07">.</span>is_dir()])
+</span></span><span style="display:flex"><span>q <span style="color:#719e07">=</span> p <span style="color:#719e07">/</span> <span style="color:#2aa198">'init.d'</span> <span style="color:#719e07">/</span> <span style="color:#2aa198">'reboot'</span>
+</span></span><span style="display:flex"><span><span style="color:#b58900">print</span>(q)
+</span></span><span style="display:flex"><span><span style="color:#b58900">print</span>(q<span style="color:#719e07">.</span>resolve())
+</span></span><span style="display:flex"><span><span style="color:#b58900">print</span>(q<span style="color:#719e07">.</span>exists())
+</span></span><span style="display:flex"><span><span style="color:#b58900">print</span>(q<span style="color:#719e07">.</span>is_dir())
+</span></span><span style="display:flex"><span><span style="color:#719e07">with</span> q<span style="color:#719e07">.</span>open() <span style="color:#719e07">as</span> f: f<span style="color:#719e07">.</span>readline()
+</span></span></code></pre>
             </div>
           </div>
           <div class="bl-section">
@@ -180,7 +180,7 @@ q <span style="color:#719e07">=</span> p <span style="color:#719e07">/</span> <s
   <script src="/js/katex/contrib/auto-render.min.js"></script> 
   <script>
   document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"\\[",right:"\\]",display:!0},{left:"$$",right:"$$",display:!0},{left:"\\begin{equation}",right:"\\end{equation}",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1}]})})
-  </script> 
+  </script>
   <script data-goatcounter="https://stats.hugocisneros.com/count" async src="//stats.hugocisneros.com/count.js"></script>
 </body>
 </html>

@@ -70,24 +70,24 @@
             <p>I have been annoyed with tabs in Makefiles many times. Some editors or copy-pasting functions automatically convert tabs to space and vice-versa and this can break your Makefile.</p>
             <p>With GNU Make 4.0 or later, it is possible to set the prefix to some other fixed token. To use <code>&gt;</code> as a prefix, put this at the beginning of your Makefile:</p>
             <div class="highlight">
-              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-makefile" data-lang="makefile">ifeq (<span style="color:#719e07">$(</span><span style="color:#268bd2">origin</span> .<span style="color:#268bd2">RECIPEPREFIX</span><span style="color:#719e07">)</span>, undefined)
-  <span style="color:#719e07">$(</span><span style="color:#268bd2">error</span> "<span style="color:#268bd2">This</span> <span style="color:#268bd2">Make</span> <span style="color:#268bd2">does</span> <span style="color:#268bd2">not</span> <span style="color:#268bd2">support</span> .<span style="color:#268bd2">RECIPEPREFIX</span>. \
-    <span style="color:#268bd2">Please</span> <span style="color:#268bd2">use</span> <span style="color:#268bd2">GNU</span> <span style="color:#268bd2">Make</span> 4.0 <span style="color:#268bd2">or</span> <span style="color:#268bd2">later</span>"<span style="color:#719e07">)</span>
-endif
-<span style="color:#268bd2">.RECIPEPREFIX</span> <span style="color:#719e07">=</span> &gt;
-</code></pre>
+              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-makefile" data-lang="makefile"><span style="display:flex"><span>ifeq (<span style="color:#719e07">$(</span><span style="color:#268bd2">origin</span> .<span style="color:#268bd2">RECIPEPREFIX</span><span style="color:#719e07">)</span>, undefined)
+</span></span><span style="display:flex"><span>  <span style="color:#719e07">$(</span><span style="color:#268bd2">error</span> "<span style="color:#268bd2">This</span> <span style="color:#268bd2">Make</span> <span style="color:#268bd2">does</span> <span style="color:#268bd2">not</span> <span style="color:#268bd2">support</span> .<span style="color:#268bd2">RECIPEPREFIX</span>. \
+</span></span><span style="display:flex"><span>    <span style="color:#268bd2">Please</span> <span style="color:#268bd2">use</span> <span style="color:#268bd2">GNU</span> <span style="color:#268bd2">Make</span> 4.0 <span style="color:#268bd2">or</span> <span style="color:#268bd2">later</span>"<span style="color:#719e07">)</span>
+</span></span><span style="display:flex"><span>endif
+</span></span><span style="display:flex"><span><span style="color:#268bd2">.RECIPEPREFIX</span> <span style="color:#719e07">=</span> &gt;
+</span></span></code></pre>
             </div>
             <h2 id="document-a-make-file-for-a-user">Document a make file for a user</h2>
             <p>Large Makefiles with lots of recipes can be overwhelming for someone trying your software for the first time. Many conventions exist about which standard recipes should be there, but it is also efficient to document them. This can be done by adding the following recipe to the Makefile (which will be run by default, to change this behavior, remove the first line):</p>
             <div class="highlight">
-              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-makefile" data-lang="makefile"><span style="color:#268bd2">.DEFAULT_GOAL</span> <span style="color:#719e07">:=</span> <span style="color:#b58900">help</span>
-<span style="color:#268bd2">.PHONY</span><span style="color:#719e07">:</span> help
-
-<span style="color:#268bd2">help</span><span style="color:#719e07">:</span>
-  @grep -E <span style="color:#2aa198">'^[a-zA-Z0-9_-]+:.*?## .*$$'</span> <span style="color:#719e07">$(</span>MAKEFILE_LIST<span style="color:#719e07">)</span> <span style="color:#cb4b16">\
-</span>  | sed -n <span style="color:#2aa198">'s/^\(.*\): \(.*\)##\(.*\)/\1|\3/p'</span> <span style="color:#cb4b16">\
-</span>  | column -t  -s <span style="color:#2aa198">'|'</span>
-</code></pre>
+              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-makefile" data-lang="makefile"><span style="display:flex"><span><span style="color:#268bd2">.DEFAULT_GOAL</span> <span style="color:#719e07">:=</span> <span style="color:#b58900">help</span>
+</span></span><span style="display:flex"><span><span style="color:#268bd2">.PHONY</span><span style="color:#719e07">:</span> help
+</span></span><span style="display:flex"><span>
+</span></span><span style="display:flex"><span><span style="color:#268bd2">help</span><span style="color:#719e07">:</span>
+</span></span><span style="display:flex"><span>  @grep -E <span style="color:#2aa198">'^[a-zA-Z0-9_-]+:.*?## .*$$'</span> <span style="color:#719e07">$(</span>MAKEFILE_LIST<span style="color:#719e07">)</span> <span style="color:#cb4b16">\
+</span></span></span><span style="display:flex"><span>  | sed -n <span style="color:#2aa198">'s/^\(.*\): \(.*\)##\(.*\)/\1|\3/p'</span> <span style="color:#cb4b16">\
+</span></span></span><span style="display:flex"><span>  | column -t  -s <span style="color:#2aa198">'|'</span>
+</span></span></code></pre>
             </div>
           </div>
           <div class="bl-section">
@@ -293,7 +293,7 @@ endif
   <script src="/js/katex/contrib/auto-render.min.js"></script> 
   <script>
   document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"\\[",right:"\\]",display:!0},{left:"$$",right:"$$",display:!0},{left:"\\begin{equation}",right:"\\end{equation}",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1}]})})
-  </script> 
+  </script>
   <script data-goatcounter="https://stats.hugocisneros.com/count" async src="//stats.hugocisneros.com/count.js"></script>
 </body>
 </html>

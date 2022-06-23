@@ -78,38 +78,38 @@
             <h2 id="simple-implementation">Simple implementation</h2>
             <p>In <a href="/notes/python/">Python</a>, taking advantage of Numpy’s array manipulation. This implementation is much faster than looping through elements of the grid to update them, but uses slightly more memory. The <a href="/notes/algorithm/">algorithm</a> is simply based on the standard ECA update.</p>
             <div class="highlight">
-              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#719e07">import</span> numpy <span style="color:#719e07">as</span> np
-<span style="color:#719e07">import</span> matplotlib
-<span style="color:#719e07">import</span> matplotlib.pyplot <span style="color:#719e07">as</span> plt
-fig, ax <span style="color:#719e07">=</span> plt<span style="color:#719e07">.</span>subplots(figsize<span style="color:#719e07">=</span>(<span style="color:#2aa198">3</span>,<span style="color:#2aa198">2</span>))
-
-N <span style="color:#719e07">=</span> <span style="color:#2aa198">100</span> <span style="color:#586e75"># Number of cells in the cellular automaton</span>
-T <span style="color:#719e07">=</span> <span style="color:#2aa198">50</span> <span style="color:#586e75"># Number of steps to run for</span>
-rule <span style="color:#719e07">=</span> <span style="color:#2aa198">54</span> <span style="color:#586e75"># Rule code</span>
-rule_list <span style="color:#719e07">=</span> <span style="color:#b58900">bin</span>(rule)[<span style="color:#2aa198">2</span>:]
-<span style="color:#586e75"># Zero padding of the rule</span>
-rule_list <span style="color:#719e07">=</span> [<span style="color:#2aa198">0</span>] <span style="color:#719e07">*</span> (<span style="color:#2aa198">8</span> <span style="color:#719e07">-</span> <span style="color:#b58900">len</span>(rule_list)) <span style="color:#719e07">+</span> [<span style="color:#b58900">int</span>(i) <span style="color:#719e07">for</span> i <span style="color:#719e07">in</span> rule_list]
-<span style="color:#586e75"># Convert to array and reverse the list</span>
-rule_array <span style="color:#719e07">=</span> np<span style="color:#719e07">.</span>array(rule_list[::<span style="color:#719e07">-</span><span style="color:#2aa198">1</span>])
-
-<span style="color:#586e75"># Initial state</span>
-init <span style="color:#719e07">=</span> np<span style="color:#719e07">.</span>random<span style="color:#719e07">.</span>randint(<span style="color:#2aa198">2</span>, size<span style="color:#719e07">=</span>N)
-
-<span style="color:#586e75"># We initialize a grid with T rows and N columns</span>
-grid <span style="color:#719e07">=</span> np<span style="color:#719e07">.</span>zeros((T, N), dtype<span style="color:#719e07">=</span>np<span style="color:#719e07">.</span>int)
-grid[<span style="color:#2aa198">0</span>, :] <span style="color:#719e07">=</span> init
-
-<span style="color:#719e07">for</span> i <span style="color:#719e07">in</span> <span style="color:#b58900">range</span>(<span style="color:#2aa198">1</span>, T):
-    next_step <span style="color:#719e07">=</span> rule_array[np<span style="color:#719e07">.</span>roll(grid[i<span style="color:#719e07">-</span><span style="color:#2aa198">1</span>, :], <span style="color:#719e07">-</span><span style="color:#2aa198">1</span>) <span style="color:#719e07">+</span>
-                           <span style="color:#2aa198">2</span> <span style="color:#719e07">*</span> grid[i<span style="color:#719e07">-</span><span style="color:#2aa198">1</span>, :] <span style="color:#719e07">+</span>
-                           <span style="color:#2aa198">4</span> <span style="color:#719e07">*</span> np<span style="color:#719e07">.</span>roll(grid[i<span style="color:#719e07">-</span><span style="color:#2aa198">1</span>, :], <span style="color:#2aa198">1</span>)]
-    grid[i, :] <span style="color:#719e07">=</span> next_step
-
-<span style="color:#586e75"># Plotting the results</span>
-ax<span style="color:#719e07">.</span>matshow(grid, cmap<span style="color:#719e07">=</span><span style="color:#2aa198">'Greys'</span>)
-fig<span style="color:#719e07">.</span>tight_layout()
-fig<span style="color:#719e07">.</span>savefig(<span style="color:#2aa198">'img/plots/ca_rule54.png'</span>)
-</code></pre>
+              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="display:flex"><span><span style="color:#719e07">import</span> numpy <span style="color:#719e07">as</span> np
+</span></span><span style="display:flex"><span><span style="color:#719e07">import</span> matplotlib
+</span></span><span style="display:flex"><span><span style="color:#719e07">import</span> matplotlib.pyplot <span style="color:#719e07">as</span> plt
+</span></span><span style="display:flex"><span>fig, ax <span style="color:#719e07">=</span> plt<span style="color:#719e07">.</span>subplots(figsize<span style="color:#719e07">=</span>(<span style="color:#2aa198">3</span>,<span style="color:#2aa198">2</span>))
+</span></span><span style="display:flex"><span>
+</span></span><span style="display:flex"><span>N <span style="color:#719e07">=</span> <span style="color:#2aa198">100</span> <span style="color:#586e75"># Number of cells in the cellular automaton</span>
+</span></span><span style="display:flex"><span>T <span style="color:#719e07">=</span> <span style="color:#2aa198">50</span> <span style="color:#586e75"># Number of steps to run for</span>
+</span></span><span style="display:flex"><span>rule <span style="color:#719e07">=</span> <span style="color:#2aa198">54</span> <span style="color:#586e75"># Rule code</span>
+</span></span><span style="display:flex"><span>rule_list <span style="color:#719e07">=</span> <span style="color:#b58900">bin</span>(rule)[<span style="color:#2aa198">2</span>:]
+</span></span><span style="display:flex"><span><span style="color:#586e75"># Zero padding of the rule</span>
+</span></span><span style="display:flex"><span>rule_list <span style="color:#719e07">=</span> [<span style="color:#2aa198">0</span>] <span style="color:#719e07">*</span> (<span style="color:#2aa198">8</span> <span style="color:#719e07">-</span> <span style="color:#b58900">len</span>(rule_list)) <span style="color:#719e07">+</span> [<span style="color:#b58900">int</span>(i) <span style="color:#719e07">for</span> i <span style="color:#719e07">in</span> rule_list]
+</span></span><span style="display:flex"><span><span style="color:#586e75"># Convert to array and reverse the list</span>
+</span></span><span style="display:flex"><span>rule_array <span style="color:#719e07">=</span> np<span style="color:#719e07">.</span>array(rule_list[::<span style="color:#719e07">-</span><span style="color:#2aa198">1</span>])
+</span></span><span style="display:flex"><span>
+</span></span><span style="display:flex"><span><span style="color:#586e75"># Initial state</span>
+</span></span><span style="display:flex"><span>init <span style="color:#719e07">=</span> np<span style="color:#719e07">.</span>random<span style="color:#719e07">.</span>randint(<span style="color:#2aa198">2</span>, size<span style="color:#719e07">=</span>N)
+</span></span><span style="display:flex"><span>
+</span></span><span style="display:flex"><span><span style="color:#586e75"># We initialize a grid with T rows and N columns</span>
+</span></span><span style="display:flex"><span>grid <span style="color:#719e07">=</span> np<span style="color:#719e07">.</span>zeros((T, N), dtype<span style="color:#719e07">=</span>np<span style="color:#719e07">.</span>int)
+</span></span><span style="display:flex"><span>grid[<span style="color:#2aa198">0</span>, :] <span style="color:#719e07">=</span> init
+</span></span><span style="display:flex"><span>
+</span></span><span style="display:flex"><span><span style="color:#719e07">for</span> i <span style="color:#719e07">in</span> <span style="color:#b58900">range</span>(<span style="color:#2aa198">1</span>, T):
+</span></span><span style="display:flex"><span>    next_step <span style="color:#719e07">=</span> rule_array[np<span style="color:#719e07">.</span>roll(grid[i<span style="color:#719e07">-</span><span style="color:#2aa198">1</span>, :], <span style="color:#719e07">-</span><span style="color:#2aa198">1</span>) <span style="color:#719e07">+</span>
+</span></span><span style="display:flex"><span>                           <span style="color:#2aa198">2</span> <span style="color:#719e07">*</span> grid[i<span style="color:#719e07">-</span><span style="color:#2aa198">1</span>, :] <span style="color:#719e07">+</span>
+</span></span><span style="display:flex"><span>                           <span style="color:#2aa198">4</span> <span style="color:#719e07">*</span> np<span style="color:#719e07">.</span>roll(grid[i<span style="color:#719e07">-</span><span style="color:#2aa198">1</span>, :], <span style="color:#2aa198">1</span>)]
+</span></span><span style="display:flex"><span>    grid[i, :] <span style="color:#719e07">=</span> next_step
+</span></span><span style="display:flex"><span>
+</span></span><span style="display:flex"><span><span style="color:#586e75"># Plotting the results</span>
+</span></span><span style="display:flex"><span>ax<span style="color:#719e07">.</span>matshow(grid, cmap<span style="color:#719e07">=</span><span style="color:#2aa198">'Greys'</span>)
+</span></span><span style="display:flex"><span>fig<span style="color:#719e07">.</span>tight_layout()
+</span></span><span style="display:flex"><span>fig<span style="color:#719e07">.</span>savefig(<span style="color:#2aa198">'img/plots/ca_rule54.png'</span>)
+</span></span></code></pre>
             </div>
             <p>Results:</p>
             <figure>
@@ -173,7 +173,7 @@ fig<span style="color:#719e07">.</span>savefig(<span style="color:#2aa198">'img/
   <script src="/js/katex/contrib/auto-render.min.js"></script> 
   <script>
   document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"\\[",right:"\\]",display:!0},{left:"$$",right:"$$",display:!0},{left:"\\begin{equation}",right:"\\end{equation}",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1}]})})
-  </script> 
+  </script>
   <script data-goatcounter="https://stats.hugocisneros.com/count" async src="//stats.hugocisneros.com/count.js"></script>
 </body>
 </html>

@@ -82,58 +82,58 @@
             <h2 id="minimal-example-in-python--python-dot-md">Minimal example in <a href="/notes/python/">Python</a></h2>
             <p>Here is a very simple Python snippet to apply a BPE pass on a sequence of tokens.</p>
             <div class="highlight">
-              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#719e07">from</span> collections <span style="color:#719e07">import</span> counter
-<span style="color:#719e07">from</span> typing <span style="color:#719e07">import</span> Sequence, Tuple
-
-<span style="color:#586e75"># An encoding step will reduce the most common pair to a single token and returns</span>
-<span style="color:#586e75"># the modified "dataset" along with the vocabulary.</span>
-<span style="color:#719e07">def</span> <span style="color:#268bd2">bp_encode_step</span>(words: Sequence[<span style="color:#b58900">str</span>]) <span style="color:#719e07">-&gt;</span> Tuple[<span style="color:#b58900">list</span>[<span style="color:#b58900">str</span>], <span style="color:#b58900">set</span>[<span style="color:#b58900">str</span>]]:
-    <span style="color:#2aa198">"""This iteratively creates a new list of tokens where the most common pair
-</span><span style="color:#2aa198">    has been merged into a single token."""</span>
-    pair_count <span style="color:#719e07">=</span> counter(<span style="color:#b58900">zip</span>(words[:<span style="color:#719e07">-</span><span style="color:#2aa198">1</span>], words[<span style="color:#2aa198">1</span>:]))
-    most_common_pair <span style="color:#719e07">=</span> pair_count<span style="color:#719e07">.</span>most_common(<span style="color:#2aa198">1</span>)[<span style="color:#2aa198">0</span>][<span style="color:#2aa198">0</span>]
-    output <span style="color:#719e07">=</span> []
-    n <span style="color:#719e07">=</span> <span style="color:#2aa198">0</span>
-    <span style="color:#719e07">while</span> n <span style="color:#719e07">&lt;</span> <span style="color:#b58900">len</span>(words):
-        w <span style="color:#719e07">=</span> words[n]
-
-        <span style="color:#719e07">if</span> (
-            n <span style="color:#719e07">&lt;</span> <span style="color:#b58900">len</span>(words) <span style="color:#719e07">-</span> <span style="color:#2aa198">1</span>
-            <span style="color:#719e07">and</span> w <span style="color:#719e07">==</span> most_common_pair[<span style="color:#2aa198">0</span>]
-            <span style="color:#719e07">and</span> words[n <span style="color:#719e07">+</span> <span style="color:#2aa198">1</span>] <span style="color:#719e07">==</span> most_common_pair[<span style="color:#2aa198">1</span>]
-        ):
-            output<span style="color:#719e07">.</span>append(w <span style="color:#719e07">+</span> words[n <span style="color:#719e07">+</span> <span style="color:#2aa198">1</span>])
-            n <span style="color:#719e07">+=</span> <span style="color:#2aa198">1</span>
-        <span style="color:#719e07">else</span>:
-            output<span style="color:#719e07">.</span>append(w)
-        n <span style="color:#719e07">+=</span> <span style="color:#2aa198">1</span>
-    <span style="color:#719e07">return</span> output, <span style="color:#b58900">set</span>(output)
-</code></pre>
+              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="display:flex"><span><span style="color:#719e07">from</span> collections <span style="color:#719e07">import</span> counter
+</span></span><span style="display:flex"><span><span style="color:#719e07">from</span> typing <span style="color:#719e07">import</span> Sequence, Tuple
+</span></span><span style="display:flex"><span>
+</span></span><span style="display:flex"><span><span style="color:#586e75"># An encoding step will reduce the most common pair to a single token and returns</span>
+</span></span><span style="display:flex"><span><span style="color:#586e75"># the modified "dataset" along with the vocabulary.</span>
+</span></span><span style="display:flex"><span><span style="color:#719e07">def</span> <span style="color:#268bd2">bp_encode_step</span>(words: Sequence[<span style="color:#b58900">str</span>]) <span style="color:#719e07">-&gt;</span> Tuple[<span style="color:#b58900">list</span>[<span style="color:#b58900">str</span>], <span style="color:#b58900">set</span>[<span style="color:#b58900">str</span>]]:
+</span></span><span style="display:flex"><span>    <span style="color:#2aa198">"""This iteratively creates a new list of tokens where the most common pair
+</span></span></span><span style="display:flex"><span><span style="color:#2aa198">    has been merged into a single token."""</span>
+</span></span><span style="display:flex"><span>    pair_count <span style="color:#719e07">=</span> counter(<span style="color:#b58900">zip</span>(words[:<span style="color:#719e07">-</span><span style="color:#2aa198">1</span>], words[<span style="color:#2aa198">1</span>:]))
+</span></span><span style="display:flex"><span>    most_common_pair <span style="color:#719e07">=</span> pair_count<span style="color:#719e07">.</span>most_common(<span style="color:#2aa198">1</span>)[<span style="color:#2aa198">0</span>][<span style="color:#2aa198">0</span>]
+</span></span><span style="display:flex"><span>    output <span style="color:#719e07">=</span> []
+</span></span><span style="display:flex"><span>    n <span style="color:#719e07">=</span> <span style="color:#2aa198">0</span>
+</span></span><span style="display:flex"><span>    <span style="color:#719e07">while</span> n <span style="color:#719e07">&lt;</span> <span style="color:#b58900">len</span>(words):
+</span></span><span style="display:flex"><span>        w <span style="color:#719e07">=</span> words[n]
+</span></span><span style="display:flex"><span>
+</span></span><span style="display:flex"><span>        <span style="color:#719e07">if</span> (
+</span></span><span style="display:flex"><span>            n <span style="color:#719e07">&lt;</span> <span style="color:#b58900">len</span>(words) <span style="color:#719e07">-</span> <span style="color:#2aa198">1</span>
+</span></span><span style="display:flex"><span>            <span style="color:#719e07">and</span> w <span style="color:#719e07">==</span> most_common_pair[<span style="color:#2aa198">0</span>]
+</span></span><span style="display:flex"><span>            <span style="color:#719e07">and</span> words[n <span style="color:#719e07">+</span> <span style="color:#2aa198">1</span>] <span style="color:#719e07">==</span> most_common_pair[<span style="color:#2aa198">1</span>]
+</span></span><span style="display:flex"><span>        ):
+</span></span><span style="display:flex"><span>            output<span style="color:#719e07">.</span>append(w <span style="color:#719e07">+</span> words[n <span style="color:#719e07">+</span> <span style="color:#2aa198">1</span>])
+</span></span><span style="display:flex"><span>            n <span style="color:#719e07">+=</span> <span style="color:#2aa198">1</span>
+</span></span><span style="display:flex"><span>        <span style="color:#719e07">else</span>:
+</span></span><span style="display:flex"><span>            output<span style="color:#719e07">.</span>append(w)
+</span></span><span style="display:flex"><span>        n <span style="color:#719e07">+=</span> <span style="color:#2aa198">1</span>
+</span></span><span style="display:flex"><span>    <span style="color:#719e07">return</span> output, <span style="color:#b58900">set</span>(output)
+</span></span></code></pre>
             </div>
             <p>We apply the encoding function to a fake dataset for several steps:</p>
             <p><a id="code-snippet--bpe-encode"></a></p>
             <div class="highlight">
-              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#586e75"># The "dataset" we will be using</span>
-words <span style="color:#719e07">=</span> <span style="color:#2aa198">"This is the first time I experienced this kind of thing. </span><span style="color:#cb4b16">\
-</span><span style="color:#2aa198">Let's try this thing again."</span>
-
-<span style="color:#719e07">for</span> iteration <span style="color:#719e07">in</span> <span style="color:#b58900">range</span>(<span style="color:#2aa198">24</span>):
-    words, vocab <span style="color:#719e07">=</span> bp_encode_step(words)
-    <span style="color:#719e07">if</span> iteration <span style="color:#719e07">%</span> <span style="color:#2aa198">4</span> <span style="color:#719e07">==</span> <span style="color:#2aa198">0</span>:
-        <span style="color:#b58900">print</span>(<span style="color:#2aa198">f</span><span style="color:#2aa198">"Step </span><span style="color:#2aa198">{</span>iteration<span style="color:#2aa198">}</span><span style="color:#2aa198"> vocab size is </span><span style="color:#2aa198">{</span><span style="color:#b58900">len</span>(vocab)<span style="color:#2aa198">}</span><span style="color:#2aa198">,"</span>,
-              <span style="color:#2aa198">"tokenized sentence:"</span>, <span style="color:#2aa198">"_"</span><span style="color:#719e07">.</span>join(words), <span style="color:#2aa198">"</span><span style="color:#cb4b16">\n</span><span style="color:#2aa198">"</span>)
-</code></pre>
+              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="display:flex"><span><span style="color:#586e75"># The "dataset" we will be using</span>
+</span></span><span style="display:flex"><span>words <span style="color:#719e07">=</span> <span style="color:#2aa198">"This is the first time I experienced this kind of thing. </span><span style="color:#cb4b16">\
+</span></span></span><span style="display:flex"><span><span style="color:#2aa198">Let's try this thing again."</span>
+</span></span><span style="display:flex"><span>
+</span></span><span style="display:flex"><span><span style="color:#719e07">for</span> iteration <span style="color:#719e07">in</span> <span style="color:#b58900">range</span>(<span style="color:#2aa198">24</span>):
+</span></span><span style="display:flex"><span>    words, vocab <span style="color:#719e07">=</span> bp_encode_step(words)
+</span></span><span style="display:flex"><span>    <span style="color:#719e07">if</span> iteration <span style="color:#719e07">%</span> <span style="color:#2aa198">4</span> <span style="color:#719e07">==</span> <span style="color:#2aa198">0</span>:
+</span></span><span style="display:flex"><span>        <span style="color:#b58900">print</span>(<span style="color:#2aa198">f</span><span style="color:#2aa198">"Step </span><span style="color:#2aa198">{</span>iteration<span style="color:#2aa198">}</span><span style="color:#2aa198"> vocab size is </span><span style="color:#2aa198">{</span><span style="color:#b58900">len</span>(vocab)<span style="color:#2aa198">}</span><span style="color:#2aa198">,"</span>,
+</span></span><span style="display:flex"><span>              <span style="color:#2aa198">"tokenized sentence:"</span>, <span style="color:#2aa198">"_"</span><span style="color:#719e07">.</span>join(words), <span style="color:#2aa198">"</span><span style="color:#cb4b16">\n</span><span style="color:#2aa198">"</span>)
+</span></span></code></pre>
             </div>
             <h3 id="results">Results</h3>
             <p>The various tokens are separated by the symbol <code>_</code> in the results:</p>
             <div class="highlight">
-              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Step 0 vocab size is 25, tokenized sentence: T_h_i_s_ _i_s_ t_h_e_ _f_i_r_s_t_ t_i_m_e_ _I_ _e_x_p_e_r_i_e_n_c_e_d_ t_h_i_s_ _k_i_n_d_ _o_f_ t_h_i_n_g_._ _L_e_t_'_s_ t_r_y_ t_h_i_s_ t_h_i_n_g_ _a_g_a_i_n_.
-Step 4 vocab size is 29, tokenized sentence: T_hi_s _i_s t_h_e_ _f_i_r_s_t_ t_i_m_e_ _I_ _e_x_p_e_r_i_e_n_c_e_d_ thi_s _k_i_n_d_ _o_f_ thi_n_g_._ _L_e_t_'_s t_r_y_ thi_s_ thi_n_g_ _a_g_a_i_n_.
-Step 8 vocab size is 32, tokenized sentence: T_hi_s _i_s t_h_e _f_i_r_s_t_ t_i_m_e _I_ _e_x_p_e_r_i_e_n_c_e_d_ thi_s _k_in_d_ _o_f_ thing_._ _L_e_t_'_s t_r_y_ thi_s_ thing_ _a_g_a_in_.
-Step 12 vocab size is 31, tokenized sentence: This is t_h_e _f_i_r_s_t_ t_i_m_e _I_ _e_x_p_e_r_i_e_n_c_e_d_ thi_s _k_in_d_ _o_f_ thing_._ _L_e_t_'_s t_r_y_ thi_s_ thing_ _a_g_a_in_.
-Step 16 vocab size is 30, tokenized sentence: This is the fi_r_s_t_ t_i_m_e _I_ _e_x_p_e_r_i_e_n_c_e_d_ thi_s _k_in_d_ _o_f_ thing_._ _L_e_t_'_s t_r_y_ thi_s_ thing_ _a_g_a_in_.
-Step 20 vocab size is 29, tokenized sentence: This is the first t_i_m_e _I_ _e_x_p_e_r_i_e_n_c_e_d_ thi_s _k_in_d_ _o_f_ thing_._ _L_e_t_'_s t_r_y_ thi_s_ thing_ _a_g_a_in_.
-</code></pre>
+              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text"><span style="display:flex"><span>Step 0 vocab size is 25, tokenized sentence: T_h_i_s_ _i_s_ t_h_e_ _f_i_r_s_t_ t_i_m_e_ _I_ _e_x_p_e_r_i_e_n_c_e_d_ t_h_i_s_ _k_i_n_d_ _o_f_ t_h_i_n_g_._ _L_e_t_'_s_ t_r_y_ t_h_i_s_ t_h_i_n_g_ _a_g_a_i_n_.
+</span></span><span style="display:flex"><span>Step 4 vocab size is 29, tokenized sentence: T_hi_s _i_s t_h_e_ _f_i_r_s_t_ t_i_m_e_ _I_ _e_x_p_e_r_i_e_n_c_e_d_ thi_s _k_i_n_d_ _o_f_ thi_n_g_._ _L_e_t_'_s t_r_y_ thi_s_ thi_n_g_ _a_g_a_i_n_.
+</span></span><span style="display:flex"><span>Step 8 vocab size is 32, tokenized sentence: T_hi_s _i_s t_h_e _f_i_r_s_t_ t_i_m_e _I_ _e_x_p_e_r_i_e_n_c_e_d_ thi_s _k_in_d_ _o_f_ thing_._ _L_e_t_'_s t_r_y_ thi_s_ thing_ _a_g_a_in_.
+</span></span><span style="display:flex"><span>Step 12 vocab size is 31, tokenized sentence: This is t_h_e _f_i_r_s_t_ t_i_m_e _I_ _e_x_p_e_r_i_e_n_c_e_d_ thi_s _k_in_d_ _o_f_ thing_._ _L_e_t_'_s t_r_y_ thi_s_ thing_ _a_g_a_in_.
+</span></span><span style="display:flex"><span>Step 16 vocab size is 30, tokenized sentence: This is the fi_r_s_t_ t_i_m_e _I_ _e_x_p_e_r_i_e_n_c_e_d_ thi_s _k_in_d_ _o_f_ thing_._ _L_e_t_'_s t_r_y_ thi_s_ thing_ _a_g_a_in_.
+</span></span><span style="display:flex"><span>Step 20 vocab size is 29, tokenized sentence: This is the first t_i_m_e _I_ _e_x_p_e_r_i_e_n_c_e_d_ thi_s _k_in_d_ _o_f_ thing_._ _L_e_t_'_s t_r_y_ thi_s_ thing_ _a_g_a_in_.
+</span></span></code></pre>
             </div>
             <p>On such a small “dataset”, the benefits of BPE are not apparent. The vocabulary quickly ends up with pairs of tokens appearing only once for which there isn’t anything more to do.</p>
             <p>Notice how from step 8, the very common word <code>this</code> is encoded as a single token.</p>
@@ -176,7 +176,7 @@ Step 20 vocab size is 29, tokenized sentence: This is the first t_i_m_e _I_ _e_x
   <script src="/js/katex/contrib/auto-render.min.js"></script> 
   <script>
   document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"\\[",right:"\\]",display:!0},{left:"$$",right:"$$",display:!0},{left:"\\begin{equation}",right:"\\end{equation}",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1}]})})
-  </script> 
+  </script>
   <script data-goatcounter="https://stats.hugocisneros.com/count" async src="//stats.hugocisneros.com/count.js"></script>
 </body>
 </html>

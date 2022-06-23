@@ -73,10 +73,10 @@
             <p>This paper introduces a method to extend the classical <a href="/notes/transformers/">Transformer</a> <a href="/notes/neural_networks/">neural network</a> model with an addressable memory that can be queried and updated at inference time.</p>
             <p>This memory is addressed using an <a href="/notes/attention/">attention</a> mechanism. It is a set of cached attention (key, value) vector pairs. At some arbitrary depth of the attention “stack” the memory mechanism is inserted.</p>
             <p>A query \(\bm{Q}\) is used both for the self-attention over the local context (the other tokens in the input) as well as the (key, value) pairs stored in the memory. We write \(\bm{K}_l\), \(\bm{V}_l\) the key value matrices of the local context. The local self-attention output (denoted \(\bm{V}_c\) in the paper) is computed as follows:</p>
-            <p>\[\bm{V}_l' = \text{softmax}\left( \dfrac{\bm{Q}\bm{K}_l^{T}}{\sqrt{D}} \right) \bm{V}_l.\]</p>
+            <p>\[\bm{V}_l’ = \text{softmax}\left( \dfrac{\bm{Q}\bm{K}_l^{T}}{\sqrt{D}} \right) \bm{V}_l.\]</p>
             <p>For each query (i.e. each input token position), a set of \(k\) keys is retrieved from memory. They correspond to the \(k\) nearest neighbor keys to the query.</p>
-            <p>Combining the memory with the query is done similarly to standard attention, except that each query has a different set of (key, value) pairs to attend to. With \(\bm{K}_m\) and \(\bm{V}_m\) the matrix of (key, values) retrieved from the memory for query \(\bm{q}_i\) we have: \[\bm{v}_{m, i} ' = \text{softmax}\left(\dfrac{\bm{q}_i \bm{K}_m^{T}}{\sqrt{D}} \right) \bm{V}_m.\]</p>
-            <p>Then the final value matrix is computed by combining \(\bm{V}_l'\) and \(\bm{V}_{m}'\):</p>
+            <p>Combining the memory with the query is done similarly to standard attention, except that each query has a different set of (key, value) pairs to attend to. With \(\bm{K}_m\) and \(\bm{V}_m\) the matrix of (key, values) retrieved from the memory for query \(\bm{q}_i\) we have: \[\bm{v}_{m, i} ’ = \text{softmax}\left(\dfrac{\bm{q}_i \bm{K}_m^{T}}{\sqrt{D}} \right) \bm{V}_m.\]</p>
+            <p>Then the final value matrix is computed by combining \(\bm{V}_l’\) and \(\bm{V}_{m}’\):</p>
             <p>\[ \bm{V} = \bm{V}_m \odot g + \bm{V}_l \odot (1 - g) \]</p>
             <p>with \(g = \sigma(b_g)\) is the sigmoid of a per-head scalar parameter that determines how much importance is given to the external memory.</p>
             <h2 id="bibliography">Bibliography</h2>
@@ -124,7 +124,7 @@
   <script src="/js/katex/contrib/auto-render.min.js"></script> 
   <script>
   document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"\\[",right:"\\]",display:!0},{left:"$$",right:"$$",display:!0},{left:"\\begin{equation}",right:"\\end{equation}",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1}]})})
-  </script> 
+  </script>
   <script data-goatcounter="https://stats.hugocisneros.com/count" async src="//stats.hugocisneros.com/count.js"></script>
 </body>
 </html>
