@@ -171,7 +171,7 @@
 </span></span><span style="display:flex"><span>            (<span style="color:#2aa198">"CANCELLED"</span> <span style="color:#b58900">:foreground</span> <span style="color:#2aa198">"forest green"</span> <span style="color:#b58900">:weight</span> <span style="color:#268bd2">bold</span>)
 </span></span><span style="display:flex"><span>            (<span style="color:#2aa198">"MEETING"</span> <span style="color:#b58900">:foreground</span> <span style="color:#2aa198">"forest green"</span> <span style="color:#b58900">:weight</span> <span style="color:#268bd2">bold</span>)
 </span></span><span style="display:flex"><span>            (<span style="color:#2aa198">"PHONE"</span> <span style="color:#b58900">:foreground</span> <span style="color:#2aa198">"forest green"</span> <span style="color:#b58900">:weight</span> <span style="color:#268bd2">bold</span>))))
-</span></span><span style="display:flex"><span><span style="color:#586e75">;; I don't wan't the keywords in my exports</span>
+</span></span><span style="display:flex"><span><span style="color:#586e75">;; I don't wan't the keywords in my exports by default</span>
 </span></span><span style="display:flex"><span>(<span style="color:#b58900">setq-default</span> <span style="color:#268bd2">org-export-with-todo-keywords</span> <span style="color:#cb4b16">nil</span>)
 </span></span></code></pre>
       </div>
@@ -183,9 +183,10 @@
 </span></span><span style="display:flex"><span>        <span style="color:#719e07">'</span>((<span style="color:#2aa198">?*</span> <span style="color:#719e07">.</span> <span style="color:#2aa198">?•</span>)
 </span></span><span style="display:flex"><span>          (<span style="color:#2aa198">?+</span> <span style="color:#719e07">.</span> <span style="color:#2aa198">?➤</span>)
 </span></span><span style="display:flex"><span>          (<span style="color:#2aa198">?-</span> <span style="color:#719e07">.</span> <span style="color:#2aa198">?•</span>)))
-</span></span><span style="display:flex"><span>  (<span style="color:#b58900">setq</span> <span style="color:#268bd2">org-superstar-headline-bullets-list</span> <span style="color:#719e07">'</span>(<span style="color:#2aa198">?\s</span>))
+</span></span><span style="display:flex"><span>  (<span style="color:#b58900">setq</span> <span style="color:#268bd2">org-superstar-headline-bullets-list</span> <span style="color:#719e07">'</span>(<span style="color:#2aa198">?\d</span>))
 </span></span><span style="display:flex"><span>  (<span style="color:#b58900">setq</span> <span style="color:#268bd2">org-superstar-special-todo-items</span> <span style="color:#cb4b16">t</span>)
 </span></span><span style="display:flex"><span>  (<span style="color:#b58900">setq</span> <span style="color:#268bd2">org-superstar-remove-leading-stars</span> <span style="color:#cb4b16">t</span>)
+</span></span><span style="display:flex"><span>  (<span style="color:#b58900">setq</span> <span style="color:#268bd2">org-hide-leading-stars</span> <span style="color:#cb4b16">t</span>)
 </span></span><span style="display:flex"><span>  <span style="color:#586e75">;; Enable custom bullets for TODO items</span>
 </span></span><span style="display:flex"><span>  (<span style="color:#b58900">setq</span> <span style="color:#268bd2">org-superstar-todo-bullet-alist</span>
 </span></span><span style="display:flex"><span>        <span style="color:#719e07">'</span>((<span style="color:#2aa198">"TODO"</span> <span style="color:#719e07">.</span> <span style="color:#2aa198">?☐</span>)
@@ -224,8 +225,6 @@
       <p>The first one sets the text to be variable pitch but revert it back to fixed-pitch for code block, properties, etc.</p>
       <div class="highlight">
         <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#b58900">defun</span> <span style="color:#268bd2">my/set-general-faces-org</span> ()
-</span></span><span style="display:flex"><span>  <span style="color:#586e75">;; I have removed indentation to make the file look cleaner</span>
-</span></span><span style="display:flex"><span>  (<span style="color:#268bd2">org-indent-mode</span> <span style="color:#2aa198">-1</span>)
 </span></span><span style="display:flex"><span>  (<span style="color:#268bd2">my/buffer-face-mode-variable</span>)
 </span></span><span style="display:flex"><span>  (<span style="color:#b58900">setq</span> <span style="color:#268bd2">line-spacing</span> <span style="color:#2aa198">0.1</span>
 </span></span><span style="display:flex"><span>        <span style="color:#268bd2">org-pretty-entities</span> <span style="color:#cb4b16">t</span>
@@ -326,7 +325,7 @@
 </span></span><span style="display:flex"><span>      <span style="color:#268bd2">org-agenda-compact-blocks</span> <span style="color:#cb4b16">t</span>
 </span></span><span style="display:flex"><span>      <span style="color:#268bd2">org-agenda-start-with-log-mode</span> <span style="color:#cb4b16">t</span>)
 </span></span><span style="display:flex"><span>(<span style="color:#b58900">with-eval-after-load</span> <span style="color:#2aa198">'org-journal</span>
-</span></span><span style="display:flex"><span>  (<span style="color:#b58900">setq</span> <span style="color:#268bd2">org-agenda-files</span> <span style="color:#719e07">'</span>(<span style="color:#2aa198">"~/org"</span> <span style="color:#2aa198">"~/org/roam/notes/"</span>)))
+</span></span><span style="display:flex"><span>  (<span style="color:#268bd2">define-key</span> <span style="color:#268bd2">org-journal-mode-map</span> (<span style="color:#268bd2">kbd</span> <span style="color:#2aa198">"&lt;C-tab&gt;"</span>) <span style="color:#2aa198">'yas-expand</span>))
 </span></span><span style="display:flex"><span>(<span style="color:#b58900">setq</span> <span style="color:#268bd2">org-agenda-clockreport-parameter-plist</span>
 </span></span><span style="display:flex"><span>      (<span style="color:#b58900">quote</span> (<span style="color:#b58900">:link</span> <span style="color:#cb4b16">t</span> <span style="color:#b58900">:maxlevel</span> <span style="color:#2aa198">5</span> <span style="color:#b58900">:fileskip0</span> <span style="color:#cb4b16">t</span> <span style="color:#b58900">:compact</span> <span style="color:#cb4b16">t</span> <span style="color:#b58900">:narrow</span> <span style="color:#2aa198">80</span>)))
 </span></span><span style="display:flex"><span>(<span style="color:#b58900">setq</span> <span style="color:#268bd2">org-agenda-deadline-faces</span>
@@ -639,7 +638,7 @@
       <p><a href="https://github.com/bastibe/org-journal">Org journal</a> is a package to create and maintain a journal/diary within Emacs. Here I set some of the options: the base directory for the journal and GPG encryption of journal files (uses org-crypt).</p>
       <div class="highlight">
         <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#b58900">setq</span> <span style="color:#268bd2">org-journal-dir</span> <span style="color:#2aa198">"~/org/journal/"</span>)
-</span></span><span style="display:flex"><span>(<span style="color:#b58900">setq</span> <span style="color:#268bd2">org-journal-enable-encryption</span> <span style="color:#cb4b16">t</span>)
+</span></span><span style="display:flex"><span>(<span style="color:#b58900">setq</span> <span style="color:#268bd2">org-journal-enable-encryption</span> <span style="color:#cb4b16">nil</span>)
 </span></span></code></pre>
       </div>
       <h2 id="misc">Misc</h2>
