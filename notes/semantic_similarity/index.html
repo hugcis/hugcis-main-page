@@ -4,20 +4,20 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
-  <title>ALBERT - Hugo Cisneros</title>
-  <meta property="og:title" content="ALBERT - Hugo Cisneros">
+  <title>Semantic similarity - Hugo Cisneros</title>
+  <meta property="og:title" content="Semantic similarity - Hugo Cisneros">
   <meta property="og:type" content="article">
   <meta property="og:image" content="/img/main.jpeg">
-  <meta property="og:url" content="https://hugocisneros.com/notes/albert/">
-  <meta property="og:description" content="Notes about ALBERT">
-  <meta name="Description" property="description" content="Notes about ALBERT">
+  <meta property="og:url" content="https://hugocisneros.com/notes/semantic_similarity/">
+  <meta property="og:description" content="Notes about Semantic similarity">
+  <meta name="Description" property="description" content="Notes about Semantic similarity">
   <link rel="me" href="https://twitter.com/@cisne_hug">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@cisne_hug">
   <meta name="twitter:creator" content="@cisne_hug">
   <link rel="me" href="https://scholar.social/@hugcis">
   <link rel="me" href="https://github.com/hugcis">
-  <meta property="keywords" content="transformers, bert, nlp">
+  <meta property="keywords" content="nlp, evaluating nlp">
   <link rel="stylesheet" href="https://hugocisneros.com/main.min.css" media="all" type="text/css">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -57,52 +57,41 @@
     <main class="content" role="main">
       <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
         <div class="single-note note-container">
-          <h1 class="article-title p-name" itemprop="name">ALBERT</h1>
+          <h1 class="article-title p-name" itemprop="name">Semantic similarity</h1>
           <div class="article-content e-content p-name" itemprop="articleBody">
             <dl>
               <dt>tags</dt>
               <dd>
-                <a href="/notes/transformers/">Transformers</a>, <a href="/notes/bert/">BERT</a>, <a href="/notes/nlp/">NLP</a>
-              </dd>
-              <dt>paper</dt>
-              <dd>
-                (<a href="#lanALBERTLiteBERT2020"><cite itemprop="citation" itemscope itemid="doi:10.48550/arXiv.1909.11942">Lan et al. 2020</cite></a>)
+                <a href="/notes/nlp/">NLP</a>, <a href="/notes/evaluating_nlp/">Evaluating NLP</a>
               </dd>
             </dl>
-            <h2 id="architecture">Architecture</h2>
-            <p>It is an encoder-only architecture. It extends <a href="/notes/bert/">BERT</a> by using parameter-sharing and is more efficient than BERT with the same number of parameters.</p>
-            <h2 id="parameter-count">Parameter count</h2>
-            <ul>
-              <li>Base = 12M</li>
-              <li>Large = 18M</li>
-              <li>XLarge = 60M</li>
-            </ul>
+            <h2 id="n-gram-matching">N-gram matching</h2>
+            <p>For two sequences \(x\) and \(\hat{x}\), we denote the sequence of $n$-grams with \(S_x^n\) and \(S^n_{\hat{x}}\). The number of matched $n$-grams between the two sentences is: \[ \sum_{w \in S_{\hat{x}}^n} \mathbb{I}[w \in S_{x}^n ] \] with \(\mathbb{I}\) the indicator function.</p>
+            <p>Some well-known metrics based on</p>
+            <h2 id="bertscore">BERTScore</h2>
+            <p>The goal of this metric is to compute and aggregate the pairwise similarity between <a href="/notes/bert/">BERT</a> embeddings of words in the sentence (<a href="#zhangBERTScoreEvaluatingText2020"><cite itemprop="citation" itemscope itemid="doi:10.48550/arXiv.1904.09675">Zhang et al. 2020</cite></a>).</p>
+            <h2 id="embedding-based-metrics">Embedding-based metrics</h2>
+            <h3 id="universal-sentence-encoder">Universal sentence encoder</h3>
+            <p>The Universal sentence encoder (USE) (<a href="#cerUniversalSentenceEncoder2018"><cite itemprop="citation" itemscope itemid="key:cerUniversalSentenceEncoder2018">Cer et al. 2018</cite></a>) can embed a sentence into a single vector. The distance between two sentence embedding (usually normalized and therefore cosine distance,) can then be used as a proxy for semantic similarity.</p>
             <h2 id="bibliography">Bibliography</h2>
             <ol class="biblio-list">
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="lanALBERTLiteBERT2020" itemid="doi:10.48550/arXiv.1909.11942">
-                <span itemprop="author">Zhenzhong Lan, Mingda Chen, Sebastian Goodman, Kevin Gimpel, Piyush Sharma, Radu Soricut</span>. <time datetime="2020" itemprop="datePublished">February 8, 2020</time>. "<span itemprop="name">ALBERT: A Lite BERT for Self-supervised Learning of Language Representations</span>". arXiv. <a itemprop="sameAs" href="https://doi.org/10.48550/arXiv.1909.11942">DOI</a>.
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="zhangBERTScoreEvaluatingText2020" itemid="doi:10.48550/arXiv.1904.09675">
+                <span itemprop="author">Tianyi Zhang, Varsha Kishore, Felix Wu, Kilian Q. Weinberger, Yoav Artzi</span>. <time datetime="2020" itemprop="datePublished">February 24, 2020</time>. "<span itemprop="name">Bertscore: Evaluating Text Generation with BERT</span>". arXiv. <a itemprop="sameAs" href="https://doi.org/10.48550/arXiv.1904.09675">DOI</a>.
+              </li>
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="cerUniversalSentenceEncoder2018">
+                <span itemprop="author">Daniel Cer, Yinfei Yang, Sheng-yi Kong, Nan Hua, Nicole Limtiaco, Rhomni St John, Noah Constant, et al.</span>. <time datetime="2018" itemprop="datePublished">2018</time>. "<span itemprop="name">Universal Sentence Encoder</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Corr</i></span> abs/1803.11175. <a itemprop="sameAs" href="http://arxiv.org/abs/1803.11175">http://arxiv.org/abs/1803.11175</a>.
               </li>
             </ol>
           </div>
-          <div class="bl-section">
-            <h2>Links to this note</h2>
-            <div class="backlinks">
-              <ul>
-                <li>
-                  <a href="/notes/complex_systems/">Complex Systems</a>
-                </li>
-              </ul>
-            </div>
-          </div>
           <div class="note-footer">
-            Last changed <a class="u-url" href="https://hugocisneros.com/notes/albert/"><time itemprop="datePublished" class="dt-published" datetime="2022-07-22T13:02:00+0200">22/07/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+            Last changed <a class="u-url" href="https://hugocisneros.com/notes/semantic_similarity/"><time itemprop="datePublished" class="dt-published" datetime="2022-08-03T16:40:00+0200">03/08/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
           </div>
         </div>
       </article>
       <h3>Comments</h3>
       <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
       <section id="isso-thread"></section><br>
-      <a href="/notes#albert"><b>← Back to Notes</b></a>
+      <a href="/notes#semantic_similarity"><b>← Back to Notes</b></a>
       <hr>
     </main>
     <footer class="footer">
