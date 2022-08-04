@@ -67,24 +67,56 @@
             </dl>
             <h2 id="n-gram-matching">N-gram matching</h2>
             <p>For two sequences \(x\) and \(\hat{x}\), we denote the sequence of $n$-grams with \(S_x^n\) and \(S^n_{\hat{x}}\). The number of matched $n$-grams between the two sentences is: \[ \sum_{w \in S_{\hat{x}}^n} \mathbb{I}[w \in S_{x}^n ] \] with \(\mathbb{I}\) the indicator function.</p>
-            <p>Some well-known metrics based on</p>
-            <h2 id="bertscore">BERTScore</h2>
-            <p>The goal of this metric is to compute and aggregate the pairwise similarity between <a href="/notes/bert/">BERT</a> embeddings of words in the sentence (<a href="#zhangBERTScoreEvaluatingText2020"><cite itemprop="citation" itemscope itemid="doi:10.48550/arXiv.1904.09675">Zhang et al. 2020</cite></a>).</p>
+            <p>From this we can construct the exact match precision (Exact-\(P_n\)) and recall (Exact-\(R_n\)): \[ \text{Exact-}$P_n$ = \frac{\sum_{w \in S_{\hat{x}}^n} \mathbb{I}[w \in S_{x}^n ]}{| S_{\hat{x}}^n|} \] and \[ \text{Exact-}$R_n$ = \frac{\sum_{w \in S_{x}^n} \mathbb{I}[w \in S_{\hat{x}}^n ]}{| S_{x}^n|} \]</p>
+            <p>Here are some well-known metrics based on the number of $n$-grams matches.</p>
+            <h3 id="bleu">BLEU</h3>
+            <p>The <strong>BLEU</strong> metric (<a href="#papineniBleuMethodAutomatic2002"><cite itemprop="citation" itemscope itemid="key:papineniBleuMethodAutomatic2002">Papineni et al. 2002</cite></a>) is very widely used in <a href="/notes/nlp/">NLP</a> and particularly in <a href="/notes/machine_translation/">Machine translation</a> . It is based on Exact-\(P_n\) with some key modifications:</p>
+            <ol>
+              <li>$n$-grams in the reference can be matched only once.</li>
+              <li>The number of exact matches is accumulated for all reference-candidate pairs in the corpus and divided by the total number of $n$-grams in all candidate sentences.</li>
+              <li>A brevity penalty discourages very short candidates.</li>
+            </ol>
+            <p>The score is computed with various values of \(n\) and geometrically averaged.</p>
+            <p>An smoothed extension of the <strong>BLEU</strong> metric, <strong>SENT-BLEU</strong> (<a href="#koehnMosesOpenSource2007"><cite itemprop="citation" itemscope itemid="key:koehnMosesOpenSource2007">Koehn et al. 2007</cite></a>) is computed at the sentence level.</p>
+            <h3 id="meteor">METEOR</h3>
+            <p><strong>METEOR</strong> (<a href="#banerjeeMETEORAutomaticMetric2005"><cite itemprop="citation" itemscope itemid="key:banerjeeMETEORAutomaticMetric2005">Banerjee, Lavie 2005</cite></a>) computes Exact-\(P_1\) and Exact-\(R_1\) with the possibility to match word stems and synonyms.</p>
+            <p>The extension <strong>METEOR-1.5</strong> (<a href="#denkowskiMeteorUniversalLanguage2014"><cite itemprop="citation" itemscope itemid="doi:10.3115/v1/w14-3348">Denkowski, Lavie 2014</cite></a>) weighs content and function words differently, and also applies importance weighting to different matching types.</p>
+            <p>More recently <strong>METEOR++ 2.0</strong> adds a learned paraphrase resource to the algorithm. Because of these external resources, the full feature set of <strong>METEOR</strong> is only available for few languages.</p>
+            <h3 id="rouge">ROUGE</h3>
+            <p><strong>ROUGE</strong> (<a href="#linROUGEPackageAutomatic2004"><cite itemprop="citation" itemscope itemid="key:linROUGEPackageAutomatic2004">Lin 2004</cite></a>) is a widely used metric for summarization evaluation.</p>
+            <p><strong>ROUGE-\(n\)</strong> computes Exact-\(R_n\) (usually \(n = 1, 2\)), while <strong>ROUGE-\(L\)</strong> is a variant of Exact-\(R_1\) with the numerator replaced by the length of the longest common subsequence.</p>
+            <h2 id="edit-distance-based-metrics">Edit-distance-based metrics</h2>
             <h2 id="embedding-based-metrics">Embedding-based metrics</h2>
             <h3 id="universal-sentence-encoder">Universal sentence encoder</h3>
-            <p>The Universal sentence encoder (USE) (<a href="#cerUniversalSentenceEncoder2018"><cite itemprop="citation" itemscope itemid="key:cerUniversalSentenceEncoder2018">Cer et al. 2018</cite></a>) can embed a sentence into a single vector. The distance between two sentence embedding (usually normalized and therefore cosine distance,) can then be used as a proxy for semantic similarity.</p>
+            <p>The Universal sentence encoder (USE) (<a href="#cerUniversalSentenceEncoder2018"><cite itemprop="citation" itemscope itemid="key:cerUniversalSentenceEncoder2018">Cer et al. 2018</cite></a>) can embed a sentence into a single vector. The distance between two sentence embeddings (usually normalized and therefore cosine distance), can then be used as a proxy for semantic similarity.</p>
+            <h2 id="learned-metrics">Learned metrics</h2>
+            <h2 id="bertscore">BERTScore</h2>
+            <p>The goal of this metric is to compute and aggregate the pairwise similarity between <a href="/notes/bert/">BERT</a> embeddings of words in the sentence (<a href="#zhangBERTScoreEvaluatingText2020"><cite itemprop="citation" itemscope itemid="doi:10.48550/arXiv.1904.09675">Zhang et al. 2020</cite></a>).</p>
             <h2 id="bibliography">Bibliography</h2>
             <ol class="biblio-list">
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="zhangBERTScoreEvaluatingText2020" itemid="doi:10.48550/arXiv.1904.09675">
-                <span itemprop="author">Tianyi Zhang, Varsha Kishore, Felix Wu, Kilian Q. Weinberger, Yoav Artzi</span>. <time datetime="2020" itemprop="datePublished">February 24, 2020</time>. "<span itemprop="name">Bertscore: Evaluating Text Generation with BERT</span>". arXiv. <a itemprop="sameAs" href="https://doi.org/10.48550/arXiv.1904.09675">DOI</a>.
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="papineniBleuMethodAutomatic2002"><span itemprop="author">Kishore Papineni, Salim Roukos, Todd Ward, Wei-Jing Zhu</span>. <time datetime="2002" itemprop="datePublished">2002</time>. "<span itemprop="name">Bleu: A Method for Automatic Evaluation of Machine Translation</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Proceedings of the 40th Annual Meeting of the Association for Computational Linguistics</i></span>, 311–18.</li>
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="koehnMosesOpenSource2007">
+                <span itemprop="author">Philipp Koehn, Hieu Hoang, Alexandra Birch, Chris Callison-Burch, Marcello Federico, Nicola Bertoldi, Brooke Cowan, et al.</span>. <time datetime="2007" itemprop="datePublished">2007</time>. "<span itemprop="name">Moses: Open Source Toolkit for Statistical Machine Translation</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">ACL 2007, Proceedings of the 45th Annual Meeting of the Association for Computational Linguistics, June 23-30, 2007, Prague, Czech Republic</i></span>, edited by John A. Carroll, Antal van den Bosch, and Annie Zaenen. The Association for Computational Linguistics. <a itemprop="sameAs" href="https://aclanthology.org/P07-2045/">https://aclanthology.org/P07-2045/</a>.
+              </li>
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="banerjeeMETEORAutomaticMetric2005">
+                <span itemprop="author">Satanjeev Banerjee, Alon Lavie</span>. <time datetime="2005" itemprop="datePublished">2005</time>. "<span itemprop="name">METEOR: An Automatic Metric for MT Evaluation with Improved Correlation with Human Judgments</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Proceedings of the Workshop on Intrinsic and Extrinsic Evaluation Measures for Machine Translation And/or Summarization@acl 2005, Ann Arbor, Michigan, USA, June 29, 2005</i></span>, edited by Jade Goldstein, Alon Lavie, Chin-Yew Lin, and Clare R. Voss, 65–72. Association for Computational Linguistics. <a itemprop="sameAs" href="https://aclanthology.org/W05-0909/">https://aclanthology.org/W05-0909/</a>.
+              </li>
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="denkowskiMeteorUniversalLanguage2014" itemid="doi:10.3115/v1/w14-3348">
+                <span itemprop="author">Michael J. Denkowski, Alon Lavie</span>. <time datetime="2014" itemprop="datePublished">2014</time>. "<span itemprop="name">Meteor Universal: Language Specific Translation Evaluation for Any Target Language</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Proceedings of the Ninth Workshop on Statistical Machine Translation, WMT@ACL 2014, June 26-27, 2014, Baltimore, Maryland, USA</i></span>, 376–80. The Association for Computer Linguistics. <a itemprop="sameAs" href="https://doi.org/10.3115/v1/w14-3348">DOI</a>.
+              </li>
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="linROUGEPackageAutomatic2004">
+                <span itemprop="author">Chin-Yew Lin</span>. <time datetime="2004" itemprop="datePublished">July 2004</time>. "<span itemprop="name">ROUGE: A Package for Automatic Evaluation of Summaries</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Text Summarization Branches Out</i></span>, 74–81. Barcelona, Spain: Association for Computational Linguistics. <a itemprop="sameAs" href="https://aclanthology.org/W04-1013">https://aclanthology.org/W04-1013</a>.
               </li>
               <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="cerUniversalSentenceEncoder2018">
                 <span itemprop="author">Daniel Cer, Yinfei Yang, Sheng-yi Kong, Nan Hua, Nicole Limtiaco, Rhomni St John, Noah Constant, et al.</span>. <time datetime="2018" itemprop="datePublished">2018</time>. "<span itemprop="name">Universal Sentence Encoder</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Corr</i></span> abs/1803.11175. <a itemprop="sameAs" href="http://arxiv.org/abs/1803.11175">http://arxiv.org/abs/1803.11175</a>.
               </li>
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="zhangBERTScoreEvaluatingText2020" itemid="doi:10.48550/arXiv.1904.09675">
+                <span itemprop="author">Tianyi Zhang, Varsha Kishore, Felix Wu, Kilian Q. Weinberger, Yoav Artzi</span>. <time datetime="2020" itemprop="datePublished">February 24, 2020</time>. "<span itemprop="name">Bertscore: Evaluating Text Generation with BERT</span>". arXiv. <a itemprop="sameAs" href="https://doi.org/10.48550/arXiv.1904.09675">DOI</a>.
+              </li>
             </ol>
           </div>
           <div class="note-footer">
-            Last changed <a class="u-url" href="https://hugocisneros.com/notes/semantic_similarity/"><time itemprop="datePublished" class="dt-published" datetime="2022-08-03T16:40:00+0200">03/08/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+            Last changed <a class="u-url" href="https://hugocisneros.com/notes/semantic_similarity/"><time itemprop="datePublished" class="dt-published" datetime="2022-08-04T13:42:00+0200">04/08/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
           </div>
         </div>
       </article>

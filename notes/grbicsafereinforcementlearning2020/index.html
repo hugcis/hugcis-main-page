@@ -70,7 +70,12 @@
             </dl>
             <h2 id="summary">Summary</h2>
             <p>In RL an important goal is to find agents that can quickly adapt to changing environments while avoiding unsafe states. However, in deep RL, there is often noise added to explore the action space: this can lead to unsafe part of the state-action space.</p>
-            <p>{{&lt; img src="/img/grbicslide.jpeg" title=“Slide from the Alife talk” width=200 alt=“Slide from the Alife talk” class=“center” &gt;}}</p>
+            <figure>
+              <img src="/ox-hugo/grbicslide.jpeg" alt="Slide from the Alife talk">
+              <figcaption>
+                <p><span class="figure-number">Figure 1:</span> Slide from the Alife talk</p>
+              </figcaption>
+            </figure>
             <p>The meta-learning setting of MAML is adapted to RL, with a policy network learning the policy in a standard way and a “instinctual network” which is fixed for a group of tasks and modulates the regular policy with its own action vector.</p>
             <p>They show results on a navigation tasks with and without hazards and with and without instincts. It seems that instincts makes convergence slower when there are no hazards in the navigation task but allows to reach better fitness in the presence of hazards.</p>
             <h2 id="bibliography">Bibliography</h2>
@@ -80,21 +85,8 @@
               </li>
             </ol>
           </div>
-          <div class="bl-section">
-            <h2>Links to this note</h2>
-            <div class="backlinks">
-              <ul>
-                <li>
-                  <a href="/notes/alife_2020/">ALife 2020</a>
-                </li>
-                <li>
-                  <a href="/notes/grbicsafereinforcementlearning2020/">Notes on: Safe Reinforcement Learning through Meta-learned Instincts by Grbic, D., & Risi, S. (2020)</a>
-                </li>
-              </ul>
-            </div>
-          </div>
           <div class="note-footer">
-            Last changed <a class="u-url" href="https://hugocisneros.com/notes/grbicsafereinforcementlearning2020/"><time itemprop="datePublished" class="dt-published" datetime="2021-03-25T09:57:00+0100">25/03/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+            Last changed <a class="u-url" href="https://hugocisneros.com/notes/grbicsafereinforcementlearning2020/"><time itemprop="datePublished" class="dt-published" datetime="2022-08-04T14:07:00+0200">04/08/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
           </div>
         </div>
       </article>
