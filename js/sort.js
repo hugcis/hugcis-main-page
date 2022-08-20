@@ -1,17 +1,17 @@
 function sort_by_rad(a, b) {
-    let noteGraph = document.getElementsByClassName("note-graph");
-    if (noteGraph.length == 0) {
+    let noteGraph = document.getElementById("note-graph");
+    if (noteGraph == null) {
       return 0;
     }
     let ra = 0.;
     let rb = 0.;
-    let circlea = noteGraph[0].getElementById("circle_" + a.id);
+    let circlea = noteGraph.getElementById("circle_" + a.id);
     if (circlea != null) {
         circlea = circlea.childNodes[0];
         ra = circlea.r.baseVal.value;
     }
 
-    let circleb = noteGraph[0].getElementById("circle_" + b.id);
+    let circleb = noteGraph.getElementById("circle_" + b.id);
     if (circleb != null) {
         circleb = circleb.childNodes[0];
         rb = circleb.r.baseVal.value;

@@ -18,7 +18,7 @@
   <link rel="me" href="https://scholar.social/@hugcis">
   <link rel="me" href="https://github.com/hugcis">
   <meta property="keywords" content="life">
-  <link rel="stylesheet" href="https://hugocisneros.com/main.min.css" media="all" type="text/css">
+  <link rel="stylesheet" href="https://hugocisneros.com/css/style.css">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -27,36 +27,45 @@
   <meta name="theme-color" content="#ffffff">
   <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
   <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
+  <script>
+  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode()
+  </script>
 </head>
 <body>
   <div class="wrapper">
     <header class="header">
-      <nav class="nav">
-        <div class="nav-main">
-          <a href="https://hugocisneros.com/" class="nav-title">Hugo Cisneros</a>
+      <nav>
+        <div class="container flex flex-wrap justify-between items-center mx-auto">
+          <div class="nav-main my-2.5">
+            <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
+          </div><button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
+          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul class="grid grid-flow-col items-center justify-between text-lg my-2.5">
+              <li class="p-2.5 first:pl-0 list-none">
+                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
+              </li>
+              <li class="p-2.5 first:pl-0 list-none">
+                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
+              </li>
+              <li class="p-2.5 first:pl-0 list-none">
+                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
+              </li>
+              <li class="p-2.5 first:pl-0 list-none">
+                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
+              </li>
+              <li class="p-2.5 first:pl-0 list-none">
+                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
+              </li>
+              <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="/img/dark_mode.svg"></button></li>
+            </ul>
+          </div>
         </div>
-        <ul class="nav-links">
-          <li>
-            <a href="/blog/">Blog</a>
-          </li>
-          <li>
-            <a href="/notes/">Notes</a>
-          </li>
-          <li>
-            <a href="/projects/">Projects</a>
-          </li>
-          <li>
-            <a href="/resume/">Resume</a>
-          </li>
-          <li>
-            <a href="/contact/">Contact</a>
-          </li>
-        </ul>
       </nav>
     </header>
-    <main class="content" role="main">
+    <main class="content h-card container mt-2 m-auto leading-loose" role="main">
       <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-        <div class="single-note note-container">
+        <div class="bg-zinc-100 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
           <h1 class="article-title p-name" itemprop="name">Article: What Is an Individual? Biology Seeks Clues in Information Theory.</h1>
           <div class="article-content e-content p-name" itemprop="articleBody">
             <dl>
@@ -109,7 +118,7 @@
               </li>
             </ol>
           </div>
-          <div class="note-footer">
+          <div class="text-center" style="font-variant-caps:all-small-caps">
             Last changed <a class="u-url" href="https://hugocisneros.com/notes/what_is_an_individual_biology_seeks_clues_in_information_theory/"><time itemprop="datePublished" class="dt-published" datetime="2020-08-24T09:17:00+0200">24/08/2020</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
           </div>
         </div>
@@ -120,15 +129,15 @@
       <a href="/notes#what_is_an_individual_biology_seeks_clues_in_information_theory"><b>← Back to Notes</b></a>
       <hr>
     </main>
-    <footer class="footer">
-      <ul class="footer-links">
-        <li>
-          <a class="rss-link" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon" src="/img/RSS.svg" alt="RSS feed icon"></a>
+    <footer class="footer container h-10 text-center">
+      <ul>
+        <li class="inline-block list-none">
+          <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="/img/RSS.svg" alt="RSS feed icon"></a>
         </li>
-        <li>
-          <a href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
+        <li class="before:content-['•'] inline-block">
+          <a class="text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
         </li>
-        <li>© Hugo Cisneros 2022</li>
+        <li class="before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block">© Hugo Cisneros 2022</li>
       </ul>
     </footer>
   </div>

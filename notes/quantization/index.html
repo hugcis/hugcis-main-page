@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
+  <title>Quantization - Hugo Cisneros</title>
+  <meta property="og:title" content="Quantization - Hugo Cisneros">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="/img/main.jpeg">
+  <meta property="og:url" content="https://hugocisneros.com/notes/quantization/">
+  <meta property="og:description" content="Notes about Quantization">
+  <meta name="Description" property="description" content="Notes about Quantization">
+  <link rel="me" href="https://twitter.com/@cisne_hug">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@cisne_hug">
+  <meta name="twitter:creator" content="@cisne_hug">
+  <link rel="me" href="https://scholar.social/@hugcis">
+  <link rel="me" href="https://github.com/hugcis">
+  <meta property="keywords" content="computer science, neural networks">
+  <link rel="stylesheet" href="https://hugocisneros.com/css/style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
+  <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
+  <script>
+  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode()
+  </script>
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <nav>
+        <div class="container flex flex-wrap justify-between items-center mx-auto">
+          <div class="nav-main my-2.5">
+            <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
+          </div><button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
+          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul class="grid grid-flow-col items-center justify-between text-lg my-2.5">
+              <li class="p-2.5 first:pl-0 list-none">
+                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
+              </li>
+              <li class="p-2.5 first:pl-0 list-none">
+                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
+              </li>
+              <li class="p-2.5 first:pl-0 list-none">
+                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
+              </li>
+              <li class="p-2.5 first:pl-0 list-none">
+                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
+              </li>
+              <li class="p-2.5 first:pl-0 list-none">
+                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
+              </li>
+              <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="/img/dark_mode.svg"></button></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="content h-card container mt-2 m-auto leading-loose" role="main">
+      <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="bg-zinc-100 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
+          <h1 class="article-title p-name" itemprop="name">Quantization</h1>
+          <div class="article-content e-content p-name" itemprop="articleBody">
+            <dl>
+              <dt>tags</dt>
+              <dd>
+                <a href="/notes/computer_science/">Computer science</a>, <a href="/notes/neural_networks/">Neural networks</a>
+              </dd>
+            </dl>
+            <h2 id="quantization-of-large-language-models">Quantization of large language models</h2>
+            <p>The LLM.int8() paper (<a href="#dettmersLLMInt88bit2022"><cite itemprop="citation" itemscope itemid="doi:10.48550/arXiv.2208.07339">Dettmers et al. 2022</cite></a>) explains some interesting issues and solutions for quantization of <a href="/notes/transformers/">transformer</a>-based large <a href="/notes/language_modeling/">language models</a>. Notably some <a href="/notes/emergence/">emergent</a> properties arise in these language models. More details in <a href="https://timdettmers.com/2022/08/17/llm-int8-and-emergent-features/">the author’s blog post</a>.</p>
+            <h2 id="bibliography">Bibliography</h2>
+            <ol class="biblio-list">
+              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="dettmersLLMInt88bit2022" itemid="doi:10.48550/arXiv.2208.07339">
+                <span itemprop="author">Tim Dettmers, Mike Lewis, Younes Belkada, Luke Zettlemoyer</span>. <time datetime="2022" itemprop="datePublished">August 15, 2022</time>. "<span itemprop="name">Llm.int8(): 8-bit Matrix Multiplication for Transformers at Scale</span>". arXiv. <a itemprop="sameAs" href="https://doi.org/10.48550/arXiv.2208.07339">DOI</a>.
+              </li>
+            </ol>
+          </div>
+          <div class="text-center" style="font-variant-caps:all-small-caps">
+            Last changed <a class="u-url" href="https://hugocisneros.com/notes/quantization/"><time itemprop="datePublished" class="dt-published" datetime="2022-08-18T11:29:00+0200">18/08/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+          </div>
+        </div>
+      </article>
+      <h3>Comments</h3>
+      <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
+      <section id="isso-thread"></section><br>
+      <a href="/notes#quantization"><b>← Back to Notes</b></a>
+      <hr>
+    </main>
+    <footer class="footer container h-10 text-center">
+      <ul>
+        <li class="inline-block list-none">
+          <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="/img/RSS.svg" alt="RSS feed icon"></a>
+        </li>
+        <li class="before:content-['•'] inline-block">
+          <a class="text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
+        </li>
+        <li class="before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block">© Hugo Cisneros 2022</li>
+      </ul>
+    </footer>
+  </div>
+  <link rel="stylesheet" href="/js/katex/katex.min.css">
+  <script src="/js/katex/katex.min.js"></script> 
+  <script src="/js/katex/contrib/auto-render.min.js"></script> 
+  <script>
+  document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"\\[",right:"\\]",display:!0},{left:"$$",right:"$$",display:!0},{left:"\\begin{equation}",right:"\\end{equation}",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1}]})})
+  </script>
+  <script data-goatcounter="https://stats.hugocisneros.com/count" async src="//stats.hugocisneros.com/count.js"></script>
+</body>
+</html>

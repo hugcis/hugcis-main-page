@@ -134,9 +134,8 @@ d3.json(graph_name).then(function(data) {
         }).strength(0.25));
 
     // Create all the graph elements
-    const svg = d3.select("svg")
+    const svg = d3.select("svg#note-graph")
           .attr('max-width', '60%')
-          .attr('class', 'note-graph')
           .attr("viewBox", [0, 0, width, height]);
 
     const link = svg.append("g")
