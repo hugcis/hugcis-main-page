@@ -28,129 +28,127 @@
   <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
   <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
   <script>
-  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode()
+  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
 </head>
 <body>
-  <div class="wrapper">
-    <header class="header">
-      <nav>
-        <div class="container flex flex-wrap justify-between items-center mx-auto">
-          <div class="nav-main my-2.5">
-            <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
-          </div><button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
-          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul class="grid grid-flow-col items-center justify-between text-lg my-2.5">
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
-              </li>
-              <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="/img/dark_mode.svg"></button></li>
-            </ul>
-          </div>
+  <header class="md:px-0 px-2">
+    <nav>
+      <div class="container flex flex-wrap justify-between items-center mx-auto">
+        <div class="nav-main my-2.5">
+          <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
+        </div><button type="button" onclick="toggleMenu()" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul class="grid md:grid-flow-col items-center justify-between text-lg my-2.5">
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
+            </li>
+            <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="https://hugocisneros.com/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="https://hugocisneros.com/img/dark_mode.svg"></button></li>
+          </ul>
         </div>
-      </nav>
-    </header>
-    <main class="content h-card container mt-2 m-auto leading-loose" role="main">
-      <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-        <div class="bg-zinc-100 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
-          <h1 class="article-title p-name" itemprop="name">Gradient descent for wide two-layer neural networks – I : Global convergence</h1>
-          <div class="article-content e-content p-name" itemprop="articleBody">
-            <dl>
-              <dt>tags</dt>
-              <dd>
-                <a href="/notes/neural_networks/">Neural networks</a>, <a href="/notes/optimization/">Optimization</a>
-              </dd>
-              <dt>authors</dt>
-              <dd>Francis Bach, Lénaïc Chizat</dd>
-              <dt>source</dt>
-              <dd>
-                <a href="https://francisbach.com/gradient-descent-neural-networks-global-convergence/">Francis Bach’s blog</a>
-              </dd>
-            </dl>
-            <p>In the rest, we use the mathematical definition of a neural network from <a href="/notes/neural_networks/">Neural networks</a>.</p>
-            <h2 id="two-layer-neural-network">Two layer neural network</h2>
-            <p>Even simple neural network models are very difficult to analyze. This is primarily due to two difficulties:</p>
-            <ul>
-              <li><strong>Non-linearity</strong>: the problem is typically non-convex, which in general is a bad thing in optimization.</li>
-              <li><strong>Overparametrization</strong>: there are often a lot of parameters, sometimes many more parameters than observations.</li>
-            </ul>
-            <p>Results presented here are actually taking advantage of overparametrization, with \(m\rightarrow \infty\) and two key properties of the problem.</p>
-            <ul>
-              <li><strong>Separability</strong>: The problem can be decomposed in a sum of terms independently parametrized in \(\omega_i = (a_i, b_i)\), with \(h = \frac{1}{m} \sum_{i=1}^m \Phi(\omega_i)\) where \(\Phi : \mathbb{R}^p \rightarrow \mathcal{F}\) and \(\mathcal{F}\) is a space of functions. Here, \(p = d+1\) and \[ \Phi(w)(x) = a (b^\top x)_+. \] This part is only true for two-layer neural networks however.</li>
-              <li><strong>Homogeneity</strong>: ReLU is positively homogeneous and \(\Phi\) is 2-homogeneous, meaning that for \(\omega = (a, b)\), \(\Phi(\lambda\omega) = \lambda^2 \Phi(\omega)\).</li>
-            </ul>
-            <h2 id="infinitely-wide-neural-network">Infinitely wide neural network</h2>
-            <p>The goal is to minimize a functional \(R\) w.r.t function \(h\)</p>
-            <p>\[R(h) = \mathbb{E}_{p(x, y)} \left[ \ell(y, h(x))\right]\]</p>
-            <p>with \(\ell(y, h(x))\) the loss incurred by predicting \(h(x)\) when the true label was \(y\). \(R\) is assumed to be convex in its second argument, like least-square or logistic losses.</p>
-            <p>We re-use the two layer neural network formulation above to obtain</p>
-            <p>\[ G(W) = G(w_1,\dots,w_m) = R \Big( \frac{1}{m} \sum_{i=1}^m \Phi(w_i) \Big), \]</p>
-            <p>which can be seen as the minimization of</p>
-            <p>\[ F(\mu) = R \Big( \int_{\mathbb{R}^p} \Phi(w) d\mu(w) \Big),\]</p>
-            <p>with respect to a probability measure which is a sum of Dirac measures at \(w_i\), \(\mu = \frac{1}{m} \sum_{i = 1}^m \delta(w_i)\).</p>
-            <p>This makes the minimization problem much nicer since the set of measures is convex and \(h = \int_{\mathbb{R}^p} \Phi(w) d\mu(w)\) is linear in \(\mu\). However, because the set of measures is infinite dimensional, the choice of new neurons to minimize \(F\) is very difficult (NP-hard for a threshold activation, polynomial but with very high complexity for ReLU). In practise, SGD is used.</p>
-            <h2 id="gradient-flow">Gradient flow</h2>
-            <p>The <a href="/notes/gradient_flow/">gradient flow</a> is defined by</p>
-            <p>\[ \dot{W} = - m \nabla G(W) \]</p>
-            <p>On a metric space \(\mathcal{X}\), a gradient flow can be defined for a function \(f\) and seen a the limit of taking infinitesimal steps of length \(\gamma\), defining a sequence \((x_k)\)</p>
-            <p>\[ x_{k+1} \in \arg\min_{x\mathcal{x}} f(x) + \dfrac{1}{2\gamma} d(x, x_k)^2 \]</p>
-            <p>The smaller the step, the closer this sequence is to the actual gradient flow.</p>
-            <h3 id="euler-discretization">Euler discretization</h3>
-            <p>In \(\mathbb{R}^d\) and a continuously differentiable \(f\), \(x_{k + 1} = x_k - \gamma f’(x_k) + o(\gamma)\), we simply obtain Euler steps.</p>
-            <h3 id="vector-space-gradient-flows-on-probability-measures">Vector space gradient flows on probability measures</h3>
-            <blockquote>
-              <p>Probability measures are a convex subset of measures with finite total variation, which is equal to the $ℓ_1$-norm between densities when the two probability measures have densities with respect to the same base measure. It is a normed vector space for which we could derive our first type of gradient flow, which can be seen as a continuous version of Frank-Wolfe algorithm, where atoms are added one by one, until convergence.</p>
-            </blockquote>
-            <p>However, the flow of measures cannot be approximated by the set of neurons of the network.</p>
-            <h3 id="wasserstein-gradient-flow-on-probability-measures">Wasserstein gradient flow on probability measures</h3>
-            <p>The Wasserstein distance is directly related to <a href="/notes/optimal_transport/">Optimal transport</a>. For two empirical measures with the same number of points, it is the minimal sum of squared distances between pairs of point over all possible permutations.</p>
-            <p>The Wasserstein gradient flow is written</p>
-            <p>\[ \dot{w}_i = \ – \nabla \Phi(w_i) \nabla R\Big(\int_{\mathbb{R}^p} \Phi d\mu \Big), \]</p>
-            <h2 id="global-convergence">Global convergence</h2>
-            <p>Under two main assumptions (plus additional technical assumptions), if the Wasserstein gradient flow converges to a measure, it has to be the global minimum of the function \(F\) defined above.</p>
-            <p>The two assumptions are:</p>
-            <ul>
-              <li>Homogeneity of \(\Phi: \mathbb{R}^p \rightarrow \mathcal{F}\)</li>
-              <li>$w_i$s are uniformly distributed on the sphere</li>
-            </ul>
-            <p>The authors show on simple examples that for data generated with a neural network with \(m_0 = 5\) neurons. The result above suggest that with large \(m\) a neural network should converge to the original neurons. Surprisingly, relatively small $m$s are already very good at doing that.</p>
-          </div>
-          <div class="text-center" style="font-variant-caps:all-small-caps">
-            Last changed <a class="u-url" href="https://hugocisneros.com/notes/gradient_descent_for_wide_two_layer_neural_networks_i_global_convergence/"><time itemprop="datePublished" class="dt-published" datetime="2020-12-09T14:11:00+0100">09/12/2020</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
-          </div>
+      </div>
+    </nav>
+  </header>
+  <main class="content h-card container mt-2 m-auto leading-loose md:px-0 px-2" role="main">
+    <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+      <div class="bg-zinc-100 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
+        <h1 class="article-title p-name" itemprop="name">Gradient descent for wide two-layer neural networks – I : Global convergence</h1>
+        <div class="article-content e-content p-name" itemprop="articleBody">
+          <dl>
+            <dt>tags</dt>
+            <dd>
+              <a href="/notes/neural_networks/">Neural networks</a>, <a href="/notes/optimization/">Optimization</a>
+            </dd>
+            <dt>authors</dt>
+            <dd>Francis Bach, Lénaïc Chizat</dd>
+            <dt>source</dt>
+            <dd>
+              <a href="https://francisbach.com/gradient-descent-neural-networks-global-convergence/">Francis Bach’s blog</a>
+            </dd>
+          </dl>
+          <p>In the rest, we use the mathematical definition of a neural network from <a href="/notes/neural_networks/">Neural networks</a>.</p>
+          <h2 id="two-layer-neural-network">Two layer neural network</h2>
+          <p>Even simple neural network models are very difficult to analyze. This is primarily due to two difficulties:</p>
+          <ul>
+            <li><strong>Non-linearity</strong>: the problem is typically non-convex, which in general is a bad thing in optimization.</li>
+            <li><strong>Overparametrization</strong>: there are often a lot of parameters, sometimes many more parameters than observations.</li>
+          </ul>
+          <p>Results presented here are actually taking advantage of overparametrization, with \(m\rightarrow \infty\) and two key properties of the problem.</p>
+          <ul>
+            <li><strong>Separability</strong>: The problem can be decomposed in a sum of terms independently parametrized in \(\omega_i = (a_i, b_i)\), with \(h = \frac{1}{m} \sum_{i=1}^m \Phi(\omega_i)\) where \(\Phi : \mathbb{R}^p \rightarrow \mathcal{F}\) and \(\mathcal{F}\) is a space of functions. Here, \(p = d+1\) and \[ \Phi(w)(x) = a (b^\top x)_+. \] This part is only true for two-layer neural networks however.</li>
+            <li><strong>Homogeneity</strong>: ReLU is positively homogeneous and \(\Phi\) is 2-homogeneous, meaning that for \(\omega = (a, b)\), \(\Phi(\lambda\omega) = \lambda^2 \Phi(\omega)\).</li>
+          </ul>
+          <h2 id="infinitely-wide-neural-network">Infinitely wide neural network</h2>
+          <p>The goal is to minimize a functional \(R\) w.r.t function \(h\)</p>
+          <p>\[R(h) = \mathbb{E}_{p(x, y)} \left[ \ell(y, h(x))\right]\]</p>
+          <p>with \(\ell(y, h(x))\) the loss incurred by predicting \(h(x)\) when the true label was \(y\). \(R\) is assumed to be convex in its second argument, like least-square or logistic losses.</p>
+          <p>We re-use the two layer neural network formulation above to obtain</p>
+          <p>\[ G(W) = G(w_1,\dots,w_m) = R \Big( \frac{1}{m} \sum_{i=1}^m \Phi(w_i) \Big), \]</p>
+          <p>which can be seen as the minimization of</p>
+          <p>\[ F(\mu) = R \Big( \int_{\mathbb{R}^p} \Phi(w) d\mu(w) \Big),\]</p>
+          <p>with respect to a probability measure which is a sum of Dirac measures at \(w_i\), \(\mu = \frac{1}{m} \sum_{i = 1}^m \delta(w_i)\).</p>
+          <p>This makes the minimization problem much nicer since the set of measures is convex and \(h = \int_{\mathbb{R}^p} \Phi(w) d\mu(w)\) is linear in \(\mu\). However, because the set of measures is infinite dimensional, the choice of new neurons to minimize \(F\) is very difficult (NP-hard for a threshold activation, polynomial but with very high complexity for ReLU). In practise, SGD is used.</p>
+          <h2 id="gradient-flow">Gradient flow</h2>
+          <p>The <a href="/notes/gradient_flow/">gradient flow</a> is defined by</p>
+          <p>\[ \dot{W} = - m \nabla G(W) \]</p>
+          <p>On a metric space \(\mathcal{X}\), a gradient flow can be defined for a function \(f\) and seen a the limit of taking infinitesimal steps of length \(\gamma\), defining a sequence \((x_k)\)</p>
+          <p>\[ x_{k+1} \in \arg\min_{x\mathcal{x}} f(x) + \dfrac{1}{2\gamma} d(x, x_k)^2 \]</p>
+          <p>The smaller the step, the closer this sequence is to the actual gradient flow.</p>
+          <h3 id="euler-discretization">Euler discretization</h3>
+          <p>In \(\mathbb{R}^d\) and a continuously differentiable \(f\), \(x_{k + 1} = x_k - \gamma f’(x_k) + o(\gamma)\), we simply obtain Euler steps.</p>
+          <h3 id="vector-space-gradient-flows-on-probability-measures">Vector space gradient flows on probability measures</h3>
+          <blockquote>
+            <p>Probability measures are a convex subset of measures with finite total variation, which is equal to the $ℓ_1$-norm between densities when the two probability measures have densities with respect to the same base measure. It is a normed vector space for which we could derive our first type of gradient flow, which can be seen as a continuous version of Frank-Wolfe algorithm, where atoms are added one by one, until convergence.</p>
+          </blockquote>
+          <p>However, the flow of measures cannot be approximated by the set of neurons of the network.</p>
+          <h3 id="wasserstein-gradient-flow-on-probability-measures">Wasserstein gradient flow on probability measures</h3>
+          <p>The Wasserstein distance is directly related to <a href="/notes/optimal_transport/">Optimal transport</a>. For two empirical measures with the same number of points, it is the minimal sum of squared distances between pairs of point over all possible permutations.</p>
+          <p>The Wasserstein gradient flow is written</p>
+          <p>\[ \dot{w}_i = \ – \nabla \Phi(w_i) \nabla R\Big(\int_{\mathbb{R}^p} \Phi d\mu \Big), \]</p>
+          <h2 id="global-convergence">Global convergence</h2>
+          <p>Under two main assumptions (plus additional technical assumptions), if the Wasserstein gradient flow converges to a measure, it has to be the global minimum of the function \(F\) defined above.</p>
+          <p>The two assumptions are:</p>
+          <ul>
+            <li>Homogeneity of \(\Phi: \mathbb{R}^p \rightarrow \mathcal{F}\)</li>
+            <li>$w_i$s are uniformly distributed on the sphere</li>
+          </ul>
+          <p>The authors show on simple examples that for data generated with a neural network with \(m_0 = 5\) neurons. The result above suggest that with large \(m\) a neural network should converge to the original neurons. Surprisingly, relatively small $m$s are already very good at doing that.</p>
         </div>
-      </article>
-      <h3>Comments</h3>
-      <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
-      <section id="isso-thread"></section><br>
-      <a href="/notes#gradient_descent_for_wide_two_layer_neural_networks_i_global_convergence"><b>← Back to Notes</b></a>
-      <hr>
-    </main>
-    <footer class="footer container h-10 text-center">
-      <ul>
-        <li class="inline-block list-none">
-          <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="/img/RSS.svg" alt="RSS feed icon"></a>
-        </li>
-        <li class="before:content-['•'] inline-block">
-          <a class="text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
-        </li>
-        <li class="before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block">© Hugo Cisneros 2022</li>
-      </ul>
-    </footer>
-  </div>
+        <div class="text-center" style="font-variant-caps:all-small-caps">
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/gradient_descent_for_wide_two_layer_neural_networks_i_global_convergence/"><time itemprop="datePublished" class="dt-published" datetime="2020-12-09T14:11:00+0100">09/12/2020</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+        </div>
+      </div>
+    </article>
+    <h3>Comments</h3>
+    <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
+    <section id="isso-thread"></section><br>
+    <a href="/notes#gradient_descent_for_wide_two_layer_neural_networks_i_global_convergence"><b>← Back to Notes</b></a>
+    <hr>
+  </main>
+  <footer class="footer container h-10 text-center">
+    <ul class="pl-0">
+      <li class="first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="https://hugocisneros.com/img/RSS.svg" alt="RSS feed icon"></a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="ml-2 text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block list-none"><span class="ml-2">© Hugo Cisneros 2022</span></li>
+    </ul>
+  </footer>
   <link rel="stylesheet" href="/js/katex/katex.min.css">
   <script src="/js/katex/katex.min.js"></script> 
   <script src="/js/katex/contrib/auto-render.min.js"></script> 

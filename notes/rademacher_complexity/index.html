@@ -28,89 +28,87 @@
   <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
   <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
   <script>
-  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode()
+  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
 </head>
 <body>
-  <div class="wrapper">
-    <header class="header">
-      <nav>
-        <div class="container flex flex-wrap justify-between items-center mx-auto">
-          <div class="nav-main my-2.5">
-            <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
-          </div><button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
-          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul class="grid grid-flow-col items-center justify-between text-lg my-2.5">
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
-              </li>
-              <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="/img/dark_mode.svg"></button></li>
-            </ul>
-          </div>
+  <header class="md:px-0 px-2">
+    <nav>
+      <div class="container flex flex-wrap justify-between items-center mx-auto">
+        <div class="nav-main my-2.5">
+          <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
+        </div><button type="button" onclick="toggleMenu()" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul class="grid md:grid-flow-col items-center justify-between text-lg my-2.5">
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
+            </li>
+            <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="https://hugocisneros.com/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="https://hugocisneros.com/img/dark_mode.svg"></button></li>
+          </ul>
         </div>
-      </nav>
-    </header>
-    <main class="content h-card container mt-2 m-auto leading-loose" role="main">
-      <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-        <div class="bg-zinc-100 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
-          <h1 class="article-title p-name" itemprop="name">Rademacher complexity</h1>
-          <div class="article-content e-content p-name" itemprop="articleBody">
-            <dl>
-              <dt>tags</dt>
-              <dd>
-                <a href="/notes/machine_learning/">Machine learning</a>
-              </dd>
-            </dl>
-            <h2 id="definition">Definition</h2>
-            <p>Given a function class \(f_w\) and random iid \(y_\mu \in \{\pm 1\}\), the Rademacher complexity is \[ \mathscr{R}_n = \mathbb{E}_{y, X }\text{sup}_w \frac{1}{n} \sum_{\mu = 1}^n y_\mu f_w(X_\mu) \]</p>
-            <p>It measures how well a function can approximate a dataset with random labels.</p>
-            <p>(<a href="#bartlettRademacherGaussianComplexities2002"><cite itemprop="citation" itemscope itemid="key:bartlettRademacherGaussianComplexities2002">Bartlett, Mendelson 2002</cite></a>) shows bounds for the Rademacher complexity in terms of \(\ell_1\) norm bounds on the weights of the network. However, (<a href="#zhangUnderstandingDeepLearning2017"><cite itemprop="citation" itemscope itemid="key:zhangUnderstandingDeepLearning2017">Zhang et al. 2017</cite></a>) showed that these bound are mostly void as deep neural networks have no trouble fitting random labels but still generalize relatively well.</p>
-            <h2 id="bibliography">Bibliography</h2>
-            <ol class="biblio-list">
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="bartlettRademacherGaussianComplexities2002">
-                <span itemprop="author">Peter L. Bartlett, Shahar Mendelson</span>. <time datetime="2002" itemprop="datePublished">2002</time>. "<span itemprop="name">Rademacher and Gaussian Complexities: Risk Bounds and Structural Results</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">J. Mach. Learn. Res.</i></span> 3:463–82. <a itemprop="sameAs" href="http://jmlr.org/papers/v3/bartlett02a.html">http://jmlr.org/papers/v3/bartlett02a.html</a>.
-              </li>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="zhangUnderstandingDeepLearning2017">
-                <span itemprop="author">Chiyuan Zhang, Samy Bengio, Moritz Hardt, Benjamin Recht, Oriol Vinyals</span>. <time datetime="2017" itemprop="datePublished">2017</time>. "<span itemprop="name">Understanding Deep Learning Requires Rethinking Generalization</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">5th International Conference on Learning Representations, ICLR 2017, Toulon, France, April 24-26, 2017, Conference Track Proceedings</i></span>. OpenReview.net. <a itemprop="sameAs" href="https://openreview.net/forum?id=Sy8gdB9xx">https://openreview.net/forum?id=Sy8gdB9xx</a>.
-              </li>
-            </ol>
-          </div>
-          <div class="text-center" style="font-variant-caps:all-small-caps">
-            Last changed <a class="u-url" href="https://hugocisneros.com/notes/rademacher_complexity/"><time itemprop="datePublished" class="dt-published" datetime="2022-03-07T16:44:00+0100">07/03/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
-          </div>
+      </div>
+    </nav>
+  </header>
+  <main class="content h-card container mt-2 m-auto leading-loose md:px-0 px-2" role="main">
+    <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+      <div class="bg-zinc-100 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
+        <h1 class="article-title p-name" itemprop="name">Rademacher complexity</h1>
+        <div class="article-content e-content p-name" itemprop="articleBody">
+          <dl>
+            <dt>tags</dt>
+            <dd>
+              <a href="/notes/machine_learning/">Machine learning</a>
+            </dd>
+          </dl>
+          <h2 id="definition">Definition</h2>
+          <p>Given a function class \(f_w\) and random iid \(y_\mu \in \{\pm 1\}\), the Rademacher complexity is \[ \mathscr{R}_n = \mathbb{E}_{y, X }\text{sup}_w \frac{1}{n} \sum_{\mu = 1}^n y_\mu f_w(X_\mu) \]</p>
+          <p>It measures how well a function can approximate a dataset with random labels.</p>
+          <p>(<a href="#bartlettRademacherGaussianComplexities2002"><cite itemprop="citation" itemscope itemid="key:bartlettRademacherGaussianComplexities2002">Bartlett, Mendelson 2002</cite></a>) shows bounds for the Rademacher complexity in terms of \(\ell_1\) norm bounds on the weights of the network. However, (<a href="#zhangUnderstandingDeepLearning2017"><cite itemprop="citation" itemscope itemid="key:zhangUnderstandingDeepLearning2017">Zhang et al. 2017</cite></a>) showed that these bound are mostly void as deep neural networks have no trouble fitting random labels but still generalize relatively well.</p>
+          <h2 id="bibliography">Bibliography</h2>
+          <ol class="biblio-list">
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="bartlettRademacherGaussianComplexities2002">
+              <span itemprop="author">Peter L. Bartlett, Shahar Mendelson</span>. <time datetime="2002" itemprop="datePublished">2002</time>. "<span itemprop="name">Rademacher and Gaussian Complexities: Risk Bounds and Structural Results</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">J. Mach. Learn. Res.</i></span> 3:463–82. <a itemprop="sameAs" href="http://jmlr.org/papers/v3/bartlett02a.html">http://jmlr.org/papers/v3/bartlett02a.html</a>.
+            </li>
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="zhangUnderstandingDeepLearning2017">
+              <span itemprop="author">Chiyuan Zhang, Samy Bengio, Moritz Hardt, Benjamin Recht, Oriol Vinyals</span>. <time datetime="2017" itemprop="datePublished">2017</time>. "<span itemprop="name">Understanding Deep Learning Requires Rethinking Generalization</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">5th International Conference on Learning Representations, ICLR 2017, Toulon, France, April 24-26, 2017, Conference Track Proceedings</i></span>. OpenReview.net. <a itemprop="sameAs" href="https://openreview.net/forum?id=Sy8gdB9xx">https://openreview.net/forum?id=Sy8gdB9xx</a>.
+            </li>
+          </ol>
         </div>
-      </article>
-      <h3>Comments</h3>
-      <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
-      <section id="isso-thread"></section><br>
-      <a href="/notes#rademacher_complexity"><b>← Back to Notes</b></a>
-      <hr>
-    </main>
-    <footer class="footer container h-10 text-center">
-      <ul>
-        <li class="inline-block list-none">
-          <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="/img/RSS.svg" alt="RSS feed icon"></a>
-        </li>
-        <li class="before:content-['•'] inline-block">
-          <a class="text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
-        </li>
-        <li class="before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block">© Hugo Cisneros 2022</li>
-      </ul>
-    </footer>
-  </div>
+        <div class="text-center" style="font-variant-caps:all-small-caps">
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/rademacher_complexity/"><time itemprop="datePublished" class="dt-published" datetime="2022-03-07T16:44:00+0100">07/03/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+        </div>
+      </div>
+    </article>
+    <h3>Comments</h3>
+    <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
+    <section id="isso-thread"></section><br>
+    <a href="/notes#rademacher_complexity"><b>← Back to Notes</b></a>
+    <hr>
+  </main>
+  <footer class="footer container h-10 text-center">
+    <ul class="pl-0">
+      <li class="first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="https://hugocisneros.com/img/RSS.svg" alt="RSS feed icon"></a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="ml-2 text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block list-none"><span class="ml-2">© Hugo Cisneros 2022</span></li>
+    </ul>
+  </footer>
   <link rel="stylesheet" href="/js/katex/katex.min.css">
   <script src="/js/katex/katex.min.js"></script> 
   <script src="/js/katex/contrib/auto-render.min.js"></script> 

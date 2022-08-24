@@ -28,105 +28,103 @@
   <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
   <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
   <script>
-  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode()
+  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
 </head>
 <body>
-  <div class="wrapper">
-    <header class="header">
-      <nav>
-        <div class="container flex flex-wrap justify-between items-center mx-auto">
-          <div class="nav-main my-2.5">
-            <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
-          </div><button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
-          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul class="grid grid-flow-col items-center justify-between text-lg my-2.5">
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
-              </li>
-              <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="/img/dark_mode.svg"></button></li>
-            </ul>
-          </div>
+  <header class="md:px-0 px-2">
+    <nav>
+      <div class="container flex flex-wrap justify-between items-center mx-auto">
+        <div class="nav-main my-2.5">
+          <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
+        </div><button type="button" onclick="toggleMenu()" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul class="grid md:grid-flow-col items-center justify-between text-lg my-2.5">
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
+            </li>
+            <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="https://hugocisneros.com/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="https://hugocisneros.com/img/dark_mode.svg"></button></li>
+          </ul>
         </div>
-      </nav>
-    </header>
-    <main class="content h-card container mt-2 m-auto leading-loose" role="main">
-      <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-        <div class="bg-zinc-100 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
-          <h1 class="article-title p-name" itemprop="name">Climbing towards NLU: On Meaning, Form, and Understanding in the Age of Data by Bender, E. M., & Koller, A. (2020)</h1>
-          <div class="article-content e-content p-name" itemprop="articleBody">
-            <dl>
-              <dt>source</dt>
-              <dd>
-                (<a href="#benderClimbingNLUMeaning2020"><cite itemprop="citation" itemscope itemid="key:benderClimbingNLUMeaning2020">Bender, Koller 2020</cite></a>)
-              </dd>
-              <dt>tags</dt>
-              <dd>
-                <a href="/notes/nlp/">NLP</a>, <a href="/notes/artificial_intelligence/">Artificial Intelligence</a>, <a href="/notes/evaluating_nlp/">Evaluating NLP</a>
-              </dd>
-            </dl>
-            <h2 id="summary">Summary</h2>
-            <p>The main point of the article could be summarized like so:</p>
-            <blockquote>
-              <p>We argue that <em>the language modeling task, because it only uses form as training data, cannot in principle lead to learning of meaning</em>. We take the term <em>language model</em> to refer to any system trained only on the task of string prediction, whether it operates over characters, words or sentences, and sequentially or not. We take (linguistic) <em>meaning</em> to be the relation between a linguistic form and communicative intent.</p>
-            </blockquote>
-            <p>Several NLP papers (cited in the text) use overly confident claims about <a href="/notes/language_modeling/">language models</a> <em>understanding</em> a piece of text or knowledge.</p>
-            <p>The authors formalize <em>meaning</em> with a set of pairs \(M \subseteq E \times I\), \((e, i)\) representing natural language expressions and their <em>communicative intent</em>. In this framework, <em>understanding</em> means being able to retrieve \(i\) when given \(e\).</p>
-            <p>They also mention the concept of conventional meaning, i.e. the communicative potential \(s\) of a form \(e\) which is constant across contexts of use of the form \(e\).</p>
-            <p>When communicating, a speaker has a prior intent \(i\), and has to choose a form \(e\) with the right potential \(s\) that fits \(i\). The argument of the paper is that there isn’t enough signal in a text corpus to learn the above relations in \(M\).</p>
-            <p>A nice example is the <a href="/notes/chinese_room_experiment/">Chinese room experiment</a>, wherein a person is tasked with answering questions in Chinese by consulting a library of Chinese books according to fixed rules. Such a person would <em>look</em> intelligent without having any actual understanding of Chinese.</p>
-            <p>A nice example is the problem of learning language models on <a href="/notes/programming_languages/">Programming languages</a>. No matter how good a LM is at learning the semantics of the language, it has no way of learning the relations between program inputs and outputs.</p>
-            <p>The authors provide more example why human-language acquisition is fundamentally different from the flawed language models.</p>
-            <p>A good LM might learn to give meaningful answers, but will need to store infinite amount of data and will ultimately fail at dealing with the ever evolving set of forms humans use.</p>
-            <h2 id="comments">Comments</h2>
-            <p>Regarding the programming language example, one could argue that by learning the semantics of the language on a large corpus, a LM will eventually have to learn inputs/outputs mapping for intermediate functions in the larger programs, and could build understanding from these small building blocks. However, no explicit mechanisms in current language models allow for combining and re-using building blocks like that.</p>
-            <p>This is the same with language models, as long as we use <a href="/notes/neural_networks/">neural networks</a> trained with <a href="/notes/gradient_descent/">Gradient descent</a>, it will probably never have this power humans have to re-use and create forms to manipulate meaning and deal with a changing world. In a way GPT-3 (<a href="#brownLanguageModelsAre2020"><cite itemprop="citation" itemscope itemid="key:brownLanguageModelsAre2020">Brown et al. 2020</cite></a>) has showed that we can get to a pretty impressive point with sentence prediction alone provided we have enough storage.</p>
-            <h2 id="bibliography">Bibliography</h2>
-            <ol class="biblio-list">
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="benderClimbingNLUMeaning2020">
-                <span itemprop="author">Emily M. Bender, Alexander Koller</span>. <time datetime="2020" itemprop="datePublished">July 2020</time>. "<span itemprop="name">Climbing Towards NLU: On Meaning, Form, and Understanding in the Age of Data</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics</i></span>, 5185–98. Online: Association for Computational Linguistics. <a itemprop="sameAs" href="https://www.aclweb.org/anthology/2020.acl-main.463">https://www.aclweb.org/anthology/2020.acl-main.463</a>.
-              </li>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="brownLanguageModelsAre2020">
-                <span itemprop="author">Tom B. Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared Kaplan, Prafulla Dhariwal, Arvind Neelakantan, et al.</span>. <time datetime="2020" itemprop="datePublished">June 4, 2020</time>. "<span itemprop="name">Language Models Are Few-shot Learners</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:2005.14165 [cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2005.14165">http://arxiv.org/abs/2005.14165</a>.
-              </li>
-            </ol>
-          </div>
-          <div class="text-center" style="font-variant-caps:all-small-caps">
-            Last changed <a class="u-url" href="https://hugocisneros.com/notes/benderclimbingnlumeaning2020/"><time itemprop="datePublished" class="dt-published" datetime="2021-03-25T09:57:00+0100">25/03/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
-          </div>
+      </div>
+    </nav>
+  </header>
+  <main class="content h-card container mt-2 m-auto leading-loose md:px-0 px-2" role="main">
+    <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+      <div class="bg-zinc-100 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
+        <h1 class="article-title p-name" itemprop="name">Climbing towards NLU: On Meaning, Form, and Understanding in the Age of Data by Bender, E. M., & Koller, A. (2020)</h1>
+        <div class="article-content e-content p-name" itemprop="articleBody">
+          <dl>
+            <dt>source</dt>
+            <dd>
+              (<a href="#benderClimbingNLUMeaning2020"><cite itemprop="citation" itemscope itemid="key:benderClimbingNLUMeaning2020">Bender, Koller 2020</cite></a>)
+            </dd>
+            <dt>tags</dt>
+            <dd>
+              <a href="/notes/nlp/">NLP</a>, <a href="/notes/artificial_intelligence/">Artificial Intelligence</a>, <a href="/notes/evaluating_nlp/">Evaluating NLP</a>
+            </dd>
+          </dl>
+          <h2 id="summary">Summary</h2>
+          <p>The main point of the article could be summarized like so:</p>
+          <blockquote>
+            <p>We argue that <em>the language modeling task, because it only uses form as training data, cannot in principle lead to learning of meaning</em>. We take the term <em>language model</em> to refer to any system trained only on the task of string prediction, whether it operates over characters, words or sentences, and sequentially or not. We take (linguistic) <em>meaning</em> to be the relation between a linguistic form and communicative intent.</p>
+          </blockquote>
+          <p>Several NLP papers (cited in the text) use overly confident claims about <a href="/notes/language_modeling/">language models</a> <em>understanding</em> a piece of text or knowledge.</p>
+          <p>The authors formalize <em>meaning</em> with a set of pairs \(M \subseteq E \times I\), \((e, i)\) representing natural language expressions and their <em>communicative intent</em>. In this framework, <em>understanding</em> means being able to retrieve \(i\) when given \(e\).</p>
+          <p>They also mention the concept of conventional meaning, i.e. the communicative potential \(s\) of a form \(e\) which is constant across contexts of use of the form \(e\).</p>
+          <p>When communicating, a speaker has a prior intent \(i\), and has to choose a form \(e\) with the right potential \(s\) that fits \(i\). The argument of the paper is that there isn’t enough signal in a text corpus to learn the above relations in \(M\).</p>
+          <p>A nice example is the <a href="/notes/chinese_room_experiment/">Chinese room experiment</a>, wherein a person is tasked with answering questions in Chinese by consulting a library of Chinese books according to fixed rules. Such a person would <em>look</em> intelligent without having any actual understanding of Chinese.</p>
+          <p>A nice example is the problem of learning language models on <a href="/notes/programming_languages/">Programming languages</a>. No matter how good a LM is at learning the semantics of the language, it has no way of learning the relations between program inputs and outputs.</p>
+          <p>The authors provide more example why human-language acquisition is fundamentally different from the flawed language models.</p>
+          <p>A good LM might learn to give meaningful answers, but will need to store infinite amount of data and will ultimately fail at dealing with the ever evolving set of forms humans use.</p>
+          <h2 id="comments">Comments</h2>
+          <p>Regarding the programming language example, one could argue that by learning the semantics of the language on a large corpus, a LM will eventually have to learn inputs/outputs mapping for intermediate functions in the larger programs, and could build understanding from these small building blocks. However, no explicit mechanisms in current language models allow for combining and re-using building blocks like that.</p>
+          <p>This is the same with language models, as long as we use <a href="/notes/neural_networks/">neural networks</a> trained with <a href="/notes/gradient_descent/">Gradient descent</a>, it will probably never have this power humans have to re-use and create forms to manipulate meaning and deal with a changing world. In a way GPT-3 (<a href="#brownLanguageModelsAre2020"><cite itemprop="citation" itemscope itemid="key:brownLanguageModelsAre2020">Brown et al. 2020</cite></a>) has showed that we can get to a pretty impressive point with sentence prediction alone provided we have enough storage.</p>
+          <h2 id="bibliography">Bibliography</h2>
+          <ol class="biblio-list">
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="benderClimbingNLUMeaning2020">
+              <span itemprop="author">Emily M. Bender, Alexander Koller</span>. <time datetime="2020" itemprop="datePublished">July 2020</time>. "<span itemprop="name">Climbing Towards NLU: On Meaning, Form, and Understanding in the Age of Data</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics</i></span>, 5185–98. Online: Association for Computational Linguistics. <a itemprop="sameAs" href="https://www.aclweb.org/anthology/2020.acl-main.463">https://www.aclweb.org/anthology/2020.acl-main.463</a>.
+            </li>
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="brownLanguageModelsAre2020">
+              <span itemprop="author">Tom B. Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared Kaplan, Prafulla Dhariwal, Arvind Neelakantan, et al.</span>. <time datetime="2020" itemprop="datePublished">June 4, 2020</time>. "<span itemprop="name">Language Models Are Few-shot Learners</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:2005.14165 [cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2005.14165">http://arxiv.org/abs/2005.14165</a>.
+            </li>
+          </ol>
         </div>
-      </article>
-      <h3>Comments</h3>
-      <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
-      <section id="isso-thread"></section><br>
-      <a href="/notes#benderclimbingnlumeaning2020"><b>← Back to Notes</b></a>
-      <hr>
-    </main>
-    <footer class="footer container h-10 text-center">
-      <ul>
-        <li class="inline-block list-none">
-          <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="/img/RSS.svg" alt="RSS feed icon"></a>
-        </li>
-        <li class="before:content-['•'] inline-block">
-          <a class="text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
-        </li>
-        <li class="before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block">© Hugo Cisneros 2022</li>
-      </ul>
-    </footer>
-  </div>
+        <div class="text-center" style="font-variant-caps:all-small-caps">
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/benderclimbingnlumeaning2020/"><time itemprop="datePublished" class="dt-published" datetime="2021-03-25T09:57:00+0100">25/03/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+        </div>
+      </div>
+    </article>
+    <h3>Comments</h3>
+    <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
+    <section id="isso-thread"></section><br>
+    <a href="/notes#benderclimbingnlumeaning2020"><b>← Back to Notes</b></a>
+    <hr>
+  </main>
+  <footer class="footer container h-10 text-center">
+    <ul class="pl-0">
+      <li class="first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="https://hugocisneros.com/img/RSS.svg" alt="RSS feed icon"></a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="ml-2 text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block list-none"><span class="ml-2">© Hugo Cisneros 2022</span></li>
+    </ul>
+  </footer>
   <link rel="stylesheet" href="/js/katex/katex.min.css">
   <script src="/js/katex/katex.min.js"></script> 
   <script src="/js/katex/contrib/auto-render.min.js"></script> 

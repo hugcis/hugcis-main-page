@@ -28,162 +28,160 @@
   <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
   <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
   <script>
-  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode()
+  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
 </head>
 <body>
-  <div class="wrapper">
-    <header class="header">
-      <nav>
-        <div class="container flex flex-wrap justify-between items-center mx-auto">
-          <div class="nav-main my-2.5">
-            <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
-          </div><button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
-          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul class="grid grid-flow-col items-center justify-between text-lg my-2.5">
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
+  <header class="md:px-0 px-2">
+    <nav>
+      <div class="container flex flex-wrap justify-between items-center mx-auto">
+        <div class="nav-main my-2.5">
+          <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
+        </div><button type="button" onclick="toggleMenu()" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul class="grid md:grid-flow-col items-center justify-between text-lg my-2.5">
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
+            </li>
+            <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="https://hugocisneros.com/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="https://hugocisneros.com/img/dark_mode.svg"></button></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="content h-card container mt-2 m-auto leading-loose md:px-0 px-2" role="main">
+    <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+      <div class="bg-zinc-100 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
+        <h1 class="article-title p-name" itemprop="name">Talk: Alife 2020 keynote Sara Walker - The Natural History of Information</h1>
+        <div class="article-content e-content p-name" itemprop="articleBody">
+          <dl>
+            <dt>tags</dt>
+            <dd>
+              <a href="/notes/life/">Life</a>
+            </dd>
+          </dl>
+          <h2 id="the-problem-of-defining-life">The problem of defining life</h2>
+          <p>Definitions of life have always been elusive.</p>
+          <blockquote>
+            <p>Life does not exist.</p>
+          </blockquote>
+          <p>— Andrew Ellington (American Chemical Society 2012).</p>
+          <blockquote>
+            <p>as one focuses experimentally on any of the ‘defining’ properties of ’life’, the sharp boundary seems to blur, splitting into finer and finer sub-divisions</p>
+          </blockquote>
+          <p>— Jack Szostak (J. Biomolecular Struc. Dyn. 29.4 (2012) : 599-600.)</p>
+          <p>When looking at matter down to the chemical level, it’s hard to tell what is fundamentally different between living and non-living matter. Reductionist approaches to understanding life don’t work.</p>
+          <p>Life might actually not exist physically, meaning it has nothing to do with measurable properties of matter, but rather:</p>
+          <blockquote>
+            <p>“Life” is the software of reality.</p>
+          </blockquote>
+          <h2 id="what-is-life">What is life?</h2>
+          <blockquote>
+            <p>how can the events in space and time which take place *within the spatial boundary of a living organism be accounted for by Physics and Chemistry?</p>
+          </blockquote>
+          <blockquote>
+            <p>… living matter, while not eluding the “laws of physics” as established up to date, is likely to involve “other laws of physics” hitherto unknown</p>
+          </blockquote>
+          <p>— E. Schrödinger. <em>What is life?</em> Cambridge University Press, 1944.</p>
+          <p>In many simulations of life, and in biology, we always think of life as structures, emergent patterns. It might be we are unable to discover life because we look for things like cellular structures and patterns. But we are not really understanding how living systems are processing information around them and involved in constructing those patterns.</p>
+          <h3 id="example-emergent-processes">Example emergent processes</h3>
+          <p>Walker takes the example of satellites launched in space and the conditions of our Universe for these things to happen. We can list several:</p>
+          <ul>
+            <li>We need a technological (or intelligent?) civilization</li>
+            <li>It has to understand the laws of Physics</li>
+            <li>Etc.</li>
+          </ul>
+          <p>Such a civilization can launch satellites because the information exists in the physical space.</p>
+          <p>Another example is the complex heavy elements that we only know about because of technology.</p>
+          <h3 id="life-is-what-life-alive">Life is what? Life ≠ alive</h3>
+          <p>This is what Walker thinks life is about: A process with the ability to do things with the Universe. Therefore, this notion is different from being “alive” in the traditional sense.</p>
+          <p>A bottle or a computer are certainly examples of life. They depend on an evolutionary process which has led us here and enabled us to construct such objects. Alive things are actively involved in information processing and constructing the reality around them.</p>
+          <h3 id="a-transition-between-non-living-and-living-physics">A transition between non-living and living physics</h3>
+          <p>There is a threshold in the kind of objects one can obtain. In chemical space, this corresponds to the boundary between object spontaneous appearing and object that needed active processing by an “alive” being to exist since they couldn’t have been created through random search or random assembly of modules.</p>
+          <p>With this new approach, the quote saying that life is the software of reality becomes slightly clearer: it is the software that runs on top of reality and actively modifies it in the process, creating what we observe as “living” systems.</p>
+          <h2 id="towards-quantifying-life-abstracting-universal-biochemistry">Towards quantifying life - Abstracting universal biochemistry</h2>
+          <blockquote>
+            <p>Life is a process where information structures matter across space and time.</p>
+          </blockquote>
+          <p>So far, people have been mostly focusing on the “building blocks” of life. With life on earth, everything shares a common basic biochemistry. General building blocks of life are understood with this sample 1 bias of earth’s biochemistry. Life emerging from ALife systems might work very differently.</p>
+          <p>Universality:</p>
+          <ul>
+            <li>In biochemistry this means that all life on earth shares a sort of common basic details</li>
+            <li>In physics it is more about some macroscopic properties of a system. If very different systems share a common macro-property, the property is considered universal.</li>
+          </ul>
+          <h3 id="can-we-find-a-universality-class-for-life">Can we find a universality class for life?</h3>
+          <p>We can think of information processing as a general property we can study. Walker focuses on the restricted problem of finding a universality class in patterns that emerge from biochemistry alone.</p>
+          <h3 id="life-in-the-chemical-space">Life in the chemical space</h3>
+          <p>The chemical space is extremely large (possible combinations of molecules). But because it is so large, there are a lot of chemical elements that require information about how to make them for them to have appeared in the first place and for the Universe to produce them in any abundance. For example, large proteins couldn’t have emerged through random processes.</p>
+          <h3 id="earth-as-a-large-ensemble-of-biochemical-networks">Earth as a large ensemble of biochemical networks</h3>
+          <p>When looking at Earth, organisms can be seen as partitions of the global biochemistry. The cell is probably not the right boundary to be looking at because cells are interacting through chemical reactions with an environment and modifying it, thereby defining a larger “network” that can be defined as living.</p>
+          <h3 id="measuring-scaling-behavior">Measuring scaling behavior</h3>
+          <p>Walker’s group sampled ensembles of biochemical networks that exist across different scales of the biosphere(species, ecosystems, biosphere) and tried to look for global patterns and universality classes.</p>
+          <p>The experiments were based on comparing properties of these networks and scaling properties against random chemistry examples.</p>
+          <p>It seems from these experiments that there are well behaved scaling laws that work across individuals, ecosystems and the biosphere. It also seems that they are significantly different from randomly sampled, similarly sized chemical networks. However, the behavior was reproduced with frequency based sampling.</p>
+          <p>There is a large fraction of reactions and compounds that is shared across all domains of life on earth.</p>
+          <h2 id="coarse-graining-to-find-universal-properties-of-chemical-reactions">Coarse-graining to find universal properties of chemical reactions</h2>
+          <p>The idea here is that although all living things might not share the same chemistry as Earth’s, there might be patterns and regularities that are common at higher coarse-grained scales.</p>
+          <p>Enzyme commission numbers is a readily available classification of chemical reactions that is hierarchical.</p>
+          <figure>
+            <img src="/ox-hugo/walkerslide.jpg" alt="Slide from Sara Walker's talk">
+            <figcaption>
+              <p><span class="figure-number">Figure 1:</span> Slide from Sara Walker’s talk</p>
+            </figcaption>
+          </figure>
+          <p>At the coarsest level (EC1, EC2, etc.), more or less regular scaling behavior is observed for each of them across multiple life scales.</p>
+          <p>EC1 has very consistent super-linear scaling laws that can be fitted to it and EC6 has sub-linear scaling.</p>
+          <p>Universality classes (scaling behavior) observed are not explained by the presence of these enzymes in all biochemical reactions.</p>
+          <p>It is likely that these neat scaling behaviors cannot exist at the smallest level of EC. What scale does universality appear at and what does this mean for life and emergence?</p>
+          <p>At the second level (ECx.x), the scaling behavior is still very much present.</p>
+          <p>Scaling behavior has also been observed in % of chiral molecules within networks.</p>
+          <p>Models of LUCA also fit the scaling behavior previously mentioned.</p>
+        </div>
+        <div class="bl-section">
+          <h2>Links to this note</h2>
+          <div class="backlinks">
+            <ul>
+              <li>
+                <a href="/notes/alife_2020/">ALife 2020</a>
               </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
-              </li>
-              <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="/img/dark_mode.svg"></button></li>
             </ul>
           </div>
         </div>
-      </nav>
-    </header>
-    <main class="content h-card container mt-2 m-auto leading-loose" role="main">
-      <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-        <div class="bg-zinc-100 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
-          <h1 class="article-title p-name" itemprop="name">Talk: Alife 2020 keynote Sara Walker - The Natural History of Information</h1>
-          <div class="article-content e-content p-name" itemprop="articleBody">
-            <dl>
-              <dt>tags</dt>
-              <dd>
-                <a href="/notes/life/">Life</a>
-              </dd>
-            </dl>
-            <h2 id="the-problem-of-defining-life">The problem of defining life</h2>
-            <p>Definitions of life have always been elusive.</p>
-            <blockquote>
-              <p>Life does not exist.</p>
-            </blockquote>
-            <p>— Andrew Ellington (American Chemical Society 2012).</p>
-            <blockquote>
-              <p>as one focuses experimentally on any of the ‘defining’ properties of ’life’, the sharp boundary seems to blur, splitting into finer and finer sub-divisions</p>
-            </blockquote>
-            <p>— Jack Szostak (J. Biomolecular Struc. Dyn. 29.4 (2012) : 599-600.)</p>
-            <p>When looking at matter down to the chemical level, it’s hard to tell what is fundamentally different between living and non-living matter. Reductionist approaches to understanding life don’t work.</p>
-            <p>Life might actually not exist physically, meaning it has nothing to do with measurable properties of matter, but rather:</p>
-            <blockquote>
-              <p>“Life” is the software of reality.</p>
-            </blockquote>
-            <h2 id="what-is-life">What is life?</h2>
-            <blockquote>
-              <p>how can the events in space and time which take place *within the spatial boundary of a living organism be accounted for by Physics and Chemistry?</p>
-            </blockquote>
-            <blockquote>
-              <p>… living matter, while not eluding the “laws of physics” as established up to date, is likely to involve “other laws of physics” hitherto unknown</p>
-            </blockquote>
-            <p>— E. Schrödinger. <em>What is life?</em> Cambridge University Press, 1944.</p>
-            <p>In many simulations of life, and in biology, we always think of life as structures, emergent patterns. It might be we are unable to discover life because we look for things like cellular structures and patterns. But we are not really understanding how living systems are processing information around them and involved in constructing those patterns.</p>
-            <h3 id="example-emergent-processes">Example emergent processes</h3>
-            <p>Walker takes the example of satellites launched in space and the conditions of our Universe for these things to happen. We can list several:</p>
-            <ul>
-              <li>We need a technological (or intelligent?) civilization</li>
-              <li>It has to understand the laws of Physics</li>
-              <li>Etc.</li>
-            </ul>
-            <p>Such a civilization can launch satellites because the information exists in the physical space.</p>
-            <p>Another example is the complex heavy elements that we only know about because of technology.</p>
-            <h3 id="life-is-what-life-alive">Life is what? Life ≠ alive</h3>
-            <p>This is what Walker thinks life is about: A process with the ability to do things with the Universe. Therefore, this notion is different from being “alive” in the traditional sense.</p>
-            <p>A bottle or a computer are certainly examples of life. They depend on an evolutionary process which has led us here and enabled us to construct such objects. Alive things are actively involved in information processing and constructing the reality around them.</p>
-            <h3 id="a-transition-between-non-living-and-living-physics">A transition between non-living and living physics</h3>
-            <p>There is a threshold in the kind of objects one can obtain. In chemical space, this corresponds to the boundary between object spontaneous appearing and object that needed active processing by an “alive” being to exist since they couldn’t have been created through random search or random assembly of modules.</p>
-            <p>With this new approach, the quote saying that life is the software of reality becomes slightly clearer: it is the software that runs on top of reality and actively modifies it in the process, creating what we observe as “living” systems.</p>
-            <h2 id="towards-quantifying-life-abstracting-universal-biochemistry">Towards quantifying life - Abstracting universal biochemistry</h2>
-            <blockquote>
-              <p>Life is a process where information structures matter across space and time.</p>
-            </blockquote>
-            <p>So far, people have been mostly focusing on the “building blocks” of life. With life on earth, everything shares a common basic biochemistry. General building blocks of life are understood with this sample 1 bias of earth’s biochemistry. Life emerging from ALife systems might work very differently.</p>
-            <p>Universality:</p>
-            <ul>
-              <li>In biochemistry this means that all life on earth shares a sort of common basic details</li>
-              <li>In physics it is more about some macroscopic properties of a system. If very different systems share a common macro-property, the property is considered universal.</li>
-            </ul>
-            <h3 id="can-we-find-a-universality-class-for-life">Can we find a universality class for life?</h3>
-            <p>We can think of information processing as a general property we can study. Walker focuses on the restricted problem of finding a universality class in patterns that emerge from biochemistry alone.</p>
-            <h3 id="life-in-the-chemical-space">Life in the chemical space</h3>
-            <p>The chemical space is extremely large (possible combinations of molecules). But because it is so large, there are a lot of chemical elements that require information about how to make them for them to have appeared in the first place and for the Universe to produce them in any abundance. For example, large proteins couldn’t have emerged through random processes.</p>
-            <h3 id="earth-as-a-large-ensemble-of-biochemical-networks">Earth as a large ensemble of biochemical networks</h3>
-            <p>When looking at Earth, organisms can be seen as partitions of the global biochemistry. The cell is probably not the right boundary to be looking at because cells are interacting through chemical reactions with an environment and modifying it, thereby defining a larger “network” that can be defined as living.</p>
-            <h3 id="measuring-scaling-behavior">Measuring scaling behavior</h3>
-            <p>Walker’s group sampled ensembles of biochemical networks that exist across different scales of the biosphere(species, ecosystems, biosphere) and tried to look for global patterns and universality classes.</p>
-            <p>The experiments were based on comparing properties of these networks and scaling properties against random chemistry examples.</p>
-            <p>It seems from these experiments that there are well behaved scaling laws that work across individuals, ecosystems and the biosphere. It also seems that they are significantly different from randomly sampled, similarly sized chemical networks. However, the behavior was reproduced with frequency based sampling.</p>
-            <p>There is a large fraction of reactions and compounds that is shared across all domains of life on earth.</p>
-            <h2 id="coarse-graining-to-find-universal-properties-of-chemical-reactions">Coarse-graining to find universal properties of chemical reactions</h2>
-            <p>The idea here is that although all living things might not share the same chemistry as Earth’s, there might be patterns and regularities that are common at higher coarse-grained scales.</p>
-            <p>Enzyme commission numbers is a readily available classification of chemical reactions that is hierarchical.</p>
-            <figure>
-              <img src="/ox-hugo/walkerslide.jpg" alt="Slide from Sara Walker's talk">
-              <figcaption>
-                <p><span class="figure-number">Figure 1:</span> Slide from Sara Walker’s talk</p>
-              </figcaption>
-            </figure>
-            <p>At the coarsest level (EC1, EC2, etc.), more or less regular scaling behavior is observed for each of them across multiple life scales.</p>
-            <p>EC1 has very consistent super-linear scaling laws that can be fitted to it and EC6 has sub-linear scaling.</p>
-            <p>Universality classes (scaling behavior) observed are not explained by the presence of these enzymes in all biochemical reactions.</p>
-            <p>It is likely that these neat scaling behaviors cannot exist at the smallest level of EC. What scale does universality appear at and what does this mean for life and emergence?</p>
-            <p>At the second level (ECx.x), the scaling behavior is still very much present.</p>
-            <p>Scaling behavior has also been observed in % of chiral molecules within networks.</p>
-            <p>Models of LUCA also fit the scaling behavior previously mentioned.</p>
-          </div>
-          <div class="bl-section">
-            <h2>Links to this note</h2>
-            <div class="backlinks">
-              <ul>
-                <li>
-                  <a href="/notes/alife_2020/">ALife 2020</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="text-center" style="font-variant-caps:all-small-caps">
-            Last changed <a class="u-url" href="https://hugocisneros.com/notes/talk_alife_2020_keynote_sara_walker_the_natural_history_of_information/"><time itemprop="datePublished" class="dt-published" datetime="2022-08-04T14:06:00+0200">04/08/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
-          </div>
+        <div class="text-center" style="font-variant-caps:all-small-caps">
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/talk_alife_2020_keynote_sara_walker_the_natural_history_of_information/"><time itemprop="datePublished" class="dt-published" datetime="2022-08-04T14:06:00+0200">04/08/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
-      </article>
-      <h3>Comments</h3>
-      <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
-      <section id="isso-thread"></section><br>
-      <a href="/notes#talk_alife_2020_keynote_sara_walker_the_natural_history_of_information"><b>← Back to Notes</b></a>
-      <hr>
-    </main>
-    <footer class="footer container h-10 text-center">
-      <ul>
-        <li class="inline-block list-none">
-          <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="/img/RSS.svg" alt="RSS feed icon"></a>
-        </li>
-        <li class="before:content-['•'] inline-block">
-          <a class="text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
-        </li>
-        <li class="before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block">© Hugo Cisneros 2022</li>
-      </ul>
-    </footer>
-  </div>
+      </div>
+    </article>
+    <h3>Comments</h3>
+    <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
+    <section id="isso-thread"></section><br>
+    <a href="/notes#talk_alife_2020_keynote_sara_walker_the_natural_history_of_information"><b>← Back to Notes</b></a>
+    <hr>
+  </main>
+  <footer class="footer container h-10 text-center">
+    <ul class="pl-0">
+      <li class="first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="https://hugocisneros.com/img/RSS.svg" alt="RSS feed icon"></a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="ml-2 text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block list-none"><span class="ml-2">© Hugo Cisneros 2022</span></li>
+    </ul>
+  </footer>
   <link rel="stylesheet" href="/js/katex/katex.min.css">
   <script src="/js/katex/katex.min.js"></script> 
   <script src="/js/katex/contrib/auto-render.min.js"></script> 

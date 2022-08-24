@@ -28,110 +28,108 @@
   <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
   <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
   <script>
-  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode()
+  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
 </head>
 <body>
-  <div class="wrapper">
-    <header class="header">
-      <nav>
-        <div class="container flex flex-wrap justify-between items-center mx-auto">
-          <div class="nav-main my-2.5">
-            <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
-          </div><button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
-          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul class="grid grid-flow-col items-center justify-between text-lg my-2.5">
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
-              </li>
-              <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="/img/dark_mode.svg"></button></li>
-            </ul>
-          </div>
+  <header class="md:px-0 px-2">
+    <nav>
+      <div class="container flex flex-wrap justify-between items-center mx-auto">
+        <div class="nav-main my-2.5">
+          <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
+        </div><button type="button" onclick="toggleMenu()" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul class="grid md:grid-flow-col items-center justify-between text-lg my-2.5">
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
+            </li>
+            <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="https://hugocisneros.com/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="https://hugocisneros.com/img/dark_mode.svg"></button></li>
+          </ul>
         </div>
-      </nav>
-    </header>
-    <main class="content h-card container mt-2 m-auto leading-loose" role="main">
-      <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-        <div class="bg-zinc-100 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
-          <h1 class="article-title p-name" itemprop="name">Thinking Like Transformers by Weiss, G., Goldberg, Y., & Yahav, E. (2021)</h1>
-          <div class="article-content e-content p-name" itemprop="articleBody">
-            <dl>
-              <dt>tags</dt>
-              <dd>
-                <a href="/notes/nlp/">NLP</a>, <a href="/notes/computer_science/">Computer science</a>
-              </dd>
-              <dt>source</dt>
-              <dd>
-                (<a href="#weissThinkingTransformers2021"><cite itemprop="citation" itemscope itemid="key:weissThinkingTransformers2021">Weiss et al. 2021</cite></a>)
-              </dd>
-            </dl>
-            <h2 id="summary">Summary</h2>
-            <p>This paper introduces a <a href="/notes/programming_languages/">programming language</a> that is inspired by the way <a href="/notes/transformers/">Transformers</a> process input data. The language is called Restricted Access Sequence Processing Language (RASP).</p>
-            <p>Data is represented as sequences, which is the structure transformers manipulate (since they have been designed for <a href="/notes/nlp/">NLP</a> applications). The language has two types of internal data representation:</p>
-            <ul>
-              <li><em>Sequence operators</em> (s-ops) are functions that translate sequences into sequences. For example, the <code>tokens</code> operator is the identity and the <code>length</code> operator is defined by <code>length(["h", "i"]) = [2, 2]</code>.</li>
-              <li>Selectors are functions that takes two sequences and a boolean predicate that can be applied to all pairs of input values. It returns a matrix which values are the result of the boolean op on pairs of values. \[ \text{select}([1, 2, 3], [0, 3, 4], &lt;) = \begin{bmatrix} \text{F} & \text{T} & \text{T}\newline \text{F} & \text{T} & \text{T}\newline \text{F} & \text{F} & \text{T} \end{bmatrix} \] Selectors are paired with aggregators that will convert a selector matrix and a sequence to a sequence. The selector filters and average input values: \[ \text{aggregate}(\begin{bmatrix} \text{F} & \text{T} & \text{T} \newline \text{F} & \text{T} & \text{T}\newline \text{F} & \text{F} & \text{T} \end{bmatrix} , [0, 12, 3]) = [7.5, 7.5, 3] \]</li>
-            </ul>
-            <p>Correspondence between RASP ops and transformer components:</p>
-            <ul>
-              <li>Built-in s-ops like <code>indices</code> and <code>tokens</code> are similar to input <a href="/notes/word_vectors/">embeddings</a> of a transformer.
-              </li>
-              <li>Element-wise s-ops are related to feed-forward components in transformers which are just regular <a href="/notes/neural_networks/">neural networks</a>.
-              </li>
-              <li>Selection and aggregation are akin to <a href="/notes/attention/">attention</a> in transformers.
-              </li>
-            </ul>
-            <p>To evaluate how “good” this new language is for understanding and designing transformer architectures, the authors study three main questions:</p>
-            <blockquote>
-              <ol>
-                <li>its ability to upper bound the number of heads and layers required to solve a task,</li>
-                <li>the tightness of that bound,</li>
-                <li>its feasibility in a transformer</li>
-              </ol>
-            </blockquote>
-            <h2 id="bibliography">Bibliography</h2>
-            <ol class="biblio-list">
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="weissThinkingTransformers2021">
-                <span itemprop="author">Gail Weiss, Yoav Goldberg, Eran Yahav</span>. <time datetime="2021" itemprop="datePublished">June 13, 2021</time>. "<span itemprop="name">Thinking Like Transformers</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:2106.06981 [cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2106.06981">http://arxiv.org/abs/2106.06981</a>.
-              </li>
+      </div>
+    </nav>
+  </header>
+  <main class="content h-card container mt-2 m-auto leading-loose md:px-0 px-2" role="main">
+    <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+      <div class="bg-zinc-100 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
+        <h1 class="article-title p-name" itemprop="name">Thinking Like Transformers by Weiss, G., Goldberg, Y., & Yahav, E. (2021)</h1>
+        <div class="article-content e-content p-name" itemprop="articleBody">
+          <dl>
+            <dt>tags</dt>
+            <dd>
+              <a href="/notes/nlp/">NLP</a>, <a href="/notes/computer_science/">Computer science</a>
+            </dd>
+            <dt>source</dt>
+            <dd>
+              (<a href="#weissThinkingTransformers2021"><cite itemprop="citation" itemscope itemid="key:weissThinkingTransformers2021">Weiss et al. 2021</cite></a>)
+            </dd>
+          </dl>
+          <h2 id="summary">Summary</h2>
+          <p>This paper introduces a <a href="/notes/programming_languages/">programming language</a> that is inspired by the way <a href="/notes/transformers/">Transformers</a> process input data. The language is called Restricted Access Sequence Processing Language (RASP).</p>
+          <p>Data is represented as sequences, which is the structure transformers manipulate (since they have been designed for <a href="/notes/nlp/">NLP</a> applications). The language has two types of internal data representation:</p>
+          <ul>
+            <li><em>Sequence operators</em> (s-ops) are functions that translate sequences into sequences. For example, the <code>tokens</code> operator is the identity and the <code>length</code> operator is defined by <code>length(["h", "i"]) = [2, 2]</code>.</li>
+            <li>Selectors are functions that takes two sequences and a boolean predicate that can be applied to all pairs of input values. It returns a matrix which values are the result of the boolean op on pairs of values. \[ \text{select}([1, 2, 3], [0, 3, 4], &lt;) = \begin{bmatrix} \text{F} & \text{T} & \text{T}\newline \text{F} & \text{T} & \text{T}\newline \text{F} & \text{F} & \text{T} \end{bmatrix} \] Selectors are paired with aggregators that will convert a selector matrix and a sequence to a sequence. The selector filters and average input values: \[ \text{aggregate}(\begin{bmatrix} \text{F} & \text{T} & \text{T} \newline \text{F} & \text{T} & \text{T}\newline \text{F} & \text{F} & \text{T} \end{bmatrix} , [0, 12, 3]) = [7.5, 7.5, 3] \]</li>
+          </ul>
+          <p>Correspondence between RASP ops and transformer components:</p>
+          <ul>
+            <li>Built-in s-ops like <code>indices</code> and <code>tokens</code> are similar to input <a href="/notes/word_vectors/">embeddings</a> of a transformer.
+            </li>
+            <li>Element-wise s-ops are related to feed-forward components in transformers which are just regular <a href="/notes/neural_networks/">neural networks</a>.
+            </li>
+            <li>Selection and aggregation are akin to <a href="/notes/attention/">attention</a> in transformers.
+            </li>
+          </ul>
+          <p>To evaluate how “good” this new language is for understanding and designing transformer architectures, the authors study three main questions:</p>
+          <blockquote>
+            <ol>
+              <li>its ability to upper bound the number of heads and layers required to solve a task,</li>
+              <li>the tightness of that bound,</li>
+              <li>its feasibility in a transformer</li>
             </ol>
-          </div>
-          <div class="text-center" style="font-variant-caps:all-small-caps">
-            Last changed <a class="u-url" href="https://hugocisneros.com/notes/weissthinkingtransformers2021/"><time itemprop="datePublished" class="dt-published" datetime="2021-08-25T15:19:00+0200">25/08/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
-          </div>
+          </blockquote>
+          <h2 id="bibliography">Bibliography</h2>
+          <ol class="biblio-list">
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="weissThinkingTransformers2021">
+              <span itemprop="author">Gail Weiss, Yoav Goldberg, Eran Yahav</span>. <time datetime="2021" itemprop="datePublished">June 13, 2021</time>. "<span itemprop="name">Thinking Like Transformers</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:2106.06981 [cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2106.06981">http://arxiv.org/abs/2106.06981</a>.
+            </li>
+          </ol>
         </div>
-      </article>
-      <h3>Comments</h3>
-      <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
-      <section id="isso-thread"></section><br>
-      <a href="/notes#weissthinkingtransformers2021"><b>← Back to Notes</b></a>
-      <hr>
-    </main>
-    <footer class="footer container h-10 text-center">
-      <ul>
-        <li class="inline-block list-none">
-          <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="/img/RSS.svg" alt="RSS feed icon"></a>
-        </li>
-        <li class="before:content-['•'] inline-block">
-          <a class="text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
-        </li>
-        <li class="before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block">© Hugo Cisneros 2022</li>
-      </ul>
-    </footer>
-  </div>
+        <div class="text-center" style="font-variant-caps:all-small-caps">
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/weissthinkingtransformers2021/"><time itemprop="datePublished" class="dt-published" datetime="2021-08-25T15:19:00+0200">25/08/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+        </div>
+      </div>
+    </article>
+    <h3>Comments</h3>
+    <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
+    <section id="isso-thread"></section><br>
+    <a href="/notes#weissthinkingtransformers2021"><b>← Back to Notes</b></a>
+    <hr>
+  </main>
+  <footer class="footer container h-10 text-center">
+    <ul class="pl-0">
+      <li class="first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="https://hugocisneros.com/img/RSS.svg" alt="RSS feed icon"></a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="ml-2 text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block list-none"><span class="ml-2">© Hugo Cisneros 2022</span></li>
+    </ul>
+  </footer>
   <link rel="stylesheet" href="/js/katex/katex.min.css">
   <script src="/js/katex/katex.min.js"></script> 
   <script src="/js/katex/contrib/auto-render.min.js"></script> 

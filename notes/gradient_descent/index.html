@@ -28,122 +28,120 @@
   <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
   <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
   <script>
-  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode()
+  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
 </head>
 <body>
-  <div class="wrapper">
-    <header class="header">
-      <nav>
-        <div class="container flex flex-wrap justify-between items-center mx-auto">
-          <div class="nav-main my-2.5">
-            <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
-          </div><button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
-          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul class="grid grid-flow-col items-center justify-between text-lg my-2.5">
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
+  <header class="md:px-0 px-2">
+    <nav>
+      <div class="container flex flex-wrap justify-between items-center mx-auto">
+        <div class="nav-main my-2.5">
+          <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
+        </div><button type="button" onclick="toggleMenu()" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul class="grid md:grid-flow-col items-center justify-between text-lg my-2.5">
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
+            </li>
+            <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="https://hugocisneros.com/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="https://hugocisneros.com/img/dark_mode.svg"></button></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="content h-card container mt-2 m-auto leading-loose md:px-0 px-2" role="main">
+    <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+      <div class="bg-zinc-100 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
+        <h1 class="article-title p-name" itemprop="name">Gradient descent</h1>
+        <div class="article-content e-content p-name" itemprop="articleBody">
+          <dl>
+            <dt>tags</dt>
+            <dd>
+              <a href="/notes/optimization/">Optimization</a>, <a href="/notes/algorithm/">Algorithm</a>
+            </dd>
+            <dt>resources</dt>
+            <dd>
+              <a href="https://drive.google.com/file/d/1e_9W8q9PL20iqOR-pfK89eILc_VtYaw1/view">Slides by Christian S. Perone</a>
+            </dd>
+          </dl>
+          <h2 id="fixed-learning-rate">Fixed learning rate</h2>
+          <p>The simplest way to apply the gradient descent algorithm on a function \(g\) convex and $L-$smooth on \(\mathbb{R}^d\) is to use the parameter update:</p>
+          <p>\[ \theta_t = \theta_{t-1} - \gamma g’(\theta_{t-1}) \]</p>
+          <p>This is based on the standard first-order approximation of the function \(g\). It can be very sensitive to the learning rate and suffer from pathological curvature.</p>
+          <h3 id="momentum">Momentum</h3>
+          <p>Momentum has been introduced in the gradient descent algorithm to dampen oscillations in the pathological cases and accelerating descent. Trajectories are less sensitive to changes in the loss landscape.</p>
+          <p>\[ \begin{align} V_{t + 1} = \beta V_t + g’(\theta_{t})\newline \theta_{t + 1} = \theta_t - \gamma V_{t + 1} \end{align}\]</p>
+          <h2 id="line-search">Line search</h2>
+          <p>Another common way to apply the gradient descent algorithm with non fixed learning rate is to use line search at each step. This corresponds to searching for the best \(\gamma\) to use in \(\theta_{} + \gamma \Delta\theta\) (in gradient descent, \(\Delta\theta = - g’(\theta)\)).</p>
+          <h3 id="exact-line-search">Exact line search</h3>
+          <p>For exact line search, we take \(\gamma = \arg\min_{s\geq 0} g(\theta + s \Delta \theta)\). This method is used when the cost of minimizing the function above is low compared to computing the search direction \(\Delta\theta\).</p>
+          <h3 id="backtracking-line-search">Backtracking line search</h3>
+          <p>This is an <a href="/notes/algorithm/">algorithm</a> for inexact line search. It depends on two parameters \(0 &lt; \alpha &lt; 0.5\) and \(0 &lt; \beta &lt; 1\). It is composed of one step which is run until the following condition is verified</p>
+          <p>\[ g(\theta + t&nbsp;\Delta \theta)&gt; g(\theta) + \alpha t \nabla g(\theta)^T \Delta\theta \]</p>
+          <p>At each step, \(t \leftarrow \beta t\), \(t\) is initialized to 1.</p>
+          <h2 id="sgd-and-global-minima">SGD and global minima</h2>
+          <p>(<a href="#liuBadGlobalMinima2020"><cite itemprop="citation" itemscope itemid="key:liuBadGlobalMinima2020">Liu et al. 2020</cite></a>)</p>
+          <h2 id="bibliography">Bibliography</h2>
+          <ol class="biblio-list">
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="liuBadGlobalMinima2020">
+              <span itemprop="author">Shengchao Liu, Dimitris S. Papailiopoulos, Dimitris Achlioptas</span>. <time datetime="2020" itemprop="datePublished">2020</time>. "<span itemprop="name">Bad Global Minima Exist and SGD Can Reach Them</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Advances in Neural Information Processing Systems 33: Annual Conference on Neural Information Processing Systems 2020, Neurips 2020, December 6-12, 2020, Virtual</i></span>, edited by Hugo Larochelle, Marc'Aurelio Ranzato, Raia Hadsell, Maria-Florina Balcan, and Hsuan-Tien Lin. <a itemprop="sameAs" href="https://proceedings.neurips.cc/paper/2020/hash/618491e20a9b686b79e158c293ab4f91-Abstract.html">https://proceedings.neurips.cc/paper/2020/hash/618491e20a9b686b79e158c293ab4f91-Abstract.html</a>.
+            </li>
+          </ol>
+        </div>
+        <div class="bl-section">
+          <h2>Links to this note</h2>
+          <div class="backlinks">
+            <ul>
+              <li>
+                <a href="/notes/genetic_algorithm/">Genetic algorithms</a>
               </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
+              <li>
+                <a href="/notes/gradient_flow/">Gradient flow</a>
               </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
+              <li>
+                <a href="/notes/neural_networks/">Neural networks</a>
               </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
+              <li>
+                <a href="/notes/supervised_learning/">Supervised learning</a>
               </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
-              </li>
-              <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="/img/dark_mode.svg"></button></li>
             </ul>
           </div>
         </div>
-      </nav>
-    </header>
-    <main class="content h-card container mt-2 m-auto leading-loose" role="main">
-      <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-        <div class="bg-zinc-100 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
-          <h1 class="article-title p-name" itemprop="name">Gradient descent</h1>
-          <div class="article-content e-content p-name" itemprop="articleBody">
-            <dl>
-              <dt>tags</dt>
-              <dd>
-                <a href="/notes/optimization/">Optimization</a>, <a href="/notes/algorithm/">Algorithm</a>
-              </dd>
-              <dt>resources</dt>
-              <dd>
-                <a href="https://drive.google.com/file/d/1e_9W8q9PL20iqOR-pfK89eILc_VtYaw1/view">Slides by Christian S. Perone</a>
-              </dd>
-            </dl>
-            <h2 id="fixed-learning-rate">Fixed learning rate</h2>
-            <p>The simplest way to apply the gradient descent algorithm on a function \(g\) convex and $L-$smooth on \(\mathbb{R}^d\) is to use the parameter update:</p>
-            <p>\[ \theta_t = \theta_{t-1} - \gamma g’(\theta_{t-1}) \]</p>
-            <p>This is based on the standard first-order approximation of the function \(g\). It can be very sensitive to the learning rate and suffer from pathological curvature.</p>
-            <h3 id="momentum">Momentum</h3>
-            <p>Momentum has been introduced in the gradient descent algorithm to dampen oscillations in the pathological cases and accelerating descent. Trajectories are less sensitive to changes in the loss landscape.</p>
-            <p>\[ \begin{align} V_{t + 1} = \beta V_t + g’(\theta_{t})\newline \theta_{t + 1} = \theta_t - \gamma V_{t + 1} \end{align}\]</p>
-            <h2 id="line-search">Line search</h2>
-            <p>Another common way to apply the gradient descent algorithm with non fixed learning rate is to use line search at each step. This corresponds to searching for the best \(\gamma\) to use in \(\theta_{} + \gamma \Delta\theta\) (in gradient descent, \(\Delta\theta = - g’(\theta)\)).</p>
-            <h3 id="exact-line-search">Exact line search</h3>
-            <p>For exact line search, we take \(\gamma = \arg\min_{s\geq 0} g(\theta + s \Delta \theta)\). This method is used when the cost of minimizing the function above is low compared to computing the search direction \(\Delta\theta\).</p>
-            <h3 id="backtracking-line-search">Backtracking line search</h3>
-            <p>This is an <a href="/notes/algorithm/">algorithm</a> for inexact line search. It depends on two parameters \(0 &lt; \alpha &lt; 0.5\) and \(0 &lt; \beta &lt; 1\). It is composed of one step which is run until the following condition is verified</p>
-            <p>\[ g(\theta + t&nbsp;\Delta \theta)&gt; g(\theta) + \alpha t \nabla g(\theta)^T \Delta\theta \]</p>
-            <p>At each step, \(t \leftarrow \beta t\), \(t\) is initialized to 1.</p>
-            <h2 id="sgd-and-global-minima">SGD and global minima</h2>
-            <p>(<a href="#liuBadGlobalMinima2020"><cite itemprop="citation" itemscope itemid="key:liuBadGlobalMinima2020">Liu et al. 2020</cite></a>)</p>
-            <h2 id="bibliography">Bibliography</h2>
-            <ol class="biblio-list">
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="liuBadGlobalMinima2020">
-                <span itemprop="author">Shengchao Liu, Dimitris S. Papailiopoulos, Dimitris Achlioptas</span>. <time datetime="2020" itemprop="datePublished">2020</time>. "<span itemprop="name">Bad Global Minima Exist and SGD Can Reach Them</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Advances in Neural Information Processing Systems 33: Annual Conference on Neural Information Processing Systems 2020, Neurips 2020, December 6-12, 2020, Virtual</i></span>, edited by Hugo Larochelle, Marc'Aurelio Ranzato, Raia Hadsell, Maria-Florina Balcan, and Hsuan-Tien Lin. <a itemprop="sameAs" href="https://proceedings.neurips.cc/paper/2020/hash/618491e20a9b686b79e158c293ab4f91-Abstract.html">https://proceedings.neurips.cc/paper/2020/hash/618491e20a9b686b79e158c293ab4f91-Abstract.html</a>.
-              </li>
-            </ol>
-          </div>
-          <div class="bl-section">
-            <h2>Links to this note</h2>
-            <div class="backlinks">
-              <ul>
-                <li>
-                  <a href="/notes/genetic_algorithm/">Genetic algorithms</a>
-                </li>
-                <li>
-                  <a href="/notes/gradient_flow/">Gradient flow</a>
-                </li>
-                <li>
-                  <a href="/notes/neural_networks/">Neural networks</a>
-                </li>
-                <li>
-                  <a href="/notes/supervised_learning/">Supervised learning</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="text-center" style="font-variant-caps:all-small-caps">
-            Last changed <a class="u-url" href="https://hugocisneros.com/notes/gradient_descent/"><time itemprop="datePublished" class="dt-published" datetime="2022-03-07T16:57:00+0100">07/03/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
-          </div>
+        <div class="text-center" style="font-variant-caps:all-small-caps">
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/gradient_descent/"><time itemprop="datePublished" class="dt-published" datetime="2022-03-07T16:57:00+0100">07/03/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
-      </article>
-      <h3>Comments</h3>
-      <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
-      <section id="isso-thread"></section><br>
-      <a href="/notes#gradient_descent"><b>← Back to Notes</b></a>
-      <hr>
-    </main>
-    <footer class="footer container h-10 text-center">
-      <ul>
-        <li class="inline-block list-none">
-          <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="/img/RSS.svg" alt="RSS feed icon"></a>
-        </li>
-        <li class="before:content-['•'] inline-block">
-          <a class="text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
-        </li>
-        <li class="before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block">© Hugo Cisneros 2022</li>
-      </ul>
-    </footer>
-  </div>
+      </div>
+    </article>
+    <h3>Comments</h3>
+    <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
+    <section id="isso-thread"></section><br>
+    <a href="/notes#gradient_descent"><b>← Back to Notes</b></a>
+    <hr>
+  </main>
+  <footer class="footer container h-10 text-center">
+    <ul class="pl-0">
+      <li class="first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="https://hugocisneros.com/img/RSS.svg" alt="RSS feed icon"></a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="ml-2 text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block list-none"><span class="ml-2">© Hugo Cisneros 2022</span></li>
+    </ul>
+  </footer>
   <link rel="stylesheet" href="/js/katex/katex.min.css">
   <script src="/js/katex/katex.min.js"></script> 
   <script src="/js/katex/contrib/auto-render.min.js"></script> 

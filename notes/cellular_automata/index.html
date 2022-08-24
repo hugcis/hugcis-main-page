@@ -28,277 +28,275 @@
   <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
   <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
   <script>
-  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode()
+  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
 </head>
 <body>
-  <div class="wrapper">
-    <header class="header">
-      <nav>
-        <div class="container flex flex-wrap justify-between items-center mx-auto">
-          <div class="nav-main my-2.5">
-            <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
-          </div><button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
-          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul class="grid grid-flow-col items-center justify-between text-lg my-2.5">
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
+  <header class="md:px-0 px-2">
+    <nav>
+      <div class="container flex flex-wrap justify-between items-center mx-auto">
+        <div class="nav-main my-2.5">
+          <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
+        </div><button type="button" onclick="toggleMenu()" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul class="grid md:grid-flow-col items-center justify-between text-lg my-2.5">
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
+            </li>
+            <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="https://hugocisneros.com/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="https://hugocisneros.com/img/dark_mode.svg"></button></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="content h-card container mt-2 m-auto leading-loose md:px-0 px-2" role="main">
+    <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+      <div class="bg-zinc-100 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
+        <h1 class="article-title p-name" itemprop="name">Cellular automata</h1>
+        <div class="article-content e-content p-name" itemprop="articleBody">
+          <dl>
+            <dt>tags</dt>
+            <dd>
+              <a href="/notes/emergence/">Emergence</a>, <a href="/notes/chaos/">Chaos</a>, <a href="/notes/artificial_intelligence/">Artificial Intelligence</a>
+            </dd>
+            <dt>resources</dt>
+            <dd>
+              <a href="https://en.wikipedia.org/wiki/Cellular_automaton">Wikipedia</a>, (<a href="#vonneumannTheorySelfreproducingAutomata1966"><cite itemprop="citation" itemscope itemid="key:vonneumannTheorySelfreproducingAutomata1966">Von Neumann, Burks 1966</cite></a>; <a href="#wolframNewKindScience2002"><cite itemprop="citation" itemscope itemid="key:wolframNewKindScience2002">Wolfram 2002</cite></a>)
+            </dd>
+          </dl>
+          <h2 id="definition">Definition</h2>
+          <p>A cellular automaton is a computational model defined with respect to a regular grid of individual elements (called <em>cells</em>). Each of those cells can be in one of a finite number of states — <em>alive</em> or <em>dead</em>, \(\{1, 2, 3\}\), etc.</p>
+          <p>A cellular automaton’s evolution is simulated in discrete timesteps. At each new timestep, cells are updated according to a local <strong>evolution rule</strong>. The rule is a table or function mapping every possible state of a cell and their local neighborhoods to a new state. It follows that a CA is a kind of <a href="/notes/dynamical_systems/">dynamical system</a>.</p>
+          <p>There are multiple ways to define the topology of the grid, rules, local neighborhoods and simulation steps. Some well known types of automata are listed below</p>
+          <h3 id="elementary-cellular-automata">Elementary cellular automata</h3>
+          <p>Cellular automata on 1D grids, with two states and neighborhood radius 1 (middle cell + one cell on each side) are called <a href="/notes/elementary_cellular_automata/">Elementary cellular automata</a> — or ECA.</p>
+          <h3 id="reversible-cellular-automata">Reversible cellular automata</h3>
+          <p><a href="/notes/reversible_cellular_automata/">Reversible cellular automata</a> are CA rules with one and only one image and pre-image. Each step of the evolution is reversible.</p>
+          <h3 id="cyclic-cellular-automata">Cyclic cellular automata</h3>
+          <h2 id="cellular-automata-rules">Cellular automata rules</h2>
+          <p>The rules of a cellular automaton can be created in different ways.</p>
+          <h3 id="rule-table-representation">Rule table representation</h3>
+          <p>One useful representation is a large lookup table that maps any possible configuration of the neighborhood of a cell to a new value for that cell. This is suitable only for small neighborhood sizes and number of states since the lookup table can get extremely large.</p>
+          <p>In this representation, creating or sampling a rule may be seen as choosing a value for each of the entries of the lookup table.</p>
+          <h4 id="uniform-sampling">Uniform sampling</h4>
+          <p>If we independently sample each of the entries for the table with uniform probability the resulting rule are “average”, and tend to be behaving in a very chaotic manner.</p>
+          <h4 id="dirichlet-based-sampling">Dirichlet-based sampling</h4>
+          <p>Another approach is to deliberately bias the sampling towards a particular state. This way most transitions lead to a single state, leading to more “stable” CA with a background state.</p>
+          <p>This sampling is done as follows:</p>
+          <ul>
+            <li>For \(k\) states, sample from a $k$-dimensional <a href="/notes/dirichlet_distribution/">Dirichlet distribution</a> with \((\alpha_1, \cdots, \alpha_k) = (\alpha, \cdots, \alpha)\) with \(\alpha\) a constant value \(&lt; 1\) (to ensure bias towards a single state).
+            </li>
+            <li>This yields a vector \((\lambda_1, \cdots, \lambda_k)\) that sums to 1 which will be the proportions of each state in the table. Because of the Dirichlet distribution one \(\lambda\) is <em>likely</em> to be much bigger than the others.</li>
+            <li>Sample the transitions in the rule table according to these proportions.</li>
+          </ul>
+          <h2 id="cellular-automata-and-reaction-diffusion--reaction-diffusion-dot-md--systems">Cellular automata and <a href="/notes/reaction_diffusion/">Reaction-diffusion</a> systems</h2>
+          <p>I just realized that cellular automata and reaction-diffusion systems are strongly related. This might be a well known fact but it seemed particularly striking when looking at the following image from (<a href="#manukyanLivingMesoscopicCellular2017a"><cite itemprop="citation" itemscope itemid="doi:10.1038/nature22031">Manukyan et al. 2017</cite></a>) it seems clear that there is a continuum between the two models. Also this illustrates the applicability of cellular automata to models of <a href="/notes/life/">biological life</a>.</p>
+          <figure>
+            <img src="/img/ca_reaction_diffusion.jpg" alt="A example of similarities between CA and reaction-diffusion">
+          </figure>
+          <h2 id="cellular-automata-in-image-processing--image-processing-dot-md">Cellular automata in <a href="/notes/image_processing/">Image processing</a></h2>
+          <p>Papers about using cellular automata in image processing (<a href="#selvapeterCellularAutomataImage2009"><cite itemprop="citation" itemscope itemid="doi:10.1109/NABIC.2009.5393684">Selvapeter, Wim Hordijk 2009</cite></a>; <a href="#wongthanavasuCellularAutomataPattern2013"><cite itemprop="citation" itemscope itemid="doi:10.5772/52364">Wongthanavasu, Ponkaew 2013</cite></a>)</p>
+          <p>Some cellular automata have a characteristic “blob-preserving” behavior where parts of the space get organized in large blobs. This behavior is very similar to an application of <a href="https://en.wikipedia.org/wiki/Median_filter">local median</a>. See this <a href="https://twitter.com/gabrielpeyre/status/987233288187150338">twitter link</a> for an animated example.</p>
+          <h2 id="coarse-graining-ca">Coarse-graining CA</h2>
+          <p>I am very attracted to this idea of coarse graining CAs. This is reminiscent of physical systems where the inner working of a system are mostly opaque to an observer and we only see a complex macro-behavior. In the case of CAs this might be the key to overcoming this problem of seemingly impossible increase of complexity beyond a certain point if we keep looking at individual cells. This also allows an external observer to understand a complex behavior happening in billions of cells visually. It can be done with <a href="/notes/autoencoders/">Autoencoders</a>.</p>
+          <h2 id="ca-as-regular-languages">CA as regular languages</h2>
+          <p>CAs can be studied with <a href="/notes/cellular_automata_as_regular_languages/">regular languages</a>.</p>
+          <h2 id="evolution-and-cas">Evolution and CAs</h2>
+          <p>Why would things <a href="/notes/evolution/">evolve</a> in a CA? I was running interesting CAs for several 100s of thousands of steps recently and realized that I did not really know what I would be expecting to happen in one of those without any input from outside. Could it be that, by just pure luck, some things start to evolve in it? That some species or <em>life-like forms</em> emerge?</p>
+          <p>If this is even possible, what are the odds of this happening? Was it how it worked in our case (earth)? Did just random particle interactions in a large soup gave rise to a complete miracle? So far from my experiment I have seen complex previously unseen structures emerge during an automaton evolution, but this has never gone farther than just a few big structures appearing and not staying this way. I believe it is a bias to think that those structures would have been suited to keep evolving because their brittleness did not let them survive. Therefore the (unpractical) way forward might be to let those things run and see what happens, where the “surviving” would be the ones left after all this.</p>
+          <p>I’m wondering whether some kind of external input to those small “universe” could help give rise to more complex behavior. Because I am starting to think that even with the most efficient system possible, the probability of seeing a <a href="/notes/complexity/">complex structure</a> appearing decreases somewhat exponentially with the <em>complexity</em> of the structure (or according to a power law).</p>
+          <p>Obviously I have no idea about all this and this is just based on speculation. But I’ve yet to see reasonable evidence that we can run a CA for a large number of time steps without any kind of input and see this increase in complexity happen by itself. Maybe the key would be to help it? But is it even possible?</p>
+          <h3 id="playing-god-with-cellular-automata">Playing god with cellular automata</h3>
+          <p>I believe an exciting part of working on spontaneous emergence, artificial evolution, and cellular automata is the fact that it really feels like playing with a <em>microverse</em>. Some relevant recent pop-cultures examples involving this idea include:</p>
+          <ul>
+            <li>Rick and morty <a href="https://rickandmorty.fandom.com/wiki/The_Ricks_Must_Be_Crazy">Season 2 Episode 6: The Ricks Must Be Crazy</a>
+            </li>
+            <li>Love, Death & Robot <a href="https://en.wikipedia.org/wiki/Love,_Death_%26_Robots#Episodes">Episode 16: Ice Age</a>
+            </li>
+          </ul>
+          <p>Each one of those cellular automata can be seen as a universe, with its own laws of physics (update rule) and initial big bang-like configuration (the initial state). Most combinations of the laws of physics are not stable and create completely disordered systems, but some rare configurations give rise to large structures sifting through space and exhibit highly non-trivial macro behavior (2-3 cells wide up to several 100s of cells-wide). Many of these structures interact in different ways, some create siblings and children structures while other get destroyed very quickly.</p>
+          <p>This transition from randomness to order could be seen in the case of our universe as the 4 physical forces pulling together particles into bigger and bigger structures which form a large system with a lot of emptiness and some localized structures. In this analogy, our planet and even our galaxy are just a microscopic ripple on of those giant structures, but what if we could make this kind of ripple happen in a much smaller universe, with much simpler laws? This is more or less what we are trying to achieve with cellular automata.</p>
+          <p>Obviously starting from scratch is hard, and it might not be necessary to let this <em>microverse</em> evolve in a closed way without interacting with it somehow.</p>
+          <p>This point of view is related to <a href="/notes/the_simulated_reality_hypothesis/">The Simulated reality hypothesis</a> and <a href="/notes/zuse_s_thesis/">Zuse’s thesis</a>, and is an interesting argument for the universe being a computer simulation — and even a CA.</p>
+          <h2 id="cellular-automata-and-philosophy--philosophy-dot-md">Cellular automata and <a href="/notes/philosophy/">philosophy</a></h2>
+          <p>See <a href="https://plato.stanford.edu/entries/cellular-automata/#CAPhil">Stanford Encyclopedia of Philosophy’s entry for cellular automata</a></p>
+          <h2 id="cellular-automata-models-of-physics--physics-dot-md">Cellular automata models of <a href="/notes/physics/">Physics</a></h2>
+          <p>Gerard ’t Hooft has studied the possibility of formulating quantum mechanics as a cellular automaton (<a href="#hooftCellularAutomatonInterpretation2014"><cite itemprop="citation" itemscope itemid="key:hooftCellularAutomatonInterpretation2014">Hooft 2014</cite></a>).</p>
+          <h2 id="bibliography">Bibliography</h2>
+          <ol class="biblio-list">
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="vonneumannTheorySelfreproducingAutomata1966">
+              <span itemprop="author">John Von Neumann, Arthur W. Burks</span>. <time datetime="1966" itemprop="datePublished">1966</time>. "<span itemprop="name">Theory of Self-reproducing Automata</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">IEEE Transactions on Neural Networks</i></span> 5 (1):3–14. <a itemprop="sameAs" href="https://cba.mit.edu/events/03.11.ASE/docs/VonNeumann.pdf">https://cba.mit.edu/events/03.11.ASE/docs/VonNeumann.pdf</a>.
+            </li>
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="wolframNewKindScience2002">
+              <span itemprop="author">Stephen Wolfram</span>. <time datetime="2002" itemprop="datePublished">2002</time>. <i>A New Kind of Science</i>. Champaign, IL: Wolfram Media. <a itemprop="sameAs" href="https://www.wolframscience.com/nks/">https://www.wolframscience.com/nks/</a>.
+            </li>
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="manukyanLivingMesoscopicCellular2017a" itemid="doi:10.1038/nature22031">
+              <span itemprop="author">Liana Manukyan, Sophie A. Montandon, Anamarija Fofonjka, Stanislav Smirnov, Michel C. Milinkovitch</span>. <time datetime="2017" itemprop="datePublished">April 2017</time>. "<span itemprop="name">A Living Mesoscopic Cellular Automaton Made of Skin Scales</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Nature</i></span> 544 (7649):173–79. <a itemprop="sameAs" href="https://doi.org/10.1038/nature22031">DOI</a>.
+            </li>
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="selvapeterCellularAutomataImage2009" itemid="doi:10.1109/NABIC.2009.5393684">
+              <span itemprop="author">P. Jebaraj Selvapeter, Wim Hordijk</span>. <time datetime="2009" itemprop="datePublished">2009</time>. "<span itemprop="name">Cellular Automata for Image Noise Filtering</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">2009 World Congress on Nature & Biologically Inspired Computing (nabic)</i></span>, 193–97. Coimbatore, India: IEEE. <a itemprop="sameAs" href="https://doi.org/10.1109/NABIC.2009.5393684">DOI</a>.
+            </li>
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="wongthanavasuCellularAutomataPattern2013" itemid="doi:10.5772/52364">
+              <span itemprop="author">Sartra Wongthanavasu, Jetsada Ponkaew</span>. <time datetime="2013" itemprop="datePublished">May 8, 2013</time>. "<span itemprop="name">Cellular Automata for Pattern Recognition</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Emerging Applications of Cellular Automata</i></span>, edited by Alejandro Salcido. InTech. <a itemprop="sameAs" href="https://doi.org/10.5772/52364">DOI</a>.
+            </li>
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="hooftCellularAutomatonInterpretation2014">
+              <span itemprop="author">Gerard 't Hooft</span>. <time datetime="2014" itemprop="datePublished">May 7, 2014</time>. "<span itemprop="name">The Cellular Automaton Interpretation of Quantum Mechanics</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:1405.1548 [quant-ph]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/1405.1548">http://arxiv.org/abs/1405.1548</a>.
+            </li>
+          </ol>
+        </div>
+        <div class="bl-section">
+          <h2>Links to this note</h2>
+          <div class="backlinks">
+            <ul>
+              <li>
+                <a href="/notes/abelian_sandpile_model/">Abelian sandpile model</a>
               </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
+              <li>
+                <a href="/notes/alife_conference/">ALife Conference</a>
               </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
+              <li>
+                <a href="/notes/amorphous_computing/">Amorphous computing</a>
               </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
+              <li>
+                <a href="/notes/art_with_cellular_automata/">Art with Cellular Automata</a>
               </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
+              <li>
+                <a href="/notes/artificial_life/">Artificial life</a>
               </li>
-              <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="/img/dark_mode.svg"></button></li>
+              <li>
+                <a href="/notes/automated_discovery_in_complex_systems/">Automated discovery in complex systems</a>
+              </li>
+              <li>
+                <a href="/notes/boltzmann_brain/">Boltzmann brain</a>
+              </li>
+              <li>
+                <a href="/notes/boolean_networks/">Boolean networks</a>
+              </li>
+              <li>
+                <a href="/notes/cellular_automata_as_cnns/">Cellular automata as convolutional neural networks</a>
+              </li>
+              <li>
+                <a href="/notes/cellular_automata_as_recurrent_neural_networks/">Cellular automata as recurrent neural networks</a>
+              </li>
+              <li>
+                <a href="/notes/cellular_automata_as_regular_languages/">Cellular automata as regular languages</a>
+              </li>
+              <li>
+                <a href="/notes/cellular_neural_networks/">Cellular neural networks</a>
+              </li>
+              <li>
+                <a href="/notes/christopher_langton/">Christopher Langton</a>
+              </li>
+              <li>
+                <a href="/notes/complex_systems/">Complex Systems</a>
+              </li>
+              <li>
+                <a href="/notes/complexity_of_cellular_automata/">Complexity of cellular automata</a>
+              </li>
+              <li>
+                <a href="/notes/computing_in_cellular_automata/">Computing in cellular automata</a>
+              </li>
+              <li>
+                <a href="/notes/conway_s_game_of_life/">Conway's Game of Life</a>
+              </li>
+              <li>
+                <a href="/notes/crosshatch_automata/">Crosshatch automata</a>
+              </li>
+              <li>
+                <a href="/notes/dirichlet_energy/">Dirichlet energy</a>
+              </li>
+              <li>
+                <a href="/notes/elementary_cellular_automata/">Elementary cellular automata</a>
+              </li>
+              <li>
+                <a href="/notes/graph_cellular_automata/">Graph cellular automata</a>
+              </li>
+              <li>
+                <a href="/notes/ising_model/">Ising model</a>
+              </li>
+              <li>
+                <a href="/notes/konrad_zuse/">Konrad Zuse</a>
+              </li>
+              <li>
+                <a href="/notes/langton_s_loop/">Langton's loop</a>
+              </li>
+              <li>
+                <a href="/notes/lenia/">Lenia</a>
+              </li>
+              <li>
+                <a href="/notes/neural_cellular_automata_and_implicit_representations/">Neural cellular automata and implicit representations</a>
+              </li>
+              <li>
+                <a href="/notes/open_ended_evolution/">Open-ended Evolution</a>
+              </li>
+              <li>
+                <a href="/notes/poincare_recurrence_time/">Poincaré recurrence time</a>
+              </li>
+              <li>
+                <a href="/notes/reductionism/">Reductionism</a>
+              </li>
+              <li>
+                <a href="/notes/reservoir_computing/">Reservoir computing</a>
+              </li>
+              <li>
+                <a href="/notes/reversible_cellular_automata/">Reversible cellular automata</a>
+              </li>
+              <li>
+                <a href="/notes/self_replication/">Self-replication</a>
+              </li>
+              <li>
+                <a href="/notes/talk_alife_2020_keynote_lee_cronin_a_top_down_chemically_embodied_artificial_life_computation/">Talk: Alife 2020 keynote Lee Cronin - A Top Down Chemically Embodied Artificial Life Computation</a>
+              </li>
+              <li>
+                <a href="/notes/talk_alife_2020_keynote_luis_zaman_new_frontiers_in_alife_what_was_old_is_new_again/">Talk: Alife 2020 keynote Luis Zaman - New Frontiers in Alife: What was old is new again</a>
+              </li>
+              <li>
+                <a href="/notes/turing_completeness_of_cellular_automata/">Turing completeness of cellular automata</a>
+              </li>
+              <li>
+                <a href="/notes/von_neumann_s_self_reproducing_ca/">Von Neumann's self-reproducing CA</a>
+              </li>
+              <li>
+                <a href="/notes/zuse_s_thesis/">Zuse's thesis</a>
+              </li>
             </ul>
           </div>
         </div>
-      </nav>
-    </header>
-    <main class="content h-card container mt-2 m-auto leading-loose" role="main">
-      <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-        <div class="bg-zinc-100 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
-          <h1 class="article-title p-name" itemprop="name">Cellular automata</h1>
-          <div class="article-content e-content p-name" itemprop="articleBody">
-            <dl>
-              <dt>tags</dt>
-              <dd>
-                <a href="/notes/emergence/">Emergence</a>, <a href="/notes/chaos/">Chaos</a>, <a href="/notes/artificial_intelligence/">Artificial Intelligence</a>
-              </dd>
-              <dt>resources</dt>
-              <dd>
-                <a href="https://en.wikipedia.org/wiki/Cellular_automaton">Wikipedia</a>, (<a href="#vonneumannTheorySelfreproducingAutomata1966"><cite itemprop="citation" itemscope itemid="key:vonneumannTheorySelfreproducingAutomata1966">Von Neumann, Burks 1966</cite></a>; <a href="#wolframNewKindScience2002"><cite itemprop="citation" itemscope itemid="key:wolframNewKindScience2002">Wolfram 2002</cite></a>)
-              </dd>
-            </dl>
-            <h2 id="definition">Definition</h2>
-            <p>A cellular automaton is a computational model defined with respect to a regular grid of individual elements (called <em>cells</em>). Each of those cells can be in one of a finite number of states — <em>alive</em> or <em>dead</em>, \(\{1, 2, 3\}\), etc.</p>
-            <p>A cellular automaton’s evolution is simulated in discrete timesteps. At each new timestep, cells are updated according to a local <strong>evolution rule</strong>. The rule is a table or function mapping every possible state of a cell and their local neighborhoods to a new state. It follows that a CA is a kind of <a href="/notes/dynamical_systems/">dynamical system</a>.</p>
-            <p>There are multiple ways to define the topology of the grid, rules, local neighborhoods and simulation steps. Some well known types of automata are listed below</p>
-            <h3 id="elementary-cellular-automata">Elementary cellular automata</h3>
-            <p>Cellular automata on 1D grids, with two states and neighborhood radius 1 (middle cell + one cell on each side) are called <a href="/notes/elementary_cellular_automata/">Elementary cellular automata</a> — or ECA.</p>
-            <h3 id="reversible-cellular-automata">Reversible cellular automata</h3>
-            <p><a href="/notes/reversible_cellular_automata/">Reversible cellular automata</a> are CA rules with one and only one image and pre-image. Each step of the evolution is reversible.</p>
-            <h3 id="cyclic-cellular-automata">Cyclic cellular automata</h3>
-            <h2 id="cellular-automata-rules">Cellular automata rules</h2>
-            <p>The rules of a cellular automaton can be created in different ways.</p>
-            <h3 id="rule-table-representation">Rule table representation</h3>
-            <p>One useful representation is a large lookup table that maps any possible configuration of the neighborhood of a cell to a new value for that cell. This is suitable only for small neighborhood sizes and number of states since the lookup table can get extremely large.</p>
-            <p>In this representation, creating or sampling a rule may be seen as choosing a value for each of the entries of the lookup table.</p>
-            <h4 id="uniform-sampling">Uniform sampling</h4>
-            <p>If we independently sample each of the entries for the table with uniform probability the resulting rule are “average”, and tend to be behaving in a very chaotic manner.</p>
-            <h4 id="dirichlet-based-sampling">Dirichlet-based sampling</h4>
-            <p>Another approach is to deliberately bias the sampling towards a particular state. This way most transitions lead to a single state, leading to more “stable” CA with a background state.</p>
-            <p>This sampling is done as follows:</p>
-            <ul>
-              <li>For \(k\) states, sample from a $k$-dimensional <a href="/notes/dirichlet_distribution/">Dirichlet distribution</a> with \((\alpha_1, \cdots, \alpha_k) = (\alpha, \cdots, \alpha)\) with \(\alpha\) a constant value \(&lt; 1\) (to ensure bias towards a single state).
-              </li>
-              <li>This yields a vector \((\lambda_1, \cdots, \lambda_k)\) that sums to 1 which will be the proportions of each state in the table. Because of the Dirichlet distribution one \(\lambda\) is <em>likely</em> to be much bigger than the others.</li>
-              <li>Sample the transitions in the rule table according to these proportions.</li>
-            </ul>
-            <h2 id="cellular-automata-and-reaction-diffusion--reaction-diffusion-dot-md--systems">Cellular automata and <a href="/notes/reaction_diffusion/">Reaction-diffusion</a> systems</h2>
-            <p>I just realized that cellular automata and reaction-diffusion systems are strongly related. This might be a well known fact but it seemed particularly striking when looking at the following image from (<a href="#manukyanLivingMesoscopicCellular2017a"><cite itemprop="citation" itemscope itemid="doi:10.1038/nature22031">Manukyan et al. 2017</cite></a>) it seems clear that there is a continuum between the two models. Also this illustrates the applicability of cellular automata to models of <a href="/notes/life/">biological life</a>.</p>
-            <figure>
-              <img src="/img/ca_reaction_diffusion.jpg" alt="A example of similarities between CA and reaction-diffusion">
-            </figure>
-            <h2 id="cellular-automata-in-image-processing--image-processing-dot-md">Cellular automata in <a href="/notes/image_processing/">Image processing</a></h2>
-            <p>Papers about using cellular automata in image processing (<a href="#selvapeterCellularAutomataImage2009"><cite itemprop="citation" itemscope itemid="doi:10.1109/NABIC.2009.5393684">Selvapeter, Wim Hordijk 2009</cite></a>; <a href="#wongthanavasuCellularAutomataPattern2013"><cite itemprop="citation" itemscope itemid="doi:10.5772/52364">Wongthanavasu, Ponkaew 2013</cite></a>)</p>
-            <p>Some cellular automata have a characteristic “blob-preserving” behavior where parts of the space get organized in large blobs. This behavior is very similar to an application of <a href="https://en.wikipedia.org/wiki/Median_filter">local median</a>. See this <a href="https://twitter.com/gabrielpeyre/status/987233288187150338">twitter link</a> for an animated example.</p>
-            <h2 id="coarse-graining-ca">Coarse-graining CA</h2>
-            <p>I am very attracted to this idea of coarse graining CAs. This is reminiscent of physical systems where the inner working of a system are mostly opaque to an observer and we only see a complex macro-behavior. In the case of CAs this might be the key to overcoming this problem of seemingly impossible increase of complexity beyond a certain point if we keep looking at individual cells. This also allows an external observer to understand a complex behavior happening in billions of cells visually. It can be done with <a href="/notes/autoencoders/">Autoencoders</a>.</p>
-            <h2 id="ca-as-regular-languages">CA as regular languages</h2>
-            <p>CAs can be studied with <a href="/notes/cellular_automata_as_regular_languages/">regular languages</a>.</p>
-            <h2 id="evolution-and-cas">Evolution and CAs</h2>
-            <p>Why would things <a href="/notes/evolution/">evolve</a> in a CA? I was running interesting CAs for several 100s of thousands of steps recently and realized that I did not really know what I would be expecting to happen in one of those without any input from outside. Could it be that, by just pure luck, some things start to evolve in it? That some species or <em>life-like forms</em> emerge?</p>
-            <p>If this is even possible, what are the odds of this happening? Was it how it worked in our case (earth)? Did just random particle interactions in a large soup gave rise to a complete miracle? So far from my experiment I have seen complex previously unseen structures emerge during an automaton evolution, but this has never gone farther than just a few big structures appearing and not staying this way. I believe it is a bias to think that those structures would have been suited to keep evolving because their brittleness did not let them survive. Therefore the (unpractical) way forward might be to let those things run and see what happens, where the “surviving” would be the ones left after all this.</p>
-            <p>I’m wondering whether some kind of external input to those small “universe” could help give rise to more complex behavior. Because I am starting to think that even with the most efficient system possible, the probability of seeing a <a href="/notes/complexity/">complex structure</a> appearing decreases somewhat exponentially with the <em>complexity</em> of the structure (or according to a power law).</p>
-            <p>Obviously I have no idea about all this and this is just based on speculation. But I’ve yet to see reasonable evidence that we can run a CA for a large number of time steps without any kind of input and see this increase in complexity happen by itself. Maybe the key would be to help it? But is it even possible?</p>
-            <h3 id="playing-god-with-cellular-automata">Playing god with cellular automata</h3>
-            <p>I believe an exciting part of working on spontaneous emergence, artificial evolution, and cellular automata is the fact that it really feels like playing with a <em>microverse</em>. Some relevant recent pop-cultures examples involving this idea include:</p>
-            <ul>
-              <li>Rick and morty <a href="https://rickandmorty.fandom.com/wiki/The_Ricks_Must_Be_Crazy">Season 2 Episode 6: The Ricks Must Be Crazy</a>
-              </li>
-              <li>Love, Death & Robot <a href="https://en.wikipedia.org/wiki/Love,_Death_%26_Robots#Episodes">Episode 16: Ice Age</a>
-              </li>
-            </ul>
-            <p>Each one of those cellular automata can be seen as a universe, with its own laws of physics (update rule) and initial big bang-like configuration (the initial state). Most combinations of the laws of physics are not stable and create completely disordered systems, but some rare configurations give rise to large structures sifting through space and exhibit highly non-trivial macro behavior (2-3 cells wide up to several 100s of cells-wide). Many of these structures interact in different ways, some create siblings and children structures while other get destroyed very quickly.</p>
-            <p>This transition from randomness to order could be seen in the case of our universe as the 4 physical forces pulling together particles into bigger and bigger structures which form a large system with a lot of emptiness and some localized structures. In this analogy, our planet and even our galaxy are just a microscopic ripple on of those giant structures, but what if we could make this kind of ripple happen in a much smaller universe, with much simpler laws? This is more or less what we are trying to achieve with cellular automata.</p>
-            <p>Obviously starting from scratch is hard, and it might not be necessary to let this <em>microverse</em> evolve in a closed way without interacting with it somehow.</p>
-            <p>This point of view is related to <a href="/notes/the_simulated_reality_hypothesis/">The Simulated reality hypothesis</a> and <a href="/notes/zuse_s_thesis/">Zuse’s thesis</a>, and is an interesting argument for the universe being a computer simulation — and even a CA.</p>
-            <h2 id="cellular-automata-and-philosophy--philosophy-dot-md">Cellular automata and <a href="/notes/philosophy/">philosophy</a></h2>
-            <p>See <a href="https://plato.stanford.edu/entries/cellular-automata/#CAPhil">Stanford Encyclopedia of Philosophy’s entry for cellular automata</a></p>
-            <h2 id="cellular-automata-models-of-physics--physics-dot-md">Cellular automata models of <a href="/notes/physics/">Physics</a></h2>
-            <p>Gerard ’t Hooft has studied the possibility of formulating quantum mechanics as a cellular automaton (<a href="#hooftCellularAutomatonInterpretation2014"><cite itemprop="citation" itemscope itemid="key:hooftCellularAutomatonInterpretation2014">Hooft 2014</cite></a>).</p>
-            <h2 id="bibliography">Bibliography</h2>
-            <ol class="biblio-list">
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="vonneumannTheorySelfreproducingAutomata1966">
-                <span itemprop="author">John Von Neumann, Arthur W. Burks</span>. <time datetime="1966" itemprop="datePublished">1966</time>. "<span itemprop="name">Theory of Self-reproducing Automata</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">IEEE Transactions on Neural Networks</i></span> 5 (1):3–14. <a itemprop="sameAs" href="https://cba.mit.edu/events/03.11.ASE/docs/VonNeumann.pdf">https://cba.mit.edu/events/03.11.ASE/docs/VonNeumann.pdf</a>.
-              </li>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="wolframNewKindScience2002">
-                <span itemprop="author">Stephen Wolfram</span>. <time datetime="2002" itemprop="datePublished">2002</time>. <i>A New Kind of Science</i>. Champaign, IL: Wolfram Media. <a itemprop="sameAs" href="https://www.wolframscience.com/nks/">https://www.wolframscience.com/nks/</a>.
-              </li>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="manukyanLivingMesoscopicCellular2017a" itemid="doi:10.1038/nature22031">
-                <span itemprop="author">Liana Manukyan, Sophie A. Montandon, Anamarija Fofonjka, Stanislav Smirnov, Michel C. Milinkovitch</span>. <time datetime="2017" itemprop="datePublished">April 2017</time>. "<span itemprop="name">A Living Mesoscopic Cellular Automaton Made of Skin Scales</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Nature</i></span> 544 (7649):173–79. <a itemprop="sameAs" href="https://doi.org/10.1038/nature22031">DOI</a>.
-              </li>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="selvapeterCellularAutomataImage2009" itemid="doi:10.1109/NABIC.2009.5393684">
-                <span itemprop="author">P. Jebaraj Selvapeter, Wim Hordijk</span>. <time datetime="2009" itemprop="datePublished">2009</time>. "<span itemprop="name">Cellular Automata for Image Noise Filtering</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">2009 World Congress on Nature & Biologically Inspired Computing (nabic)</i></span>, 193–97. Coimbatore, India: IEEE. <a itemprop="sameAs" href="https://doi.org/10.1109/NABIC.2009.5393684">DOI</a>.
-              </li>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="wongthanavasuCellularAutomataPattern2013" itemid="doi:10.5772/52364">
-                <span itemprop="author">Sartra Wongthanavasu, Jetsada Ponkaew</span>. <time datetime="2013" itemprop="datePublished">May 8, 2013</time>. "<span itemprop="name">Cellular Automata for Pattern Recognition</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Emerging Applications of Cellular Automata</i></span>, edited by Alejandro Salcido. InTech. <a itemprop="sameAs" href="https://doi.org/10.5772/52364">DOI</a>.
-              </li>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="hooftCellularAutomatonInterpretation2014">
-                <span itemprop="author">Gerard 't Hooft</span>. <time datetime="2014" itemprop="datePublished">May 7, 2014</time>. "<span itemprop="name">The Cellular Automaton Interpretation of Quantum Mechanics</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:1405.1548 [quant-ph]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/1405.1548">http://arxiv.org/abs/1405.1548</a>.
-              </li>
-            </ol>
-          </div>
-          <div class="bl-section">
-            <h2>Links to this note</h2>
-            <div class="backlinks">
-              <ul>
-                <li>
-                  <a href="/notes/abelian_sandpile_model/">Abelian sandpile model</a>
-                </li>
-                <li>
-                  <a href="/notes/alife_conference/">ALife Conference</a>
-                </li>
-                <li>
-                  <a href="/notes/amorphous_computing/">Amorphous computing</a>
-                </li>
-                <li>
-                  <a href="/notes/art_with_cellular_automata/">Art with Cellular Automata</a>
-                </li>
-                <li>
-                  <a href="/notes/artificial_life/">Artificial life</a>
-                </li>
-                <li>
-                  <a href="/notes/automated_discovery_in_complex_systems/">Automated discovery in complex systems</a>
-                </li>
-                <li>
-                  <a href="/notes/boltzmann_brain/">Boltzmann brain</a>
-                </li>
-                <li>
-                  <a href="/notes/boolean_networks/">Boolean networks</a>
-                </li>
-                <li>
-                  <a href="/notes/cellular_automata_as_cnns/">Cellular automata as convolutional neural networks</a>
-                </li>
-                <li>
-                  <a href="/notes/cellular_automata_as_recurrent_neural_networks/">Cellular automata as recurrent neural networks</a>
-                </li>
-                <li>
-                  <a href="/notes/cellular_automata_as_regular_languages/">Cellular automata as regular languages</a>
-                </li>
-                <li>
-                  <a href="/notes/cellular_neural_networks/">Cellular neural networks</a>
-                </li>
-                <li>
-                  <a href="/notes/christopher_langton/">Christopher Langton</a>
-                </li>
-                <li>
-                  <a href="/notes/complex_systems/">Complex Systems</a>
-                </li>
-                <li>
-                  <a href="/notes/complexity_of_cellular_automata/">Complexity of cellular automata</a>
-                </li>
-                <li>
-                  <a href="/notes/computing_in_cellular_automata/">Computing in cellular automata</a>
-                </li>
-                <li>
-                  <a href="/notes/conway_s_game_of_life/">Conway's Game of Life</a>
-                </li>
-                <li>
-                  <a href="/notes/crosshatch_automata/">Crosshatch automata</a>
-                </li>
-                <li>
-                  <a href="/notes/dirichlet_energy/">Dirichlet energy</a>
-                </li>
-                <li>
-                  <a href="/notes/elementary_cellular_automata/">Elementary cellular automata</a>
-                </li>
-                <li>
-                  <a href="/notes/graph_cellular_automata/">Graph cellular automata</a>
-                </li>
-                <li>
-                  <a href="/notes/ising_model/">Ising model</a>
-                </li>
-                <li>
-                  <a href="/notes/konrad_zuse/">Konrad Zuse</a>
-                </li>
-                <li>
-                  <a href="/notes/langton_s_loop/">Langton's loop</a>
-                </li>
-                <li>
-                  <a href="/notes/lenia/">Lenia</a>
-                </li>
-                <li>
-                  <a href="/notes/neural_cellular_automata_and_implicit_representations/">Neural cellular automata and implicit representations</a>
-                </li>
-                <li>
-                  <a href="/notes/open_ended_evolution/">Open-ended Evolution</a>
-                </li>
-                <li>
-                  <a href="/notes/poincare_recurrence_time/">Poincaré recurrence time</a>
-                </li>
-                <li>
-                  <a href="/notes/reductionism/">Reductionism</a>
-                </li>
-                <li>
-                  <a href="/notes/reservoir_computing/">Reservoir computing</a>
-                </li>
-                <li>
-                  <a href="/notes/reversible_cellular_automata/">Reversible cellular automata</a>
-                </li>
-                <li>
-                  <a href="/notes/self_replication/">Self-replication</a>
-                </li>
-                <li>
-                  <a href="/notes/talk_alife_2020_keynote_lee_cronin_a_top_down_chemically_embodied_artificial_life_computation/">Talk: Alife 2020 keynote Lee Cronin - A Top Down Chemically Embodied Artificial Life Computation</a>
-                </li>
-                <li>
-                  <a href="/notes/talk_alife_2020_keynote_luis_zaman_new_frontiers_in_alife_what_was_old_is_new_again/">Talk: Alife 2020 keynote Luis Zaman - New Frontiers in Alife: What was old is new again</a>
-                </li>
-                <li>
-                  <a href="/notes/turing_completeness_of_cellular_automata/">Turing completeness of cellular automata</a>
-                </li>
-                <li>
-                  <a href="/notes/von_neumann_s_self_reproducing_ca/">Von Neumann's self-reproducing CA</a>
-                </li>
-                <li>
-                  <a href="/notes/zuse_s_thesis/">Zuse's thesis</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="text-center" style="font-variant-caps:all-small-caps">
-            Last changed <a class="u-url" href="https://hugocisneros.com/notes/cellular_automata/"><time itemprop="datePublished" class="dt-published" datetime="2022-04-07T19:28:00+0200">07/04/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
-          </div>
+        <div class="text-center" style="font-variant-caps:all-small-caps">
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/cellular_automata/"><time itemprop="datePublished" class="dt-published" datetime="2022-04-07T19:28:00+0200">07/04/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
-      </article>
-      <h3>Comments</h3>
-      <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
-      <section id="isso-thread"></section><br>
-      <a href="/notes#cellular_automata"><b>← Back to Notes</b></a>
-      <hr>
-    </main>
-    <footer class="footer container h-10 text-center">
-      <ul>
-        <li class="inline-block list-none">
-          <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="/img/RSS.svg" alt="RSS feed icon"></a>
-        </li>
-        <li class="before:content-['•'] inline-block">
-          <a class="text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
-        </li>
-        <li class="before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block">© Hugo Cisneros 2022</li>
-      </ul>
-    </footer>
-  </div>
+      </div>
+    </article>
+    <h3>Comments</h3>
+    <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
+    <section id="isso-thread"></section><br>
+    <a href="/notes#cellular_automata"><b>← Back to Notes</b></a>
+    <hr>
+  </main>
+  <footer class="footer container h-10 text-center">
+    <ul class="pl-0">
+      <li class="first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="https://hugocisneros.com/img/RSS.svg" alt="RSS feed icon"></a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="ml-2 text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block list-none"><span class="ml-2">© Hugo Cisneros 2022</span></li>
+    </ul>
+  </footer>
   <link rel="stylesheet" href="/js/katex/katex.min.css">
   <script src="/js/katex/katex.min.js"></script> 
   <script src="/js/katex/contrib/auto-render.min.js"></script> 

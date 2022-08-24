@@ -28,109 +28,107 @@
   <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
   <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
   <script>
-  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode()
+  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
 </head>
 <body>
-  <div class="wrapper">
-    <header class="header">
-      <nav>
-        <div class="container flex flex-wrap justify-between items-center mx-auto">
-          <div class="nav-main my-2.5">
-            <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
-          </div><button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
-          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul class="grid grid-flow-col items-center justify-between text-lg my-2.5">
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
-              </li>
-              <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="/img/dark_mode.svg"></button></li>
-            </ul>
-          </div>
+  <header class="md:px-0 px-2">
+    <nav>
+      <div class="container flex flex-wrap justify-between items-center mx-auto">
+        <div class="nav-main my-2.5">
+          <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
+        </div><button type="button" onclick="toggleMenu()" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul class="grid md:grid-flow-col items-center justify-between text-lg my-2.5">
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
+            </li>
+            <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="https://hugocisneros.com/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="https://hugocisneros.com/img/dark_mode.svg"></button></li>
+          </ul>
         </div>
-      </nav>
-    </header>
-    <main class="content h-card container mt-2 m-auto leading-loose" role="main">
-      <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-        <div class="bg-zinc-100 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
-          <h1 class="article-title p-name" itemprop="name">On the expressive power of programming languages by Felleisen, M. (1991)</h1>
-          <div class="article-content e-content p-name" itemprop="articleBody">
-            <dl>
-              <dt>source</dt>
-              <dd>
-                (<a href="#felleisenExpressivePowerProgramming1991"><cite itemprop="citation" itemscope itemid="doi:10.1016/0167-6423(91)90036-W">Felleisen 1991</cite></a>)
-              </dd>
-              <dt>tags</dt>
-              <dd>
-                <a href="/notes/programming_languages/">Programming languages</a>
-              </dd>
-              <dt>resources</dt>
-              <dd>
-                <a href="https://pwlconf.org/2019/shriram-krishnamurthi/">PWL Conf talk</a>
-              </dd>
-            </dl>
-            <h2 id="summary">Summary</h2>
-            <p>Programming languages have different levels of expressiveness. <code>While</code> can be used to create <code>for</code> loops, binary <code>if</code> statements can implement multi-<code>if</code> statements, etc.</p>
-            <p>Turing tarpit: once we get to programming languages that are <a href="/notes/turing_completeness/">universal</a>, everything can be re-written into anything and the notion of “expressiveness” of programming languages doesn’t make much sense.</p>
-            <p>For a language \(L\) and \(F + L\) the addition of some features, can we say the second is more expressive than the first? Intuitively, this is related to some form of re-writing of programs into one another.</p>
-            <p>\(F + L\) isn’t more expressive than \(L\) when a macro for \(F\) to \(L\) exists. This means that for all programs \(P\) in \(L+F\), \(P_L\) its extension in \(L\), the two programs are equal.</p>
-            <p>When \(F\) is expressive relative to \(L\), you need to show that there cannot possibly exist such a macro.</p>
-            <h3 id="a-definition-of-equality">A definition of equality</h3>
-            <p>Equality is hard to define formally with programming languages. Is there a way in the language to tell them apart? If not, two things can be said to be equal within that language. But an even more general definition of equality: if for all contexts \(C\), \(C[e_1]\) halts iff \(C[e_2]\) halts (additional “trick”: programs with errors don’t terminate). The power of the definition comes from the fact that it has to hold for all contexts. This is called <em>observational equivalence</em>.</p>
-            <p>With this definition of equality, we can re-frame expressiveness. If we have of a language with more features, are all things previously considered equal still equal?</p>
-            <h3 id="key-theorem">Key theorem</h3>
-            <p>If we suppose \(F\) is written as a local macro, then for each terms that are equal under \(L\) they will be equal under \(F+L\). This means it hasn’t added power to \(L\).</p>
-            <p>With this, how do we show expressiveness? We show that we can find a context in \(L + F\) which makes two previously equal things distinguishable. \(F\) added power to the language \(L\).</p>
-            <h3 id="examples">Examples</h3>
-            <p>With this one can show that a <code>halts</code> statement does add expressiveness to a language. Similarly, state gives the power to count compared to a pure functional language.</p>
-            <h3 id="conclusions">Conclusions</h3>
-            <p>Local vs global transformations, in all of the above, transformations were local. But things like state can for example be implemented in functional programming through store-passing style.</p>
-            <p>When two languages are not as expressive, no local transformations can work.</p>
-            <p>This gives us two great definitions of equality and expressiveness.</p>
-            <p>Macros in language can add expressiveness, but expressiveness isn’t always suitable because they break existing equalities. However they can help avoid global transformations when a feature is needed.</p>
-            <h2 id="bibliography">Bibliography</h2>
-            <ol class="biblio-list">
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="felleisenExpressivePowerProgramming1991" itemid="doi:10.1016/0167-6423(91)90036-W">
-                <span itemprop="author">Matthias Felleisen</span>. <time datetime="1991" itemprop="datePublished">December 1, 1991</time>. "<span itemprop="name">On the Expressive Power of Programming Languages</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Science of Computer Programming</i></span> 17 (1):35–75. <a itemprop="sameAs" href="https://doi.org/10.1016/0167-6423(91)90036-W">DOI</a>.
-              </li>
-            </ol>
-          </div>
-          <div class="text-center" style="font-variant-caps:all-small-caps">
-            Last changed <a class="u-url" href="https://hugocisneros.com/notes/felleisenexpressivepowerprogramming1991/"><time itemprop="datePublished" class="dt-published" datetime="2021-03-25T09:58:00+0100">25/03/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
-          </div>
+      </div>
+    </nav>
+  </header>
+  <main class="content h-card container mt-2 m-auto leading-loose md:px-0 px-2" role="main">
+    <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+      <div class="bg-zinc-100 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
+        <h1 class="article-title p-name" itemprop="name">On the expressive power of programming languages by Felleisen, M. (1991)</h1>
+        <div class="article-content e-content p-name" itemprop="articleBody">
+          <dl>
+            <dt>source</dt>
+            <dd>
+              (<a href="#felleisenExpressivePowerProgramming1991"><cite itemprop="citation" itemscope itemid="doi:10.1016/0167-6423(91)90036-W">Felleisen 1991</cite></a>)
+            </dd>
+            <dt>tags</dt>
+            <dd>
+              <a href="/notes/programming_languages/">Programming languages</a>
+            </dd>
+            <dt>resources</dt>
+            <dd>
+              <a href="https://pwlconf.org/2019/shriram-krishnamurthi/">PWL Conf talk</a>
+            </dd>
+          </dl>
+          <h2 id="summary">Summary</h2>
+          <p>Programming languages have different levels of expressiveness. <code>While</code> can be used to create <code>for</code> loops, binary <code>if</code> statements can implement multi-<code>if</code> statements, etc.</p>
+          <p>Turing tarpit: once we get to programming languages that are <a href="/notes/turing_completeness/">universal</a>, everything can be re-written into anything and the notion of “expressiveness” of programming languages doesn’t make much sense.</p>
+          <p>For a language \(L\) and \(F + L\) the addition of some features, can we say the second is more expressive than the first? Intuitively, this is related to some form of re-writing of programs into one another.</p>
+          <p>\(F + L\) isn’t more expressive than \(L\) when a macro for \(F\) to \(L\) exists. This means that for all programs \(P\) in \(L+F\), \(P_L\) its extension in \(L\), the two programs are equal.</p>
+          <p>When \(F\) is expressive relative to \(L\), you need to show that there cannot possibly exist such a macro.</p>
+          <h3 id="a-definition-of-equality">A definition of equality</h3>
+          <p>Equality is hard to define formally with programming languages. Is there a way in the language to tell them apart? If not, two things can be said to be equal within that language. But an even more general definition of equality: if for all contexts \(C\), \(C[e_1]\) halts iff \(C[e_2]\) halts (additional “trick”: programs with errors don’t terminate). The power of the definition comes from the fact that it has to hold for all contexts. This is called <em>observational equivalence</em>.</p>
+          <p>With this definition of equality, we can re-frame expressiveness. If we have of a language with more features, are all things previously considered equal still equal?</p>
+          <h3 id="key-theorem">Key theorem</h3>
+          <p>If we suppose \(F\) is written as a local macro, then for each terms that are equal under \(L\) they will be equal under \(F+L\). This means it hasn’t added power to \(L\).</p>
+          <p>With this, how do we show expressiveness? We show that we can find a context in \(L + F\) which makes two previously equal things distinguishable. \(F\) added power to the language \(L\).</p>
+          <h3 id="examples">Examples</h3>
+          <p>With this one can show that a <code>halts</code> statement does add expressiveness to a language. Similarly, state gives the power to count compared to a pure functional language.</p>
+          <h3 id="conclusions">Conclusions</h3>
+          <p>Local vs global transformations, in all of the above, transformations were local. But things like state can for example be implemented in functional programming through store-passing style.</p>
+          <p>When two languages are not as expressive, no local transformations can work.</p>
+          <p>This gives us two great definitions of equality and expressiveness.</p>
+          <p>Macros in language can add expressiveness, but expressiveness isn’t always suitable because they break existing equalities. However they can help avoid global transformations when a feature is needed.</p>
+          <h2 id="bibliography">Bibliography</h2>
+          <ol class="biblio-list">
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="felleisenExpressivePowerProgramming1991" itemid="doi:10.1016/0167-6423(91)90036-W">
+              <span itemprop="author">Matthias Felleisen</span>. <time datetime="1991" itemprop="datePublished">December 1, 1991</time>. "<span itemprop="name">On the Expressive Power of Programming Languages</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Science of Computer Programming</i></span> 17 (1):35–75. <a itemprop="sameAs" href="https://doi.org/10.1016/0167-6423(91)90036-W">DOI</a>.
+            </li>
+          </ol>
         </div>
-      </article>
-      <h3>Comments</h3>
-      <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
-      <section id="isso-thread"></section><br>
-      <a href="/notes#felleisenexpressivepowerprogramming1991"><b>← Back to Notes</b></a>
-      <hr>
-    </main>
-    <footer class="footer container h-10 text-center">
-      <ul>
-        <li class="inline-block list-none">
-          <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="/img/RSS.svg" alt="RSS feed icon"></a>
-        </li>
-        <li class="before:content-['•'] inline-block">
-          <a class="text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
-        </li>
-        <li class="before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block">© Hugo Cisneros 2022</li>
-      </ul>
-    </footer>
-  </div>
+        <div class="text-center" style="font-variant-caps:all-small-caps">
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/felleisenexpressivepowerprogramming1991/"><time itemprop="datePublished" class="dt-published" datetime="2021-03-25T09:58:00+0100">25/03/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+        </div>
+      </div>
+    </article>
+    <h3>Comments</h3>
+    <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
+    <section id="isso-thread"></section><br>
+    <a href="/notes#felleisenexpressivepowerprogramming1991"><b>← Back to Notes</b></a>
+    <hr>
+  </main>
+  <footer class="footer container h-10 text-center">
+    <ul class="pl-0">
+      <li class="first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="https://hugocisneros.com/img/RSS.svg" alt="RSS feed icon"></a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="ml-2 text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block list-none"><span class="ml-2">© Hugo Cisneros 2022</span></li>
+    </ul>
+  </footer>
   <link rel="stylesheet" href="/js/katex/katex.min.css">
   <script src="/js/katex/katex.min.js"></script> 
   <script src="/js/katex/contrib/auto-render.min.js"></script> 

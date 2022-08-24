@@ -28,125 +28,123 @@
   <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
   <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
   <script>
-  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode()
+  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
 </head>
 <body>
-  <div class="wrapper">
-    <header class="header">
-      <nav>
-        <div class="container flex flex-wrap justify-between items-center mx-auto">
-          <div class="nav-main my-2.5">
-            <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
-          </div><button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
-          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul class="grid grid-flow-col items-center justify-between text-lg my-2.5">
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
-              </li>
-              <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="/img/dark_mode.svg"></button></li>
-            </ul>
-          </div>
+  <header class="md:px-0 px-2">
+    <nav>
+      <div class="container flex flex-wrap justify-between items-center mx-auto">
+        <div class="nav-main my-2.5">
+          <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
+        </div><button type="button" onclick="toggleMenu()" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul class="grid md:grid-flow-col items-center justify-between text-lg my-2.5">
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
+            </li>
+            <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="https://hugocisneros.com/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="https://hugocisneros.com/img/dark_mode.svg"></button></li>
+          </ul>
         </div>
-      </nav>
-    </header>
-    <main class="content h-card container mt-2 m-auto leading-loose" role="main">
-      <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-        <div class="bg-zinc-100 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
-          <h1 class="article-title p-name" itemprop="name">Semantic similarity</h1>
-          <div class="article-content e-content p-name" itemprop="articleBody">
-            <dl>
-              <dt>tags</dt>
-              <dd>
-                <a href="/notes/nlp/">NLP</a>, <a href="/notes/evaluating_nlp/">Evaluating NLP</a>
-              </dd>
-            </dl>
-            <h2 id="n-gram-matching">N-gram matching</h2>
-            <p>For two sequences \(x\) and \(\hat{x}\), we denote the sequence of $n$-grams with \(S_x^n\) and \(S^n_{\hat{x}}\). The number of matched $n$-grams between the two sentences is: \[ \sum_{w \in S_{\hat{x}}^n} \mathbb{I}[w \in S_{x}^n ] \] with \(\mathbb{I}\) the indicator function.</p>
-            <p>From this we can construct the exact match precision (Exact-\(P_n\)) and recall (Exact-\(R_n\)): \[ \text{Exact-}$P_n$ = \frac{\sum_{w \in S_{\hat{x}}^n} \mathbb{I}[w \in S_{x}^n ]}{| S_{\hat{x}}^n|} \] and \[ \text{Exact-}$R_n$ = \frac{\sum_{w \in S_{x}^n} \mathbb{I}[w \in S_{\hat{x}}^n ]}{| S_{x}^n|} \]</p>
-            <p>Here are some well-known metrics based on the number of $n$-grams matches.</p>
-            <h3 id="bleu">BLEU</h3>
-            <p>The <strong>BLEU</strong> metric (<a href="#papineniBleuMethodAutomatic2002"><cite itemprop="citation" itemscope itemid="key:papineniBleuMethodAutomatic2002">Papineni et al. 2002</cite></a>) is very widely used in <a href="/notes/nlp/">NLP</a> and particularly in <a href="/notes/machine_translation/">Machine translation</a> . It is based on Exact-\(P_n\) with some key modifications:</p>
-            <ol>
-              <li>$n$-grams in the reference can be matched only once.</li>
-              <li>The number of exact matches is accumulated for all reference-candidate pairs in the corpus and divided by the total number of $n$-grams in all candidate sentences.</li>
-              <li>A brevity penalty discourages very short candidates.</li>
-            </ol>
-            <p>The score is computed with various values of \(n\) and geometrically averaged.</p>
-            <p>An smoothed extension of the <strong>BLEU</strong> metric, <strong>SENT-BLEU</strong> (<a href="#koehnMosesOpenSource2007"><cite itemprop="citation" itemscope itemid="key:koehnMosesOpenSource2007">Koehn et al. 2007</cite></a>) is computed at the sentence level.</p>
-            <h3 id="meteor">METEOR</h3>
-            <p><strong>METEOR</strong> (<a href="#banerjeeMETEORAutomaticMetric2005"><cite itemprop="citation" itemscope itemid="key:banerjeeMETEORAutomaticMetric2005">Banerjee, Lavie 2005</cite></a>) computes Exact-\(P_1\) and Exact-\(R_1\) with the possibility to match word stems and synonyms.</p>
-            <p>The extension <strong>METEOR-1.5</strong> (<a href="#denkowskiMeteorUniversalLanguage2014"><cite itemprop="citation" itemscope itemid="doi:10.3115/v1/w14-3348">Denkowski, Lavie 2014</cite></a>) weighs content and function words differently, and also applies importance weighting to different matching types.</p>
-            <p>More recently <strong>METEOR++ 2.0</strong> adds a learned paraphrase resource to the algorithm. Because of these external resources, the full feature set of <strong>METEOR</strong> is only available for few languages.</p>
-            <h3 id="rouge">ROUGE</h3>
-            <p><strong>ROUGE</strong> (<a href="#linROUGEPackageAutomatic2004"><cite itemprop="citation" itemscope itemid="key:linROUGEPackageAutomatic2004">Lin 2004</cite></a>) is a widely used metric for summarization evaluation.</p>
-            <p><strong>ROUGE-\(n\)</strong> computes Exact-\(R_n\) (usually \(n = 1, 2\)), while <strong>ROUGE-\(L\)</strong> is a variant of Exact-\(R_1\) with the numerator replaced by the length of the longest common subsequence.</p>
-            <h2 id="edit-distance-based-metrics">Edit-distance-based metrics</h2>
-            <h2 id="embedding-based-metrics">Embedding-based metrics</h2>
-            <h3 id="universal-sentence-encoder">Universal sentence encoder</h3>
-            <p>The Universal sentence encoder (USE) (<a href="#cerUniversalSentenceEncoder2018"><cite itemprop="citation" itemscope itemid="key:cerUniversalSentenceEncoder2018">Cer et al. 2018</cite></a>) can embed a sentence into a single vector. The distance between two sentence embeddings (usually normalized and therefore cosine distance), can then be used as a proxy for semantic similarity.</p>
-            <h2 id="learned-metrics">Learned metrics</h2>
-            <h2 id="bertscore">BERTScore</h2>
-            <p>The goal of this metric is to compute and aggregate the pairwise similarity between <a href="/notes/bert/">BERT</a> embeddings of words in the sentence (<a href="#zhangBERTScoreEvaluatingText2020"><cite itemprop="citation" itemscope itemid="doi:10.48550/arXiv.1904.09675">Zhang et al. 2020</cite></a>).</p>
-            <h2 id="bibliography">Bibliography</h2>
-            <ol class="biblio-list">
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="papineniBleuMethodAutomatic2002"><span itemprop="author">Kishore Papineni, Salim Roukos, Todd Ward, Wei-Jing Zhu</span>. <time datetime="2002" itemprop="datePublished">2002</time>. "<span itemprop="name">Bleu: A Method for Automatic Evaluation of Machine Translation</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Proceedings of the 40th Annual Meeting of the Association for Computational Linguistics</i></span>, 311–18.</li>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="koehnMosesOpenSource2007">
-                <span itemprop="author">Philipp Koehn, Hieu Hoang, Alexandra Birch, Chris Callison-Burch, Marcello Federico, Nicola Bertoldi, Brooke Cowan, et al.</span>. <time datetime="2007" itemprop="datePublished">2007</time>. "<span itemprop="name">Moses: Open Source Toolkit for Statistical Machine Translation</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">ACL 2007, Proceedings of the 45th Annual Meeting of the Association for Computational Linguistics, June 23-30, 2007, Prague, Czech Republic</i></span>, edited by John A. Carroll, Antal van den Bosch, and Annie Zaenen. The Association for Computational Linguistics. <a itemprop="sameAs" href="https://aclanthology.org/P07-2045/">https://aclanthology.org/P07-2045/</a>.
-              </li>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="banerjeeMETEORAutomaticMetric2005">
-                <span itemprop="author">Satanjeev Banerjee, Alon Lavie</span>. <time datetime="2005" itemprop="datePublished">2005</time>. "<span itemprop="name">METEOR: An Automatic Metric for MT Evaluation with Improved Correlation with Human Judgments</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Proceedings of the Workshop on Intrinsic and Extrinsic Evaluation Measures for Machine Translation And/or Summarization@acl 2005, Ann Arbor, Michigan, USA, June 29, 2005</i></span>, edited by Jade Goldstein, Alon Lavie, Chin-Yew Lin, and Clare R. Voss, 65–72. Association for Computational Linguistics. <a itemprop="sameAs" href="https://aclanthology.org/W05-0909/">https://aclanthology.org/W05-0909/</a>.
-              </li>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="denkowskiMeteorUniversalLanguage2014" itemid="doi:10.3115/v1/w14-3348">
-                <span itemprop="author">Michael J. Denkowski, Alon Lavie</span>. <time datetime="2014" itemprop="datePublished">2014</time>. "<span itemprop="name">Meteor Universal: Language Specific Translation Evaluation for Any Target Language</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Proceedings of the Ninth Workshop on Statistical Machine Translation, WMT@ACL 2014, June 26-27, 2014, Baltimore, Maryland, USA</i></span>, 376–80. The Association for Computer Linguistics. <a itemprop="sameAs" href="https://doi.org/10.3115/v1/w14-3348">DOI</a>.
-              </li>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="linROUGEPackageAutomatic2004">
-                <span itemprop="author">Chin-Yew Lin</span>. <time datetime="2004" itemprop="datePublished">July 2004</time>. "<span itemprop="name">ROUGE: A Package for Automatic Evaluation of Summaries</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Text Summarization Branches Out</i></span>, 74–81. Barcelona, Spain: Association for Computational Linguistics. <a itemprop="sameAs" href="https://aclanthology.org/W04-1013">https://aclanthology.org/W04-1013</a>.
-              </li>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="cerUniversalSentenceEncoder2018">
-                <span itemprop="author">Daniel Cer, Yinfei Yang, Sheng-yi Kong, Nan Hua, Nicole Limtiaco, Rhomni St John, Noah Constant, et al.</span>. <time datetime="2018" itemprop="datePublished">2018</time>. "<span itemprop="name">Universal Sentence Encoder</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Corr</i></span> abs/1803.11175. <a itemprop="sameAs" href="http://arxiv.org/abs/1803.11175">http://arxiv.org/abs/1803.11175</a>.
-              </li>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="zhangBERTScoreEvaluatingText2020" itemid="doi:10.48550/arXiv.1904.09675">
-                <span itemprop="author">Tianyi Zhang, Varsha Kishore, Felix Wu, Kilian Q. Weinberger, Yoav Artzi</span>. <time datetime="2020" itemprop="datePublished">February 24, 2020</time>. "<span itemprop="name">Bertscore: Evaluating Text Generation with BERT</span>". arXiv. <a itemprop="sameAs" href="https://doi.org/10.48550/arXiv.1904.09675">DOI</a>.
-              </li>
-            </ol>
-          </div>
-          <div class="text-center" style="font-variant-caps:all-small-caps">
-            Last changed <a class="u-url" href="https://hugocisneros.com/notes/semantic_similarity/"><time itemprop="datePublished" class="dt-published" datetime="2022-08-04T13:42:00+0200">04/08/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
-          </div>
+      </div>
+    </nav>
+  </header>
+  <main class="content h-card container mt-2 m-auto leading-loose md:px-0 px-2" role="main">
+    <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+      <div class="bg-zinc-100 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
+        <h1 class="article-title p-name" itemprop="name">Semantic similarity</h1>
+        <div class="article-content e-content p-name" itemprop="articleBody">
+          <dl>
+            <dt>tags</dt>
+            <dd>
+              <a href="/notes/nlp/">NLP</a>, <a href="/notes/evaluating_nlp/">Evaluating NLP</a>
+            </dd>
+          </dl>
+          <h2 id="n-gram-matching">N-gram matching</h2>
+          <p>For two sequences \(x\) and \(\hat{x}\), we denote the sequence of $n$-grams with \(S_x^n\) and \(S^n_{\hat{x}}\). The number of matched $n$-grams between the two sentences is: \[ \sum_{w \in S_{\hat{x}}^n} \mathbb{I}[w \in S_{x}^n ] \] with \(\mathbb{I}\) the indicator function.</p>
+          <p>From this we can construct the exact match precision (Exact-\(P_n\)) and recall (Exact-\(R_n\)): \[ \text{Exact-}$P_n$ = \frac{\sum_{w \in S_{\hat{x}}^n} \mathbb{I}[w \in S_{x}^n ]}{| S_{\hat{x}}^n|} \] and \[ \text{Exact-}$R_n$ = \frac{\sum_{w \in S_{x}^n} \mathbb{I}[w \in S_{\hat{x}}^n ]}{| S_{x}^n|} \]</p>
+          <p>Here are some well-known metrics based on the number of $n$-grams matches.</p>
+          <h3 id="bleu">BLEU</h3>
+          <p>The <strong>BLEU</strong> metric (<a href="#papineniBleuMethodAutomatic2002"><cite itemprop="citation" itemscope itemid="key:papineniBleuMethodAutomatic2002">Papineni et al. 2002</cite></a>) is very widely used in <a href="/notes/nlp/">NLP</a> and particularly in <a href="/notes/machine_translation/">Machine translation</a> . It is based on Exact-\(P_n\) with some key modifications:</p>
+          <ol>
+            <li>$n$-grams in the reference can be matched only once.</li>
+            <li>The number of exact matches is accumulated for all reference-candidate pairs in the corpus and divided by the total number of $n$-grams in all candidate sentences.</li>
+            <li>A brevity penalty discourages very short candidates.</li>
+          </ol>
+          <p>The score is computed with various values of \(n\) and geometrically averaged.</p>
+          <p>An smoothed extension of the <strong>BLEU</strong> metric, <strong>SENT-BLEU</strong> (<a href="#koehnMosesOpenSource2007"><cite itemprop="citation" itemscope itemid="key:koehnMosesOpenSource2007">Koehn et al. 2007</cite></a>) is computed at the sentence level.</p>
+          <h3 id="meteor">METEOR</h3>
+          <p><strong>METEOR</strong> (<a href="#banerjeeMETEORAutomaticMetric2005"><cite itemprop="citation" itemscope itemid="key:banerjeeMETEORAutomaticMetric2005">Banerjee, Lavie 2005</cite></a>) computes Exact-\(P_1\) and Exact-\(R_1\) with the possibility to match word stems and synonyms.</p>
+          <p>The extension <strong>METEOR-1.5</strong> (<a href="#denkowskiMeteorUniversalLanguage2014"><cite itemprop="citation" itemscope itemid="doi:10.3115/v1/w14-3348">Denkowski, Lavie 2014</cite></a>) weighs content and function words differently, and also applies importance weighting to different matching types.</p>
+          <p>More recently <strong>METEOR++ 2.0</strong> adds a learned paraphrase resource to the algorithm. Because of these external resources, the full feature set of <strong>METEOR</strong> is only available for few languages.</p>
+          <h3 id="rouge">ROUGE</h3>
+          <p><strong>ROUGE</strong> (<a href="#linROUGEPackageAutomatic2004"><cite itemprop="citation" itemscope itemid="key:linROUGEPackageAutomatic2004">Lin 2004</cite></a>) is a widely used metric for summarization evaluation.</p>
+          <p><strong>ROUGE-\(n\)</strong> computes Exact-\(R_n\) (usually \(n = 1, 2\)), while <strong>ROUGE-\(L\)</strong> is a variant of Exact-\(R_1\) with the numerator replaced by the length of the longest common subsequence.</p>
+          <h2 id="edit-distance-based-metrics">Edit-distance-based metrics</h2>
+          <h2 id="embedding-based-metrics">Embedding-based metrics</h2>
+          <h3 id="universal-sentence-encoder">Universal sentence encoder</h3>
+          <p>The Universal sentence encoder (USE) (<a href="#cerUniversalSentenceEncoder2018"><cite itemprop="citation" itemscope itemid="key:cerUniversalSentenceEncoder2018">Cer et al. 2018</cite></a>) can embed a sentence into a single vector. The distance between two sentence embeddings (usually normalized and therefore cosine distance), can then be used as a proxy for semantic similarity.</p>
+          <h2 id="learned-metrics">Learned metrics</h2>
+          <h2 id="bertscore">BERTScore</h2>
+          <p>The goal of this metric is to compute and aggregate the pairwise similarity between <a href="/notes/bert/">BERT</a> embeddings of words in the sentence (<a href="#zhangBERTScoreEvaluatingText2020"><cite itemprop="citation" itemscope itemid="doi:10.48550/arXiv.1904.09675">Zhang et al. 2020</cite></a>).</p>
+          <h2 id="bibliography">Bibliography</h2>
+          <ol class="biblio-list">
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="papineniBleuMethodAutomatic2002"><span itemprop="author">Kishore Papineni, Salim Roukos, Todd Ward, Wei-Jing Zhu</span>. <time datetime="2002" itemprop="datePublished">2002</time>. "<span itemprop="name">Bleu: A Method for Automatic Evaluation of Machine Translation</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Proceedings of the 40th Annual Meeting of the Association for Computational Linguistics</i></span>, 311–18.</li>
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="koehnMosesOpenSource2007">
+              <span itemprop="author">Philipp Koehn, Hieu Hoang, Alexandra Birch, Chris Callison-Burch, Marcello Federico, Nicola Bertoldi, Brooke Cowan, et al.</span>. <time datetime="2007" itemprop="datePublished">2007</time>. "<span itemprop="name">Moses: Open Source Toolkit for Statistical Machine Translation</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">ACL 2007, Proceedings of the 45th Annual Meeting of the Association for Computational Linguistics, June 23-30, 2007, Prague, Czech Republic</i></span>, edited by John A. Carroll, Antal van den Bosch, and Annie Zaenen. The Association for Computational Linguistics. <a itemprop="sameAs" href="https://aclanthology.org/P07-2045/">https://aclanthology.org/P07-2045/</a>.
+            </li>
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="banerjeeMETEORAutomaticMetric2005">
+              <span itemprop="author">Satanjeev Banerjee, Alon Lavie</span>. <time datetime="2005" itemprop="datePublished">2005</time>. "<span itemprop="name">METEOR: An Automatic Metric for MT Evaluation with Improved Correlation with Human Judgments</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Proceedings of the Workshop on Intrinsic and Extrinsic Evaluation Measures for Machine Translation And/or Summarization@acl 2005, Ann Arbor, Michigan, USA, June 29, 2005</i></span>, edited by Jade Goldstein, Alon Lavie, Chin-Yew Lin, and Clare R. Voss, 65–72. Association for Computational Linguistics. <a itemprop="sameAs" href="https://aclanthology.org/W05-0909/">https://aclanthology.org/W05-0909/</a>.
+            </li>
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="denkowskiMeteorUniversalLanguage2014" itemid="doi:10.3115/v1/w14-3348">
+              <span itemprop="author">Michael J. Denkowski, Alon Lavie</span>. <time datetime="2014" itemprop="datePublished">2014</time>. "<span itemprop="name">Meteor Universal: Language Specific Translation Evaluation for Any Target Language</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Proceedings of the Ninth Workshop on Statistical Machine Translation, WMT@ACL 2014, June 26-27, 2014, Baltimore, Maryland, USA</i></span>, 376–80. The Association for Computer Linguistics. <a itemprop="sameAs" href="https://doi.org/10.3115/v1/w14-3348">DOI</a>.
+            </li>
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="linROUGEPackageAutomatic2004">
+              <span itemprop="author">Chin-Yew Lin</span>. <time datetime="2004" itemprop="datePublished">July 2004</time>. "<span itemprop="name">ROUGE: A Package for Automatic Evaluation of Summaries</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Text Summarization Branches Out</i></span>, 74–81. Barcelona, Spain: Association for Computational Linguistics. <a itemprop="sameAs" href="https://aclanthology.org/W04-1013">https://aclanthology.org/W04-1013</a>.
+            </li>
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="cerUniversalSentenceEncoder2018">
+              <span itemprop="author">Daniel Cer, Yinfei Yang, Sheng-yi Kong, Nan Hua, Nicole Limtiaco, Rhomni St John, Noah Constant, et al.</span>. <time datetime="2018" itemprop="datePublished">2018</time>. "<span itemprop="name">Universal Sentence Encoder</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Corr</i></span> abs/1803.11175. <a itemprop="sameAs" href="http://arxiv.org/abs/1803.11175">http://arxiv.org/abs/1803.11175</a>.
+            </li>
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="zhangBERTScoreEvaluatingText2020" itemid="doi:10.48550/arXiv.1904.09675">
+              <span itemprop="author">Tianyi Zhang, Varsha Kishore, Felix Wu, Kilian Q. Weinberger, Yoav Artzi</span>. <time datetime="2020" itemprop="datePublished">February 24, 2020</time>. "<span itemprop="name">Bertscore: Evaluating Text Generation with BERT</span>". arXiv. <a itemprop="sameAs" href="https://doi.org/10.48550/arXiv.1904.09675">DOI</a>.
+            </li>
+          </ol>
         </div>
-      </article>
-      <h3>Comments</h3>
-      <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
-      <section id="isso-thread"></section><br>
-      <a href="/notes#semantic_similarity"><b>← Back to Notes</b></a>
-      <hr>
-    </main>
-    <footer class="footer container h-10 text-center">
-      <ul>
-        <li class="inline-block list-none">
-          <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="/img/RSS.svg" alt="RSS feed icon"></a>
-        </li>
-        <li class="before:content-['•'] inline-block">
-          <a class="text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
-        </li>
-        <li class="before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block">© Hugo Cisneros 2022</li>
-      </ul>
-    </footer>
-  </div>
+        <div class="text-center" style="font-variant-caps:all-small-caps">
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/semantic_similarity/"><time itemprop="datePublished" class="dt-published" datetime="2022-08-04T13:42:00+0200">04/08/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+        </div>
+      </div>
+    </article>
+    <h3>Comments</h3>
+    <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
+    <section id="isso-thread"></section><br>
+    <a href="/notes#semantic_similarity"><b>← Back to Notes</b></a>
+    <hr>
+  </main>
+  <footer class="footer container h-10 text-center">
+    <ul class="pl-0">
+      <li class="first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="https://hugocisneros.com/img/RSS.svg" alt="RSS feed icon"></a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="ml-2 text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block list-none"><span class="ml-2">© Hugo Cisneros 2022</span></li>
+    </ul>
+  </footer>
   <link rel="stylesheet" href="/js/katex/katex.min.css">
   <script src="/js/katex/katex.min.js"></script> 
   <script src="/js/katex/contrib/auto-render.min.js"></script> 

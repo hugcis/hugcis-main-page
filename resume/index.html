@@ -27,364 +27,362 @@
   <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
   <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
   <script>
-  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode()
+  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
 </head>
 <body>
-  <div class="wrapper">
-    <header class="header">
-      <nav>
-        <div class="container flex flex-wrap justify-between items-center mx-auto">
-          <div class="nav-main my-2.5">
-            <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
-          </div><button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
-          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul class="grid grid-flow-col items-center justify-between text-lg my-2.5">
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
-              </li>
-              <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="/img/dark_mode.svg"></button></li>
-            </ul>
-          </div>
+  <header class="md:px-0 px-2">
+    <nav>
+      <div class="container flex flex-wrap justify-between items-center mx-auto">
+        <div class="nav-main my-2.5">
+          <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
+        </div><button type="button" onclick="toggleMenu()" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul class="grid md:grid-flow-col items-center justify-between text-lg my-2.5">
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
+            </li>
+            <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="https://hugocisneros.com/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="https://hugocisneros.com/img/dark_mode.svg"></button></li>
+          </ul>
         </div>
-      </nav>
-    </header>
-    <main class="content h-card container mt-2 m-auto leading-loose" role="main">
-      <h1 id="resume">Resume</h1>
-      <p><strong>For a PDF version, see <a href="/resume/cv.pdf">here</a></strong></p>
-      <hr>
-      <h2 class="sectionHead"><a id="x1-10001"></a>Personal Data</h2>
-      <div class="tabular">
-        <table id="TBL-1" class="tabular no-border">
-          <colgroup id="TBL-1-1g">
-            <col id="TBL-1-1">
-            <col id="TBL-1-2">
-          </colgroup>
-          <colgroup id="TBL-1-3g">
-            <col id="TBL-1-4">
-          </colgroup>
-          <tr style="vertical-align:baseline" id="TBL-1-1-">
-            <td style="white-space:nowrap;text-align:right" id="TBL-1-1-1" class="td11">Website:</td>
-            <td style="white-space:nowrap;text-align:left" id="TBL-1-1-2" class="td11">
-              <a href="https://hugocisneros.com">https://hugocisneros.com</a>
-            </td>
-            <td style="white-space:nowrap;text-align:left" id="TBL-1-1-4" class="td11">
-              <a href="https://github.com/hugcis/">GitHub</a>
-            </td>
-          </tr>
-          <tr style="vertical-align:baseline" id="TBL-1-2-">
-            <td style="white-space:nowrap;text-align:right" id="TBL-1-2-1" class="td11">LinkedIn:</td>
-            <td style="white-space:nowrap;text-align:left" id="TBL-1-2-2" class="td11">
-              <a href="https://www.linkedin.com/in/hugo-cisneros-04347212b/">https://www.linkedin.com/in/hugo-cisneros-04347212b/</a>
-            </td>
-          </tr>
-        </table>
-      </div><br>
-      <a id="x1-1001r1"></a>
-      <h2 class="sectionHead"><a id="x1-20002"></a>Work Experience</h2>
-      <div class="tabular">
-        <table id="TBL-2" class="tabular no-border">
-          <colgroup id="TBL-2-1g">
-            <col id="TBL-2-1" style="width:15%;border-right:1px solid #ddd">
-          </colgroup>
-          <colgroup id="TBL-2-2g">
-            <col id="TBL-2-2">
-          </colgroup>
-          <tr style="vertical-align:baseline" id="TBL-2-1-">
-            <td style="white-space:normal;text-align:left;font-size:.85rem" id="TBL-2-1-1" class="td11">
-              <p>Apr - Sep 2019</p>
-            </td>
-            <td style="white-space:normal;text-align:left" id="TBL-2-1-2" class="td11">
-              <p><b>CIIRC (Czech Institute of Informatics, Robotics and Cybernetics)</b> <i>Research Intern</i>, Prague</p>
-              <p class="cv-description" style="font-size:.85rem;margin-top:5px">Under the supervision of Tomas Mikolov (Facebook AI). Studied emergence, complexity and spontaneous organization in complex systems and their applications to Artificial intelligence.</p>
-            </td>
-          </tr>
-          <tr class="vspace" style="font-size:1pt">
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr style="vertical-align:baseline;border-top:1px solid #ddd" id="TBL-003-10-">
-            <td></td>
-          </tr>
-          <tr style="vertical-align:baseline" id="TBL-02-6-">
-            <td style="white-space:normal;text-align:left;font-size:.85rem" id="TBL-02-6-1" class="td11">
-              <p>Mar - Sep 2018</p>
-            </td>
-            <td style="white-space:normal;text-align:left" id="TBL-02-6-2" class="td11">
-              <p><b>INRIA and CNRS (LIMSI)</b> <i>Research Intern</i>, Paris</p>
-              <p class="cv-description" style="font-size:.85rem;margin-top:5px">Under the supervision of Xavier Tannier and Ioana Manolescu. Built a software for extracting and integrating multiple data sources with <b>NLP and data processing algorithms</b> for data journalism. Worked with journalists from <a href="https://www.lemonde.fr/les-decodeurs/">Le Monde (Les Decodeurs)</a> on automating their data processing pipelines and using NLP for their investigations. Reviewed literature on <b>machine learning in graphs</b>, <b>automatic knowledge base construction</b> and <b>natural language processing for fact checking</b>.</p>
-            </td>
-          </tr>
-          <tr class="vspace" style="font-size:1pt">
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr style="vertical-align:baseline;border-top:1px solid #ddd" id="TBL-003-10-">
-            <td></td>
-          </tr>
-          <tr style="vertical-align:baseline" id="TBL-002-11-">
-            <td style="white-space:normal;text-align:left;font-size:.85rem" id="TBL-002-11-1" class="td11">
-              <p>Jun - Sep 2017 and (Part-time) Oct 2017 - Mar 2018</p>
-            </td>
-            <td style="white-space:normal;text-align:left" id="TBL-002-11-2" class="td11">
-              <p><b><a href="https://partechpartners.com/companies/aidenai/">Aiden.ai</a> (start-up, acquired by Twitter)</b> <i>Software engineering and Machine Learning Research Intern</i>, London</p>
-              <p class="cv-description" style="font-size:.85rem;margin-top:5px">Worked on building an AI powered virtual colleague for Marketing analysts based on Natural Language Processing. Participated in implementing the chat interface and the Natural Language recognition system with <b>Javascript</b>. Implemented Machine learning algorithms with <b>Python</b> for predicting marketing data, classifying and clustering users.</p>
-            </td>
-          </tr>
-          <tr class="vspace" style="font-size:1pt">
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr style="vertical-align:baseline;border-top:1px solid #ddd" id="TBL-003-10-">
-            <td></td>
-          </tr>
-          <tr style="vertical-align:baseline" id="TBL-0002-16-">
-            <td style="white-space:normal;text-align:left;font-size:.85rem" id="TBL-0002-16-1" class="td11">
-              <p>Sep 2016 - Feb 2017</p>
-            </td>
-            <td style="white-space:normal;text-align:left" id="TBL-0002-16-2" class="td11">
-              <p><b>ENS Ulm, Kastler-Brossel Laboratory</b> <i>Research assistant</i>, Paris</p>
-              <p><b>Light control and propagation in amplified multimode fibers</b> (<a href="/pdf/light_control_propagation.pdf">report</a>)</p>
-              <p class="cv-description" style="font-size:.85rem;margin-top:5px">Implemented and optimized finite elements simulations with <b>Python</b> and <b>Matlab</b>. Performed high performance computing on scientific calculation clusters. Worked with a PhD candidate on building a tool for optimizing the propagation of a light beam in optical fibers.</p>
-            </td>
-          </tr>
-          <tr style="vertical-align:baseline" id="TBL-0002-18-">
-            <td style="white-space:normal;text-align:left" id="TBL-0002-18-1" class="td11"></td>
-            <td style="white-space:normal;text-align:left;font-size:.85rem" id="TBL-0002-18-2" class="td11"></td>
-          </tr>
-        </table>
-      </div><a id="x1-2001r2"></a>
-      <h2 class="sectionHead"><a id="x1-30003"></a>Education</h2>
-      <div class="tabular">
-        <table id="TBL-3" class="tabular no-border">
-          <colgroup id="TBL-3-1g">
-            <col id="TBL-3-1" style="width:15%;border-right:1px solid #ddd">
-            <col id="TBL-3-2">
-          </colgroup>
-          <tr style="vertical-align:baseline" id="TBL-3-1-">
-            <td style="white-space:normal;text-align:left;font-size:.85rem" id="TBL-3-1-1" class="td11">
-              <p>Nov 2019 - <i>Current</i></p>
-            </td>
-            <td style="white-space:normal;text-align:left" id="TBL-3-1-2" class="td11">
-              <p>PhD Student <b>INRIA, CIIRC CTU<a id="x1-3001f1"></a></b> , Paris & Prague</p>
-              <p class="cv-description" style="font-size:.85rem;margin-top:5px"><b>Unsupervised learning with Complex Systems and Evolution</b></p>
-            </td>
-          </tr>
-          <tr class="vspace" style="font-size:1pt">
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr style="vertical-align:baseline;border-top:1px solid #ddd" id="TBL-003-10-">
-            <td></td>
-          </tr>
-          <tr style="vertical-align:baseline" id="TBL-03-6-">
-            <td style="white-space:normal;text-align:left;font-size:.85rem" id="TBL-03-6-1" class="td11">
-              <p>Sep 2018 - Sep 2019</p>
-            </td>
-            <td style="white-space:normal;text-align:left" id="TBL-03-6-2" class="td11">
-              <p>MVA Master in Machine Learning and Applied Mathematics, <b>ENS Paris Saclay</b>, Paris</p>
-              <p class="cv-description" style="font-size:.85rem;margin-top:5px">Relevant Coursework: Convex Optimization, Probabilistic Graphical Models, Computer Vision, Reinforcement Learning, Deep Learning, Speech and Natural language processing, Kernel Methods, Biostatistics, Theoretical Foundations of Deep Learning</p>
-            </td>
-          </tr>
-          <tr class="vspace" style="font-size:1pt">
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr style="vertical-align:baseline;border-top:1px solid #ddd" id="TBL-003-10-">
-            <td></td>
-          </tr>
-          <tr style="vertical-align:baseline" id="TBL-003-11-">
-            <td style="white-space:normal;text-align:left;font-size:.85rem" id="TBL-003-11-1" class="td11">
-              <p>Sep 2015 - Sep 2018</p>
-            </td>
-            <td style="white-space:normal;text-align:left" id="TBL-003-11-2" class="td11">
-              <p>Master of Science in Engineering, <b>Mines ParisTech</b>, Paris</p>
-              <p class="cv-description" style="font-size:.85rem;margin-top:5px">Specialization: Computer Science - (3.7 GPA) Relevant Coursework: Machine Learning, Probabilities, Statistics, Programming</p>
-            </td>
-          </tr>
-          <tr class="vspace" style="font-size:1pt">
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr style="vertical-align:baseline;border-top:1px solid #ddd" id="TBL-003-10-">
-            <td></td>
-          </tr>
-          <tr style="vertical-align:baseline" id="TBL-0003-17-">
-            <td style="white-space:normal;text-align:left;font-size:.85rem" id="TBL-0003-17-1" class="td11">
-              <p>Sep 2013 - Aug 2015</p>
-            </td>
-            <td style="white-space:normal;text-align:left" id="TBL-0003-17-2" class="td11">
-              <p>Preparatory class for <i>Grandes Ecoles</i> <b>Lycée Stanislas</b> (Paris) MPSI and MP*</p>
-              <p class="cv-description" style="font-size:.85rem;margin-top:5px">Bachelor’s Degree in Mathematics and Physics, national competitive exam for entering engineering school.</p>
-            </td>
-          </tr>
-          <tr class="vspace" style="font-size:1pt">
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr style="vertical-align:baseline;border-top:1px solid #ddd" id="TBL-003-10-">
-            <td></td>
-          </tr>
-          <tr style="vertical-align:baseline" id="TBL-00003-22-">
-            <td style="white-space:normal;text-align:left;font-size:.85rem" id="TBL-00003-22-1" class="td11">
-              <p>Aug 2013</p>
-            </td>
-            <td style="white-space:normal;text-align:left" id="TBL-00003-22-2" class="td11">
-              <p>Scientific Baccalauréat (High school diploma in Maths, Physics and Life Sciences) - High distinction</p>
-            </td>
-          </tr>
-        </table>
-      </div><a id="x1-3002r3"></a>
-      <h2 class="sectionHead"><a id="x1-40004"></a>Publications</h2>
-      <div class="tabular">
-        <table id="TBL-4" class="tabular no-border">
-          <colgroup id="TBL-4-1g">
-            <col id="TBL-4-1">
-          </colgroup>
-          <tr style="vertical-align:baseline" id="TBL-4-1-">
-            <td style="white-space:normal;text-align:left" id="TBL-4-1-1" class="td11">
-              <p>Cisneros, H., Sivic, J. & Mikolov, T. <b>Evolving Structures in Complex Systems</b>. in 2019 IEEE Symposium Series on Computational Intelligence (SSCI) 230–237 (IEEE, 2019).</p>
-            </td>
-          </tr>
-          <tr style="vertical-align:baseline" id="TBL-4-2-">
-            <td style="white-space:normal;text-align:left" id="TBL-4-2-1" class="td11"></td>
-          </tr>
-          <tr style="vertical-align:baseline" id="TBL-4-3-">
-            <td style="white-space:normal;text-align:left" id="TBL-4-3-1" class="td11">
-              <p>Cisneros, H., Sivic, J. & Mikolov, T. <b>Visualizing computation in large-scale cellular automata</b>. Artificial Life Conference Proceedings 32, 239–247 (2020).</p>
-            </td>
-          </tr>
-        </table>
-      </div><br>
-      <a id="x1-4001r4"></a>
-      <h2 class="sectionHead"><a id="x1-50005"></a>Projects</h2>
-      <div class="tabular">
-        For a more complete list see my <a href="/projects">projects page</a>
-        <table id="TBL-5" class="tabular no-border">
-          <colgroup id="TBL-5-1g">
-            <col id="TBL-5-1" style="width:15%;border-right:1px solid #ddd">
-            <col id="TBL-5-2">
-          </colgroup>
-          <tr style="vertical-align:baseline" id="TBL-5-1-">
-            <td style="white-space:normal;text-align:left;font-size:.85rem" id="TBL-5-1-1" class="td11">
-              <p>Jun-Aug 2018</p>
-            </td>
-            <td style="white-space:normal;text-align:left" id="TBL-5-1-2" class="td11">
-              <p>Participated in the n2c2 shared task of Harvard Medical School Cohort Selection for Clinical Trials in a joint team from AP-HP and LIMSI. Implemented <b>weakly-supervised and transfer learning methods for Medical NLP</b> (Keras). Finished 2nd among 30 teams. (<a href="https://arxiv.org/pdf/1903.07879.pdf">preprint</a>)</p>
-            </td>
-          </tr>
-          <tr class="vspace" style="font-size:1pt">
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr style="vertical-align:baseline" id="TBL-5-2-">
-            <td style="white-space:normal;text-align:left;font-size:.85rem" id="TBL-5-2-1" class="td11">
-              <p>Jan 2018</p>
-            </td>
-            <td style="white-space:normal;text-align:left" id="TBL-5-2-2" class="td11">
-              <p>Built a Machine Learning based tool for discovering and matching similar arXiv papers based on similarity measures including <b>word embeddings-based similarities</b> of their abstract and <b>co-authorship graph distance</b>.</p>
-            </td>
-          </tr>
-          <tr class="vspace" style="font-size:1pt">
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr style="vertical-align:baseline" id="TBL-5-3-">
-            <td style="white-space:normal;text-align:left;font-size:.85rem" id="TBL-5-3-1" class="td11">
-              <p>Feb 2017</p>
-            </td>
-            <td style="white-space:normal;text-align:left" id="TBL-5-3-2" class="td11">
-              <p>Implemented a multi-currency blockchain in Python with a team of 9 people (Cryptography, network programming, team software development)</p>
-            </td>
-          </tr>
-        </table>
-      </div><br>
-      <a id="x1-5001r5"></a>
-      <h2 class="sectionHead"><a id="x1-60006"></a>Languages</h2>
-      <div class="tabular">
-        <table id="TBL-6" class="tabular no-border">
-          <colgroup id="TBL-6-1g">
-            <col id="TBL-6-1">
-            <col id="TBL-6-2">
-          </colgroup>
-          <colgroup id="TBL-6-3g">
-            <col id="TBL-6-3">
-            <col id="TBL-6-4">
-          </colgroup>
-          <tr style="vertical-align:baseline" id="TBL-6-1-">
-            <td style="white-space:nowrap;text-align:right" id="TBL-6-1-1" class="td11">English:</td>
-            <td style="white-space:nowrap;text-align:left" id="TBL-6-1-2" class="td11">Fluent</td>
-            <td style="white-space:nowrap;text-align:right" id="TBL-6-1-3" class="td11">Spanish:</td>
-            <td style="white-space:nowrap;text-align:left" id="TBL-6-1-4" class="td11">Intermediate</td>
-          </tr>
-          <tr style="vertical-align:baseline" id="TBL-6-2-">
-            <td style="white-space:nowrap;text-align:right" id="TBL-6-2-1" class="td11">French:</td>
-            <td style="white-space:nowrap;text-align:left" id="TBL-6-2-2" class="td11">Mothertongue</td>
-            <td style="white-space:nowrap;text-align:right" id="TBL-6-2-3" class="td11">Japanese:</td>
-            <td style="white-space:nowrap;text-align:left" id="TBL-6-2-4" class="td11">School level</td>
-          </tr>
-          <tr style="vertical-align:baseline" id="TBL-6-3-">
-            <td style="white-space:nowrap;text-align:right" id="TBL-6-3-1" class="td11"></td>
-          </tr>
-        </table>
-      </div><a id="x1-6001r6"></a>
-      <h2 class="sectionHead"><a id="x1-70007"></a>Computer Skills</h2>
-      <div class="tabular">
-        <table id="TBL-7" class="tabular no-border">
-          <colgroup id="TBL-7-1g">
-            <col id="TBL-7-1">
-            <col id="TBL-7-2">
-          </colgroup>
-          <tr style="vertical-align:baseline" id="TBL-7-1-">
-            <td style="white-space:nowrap;text-align:right" id="TBL-7-1-1" class="td11">Advanced:</td>
-            <td style="white-space:normal;text-align:left" id="TBL-7-1-2" class="td11">
-              <p>Python (Tensorflow, Pytorch, Django), C, Matlab, Java, Javascript (Node.js, Typescript and Web), LaTeX</p>
-            </td>
-          </tr>
-          <tr style="vertical-align:baseline" id="TBL-7-2-">
-            <td style="white-space:nowrap;text-align:right" id="TBL-7-2-1" class="td11">Basic:</td>
-            <td style="white-space:normal;text-align:left" id="TBL-7-2-2" class="td11">
-              <p>Scala, Ruby, C++</p>
-            </td>
-          </tr>
-          <tr style="vertical-align:baseline" id="TBL-7-3-">
-            <td style="white-space:nowrap;text-align:right" id="TBL-7-3-1" class="td11"></td>
-          </tr>
-        </table>
-      </div><a id="x1-7001r7"></a>
-      <h2 class="sectionHead"><a id="x1-80008"></a>Interests and Activities</h2>
-      <ul class="itemize1">
-        <li class="itemize">Mathematics, Statistics and Probabilities</li>
-        <li class="itemize">Technology, Open-Source, Programming</li>
-        <li class="itemize">Running (weekly practise), Fencing, Piano, Guitar</li>
-      </ul>
-      <hr>
-    </main>
-    <footer class="footer container h-10 text-center">
-      <ul>
-        <li class="inline-block list-none">
-          <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="/img/RSS.svg" alt="RSS feed icon"></a>
-        </li>
-        <li class="before:content-['•'] inline-block">
-          <a class="text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
-        </li>
-        <li class="before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block">© Hugo Cisneros 2022</li>
-      </ul>
-    </footer>
-  </div>
+      </div>
+    </nav>
+  </header>
+  <main class="content h-card container mt-2 m-auto leading-loose md:px-0 px-2" role="main">
+    <h1 id="resume">Resume</h1>
+    <p><strong>For a PDF version, see <a href="/resume/cv.pdf">here</a></strong></p>
+    <hr>
+    <h2 class="sectionHead"><a id="x1-10001"></a>Personal Data</h2>
+    <div class="tabular">
+      <table id="TBL-1" class="tabular no-border">
+        <colgroup id="TBL-1-1g">
+          <col id="TBL-1-1">
+          <col id="TBL-1-2">
+        </colgroup>
+        <colgroup id="TBL-1-3g">
+          <col id="TBL-1-4">
+        </colgroup>
+        <tr style="vertical-align:baseline" id="TBL-1-1-">
+          <td style="white-space:nowrap;text-align:right" id="TBL-1-1-1" class="td11">Website:</td>
+          <td style="white-space:nowrap;text-align:left" id="TBL-1-1-2" class="td11">
+            <a href="https://hugocisneros.com">https://hugocisneros.com</a>
+          </td>
+          <td style="white-space:nowrap;text-align:left" id="TBL-1-1-4" class="td11">
+            <a href="https://github.com/hugcis/">GitHub</a>
+          </td>
+        </tr>
+        <tr style="vertical-align:baseline" id="TBL-1-2-">
+          <td style="white-space:nowrap;text-align:right" id="TBL-1-2-1" class="td11">LinkedIn:</td>
+          <td style="white-space:nowrap;text-align:left" id="TBL-1-2-2" class="td11">
+            <a href="https://www.linkedin.com/in/hugo-cisneros-04347212b/">https://www.linkedin.com/in/hugo-cisneros-04347212b/</a>
+          </td>
+        </tr>
+      </table>
+    </div><br>
+    <a id="x1-1001r1"></a>
+    <h2 class="sectionHead"><a id="x1-20002"></a>Work Experience</h2>
+    <div class="tabular">
+      <table id="TBL-2" class="tabular no-border">
+        <colgroup id="TBL-2-1g">
+          <col id="TBL-2-1" style="width:15%;border-right:1px solid #ddd">
+        </colgroup>
+        <colgroup id="TBL-2-2g">
+          <col id="TBL-2-2">
+        </colgroup>
+        <tr style="vertical-align:baseline" id="TBL-2-1-">
+          <td style="white-space:normal;text-align:left;font-size:.85rem" id="TBL-2-1-1" class="td11">
+            <p>Apr - Sep 2019</p>
+          </td>
+          <td style="white-space:normal;text-align:left" id="TBL-2-1-2" class="td11">
+            <p><b>CIIRC (Czech Institute of Informatics, Robotics and Cybernetics)</b> <i>Research Intern</i>, Prague</p>
+            <p class="cv-description" style="font-size:.85rem;margin-top:5px">Under the supervision of Tomas Mikolov (Facebook AI). Studied emergence, complexity and spontaneous organization in complex systems and their applications to Artificial intelligence.</p>
+          </td>
+        </tr>
+        <tr class="vspace" style="font-size:1pt">
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr style="vertical-align:baseline;border-top:1px solid #ddd" id="TBL-003-10-">
+          <td></td>
+        </tr>
+        <tr style="vertical-align:baseline" id="TBL-02-6-">
+          <td style="white-space:normal;text-align:left;font-size:.85rem" id="TBL-02-6-1" class="td11">
+            <p>Mar - Sep 2018</p>
+          </td>
+          <td style="white-space:normal;text-align:left" id="TBL-02-6-2" class="td11">
+            <p><b>INRIA and CNRS (LIMSI)</b> <i>Research Intern</i>, Paris</p>
+            <p class="cv-description" style="font-size:.85rem;margin-top:5px">Under the supervision of Xavier Tannier and Ioana Manolescu. Built a software for extracting and integrating multiple data sources with <b>NLP and data processing algorithms</b> for data journalism. Worked with journalists from <a href="https://www.lemonde.fr/les-decodeurs/">Le Monde (Les Decodeurs)</a> on automating their data processing pipelines and using NLP for their investigations. Reviewed literature on <b>machine learning in graphs</b>, <b>automatic knowledge base construction</b> and <b>natural language processing for fact checking</b>.</p>
+          </td>
+        </tr>
+        <tr class="vspace" style="font-size:1pt">
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr style="vertical-align:baseline;border-top:1px solid #ddd" id="TBL-003-10-">
+          <td></td>
+        </tr>
+        <tr style="vertical-align:baseline" id="TBL-002-11-">
+          <td style="white-space:normal;text-align:left;font-size:.85rem" id="TBL-002-11-1" class="td11">
+            <p>Jun - Sep 2017 and (Part-time) Oct 2017 - Mar 2018</p>
+          </td>
+          <td style="white-space:normal;text-align:left" id="TBL-002-11-2" class="td11">
+            <p><b><a href="https://partechpartners.com/companies/aidenai/">Aiden.ai</a> (start-up, acquired by Twitter)</b> <i>Software engineering and Machine Learning Research Intern</i>, London</p>
+            <p class="cv-description" style="font-size:.85rem;margin-top:5px">Worked on building an AI powered virtual colleague for Marketing analysts based on Natural Language Processing. Participated in implementing the chat interface and the Natural Language recognition system with <b>Javascript</b>. Implemented Machine learning algorithms with <b>Python</b> for predicting marketing data, classifying and clustering users.</p>
+          </td>
+        </tr>
+        <tr class="vspace" style="font-size:1pt">
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr style="vertical-align:baseline;border-top:1px solid #ddd" id="TBL-003-10-">
+          <td></td>
+        </tr>
+        <tr style="vertical-align:baseline" id="TBL-0002-16-">
+          <td style="white-space:normal;text-align:left;font-size:.85rem" id="TBL-0002-16-1" class="td11">
+            <p>Sep 2016 - Feb 2017</p>
+          </td>
+          <td style="white-space:normal;text-align:left" id="TBL-0002-16-2" class="td11">
+            <p><b>ENS Ulm, Kastler-Brossel Laboratory</b> <i>Research assistant</i>, Paris</p>
+            <p><b>Light control and propagation in amplified multimode fibers</b> (<a href="/pdf/light_control_propagation.pdf">report</a>)</p>
+            <p class="cv-description" style="font-size:.85rem;margin-top:5px">Implemented and optimized finite elements simulations with <b>Python</b> and <b>Matlab</b>. Performed high performance computing on scientific calculation clusters. Worked with a PhD candidate on building a tool for optimizing the propagation of a light beam in optical fibers.</p>
+          </td>
+        </tr>
+        <tr style="vertical-align:baseline" id="TBL-0002-18-">
+          <td style="white-space:normal;text-align:left" id="TBL-0002-18-1" class="td11"></td>
+          <td style="white-space:normal;text-align:left;font-size:.85rem" id="TBL-0002-18-2" class="td11"></td>
+        </tr>
+      </table>
+    </div><a id="x1-2001r2"></a>
+    <h2 class="sectionHead"><a id="x1-30003"></a>Education</h2>
+    <div class="tabular">
+      <table id="TBL-3" class="tabular no-border">
+        <colgroup id="TBL-3-1g">
+          <col id="TBL-3-1" style="width:15%;border-right:1px solid #ddd">
+          <col id="TBL-3-2">
+        </colgroup>
+        <tr style="vertical-align:baseline" id="TBL-3-1-">
+          <td style="white-space:normal;text-align:left;font-size:.85rem" id="TBL-3-1-1" class="td11">
+            <p>Nov 2019 - <i>Current</i></p>
+          </td>
+          <td style="white-space:normal;text-align:left" id="TBL-3-1-2" class="td11">
+            <p>PhD Student <b>INRIA, CIIRC CTU<a id="x1-3001f1"></a></b> , Paris & Prague</p>
+            <p class="cv-description" style="font-size:.85rem;margin-top:5px"><b>Unsupervised learning with Complex Systems and Evolution</b></p>
+          </td>
+        </tr>
+        <tr class="vspace" style="font-size:1pt">
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr style="vertical-align:baseline;border-top:1px solid #ddd" id="TBL-003-10-">
+          <td></td>
+        </tr>
+        <tr style="vertical-align:baseline" id="TBL-03-6-">
+          <td style="white-space:normal;text-align:left;font-size:.85rem" id="TBL-03-6-1" class="td11">
+            <p>Sep 2018 - Sep 2019</p>
+          </td>
+          <td style="white-space:normal;text-align:left" id="TBL-03-6-2" class="td11">
+            <p>MVA Master in Machine Learning and Applied Mathematics, <b>ENS Paris Saclay</b>, Paris</p>
+            <p class="cv-description" style="font-size:.85rem;margin-top:5px">Relevant Coursework: Convex Optimization, Probabilistic Graphical Models, Computer Vision, Reinforcement Learning, Deep Learning, Speech and Natural language processing, Kernel Methods, Biostatistics, Theoretical Foundations of Deep Learning</p>
+          </td>
+        </tr>
+        <tr class="vspace" style="font-size:1pt">
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr style="vertical-align:baseline;border-top:1px solid #ddd" id="TBL-003-10-">
+          <td></td>
+        </tr>
+        <tr style="vertical-align:baseline" id="TBL-003-11-">
+          <td style="white-space:normal;text-align:left;font-size:.85rem" id="TBL-003-11-1" class="td11">
+            <p>Sep 2015 - Sep 2018</p>
+          </td>
+          <td style="white-space:normal;text-align:left" id="TBL-003-11-2" class="td11">
+            <p>Master of Science in Engineering, <b>Mines ParisTech</b>, Paris</p>
+            <p class="cv-description" style="font-size:.85rem;margin-top:5px">Specialization: Computer Science - (3.7 GPA) Relevant Coursework: Machine Learning, Probabilities, Statistics, Programming</p>
+          </td>
+        </tr>
+        <tr class="vspace" style="font-size:1pt">
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr style="vertical-align:baseline;border-top:1px solid #ddd" id="TBL-003-10-">
+          <td></td>
+        </tr>
+        <tr style="vertical-align:baseline" id="TBL-0003-17-">
+          <td style="white-space:normal;text-align:left;font-size:.85rem" id="TBL-0003-17-1" class="td11">
+            <p>Sep 2013 - Aug 2015</p>
+          </td>
+          <td style="white-space:normal;text-align:left" id="TBL-0003-17-2" class="td11">
+            <p>Preparatory class for <i>Grandes Ecoles</i> <b>Lycée Stanislas</b> (Paris) MPSI and MP*</p>
+            <p class="cv-description" style="font-size:.85rem;margin-top:5px">Bachelor’s Degree in Mathematics and Physics, national competitive exam for entering engineering school.</p>
+          </td>
+        </tr>
+        <tr class="vspace" style="font-size:1pt">
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr style="vertical-align:baseline;border-top:1px solid #ddd" id="TBL-003-10-">
+          <td></td>
+        </tr>
+        <tr style="vertical-align:baseline" id="TBL-00003-22-">
+          <td style="white-space:normal;text-align:left;font-size:.85rem" id="TBL-00003-22-1" class="td11">
+            <p>Aug 2013</p>
+          </td>
+          <td style="white-space:normal;text-align:left" id="TBL-00003-22-2" class="td11">
+            <p>Scientific Baccalauréat (High school diploma in Maths, Physics and Life Sciences) - High distinction</p>
+          </td>
+        </tr>
+      </table>
+    </div><a id="x1-3002r3"></a>
+    <h2 class="sectionHead"><a id="x1-40004"></a>Publications</h2>
+    <div class="tabular">
+      <table id="TBL-4" class="tabular no-border">
+        <colgroup id="TBL-4-1g">
+          <col id="TBL-4-1">
+        </colgroup>
+        <tr style="vertical-align:baseline" id="TBL-4-1-">
+          <td style="white-space:normal;text-align:left" id="TBL-4-1-1" class="td11">
+            <p>Cisneros, H., Sivic, J. & Mikolov, T. <b>Evolving Structures in Complex Systems</b>. in 2019 IEEE Symposium Series on Computational Intelligence (SSCI) 230–237 (IEEE, 2019).</p>
+          </td>
+        </tr>
+        <tr style="vertical-align:baseline" id="TBL-4-2-">
+          <td style="white-space:normal;text-align:left" id="TBL-4-2-1" class="td11"></td>
+        </tr>
+        <tr style="vertical-align:baseline" id="TBL-4-3-">
+          <td style="white-space:normal;text-align:left" id="TBL-4-3-1" class="td11">
+            <p>Cisneros, H., Sivic, J. & Mikolov, T. <b>Visualizing computation in large-scale cellular automata</b>. Artificial Life Conference Proceedings 32, 239–247 (2020).</p>
+          </td>
+        </tr>
+      </table>
+    </div><br>
+    <a id="x1-4001r4"></a>
+    <h2 class="sectionHead"><a id="x1-50005"></a>Projects</h2>
+    <div class="tabular">
+      For a more complete list see my <a href="/projects">projects page</a>
+      <table id="TBL-5" class="tabular no-border">
+        <colgroup id="TBL-5-1g">
+          <col id="TBL-5-1" style="width:15%;border-right:1px solid #ddd">
+          <col id="TBL-5-2">
+        </colgroup>
+        <tr style="vertical-align:baseline" id="TBL-5-1-">
+          <td style="white-space:normal;text-align:left;font-size:.85rem" id="TBL-5-1-1" class="td11">
+            <p>Jun-Aug 2018</p>
+          </td>
+          <td style="white-space:normal;text-align:left" id="TBL-5-1-2" class="td11">
+            <p>Participated in the n2c2 shared task of Harvard Medical School Cohort Selection for Clinical Trials in a joint team from AP-HP and LIMSI. Implemented <b>weakly-supervised and transfer learning methods for Medical NLP</b> (Keras). Finished 2nd among 30 teams. (<a href="https://arxiv.org/pdf/1903.07879.pdf">preprint</a>)</p>
+          </td>
+        </tr>
+        <tr class="vspace" style="font-size:1pt">
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr style="vertical-align:baseline" id="TBL-5-2-">
+          <td style="white-space:normal;text-align:left;font-size:.85rem" id="TBL-5-2-1" class="td11">
+            <p>Jan 2018</p>
+          </td>
+          <td style="white-space:normal;text-align:left" id="TBL-5-2-2" class="td11">
+            <p>Built a Machine Learning based tool for discovering and matching similar arXiv papers based on similarity measures including <b>word embeddings-based similarities</b> of their abstract and <b>co-authorship graph distance</b>.</p>
+          </td>
+        </tr>
+        <tr class="vspace" style="font-size:1pt">
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr style="vertical-align:baseline" id="TBL-5-3-">
+          <td style="white-space:normal;text-align:left;font-size:.85rem" id="TBL-5-3-1" class="td11">
+            <p>Feb 2017</p>
+          </td>
+          <td style="white-space:normal;text-align:left" id="TBL-5-3-2" class="td11">
+            <p>Implemented a multi-currency blockchain in Python with a team of 9 people (Cryptography, network programming, team software development)</p>
+          </td>
+        </tr>
+      </table>
+    </div><br>
+    <a id="x1-5001r5"></a>
+    <h2 class="sectionHead"><a id="x1-60006"></a>Languages</h2>
+    <div class="tabular">
+      <table id="TBL-6" class="tabular no-border">
+        <colgroup id="TBL-6-1g">
+          <col id="TBL-6-1">
+          <col id="TBL-6-2">
+        </colgroup>
+        <colgroup id="TBL-6-3g">
+          <col id="TBL-6-3">
+          <col id="TBL-6-4">
+        </colgroup>
+        <tr style="vertical-align:baseline" id="TBL-6-1-">
+          <td style="white-space:nowrap;text-align:right" id="TBL-6-1-1" class="td11">English:</td>
+          <td style="white-space:nowrap;text-align:left" id="TBL-6-1-2" class="td11">Fluent</td>
+          <td style="white-space:nowrap;text-align:right" id="TBL-6-1-3" class="td11">Spanish:</td>
+          <td style="white-space:nowrap;text-align:left" id="TBL-6-1-4" class="td11">Intermediate</td>
+        </tr>
+        <tr style="vertical-align:baseline" id="TBL-6-2-">
+          <td style="white-space:nowrap;text-align:right" id="TBL-6-2-1" class="td11">French:</td>
+          <td style="white-space:nowrap;text-align:left" id="TBL-6-2-2" class="td11">Mothertongue</td>
+          <td style="white-space:nowrap;text-align:right" id="TBL-6-2-3" class="td11">Japanese:</td>
+          <td style="white-space:nowrap;text-align:left" id="TBL-6-2-4" class="td11">School level</td>
+        </tr>
+        <tr style="vertical-align:baseline" id="TBL-6-3-">
+          <td style="white-space:nowrap;text-align:right" id="TBL-6-3-1" class="td11"></td>
+        </tr>
+      </table>
+    </div><a id="x1-6001r6"></a>
+    <h2 class="sectionHead"><a id="x1-70007"></a>Computer Skills</h2>
+    <div class="tabular">
+      <table id="TBL-7" class="tabular no-border">
+        <colgroup id="TBL-7-1g">
+          <col id="TBL-7-1">
+          <col id="TBL-7-2">
+        </colgroup>
+        <tr style="vertical-align:baseline" id="TBL-7-1-">
+          <td style="white-space:nowrap;text-align:right" id="TBL-7-1-1" class="td11">Advanced:</td>
+          <td style="white-space:normal;text-align:left" id="TBL-7-1-2" class="td11">
+            <p>Python (Tensorflow, Pytorch, Django), C, Matlab, Java, Javascript (Node.js, Typescript and Web), LaTeX</p>
+          </td>
+        </tr>
+        <tr style="vertical-align:baseline" id="TBL-7-2-">
+          <td style="white-space:nowrap;text-align:right" id="TBL-7-2-1" class="td11">Basic:</td>
+          <td style="white-space:normal;text-align:left" id="TBL-7-2-2" class="td11">
+            <p>Scala, Ruby, C++</p>
+          </td>
+        </tr>
+        <tr style="vertical-align:baseline" id="TBL-7-3-">
+          <td style="white-space:nowrap;text-align:right" id="TBL-7-3-1" class="td11"></td>
+        </tr>
+      </table>
+    </div><a id="x1-7001r7"></a>
+    <h2 class="sectionHead"><a id="x1-80008"></a>Interests and Activities</h2>
+    <ul class="itemize1">
+      <li class="itemize">Mathematics, Statistics and Probabilities</li>
+      <li class="itemize">Technology, Open-Source, Programming</li>
+      <li class="itemize">Running (weekly practise), Fencing, Piano, Guitar</li>
+    </ul>
+    <hr>
+  </main>
+  <footer class="footer container h-10 text-center">
+    <ul class="pl-0">
+      <li class="first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="https://hugocisneros.com/img/RSS.svg" alt="RSS feed icon"></a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="ml-2 text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block list-none"><span class="ml-2">© Hugo Cisneros 2022</span></li>
+    </ul>
+  </footer>
   <script data-goatcounter="https://stats.hugocisneros.com/count" async src="//stats.hugocisneros.com/count.js"></script>
 </body>
 </html>

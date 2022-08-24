@@ -27,135 +27,133 @@
   <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
   <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
   <script>
-  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode()
+  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
 </head>
 <body>
-  <div class="wrapper">
-    <header class="header">
-      <nav>
-        <div class="container flex flex-wrap justify-between items-center mx-auto">
-          <div class="nav-main my-2.5">
-            <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
-          </div><button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
-          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul class="grid grid-flow-col items-center justify-between text-lg my-2.5">
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
+  <header class="md:px-0 px-2">
+    <nav>
+      <div class="container flex flex-wrap justify-between items-center mx-auto">
+        <div class="nav-main my-2.5">
+          <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
+        </div><button type="button" onclick="toggleMenu()" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul class="grid md:grid-flow-col items-center justify-between text-lg my-2.5">
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
+            </li>
+            <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="https://hugocisneros.com/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="https://hugocisneros.com/img/dark_mode.svg"></button></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="content h-card container mt-2 m-auto leading-loose md:px-0 px-2" role="main">
+    <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+      <div class="bg-zinc-100 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
+        <h1 class="article-title p-name" itemprop="name">Unconventional computing</h1>
+        <div class="article-content e-content p-name" itemprop="articleBody">
+          <dl>
+            <dt>papers</dt>
+            <dd>
+              (<a href="#stepneyNonclassicalComputationDynamical2012"><cite itemprop="citation" itemscope itemid="doi:10.1007/978-3-540-92910-9_59">Stepney 2012</cite></a>)
+            </dd>
+          </dl>
+          <h2 id="molecular-computing">Molecular computing</h2>
+          <p>(<a href="#kompaMolecularLogicGate2001"><cite itemprop="citation" itemscope itemid="doi:10.1073/pnas.98.2.410">Kompa, Levine 2001</cite></a>)</p>
+          <h2 id="dna-computing">DNA computing</h2>
+          <p>(<a href="#zhangReversibleFluorescentDNA2012"><cite itemprop="citation" itemscope itemid="doi:10.1039/C2CC17906G">Zhang, Ye 2012</cite></a>)</p>
+          <h2 id="light-computing">Light computing</h2>
+          <p>(<a href="#pittmanExperimentalControlledNOTLogic2003"><cite itemprop="citation" itemscope itemid="doi:10.1103/PhysRevA.68.032316">Pittman et al. 2003</cite></a>)</p>
+          <h2 id="computing-in-physical-material">Computing in physical material</h2>
+          <h3 id="computing">Computing</h3>
+          <p>(<a href="#fangPatternRecognitionMaterials2016"><cite itemprop="citation" itemscope itemid="doi:10.1126/sciadv.1601114">Fang et al. 2016</cite></a>)</p>
+          <p>(<a href="#sternSupervisedLearningPhysical2021"><cite itemprop="citation" itemscope itemid="doi:10.1103/PhysRevX.11.021045">Stern et al. 2021</cite></a>)</p>
+          <h3 id="storing-and-encoding-memory">Storing and encoding memory</h3>
+          <p>(<a href="#pashineDirectedAgingMemory2019"><cite itemprop="citation" itemscope itemid="doi:10.1126/sciadv.aax4215">Pashine et al. 2019</cite></a>)</p>
+          <p>(<a href="#chenReprogrammableMechanicalMetamaterial2021"><cite itemprop="citation" itemscope itemid="doi:10.1038/s41586-020-03123-5">Chen et al. 2021</cite></a>)</p>
+          <h2 id="bibliography">Bibliography</h2>
+          <ol class="biblio-list">
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="stepneyNonclassicalComputationDynamical2012" itemid="doi:10.1007/978-3-540-92910-9_59">
+              <span itemprop="author">Susan Stepney</span>. <time datetime="2012" itemprop="datePublished">2012</time>. "<span itemprop="name">Nonclassical Computation — A Dynamical Systems Perspective</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Handbook of Natural Computing</i></span>, edited by Grzegorz Rozenberg, Thomas Bäck, and Joost N. Kok, 1979–2025. Berlin, Heidelberg: Springer Berlin Heidelberg. <a itemprop="sameAs" href="https://doi.org/10.1007/978-3-540-92910-9_59">DOI</a>.
+            </li>
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="kompaMolecularLogicGate2001" itemid="doi:10.1073/pnas.98.2.410">
+              <span itemprop="author">K. L. Kompa, R. D. Levine</span>. <time datetime="2001" itemprop="datePublished">January 16, 2001</time>. "<span itemprop="name">A Molecular Logic Gate</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Proceedings of the National Academy of Sciences</i></span> 98 (2). Proceedings of the National Academy of Sciences:410–14. <a itemprop="sameAs" href="https://doi.org/10.1073/pnas.98.2.410">DOI</a>.
+            </li>
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="zhangReversibleFluorescentDNA2012" itemid="doi:10.1039/C2CC17906G">
+              <span itemprop="author">Min Zhang, Bang-Ce Ye</span>. <time datetime="2012" itemprop="datePublished">March 14, 2012</time>. "<span itemprop="name">A Reversible Fluorescent DNA Logic Gate Based on Graphene Oxide and Its Application for Iodide Sensing</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Chemical Communications</i></span> 48 (30). The Royal Society of Chemistry:3647–49. <a itemprop="sameAs" href="https://doi.org/10.1039/C2CC17906G">DOI</a>.
+            </li>
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="pittmanExperimentalControlledNOTLogic2003" itemid="doi:10.1103/PhysRevA.68.032316">
+              <span itemprop="author">T. B. Pittman, M. J. Fitch, B. C Jacobs, J. D. Franson</span>. <time datetime="2003" itemprop="datePublished">September 26, 2003</time>. "<span itemprop="name">Experimental Controlled-not Logic Gate for Single Photons in the Coincidence Basis</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Physical Review A</i></span> 68 (3). American Physical Society:032316. <a itemprop="sameAs" href="https://doi.org/10.1103/PhysRevA.68.032316">DOI</a>.
+            </li>
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="fangPatternRecognitionMaterials2016" itemid="doi:10.1126/sciadv.1601114">
+              <span itemprop="author">Yan Fang, Victor V. Yashin, Steven P. Levitan, Anna C. Balazs</span>. <time datetime="2016" itemprop="datePublished">September 2, 2016</time>. "<span itemprop="name">Pattern Recognition with “materials That Compute”</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Science Advances</i></span> 2 (9). American Association for the Advancement of Science:e1601114. <a itemprop="sameAs" href="https://doi.org/10.1126/sciadv.1601114">DOI</a>.
+            </li>
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="sternSupervisedLearningPhysical2021" itemid="doi:10.1103/PhysRevX.11.021045">
+              <span itemprop="author">Menachem Stern, Daniel Hexner, Jason W. Rocks, Andrea J. Liu</span>. <time datetime="2021" itemprop="datePublished">May 28, 2021</time>. "<span itemprop="name">Supervised Learning in Physical Networks: From Machine Learning to Learning Machines</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Physical Review X</i></span> 11 (2). American Physical Society:021045. <a itemprop="sameAs" href="https://doi.org/10.1103/PhysRevX.11.021045">DOI</a>.
+            </li>
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="pashineDirectedAgingMemory2019" itemid="doi:10.1126/sciadv.aax4215">
+              <span itemprop="author">Nidhi Pashine, Daniel Hexner, Andrea J. Liu, Sidney R. Nagel</span>. <time datetime="2019" itemprop="datePublished">December 20, 2019</time>. "<span itemprop="name">Directed Aging, Memory, and Nature’s Greed</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Science Advances</i></span> 5 (12). American Association for the Advancement of Science:eaax4215. <a itemprop="sameAs" href="https://doi.org/10.1126/sciadv.aax4215">DOI</a>.
+            </li>
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="chenReprogrammableMechanicalMetamaterial2021" itemid="doi:10.1038/s41586-020-03123-5">
+              <span itemprop="author">Tian Chen, Mark Pauly, Pedro M. Reis</span>. <time datetime="2021" itemprop="datePublished">January 2021</time>. "<span itemprop="name">A Reprogrammable Mechanical Metamaterial with Stable Memory</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Nature</i></span> 589 (7842). Nature Publishing Group:386–90. <a itemprop="sameAs" href="https://doi.org/10.1038/s41586-020-03123-5">DOI</a>.
+            </li>
+          </ol>
+        </div>
+        <div class="bl-section">
+          <h2>Links to this note</h2>
+          <div class="backlinks">
+            <ul>
+              <li>
+                <a href="/notes/amorphous_computing/">Amorphous computing</a>
               </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
+              <li>
+                <a href="/notes/chaos_computing/">Chaos computing</a>
               </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
+              <li>
+                <a href="/notes/computing_in_cellular_automata/">Computing in cellular automata</a>
               </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
+              <li>
+                <a href="/notes/reservoir_computing/">Reservoir computing</a>
               </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
-              </li>
-              <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="/img/dark_mode.svg"></button></li>
             </ul>
           </div>
         </div>
-      </nav>
-    </header>
-    <main class="content h-card container mt-2 m-auto leading-loose" role="main">
-      <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-        <div class="bg-zinc-100 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
-          <h1 class="article-title p-name" itemprop="name">Unconventional computing</h1>
-          <div class="article-content e-content p-name" itemprop="articleBody">
-            <dl>
-              <dt>papers</dt>
-              <dd>
-                (<a href="#stepneyNonclassicalComputationDynamical2012"><cite itemprop="citation" itemscope itemid="doi:10.1007/978-3-540-92910-9_59">Stepney 2012</cite></a>)
-              </dd>
-            </dl>
-            <h2 id="molecular-computing">Molecular computing</h2>
-            <p>(<a href="#kompaMolecularLogicGate2001"><cite itemprop="citation" itemscope itemid="doi:10.1073/pnas.98.2.410">Kompa, Levine 2001</cite></a>)</p>
-            <h2 id="dna-computing">DNA computing</h2>
-            <p>(<a href="#zhangReversibleFluorescentDNA2012"><cite itemprop="citation" itemscope itemid="doi:10.1039/C2CC17906G">Zhang, Ye 2012</cite></a>)</p>
-            <h2 id="light-computing">Light computing</h2>
-            <p>(<a href="#pittmanExperimentalControlledNOTLogic2003"><cite itemprop="citation" itemscope itemid="doi:10.1103/PhysRevA.68.032316">Pittman et al. 2003</cite></a>)</p>
-            <h2 id="computing-in-physical-material">Computing in physical material</h2>
-            <h3 id="computing">Computing</h3>
-            <p>(<a href="#fangPatternRecognitionMaterials2016"><cite itemprop="citation" itemscope itemid="doi:10.1126/sciadv.1601114">Fang et al. 2016</cite></a>)</p>
-            <p>(<a href="#sternSupervisedLearningPhysical2021"><cite itemprop="citation" itemscope itemid="doi:10.1103/PhysRevX.11.021045">Stern et al. 2021</cite></a>)</p>
-            <h3 id="storing-and-encoding-memory">Storing and encoding memory</h3>
-            <p>(<a href="#pashineDirectedAgingMemory2019"><cite itemprop="citation" itemscope itemid="doi:10.1126/sciadv.aax4215">Pashine et al. 2019</cite></a>)</p>
-            <p>(<a href="#chenReprogrammableMechanicalMetamaterial2021"><cite itemprop="citation" itemscope itemid="doi:10.1038/s41586-020-03123-5">Chen et al. 2021</cite></a>)</p>
-            <h2 id="bibliography">Bibliography</h2>
-            <ol class="biblio-list">
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="stepneyNonclassicalComputationDynamical2012" itemid="doi:10.1007/978-3-540-92910-9_59">
-                <span itemprop="author">Susan Stepney</span>. <time datetime="2012" itemprop="datePublished">2012</time>. "<span itemprop="name">Nonclassical Computation — A Dynamical Systems Perspective</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Handbook of Natural Computing</i></span>, edited by Grzegorz Rozenberg, Thomas Bäck, and Joost N. Kok, 1979–2025. Berlin, Heidelberg: Springer Berlin Heidelberg. <a itemprop="sameAs" href="https://doi.org/10.1007/978-3-540-92910-9_59">DOI</a>.
-              </li>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="kompaMolecularLogicGate2001" itemid="doi:10.1073/pnas.98.2.410">
-                <span itemprop="author">K. L. Kompa, R. D. Levine</span>. <time datetime="2001" itemprop="datePublished">January 16, 2001</time>. "<span itemprop="name">A Molecular Logic Gate</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Proceedings of the National Academy of Sciences</i></span> 98 (2). Proceedings of the National Academy of Sciences:410–14. <a itemprop="sameAs" href="https://doi.org/10.1073/pnas.98.2.410">DOI</a>.
-              </li>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="zhangReversibleFluorescentDNA2012" itemid="doi:10.1039/C2CC17906G">
-                <span itemprop="author">Min Zhang, Bang-Ce Ye</span>. <time datetime="2012" itemprop="datePublished">March 14, 2012</time>. "<span itemprop="name">A Reversible Fluorescent DNA Logic Gate Based on Graphene Oxide and Its Application for Iodide Sensing</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Chemical Communications</i></span> 48 (30). The Royal Society of Chemistry:3647–49. <a itemprop="sameAs" href="https://doi.org/10.1039/C2CC17906G">DOI</a>.
-              </li>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="pittmanExperimentalControlledNOTLogic2003" itemid="doi:10.1103/PhysRevA.68.032316">
-                <span itemprop="author">T. B. Pittman, M. J. Fitch, B. C Jacobs, J. D. Franson</span>. <time datetime="2003" itemprop="datePublished">September 26, 2003</time>. "<span itemprop="name">Experimental Controlled-not Logic Gate for Single Photons in the Coincidence Basis</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Physical Review A</i></span> 68 (3). American Physical Society:032316. <a itemprop="sameAs" href="https://doi.org/10.1103/PhysRevA.68.032316">DOI</a>.
-              </li>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="fangPatternRecognitionMaterials2016" itemid="doi:10.1126/sciadv.1601114">
-                <span itemprop="author">Yan Fang, Victor V. Yashin, Steven P. Levitan, Anna C. Balazs</span>. <time datetime="2016" itemprop="datePublished">September 2, 2016</time>. "<span itemprop="name">Pattern Recognition with “materials That Compute”</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Science Advances</i></span> 2 (9). American Association for the Advancement of Science:e1601114. <a itemprop="sameAs" href="https://doi.org/10.1126/sciadv.1601114">DOI</a>.
-              </li>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="sternSupervisedLearningPhysical2021" itemid="doi:10.1103/PhysRevX.11.021045">
-                <span itemprop="author">Menachem Stern, Daniel Hexner, Jason W. Rocks, Andrea J. Liu</span>. <time datetime="2021" itemprop="datePublished">May 28, 2021</time>. "<span itemprop="name">Supervised Learning in Physical Networks: From Machine Learning to Learning Machines</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Physical Review X</i></span> 11 (2). American Physical Society:021045. <a itemprop="sameAs" href="https://doi.org/10.1103/PhysRevX.11.021045">DOI</a>.
-              </li>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="pashineDirectedAgingMemory2019" itemid="doi:10.1126/sciadv.aax4215">
-                <span itemprop="author">Nidhi Pashine, Daniel Hexner, Andrea J. Liu, Sidney R. Nagel</span>. <time datetime="2019" itemprop="datePublished">December 20, 2019</time>. "<span itemprop="name">Directed Aging, Memory, and Nature’s Greed</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Science Advances</i></span> 5 (12). American Association for the Advancement of Science:eaax4215. <a itemprop="sameAs" href="https://doi.org/10.1126/sciadv.aax4215">DOI</a>.
-              </li>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="chenReprogrammableMechanicalMetamaterial2021" itemid="doi:10.1038/s41586-020-03123-5">
-                <span itemprop="author">Tian Chen, Mark Pauly, Pedro M. Reis</span>. <time datetime="2021" itemprop="datePublished">January 2021</time>. "<span itemprop="name">A Reprogrammable Mechanical Metamaterial with Stable Memory</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Nature</i></span> 589 (7842). Nature Publishing Group:386–90. <a itemprop="sameAs" href="https://doi.org/10.1038/s41586-020-03123-5">DOI</a>.
-              </li>
-            </ol>
-          </div>
-          <div class="bl-section">
-            <h2>Links to this note</h2>
-            <div class="backlinks">
-              <ul>
-                <li>
-                  <a href="/notes/amorphous_computing/">Amorphous computing</a>
-                </li>
-                <li>
-                  <a href="/notes/chaos_computing/">Chaos computing</a>
-                </li>
-                <li>
-                  <a href="/notes/computing_in_cellular_automata/">Computing in cellular automata</a>
-                </li>
-                <li>
-                  <a href="/notes/reservoir_computing/">Reservoir computing</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="text-center" style="font-variant-caps:all-small-caps">
-            Last changed <a class="u-url" href="https://hugocisneros.com/notes/unconventional_computing/"><time itemprop="datePublished" class="dt-published" datetime="2022-03-15T11:36:00+0100">15/03/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
-          </div>
+        <div class="text-center" style="font-variant-caps:all-small-caps">
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/unconventional_computing/"><time itemprop="datePublished" class="dt-published" datetime="2022-03-15T11:36:00+0100">15/03/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
-      </article>
-      <h3>Comments</h3>
-      <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
-      <section id="isso-thread"></section><br>
-      <a href="/notes#unconventional_computing"><b>← Back to Notes</b></a>
-      <hr>
-    </main>
-    <footer class="footer container h-10 text-center">
-      <ul>
-        <li class="inline-block list-none">
-          <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="/img/RSS.svg" alt="RSS feed icon"></a>
-        </li>
-        <li class="before:content-['•'] inline-block">
-          <a class="text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
-        </li>
-        <li class="before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block">© Hugo Cisneros 2022</li>
-      </ul>
-    </footer>
-  </div>
+      </div>
+    </article>
+    <h3>Comments</h3>
+    <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
+    <section id="isso-thread"></section><br>
+    <a href="/notes#unconventional_computing"><b>← Back to Notes</b></a>
+    <hr>
+  </main>
+  <footer class="footer container h-10 text-center">
+    <ul class="pl-0">
+      <li class="first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="https://hugocisneros.com/img/RSS.svg" alt="RSS feed icon"></a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="ml-2 text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block list-none"><span class="ml-2">© Hugo Cisneros 2022</span></li>
+    </ul>
+  </footer>
   <link rel="stylesheet" href="/js/katex/katex.min.css">
   <script src="/js/katex/katex.min.js"></script> 
   <script src="/js/katex/contrib/auto-render.min.js"></script> 

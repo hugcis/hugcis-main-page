@@ -28,130 +28,128 @@
   <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
   <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
   <script>
-  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode()
+  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
 </head>
 <body>
-  <div class="wrapper">
-    <header class="header">
-      <nav>
-        <div class="container flex flex-wrap justify-between items-center mx-auto">
-          <div class="nav-main my-2.5">
-            <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
-          </div><button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
-          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul class="grid grid-flow-col items-center justify-between text-lg my-2.5">
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
-              </li>
-              <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="/img/dark_mode.svg"></button></li>
-            </ul>
-          </div>
+  <header class="md:px-0 px-2">
+    <nav>
+      <div class="container flex flex-wrap justify-between items-center mx-auto">
+        <div class="nav-main my-2.5">
+          <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
+        </div><button type="button" onclick="toggleMenu()" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul class="grid md:grid-flow-col items-center justify-between text-lg my-2.5">
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
+            </li>
+            <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="https://hugocisneros.com/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="https://hugocisneros.com/img/dark_mode.svg"></button></li>
+          </ul>
         </div>
-      </nav>
-    </header>
-    <main class="content h-card container mt-2 m-auto leading-loose" role="main">
-      <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-        <div class="bg-zinc-100 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
-          <h1 class="article-title p-name" itemprop="name">Supervised learning</h1>
-          <div class="article-content e-content p-name" itemprop="articleBody">
-            <dl>
-              <dt>tags</dt>
-              <dd>
-                <a href="/notes/machine_learning/">Machine learning</a>
-              </dd>
-            </dl>
-            <h2 id="data">Data</h2>
-            <p>Input/output example pairs: \[ \{(x_i, y_i)\}_{i\leq n} \sim_{iid} \mathbb{P}, \quad \mathbb{P} \in \mathcal{P}(\mathcal{X} \times \mathcal{Y}) \text{ unknown} \]</p>
-            <h2 id="mapping">Mapping</h2>
-            <p>We search for a mapping \(f: \mathcal{X} \rightarrow \mathcal{Y}\). It is also common to parameterize this mapping with a parameter \(\theta \in \mathbb{R}^d\) and write \(h: \mathcal{X} \times \mathbb{R}^d \rightarrow \mathcal{Y}\).</p>
-            <p>The prediction \(\hat{y}\) is written</p>
-            <p>\[ \hat{y} = f(x) = h(x, \theta) \]</p>
-            <h2 id="objective">Objective</h2>
-            <p>The goal is to find the above mapping such as to minimize an objective. For example, the objective can be the expectation quadratic loss below: \[ R(f) = \mathbb{E}\left\{ \frac{1}{2}(y_{new} - f(x_{new}))^2 \right\}, \quad (y_{new}, x_{new}) \sim \mathbb{P} \]</p>
-            <p>In general we write</p>
-            <p>\[ R(f) = \mathbb{E}_\mathbb{P} \left[ \ell(y, f(x)) \right]\]</p>
-            <p>Usually, because this objective cannot be minimized directly — we don’t have access to infinitely many new samples — minimization on the set of available examples is done instead: this is <strong>Empirical risk minimization</strong> (ERM).</p>
-            <h3 id="empirical-risk-minimization">Empirical risk minimization</h3>
-            <p>For the above \(R\) with least-square loss, ERM is written \[ \text{minimize}\quad \hat{R}_n(\theta) := \frac{1}{2n}\sum_{i=1}^n(y_i - f(x_i;\theta))^2, \] \[ \text{subj. to } f(\cdot;\theta) : \mathbb{R}^d \rightarrow \mathbb{R}, \quad \theta \in \Theta \subseteq \mathbb{R}^p \]</p>
-            <p>This minimization problem can be solved using <a href="/notes/optimization/">Optimization</a> methods. <a href="/notes/gradient_descent/">Gradient descent</a> is one of them. Its <strong>stochastic</strong> variant is written as follows for the problem above.</p>
-            <p>\[ \theta^{k+1} = \theta^k - \frac{\epsilon}{2} \nabla_\theta(y_{I(k)} - f(x_{I(k)}; \theta^k))^2 \] \[ I(k) \sim \text{Unif}([n]) \]</p>
-            <h3 id="expected-risk-minimization">Expected risk minimization</h3>
-            <p>This other quantity measures the generalization performance of our model , the expectation below is taken with respect to unseen data and thus cannot be computed. This is the setting of a single pass optimization or online learning, and gives the best generalization guarantees.</p>
-            <p>\[ R(f) = \mathbb{E}_\mathbb{P} \left[ \ell(y, f(x)) \right]\]</p>
-            <h3 id="usual-losses">Usual losses</h3>
-            <p>In general, the loss as the form \(\ell: \mathcal{Y} \times \mathcal{Y} \rightarrow \mathbb{R}\) Several losses are usually used in the two most common supervised learning settings:</p>
-            <h4 id="regression">Regression</h4>
-            <p>The quadratic loss is most often used: \[ \frac{1}{2} (y - f(x))^2 \]</p>
-            <h4 id="classification">Classification</h4>
-            <p>With classification, the prediction \(y\) is in \(\{ -1, 1 \}\), and we usually take \(\hat{y} = \text{sign}(f(x))\)</p>
-            <p>An “ideal” loss would be \(\ell(y\cdot f(x)) = 1_{y\cdot f(x) &lt; 0}\). Usually, this is substituted for convex losses:</p>
+      </div>
+    </nav>
+  </header>
+  <main class="content h-card container mt-2 m-auto leading-loose md:px-0 px-2" role="main">
+    <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+      <div class="bg-zinc-100 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
+        <h1 class="article-title p-name" itemprop="name">Supervised learning</h1>
+        <div class="article-content e-content p-name" itemprop="articleBody">
+          <dl>
+            <dt>tags</dt>
+            <dd>
+              <a href="/notes/machine_learning/">Machine learning</a>
+            </dd>
+          </dl>
+          <h2 id="data">Data</h2>
+          <p>Input/output example pairs: \[ \{(x_i, y_i)\}_{i\leq n} \sim_{iid} \mathbb{P}, \quad \mathbb{P} \in \mathcal{P}(\mathcal{X} \times \mathcal{Y}) \text{ unknown} \]</p>
+          <h2 id="mapping">Mapping</h2>
+          <p>We search for a mapping \(f: \mathcal{X} \rightarrow \mathcal{Y}\). It is also common to parameterize this mapping with a parameter \(\theta \in \mathbb{R}^d\) and write \(h: \mathcal{X} \times \mathbb{R}^d \rightarrow \mathcal{Y}\).</p>
+          <p>The prediction \(\hat{y}\) is written</p>
+          <p>\[ \hat{y} = f(x) = h(x, \theta) \]</p>
+          <h2 id="objective">Objective</h2>
+          <p>The goal is to find the above mapping such as to minimize an objective. For example, the objective can be the expectation quadratic loss below: \[ R(f) = \mathbb{E}\left\{ \frac{1}{2}(y_{new} - f(x_{new}))^2 \right\}, \quad (y_{new}, x_{new}) \sim \mathbb{P} \]</p>
+          <p>In general we write</p>
+          <p>\[ R(f) = \mathbb{E}_\mathbb{P} \left[ \ell(y, f(x)) \right]\]</p>
+          <p>Usually, because this objective cannot be minimized directly — we don’t have access to infinitely many new samples — minimization on the set of available examples is done instead: this is <strong>Empirical risk minimization</strong> (ERM).</p>
+          <h3 id="empirical-risk-minimization">Empirical risk minimization</h3>
+          <p>For the above \(R\) with least-square loss, ERM is written \[ \text{minimize}\quad \hat{R}_n(\theta) := \frac{1}{2n}\sum_{i=1}^n(y_i - f(x_i;\theta))^2, \] \[ \text{subj. to } f(\cdot;\theta) : \mathbb{R}^d \rightarrow \mathbb{R}, \quad \theta \in \Theta \subseteq \mathbb{R}^p \]</p>
+          <p>This minimization problem can be solved using <a href="/notes/optimization/">Optimization</a> methods. <a href="/notes/gradient_descent/">Gradient descent</a> is one of them. Its <strong>stochastic</strong> variant is written as follows for the problem above.</p>
+          <p>\[ \theta^{k+1} = \theta^k - \frac{\epsilon}{2} \nabla_\theta(y_{I(k)} - f(x_{I(k)}; \theta^k))^2 \] \[ I(k) \sim \text{Unif}([n]) \]</p>
+          <h3 id="expected-risk-minimization">Expected risk minimization</h3>
+          <p>This other quantity measures the generalization performance of our model , the expectation below is taken with respect to unseen data and thus cannot be computed. This is the setting of a single pass optimization or online learning, and gives the best generalization guarantees.</p>
+          <p>\[ R(f) = \mathbb{E}_\mathbb{P} \left[ \ell(y, f(x)) \right]\]</p>
+          <h3 id="usual-losses">Usual losses</h3>
+          <p>In general, the loss as the form \(\ell: \mathcal{Y} \times \mathcal{Y} \rightarrow \mathbb{R}\) Several losses are usually used in the two most common supervised learning settings:</p>
+          <h4 id="regression">Regression</h4>
+          <p>The quadratic loss is most often used: \[ \frac{1}{2} (y - f(x))^2 \]</p>
+          <h4 id="classification">Classification</h4>
+          <p>With classification, the prediction \(y\) is in \(\{ -1, 1 \}\), and we usually take \(\hat{y} = \text{sign}(f(x))\)</p>
+          <p>An “ideal” loss would be \(\ell(y\cdot f(x)) = 1_{y\cdot f(x) &lt; 0}\). Usually, this is substituted for convex losses:</p>
+          <ul>
+            <li>Hinge loss \(\max(0, - y \cdot f(x) + 1)\)</li>
+            <li>Square loss \(\frac{1}{2}(1- y \cdot f(x))^2\)</li>
+            <li>Logistic loss \(\log ( 1 + \exp (- y \cdot f(x)))\)</li>
+          </ul>
+          <h2 id="learning">Learning</h2>
+          <p>A learning algorithm in the supervised setting can be reduced down to a mapping between the initial set of input/output pairs and a prediction function:</p>
+          <p>\[ L: (\mathcal{X} \times \mathcal{Y})^n \rightarrow (f: \mathcal{X} \rightarrow \mathcal{Y}) \]</p>
+          <h2 id="a-computing-analogy-for-supervised-learning">A computing analogy for Supervised learning</h2>
+          <p>If we look at it from a computing point of view (instead of the mathematical/functional point of view), the problem of supervised learning is similar to trying to construct a (computer + program) pair from some data such that the program run on that computer with some part of our data produces the right other part of that data.</p>
+        </div>
+        <div class="bl-section">
+          <h2>Links to this note</h2>
+          <div class="backlinks">
             <ul>
-              <li>Hinge loss \(\max(0, - y \cdot f(x) + 1)\)</li>
-              <li>Square loss \(\frac{1}{2}(1- y \cdot f(x))^2\)</li>
-              <li>Logistic loss \(\log ( 1 + \exp (- y \cdot f(x)))\)</li>
+              <li>
+                <a href="/notes/continual_learning/">Continual learning</a>
+              </li>
+              <li>
+                <a href="/notes/mean_field_theory_of_neural_networks/">Mean field theory of neural networks (talk)</a>
+              </li>
+              <li>
+                <a href="/notes/neural_network_training/">Neural network training</a>
+              </li>
+              <li>
+                <a href="/notes/self_supervised_learning/">Self-supervised learning</a>
+              </li>
             </ul>
-            <h2 id="learning">Learning</h2>
-            <p>A learning algorithm in the supervised setting can be reduced down to a mapping between the initial set of input/output pairs and a prediction function:</p>
-            <p>\[ L: (\mathcal{X} \times \mathcal{Y})^n \rightarrow (f: \mathcal{X} \rightarrow \mathcal{Y}) \]</p>
-            <h2 id="a-computing-analogy-for-supervised-learning">A computing analogy for Supervised learning</h2>
-            <p>If we look at it from a computing point of view (instead of the mathematical/functional point of view), the problem of supervised learning is similar to trying to construct a (computer + program) pair from some data such that the program run on that computer with some part of our data produces the right other part of that data.</p>
-          </div>
-          <div class="bl-section">
-            <h2>Links to this note</h2>
-            <div class="backlinks">
-              <ul>
-                <li>
-                  <a href="/notes/continual_learning/">Continual learning</a>
-                </li>
-                <li>
-                  <a href="/notes/mean_field_theory_of_neural_networks/">Mean field theory of neural networks (talk)</a>
-                </li>
-                <li>
-                  <a href="/notes/neural_network_training/">Neural network training</a>
-                </li>
-                <li>
-                  <a href="/notes/self_supervised_learning/">Self-supervised learning</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="text-center" style="font-variant-caps:all-small-caps">
-            Last changed <a class="u-url" href="https://hugocisneros.com/notes/supervised_learning/"><time itemprop="datePublished" class="dt-published" datetime="2021-11-04T14:23:00+0100">04/11/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
           </div>
         </div>
-      </article>
-      <h3>Comments</h3>
-      <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
-      <section id="isso-thread"></section><br>
-      <a href="/notes#supervised_learning"><b>← Back to Notes</b></a>
-      <hr>
-    </main>
-    <footer class="footer container h-10 text-center">
-      <ul>
-        <li class="inline-block list-none">
-          <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="/img/RSS.svg" alt="RSS feed icon"></a>
-        </li>
-        <li class="before:content-['•'] inline-block">
-          <a class="text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
-        </li>
-        <li class="before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block">© Hugo Cisneros 2022</li>
-      </ul>
-    </footer>
-  </div>
+        <div class="text-center" style="font-variant-caps:all-small-caps">
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/supervised_learning/"><time itemprop="datePublished" class="dt-published" datetime="2021-11-04T14:23:00+0100">04/11/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+        </div>
+      </div>
+    </article>
+    <h3>Comments</h3>
+    <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
+    <section id="isso-thread"></section><br>
+    <a href="/notes#supervised_learning"><b>← Back to Notes</b></a>
+    <hr>
+  </main>
+  <footer class="footer container h-10 text-center">
+    <ul class="pl-0">
+      <li class="first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="https://hugocisneros.com/img/RSS.svg" alt="RSS feed icon"></a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="ml-2 text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block list-none"><span class="ml-2">© Hugo Cisneros 2022</span></li>
+    </ul>
+  </footer>
   <link rel="stylesheet" href="/js/katex/katex.min.css">
   <script src="/js/katex/katex.min.js"></script> 
   <script src="/js/katex/contrib/auto-render.min.js"></script> 

@@ -28,65 +28,64 @@
   <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
   <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
   <script>
-  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode()
+  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
 </head>
 <body>
-  <div class="wrapper">
-    <header class="header">
-      <nav>
-        <div class="container flex flex-wrap justify-between items-center mx-auto">
-          <div class="nav-main my-2.5">
-            <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
-          </div><button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
-          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul class="grid grid-flow-col items-center justify-between text-lg my-2.5">
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
-              </li>
-              <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="/img/dark_mode.svg"></button></li>
-            </ul>
-          </div>
+  <header class="md:px-0 px-2">
+    <nav>
+      <div class="container flex flex-wrap justify-between items-center mx-auto">
+        <div class="nav-main my-2.5">
+          <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
+        </div><button type="button" onclick="toggleMenu()" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul class="grid md:grid-flow-col items-center justify-between text-lg my-2.5">
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
+            </li>
+            <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="https://hugocisneros.com/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="https://hugocisneros.com/img/dark_mode.svg"></button></li>
+          </ul>
         </div>
-      </nav>
-    </header>
-    <main class="content h-card container mt-2 m-auto leading-loose" role="main">
-      <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-        <div class="bg-zinc-100 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
-          <h1 class="article-title p-name" itemprop="name">Python</h1>
-          <div class="article-content e-content p-name" itemprop="articleBody">
-            <dl>
-              <dt>tags</dt>
-              <dd>
-                <a href="/notes/programming_languages/">Programming languages</a>, <a href="/notes/coding/">Coding</a>
-              </dd>
-            </dl>
-            <h2 id="code-tips">Code tips</h2>
-            <h3 id="categories-to-one-hot">Categories to one-hot</h3>
-            <p>This is a handy technique but can be very resource intensive for large arrays.</p>
-            <div class="highlight">
-              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="display:flex"><span><span style="color:#719e07">import</span> numpy <span style="color:#719e07">as</span> np
+      </div>
+    </nav>
+  </header>
+  <main class="content h-card container mt-2 m-auto leading-loose md:px-0 px-2" role="main">
+    <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+      <div class="bg-zinc-100 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
+        <h1 class="article-title p-name" itemprop="name">Python</h1>
+        <div class="article-content e-content p-name" itemprop="articleBody">
+          <dl>
+            <dt>tags</dt>
+            <dd>
+              <a href="/notes/programming_languages/">Programming languages</a>, <a href="/notes/coding/">Coding</a>
+            </dd>
+          </dl>
+          <h2 id="code-tips">Code tips</h2>
+          <h3 id="categories-to-one-hot">Categories to one-hot</h3>
+          <p>This is a handy technique but can be very resource intensive for large arrays.</p>
+          <div class="highlight">
+            <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="display:flex"><span><span style="color:#719e07">import</span> numpy <span style="color:#719e07">as</span> np
 </span></span><span style="display:flex"><span>a <span style="color:#719e07">=</span> np<span style="color:#719e07">.</span>random<span style="color:#719e07">.</span>randrange(<span style="color:#2aa198">5</span>, size<span style="color:#719e07">=</span><span style="color:#2aa198">10</span>)
 </span></span><span style="display:flex"><span>one_hot_a <span style="color:#719e07">=</span> np<span style="color:#719e07">.</span>eye(<span style="color:#2aa198">5</span>)[a]
 </span></span></code></pre>
-            </div>
-            <h3 id="side-output-for-jupyter-notebooks">Side-output for jupyter notebooks</h3>
-            <p>Insert the following block in a notebook cell and execute as code (From <a href="https://twitter.com/jrking0/status/1199704651085430785">Twitter</a>). This will put the output of each cell on the side of the code.</p>
-            <div class="highlight">
-              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="display:flex"><span>%%html
+          </div>
+          <h3 id="side-output-for-jupyter-notebooks">Side-output for jupyter notebooks</h3>
+          <p>Insert the following block in a notebook cell and execute as code (From <a href="https://twitter.com/jrking0/status/1199704651085430785">Twitter</a>). This will put the output of each cell on the side of the code.</p>
+          <div class="highlight">
+            <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="display:flex"><span>%%html
 </span></span><span style="display:flex"><span>&lt;<span style="color:#268bd2">style</span>&gt;
 </span></span><span style="display:flex"><span>#notebook-container {<span style="color:#719e07">width</span>: <span style="color:#2aa198">100</span><span style="color:#dc322f">%</span>; <span style="color:#719e07">background-color</span>: <span style="color:#2aa198">#EEE</span>}
 </span></span><span style="display:flex"><span>.<span style="color:#268bd2">code_cell</span> {<span style="color:#719e07">flex-direction</span>: <span style="color:#cb4b16">row</span> <span style="color:#719e07">!important</span>;}
@@ -94,12 +93,12 @@
 </span></span><span style="display:flex"><span>.<span style="color:#268bd2">code_cell</span> .<span style="color:#268bd2">input</span> {<span style="color:#719e07">width</span>: <span style="color:#2aa198">50</span><span style="color:#dc322f">%</span>;<span style="color:#719e07">background-color</span>: <span style="color:#2aa198">#FFF</span>}
 </span></span><span style="display:flex"><span>&lt;/<span style="color:#268bd2">style</span>&gt;
 </span></span></code></pre>
-            </div>
-            <p>Convert the code cell to markdown to cancel.</p>
-            <h3 id="dataclasses">Dataclasses</h3>
-            <p>Dataclass can be used to automatically generate special methods like <code>__init__()</code> and <code>__repr__()</code> for a python class.</p>
-            <div class="highlight">
-              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="display:flex"><span><span style="color:#719e07">from</span> dataclasses <span style="color:#719e07">import</span> dataclass
+          </div>
+          <p>Convert the code cell to markdown to cancel.</p>
+          <h3 id="dataclasses">Dataclasses</h3>
+          <p>Dataclass can be used to automatically generate special methods like <code>__init__()</code> and <code>__repr__()</code> for a python class.</p>
+          <div class="highlight">
+            <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="display:flex"><span><span style="color:#719e07">from</span> dataclasses <span style="color:#719e07">import</span> dataclass
 </span></span><span style="display:flex"><span>
 </span></span><span style="display:flex"><span><span style="color:#268bd2">@dataclass</span>
 </span></span><span style="display:flex"><span><span style="color:#719e07">class</span> <span style="color:#268bd2">InventoryItem</span>:
@@ -111,11 +110,11 @@
 </span></span><span style="display:flex"><span>    <span style="color:#719e07">def</span> <span style="color:#268bd2">total_cost</span>(<span style="color:#268bd2">self</span>) <span style="color:#719e07">-&gt;</span> <span style="color:#b58900">float</span>:
 </span></span><span style="display:flex"><span>        <span style="color:#719e07">return</span> <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>unit_price <span style="color:#719e07">*</span> <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>quantity_on_hand
 </span></span></code></pre>
-            </div>
-            <h3 id="pathlib">Pathlib</h3>
-            <p>Pathlib is an extremely useful library for manipulating paths. It is less cumbersome than using <code>os.path.join()</code> repeatedly.</p>
-            <div class="highlight">
-              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="display:flex"><span><span style="color:#719e07">from</span> pathlib <span style="color:#719e07">import</span> Path
+          </div>
+          <h3 id="pathlib">Pathlib</h3>
+          <p>Pathlib is an extremely useful library for manipulating paths. It is less cumbersome than using <code>os.path.join()</code> repeatedly.</p>
+          <div class="highlight">
+            <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="display:flex"><span><span style="color:#719e07">from</span> pathlib <span style="color:#719e07">import</span> Path
 </span></span><span style="display:flex"><span>p <span style="color:#719e07">=</span> Path(<span style="color:#2aa198">'/'</span>)
 </span></span><span style="display:flex"><span><span style="color:#b58900">print</span>(<span style="color:#2aa198">"List subdir:"</span>, [x <span style="color:#719e07">for</span> x <span style="color:#719e07">in</span> p<span style="color:#719e07">.</span>iterdir() <span style="color:#719e07">if</span> x<span style="color:#719e07">.</span>is_dir()])
 </span></span><span style="display:flex"><span>q <span style="color:#719e07">=</span> p <span style="color:#719e07">/</span> <span style="color:#2aa198">'init.d'</span> <span style="color:#719e07">/</span> <span style="color:#2aa198">'reboot'</span>
@@ -125,56 +124,55 @@
 </span></span><span style="display:flex"><span><span style="color:#b58900">print</span>(q<span style="color:#719e07">.</span>is_dir())
 </span></span><span style="display:flex"><span><span style="color:#719e07">with</span> q<span style="color:#719e07">.</span>open() <span style="color:#719e07">as</span> f: f<span style="color:#719e07">.</span>readline()
 </span></span></code></pre>
-            </div>
-          </div>
-          <div class="bl-section">
-            <h2>Links to this note</h2>
-            <div class="backlinks">
-              <ul>
-                <li>
-                  <a href="/notes/byte_pair_encoding/">Byte-pair encoding</a>
-                </li>
-                <li>
-                  <a href="/notes/elementary_cellular_automata/">Elementary cellular automata</a>
-                </li>
-                <li>
-                  <a href="/notes/finite_state_machines/">Finite state machines</a>
-                </li>
-                <li>
-                  <a href="/notes/programming_languages/">Programming languages</a>
-                </li>
-                <li>
-                  <a href="/notes/pytorch/">Pytorch</a>
-                </li>
-                <li>
-                  <a href="/notes/rust/">Rust</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="text-center" style="font-variant-caps:all-small-caps">
-            Last changed <a class="u-url" href="https://hugocisneros.com/notes/python/"><time itemprop="datePublished" class="dt-published" datetime="2020-09-28T10:32:00+0200">28/09/2020</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
           </div>
         </div>
-      </article>
-      <h3>Comments</h3>
-      <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
-      <section id="isso-thread"></section><br>
-      <a href="/notes#python"><b>← Back to Notes</b></a>
-      <hr>
-    </main>
-    <footer class="footer container h-10 text-center">
-      <ul>
-        <li class="inline-block list-none">
-          <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="/img/RSS.svg" alt="RSS feed icon"></a>
-        </li>
-        <li class="before:content-['•'] inline-block">
-          <a class="text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
-        </li>
-        <li class="before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block">© Hugo Cisneros 2022</li>
-      </ul>
-    </footer>
-  </div>
+        <div class="bl-section">
+          <h2>Links to this note</h2>
+          <div class="backlinks">
+            <ul>
+              <li>
+                <a href="/notes/byte_pair_encoding/">Byte-pair encoding</a>
+              </li>
+              <li>
+                <a href="/notes/elementary_cellular_automata/">Elementary cellular automata</a>
+              </li>
+              <li>
+                <a href="/notes/finite_state_machines/">Finite state machines</a>
+              </li>
+              <li>
+                <a href="/notes/programming_languages/">Programming languages</a>
+              </li>
+              <li>
+                <a href="/notes/pytorch/">Pytorch</a>
+              </li>
+              <li>
+                <a href="/notes/rust/">Rust</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="text-center" style="font-variant-caps:all-small-caps">
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/python/"><time itemprop="datePublished" class="dt-published" datetime="2020-09-28T10:32:00+0200">28/09/2020</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+        </div>
+      </div>
+    </article>
+    <h3>Comments</h3>
+    <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
+    <section id="isso-thread"></section><br>
+    <a href="/notes#python"><b>← Back to Notes</b></a>
+    <hr>
+  </main>
+  <footer class="footer container h-10 text-center">
+    <ul class="pl-0">
+      <li class="first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="https://hugocisneros.com/img/RSS.svg" alt="RSS feed icon"></a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="ml-2 text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block list-none"><span class="ml-2">© Hugo Cisneros 2022</span></li>
+    </ul>
+  </footer>
   <link rel="stylesheet" href="/js/katex/katex.min.css">
   <script src="/js/katex/katex.min.js"></script> 
   <script src="/js/katex/contrib/auto-render.min.js"></script> 

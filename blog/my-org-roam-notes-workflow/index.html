@@ -28,82 +28,81 @@
   <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
   <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
   <script>
-  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode()
+  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
 </head>
 <body>
-  <div class="wrapper">
-    <header class="header">
-      <nav>
-        <div class="container flex flex-wrap justify-between items-center mx-auto">
-          <div class="nav-main my-2.5">
-            <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
-          </div><button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
-          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul class="grid grid-flow-col items-center justify-between text-lg my-2.5">
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
-              </li>
-              <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="/img/dark_mode.svg"></button></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <main class="content h-card container mt-2 m-auto leading-loose" role="main">
-      <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-        <div class="title-container">
-          <h1 class="article-title p-name" itemprop="name">My Org Roam Notes Workflow</h1><b><i itemprop="headline" class="text-lg p-summary">Organizing my thoughts and knowledge into a web</i></b>
-          <div class="flex justify-between items-center">
-            <a class="text-lg text-gray-600 dark:text-gray-400 border-none u-url" href="https://hugocisneros.com/blog/my-org-roam-notes-workflow/"><time itemprop="datePublished" class="dt-published" datetime="2021-06-15T13:40:00+0200" content="2021-06-15T13:40:00+0200">15/06/2021</time></a> <a class="text-gray-600 dark:text-gray-400 text-right border-none p-author h-card" rel="author" href="https://hugocisneros.com/" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
-          </div>
-          <div>
-            Reading time: 10 minutes.
-          </div>
-        </div>
-        <div class="article-content e-content" itemprop="articleBody">
-          <p><em>Edit 2022-04-20: I did not see it right away, but there was a significant spike in the logs due to this post hitting the front page of Hacker News! I’m glad more people are interested in this. See <a href="https://news.ycombinator.com/item?id=30965343">the discussion here</a></em></p>
-          <p>Some people expressed interest in my <a href="https://www.orgroam.com/">org roam</a> <a href="/notes/">notes</a> workflow. Setting this up has been an interesting project, teaching me about <a href="/notes/emacs">Emacs</a>, <a href="/notes/org_mode">org-mode</a> and a little about web frontend. This post will describe my current workflow in as much details as possible.</p>
-          <p>Hopefully, you’ll learn to create an automated build script to publish your notes on the web and convert your org-roam note network into a graph like the one below.</p>
-          <figure class="center" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-            <img itemprop="url" src="/img/note-graph.svg" alt="Note graph screenshot">
-            <figcaption>
-              <h4 itemprop="name">Note graph screenshot</h4>
-            </figcaption>
-          </figure>For the interactive version, see <a href="/notes/">my notes</a>.
-          <h2 id="the-notes">The notes</h2>
-          <p>For the past years I have been trying to get into the habit of writing down new pieces of knowledge into notes. I am committed to this idea of keeping track of what I read and learn about. It can also be nice to come back to some of these notes to remind myself about a subject or make connections with something I learned.</p>
-          <h3 id="why-org-roam">Why org-roam?</h3>
-          <p>When searching for the right way to organize and keep track of these notes, I ended up hearing about org-roam. I went through <a href="https://blog.jethro.dev/posts/how%5Fto%5Ftake%5Fsmart%5Fnotes%5Forg">this great blog post</a> by Jethro Kuan which details why he started org-roam.</p>
-          <p>The “roam” in org-roam refers to <a href="https://roamresearch.com/">Roam Research</a>, a standalone note-taking tool that people seem to praise. The tool is closed source for now and not cheap, making some people seek free alternatives. Org-roam seems like a great alternative, but not for everybody. Being an org-mode based tool makes it ideal for Emacs users, but may involve a steep learning curve for other users. If you’ve never heard about org-mode, you may want to read <a href="https://orgmode.org/worg/">this introduction</a>. The tool is incredibly useful, but it takes time to get used to it.</p>
-          <p>I haven’t thoroughly researched other alternatives, but <a href="https://github.com/athensresearch/athens">Athens</a> seems to fill the gap: it’s open-source, it looks user-friendly and not tied to an editor.</p>
-          <p>Personally, I prefer to stick with org-roam for three main reasons:</p>
-          <ul>
-            <li>I am already a heavy user of Emacs and org-mode and a lot of features and Emacs tools integrate well with org-roam</li>
-            <li>I can export the files to my site (I detail how in <a href="#publishing">Publishing</a>)
+  <header class="md:px-0 px-2">
+    <nav>
+      <div class="container flex flex-wrap justify-between items-center mx-auto">
+        <div class="nav-main my-2.5">
+          <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
+        </div><button type="button" onclick="toggleMenu()" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul class="grid md:grid-flow-col items-center justify-between text-lg my-2.5">
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
             </li>
-            <li>The source files are plain text (with org-mode markup). This means that even if Emacs and org-mode and all related software were to disappear, or more probably, if I decide to manage my notes with something else, I can still export all the content and translate it into whichever format I want</li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
+            </li>
+            <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="https://hugocisneros.com/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="https://hugocisneros.com/img/dark_mode.svg"></button></li>
           </ul>
-          <p>If you are interested in Emacs and would like to see my setup, <a href="https://github.com/hugcis/dotfiles">I publish my dotfiles</a>. You can also read the detailed and commented version of <a href="/org-config/">my org-mode configuration</a>, or jump directly to the <a href="/org-config/#org-roam">org-roam configuration</a>.</p>
-          <h3 id="organizing-knowledge-in-org-roam">Organizing knowledge in org-roam</h3>
-          <p>The goal of org-roam is to create a web of notes linked between each other. By linking notes in a non-hierarchical way, one can make connections between topics and remember them without going through the hassle of creating a hierarchical tag system where it’s never clear if a note should belong to tag “A” or its parent “B”, etc.</p>
-          <p>There are plenty of different techniques for taking notes with a tool like this, but I don’t follow any particular one.</p>
-          <p>This is what an org-roam note looks like as raw source (Emacs makes this much prettier in practice):</p>
-          <div class="highlight">
-            <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-org" data-lang="org"><span style="display:flex"><span><span style="color:#586e75">:PROPERTIES:
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="content h-card container mt-2 m-auto leading-loose md:px-0 px-2" role="main">
+    <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+      <div class="title-container">
+        <h1 class="article-title p-name" itemprop="name">My Org Roam Notes Workflow</h1><b><i itemprop="headline" class="text-lg p-summary">Organizing my thoughts and knowledge into a web</i></b>
+        <div class="flex justify-between items-center">
+          <a class="text-lg text-gray-600 dark:text-gray-400 border-none u-url" href="https://hugocisneros.com/blog/my-org-roam-notes-workflow/"><time itemprop="datePublished" class="dt-published" datetime="2021-06-15T13:40:00+0200" content="2021-06-15T13:40:00+0200">15/06/2021</time></a> <a class="text-gray-600 dark:text-gray-400 text-right border-none p-author h-card" rel="author" href="https://hugocisneros.com/" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+        </div>
+        <div>
+          Reading time: 10 minutes.
+        </div>
+      </div>
+      <div class="article-content e-content" itemprop="articleBody">
+        <p><em>Edit 2022-04-20: I did not see it right away, but there was a significant spike in the logs due to this post hitting the front page of Hacker News! I’m glad more people are interested in this. See <a href="https://news.ycombinator.com/item?id=30965343">the discussion here</a></em></p>
+        <p>Some people expressed interest in my <a href="https://www.orgroam.com/">org roam</a> <a href="/notes/">notes</a> workflow. Setting this up has been an interesting project, teaching me about <a href="/notes/emacs">Emacs</a>, <a href="/notes/org_mode">org-mode</a> and a little about web frontend. This post will describe my current workflow in as much details as possible.</p>
+        <p>Hopefully, you’ll learn to create an automated build script to publish your notes on the web and convert your org-roam note network into a graph like the one below.</p>
+        <figure class="center" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+          <img itemprop="url" src="/img/note-graph.svg" alt="Note graph screenshot">
+          <figcaption>
+            <h4 itemprop="name">Note graph screenshot</h4>
+          </figcaption>
+        </figure>For the interactive version, see <a href="/notes/">my notes</a>.
+        <h2 id="the-notes">The notes</h2>
+        <p>For the past years I have been trying to get into the habit of writing down new pieces of knowledge into notes. I am committed to this idea of keeping track of what I read and learn about. It can also be nice to come back to some of these notes to remind myself about a subject or make connections with something I learned.</p>
+        <h3 id="why-org-roam">Why org-roam?</h3>
+        <p>When searching for the right way to organize and keep track of these notes, I ended up hearing about org-roam. I went through <a href="https://blog.jethro.dev/posts/how%5Fto%5Ftake%5Fsmart%5Fnotes%5Forg">this great blog post</a> by Jethro Kuan which details why he started org-roam.</p>
+        <p>The “roam” in org-roam refers to <a href="https://roamresearch.com/">Roam Research</a>, a standalone note-taking tool that people seem to praise. The tool is closed source for now and not cheap, making some people seek free alternatives. Org-roam seems like a great alternative, but not for everybody. Being an org-mode based tool makes it ideal for Emacs users, but may involve a steep learning curve for other users. If you’ve never heard about org-mode, you may want to read <a href="https://orgmode.org/worg/">this introduction</a>. The tool is incredibly useful, but it takes time to get used to it.</p>
+        <p>I haven’t thoroughly researched other alternatives, but <a href="https://github.com/athensresearch/athens">Athens</a> seems to fill the gap: it’s open-source, it looks user-friendly and not tied to an editor.</p>
+        <p>Personally, I prefer to stick with org-roam for three main reasons:</p>
+        <ul>
+          <li>I am already a heavy user of Emacs and org-mode and a lot of features and Emacs tools integrate well with org-roam</li>
+          <li>I can export the files to my site (I detail how in <a href="#publishing">Publishing</a>)
+          </li>
+          <li>The source files are plain text (with org-mode markup). This means that even if Emacs and org-mode and all related software were to disappear, or more probably, if I decide to manage my notes with something else, I can still export all the content and translate it into whichever format I want</li>
+        </ul>
+        <p>If you are interested in Emacs and would like to see my setup, <a href="https://github.com/hugcis/dotfiles">I publish my dotfiles</a>. You can also read the detailed and commented version of <a href="/org-config/">my org-mode configuration</a>, or jump directly to the <a href="/org-config/#org-roam">org-roam configuration</a>.</p>
+        <h3 id="organizing-knowledge-in-org-roam">Organizing knowledge in org-roam</h3>
+        <p>The goal of org-roam is to create a web of notes linked between each other. By linking notes in a non-hierarchical way, one can make connections between topics and remember them without going through the hassle of creating a hierarchical tag system where it’s never clear if a note should belong to tag “A” or its parent “B”, etc.</p>
+        <p>There are plenty of different techniques for taking notes with a tool like this, but I don’t follow any particular one.</p>
+        <p>This is what an org-roam note looks like as raw source (Emacs makes this much prettier in practice):</p>
+        <div class="highlight">
+          <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-org" data-lang="org"><span style="display:flex"><span><span style="color:#586e75">:PROPERTIES:
 </span></span></span><span style="display:flex"><span><span style="color:#719e07">:ID:       9fd080fa-a9a1-4d85-a6bf-682b41a67b72
 </span></span></span><span style="display:flex"><span><span style="color:#719e07">:ROAM_ALIASES: "ML"
 </span></span></span><span style="display:flex"><span><span style="color:#586e75">:END:</span>
@@ -121,36 +120,36 @@
 </span></span><span style="display:flex"><span><span style="color:#719e07">- </span>Time-series prediction
 </span></span><span style="display:flex"><span><span style="color:#719e07">- </span>[[id:e72f23c2-d3a7-47df-87a6-5de09f820ecf][<span style="color:#268bd2">Language modeling</span>]]
 </span></span></code></pre>
-          </div>
-          <p>The first 5 lines are a header containing the title of the note, an alias (an alternative name I can use to search for the note within org-roam) and an ID (automatically generated with <code>org-id</code>).</p>
-          <p>The rest is org-mode markup with some links to other notes (they also have unique IDs).</p>
-          <h2 id="publishing">Publishing</h2>
-          <p>Sharing knowledge as much as possible is essential. I also think that it’s even better to share the learning process and the steps to acquiring that knowledge because this is what will help your brain make the right connections and remember what you wrote.</p>
-          <p>My notes are a constant work in progress. I will change them, enrich them or delete them as I learn. Let this be a disclaimer too: I might write notes that are not true or the sole result of my uninformed opinion.</p>
-          <p>Other people might have something to say about these thoughts and some have contacted me to discuss it. Interesting discussions have started from these notes.</p>
-          <h3 id="exporting-the-notes">Exporting the notes</h3>
-          <p>The first step to publishing is to export the org-roam notes to the language of the web: HTML.</p>
-          <h4 id="simple-html">Simple HTML</h4>
-          <p>The simplest way is to use org’s embedded HTML export function (for example you can call <code>M-x org-html-export-to-html</code> when the note is open). For the note above, this will give you this simple HTML result:</p>
-          <figure class="center" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-            <img itemprop="url" src="/img/note-html.png" alt="Note exported to plain HTML">
-            <figcaption>
-              <h4 itemprop="name">Note exported to plain HTML</h4>
-            </figcaption>
-          </figure>
-          <p>Plain HTML + styling is more than enough to get a decent site with all your notes.</p>
-          <h4 id="hugo">Hugo</h4>
-          <p>I use a static site generator called <a href="https://gohugo.io/">Hugo</a> for my website, so I chose to go down the slightly more complicated path of exporting the notes to Hugo’s Markdown format and using Hugo to generate the final HTML. This allows for more flexibility and the possibility to automatically and generate complex pages like <a href="/notes/">this one</a>.</p>
-          <p>If you have <a href="https://ox-hugo.scripter.co/">ox-hugo</a> installed, exporting a note is as simple as calling <code>M-x org-hugo-export-wim-to-md</code> on your note. You should read the ox-hugo documentation to configure your site source path and other useful parameters.</p>
-          <p>I automated the process with <a href="https://gist.github.com/hugcis/1f2d2ad4b98b07ee543f10232ba1b025">a few Elisp functions that I put in a Gist</a>. The last function loops through a file containing a note path on each line. For each line, it exports the note and deletes the line from the file.</p>
-          <h2 id="the-graph">The graph</h2>
-          <p>A great advantage of org-roam is that it stores all its useful information in a SQLite database. Don’t worry if you deleted it! Org-roam can rebuild it from the notes and all the links inside them. The database caches a lot of useful data but everything is still in the notes.</p>
-          <p>The database has a table for the nodes and a table for the links, so there isn’t much work to do to get a graph!</p>
-          <h3 id="read-the-org-roam-db">Read the org-roam DB</h3>
-          <p>My org-roam database is at <code>~/.emacs.d/org-roam.db</code>. Here is the code that extracts all the information to build my note graph from the DB with 2 SQL queries and constructs a Python graph with the networkx library.</p>
-          <p>SQL experts might scream at this.. these queries were the first that came to mind but there might be a better way of doing this! I’m dealing with small databases so performance isn’t a problem.</p>
-          <div class="highlight">
-            <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="display:flex"><span><span style="color:#719e07">import</span> networkx <span style="color:#719e07">as</span> nx
+        </div>
+        <p>The first 5 lines are a header containing the title of the note, an alias (an alternative name I can use to search for the note within org-roam) and an ID (automatically generated with <code>org-id</code>).</p>
+        <p>The rest is org-mode markup with some links to other notes (they also have unique IDs).</p>
+        <h2 id="publishing">Publishing</h2>
+        <p>Sharing knowledge as much as possible is essential. I also think that it’s even better to share the learning process and the steps to acquiring that knowledge because this is what will help your brain make the right connections and remember what you wrote.</p>
+        <p>My notes are a constant work in progress. I will change them, enrich them or delete them as I learn. Let this be a disclaimer too: I might write notes that are not true or the sole result of my uninformed opinion.</p>
+        <p>Other people might have something to say about these thoughts and some have contacted me to discuss it. Interesting discussions have started from these notes.</p>
+        <h3 id="exporting-the-notes">Exporting the notes</h3>
+        <p>The first step to publishing is to export the org-roam notes to the language of the web: HTML.</p>
+        <h4 id="simple-html">Simple HTML</h4>
+        <p>The simplest way is to use org’s embedded HTML export function (for example you can call <code>M-x org-html-export-to-html</code> when the note is open). For the note above, this will give you this simple HTML result:</p>
+        <figure class="center" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+          <img itemprop="url" src="/img/note-html.png" alt="Note exported to plain HTML">
+          <figcaption>
+            <h4 itemprop="name">Note exported to plain HTML</h4>
+          </figcaption>
+        </figure>
+        <p>Plain HTML + styling is more than enough to get a decent site with all your notes.</p>
+        <h4 id="hugo">Hugo</h4>
+        <p>I use a static site generator called <a href="https://gohugo.io/">Hugo</a> for my website, so I chose to go down the slightly more complicated path of exporting the notes to Hugo’s Markdown format and using Hugo to generate the final HTML. This allows for more flexibility and the possibility to automatically and generate complex pages like <a href="/notes/">this one</a>.</p>
+        <p>If you have <a href="https://ox-hugo.scripter.co/">ox-hugo</a> installed, exporting a note is as simple as calling <code>M-x org-hugo-export-wim-to-md</code> on your note. You should read the ox-hugo documentation to configure your site source path and other useful parameters.</p>
+        <p>I automated the process with <a href="https://gist.github.com/hugcis/1f2d2ad4b98b07ee543f10232ba1b025">a few Elisp functions that I put in a Gist</a>. The last function loops through a file containing a note path on each line. For each line, it exports the note and deletes the line from the file.</p>
+        <h2 id="the-graph">The graph</h2>
+        <p>A great advantage of org-roam is that it stores all its useful information in a SQLite database. Don’t worry if you deleted it! Org-roam can rebuild it from the notes and all the links inside them. The database caches a lot of useful data but everything is still in the notes.</p>
+        <p>The database has a table for the nodes and a table for the links, so there isn’t much work to do to get a graph!</p>
+        <h3 id="read-the-org-roam-db">Read the org-roam DB</h3>
+        <p>My org-roam database is at <code>~/.emacs.d/org-roam.db</code>. Here is the code that extracts all the information to build my note graph from the DB with 2 SQL queries and constructs a Python graph with the networkx library.</p>
+        <p>SQL experts might scream at this.. these queries were the first that came to mind but there might be a better way of doing this! I’m dealing with small databases so performance isn’t a problem.</p>
+        <div class="highlight">
+          <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="display:flex"><span><span style="color:#719e07">import</span> networkx <span style="color:#719e07">as</span> nx
 </span></span><span style="display:flex"><span><span style="color:#719e07">import</span> pathlib
 </span></span><span style="display:flex"><span><span style="color:#719e07">import</span> sqlite3
 </span></span><span style="display:flex"><span>
@@ -183,17 +182,17 @@
 </span></span><span style="display:flex"><span>    conn<span style="color:#719e07">.</span>close()
 </span></span><span style="display:flex"><span>    <span style="color:#719e07">return</span> graph
 </span></span></code></pre>
-          </div>
-          <h3 id="some-graph-analysis">Some graph analysis</h3>
-          <p>This second script starts by constructing the graph with the function above. Then, it applies 3 graph algorithms:</p>
-          <ul>
-            <li>Compute the PageRank score for each vertex and store it as the <code>centrality</code> attribute. This will be used to size the nodes</li>
-            <li>Do a clustering of the nodes into <code>N_COM</code> clusters and store the community in the vertex attribute <code>communityLabel</code></li>
-            <li>Add <code>N_MISSING</code> “predicted” links to enable discovery of new hidden connections between nodes. This uses <a href="https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.link_prediction.ra_index_soundarajan_hopcroft.html#networkx.algorithms.link_prediction.ra_index_soundarajan_hopcroft"><code>networkx</code>’s implementation</a> of Soundarajan and Hopcroft’s method for link prediction
-            </li>
-          </ul>
-          <div class="highlight">
-            <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="display:flex"><span><span style="color:#719e07">import</span> itertools
+        </div>
+        <h3 id="some-graph-analysis">Some graph analysis</h3>
+        <p>This second script starts by constructing the graph with the function above. Then, it applies 3 graph algorithms:</p>
+        <ul>
+          <li>Compute the PageRank score for each vertex and store it as the <code>centrality</code> attribute. This will be used to size the nodes</li>
+          <li>Do a clustering of the nodes into <code>N_COM</code> clusters and store the community in the vertex attribute <code>communityLabel</code></li>
+          <li>Add <code>N_MISSING</code> “predicted” links to enable discovery of new hidden connections between nodes. This uses <a href="https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.link_prediction.ra_index_soundarajan_hopcroft.html#networkx.algorithms.link_prediction.ra_index_soundarajan_hopcroft"><code>networkx</code>’s implementation</a> of Soundarajan and Hopcroft’s method for link prediction
+          </li>
+        </ul>
+        <div class="highlight">
+          <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="display:flex"><span><span style="color:#719e07">import</span> itertools
 </span></span><span style="display:flex"><span><span style="color:#719e07">import</span> json
 </span></span><span style="display:flex"><span><span style="color:#719e07">import</span> sys
 </span></span><span style="display:flex"><span>
@@ -258,10 +257,10 @@
 </span></span><span style="display:flex"><span>    JS_GRAPH <span style="color:#719e07">=</span> json_graph<span style="color:#719e07">.</span>node_link_data(DOT_GRAPH)
 </span></span><span style="display:flex"><span>    sys<span style="color:#719e07">.</span>stdout<span style="color:#719e07">.</span>write(json<span style="color:#719e07">.</span>dumps(JS_GRAPH))
 </span></span></code></pre>
-          </div>
-          <p>The script writes the graph in JSON format to <code>stdout</code> with <code>networkx</code>’s JSON export function. It looks something like this (you can find the actual graph represented on my notes page <a href="/js/graph.json">here</a>):</p>
-          <div class="highlight">
-            <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="display:flex"><span>{
+        </div>
+        <p>The script writes the graph in JSON format to <code>stdout</code> with <code>networkx</code>’s JSON export function. It looks something like this (you can find the actual graph represented on my notes page <a href="/js/graph.json">here</a>):</p>
+        <div class="highlight">
+          <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="display:flex"><span>{
 </span></span><span style="display:flex"><span>   <span style="color:#268bd2">"directed"</span> : <span style="color:#cb4b16">true</span>,
 </span></span><span style="display:flex"><span>   <span style="color:#268bd2">"graph"</span> : {},
 </span></span><span style="display:flex"><span>   <span style="color:#268bd2">"links"</span> : [
@@ -297,50 +296,49 @@
 </span></span><span style="display:flex"><span>   ]
 </span></span><span style="display:flex"><span>}
 </span></span></code></pre>
-          </div>
-          <h3 id="some-frontend-with-d3-dot-js">Some frontend with D3.js</h3>
-          <p>You will find the JavaScript code for handling the D3 graph construction <a href="https://github.com/hugcis/hugcis.github.io/blob/master/js/graph.js">here</a>. To create the graph I started from this <a href="https://observablehq.com/@d3/force-directed-graph">D3 Observable tutorial on making force-directed graph</a>. Getting something decent-looking is straightforward with D3.</p>
-          <p>The main SVG source where the graph is drawn is defined in the <code>&lt;div&gt;</code> with id <code>main-graph</code> <a href="https://github.com/hugcis/hugcis.github.io/blob/master/notes/index.html#L56-L65">here</a>. There are two components in there: a filter definition and the main rectangle where the graph is drawn.</p>
-          <p>The filter is shown below. I use it for the tooltips when you point a vertex with your mouse. The tooltips are composed of two elements: the text and a background, that is a rectangle bounding box around the text with the text cut out (it’s what the filter does).</p>
-          <div class="highlight">
-            <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-svg" data-lang="svg"><span style="display:flex"><span><span style="color:#268bd2">&lt;defs&gt;</span>
+        </div>
+        <h3 id="some-frontend-with-d3-dot-js">Some frontend with D3.js</h3>
+        <p>You will find the JavaScript code for handling the D3 graph construction <a href="https://github.com/hugcis/hugcis.github.io/blob/master/js/graph.js">here</a>. To create the graph I started from this <a href="https://observablehq.com/@d3/force-directed-graph">D3 Observable tutorial on making force-directed graph</a>. Getting something decent-looking is straightforward with D3.</p>
+        <p>The main SVG source where the graph is drawn is defined in the <code>&lt;div&gt;</code> with id <code>main-graph</code> <a href="https://github.com/hugcis/hugcis.github.io/blob/master/notes/index.html#L56-L65">here</a>. There are two components in there: a filter definition and the main rectangle where the graph is drawn.</p>
+        <p>The filter is shown below. I use it for the tooltips when you point a vertex with your mouse. The tooltips are composed of two elements: the text and a background, that is a rectangle bounding box around the text with the text cut out (it’s what the filter does).</p>
+        <div class="highlight">
+          <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-svg" data-lang="svg"><span style="display:flex"><span><span style="color:#268bd2">&lt;defs&gt;</span>
 </span></span><span style="display:flex"><span>    <span style="color:#268bd2">&lt;filter</span> x=<span style="color:#2aa198">"0"</span> y=<span style="color:#2aa198">"0"</span> width=<span style="color:#2aa198">"1"</span> height=<span style="color:#2aa198">"1"</span> id=<span style="color:#2aa198">"solid"</span><span style="color:#268bd2">&gt;</span>
 </span></span><span style="display:flex"><span>        <span style="color:#268bd2">&lt;feFlood</span> flood-color=<span style="color:#2aa198">"#f7f7f7"</span> flood-opacity=<span style="color:#2aa198">"0.9"</span><span style="color:#268bd2">/&gt;</span>
 </span></span><span style="display:flex"><span>        <span style="color:#268bd2">&lt;feComposite</span> in=<span style="color:#2aa198">"SourceGraphic"</span> operator=<span style="color:#2aa198">"xor"</span> <span style="color:#268bd2">/&gt;</span>
 </span></span><span style="display:flex"><span>    <span style="color:#268bd2">&lt;/filter&gt;</span>
 </span></span><span style="display:flex"><span><span style="color:#268bd2">&lt;/defs&gt;</span>
 </span></span></code></pre>
-          </div>
-          <h2 id="conclusion">Conclusion</h2>
-          <p>That’s all I have for you. I realize this might look like a complicated bunch of scripts, but this setup works well for me now. <a href="https://github.com/jethrokuan/dots">Jethro Kuans’s dotfiles</a> and <a href="https://github.com/jethrokuan/braindump">Braindump source</a> were a great source of inspiration. It notably helped for the Elisp part for which I have less experience.</p>
-          <p>Getting into the habit of taking notes has been a great experience for me. I no longer fear forgetting ideas or useful thoughts as long as I write them in my “second brain”.</p>
-          <p>I hope this post was informative, and it will help you get a nice note website up and running! Enjoy!</p>
         </div>
-        <ul class="list-none pl-0 font-sm align-left">
-          <li class="list-none">Tags: <a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200" href="/tags/emacs"><span class="flex flex-row justify-start items-center dark:bg-zinc-900 dark:hover:bg-zinc-800 hover:bg-zinc-200 bg-zinc-100 p-1 rounded-t border-b-2 border-zinc-300 hover:border-zinc-500"><img class="h-5 mr-1 inline" src="https://hugocisneros.com/images/tag_logo.svg" alt="Logo of a tag: indicates that a tag item follows."> Emacs</span></a> <a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200" href="/tags/org-roam"><span class="flex flex-row justify-start items-center dark:bg-zinc-900 dark:hover:bg-zinc-800 hover:bg-zinc-200 bg-zinc-100 p-1 rounded-t border-b-2 border-zinc-300 hover:border-zinc-500"><img class="h-5 mr-1 inline" src="https://hugocisneros.com/images/tag_logo.svg" alt="Logo of a tag: indicates that a tag item follows."> Org-roam</span></a> <a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200" href="/tags/org-mode"><span class="flex flex-row justify-start items-center dark:bg-zinc-900 dark:hover:bg-zinc-800 hover:bg-zinc-200 bg-zinc-100 p-1 rounded-t border-b-2 border-zinc-300 hover:border-zinc-500"><img class="h-5 mr-1 inline" src="https://hugocisneros.com/images/tag_logo.svg" alt="Logo of a tag: indicates that a tag item follows."> Org-mode</span></a> <a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200" href="/tags/web"><span class="flex flex-row justify-start items-center dark:bg-zinc-900 dark:hover:bg-zinc-800 hover:bg-zinc-200 bg-zinc-100 p-1 rounded-t border-b-2 border-zinc-300 hover:border-zinc-500"><img class="h-5 mr-1 inline" src="https://hugocisneros.com/images/tag_logo.svg" alt="Logo of a tag: indicates that a tag item follows."> Web</span></a> <a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200" href="/tags/notes"><span class="flex flex-row justify-start items-center dark:bg-zinc-900 dark:hover:bg-zinc-800 hover:bg-zinc-200 bg-zinc-100 p-1 rounded-t border-b-2 border-zinc-300 hover:border-zinc-500"><img class="h-5 mr-1 inline" src="https://hugocisneros.com/images/tag_logo.svg" alt="Logo of a tag: indicates that a tag item follows."> Notes</span></a> <a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200" href="/tags/org"><span class="flex flex-row justify-start items-center dark:bg-zinc-900 dark:hover:bg-zinc-800 hover:bg-zinc-200 bg-zinc-100 p-1 rounded-t border-b-2 border-zinc-300 hover:border-zinc-500"><img class="h-5 mr-1 inline" src="https://hugocisneros.com/images/tag_logo.svg" alt="Logo of a tag: indicates that a tag item follows."> Org</span></a> <a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200" href="/tags/org-roam"><span class="flex flex-row justify-start items-center dark:bg-zinc-900 dark:hover:bg-zinc-800 hover:bg-zinc-200 bg-zinc-100 p-1 rounded-t border-b-2 border-zinc-300 hover:border-zinc-500"><img class="h-5 mr-1 inline" src="https://hugocisneros.com/images/tag_logo.svg" alt="Logo of a tag: indicates that a tag item follows."> Org roam</span></a>
-          </li>
-        </ul>
-        <div class="text-neutral-500 mb-4">
-          Last modified <span itemprop="dateModified" content="2021-08-05T10:40:00+0200">05/08/2021</span>
-        </div>
-      </article>
-      <h3>Comments</h3>
-      <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
-      <section id="isso-thread"></section>
-      <hr>
-    </main>
-    <footer class="footer container h-10 text-center">
-      <ul>
-        <li class="inline-block list-none">
-          <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="/img/RSS.svg" alt="RSS feed icon"></a>
+        <h2 id="conclusion">Conclusion</h2>
+        <p>That’s all I have for you. I realize this might look like a complicated bunch of scripts, but this setup works well for me now. <a href="https://github.com/jethrokuan/dots">Jethro Kuans’s dotfiles</a> and <a href="https://github.com/jethrokuan/braindump">Braindump source</a> were a great source of inspiration. It notably helped for the Elisp part for which I have less experience.</p>
+        <p>Getting into the habit of taking notes has been a great experience for me. I no longer fear forgetting ideas or useful thoughts as long as I write them in my “second brain”.</p>
+        <p>I hope this post was informative, and it will help you get a nice note website up and running! Enjoy!</p>
+      </div>
+      <ul class="list-none pl-0 font-sm align-left">
+        <li class="list-none">Tags: <a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200" href="/tags/emacs"><span class="flex flex-row justify-start items-center dark:bg-zinc-900 dark:hover:bg-zinc-800 hover:bg-zinc-200 bg-zinc-100 p-1 rounded-t border-b-2 border-zinc-300 hover:border-zinc-500"><img class="h-5 mr-1 inline" src="https://hugocisneros.com/images/tag_logo.svg" alt="Logo of a tag: indicates that a tag item follows."> Emacs</span></a> <a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200" href="/tags/org-roam"><span class="flex flex-row justify-start items-center dark:bg-zinc-900 dark:hover:bg-zinc-800 hover:bg-zinc-200 bg-zinc-100 p-1 rounded-t border-b-2 border-zinc-300 hover:border-zinc-500"><img class="h-5 mr-1 inline" src="https://hugocisneros.com/images/tag_logo.svg" alt="Logo of a tag: indicates that a tag item follows."> Org-roam</span></a> <a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200" href="/tags/org-mode"><span class="flex flex-row justify-start items-center dark:bg-zinc-900 dark:hover:bg-zinc-800 hover:bg-zinc-200 bg-zinc-100 p-1 rounded-t border-b-2 border-zinc-300 hover:border-zinc-500"><img class="h-5 mr-1 inline" src="https://hugocisneros.com/images/tag_logo.svg" alt="Logo of a tag: indicates that a tag item follows."> Org-mode</span></a> <a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200" href="/tags/web"><span class="flex flex-row justify-start items-center dark:bg-zinc-900 dark:hover:bg-zinc-800 hover:bg-zinc-200 bg-zinc-100 p-1 rounded-t border-b-2 border-zinc-300 hover:border-zinc-500"><img class="h-5 mr-1 inline" src="https://hugocisneros.com/images/tag_logo.svg" alt="Logo of a tag: indicates that a tag item follows."> Web</span></a> <a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200" href="/tags/notes"><span class="flex flex-row justify-start items-center dark:bg-zinc-900 dark:hover:bg-zinc-800 hover:bg-zinc-200 bg-zinc-100 p-1 rounded-t border-b-2 border-zinc-300 hover:border-zinc-500"><img class="h-5 mr-1 inline" src="https://hugocisneros.com/images/tag_logo.svg" alt="Logo of a tag: indicates that a tag item follows."> Notes</span></a> <a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200" href="/tags/org"><span class="flex flex-row justify-start items-center dark:bg-zinc-900 dark:hover:bg-zinc-800 hover:bg-zinc-200 bg-zinc-100 p-1 rounded-t border-b-2 border-zinc-300 hover:border-zinc-500"><img class="h-5 mr-1 inline" src="https://hugocisneros.com/images/tag_logo.svg" alt="Logo of a tag: indicates that a tag item follows."> Org</span></a> <a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200" href="/tags/org-roam"><span class="flex flex-row justify-start items-center dark:bg-zinc-900 dark:hover:bg-zinc-800 hover:bg-zinc-200 bg-zinc-100 p-1 rounded-t border-b-2 border-zinc-300 hover:border-zinc-500"><img class="h-5 mr-1 inline" src="https://hugocisneros.com/images/tag_logo.svg" alt="Logo of a tag: indicates that a tag item follows."> Org roam</span></a>
         </li>
-        <li class="before:content-['•'] inline-block">
-          <a class="text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
-        </li>
-        <li class="before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block">© Hugo Cisneros 2022</li>
       </ul>
-    </footer>
-  </div>
+      <div class="text-neutral-500 mb-4">
+        Last modified <span itemprop="dateModified" content="2021-08-05T10:40:00+0200">05/08/2021</span>
+      </div>
+    </article>
+    <h3>Comments</h3>
+    <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
+    <section id="isso-thread"></section>
+    <hr>
+  </main>
+  <footer class="footer container h-10 text-center">
+    <ul class="pl-0">
+      <li class="first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="https://hugocisneros.com/img/RSS.svg" alt="RSS feed icon"></a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="ml-2 text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block list-none"><span class="ml-2">© Hugo Cisneros 2022</span></li>
+    </ul>
+  </footer>
   <script data-goatcounter="https://stats.hugocisneros.com/count" async src="//stats.hugocisneros.com/count.js"></script>
 </body>
 </html>

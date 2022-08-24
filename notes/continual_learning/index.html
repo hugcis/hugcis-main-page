@@ -28,153 +28,151 @@
   <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
   <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
   <script>
-  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode()
+  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
 </head>
 <body>
-  <div class="wrapper">
-    <header class="header">
-      <nav>
-        <div class="container flex flex-wrap justify-between items-center mx-auto">
-          <div class="nav-main my-2.5">
-            <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
-          </div><button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
-          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul class="grid grid-flow-col items-center justify-between text-lg my-2.5">
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
+  <header class="md:px-0 px-2">
+    <nav>
+      <div class="container flex flex-wrap justify-between items-center mx-auto">
+        <div class="nav-main my-2.5">
+          <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
+        </div><button type="button" onclick="toggleMenu()" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul class="grid md:grid-flow-col items-center justify-between text-lg my-2.5">
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
+            </li>
+            <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="https://hugocisneros.com/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="https://hugocisneros.com/img/dark_mode.svg"></button></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="content h-card container mt-2 m-auto leading-loose md:px-0 px-2" role="main">
+    <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+      <div class="bg-zinc-100 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
+        <h1 class="article-title p-name" itemprop="name">Continual learning</h1>
+        <div class="article-content e-content p-name" itemprop="articleBody">
+          <dl>
+            <dt>tags</dt>
+            <dd>
+              <a href="/notes/machine_learning/">Machine learning</a>
+            </dd>
+          </dl>
+          <p>Continual learning is a type of <a href="/notes/supervised_learning/">supervised learning</a> where there is no “testing phase” associated to a decision process. Instead, training samples keep being processed by the <a href="/notes/algorithm/">algorithm</a> which has to simultaneously make predictions and keep learning.</p>
+          <p>This is challenging for a fixed neural network architecture since it has a fixed capacity and is bound to either forget things or be unable to learn anything new.</p>
+          <p>A definition from the survey (<a href="#delangeContinualLearningSurvey2020"><cite itemprop="citation" itemscope itemid="key:delangeContinualLearningSurvey2020">De Lange et al. 2020</cite></a>):</p>
+          <blockquote>
+            <p>The General Continual Learning setting considers an infinite stream of training data where at each time step, the system receives a (number of) new sample(s) drawn non i.i.d from a current distribution that could itself experience sudden of gradual changes.</p>
+          </blockquote>
+          <h2 id="examples-of-continual-learning-systems">Examples of continual learning systems</h2>
+          <ul>
+            <li>Never Ending Language Learner (NELL) (<a href="#carlsonArchitectureNeverEndingLanguage2010"><cite itemprop="citation" itemscope itemid="doi:10.1002/ajp.20927">Carlson et al. 2010</cite></a>)
+            </li>
+          </ul>
+          <h2 id="benchmarks">Benchmarks</h2>
+          <h3 id="computer-vision-based-benchmarks">Computer vision based benchmarks</h3>
+          <ul>
+            <li>
+              <p>Split MNIST: the MNIST dataset is split into 5 2-classes tasks (<a href="#nguyenVariationalContinualLearning2017"><cite itemprop="citation" itemscope itemid="key:nguyenVariationalContinualLearning2017">Nguyen et al. 2017</cite></a>; <a href="#zenkeContinualLearningSynaptic2017"><cite itemprop="citation" itemscope itemid="key:zenkeContinualLearningSynaptic2017">Zenke et al. 2017</cite></a>; <a href="#shinContinualLearningDeep2017"><cite itemprop="citation" itemscope itemid="key:shinContinualLearningDeep2017">Shin et al. 2017</cite></a>).</p>
+            </li>
+            <li>
+              <p>Split CIFAR10: the CIFAR10 dataset is split into 5 2-classes tasks (<a href="#krizhevskyLearningMultipleLayers2009"><cite itemprop="citation" itemscope itemid="key:krizhevskyLearningMultipleLayers2009">Krizhevsky, Hinton 2009</cite></a>).</p>
+            </li>
+            <li>
+              <p>Split mini-ImageNet: a mini ImageNet (100 classes) task split into 20 5-classes tasks.</p>
+            </li>
+            <li>
+              <p>Continual Transfer Learning Benchmark: <a href="https://github.com/facebookresearch/CTrLBenchmark">A benchmark from Facebook AI</a>, built from 7 computer vision datasets: MNIST, CIFAR10, CIFAR100, DTD, SVHN, Rainbow-MNIST, Fashion MNIST. The tasks are all 5-classes or 10-classes classification tasks. Some example task sequence constructions from (<a href="#veniatEfficientContinualLearning2021"><cite itemprop="citation" itemscope itemid="key:veniatEfficientContinualLearning2021">Veniat et al. 2021</cite></a>):</p>
+              <blockquote>
+                <p>The last task of \(S_{out}\) consists of a shuffling of the output labels of the first task. The last task of \(S_{in}\) is the same as its first task except that MNIST images have a different background color. \(S_{long}\) has 100 tasks, and it is constructed by first sampling a dataset, then 5 classes at random, and finally the amount of training data from a distribution that favors small tasks by the end of the learning experience.</p>
+              </blockquote>
+            </li>
+            <li>
+              <p>Permuted MNIST: here for each different task the pixels of the MNIST digits are permuted, generating a new task of equal difficulty as the original one but different solution. This task is not suitable if the model has some spatial prior (like a <a href="/notes/convolutional_neural_networks/">CNN</a>). Used first in (<a href="#goodfellowEmpiricalInvestigationCatastrophic2014"><cite itemprop="citation" itemscope itemid="key:goodfellowEmpiricalInvestigationCatastrophic2014">Goodfellow et al. 2014</cite></a>; <a href="#srivastavaCompeteCompute2013a"><cite itemprop="citation" itemscope itemid="key:srivastavaCompeteCompute2013a">Srivastava et al. 2013</cite></a>). Also in (<a href="#kirkpatrickOvercomingCatastrophicForgetting2017"><cite itemprop="citation" itemscope itemid="key:kirkpatrickOvercomingCatastrophicForgetting2017">Kirkpatrick et al. 2017</cite></a>)</p>
+            </li>
+            <li>
+              <p>Rotated MNIST: each task contains digits rotated by a fixed angle between 0 and 180 degrees.</p>
+            </li>
+          </ul>
+          <h2 id="bibliography">Bibliography</h2>
+          <ol class="biblio-list">
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="delangeContinualLearningSurvey2020">
+              <span itemprop="author">Matthias De Lange, Rahaf Aljundi, Marc Masana, Sarah Parisot, Xu Jia, Ales Leonardis, Gregory Slabaugh, Tinne Tuytelaars</span>. <time datetime="2020" itemprop="datePublished">May 26, 2020</time>. "<span itemprop="name">A Continual Learning Survey: Defying Forgetting in Classification Tasks</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:1909.08383 [cs, Stat]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/1909.08383">http://arxiv.org/abs/1909.08383</a>.
+            </li>
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="carlsonArchitectureNeverEndingLanguage2010" itemid="doi:10.1002/ajp.20927">
+              <span itemprop="author">Andrew Carlson, Justin Betteridge, Bryan Kisiel</span>. <time datetime="2010" itemprop="datePublished">2010</time>. "<span itemprop="name">Toward an Architecture for Never-ending Language Learning.</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">In Proceedings of the Conference on Artificial Intelligence (AAAI) (2010)</i></span>, 1306–13. <a itemprop="sameAs" href="https://doi.org/10.1002/ajp.20927">DOI</a>.
+            </li>
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="nguyenVariationalContinualLearning2017">
+              <span itemprop="author">Cuong V. Nguyen, Yingzhen Li, Thang D. Bui, Richard E. Turner</span>. <time datetime="2017" itemprop="datePublished">2017</time>. "<span itemprop="name">Variational Continual Learning</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Corr</i></span> abs/1710.10628. <a itemprop="sameAs" href="http://arxiv.org/abs/1710.10628">http://arxiv.org/abs/1710.10628</a>.
+            </li>
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="zenkeContinualLearningSynaptic2017">
+              <span itemprop="author">Friedemann Zenke, Ben Poole, Surya Ganguli</span>. <time datetime="2017" itemprop="datePublished">2017</time>. "<span itemprop="name">Continual Learning Through Synaptic Intelligence</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Proceedings of the 34th International Conference on Machine Learning, ICML 2017, Sydney, NSW, Australia, 6-11 August 2017</i></span>, edited by Doina Precup and Yee Whye Teh, 70:3987–95. Proceedings of Machine Learning Research. PMLR. <a itemprop="sameAs" href="http://proceedings.mlr.press/v70/zenke17a.html">http://proceedings.mlr.press/v70/zenke17a.html</a>.
+            </li>
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="shinContinualLearningDeep2017">
+              <span itemprop="author">Hanul Shin, Jung Kwon Lee, Jaehong Kim, Jiwon Kim</span>. <time datetime="2017" itemprop="datePublished">2017</time>. "<span itemprop="name">Continual Learning with Deep Generative Replay</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Advances in Neural Information Processing Systems 30: Annual Conference on Neural Information Processing Systems 2017, December 4-9, 2017, Long Beach, CA, USA</i></span>, edited by Isabelle Guyon, Ulrike von Luxburg, Samy Bengio, Hanna M. Wallach, Rob Fergus, S. V. N. Vishwanathan, and Roman Garnett, 2990–99. <a itemprop="sameAs" href="https://proceedings.neurips.cc/paper/2017/hash/0efbe98067c6c73dba1250d2beaa81f9-Abstract.html">https://proceedings.neurips.cc/paper/2017/hash/0efbe98067c6c73dba1250d2beaa81f9-Abstract.html</a>.
+            </li>
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="krizhevskyLearningMultipleLayers2009"><span itemprop="author">Alex Krizhevsky, Geoffrey Hinton</span>. <time datetime="2009" itemprop="datePublished">2009</time>. "<span itemprop="name">Learning Multiple Layers of Features from Tiny Images</span>". University of Toronto.</li>
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="veniatEfficientContinualLearning2021">
+              <span itemprop="author">Tom Veniat, Ludovic Denoyer, Marc'Aurelio Ranzato</span>. <time datetime="2021" itemprop="datePublished">February 12, 2021</time>. "<span itemprop="name">Efficient Continual Learning with Modular Networks and Task-driven Priors</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:2012.12631 [cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2012.12631">http://arxiv.org/abs/2012.12631</a>.
+            </li>
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="goodfellowEmpiricalInvestigationCatastrophic2014">
+              <span itemprop="author">Ian J. Goodfellow, Mehdi Mirza, Xia Da, Aaron C. Courville, Yoshua Bengio</span>. <time datetime="2014" itemprop="datePublished">2014</time>. "<span itemprop="name">An Empirical Investigation of Catastrophic Forgeting in Gradient-based Neural Networks</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">2nd International Conference on Learning Representations, ICLR 2014, Banff, AB, Canada, April 14-16, 2014, Conference Track Proceedings</i></span>, edited by Yoshua Bengio and Yann LeCun. <a itemprop="sameAs" href="http://arxiv.org/abs/1312.6211">http://arxiv.org/abs/1312.6211</a>.
+            </li>
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="srivastavaCompeteCompute2013a">
+              <span itemprop="author">Rupesh Kumar Srivastava, Jonathan Masci, Sohrob Kazerounian, Faustino J. Gomez, Jürgen Schmidhuber</span>. <time datetime="2013" itemprop="datePublished">2013</time>. "<span itemprop="name">Compete to Compute</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Advances in Neural Information Processing Systems 26: 27th Annual Conference on Neural Information Processing Systems 2013. Proceedings of a Meeting Held December 5-8, 2013, Lake Tahoe, Nevada, United States</i></span>, edited by Christopher J. C. Burges, Léon Bottou, Zoubin Ghahramani, and Kilian Q. Weinberger, 2310–18. <a itemprop="sameAs" href="https://proceedings.neurips.cc/paper/2013/hash/8f1d43620bc6bb580df6e80b0dc05c48-Abstract.html">https://proceedings.neurips.cc/paper/2013/hash/8f1d43620bc6bb580df6e80b0dc05c48-Abstract.html</a>.
+            </li>
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="kirkpatrickOvercomingCatastrophicForgetting2017">
+              <span itemprop="author">James Kirkpatrick, Razvan Pascanu, Neil Rabinowitz, Joel Veness, Guillaume Desjardins, Andrei A. Rusu, Kieran Milan, et al.</span>. <time datetime="2017" itemprop="datePublished">January 25, 2017</time>. "<span itemprop="name">Overcoming Catastrophic Forgetting in Neural Networks</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:1612.00796 [cs, Stat]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/1612.00796">http://arxiv.org/abs/1612.00796</a>.
+            </li>
+          </ol>
+        </div>
+        <div class="bl-section">
+          <h2>Links to this note</h2>
+          <div class="backlinks">
+            <ul>
+              <li>
+                <a href="/notes/catastrophic_forgetting/">Catastrophic forgetting</a>
               </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
-              </li>
-              <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="/img/dark_mode.svg"></button></li>
             </ul>
           </div>
         </div>
-      </nav>
-    </header>
-    <main class="content h-card container mt-2 m-auto leading-loose" role="main">
-      <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-        <div class="bg-zinc-100 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
-          <h1 class="article-title p-name" itemprop="name">Continual learning</h1>
-          <div class="article-content e-content p-name" itemprop="articleBody">
-            <dl>
-              <dt>tags</dt>
-              <dd>
-                <a href="/notes/machine_learning/">Machine learning</a>
-              </dd>
-            </dl>
-            <p>Continual learning is a type of <a href="/notes/supervised_learning/">supervised learning</a> where there is no “testing phase” associated to a decision process. Instead, training samples keep being processed by the <a href="/notes/algorithm/">algorithm</a> which has to simultaneously make predictions and keep learning.</p>
-            <p>This is challenging for a fixed neural network architecture since it has a fixed capacity and is bound to either forget things or be unable to learn anything new.</p>
-            <p>A definition from the survey (<a href="#delangeContinualLearningSurvey2020"><cite itemprop="citation" itemscope itemid="key:delangeContinualLearningSurvey2020">De Lange et al. 2020</cite></a>):</p>
-            <blockquote>
-              <p>The General Continual Learning setting considers an infinite stream of training data where at each time step, the system receives a (number of) new sample(s) drawn non i.i.d from a current distribution that could itself experience sudden of gradual changes.</p>
-            </blockquote>
-            <h2 id="examples-of-continual-learning-systems">Examples of continual learning systems</h2>
-            <ul>
-              <li>Never Ending Language Learner (NELL) (<a href="#carlsonArchitectureNeverEndingLanguage2010"><cite itemprop="citation" itemscope itemid="doi:10.1002/ajp.20927">Carlson et al. 2010</cite></a>)
-              </li>
-            </ul>
-            <h2 id="benchmarks">Benchmarks</h2>
-            <h3 id="computer-vision-based-benchmarks">Computer vision based benchmarks</h3>
-            <ul>
-              <li>
-                <p>Split MNIST: the MNIST dataset is split into 5 2-classes tasks (<a href="#nguyenVariationalContinualLearning2017"><cite itemprop="citation" itemscope itemid="key:nguyenVariationalContinualLearning2017">Nguyen et al. 2017</cite></a>; <a href="#zenkeContinualLearningSynaptic2017"><cite itemprop="citation" itemscope itemid="key:zenkeContinualLearningSynaptic2017">Zenke et al. 2017</cite></a>; <a href="#shinContinualLearningDeep2017"><cite itemprop="citation" itemscope itemid="key:shinContinualLearningDeep2017">Shin et al. 2017</cite></a>).</p>
-              </li>
-              <li>
-                <p>Split CIFAR10: the CIFAR10 dataset is split into 5 2-classes tasks (<a href="#krizhevskyLearningMultipleLayers2009"><cite itemprop="citation" itemscope itemid="key:krizhevskyLearningMultipleLayers2009">Krizhevsky, Hinton 2009</cite></a>).</p>
-              </li>
-              <li>
-                <p>Split mini-ImageNet: a mini ImageNet (100 classes) task split into 20 5-classes tasks.</p>
-              </li>
-              <li>
-                <p>Continual Transfer Learning Benchmark: <a href="https://github.com/facebookresearch/CTrLBenchmark">A benchmark from Facebook AI</a>, built from 7 computer vision datasets: MNIST, CIFAR10, CIFAR100, DTD, SVHN, Rainbow-MNIST, Fashion MNIST. The tasks are all 5-classes or 10-classes classification tasks. Some example task sequence constructions from (<a href="#veniatEfficientContinualLearning2021"><cite itemprop="citation" itemscope itemid="key:veniatEfficientContinualLearning2021">Veniat et al. 2021</cite></a>):</p>
-                <blockquote>
-                  <p>The last task of \(S_{out}\) consists of a shuffling of the output labels of the first task. The last task of \(S_{in}\) is the same as its first task except that MNIST images have a different background color. \(S_{long}\) has 100 tasks, and it is constructed by first sampling a dataset, then 5 classes at random, and finally the amount of training data from a distribution that favors small tasks by the end of the learning experience.</p>
-                </blockquote>
-              </li>
-              <li>
-                <p>Permuted MNIST: here for each different task the pixels of the MNIST digits are permuted, generating a new task of equal difficulty as the original one but different solution. This task is not suitable if the model has some spatial prior (like a <a href="/notes/convolutional_neural_networks/">CNN</a>). Used first in (<a href="#goodfellowEmpiricalInvestigationCatastrophic2014"><cite itemprop="citation" itemscope itemid="key:goodfellowEmpiricalInvestigationCatastrophic2014">Goodfellow et al. 2014</cite></a>; <a href="#srivastavaCompeteCompute2013a"><cite itemprop="citation" itemscope itemid="key:srivastavaCompeteCompute2013a">Srivastava et al. 2013</cite></a>). Also in (<a href="#kirkpatrickOvercomingCatastrophicForgetting2017"><cite itemprop="citation" itemscope itemid="key:kirkpatrickOvercomingCatastrophicForgetting2017">Kirkpatrick et al. 2017</cite></a>)</p>
-              </li>
-              <li>
-                <p>Rotated MNIST: each task contains digits rotated by a fixed angle between 0 and 180 degrees.</p>
-              </li>
-            </ul>
-            <h2 id="bibliography">Bibliography</h2>
-            <ol class="biblio-list">
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="delangeContinualLearningSurvey2020">
-                <span itemprop="author">Matthias De Lange, Rahaf Aljundi, Marc Masana, Sarah Parisot, Xu Jia, Ales Leonardis, Gregory Slabaugh, Tinne Tuytelaars</span>. <time datetime="2020" itemprop="datePublished">May 26, 2020</time>. "<span itemprop="name">A Continual Learning Survey: Defying Forgetting in Classification Tasks</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:1909.08383 [cs, Stat]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/1909.08383">http://arxiv.org/abs/1909.08383</a>.
-              </li>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="carlsonArchitectureNeverEndingLanguage2010" itemid="doi:10.1002/ajp.20927">
-                <span itemprop="author">Andrew Carlson, Justin Betteridge, Bryan Kisiel</span>. <time datetime="2010" itemprop="datePublished">2010</time>. "<span itemprop="name">Toward an Architecture for Never-ending Language Learning.</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">In Proceedings of the Conference on Artificial Intelligence (AAAI) (2010)</i></span>, 1306–13. <a itemprop="sameAs" href="https://doi.org/10.1002/ajp.20927">DOI</a>.
-              </li>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="nguyenVariationalContinualLearning2017">
-                <span itemprop="author">Cuong V. Nguyen, Yingzhen Li, Thang D. Bui, Richard E. Turner</span>. <time datetime="2017" itemprop="datePublished">2017</time>. "<span itemprop="name">Variational Continual Learning</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Corr</i></span> abs/1710.10628. <a itemprop="sameAs" href="http://arxiv.org/abs/1710.10628">http://arxiv.org/abs/1710.10628</a>.
-              </li>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="zenkeContinualLearningSynaptic2017">
-                <span itemprop="author">Friedemann Zenke, Ben Poole, Surya Ganguli</span>. <time datetime="2017" itemprop="datePublished">2017</time>. "<span itemprop="name">Continual Learning Through Synaptic Intelligence</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Proceedings of the 34th International Conference on Machine Learning, ICML 2017, Sydney, NSW, Australia, 6-11 August 2017</i></span>, edited by Doina Precup and Yee Whye Teh, 70:3987–95. Proceedings of Machine Learning Research. PMLR. <a itemprop="sameAs" href="http://proceedings.mlr.press/v70/zenke17a.html">http://proceedings.mlr.press/v70/zenke17a.html</a>.
-              </li>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="shinContinualLearningDeep2017">
-                <span itemprop="author">Hanul Shin, Jung Kwon Lee, Jaehong Kim, Jiwon Kim</span>. <time datetime="2017" itemprop="datePublished">2017</time>. "<span itemprop="name">Continual Learning with Deep Generative Replay</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Advances in Neural Information Processing Systems 30: Annual Conference on Neural Information Processing Systems 2017, December 4-9, 2017, Long Beach, CA, USA</i></span>, edited by Isabelle Guyon, Ulrike von Luxburg, Samy Bengio, Hanna M. Wallach, Rob Fergus, S. V. N. Vishwanathan, and Roman Garnett, 2990–99. <a itemprop="sameAs" href="https://proceedings.neurips.cc/paper/2017/hash/0efbe98067c6c73dba1250d2beaa81f9-Abstract.html">https://proceedings.neurips.cc/paper/2017/hash/0efbe98067c6c73dba1250d2beaa81f9-Abstract.html</a>.
-              </li>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="krizhevskyLearningMultipleLayers2009"><span itemprop="author">Alex Krizhevsky, Geoffrey Hinton</span>. <time datetime="2009" itemprop="datePublished">2009</time>. "<span itemprop="name">Learning Multiple Layers of Features from Tiny Images</span>". University of Toronto.</li>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="veniatEfficientContinualLearning2021">
-                <span itemprop="author">Tom Veniat, Ludovic Denoyer, Marc'Aurelio Ranzato</span>. <time datetime="2021" itemprop="datePublished">February 12, 2021</time>. "<span itemprop="name">Efficient Continual Learning with Modular Networks and Task-driven Priors</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:2012.12631 [cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2012.12631">http://arxiv.org/abs/2012.12631</a>.
-              </li>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="goodfellowEmpiricalInvestigationCatastrophic2014">
-                <span itemprop="author">Ian J. Goodfellow, Mehdi Mirza, Xia Da, Aaron C. Courville, Yoshua Bengio</span>. <time datetime="2014" itemprop="datePublished">2014</time>. "<span itemprop="name">An Empirical Investigation of Catastrophic Forgeting in Gradient-based Neural Networks</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">2nd International Conference on Learning Representations, ICLR 2014, Banff, AB, Canada, April 14-16, 2014, Conference Track Proceedings</i></span>, edited by Yoshua Bengio and Yann LeCun. <a itemprop="sameAs" href="http://arxiv.org/abs/1312.6211">http://arxiv.org/abs/1312.6211</a>.
-              </li>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="srivastavaCompeteCompute2013a">
-                <span itemprop="author">Rupesh Kumar Srivastava, Jonathan Masci, Sohrob Kazerounian, Faustino J. Gomez, Jürgen Schmidhuber</span>. <time datetime="2013" itemprop="datePublished">2013</time>. "<span itemprop="name">Compete to Compute</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Advances in Neural Information Processing Systems 26: 27th Annual Conference on Neural Information Processing Systems 2013. Proceedings of a Meeting Held December 5-8, 2013, Lake Tahoe, Nevada, United States</i></span>, edited by Christopher J. C. Burges, Léon Bottou, Zoubin Ghahramani, and Kilian Q. Weinberger, 2310–18. <a itemprop="sameAs" href="https://proceedings.neurips.cc/paper/2013/hash/8f1d43620bc6bb580df6e80b0dc05c48-Abstract.html">https://proceedings.neurips.cc/paper/2013/hash/8f1d43620bc6bb580df6e80b0dc05c48-Abstract.html</a>.
-              </li>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="kirkpatrickOvercomingCatastrophicForgetting2017">
-                <span itemprop="author">James Kirkpatrick, Razvan Pascanu, Neil Rabinowitz, Joel Veness, Guillaume Desjardins, Andrei A. Rusu, Kieran Milan, et al.</span>. <time datetime="2017" itemprop="datePublished">January 25, 2017</time>. "<span itemprop="name">Overcoming Catastrophic Forgetting in Neural Networks</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:1612.00796 [cs, Stat]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/1612.00796">http://arxiv.org/abs/1612.00796</a>.
-              </li>
-            </ol>
-          </div>
-          <div class="bl-section">
-            <h2>Links to this note</h2>
-            <div class="backlinks">
-              <ul>
-                <li>
-                  <a href="/notes/catastrophic_forgetting/">Catastrophic forgetting</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="text-center" style="font-variant-caps:all-small-caps">
-            Last changed <a class="u-url" href="https://hugocisneros.com/notes/continual_learning/"><time itemprop="datePublished" class="dt-published" datetime="2022-03-04T17:53:00+0100">04/03/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
-          </div>
+        <div class="text-center" style="font-variant-caps:all-small-caps">
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/continual_learning/"><time itemprop="datePublished" class="dt-published" datetime="2022-03-04T17:53:00+0100">04/03/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
-      </article>
-      <h3>Comments</h3>
-      <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
-      <section id="isso-thread"></section><br>
-      <a href="/notes#continual_learning"><b>← Back to Notes</b></a>
-      <hr>
-    </main>
-    <footer class="footer container h-10 text-center">
-      <ul>
-        <li class="inline-block list-none">
-          <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="/img/RSS.svg" alt="RSS feed icon"></a>
-        </li>
-        <li class="before:content-['•'] inline-block">
-          <a class="text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
-        </li>
-        <li class="before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block">© Hugo Cisneros 2022</li>
-      </ul>
-    </footer>
-  </div>
+      </div>
+    </article>
+    <h3>Comments</h3>
+    <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
+    <section id="isso-thread"></section><br>
+    <a href="/notes#continual_learning"><b>← Back to Notes</b></a>
+    <hr>
+  </main>
+  <footer class="footer container h-10 text-center">
+    <ul class="pl-0">
+      <li class="first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="https://hugocisneros.com/img/RSS.svg" alt="RSS feed icon"></a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="ml-2 text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block list-none"><span class="ml-2">© Hugo Cisneros 2022</span></li>
+    </ul>
+  </footer>
   <link rel="stylesheet" href="/js/katex/katex.min.css">
   <script src="/js/katex/katex.min.js"></script> 
   <script src="/js/katex/contrib/auto-render.min.js"></script> 

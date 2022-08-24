@@ -28,111 +28,109 @@
   <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
   <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
   <script>
-  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode()
+  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
 </head>
 <body>
-  <div class="wrapper">
-    <header class="header">
-      <nav>
-        <div class="container flex flex-wrap justify-between items-center mx-auto">
-          <div class="nav-main my-2.5">
-            <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
-          </div><button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
-          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul class="grid grid-flow-col items-center justify-between text-lg my-2.5">
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
+  <header class="md:px-0 px-2">
+    <nav>
+      <div class="container flex flex-wrap justify-between items-center mx-auto">
+        <div class="nav-main my-2.5">
+          <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
+        </div><button type="button" onclick="toggleMenu()" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul class="grid md:grid-flow-col items-center justify-between text-lg my-2.5">
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
+            </li>
+            <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="https://hugocisneros.com/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="https://hugocisneros.com/img/dark_mode.svg"></button></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="content h-card container mt-2 m-auto leading-loose md:px-0 px-2" role="main">
+    <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+      <div class="bg-zinc-100 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
+        <h1 class="article-title p-name" itemprop="name">Talk: Alife 2020 keynote Luis Zaman - New Frontiers in Alife: What was old is new again</h1>
+        <div class="article-content e-content p-name" itemprop="articleBody">
+          <dl>
+            <dt>tags</dt>
+            <dd>
+              <a href="/notes/artificial_life/">Artificial life</a>, <a href="/notes/alife_2020/">ALife 2020</a>
+            </dd>
+          </dl>
+          <p>This keynote is about this sub-community of ALife which is dedicated to constructing actual artificial systems that can exhibit <a href="/notes/open_ended_evolution/">Open-ended Evolution</a>, and <a href="/notes/life/">Life</a>-like behavior.</p>
+          <p>The first models that tried to construct ALife were probably <a href="/notes/cellular_automata/">cellular automata</a>: <a href="/notes/von_neumann_s_self_reproducing_ca/">Von Neumann’s self-reproducing CA</a> and <a href="/notes/langton_s_loop/">Langton’s loop</a>. However, their main limitation was they were extremely brittle, which is why evolution did not really work in them.</p>
+          <p>Zaman’s definition of evolution is</p>
+          <blockquote>
+            <p>Adaptive evolution can occur iff there is reproduction, heritability of traits, and variation in individual’s reproductive success driven by those traits.</p>
+          </blockquote>
+          <p>Thomas Ray invented <a href="/notes/tierra/">Tierra</a> in 1995 by noting the difference between alterations of the genetic code and alterations of a computer program. To make computer programs resistant to alterations, Tierra introduced a small alphabet of a few elementary <a href="/notes/assembly_language/">assembly</a>-like instructions (similar in number to amino acids). Ray also borrowed the idea of having instructions that can interact with only some other instructions to replicate the way amino acids and proteins need to bind to specific other objects.</p>
+          <p>At the same time, another group of scientists was working on <a href="/notes/avida/">Avida</a>, another Alife system that Zaman is working on.</p>
+          <h2 id="how-could-artificial-life-really-reach-this-space-of-incredible-natural-diversity">How could Artificial life really reach this space of incredible natural diversity?</h2>
+          <p>Zaman’s core research theme is <a href="/notes/co_evolution/">co-evolution</a>. This is what he believes could be the source of <a href="/notes/evolution/">evolution</a> as we know it.</p>
+          <blockquote>
+            <p>Perhaps biological systems have the same problem, that everything around them is constantly evolving and changing, the landscape that they exist in. So the only way to maintain your fitness in a world that is constantly changing is also to constantly change.</p>
+          </blockquote>
+          <p>This is also one of the ideas developed in (<a href="#patteeEvolvedOpenEndednessNot2019"><cite itemprop="citation" itemscope itemid="doi:10.1162/artl_a_00276">Pattee, Sayama 2019</cite></a>), that open-endedness could be the result of interactions with a very complex environment and other evolving objects which will increase the overall pressure to evolve.</p>
+          <p>W. Daniel Hillis was one of the first person to work on this and use parasites that co-evolve with a solution in a <a href="/notes/genetic_algorithm/">Genetic algorithms</a>-like procedure.</p>
+          <h2 id="parasites-in-avida">Parasites in Avida</h2>
+          <p>One of the main advantages of <a href="/notes/avida/">Avida</a> in my opinion (and other program/string/<a href="/notes/kruszewskicombinatorychemistrysimple2020/">combinatory logic</a>-based Alife systems) is the fact that there is a very natural metric of complexity which derives from the structures of organisms themselves. In the case of computer programs, the length of the program is a reasonable proxy for its complexity.</p>
+          <p>This metric allows interesting experiments to show how parasites can accelerate evolution in Avida simulations. But the authors wanted to see if such results can also be obtained by using something else than “hard-coded” parasites. They used alternating environment parameters to reproduce the “constantly changing” part of natural environment.</p>
+          <p>It turns out this alternating environment experiments seem to show an advantage for obtaining systems that have “smoother” reward landscapes for a various set of tasks.</p>
+          <h2 id="bibliography">Bibliography</h2>
+          <ol class="biblio-list">
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="patteeEvolvedOpenEndednessNot2019" itemid="doi:10.1162/artl_a_00276">
+              <span itemprop="author">Howard H. Pattee, Hiroki Sayama</span>. <time datetime="2019" itemprop="datePublished">April 2019</time>. "<span itemprop="name">Evolved Open-endedness, Not Open-ended Evolution</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Artificial Life</i></span> 25 (1):4–8. <a itemprop="sameAs" href="https://doi.org/10.1162/artl_a_00276">DOI</a>.&nbsp;<a href="/notes/patteeevolvedopenendednessnot2019/">See notes</a>
+            </li>
+          </ol>
+        </div>
+        <div class="bl-section">
+          <h2>Links to this note</h2>
+          <div class="backlinks">
+            <ul>
+              <li>
+                <a href="/notes/alife_2020/">ALife 2020</a>
               </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
-              </li>
-              <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="/img/dark_mode.svg"></button></li>
             </ul>
           </div>
         </div>
-      </nav>
-    </header>
-    <main class="content h-card container mt-2 m-auto leading-loose" role="main">
-      <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-        <div class="bg-zinc-100 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
-          <h1 class="article-title p-name" itemprop="name">Talk: Alife 2020 keynote Luis Zaman - New Frontiers in Alife: What was old is new again</h1>
-          <div class="article-content e-content p-name" itemprop="articleBody">
-            <dl>
-              <dt>tags</dt>
-              <dd>
-                <a href="/notes/artificial_life/">Artificial life</a>, <a href="/notes/alife_2020/">ALife 2020</a>
-              </dd>
-            </dl>
-            <p>This keynote is about this sub-community of ALife which is dedicated to constructing actual artificial systems that can exhibit <a href="/notes/open_ended_evolution/">Open-ended Evolution</a>, and <a href="/notes/life/">Life</a>-like behavior.</p>
-            <p>The first models that tried to construct ALife were probably <a href="/notes/cellular_automata/">cellular automata</a>: <a href="/notes/von_neumann_s_self_reproducing_ca/">Von Neumann’s self-reproducing CA</a> and <a href="/notes/langton_s_loop/">Langton’s loop</a>. However, their main limitation was they were extremely brittle, which is why evolution did not really work in them.</p>
-            <p>Zaman’s definition of evolution is</p>
-            <blockquote>
-              <p>Adaptive evolution can occur iff there is reproduction, heritability of traits, and variation in individual’s reproductive success driven by those traits.</p>
-            </blockquote>
-            <p>Thomas Ray invented <a href="/notes/tierra/">Tierra</a> in 1995 by noting the difference between alterations of the genetic code and alterations of a computer program. To make computer programs resistant to alterations, Tierra introduced a small alphabet of a few elementary <a href="/notes/assembly_language/">assembly</a>-like instructions (similar in number to amino acids). Ray also borrowed the idea of having instructions that can interact with only some other instructions to replicate the way amino acids and proteins need to bind to specific other objects.</p>
-            <p>At the same time, another group of scientists was working on <a href="/notes/avida/">Avida</a>, another Alife system that Zaman is working on.</p>
-            <h2 id="how-could-artificial-life-really-reach-this-space-of-incredible-natural-diversity">How could Artificial life really reach this space of incredible natural diversity?</h2>
-            <p>Zaman’s core research theme is <a href="/notes/co_evolution/">co-evolution</a>. This is what he believes could be the source of <a href="/notes/evolution/">evolution</a> as we know it.</p>
-            <blockquote>
-              <p>Perhaps biological systems have the same problem, that everything around them is constantly evolving and changing, the landscape that they exist in. So the only way to maintain your fitness in a world that is constantly changing is also to constantly change.</p>
-            </blockquote>
-            <p>This is also one of the ideas developed in (<a href="#patteeEvolvedOpenEndednessNot2019"><cite itemprop="citation" itemscope itemid="doi:10.1162/artl_a_00276">Pattee, Sayama 2019</cite></a>), that open-endedness could be the result of interactions with a very complex environment and other evolving objects which will increase the overall pressure to evolve.</p>
-            <p>W. Daniel Hillis was one of the first person to work on this and use parasites that co-evolve with a solution in a <a href="/notes/genetic_algorithm/">Genetic algorithms</a>-like procedure.</p>
-            <h2 id="parasites-in-avida">Parasites in Avida</h2>
-            <p>One of the main advantages of <a href="/notes/avida/">Avida</a> in my opinion (and other program/string/<a href="/notes/kruszewskicombinatorychemistrysimple2020/">combinatory logic</a>-based Alife systems) is the fact that there is a very natural metric of complexity which derives from the structures of organisms themselves. In the case of computer programs, the length of the program is a reasonable proxy for its complexity.</p>
-            <p>This metric allows interesting experiments to show how parasites can accelerate evolution in Avida simulations. But the authors wanted to see if such results can also be obtained by using something else than “hard-coded” parasites. They used alternating environment parameters to reproduce the “constantly changing” part of natural environment.</p>
-            <p>It turns out this alternating environment experiments seem to show an advantage for obtaining systems that have “smoother” reward landscapes for a various set of tasks.</p>
-            <h2 id="bibliography">Bibliography</h2>
-            <ol class="biblio-list">
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="patteeEvolvedOpenEndednessNot2019" itemid="doi:10.1162/artl_a_00276">
-                <span itemprop="author">Howard H. Pattee, Hiroki Sayama</span>. <time datetime="2019" itemprop="datePublished">April 2019</time>. "<span itemprop="name">Evolved Open-endedness, Not Open-ended Evolution</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Artificial Life</i></span> 25 (1):4–8. <a itemprop="sameAs" href="https://doi.org/10.1162/artl_a_00276">DOI</a>.&nbsp;<a href="/notes/patteeevolvedopenendednessnot2019/">See notes</a>
-              </li>
-            </ol>
-          </div>
-          <div class="bl-section">
-            <h2>Links to this note</h2>
-            <div class="backlinks">
-              <ul>
-                <li>
-                  <a href="/notes/alife_2020/">ALife 2020</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="text-center" style="font-variant-caps:all-small-caps">
-            Last changed <a class="u-url" href="https://hugocisneros.com/notes/talk_alife_2020_keynote_luis_zaman_new_frontiers_in_alife_what_was_old_is_new_again/"><time itemprop="datePublished" class="dt-published" datetime="2022-04-07T19:32:00+0200">07/04/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
-          </div>
+        <div class="text-center" style="font-variant-caps:all-small-caps">
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/talk_alife_2020_keynote_luis_zaman_new_frontiers_in_alife_what_was_old_is_new_again/"><time itemprop="datePublished" class="dt-published" datetime="2022-04-07T19:32:00+0200">07/04/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
-      </article>
-      <h3>Comments</h3>
-      <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
-      <section id="isso-thread"></section><br>
-      <a href="/notes#talk_alife_2020_keynote_luis_zaman_new_frontiers_in_alife_what_was_old_is_new_again"><b>← Back to Notes</b></a>
-      <hr>
-    </main>
-    <footer class="footer container h-10 text-center">
-      <ul>
-        <li class="inline-block list-none">
-          <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="/img/RSS.svg" alt="RSS feed icon"></a>
-        </li>
-        <li class="before:content-['•'] inline-block">
-          <a class="text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
-        </li>
-        <li class="before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block">© Hugo Cisneros 2022</li>
-      </ul>
-    </footer>
-  </div>
+      </div>
+    </article>
+    <h3>Comments</h3>
+    <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
+    <section id="isso-thread"></section><br>
+    <a href="/notes#talk_alife_2020_keynote_luis_zaman_new_frontiers_in_alife_what_was_old_is_new_again"><b>← Back to Notes</b></a>
+    <hr>
+  </main>
+  <footer class="footer container h-10 text-center">
+    <ul class="pl-0">
+      <li class="first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="https://hugocisneros.com/img/RSS.svg" alt="RSS feed icon"></a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="ml-2 text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block list-none"><span class="ml-2">© Hugo Cisneros 2022</span></li>
+    </ul>
+  </footer>
   <link rel="stylesheet" href="/js/katex/katex.min.css">
   <script src="/js/katex/katex.min.js"></script> 
   <script src="/js/katex/contrib/auto-render.min.js"></script> 

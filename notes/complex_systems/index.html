@@ -28,182 +28,180 @@
   <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
   <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
   <script>
-  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode()
+  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
 </head>
 <body>
-  <div class="wrapper">
-    <header class="header">
-      <nav>
-        <div class="container flex flex-wrap justify-between items-center mx-auto">
-          <div class="nav-main my-2.5">
-            <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
-          </div><button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
-          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul class="grid grid-flow-col items-center justify-between text-lg my-2.5">
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
-              </li>
-              <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="/img/dark_mode.svg"></button></li>
-            </ul>
-          </div>
+  <header class="md:px-0 px-2">
+    <nav>
+      <div class="container flex flex-wrap justify-between items-center mx-auto">
+        <div class="nav-main my-2.5">
+          <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
+        </div><button type="button" onclick="toggleMenu()" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul class="grid md:grid-flow-col items-center justify-between text-lg my-2.5">
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
+            </li>
+            <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="https://hugocisneros.com/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="https://hugocisneros.com/img/dark_mode.svg"></button></li>
+          </ul>
         </div>
-      </nav>
-    </header>
-    <main class="content h-card container mt-2 m-auto leading-loose" role="main">
-      <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-        <div class="bg-zinc-100 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
-          <h1 class="article-title p-name" itemprop="name">Complex Systems</h1>
-          <div class="article-content e-content p-name" itemprop="articleBody">
-            <dl>
-              <dt>tags</dt>
-              <dd>
-                <a href="/notes/physics/">Physics</a>
-              </dd>
-            </dl>
-            <blockquote>
-              <p>Bottomless wonders spring from simple rules, which are repeated without end.</p>
-            </blockquote>
-            <p>— Mandelbrot, ~1980</p>
-            <p>When we talk about complex systems in time, we often used the term complex <a href="/notes/dynamical_systems/">dynamical systems</a>.</p>
-            <h2 id="example-of-complex-systems">Example of complex systems</h2>
+      </div>
+    </nav>
+  </header>
+  <main class="content h-card container mt-2 m-auto leading-loose md:px-0 px-2" role="main">
+    <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+      <div class="bg-zinc-100 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
+        <h1 class="article-title p-name" itemprop="name">Complex Systems</h1>
+        <div class="article-content e-content p-name" itemprop="articleBody">
+          <dl>
+            <dt>tags</dt>
+            <dd>
+              <a href="/notes/physics/">Physics</a>
+            </dd>
+          </dl>
+          <blockquote>
+            <p>Bottomless wonders spring from simple rules, which are repeated without end.</p>
+          </blockquote>
+          <p>— Mandelbrot, ~1980</p>
+          <p>When we talk about complex systems in time, we often used the term complex <a href="/notes/dynamical_systems/">dynamical systems</a>.</p>
+          <h2 id="example-of-complex-systems">Example of complex systems</h2>
+          <ul>
+            <li>The <a href="/notes/economics/">economy</a> (<a href="#andersonEconomyEvolvingComplex1996"><cite itemprop="citation" itemscope itemid="key:andersonEconomyEvolvingComplex1996">Anderson, Evolutionary Paths of the Global Economy Workshop 1996</cite></a>)
+            </li>
+            <li>
+              <a href="/notes/boolean_networks/">Boolean networks</a>
+            </li>
+            <li>
+              <a href="/notes/cellular_automata/">Cellular automata</a>
+            </li>
+            <li>
+              <a href="/notes/neural_networks/">Neural networks</a>
+            </li>
+            <li>Many <a href="/notes/physics/">physical</a> systems
+            </li>
+          </ul>
+          <h2 id="understanding-complex-systems">Understanding complex systems</h2>
+          <p>There is an interesting series of articles that are about how different scientific disciplines approach the same problem of understanding an incredibly complex system that we initially don’t know anything about:</p>
+          <ul>
+            <li>
+              <a href="https://web.archive.org/web/20190728232758/https://www2.biology.ualberta.ca/locke.hp/dougandbill.htm">The story of Doug and Bill</a> (<a href="#sullivanSalvationDoug1993"><cite itemprop="citation" itemscope itemid="key:sullivanSalvationDoug1993">Sullivan 1993</cite></a>)
+            </li>
+            <li>Can a biologist fix a radio? (<a href="#lazebnikCanBiologistFix2002a"><cite itemprop="citation" itemscope itemid="doi:10.1016/S1535-6108(02)00133-2">Lazebnik 2002</cite></a>)
+            </li>
+            <li>Could a Neuroscientist Understand a Microprocessor? (<a href="#jonasCouldNeuroscientistUnderstand2017"><cite itemprop="citation" itemscope itemid="doi:10.1371/journal.pcbi.1005268">Jonas, Kording 2017</cite></a>)
+            </li>
+          </ul>
+          <p>These articles challenge the very notion of “understanding”, which may mean different things from one scientific discipline to the next. Interestingly it seems that such understanding is neither necessary nor sufficient for constructing a replica of the complex system being studied. <a href="/notes/evolution/">Evolution</a> doesn’t understand the complexity of the human body, and although we understand a microprocessor very well, actually constructing it requires a whole different range of technologies.</p>
+          <p>What does it mean for <a href="/notes/artificial_intelligence/">artificial intelligence</a>? We could take the path of the microprocessor, jointly developing a blueprint for an intelligent system and the technologies that enable it in order to construct an AI. <a href="/notes/neural_networks/">Neural networks</a> are interesting because we don’t understand them fully despite having a clear description of each of its small component. For this reason, they might end up being parts of very large complex systems that we barely understand like the human body.</p>
+          <h2 id="can-complex-systems-evolve">Can complex systems evolve?</h2>
+          <p>The biosphere is a striking example of very large and intricate complex system. One of its most impressive feature is the fact that it has allowed for intelligent <a href="/notes/life/">life</a> to develop through <a href="/notes/evolution/">evolution</a>. Like many complex systems, Earth is capable of <a href="/notes/emergence/">emergent</a> behavior.</p>
+          <p>Can this kind of incredible events happen within other complex systems such as <a href="/notes/cellular_automata/">cellular automata</a>?</p>
+          <h2 id="bibliography">Bibliography</h2>
+          <ol class="biblio-list">
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="andersonEconomyEvolvingComplex1996"><span itemprop="author">Philip W. Anderson, Evolutionary Paths of the Global Economy Workshop</span>, eds.. <time datetime="1996" itemprop="datePublished">1996</time>. <i>The Economy as an Evolving Complex System: The Proceedings of the Evolutionary Paths of the Global Economy Workshop, Held September, 1987 in Santa Fe, New Mexico</i>. Edited by Philip W. Anderson and Evolutionary Paths of the Global Economy Workshop. 8. print. Santa Fe Institute Studies in the Sciences of Complexity 5. Reading, Mass.: Addison-Wesley Publ. Co.</li>
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="sullivanSalvationDoug1993"><span itemprop="author">William T. Sullivan</span>. <time datetime="1993" itemprop="datePublished">1993</time>. "<span itemprop="name">The Salvation of Doug</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Generations</i></span> 1 (3):1439–43.</li>
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="lazebnikCanBiologistFix2002a" itemid="doi:10.1016/S1535-6108(02)00133-2">
+              <span itemprop="author">Yuri Lazebnik</span>. <time datetime="2002" itemprop="datePublished">September 1, 2002</time>. "<span itemprop="name">Can a biologist fix a radio?—or, what I learned while studying apoptosis</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Cancer cell</i></span> 2 (3). Elsevier:179–82. <a itemprop="sameAs" href="https://doi.org/10.1016/S1535-6108(02)00133-2">DOI</a>.
+            </li>
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="jonasCouldNeuroscientistUnderstand2017" itemid="doi:10.1371/journal.pcbi.1005268">
+              <span itemprop="author">Eric Jonas, Konrad Paul Kording</span>. <time datetime="2017" itemprop="datePublished">January 12, 2017</time>. "<span itemprop="name">Could a Neuroscientist Understand a Microprocessor?</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">PLOS Computational Biology</i></span> 13 (1). Public Library of Science:e1005268. <a itemprop="sameAs" href="https://doi.org/10.1371/journal.pcbi.1005268">DOI</a>.
+            </li>
+          </ol>
+        </div>
+        <div class="bl-section">
+          <h2>Links to this note</h2>
+          <div class="backlinks">
             <ul>
-              <li>The <a href="/notes/economics/">economy</a> (<a href="#andersonEconomyEvolvingComplex1996"><cite itemprop="citation" itemscope itemid="key:andersonEconomyEvolvingComplex1996">Anderson, Evolutionary Paths of the Global Economy Workshop 1996</cite></a>)
+              <li>
+                <a href="/notes/alife_2020/">ALife 2020</a>
+              </li>
+              <li>
+                <a href="/notes/alife_conference/">ALife Conference</a>
+              </li>
+              <li>
+                <a href="/notes/the_cartoon_picture_of_magnets_that_has_transformed_science/">Article: The Cartoon Picture of Magnets That Has Transformed Science</a>
+              </li>
+              <li>
+                <a href="/notes/article_uncertain_times/">Article: Uncertain times</a>
+              </li>
+              <li>
+                <a href="/notes/what_is_an_individual_biology_seeks_clues_in_information_theory/">Article: What Is an Individual? Biology Seeks Clues in Information Theory.</a>
+              </li>
+              <li>
+                <a href="/notes/automated_discovery_in_complex_systems/">Automated discovery in complex systems</a>
               </li>
               <li>
                 <a href="/notes/boolean_networks/">Boolean networks</a>
               </li>
               <li>
-                <a href="/notes/cellular_automata/">Cellular automata</a>
+                <a href="/notes/chemical_reaction_network/">Chemical reaction network</a>
               </li>
               <li>
-                <a href="/notes/neural_networks/">Neural networks</a>
+                <a href="/notes/christopher_langton/">Christopher Langton</a>
               </li>
-              <li>Many <a href="/notes/physics/">physical</a> systems
-              </li>
-            </ul>
-            <h2 id="understanding-complex-systems">Understanding complex systems</h2>
-            <p>There is an interesting series of articles that are about how different scientific disciplines approach the same problem of understanding an incredibly complex system that we initially don’t know anything about:</p>
-            <ul>
               <li>
-                <a href="https://web.archive.org/web/20190728232758/https://www2.biology.ualberta.ca/locke.hp/dougandbill.htm">The story of Doug and Bill</a> (<a href="#sullivanSalvationDoug1993"><cite itemprop="citation" itemscope itemid="key:sullivanSalvationDoug1993">Sullivan 1993</cite></a>)
+                <a href="/notes/climate/">Climate</a>
               </li>
-              <li>Can a biologist fix a radio? (<a href="#lazebnikCanBiologistFix2002a"><cite itemprop="citation" itemscope itemid="doi:10.1016/S1535-6108(02)00133-2">Lazebnik 2002</cite></a>)
+              <li>
+                <a href="/notes/complexity/">Complexity</a>
               </li>
-              <li>Could a Neuroscientist Understand a Microprocessor? (<a href="#jonasCouldNeuroscientistUnderstand2017"><cite itemprop="citation" itemscope itemid="doi:10.1371/journal.pcbi.1005268">Jonas, Kording 2017</cite></a>)
+              <li>
+                <a href="/notes/globalization/">Globalization</a>
+              </li>
+              <li>
+                <a href="/notes/ising_model/">Ising model</a>
+              </li>
+              <li>
+                <a href="/notes/melanie_mitchell/">Melanie Mitchell</a>
+              </li>
+              <li>
+                <a href="/notes/nk_model/">NK model</a>
+              </li>
+              <li>
+                <a href="/notes/reductionism/">Reductionism</a>
+              </li>
+              <li>
+                <a href="/notes/santa_fe_institute/">Santa Fe Institute</a>
               </li>
             </ul>
-            <p>These articles challenge the very notion of “understanding”, which may mean different things from one scientific discipline to the next. Interestingly it seems that such understanding is neither necessary nor sufficient for constructing a replica of the complex system being studied. <a href="/notes/evolution/">Evolution</a> doesn’t understand the complexity of the human body, and although we understand a microprocessor very well, actually constructing it requires a whole different range of technologies.</p>
-            <p>What does it mean for <a href="/notes/artificial_intelligence/">artificial intelligence</a>? We could take the path of the microprocessor, jointly developing a blueprint for an intelligent system and the technologies that enable it in order to construct an AI. <a href="/notes/neural_networks/">Neural networks</a> are interesting because we don’t understand them fully despite having a clear description of each of its small component. For this reason, they might end up being parts of very large complex systems that we barely understand like the human body.</p>
-            <h2 id="can-complex-systems-evolve">Can complex systems evolve?</h2>
-            <p>The biosphere is a striking example of very large and intricate complex system. One of its most impressive feature is the fact that it has allowed for intelligent <a href="/notes/life/">life</a> to develop through <a href="/notes/evolution/">evolution</a>. Like many complex systems, Earth is capable of <a href="/notes/emergence/">emergent</a> behavior.</p>
-            <p>Can this kind of incredible events happen within other complex systems such as <a href="/notes/cellular_automata/">cellular automata</a>?</p>
-            <h2 id="bibliography">Bibliography</h2>
-            <ol class="biblio-list">
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="andersonEconomyEvolvingComplex1996"><span itemprop="author">Philip W. Anderson, Evolutionary Paths of the Global Economy Workshop</span>, eds.. <time datetime="1996" itemprop="datePublished">1996</time>. <i>The Economy as an Evolving Complex System: The Proceedings of the Evolutionary Paths of the Global Economy Workshop, Held September, 1987 in Santa Fe, New Mexico</i>. Edited by Philip W. Anderson and Evolutionary Paths of the Global Economy Workshop. 8. print. Santa Fe Institute Studies in the Sciences of Complexity 5. Reading, Mass.: Addison-Wesley Publ. Co.</li>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="sullivanSalvationDoug1993"><span itemprop="author">William T. Sullivan</span>. <time datetime="1993" itemprop="datePublished">1993</time>. "<span itemprop="name">The Salvation of Doug</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Generations</i></span> 1 (3):1439–43.</li>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="lazebnikCanBiologistFix2002a" itemid="doi:10.1016/S1535-6108(02)00133-2">
-                <span itemprop="author">Yuri Lazebnik</span>. <time datetime="2002" itemprop="datePublished">September 1, 2002</time>. "<span itemprop="name">Can a biologist fix a radio?—or, what I learned while studying apoptosis</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Cancer cell</i></span> 2 (3). Elsevier:179–82. <a itemprop="sameAs" href="https://doi.org/10.1016/S1535-6108(02)00133-2">DOI</a>.
-              </li>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="jonasCouldNeuroscientistUnderstand2017" itemid="doi:10.1371/journal.pcbi.1005268">
-                <span itemprop="author">Eric Jonas, Konrad Paul Kording</span>. <time datetime="2017" itemprop="datePublished">January 12, 2017</time>. "<span itemprop="name">Could a Neuroscientist Understand a Microprocessor?</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">PLOS Computational Biology</i></span> 13 (1). Public Library of Science:e1005268. <a itemprop="sameAs" href="https://doi.org/10.1371/journal.pcbi.1005268">DOI</a>.
-              </li>
-            </ol>
-          </div>
-          <div class="bl-section">
-            <h2>Links to this note</h2>
-            <div class="backlinks">
-              <ul>
-                <li>
-                  <a href="/notes/alife_2020/">ALife 2020</a>
-                </li>
-                <li>
-                  <a href="/notes/alife_conference/">ALife Conference</a>
-                </li>
-                <li>
-                  <a href="/notes/the_cartoon_picture_of_magnets_that_has_transformed_science/">Article: The Cartoon Picture of Magnets That Has Transformed Science</a>
-                </li>
-                <li>
-                  <a href="/notes/article_uncertain_times/">Article: Uncertain times</a>
-                </li>
-                <li>
-                  <a href="/notes/what_is_an_individual_biology_seeks_clues_in_information_theory/">Article: What Is an Individual? Biology Seeks Clues in Information Theory.</a>
-                </li>
-                <li>
-                  <a href="/notes/automated_discovery_in_complex_systems/">Automated discovery in complex systems</a>
-                </li>
-                <li>
-                  <a href="/notes/boolean_networks/">Boolean networks</a>
-                </li>
-                <li>
-                  <a href="/notes/chemical_reaction_network/">Chemical reaction network</a>
-                </li>
-                <li>
-                  <a href="/notes/christopher_langton/">Christopher Langton</a>
-                </li>
-                <li>
-                  <a href="/notes/climate/">Climate</a>
-                </li>
-                <li>
-                  <a href="/notes/complexity/">Complexity</a>
-                </li>
-                <li>
-                  <a href="/notes/globalization/">Globalization</a>
-                </li>
-                <li>
-                  <a href="/notes/ising_model/">Ising model</a>
-                </li>
-                <li>
-                  <a href="/notes/melanie_mitchell/">Melanie Mitchell</a>
-                </li>
-                <li>
-                  <a href="/notes/nk_model/">NK model</a>
-                </li>
-                <li>
-                  <a href="/notes/reductionism/">Reductionism</a>
-                </li>
-                <li>
-                  <a href="/notes/santa_fe_institute/">Santa Fe Institute</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="text-center" style="font-variant-caps:all-small-caps">
-            Last changed <a class="u-url" href="https://hugocisneros.com/notes/complex_systems/"><time itemprop="datePublished" class="dt-published" datetime="2022-08-03T15:46:00+0200">03/08/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
           </div>
         </div>
-      </article>
-      <h3>Comments</h3>
-      <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
-      <section id="isso-thread"></section><br>
-      <a href="/notes#complex_systems"><b>← Back to Notes</b></a>
-      <hr>
-    </main>
-    <footer class="footer container h-10 text-center">
-      <ul>
-        <li class="inline-block list-none">
-          <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="/img/RSS.svg" alt="RSS feed icon"></a>
-        </li>
-        <li class="before:content-['•'] inline-block">
-          <a class="text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
-        </li>
-        <li class="before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block">© Hugo Cisneros 2022</li>
-      </ul>
-    </footer>
-  </div>
+        <div class="text-center" style="font-variant-caps:all-small-caps">
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/complex_systems/"><time itemprop="datePublished" class="dt-published" datetime="2022-08-03T15:46:00+0200">03/08/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+        </div>
+      </div>
+    </article>
+    <h3>Comments</h3>
+    <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
+    <section id="isso-thread"></section><br>
+    <a href="/notes#complex_systems"><b>← Back to Notes</b></a>
+    <hr>
+  </main>
+  <footer class="footer container h-10 text-center">
+    <ul class="pl-0">
+      <li class="first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="https://hugocisneros.com/img/RSS.svg" alt="RSS feed icon"></a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="ml-2 text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block list-none"><span class="ml-2">© Hugo Cisneros 2022</span></li>
+    </ul>
+  </footer>
   <link rel="stylesheet" href="/js/katex/katex.min.css">
   <script src="/js/katex/katex.min.js"></script> 
   <script src="/js/katex/contrib/auto-render.min.js"></script> 

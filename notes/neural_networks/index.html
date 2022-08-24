@@ -28,240 +28,238 @@
   <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
   <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
   <script>
-  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode()
+  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
 </head>
 <body>
-  <div class="wrapper">
-    <header class="header">
-      <nav>
-        <div class="container flex flex-wrap justify-between items-center mx-auto">
-          <div class="nav-main my-2.5">
-            <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
-          </div><button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
-          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul class="grid grid-flow-col items-center justify-between text-lg my-2.5">
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
+  <header class="md:px-0 px-2">
+    <nav>
+      <div class="container flex flex-wrap justify-between items-center mx-auto">
+        <div class="nav-main my-2.5">
+          <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
+        </div><button type="button" onclick="toggleMenu()" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul class="grid md:grid-flow-col items-center justify-between text-lg my-2.5">
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
+            </li>
+            <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="https://hugocisneros.com/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="https://hugocisneros.com/img/dark_mode.svg"></button></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="content h-card container mt-2 m-auto leading-loose md:px-0 px-2" role="main">
+    <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+      <div class="bg-zinc-100 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
+        <h1 class="article-title p-name" itemprop="name">Neural networks</h1>
+        <div class="article-content e-content p-name" itemprop="articleBody">
+          <dl>
+            <dt>tags</dt>
+            <dd>
+              <a href="/notes/machine_learning/">Machine learning</a>
+            </dd>
+          </dl>
+          <h2 id="two-layers-neural-network">Two-layers neural network</h2>
+          <p>Mathematically, a simple two-layers neural network with relu non-linearities can be written like below. For an input vector \(x \in \mathbb{R}^D\), \(\mathbf{a} = (a_1, \cdots, a_N)\in \mathbb{R}^M\) are the <em>output weights</em>, \(\mathbf{b} = (b_1, \cdots, b_N)\in \mathbb{R}^D\) are the <em>input weights</em></p>
+          <p>\[ h(x) = \frac{1}{m} \sum_{i=1}^m a_i \max\{ b_i^\top x,0\}, \]</p>
+          <h2 id="universal-approximation-theorem">Universal approximation theorem</h2>
+          <p>Cybenko showed in 1989 that a neural network of arbitrary width with sigmoid activation function could approximate any continuous function (<a href="#cybenkoApproximationSuperpositionsSigmoidal1989"><cite itemprop="citation" itemscope itemid="doi:10.1007/BF02551274">Cybenko 1989</cite></a>).</p>
+          <p>Barron added rates of convergence by enforcing smoothness condition on the target function (<a href="#barronUniversalApproximationBounds1993"><cite itemprop="citation" itemscope itemid="doi:10.1109/18.256500">Barron 1993</cite></a>).</p>
+          <h2 id="training-a-neural-network-is-hard-in-general">Training a neural network is hard in general</h2>
+          <p>The established way of training a neural network is to use the <a href="/notes/backpropagation/">backpropagation</a> <a href="/notes/algorithm/">algorithm</a> and <a href="/notes/gradient_descent/">gradient descent</a> methods.</p>
+          <p>“Training a 3-node neural network is NP-complete” (<a href="#blumTraining3nodeNeural1992"><cite itemprop="citation" itemscope itemid="doi:10.1016/S0893-6080(05)80010-3">Blum, Rivest 1992</cite></a>). However practice has shown we can actually efficiently train them. But there are still major unanswered question that Leo Breiman was already raising in 1995 (<a href="#breimanReflectionsRefereeingPapers2018"><cite itemprop="citation" itemscope itemid="doi:10.1201/9780429492525-2">Breiman 2018</cite></a>):</p>
+          <blockquote>
+            <ul>
+              <li>Why don ’t heavily parameterized neural networks overfit the data?</li>
+              <li>What is the effective number of parameters?</li>
+              <li>Why doesn’t backpropagation head for a poor local minima?</li>
+            </ul>
+          </blockquote>
+          <h2 id="bibliography">Bibliography</h2>
+          <ol class="biblio-list">
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="cybenkoApproximationSuperpositionsSigmoidal1989" itemid="doi:10.1007/BF02551274">
+              <span itemprop="author">G. Cybenko</span>. <time datetime="1989" itemprop="datePublished">December 1989</time>. "<span itemprop="name">Approximation by Superpositions of a Sigmoidal Function</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Mathematics of Control, Signals, and Systems</i></span> 2 (4):303–14. <a itemprop="sameAs" href="https://doi.org/10.1007/BF02551274">DOI</a>.
+            </li>
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="barronUniversalApproximationBounds1993" itemid="doi:10.1109/18.256500">
+              <span itemprop="author">A. R. Barron</span>. <time datetime="1993" itemprop="datePublished">May 1993</time>. "<span itemprop="name">Universal Approximation Bounds for Superpositions of a Sigmoidal Function</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">IEEE Transactions on Information Theory</i></span> 39 (3):930–45. <a itemprop="sameAs" href="https://doi.org/10.1109/18.256500">DOI</a>.
+            </li>
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="blumTraining3nodeNeural1992" itemid="doi:10.1016/S0893-6080(05)80010-3">
+              <span itemprop="author">Avrim L. Blum, Ronald L. Rivest</span>. <time datetime="1992" itemprop="datePublished">January 1, 1992</time>. "<span itemprop="name">Training a 3-node Neural Network Is Np-complete</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Neural Networks</i></span> 5 (1):117–27. <a itemprop="sameAs" href="https://doi.org/10.1016/S0893-6080(05)80010-3">DOI</a>.
+            </li>
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="breimanReflectionsRefereeingPapers2018" itemid="doi:10.1201/9780429492525-2">
+              <span itemprop="author">Leo Breiman</span>. <time datetime="2018" itemprop="datePublished">March 5, 2018</time>. "<span itemprop="name">Reflections After Refereeing Papers for NIPS</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">The Mathematics of Generalization</i></span>, 1st ed., 11–15. CRC Press. <a itemprop="sameAs" href="https://doi.org/10.1201/9780429492525-2">DOI</a>.
+            </li>
+          </ol>
+        </div>
+        <div class="bl-section">
+          <h2>Links to this note</h2>
+          <div class="backlinks">
+            <ul>
+              <li>
+                <a href="/notes/adaptive_computation_time/">Adaptive Computation Time</a>
               </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
+              <li>
+                <a href="/notes/adversarial_examples/">Adversarial examples</a>
               </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
+              <li>
+                <a href="/notes/attention/">Attention</a>
               </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
+              <li>
+                <a href="/notes/attractor_networks/">Attractor networks</a>
               </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
+              <li>
+                <a href="/notes/autoencoders/">Autoencoders</a>
               </li>
-              <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="/img/dark_mode.svg"></button></li>
+              <li>
+                <a href="/notes/catastrophic_forgetting/">Catastrophic forgetting</a>
+              </li>
+              <li>
+                <a href="/notes/cellular_automata_as_cnns/">Cellular automata as convolutional neural networks</a>
+              </li>
+              <li>
+                <a href="/notes/cellular_neural_networks/">Cellular neural networks</a>
+              </li>
+              <li>
+                <a href="/notes/complex_systems/">Complex Systems</a>
+              </li>
+              <li>
+                <a href="/notes/compression/">Compression</a>
+              </li>
+              <li>
+                <a href="/notes/convolutional_neural_networks/">Convolutional neural networks</a>
+              </li>
+              <li>
+                <a href="/notes/conway_s_game_of_life/">Conway's Game of Life</a>
+              </li>
+              <li>
+                <a href="/notes/cppn/">CPPN</a>
+              </li>
+              <li>
+                <a href="/notes/data_representation/">Data representation</a>
+              </li>
+              <li>
+                <a href="/notes/distillation/">Distillation</a>
+              </li>
+              <li>
+                <a href="/notes/double_descent/">Double descent</a>
+              </li>
+              <li>
+                <a href="/notes/generative_adversarial_networks/">Generative adversarial networks</a>
+              </li>
+              <li>
+                <a href="/notes/gradient_descent_for_wide_two_layer_neural_networks_i_global_convergence/">Gradient descent for wide two-layer neural networks – I : Global convergence</a>
+              </li>
+              <li>
+                <a href="/notes/graph_neural_networks/">Graph neural networks</a>
+              </li>
+              <li>
+                <a href="/notes/hopfield_networks/">Hopfield Networks</a>
+              </li>
+              <li>
+                <a href="/notes/implicit_neural_representations/">Implicit neural representations</a>
+              </li>
+              <li>
+                <a href="/notes/mean_field_theory_of_neural_networks/">Mean field theory of neural networks (talk)</a>
+              </li>
+              <li>
+                <a href="/notes/memory_in_neural_networks/">Memory in neural networks</a>
+              </li>
+              <li>
+                <a href="/notes/meta_learning/">Meta-learning</a>
+              </li>
+              <li>
+                <a href="/notes/neat/">NEAT</a>
+              </li>
+              <li>
+                <a href="/notes/neural_architecture_search/">Neural architecture search</a>
+              </li>
+              <li>
+                <a href="/notes/neural_network_pruning/">Neural network pruning</a>
+              </li>
+              <li>
+                <a href="/notes/neural_network_training/">Neural network training</a>
+              </li>
+              <li>
+                <a href="/notes/neural_networks_as_dynamical_systems/">Neural networks as dynamical systems</a>
+              </li>
+              <li>
+                <a href="/notes/neural_tangent_kernel/">Neural tangent kernel</a>
+              </li>
+              <li>
+                <a href="/notes/quantization/">Quantization</a>
+              </li>
+              <li>
+                <a href="/notes/recurrent_neural_networks/">Recurrent neural networks</a>
+              </li>
+              <li>
+                <a href="/notes/reinforcement_learning/">Reinforcement learning</a>
+              </li>
+              <li>
+                <a href="/notes/residual_networks/">Residual neural networks</a>
+              </li>
+              <li>
+                <a href="/notes/self_replication/">Self-replication</a>
+              </li>
+              <li>
+                <a href="/notes/talk_artificial_intelligence_a_guide_for_thinking_humans/">Talk: Artificial Intelligence: A Guide for Thinking Humans</a>
+              </li>
+              <li>
+                <a href="/notes/talk_the_importance_of_open_endedness_in_ai_and_machine_learning/">Talk: The Importance of Open-Endedness in AI and Machine Learning</a>
+              </li>
+              <li>
+                <a href="/notes/the_bitter_lesson/">The Bitter Lesson</a>
+              </li>
+              <li>
+                <a href="/notes/the_lottery_ticket_hypothesis/">The Lottery ticket hypothesis</a>
+              </li>
+              <li>
+                <a href="/notes/the_scaling_hypothesis/">The Scaling Hypothesis</a>
+              </li>
+              <li>
+                <a href="/notes/transformers/">Transformers</a>
+              </li>
+              <li>
+                <a href="/notes/variational_autoencoders/">Variational autoencoders</a>
+              </li>
             </ul>
           </div>
         </div>
-      </nav>
-    </header>
-    <main class="content h-card container mt-2 m-auto leading-loose" role="main">
-      <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-        <div class="bg-zinc-100 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
-          <h1 class="article-title p-name" itemprop="name">Neural networks</h1>
-          <div class="article-content e-content p-name" itemprop="articleBody">
-            <dl>
-              <dt>tags</dt>
-              <dd>
-                <a href="/notes/machine_learning/">Machine learning</a>
-              </dd>
-            </dl>
-            <h2 id="two-layers-neural-network">Two-layers neural network</h2>
-            <p>Mathematically, a simple two-layers neural network with relu non-linearities can be written like below. For an input vector \(x \in \mathbb{R}^D\), \(\mathbf{a} = (a_1, \cdots, a_N)\in \mathbb{R}^M\) are the <em>output weights</em>, \(\mathbf{b} = (b_1, \cdots, b_N)\in \mathbb{R}^D\) are the <em>input weights</em></p>
-            <p>\[ h(x) = \frac{1}{m} \sum_{i=1}^m a_i \max\{ b_i^\top x,0\}, \]</p>
-            <h2 id="universal-approximation-theorem">Universal approximation theorem</h2>
-            <p>Cybenko showed in 1989 that a neural network of arbitrary width with sigmoid activation function could approximate any continuous function (<a href="#cybenkoApproximationSuperpositionsSigmoidal1989"><cite itemprop="citation" itemscope itemid="doi:10.1007/BF02551274">Cybenko 1989</cite></a>).</p>
-            <p>Barron added rates of convergence by enforcing smoothness condition on the target function (<a href="#barronUniversalApproximationBounds1993"><cite itemprop="citation" itemscope itemid="doi:10.1109/18.256500">Barron 1993</cite></a>).</p>
-            <h2 id="training-a-neural-network-is-hard-in-general">Training a neural network is hard in general</h2>
-            <p>The established way of training a neural network is to use the <a href="/notes/backpropagation/">backpropagation</a> <a href="/notes/algorithm/">algorithm</a> and <a href="/notes/gradient_descent/">gradient descent</a> methods.</p>
-            <p>“Training a 3-node neural network is NP-complete” (<a href="#blumTraining3nodeNeural1992"><cite itemprop="citation" itemscope itemid="doi:10.1016/S0893-6080(05)80010-3">Blum, Rivest 1992</cite></a>). However practice has shown we can actually efficiently train them. But there are still major unanswered question that Leo Breiman was already raising in 1995 (<a href="#breimanReflectionsRefereeingPapers2018"><cite itemprop="citation" itemscope itemid="doi:10.1201/9780429492525-2">Breiman 2018</cite></a>):</p>
-            <blockquote>
-              <ul>
-                <li>Why don ’t heavily parameterized neural networks overfit the data?</li>
-                <li>What is the effective number of parameters?</li>
-                <li>Why doesn’t backpropagation head for a poor local minima?</li>
-              </ul>
-            </blockquote>
-            <h2 id="bibliography">Bibliography</h2>
-            <ol class="biblio-list">
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="cybenkoApproximationSuperpositionsSigmoidal1989" itemid="doi:10.1007/BF02551274">
-                <span itemprop="author">G. Cybenko</span>. <time datetime="1989" itemprop="datePublished">December 1989</time>. "<span itemprop="name">Approximation by Superpositions of a Sigmoidal Function</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Mathematics of Control, Signals, and Systems</i></span> 2 (4):303–14. <a itemprop="sameAs" href="https://doi.org/10.1007/BF02551274">DOI</a>.
-              </li>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="barronUniversalApproximationBounds1993" itemid="doi:10.1109/18.256500">
-                <span itemprop="author">A. R. Barron</span>. <time datetime="1993" itemprop="datePublished">May 1993</time>. "<span itemprop="name">Universal Approximation Bounds for Superpositions of a Sigmoidal Function</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">IEEE Transactions on Information Theory</i></span> 39 (3):930–45. <a itemprop="sameAs" href="https://doi.org/10.1109/18.256500">DOI</a>.
-              </li>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="blumTraining3nodeNeural1992" itemid="doi:10.1016/S0893-6080(05)80010-3">
-                <span itemprop="author">Avrim L. Blum, Ronald L. Rivest</span>. <time datetime="1992" itemprop="datePublished">January 1, 1992</time>. "<span itemprop="name">Training a 3-node Neural Network Is Np-complete</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Neural Networks</i></span> 5 (1):117–27. <a itemprop="sameAs" href="https://doi.org/10.1016/S0893-6080(05)80010-3">DOI</a>.
-              </li>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="breimanReflectionsRefereeingPapers2018" itemid="doi:10.1201/9780429492525-2">
-                <span itemprop="author">Leo Breiman</span>. <time datetime="2018" itemprop="datePublished">March 5, 2018</time>. "<span itemprop="name">Reflections After Refereeing Papers for NIPS</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">The Mathematics of Generalization</i></span>, 1st ed., 11–15. CRC Press. <a itemprop="sameAs" href="https://doi.org/10.1201/9780429492525-2">DOI</a>.
-              </li>
-            </ol>
-          </div>
-          <div class="bl-section">
-            <h2>Links to this note</h2>
-            <div class="backlinks">
-              <ul>
-                <li>
-                  <a href="/notes/adaptive_computation_time/">Adaptive Computation Time</a>
-                </li>
-                <li>
-                  <a href="/notes/adversarial_examples/">Adversarial examples</a>
-                </li>
-                <li>
-                  <a href="/notes/attention/">Attention</a>
-                </li>
-                <li>
-                  <a href="/notes/attractor_networks/">Attractor networks</a>
-                </li>
-                <li>
-                  <a href="/notes/autoencoders/">Autoencoders</a>
-                </li>
-                <li>
-                  <a href="/notes/catastrophic_forgetting/">Catastrophic forgetting</a>
-                </li>
-                <li>
-                  <a href="/notes/cellular_automata_as_cnns/">Cellular automata as convolutional neural networks</a>
-                </li>
-                <li>
-                  <a href="/notes/cellular_neural_networks/">Cellular neural networks</a>
-                </li>
-                <li>
-                  <a href="/notes/complex_systems/">Complex Systems</a>
-                </li>
-                <li>
-                  <a href="/notes/compression/">Compression</a>
-                </li>
-                <li>
-                  <a href="/notes/convolutional_neural_networks/">Convolutional neural networks</a>
-                </li>
-                <li>
-                  <a href="/notes/conway_s_game_of_life/">Conway's Game of Life</a>
-                </li>
-                <li>
-                  <a href="/notes/cppn/">CPPN</a>
-                </li>
-                <li>
-                  <a href="/notes/data_representation/">Data representation</a>
-                </li>
-                <li>
-                  <a href="/notes/distillation/">Distillation</a>
-                </li>
-                <li>
-                  <a href="/notes/double_descent/">Double descent</a>
-                </li>
-                <li>
-                  <a href="/notes/generative_adversarial_networks/">Generative adversarial networks</a>
-                </li>
-                <li>
-                  <a href="/notes/gradient_descent_for_wide_two_layer_neural_networks_i_global_convergence/">Gradient descent for wide two-layer neural networks – I : Global convergence</a>
-                </li>
-                <li>
-                  <a href="/notes/graph_neural_networks/">Graph neural networks</a>
-                </li>
-                <li>
-                  <a href="/notes/hopfield_networks/">Hopfield Networks</a>
-                </li>
-                <li>
-                  <a href="/notes/implicit_neural_representations/">Implicit neural representations</a>
-                </li>
-                <li>
-                  <a href="/notes/mean_field_theory_of_neural_networks/">Mean field theory of neural networks (talk)</a>
-                </li>
-                <li>
-                  <a href="/notes/memory_in_neural_networks/">Memory in neural networks</a>
-                </li>
-                <li>
-                  <a href="/notes/meta_learning/">Meta-learning</a>
-                </li>
-                <li>
-                  <a href="/notes/neat/">NEAT</a>
-                </li>
-                <li>
-                  <a href="/notes/neural_architecture_search/">Neural architecture search</a>
-                </li>
-                <li>
-                  <a href="/notes/neural_network_pruning/">Neural network pruning</a>
-                </li>
-                <li>
-                  <a href="/notes/neural_network_training/">Neural network training</a>
-                </li>
-                <li>
-                  <a href="/notes/neural_networks_as_dynamical_systems/">Neural networks as dynamical systems</a>
-                </li>
-                <li>
-                  <a href="/notes/neural_tangent_kernel/">Neural tangent kernel</a>
-                </li>
-                <li>
-                  <a href="/notes/quantization/">Quantization</a>
-                </li>
-                <li>
-                  <a href="/notes/recurrent_neural_networks/">Recurrent neural networks</a>
-                </li>
-                <li>
-                  <a href="/notes/reinforcement_learning/">Reinforcement learning</a>
-                </li>
-                <li>
-                  <a href="/notes/residual_networks/">Residual neural networks</a>
-                </li>
-                <li>
-                  <a href="/notes/self_replication/">Self-replication</a>
-                </li>
-                <li>
-                  <a href="/notes/talk_artificial_intelligence_a_guide_for_thinking_humans/">Talk: Artificial Intelligence: A Guide for Thinking Humans</a>
-                </li>
-                <li>
-                  <a href="/notes/talk_the_importance_of_open_endedness_in_ai_and_machine_learning/">Talk: The Importance of Open-Endedness in AI and Machine Learning</a>
-                </li>
-                <li>
-                  <a href="/notes/the_bitter_lesson/">The Bitter Lesson</a>
-                </li>
-                <li>
-                  <a href="/notes/the_lottery_ticket_hypothesis/">The Lottery ticket hypothesis</a>
-                </li>
-                <li>
-                  <a href="/notes/the_scaling_hypothesis/">The Scaling Hypothesis</a>
-                </li>
-                <li>
-                  <a href="/notes/transformers/">Transformers</a>
-                </li>
-                <li>
-                  <a href="/notes/variational_autoencoders/">Variational autoencoders</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="text-center" style="font-variant-caps:all-small-caps">
-            Last changed <a class="u-url" href="https://hugocisneros.com/notes/neural_networks/"><time itemprop="datePublished" class="dt-published" datetime="2022-04-06T13:48:00+0200">06/04/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
-          </div>
+        <div class="text-center" style="font-variant-caps:all-small-caps">
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/neural_networks/"><time itemprop="datePublished" class="dt-published" datetime="2022-04-06T13:48:00+0200">06/04/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
-      </article>
-      <h3>Comments</h3>
-      <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
-      <section id="isso-thread"></section><br>
-      <a href="/notes#neural_networks"><b>← Back to Notes</b></a>
-      <hr>
-    </main>
-    <footer class="footer container h-10 text-center">
-      <ul>
-        <li class="inline-block list-none">
-          <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="/img/RSS.svg" alt="RSS feed icon"></a>
-        </li>
-        <li class="before:content-['•'] inline-block">
-          <a class="text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
-        </li>
-        <li class="before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block">© Hugo Cisneros 2022</li>
-      </ul>
-    </footer>
-  </div>
+      </div>
+    </article>
+    <h3>Comments</h3>
+    <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
+    <section id="isso-thread"></section><br>
+    <a href="/notes#neural_networks"><b>← Back to Notes</b></a>
+    <hr>
+  </main>
+  <footer class="footer container h-10 text-center">
+    <ul class="pl-0">
+      <li class="first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="https://hugocisneros.com/img/RSS.svg" alt="RSS feed icon"></a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="ml-2 text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block list-none"><span class="ml-2">© Hugo Cisneros 2022</span></li>
+    </ul>
+  </footer>
   <link rel="stylesheet" href="/js/katex/katex.min.css">
   <script src="/js/katex/katex.min.js"></script> 
   <script src="/js/katex/contrib/auto-render.min.js"></script> 

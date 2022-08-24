@@ -28,105 +28,103 @@
   <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
   <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
   <script>
-  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode()
+  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
 </head>
 <body>
-  <div class="wrapper">
-    <header class="header">
-      <nav>
-        <div class="container flex flex-wrap justify-between items-center mx-auto">
-          <div class="nav-main my-2.5">
-            <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
-          </div><button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
-          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul class="grid grid-flow-col items-center justify-between text-lg my-2.5">
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
-              </li>
-              <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="/img/dark_mode.svg"></button></li>
-            </ul>
-          </div>
+  <header class="md:px-0 px-2">
+    <nav>
+      <div class="container flex flex-wrap justify-between items-center mx-auto">
+        <div class="nav-main my-2.5">
+          <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
+        </div><button type="button" onclick="toggleMenu()" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul class="grid md:grid-flow-col items-center justify-between text-lg my-2.5">
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
+            </li>
+            <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="https://hugocisneros.com/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="https://hugocisneros.com/img/dark_mode.svg"></button></li>
+          </ul>
         </div>
-      </nav>
-    </header>
-    <main class="content h-card container mt-2 m-auto leading-loose" role="main">
-      <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-        <div class="bg-zinc-100 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
-          <h1 class="article-title p-name" itemprop="name">Neural Circuit Policies Enabling Auditable Autonomy by Lechner, M., Hasani, R., Amini, A., Henzinger, T. A., Rus, D., & Grosu, R. (2020)</h1>
-          <div class="article-content e-content p-name" itemprop="articleBody">
-            <dl>
-              <dt>source</dt>
-              <dd>
-                (<a href="#lechnerNeuralCircuitPolicies2020"><cite itemprop="citation" itemscope itemid="doi:10.1038/s42256-020-00237-3">Lechner et al. 2020</cite></a>)
-              </dd>
-              <dt>tags</dt>
-              <dd>
-                <a href="/notes/neural_networks/">Neural networks</a>
-              </dd>
-            </dl>
-            <h2 id="summary">Summary</h2>
-            <p>This article introduces a type of <a href="/notes/recurrent_neural_networks/">RNN</a> called Neural Circuit Policies (NCP). This architecture is said to be inspired from the wiring diagram of the <em>C. elegans</em> nematode.</p>
-            <p>The main building block is a Recurrent neural network called liquid time constant (LTC) introduced in (<a href="#hasaniLiquidTimeconstantNetworks2020"><cite itemprop="citation" itemscope itemid="key:hasaniLiquidTimeconstantNetworks2020">Hasani et al. 2020</cite></a>).</p>
-            <h3 id="ltc-neurons">LTC Neurons</h3>
-            <p>These neurons are bio-inspired. For a given neuron in state x_i(t), the continuous temporal evolution is described by an ODE: \[ \dot{x}_i = - \left(\frac{1}{\tau_i} + \frac{w_{ij}}{C_{m_i}} \sigma_i(x_j) \right) x_i + \left( \frac{x_{\text{leak}_i}}{\tau_i}+ \frac{w_{ij}}{C_{m_i}} \sigma_i(x_j) E_{ij} \right) \]</p>
-            <p>where \(w_{ij}\) is a synaptic weight from neuron \(i\) to \(j\), \(C_{m_i}\) is the membrane capacitance of the neuron \(i\), and \(\sigma_i(x_j(t)) = 1/\left( 1 + e^{-\gamma_{ij}(x_j-\mu_{ij})}\right)\). \(x_{\text{leak}_i}\) is called the resting potential and \(E_ij\) is a reversal synaptic potential.</p>
-            <p>More details about the biological analogy for those quantities are given in (<a href="#lechnerNeuralCircuitPolicies2020"><cite itemprop="citation" itemscope itemid="doi:10.1038/s42256-020-00237-3">Lechner et al. 2020</cite></a>; <a href="#hasaniLiquidTimeconstantNetworks2020"><cite itemprop="citation" itemscope itemid="key:hasaniLiquidTimeconstantNetworks2020">Hasani et al. 2020</cite></a>).</p>
-            <h3 id="results">Results</h3>
-            <p>The authors reports good results on a car steering task compared to many RNN architectures, although not much better than LSTMs. The main advantages of this method according to the authors are:</p>
-            <ul>
-              <li>Better noise robustness</li>
-              <li>Better interpret-ability</li>
-              <li>Less parameters needed</li>
-            </ul>
-            <h2 id="comments">Comments</h2>
-            <p>I was excited about this paper because it seemed to have found a way to train very small neural networks with an <a href="/notes/alternative_learning_mechanisms/">alternative learning mechanism</a>, maybe akin to <a href="/notes/reservoir_computing/">reservoir computing</a>. However it appears to be based on the same principles as traditional supervised learning. The main innovation of this paper would therefore be the architecture it proposes, which I may not understand very deeply due to lack of knowledge in neuroscience.</p>
-            <h2 id="bibliography">Bibliography</h2>
-            <ol class="biblio-list">
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="lechnerNeuralCircuitPolicies2020" itemid="doi:10.1038/s42256-020-00237-3">
-                <span itemprop="author">Mathias Lechner, Ramin Hasani, Alexander Amini, Thomas A. Henzinger, Daniela Rus, Radu Grosu</span>. <time datetime="2020" itemprop="datePublished">October 2020</time>. "<span itemprop="name">Neural Circuit Policies Enabling Auditable Autonomy</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Nature Machine Intelligence</i></span> 2 (10):642–52. <a itemprop="sameAs" href="https://doi.org/10.1038/s42256-020-00237-3">DOI</a>.
-              </li>
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="hasaniLiquidTimeconstantNetworks2020">
-                <span itemprop="author">Ramin Hasani, Mathias Lechner, Alexander Amini, Daniela Rus, Radu Grosu</span>. <time datetime="2020" itemprop="datePublished">September 12, 2020</time>. "<span itemprop="name">Liquid Time-constant Networks</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:2006.04439 [cs, Stat]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2006.04439">http://arxiv.org/abs/2006.04439</a>.
-              </li>
-            </ol>
-          </div>
-          <div class="text-center" style="font-variant-caps:all-small-caps">
-            Last changed <a class="u-url" href="https://hugocisneros.com/notes/lechnerneuralcircuitpolicies2020/"><time itemprop="datePublished" class="dt-published" datetime="2021-03-25T09:57:00+0100">25/03/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
-          </div>
+      </div>
+    </nav>
+  </header>
+  <main class="content h-card container mt-2 m-auto leading-loose md:px-0 px-2" role="main">
+    <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+      <div class="bg-zinc-100 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
+        <h1 class="article-title p-name" itemprop="name">Neural Circuit Policies Enabling Auditable Autonomy by Lechner, M., Hasani, R., Amini, A., Henzinger, T. A., Rus, D., & Grosu, R. (2020)</h1>
+        <div class="article-content e-content p-name" itemprop="articleBody">
+          <dl>
+            <dt>source</dt>
+            <dd>
+              (<a href="#lechnerNeuralCircuitPolicies2020"><cite itemprop="citation" itemscope itemid="doi:10.1038/s42256-020-00237-3">Lechner et al. 2020</cite></a>)
+            </dd>
+            <dt>tags</dt>
+            <dd>
+              <a href="/notes/neural_networks/">Neural networks</a>
+            </dd>
+          </dl>
+          <h2 id="summary">Summary</h2>
+          <p>This article introduces a type of <a href="/notes/recurrent_neural_networks/">RNN</a> called Neural Circuit Policies (NCP). This architecture is said to be inspired from the wiring diagram of the <em>C. elegans</em> nematode.</p>
+          <p>The main building block is a Recurrent neural network called liquid time constant (LTC) introduced in (<a href="#hasaniLiquidTimeconstantNetworks2020"><cite itemprop="citation" itemscope itemid="key:hasaniLiquidTimeconstantNetworks2020">Hasani et al. 2020</cite></a>).</p>
+          <h3 id="ltc-neurons">LTC Neurons</h3>
+          <p>These neurons are bio-inspired. For a given neuron in state x_i(t), the continuous temporal evolution is described by an ODE: \[ \dot{x}_i = - \left(\frac{1}{\tau_i} + \frac{w_{ij}}{C_{m_i}} \sigma_i(x_j) \right) x_i + \left( \frac{x_{\text{leak}_i}}{\tau_i}+ \frac{w_{ij}}{C_{m_i}} \sigma_i(x_j) E_{ij} \right) \]</p>
+          <p>where \(w_{ij}\) is a synaptic weight from neuron \(i\) to \(j\), \(C_{m_i}\) is the membrane capacitance of the neuron \(i\), and \(\sigma_i(x_j(t)) = 1/\left( 1 + e^{-\gamma_{ij}(x_j-\mu_{ij})}\right)\). \(x_{\text{leak}_i}\) is called the resting potential and \(E_ij\) is a reversal synaptic potential.</p>
+          <p>More details about the biological analogy for those quantities are given in (<a href="#lechnerNeuralCircuitPolicies2020"><cite itemprop="citation" itemscope itemid="doi:10.1038/s42256-020-00237-3">Lechner et al. 2020</cite></a>; <a href="#hasaniLiquidTimeconstantNetworks2020"><cite itemprop="citation" itemscope itemid="key:hasaniLiquidTimeconstantNetworks2020">Hasani et al. 2020</cite></a>).</p>
+          <h3 id="results">Results</h3>
+          <p>The authors reports good results on a car steering task compared to many RNN architectures, although not much better than LSTMs. The main advantages of this method according to the authors are:</p>
+          <ul>
+            <li>Better noise robustness</li>
+            <li>Better interpret-ability</li>
+            <li>Less parameters needed</li>
+          </ul>
+          <h2 id="comments">Comments</h2>
+          <p>I was excited about this paper because it seemed to have found a way to train very small neural networks with an <a href="/notes/alternative_learning_mechanisms/">alternative learning mechanism</a>, maybe akin to <a href="/notes/reservoir_computing/">reservoir computing</a>. However it appears to be based on the same principles as traditional supervised learning. The main innovation of this paper would therefore be the architecture it proposes, which I may not understand very deeply due to lack of knowledge in neuroscience.</p>
+          <h2 id="bibliography">Bibliography</h2>
+          <ol class="biblio-list">
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="lechnerNeuralCircuitPolicies2020" itemid="doi:10.1038/s42256-020-00237-3">
+              <span itemprop="author">Mathias Lechner, Ramin Hasani, Alexander Amini, Thomas A. Henzinger, Daniela Rus, Radu Grosu</span>. <time datetime="2020" itemprop="datePublished">October 2020</time>. "<span itemprop="name">Neural Circuit Policies Enabling Auditable Autonomy</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Nature Machine Intelligence</i></span> 2 (10):642–52. <a itemprop="sameAs" href="https://doi.org/10.1038/s42256-020-00237-3">DOI</a>.
+            </li>
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="hasaniLiquidTimeconstantNetworks2020">
+              <span itemprop="author">Ramin Hasani, Mathias Lechner, Alexander Amini, Daniela Rus, Radu Grosu</span>. <time datetime="2020" itemprop="datePublished">September 12, 2020</time>. "<span itemprop="name">Liquid Time-constant Networks</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:2006.04439 [cs, Stat]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2006.04439">http://arxiv.org/abs/2006.04439</a>.
+            </li>
+          </ol>
         </div>
-      </article>
-      <h3>Comments</h3>
-      <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
-      <section id="isso-thread"></section><br>
-      <a href="/notes#lechnerneuralcircuitpolicies2020"><b>← Back to Notes</b></a>
-      <hr>
-    </main>
-    <footer class="footer container h-10 text-center">
-      <ul>
-        <li class="inline-block list-none">
-          <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="/img/RSS.svg" alt="RSS feed icon"></a>
-        </li>
-        <li class="before:content-['•'] inline-block">
-          <a class="text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
-        </li>
-        <li class="before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block">© Hugo Cisneros 2022</li>
-      </ul>
-    </footer>
-  </div>
+        <div class="text-center" style="font-variant-caps:all-small-caps">
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/lechnerneuralcircuitpolicies2020/"><time itemprop="datePublished" class="dt-published" datetime="2021-03-25T09:57:00+0100">25/03/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+        </div>
+      </div>
+    </article>
+    <h3>Comments</h3>
+    <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
+    <section id="isso-thread"></section><br>
+    <a href="/notes#lechnerneuralcircuitpolicies2020"><b>← Back to Notes</b></a>
+    <hr>
+  </main>
+  <footer class="footer container h-10 text-center">
+    <ul class="pl-0">
+      <li class="first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="https://hugocisneros.com/img/RSS.svg" alt="RSS feed icon"></a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="ml-2 text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block list-none"><span class="ml-2">© Hugo Cisneros 2022</span></li>
+    </ul>
+  </footer>
   <link rel="stylesheet" href="/js/katex/katex.min.css">
   <script src="/js/katex/katex.min.js"></script> 
   <script src="/js/katex/contrib/auto-render.min.js"></script> 

@@ -27,73 +27,72 @@
   <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
   <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
   <script>
-  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode()
+  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
 </head>
 <body>
-  <div class="wrapper">
-    <header class="header">
-      <nav>
-        <div class="container flex flex-wrap justify-between items-center mx-auto">
-          <div class="nav-main my-2.5">
-            <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
-          </div><button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
-          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul class="grid grid-flow-col items-center justify-between text-lg my-2.5">
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
-              </li>
-              <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="/img/dark_mode.svg"></button></li>
-            </ul>
-          </div>
+  <header class="md:px-0 px-2">
+    <nav>
+      <div class="container flex flex-wrap justify-between items-center mx-auto">
+        <div class="nav-main my-2.5">
+          <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
+        </div><button type="button" onclick="toggleMenu()" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul class="grid md:grid-flow-col items-center justify-between text-lg my-2.5">
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
+            </li>
+            <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="https://hugocisneros.com/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="https://hugocisneros.com/img/dark_mode.svg"></button></li>
+          </ul>
         </div>
-      </nav>
-    </header>
-    <main class="content h-card container mt-2 m-auto leading-loose" role="main">
-      <h1 id="contact">Contact</h1>
-      <ul>
-        <li>You can email me at <picture><source srcset="/img/email_light.jpg" type="image/jpeg"><img src="/img/email_light.jpg" alt="Email CVUT" class="inline-block" style="height:1.3em"></picture> or <picture><source srcset="/img/hcisnerosmail_gmail.jpg" type="image/jpeg"><img src="/img/hcisnerosmail_gmail.jpg" alt="Email gmail" class="inline-block" style="height:1em"></picture></li>
-        <li>
-          <a itemprop="sameAs" content="https://github.com/hugcis/" href="https://github.com/hugcis/" rel="me">GitHub</a>
-        </li>
-      </ul>
-      <h3 id="social">Social</h3>
-      <ul>
-        <li>
-          <a itemprop="sameAs" content="https://twitter.com/cisne_hug" href="https://twitter.com/cisne_hug" rel="me">Twitter</a>
-        </li>
-      </ul>
-      <h3 id="research-related">Research related</h3>
-      <ul>
-        <li>
-          <a itemprop="sameAs" content="https://scholar.google.com/citations?user=_uSIl-0AAAAJ" href="https://scholar.google.com/citations?user=_uSIl-0AAAAJ" rel="me noopener noreferrer">Google Scholar</a>
-        </li>
-        <li>
-          <a itemprop="sameAs" content="https://dblp.uni-trier.de/pers/hd/c/Cisneros:Hugo" href="https://dblp.uni-trier.de/pers/hd/c/Cisneros:Hugo" rel="me noopener noreferrer">dblp</a>
-        </li>
-        <li>
-          <a itemprop="sameAs" content="https://hal.inria.fr/search/index/?q=%2A&amp;authIdHal_s=hugo-cisneros" href="https://hal.inria.fr/search/index/?q=%2A&amp;authIdHal_s=hugo-cisneros" rel="me noopener noreferrer">HAL</a>
-        </li>
-        <li>
-          <a itemprop="sameAs" content="https://orcid.org/0000-0003-3439-4565" href="https://orcid.org/0000-0003-3439-4565" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;display:inline" alt="ORCID iD icon">Orcid</a>
-        </li>
-      </ul>
-      <h2 id="my-pgp-public-key">My PGP public key</h2>
-      <p>You can copy-paste my key from below or download it a the following link: <a href="/misc/key.asc">PGP Key</a>.</p>
-      <pre style="height:200px">
+      </div>
+    </nav>
+  </header>
+  <main class="content h-card container mt-2 m-auto leading-loose md:px-0 px-2" role="main">
+    <h1 id="contact">Contact</h1>
+    <ul>
+      <li>You can email me at <picture><source srcset="/img/email_light.jpg" type="image/jpeg"><img src="/img/email_light.jpg" alt="Email CVUT" class="inline-block" style="height:1.3em"></picture> or <picture><source srcset="/img/hcisnerosmail_gmail.jpg" type="image/jpeg"><img src="/img/hcisnerosmail_gmail.jpg" alt="Email gmail" class="inline-block" style="height:1em"></picture></li>
+      <li>
+        <a itemprop="sameAs" content="https://github.com/hugcis/" href="https://github.com/hugcis/" rel="me">GitHub</a>
+      </li>
+    </ul>
+    <h3 id="social">Social</h3>
+    <ul>
+      <li>
+        <a itemprop="sameAs" content="https://twitter.com/cisne_hug" href="https://twitter.com/cisne_hug" rel="me">Twitter</a>
+      </li>
+    </ul>
+    <h3 id="research-related">Research related</h3>
+    <ul>
+      <li>
+        <a itemprop="sameAs" content="https://scholar.google.com/citations?user=_uSIl-0AAAAJ" href="https://scholar.google.com/citations?user=_uSIl-0AAAAJ" rel="me noopener noreferrer">Google Scholar</a>
+      </li>
+      <li>
+        <a itemprop="sameAs" content="https://dblp.uni-trier.de/pers/hd/c/Cisneros:Hugo" href="https://dblp.uni-trier.de/pers/hd/c/Cisneros:Hugo" rel="me noopener noreferrer">dblp</a>
+      </li>
+      <li>
+        <a itemprop="sameAs" content="https://hal.inria.fr/search/index/?q=%2A&amp;authIdHal_s=hugo-cisneros" href="https://hal.inria.fr/search/index/?q=%2A&amp;authIdHal_s=hugo-cisneros" rel="me noopener noreferrer">HAL</a>
+      </li>
+      <li>
+        <a itemprop="sameAs" content="https://orcid.org/0000-0003-3439-4565" href="https://orcid.org/0000-0003-3439-4565" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;display:inline" alt="ORCID iD icon">Orcid</a>
+      </li>
+    </ul>
+    <h2 id="my-pgp-public-key">My PGP public key</h2>
+    <p>You can copy-paste my key from below or download it a the following link: <a href="/misc/key.asc">PGP Key</a>.</p>
+    <pre style="height:200px">
 <code>
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
@@ -127,21 +126,20 @@ a72Xyt2ssrh1Cp0z+vYu/dgHOFIPEgvcGB9xBoDWQbDe5pwFBA0saxk=
 -----END PGP PUBLIC KEY BLOCK-----
 </code>
 </pre>
-      <h2 id="this-website">This website</h2>
-      <p>This static website was generated with <a href="https://gohugo.io/">Hugo</a> and uses a <a href="https://github.com/hugcis/hugo-astatine-theme">custom fork</a> of the theme <a href="https://github.com/mobybit/hugo-natrium-theme">Natrium</a> I made to fit my needs.</p>
-    </main>
-    <footer class="footer container h-10 text-center">
-      <ul>
-        <li class="inline-block list-none">
-          <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="/img/RSS.svg" alt="RSS feed icon"></a>
-        </li>
-        <li class="before:content-['•'] inline-block">
-          <a class="text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
-        </li>
-        <li class="before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block">© Hugo Cisneros 2022</li>
-      </ul>
-    </footer>
-  </div>
+    <h2 id="this-website">This website</h2>
+    <p>This static website was generated with <a href="https://gohugo.io/">Hugo</a> and uses a <a href="https://github.com/hugcis/hugo-astatine-theme">custom fork</a> of the theme <a href="https://github.com/mobybit/hugo-natrium-theme">Natrium</a> I made to fit my needs.</p>
+  </main>
+  <footer class="footer container h-10 text-center">
+    <ul class="pl-0">
+      <li class="first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="https://hugocisneros.com/img/RSS.svg" alt="RSS feed icon"></a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="ml-2 text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block list-none"><span class="ml-2">© Hugo Cisneros 2022</span></li>
+    </ul>
+  </footer>
   <script data-goatcounter="https://stats.hugocisneros.com/count" async src="//stats.hugocisneros.com/count.js"></script>
 </body>
 </html>

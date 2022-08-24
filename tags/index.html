@@ -27,474 +27,472 @@
   <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
   <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
   <script>
-  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode()
+  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
 </head>
 <body>
-  <div class="wrapper">
-    <header class="header">
-      <nav>
-        <div class="container flex flex-wrap justify-between items-center mx-auto">
-          <div class="nav-main my-2.5">
-            <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
-          </div><button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
-          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul class="grid grid-flow-col items-center justify-between text-lg my-2.5">
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
-              </li>
-              <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="/img/dark_mode.svg"></button></li>
-            </ul>
-          </div>
+  <header class="md:px-0 px-2">
+    <nav>
+      <div class="container flex flex-wrap justify-between items-center mx-auto">
+        <div class="nav-main my-2.5">
+          <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
+        </div><button type="button" onclick="toggleMenu()" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul class="grid md:grid-flow-col items-center justify-between text-lg my-2.5">
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
+            </li>
+            <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="https://hugocisneros.com/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="https://hugocisneros.com/img/dark_mode.svg"></button></li>
+          </ul>
         </div>
-      </nav>
-    </header>
-    <main class="content h-card container mt-2 m-auto leading-loose" role="main">
-      <p>All the tags in the website, weighted by their frequency</p>
-      <hr>
-      <div>
-        <h2>Tags</h2>
-        <ul class="leading-6 text-center">
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/adversarial-attacks" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">adversarial-attacks</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/algorithm" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:2.082032778435059rem">algorithm</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/algorithmic-information-theory" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.625555234337184rem">algorithmic-information-theory</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/alife-2020" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.808518411445728rem">alife-2020</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/alife-conference" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">alife-conference</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/applied-maths" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:2.4148689297300074rem">applied-maths</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/artificial-intelligence" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:2.3286566455597866rem">artificial-intelligence</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/artificial-intelligence-test" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.7262471367556773rem">artificial-intelligence-test</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/artificial-life" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:2.082032778435059rem">artificial-life</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/attention" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.495740794277136rem">attention</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/autoencoders" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">autoencoders</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/autopoiesis" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">autopoiesis</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/bart" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.3127776171685919rem">bart</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/bert" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.808518411445728rem">bert</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/biological-life" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.9383328515057756rem">biological-life</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/blog" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">blog</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/capitalism" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">capitalism</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/cellular-automata" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:2.4340736457829117rem">cellular-automata</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/cellular-automata-as-cnns" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">cellular-automata-as-cnns</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/chaos" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">chaos</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/chemical-reaction-network" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">chemical-reaction-network</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/chinchilla" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">chinchilla</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/christopher-langton" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">christopher-langton</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/climate" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.991481588554272rem">climate</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/clip" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.3127776171685919rem">clip</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/coding" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:2.3042592057228637rem">coding</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/combinatorics" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">combinatorics</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/combinatory-logic" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">combinatory-logic</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/complex-systems" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:2.1908554002362877rem">complex-systems</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/complexity" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:2.12129602861432rem">complexity</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/complexity-metrics" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.7262471367556773rem">complexity-metrics</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/compression" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.808518411445728rem">compression</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/computability-theory" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.808518411445728rem">computability-theory</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/computer-science" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:2.3286566455597866rem">computer-science</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/computer-vision" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:2.0390247539242696rem">computer-vision</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/consciousness" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.3127776171685919rem">consciousness</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/continual-learning" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">continual-learning</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/convolutional-neural-networks" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.495740794277136rem">convolutional-neural-networks</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/cryptography" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.991481588554272rem">cryptography</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/data" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.3127776171685919rem">data</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/data-journalism" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">data-journalism</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/data-representation" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.495740794277136rem">data-representation</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/data-science" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.495740794277136rem">data-science</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/deep-learning" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">deep-learning</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/diffusion-models" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.495740794277136rem">diffusion-models</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/dynamical-systems" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.625555234337184rem">dynamical-systems</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/economic-liberalism" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.495740794277136rem">economic-liberalism</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/economics" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:2.1908554002362877rem">economics</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/emacs" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.495740794277136rem">emacs</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/emergence" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.7262471367556773rem">emergence</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/entropy" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">entropy</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/entropy-coding" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.495740794277136rem">entropy-coding</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/europe" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">europe</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/evaluating-nlp" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.495740794277136rem">evaluating-nlp</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/evolution" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:2.12129602861432rem">evolution</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/evolutionary-algorithms" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">evolutionary-algorithms</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/evolutionary-strategies" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">evolutionary-strategies</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/finite-state-machines" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.3127776171685919rem">finite-state-machines</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/gans" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">gans</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/generative-modelling" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.3127776171685919rem">generative-modelling</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/genetic-algorithms" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.625555234337184rem">genetic-algorithms</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/gpt" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:2.251110468674368rem">gpt</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/gradient-descent" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">gradient-descent</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/graph-neural-networks" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.625555234337184rem">graph-neural-networks</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/graphs" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.625555234337184rem">graphs</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/halting-problem" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">halting-problem</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/hopfield-networks" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">hopfield-networks</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/hybrids" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">hybrids</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/image-processing" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.3127776171685919rem">image-processing</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/implicit-neural-representations" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">implicit-neural-representations</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/information-theory" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">information-theory</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/ising-model" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">ising-model</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/kernel-methods" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.3127776171685919rem">kernel-methods</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/language" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.495740794277136rem">language</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/life" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.8780777830676956rem">life</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/logic" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.495740794277136rem">logic</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/machine-learning" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:2.591244504920036rem">machine-learning</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/mathematics" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:2.1908554002362877rem">mathematics</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/memory-in-neural-networks" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">memory-in-neural-networks</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/minecraft" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">minecraft</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/minimum-description-length" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">minimum-description-length</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/morphogenesis" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">morphogenesis</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/nas" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.625555234337184rem">nas</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/natural-language-processing" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.3127776171685919rem">natural-language-processing</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/nerf" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">nerf</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/network-authentication" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">network-authentication</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/networking" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">networking</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/neural-architecture-search" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.3127776171685919rem">neural-architecture-search</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/neural-cellular-automata" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">neural-cellular-automata</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/neural-network-training" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.495740794277136rem">neural-network-training</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/neural-networks" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:2.591244504920036rem">neural-networks</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/neural-radiance-fields" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">neural-radiance-fields</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/nlp" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:2.737351065378957rem">nlp</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/noise" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">noise</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/notes" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">notes</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/online-privacy" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">online-privacy</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/open-endedness" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">open-endedness</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/optimal-transport" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.495740794277136rem">optimal-transport</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/optimization" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.9383328515057756rem">optimization</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/org" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">org</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/org-mode" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">org-mode</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/org-roam" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">org-roam</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/palm" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">palm</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/philosophy" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.8780777830676956rem">philosophy</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/physics" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:2.2219879310328134rem">physics</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/probabilities" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">probabilities</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/programming" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.3127776171685919rem">programming</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/programming-languages" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:2.157414717516187rem">programming-languages</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/python" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">python</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/quality-diversity" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">quality-diversity</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/recurrent-neural-networks" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.625555234337184rem">recurrent-neural-networks</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/reinforcement-learning" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:2.082032778435059rem">reinforcement-learning</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/reservoir-computing" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.495740794277136rem">reservoir-computing</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/rnn" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.3127776171685919rem">rnn</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/roberta" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">roberta</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/robotics" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">robotics</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/rust" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.3127776171685919rem">rust</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/search" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.495740794277136rem">search</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/search-algorithms" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">search-algorithms</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/signal-processing" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.495740794277136rem">signal-processing</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/society" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.3127776171685919rem">society</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/statistical-physics" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">statistical-physics</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/statistics" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.808518411445728rem">statistics</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/stochastic" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">stochastic</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/style-transfer" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">style-transfer</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/t5" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.495740794277136rem">t5</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/taxation" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.3127776171685919rem">taxation</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/theory" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">theory</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/theory-of-computation" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">theory-of-computation</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/transfer-learning" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.495740794277136rem">transfer-learning</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/transformers" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:2.791565311109516rem">transformers</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/unconventional-computing" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.625555234337184rem">unconventional-computing</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/unsupervised-learning" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.3127776171685919rem">unsupervised-learning</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/urban-science" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">urban-science</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/vit" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.3127776171685919rem">vit</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/web" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.3127776171685919rem">web</a>
-          </li>
-          <li class="list-none inline-block pr-2 pb-2">
-            <a href="/tags/writing" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.7262471367556773rem">writing</a>
-          </li>
-        </ul>
       </div>
-      <hr>
-    </main>
-    <footer class="footer container h-10 text-center">
-      <ul>
-        <li class="inline-block list-none">
-          <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="/img/RSS.svg" alt="RSS feed icon"></a>
+    </nav>
+  </header>
+  <main class="content h-card container mt-2 m-auto leading-loose md:px-0 px-2" role="main">
+    <p>All the tags in the website, weighted by their frequency</p>
+    <hr>
+    <div>
+      <h2>Tags</h2>
+      <ul class="leading-6 text-center">
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/adversarial-attacks" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">adversarial-attacks</a>
         </li>
-        <li class="before:content-['•'] inline-block">
-          <a class="text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/algorithm" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:2.082032778435059rem">algorithm</a>
         </li>
-        <li class="before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block">© Hugo Cisneros 2022</li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/algorithmic-information-theory" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.625555234337184rem">algorithmic-information-theory</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/alife-2020" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.808518411445728rem">alife-2020</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/alife-conference" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">alife-conference</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/applied-maths" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:2.4148689297300074rem">applied-maths</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/artificial-intelligence" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:2.3286566455597866rem">artificial-intelligence</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/artificial-intelligence-test" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.7262471367556773rem">artificial-intelligence-test</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/artificial-life" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:2.082032778435059rem">artificial-life</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/attention" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.495740794277136rem">attention</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/autoencoders" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">autoencoders</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/autopoiesis" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">autopoiesis</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/bart" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.3127776171685919rem">bart</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/bert" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.808518411445728rem">bert</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/biological-life" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.9383328515057756rem">biological-life</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/blog" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">blog</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/capitalism" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">capitalism</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/cellular-automata" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:2.4340736457829117rem">cellular-automata</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/cellular-automata-as-cnns" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">cellular-automata-as-cnns</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/chaos" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">chaos</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/chemical-reaction-network" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">chemical-reaction-network</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/chinchilla" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">chinchilla</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/christopher-langton" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">christopher-langton</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/climate" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.991481588554272rem">climate</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/clip" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.3127776171685919rem">clip</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/coding" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:2.3042592057228637rem">coding</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/combinatorics" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">combinatorics</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/combinatory-logic" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">combinatory-logic</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/complex-systems" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:2.1908554002362877rem">complex-systems</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/complexity" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:2.12129602861432rem">complexity</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/complexity-metrics" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.7262471367556773rem">complexity-metrics</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/compression" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.808518411445728rem">compression</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/computability-theory" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.808518411445728rem">computability-theory</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/computer-science" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:2.3286566455597866rem">computer-science</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/computer-vision" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:2.0390247539242696rem">computer-vision</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/consciousness" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.3127776171685919rem">consciousness</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/continual-learning" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">continual-learning</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/convolutional-neural-networks" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.495740794277136rem">convolutional-neural-networks</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/cryptography" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.991481588554272rem">cryptography</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/data" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.3127776171685919rem">data</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/data-journalism" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">data-journalism</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/data-representation" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.495740794277136rem">data-representation</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/data-science" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.495740794277136rem">data-science</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/deep-learning" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">deep-learning</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/diffusion-models" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.495740794277136rem">diffusion-models</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/dynamical-systems" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.625555234337184rem">dynamical-systems</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/economic-liberalism" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.495740794277136rem">economic-liberalism</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/economics" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:2.1908554002362877rem">economics</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/emacs" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.495740794277136rem">emacs</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/emergence" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.7262471367556773rem">emergence</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/entropy" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">entropy</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/entropy-coding" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.495740794277136rem">entropy-coding</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/europe" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">europe</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/evaluating-nlp" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.495740794277136rem">evaluating-nlp</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/evolution" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:2.12129602861432rem">evolution</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/evolutionary-algorithms" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">evolutionary-algorithms</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/evolutionary-strategies" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">evolutionary-strategies</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/finite-state-machines" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.3127776171685919rem">finite-state-machines</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/gans" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">gans</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/generative-modelling" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.3127776171685919rem">generative-modelling</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/genetic-algorithms" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.625555234337184rem">genetic-algorithms</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/gpt" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:2.251110468674368rem">gpt</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/gradient-descent" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">gradient-descent</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/graph-neural-networks" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.625555234337184rem">graph-neural-networks</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/graphs" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.625555234337184rem">graphs</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/halting-problem" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">halting-problem</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/hopfield-networks" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">hopfield-networks</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/hybrids" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">hybrids</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/image-processing" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.3127776171685919rem">image-processing</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/implicit-neural-representations" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">implicit-neural-representations</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/information-theory" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">information-theory</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/ising-model" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">ising-model</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/kernel-methods" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.3127776171685919rem">kernel-methods</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/language" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.495740794277136rem">language</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/life" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.8780777830676956rem">life</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/logic" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.495740794277136rem">logic</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/machine-learning" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:2.591244504920036rem">machine-learning</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/mathematics" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:2.1908554002362877rem">mathematics</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/memory-in-neural-networks" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">memory-in-neural-networks</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/minecraft" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">minecraft</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/minimum-description-length" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">minimum-description-length</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/morphogenesis" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">morphogenesis</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/nas" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.625555234337184rem">nas</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/natural-language-processing" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.3127776171685919rem">natural-language-processing</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/nerf" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">nerf</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/network-authentication" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">network-authentication</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/networking" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">networking</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/neural-architecture-search" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.3127776171685919rem">neural-architecture-search</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/neural-cellular-automata" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">neural-cellular-automata</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/neural-network-training" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.495740794277136rem">neural-network-training</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/neural-networks" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:2.591244504920036rem">neural-networks</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/neural-radiance-fields" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">neural-radiance-fields</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/nlp" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:2.737351065378957rem">nlp</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/noise" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">noise</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/notes" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">notes</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/online-privacy" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">online-privacy</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/open-endedness" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">open-endedness</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/optimal-transport" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.495740794277136rem">optimal-transport</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/optimization" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.9383328515057756rem">optimization</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/org" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">org</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/org-mode" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">org-mode</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/org-roam" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">org-roam</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/palm" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">palm</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/philosophy" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.8780777830676956rem">philosophy</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/physics" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:2.2219879310328134rem">physics</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/probabilities" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">probabilities</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/programming" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.3127776171685919rem">programming</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/programming-languages" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:2.157414717516187rem">programming-languages</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/python" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">python</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/quality-diversity" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">quality-diversity</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/recurrent-neural-networks" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.625555234337184rem">recurrent-neural-networks</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/reinforcement-learning" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:2.082032778435059rem">reinforcement-learning</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/reservoir-computing" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.495740794277136rem">reservoir-computing</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/rnn" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.3127776171685919rem">rnn</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/roberta" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">roberta</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/robotics" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">robotics</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/rust" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.3127776171685919rem">rust</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/search" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.495740794277136rem">search</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/search-algorithms" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">search-algorithms</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/signal-processing" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.495740794277136rem">signal-processing</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/society" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.3127776171685919rem">society</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/statistical-physics" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">statistical-physics</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/statistics" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.808518411445728rem">statistics</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/stochastic" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">stochastic</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/style-transfer" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">style-transfer</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/t5" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.495740794277136rem">t5</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/taxation" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.3127776171685919rem">taxation</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/theory" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">theory</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/theory-of-computation" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">theory-of-computation</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/transfer-learning" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.495740794277136rem">transfer-learning</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/transformers" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:2.791565311109516rem">transformers</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/unconventional-computing" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.625555234337184rem">unconventional-computing</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/unsupervised-learning" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.3127776171685919rem">unsupervised-learning</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/urban-science" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1rem">urban-science</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/vit" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.3127776171685919rem">vit</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/web" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.3127776171685919rem">web</a>
+        </li>
+        <li class="list-none inline-block pr-2 pb-2">
+          <a href="/tags/writing" class="font-bold text-neutral-800 dark:text-neutral-200" style="font-size:1.7262471367556773rem">writing</a>
+        </li>
       </ul>
-    </footer>
-  </div>
+    </div>
+    <hr>
+  </main>
+  <footer class="footer container h-10 text-center">
+    <ul class="pl-0">
+      <li class="first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="https://hugocisneros.com/img/RSS.svg" alt="RSS feed icon"></a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="ml-2 text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block list-none"><span class="ml-2">© Hugo Cisneros 2022</span></li>
+    </ul>
+  </footer>
   <script data-goatcounter="https://stats.hugocisneros.com/count" async src="//stats.hugocisneros.com/count.js"></script>
 </body>
 </html>

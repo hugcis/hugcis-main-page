@@ -28,122 +28,120 @@
   <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
   <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
   <script>
-  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode()
+  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
 </head>
 <body>
-  <div class="wrapper">
-    <header class="header">
-      <nav>
-        <div class="container flex flex-wrap justify-between items-center mx-auto">
-          <div class="nav-main my-2.5">
-            <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
-          </div><button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
-          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul class="grid grid-flow-col items-center justify-between text-lg my-2.5">
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
-              </li>
-              <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="/img/dark_mode.svg"></button></li>
-            </ul>
-          </div>
+  <header class="md:px-0 px-2">
+    <nav>
+      <div class="container flex flex-wrap justify-between items-center mx-auto">
+        <div class="nav-main my-2.5">
+          <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
+        </div><button type="button" onclick="toggleMenu()" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul class="grid md:grid-flow-col items-center justify-between text-lg my-2.5">
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
+            </li>
+            <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="https://hugocisneros.com/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="https://hugocisneros.com/img/dark_mode.svg"></button></li>
+          </ul>
         </div>
-      </nav>
-    </header>
-    <main class="content h-card container mt-2 m-auto leading-loose" role="main">
-      <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-        <div class="bg-zinc-100 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
-          <h1 class="article-title p-name" itemprop="name">Why programming is a good medium for expressing poorly understood and sloppily-formulated ideas</h1>
-          <div class="article-content e-content p-name" itemprop="articleBody">
-            <dl>
-              <dt>source</dt>
-              <dd>
-                <a href="http://web.media.mit.edu/~minsky/papers/Why%20programming%20is--.html">Link</a>
-              </dd>
-              <dt>tags</dt>
-              <dd>
-                <a href="/notes/artificial_intelligence/">Artificial Intelligence</a>, <a href="/notes/coding/">Coding</a>
-              </dd>
-              <dt>author</dt>
-              <dd>
-                <a href="/notes/marvin_minsky/">Marvin Minsky</a>
-              </dd>
-            </dl>
-            <h2 id="what-can-computers-do">What can computers do?</h2>
-            <blockquote>
-              <p>The fallacy under discussion is the widespread superstition that we can’t write a computer program to do something unless one has an extremely clear, precise formulation of what is to be done, and exactly how to do it.</p>
-            </blockquote>
-            <p>It is generally believed that <a href="/notes/coding/">computer programs</a> cannot be more than a set of rules and instructions for what to do in a given computer state. While this is true, it falls into the common pitfall of thinking of the whole as the sum of its parts</p>
-            <blockquote>
-              <p>However, for more advanced processes, while “perfectly” true in one sense, it would be as correct to say that “houses are nothing but arrangements of construction materials” or “books are merely long strings of words.”</p>
-            </blockquote>
-            <p>Minsky discusses three ways to see a computer program</p>
-            <h2 id="a-program-as-a-sequence-of-instruction-to-be-obeyed">A program as a sequence of instruction to be obeyed</h2>
-            <blockquote>
-              <p>The most common and simple-minded view is that a computer program is a sequence of clear-cut operations to be performed on some data.</p>
-            </blockquote>
-            <h2 id="a-program-as-a-court-of-law">A program as a court of law</h2>
-            <p>The author now gives an example program that can accumulate facts from user input. A disambiguation “part” of the program acts as a court, weighing different facts against previously accumulated knowledge and adding it to its database.</p>
-            <p>In large programs with many such subprograms, it is clear that the whole isn’t behaving like a sequence anymore. The programmer only constructs the laws and rules that will guide those courts but usually cannot predict or understand the details of operations.</p>
-            <blockquote>
-              <p>For try as we may, we rarely can fully envision, in advance, all the details of [the subprograms’] interactions. For that, after all, is why we need computers.</p>
-            </blockquote>
-            <h2 id="a-program-as-a-collection-of-statements-of-advice">A program as a collection of statements of advice</h2>
-            <blockquote>
-              <p>The great illusion shared not only by all terrified humanists but also by most computer “experts,” that programming is an inherently precise and rigid medium of expression, is based on an elementary confusion between form and content. If poets were required to write in units of fourteen lines, it wouldn’t make them more precise; if composers had to use all twelve tones, it wouldn’t constrain the overall forms; if designers had to use only fourth order surfaces no ‑one would notice it much! It is humorous, then, to find such unanimity about how the rather stiff grammar of (the older) programming language makes for precision in describing processes.</p>
-            </blockquote>
-            <p>It is interesting to note that it seems that in Minsky’s mind, <a href="/notes/coding/">programming</a> would have more flexible syntax in the future approaching natural language more accurately.</p>
-            <p>I think the following quote, referring to a “missionaries and cannibal” solving program, is impressive. The program tries several solutions and prefers those making progress towards moving people to the other side of the river. An outsider can tell the program if its making progress or not. This sounds to me like <a href="/notes/machine_learning/">machine learning</a>, which was in its early days at the time.</p>
-            <blockquote>
-              <p>Some other function may have been modified so that, in certain situations, “progress” won’t get to evaluate the situation at all, and someone might get eaten anyway. If that happened, the outsider would try to guess why.</p>
-              <p>He would have the options (1) of thoroughly understanding the existing program and “really fixing” the trouble, or (2) of entering anew advice statement describing what he imagines to be the defective situation and telling the program not to move the missionary into the position of being eaten. When a program grows in power by an evolution of partially‑understood patches and fixes, the programmer begins to lose track of internal details and can no longer predict what will happen—and begins to hope instead of know, watching the program as though it were an individual of unpredictable behavior.</p>
-            </blockquote>
-            <h2 id="programming-is-more-than-a-bunch-of-instructions">Programming is more than a bunch of instructions</h2>
-            <blockquote>
-              <p>In each domain of uncertainty I am at liberty to specify (instead of particular procedures) procedure‑generators, selection rules, courts of advice concerning choices, etc. So the behavior can have wide ranges‑it need never twice follow the same lines, it can be made to cover roughly the same latitude of tolerance that lies in the author’s mind.</p>
-            </blockquote>
-            <p>A programmer, by giving instructions, is specifying a frame in which a program will develop. I believe most very interesting programs are actually creating something new that can be of interest to the programmer itself.</p>
-            <p>Data analysis is a simple form of this phenomenon. A programmer writes some code to extract word frequency from a piece of text, and get some insights he could not have got before. I believe that <a href="/notes/open_ended_evolution/">open-ended evolution</a> would be the ultimate form of a program impressing the programmer. Though only evolving within the frame imposed by the programmer, such a program would create endless and more complex novelty.</p>
-            <blockquote>
-              <p>To take advantage of the unsurpassed flexibility of this medium requires tremendous skill‑technical, intellectual, and esthetic. To constrain the behavior of a program precisely to a range may be very hard, just as a writer will need some skill to express just a certain degree of ambiguity. A computer is like a violin. You can imagine a novice trying first a phonograph and then a violin. The latter, he says, sounds terrible. That is the argument we have heard from our humanists and most of our computer scientists. Computer programs are good, they say, for particular purposes, but they aren’t flexible. Neither is a violin, or a typewriter, until you learn how to use it.</p>
-            </blockquote>
-          </div>
-          <div class="text-center" style="font-variant-caps:all-small-caps">
-            Last changed <a class="u-url" href="https://hugocisneros.com/notes/why_programming_is_a_good_medium/"><time itemprop="datePublished" class="dt-published" datetime="2021-03-02T10:17:00+0100">02/03/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
-          </div>
+      </div>
+    </nav>
+  </header>
+  <main class="content h-card container mt-2 m-auto leading-loose md:px-0 px-2" role="main">
+    <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+      <div class="bg-zinc-100 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
+        <h1 class="article-title p-name" itemprop="name">Why programming is a good medium for expressing poorly understood and sloppily-formulated ideas</h1>
+        <div class="article-content e-content p-name" itemprop="articleBody">
+          <dl>
+            <dt>source</dt>
+            <dd>
+              <a href="http://web.media.mit.edu/~minsky/papers/Why%20programming%20is--.html">Link</a>
+            </dd>
+            <dt>tags</dt>
+            <dd>
+              <a href="/notes/artificial_intelligence/">Artificial Intelligence</a>, <a href="/notes/coding/">Coding</a>
+            </dd>
+            <dt>author</dt>
+            <dd>
+              <a href="/notes/marvin_minsky/">Marvin Minsky</a>
+            </dd>
+          </dl>
+          <h2 id="what-can-computers-do">What can computers do?</h2>
+          <blockquote>
+            <p>The fallacy under discussion is the widespread superstition that we can’t write a computer program to do something unless one has an extremely clear, precise formulation of what is to be done, and exactly how to do it.</p>
+          </blockquote>
+          <p>It is generally believed that <a href="/notes/coding/">computer programs</a> cannot be more than a set of rules and instructions for what to do in a given computer state. While this is true, it falls into the common pitfall of thinking of the whole as the sum of its parts</p>
+          <blockquote>
+            <p>However, for more advanced processes, while “perfectly” true in one sense, it would be as correct to say that “houses are nothing but arrangements of construction materials” or “books are merely long strings of words.”</p>
+          </blockquote>
+          <p>Minsky discusses three ways to see a computer program</p>
+          <h2 id="a-program-as-a-sequence-of-instruction-to-be-obeyed">A program as a sequence of instruction to be obeyed</h2>
+          <blockquote>
+            <p>The most common and simple-minded view is that a computer program is a sequence of clear-cut operations to be performed on some data.</p>
+          </blockquote>
+          <h2 id="a-program-as-a-court-of-law">A program as a court of law</h2>
+          <p>The author now gives an example program that can accumulate facts from user input. A disambiguation “part” of the program acts as a court, weighing different facts against previously accumulated knowledge and adding it to its database.</p>
+          <p>In large programs with many such subprograms, it is clear that the whole isn’t behaving like a sequence anymore. The programmer only constructs the laws and rules that will guide those courts but usually cannot predict or understand the details of operations.</p>
+          <blockquote>
+            <p>For try as we may, we rarely can fully envision, in advance, all the details of [the subprograms’] interactions. For that, after all, is why we need computers.</p>
+          </blockquote>
+          <h2 id="a-program-as-a-collection-of-statements-of-advice">A program as a collection of statements of advice</h2>
+          <blockquote>
+            <p>The great illusion shared not only by all terrified humanists but also by most computer “experts,” that programming is an inherently precise and rigid medium of expression, is based on an elementary confusion between form and content. If poets were required to write in units of fourteen lines, it wouldn’t make them more precise; if composers had to use all twelve tones, it wouldn’t constrain the overall forms; if designers had to use only fourth order surfaces no ‑one would notice it much! It is humorous, then, to find such unanimity about how the rather stiff grammar of (the older) programming language makes for precision in describing processes.</p>
+          </blockquote>
+          <p>It is interesting to note that it seems that in Minsky’s mind, <a href="/notes/coding/">programming</a> would have more flexible syntax in the future approaching natural language more accurately.</p>
+          <p>I think the following quote, referring to a “missionaries and cannibal” solving program, is impressive. The program tries several solutions and prefers those making progress towards moving people to the other side of the river. An outsider can tell the program if its making progress or not. This sounds to me like <a href="/notes/machine_learning/">machine learning</a>, which was in its early days at the time.</p>
+          <blockquote>
+            <p>Some other function may have been modified so that, in certain situations, “progress” won’t get to evaluate the situation at all, and someone might get eaten anyway. If that happened, the outsider would try to guess why.</p>
+            <p>He would have the options (1) of thoroughly understanding the existing program and “really fixing” the trouble, or (2) of entering anew advice statement describing what he imagines to be the defective situation and telling the program not to move the missionary into the position of being eaten. When a program grows in power by an evolution of partially‑understood patches and fixes, the programmer begins to lose track of internal details and can no longer predict what will happen—and begins to hope instead of know, watching the program as though it were an individual of unpredictable behavior.</p>
+          </blockquote>
+          <h2 id="programming-is-more-than-a-bunch-of-instructions">Programming is more than a bunch of instructions</h2>
+          <blockquote>
+            <p>In each domain of uncertainty I am at liberty to specify (instead of particular procedures) procedure‑generators, selection rules, courts of advice concerning choices, etc. So the behavior can have wide ranges‑it need never twice follow the same lines, it can be made to cover roughly the same latitude of tolerance that lies in the author’s mind.</p>
+          </blockquote>
+          <p>A programmer, by giving instructions, is specifying a frame in which a program will develop. I believe most very interesting programs are actually creating something new that can be of interest to the programmer itself.</p>
+          <p>Data analysis is a simple form of this phenomenon. A programmer writes some code to extract word frequency from a piece of text, and get some insights he could not have got before. I believe that <a href="/notes/open_ended_evolution/">open-ended evolution</a> would be the ultimate form of a program impressing the programmer. Though only evolving within the frame imposed by the programmer, such a program would create endless and more complex novelty.</p>
+          <blockquote>
+            <p>To take advantage of the unsurpassed flexibility of this medium requires tremendous skill‑technical, intellectual, and esthetic. To constrain the behavior of a program precisely to a range may be very hard, just as a writer will need some skill to express just a certain degree of ambiguity. A computer is like a violin. You can imagine a novice trying first a phonograph and then a violin. The latter, he says, sounds terrible. That is the argument we have heard from our humanists and most of our computer scientists. Computer programs are good, they say, for particular purposes, but they aren’t flexible. Neither is a violin, or a typewriter, until you learn how to use it.</p>
+          </blockquote>
         </div>
-      </article>
-      <h3>Comments</h3>
-      <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
-      <section id="isso-thread"></section><br>
-      <a href="/notes#why_programming_is_a_good_medium"><b>← Back to Notes</b></a>
-      <hr>
-    </main>
-    <footer class="footer container h-10 text-center">
-      <ul>
-        <li class="inline-block list-none">
-          <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="/img/RSS.svg" alt="RSS feed icon"></a>
-        </li>
-        <li class="before:content-['•'] inline-block">
-          <a class="text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
-        </li>
-        <li class="before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block">© Hugo Cisneros 2022</li>
-      </ul>
-    </footer>
-  </div>
+        <div class="text-center" style="font-variant-caps:all-small-caps">
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/why_programming_is_a_good_medium/"><time itemprop="datePublished" class="dt-published" datetime="2021-03-02T10:17:00+0100">02/03/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+        </div>
+      </div>
+    </article>
+    <h3>Comments</h3>
+    <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
+    <section id="isso-thread"></section><br>
+    <a href="/notes#why_programming_is_a_good_medium"><b>← Back to Notes</b></a>
+    <hr>
+  </main>
+  <footer class="footer container h-10 text-center">
+    <ul class="pl-0">
+      <li class="first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="https://hugocisneros.com/img/RSS.svg" alt="RSS feed icon"></a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="ml-2 text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block list-none"><span class="ml-2">© Hugo Cisneros 2022</span></li>
+    </ul>
+  </footer>
   <link rel="stylesheet" href="/js/katex/katex.min.css">
   <script src="/js/katex/katex.min.js"></script> 
   <script src="/js/katex/contrib/auto-render.min.js"></script> 

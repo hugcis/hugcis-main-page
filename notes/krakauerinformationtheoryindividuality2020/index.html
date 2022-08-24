@@ -28,122 +28,120 @@
   <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
   <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
   <script>
-  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode()
+  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
 </head>
 <body>
-  <div class="wrapper">
-    <header class="header">
-      <nav>
-        <div class="container flex flex-wrap justify-between items-center mx-auto">
-          <div class="nav-main my-2.5">
-            <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
-          </div><button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
-          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul class="grid grid-flow-col items-center justify-between text-lg my-2.5">
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
-              </li>
-              <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="/img/dark_mode.svg"></button></li>
-            </ul>
-          </div>
+  <header class="md:px-0 px-2">
+    <nav>
+      <div class="container flex flex-wrap justify-between items-center mx-auto">
+        <div class="nav-main my-2.5">
+          <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
+        </div><button type="button" onclick="toggleMenu()" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul class="grid md:grid-flow-col items-center justify-between text-lg my-2.5">
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
+            </li>
+            <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="https://hugocisneros.com/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="https://hugocisneros.com/img/dark_mode.svg"></button></li>
+          </ul>
         </div>
-      </nav>
-    </header>
-    <main class="content h-card container mt-2 m-auto leading-loose" role="main">
-      <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-        <div class="bg-zinc-100 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
-          <h1 class="article-title p-name" itemprop="name">The information theory of individuality by Krakauer, D., Bertschinger, N., Olbrich, E., Flack, J. C., & Ay, N. (2020)</h1>
-          <div class="article-content e-content p-name" itemprop="articleBody">
-            <dl>
-              <dt>tags</dt>
-              <dd>
-                <a href="/notes/information_theory/">Information theory</a>, <a href="/notes/life/">Life</a>
-              </dd>
-              <dt>source</dt>
-              <dd>
-                (<a href="#krakauerInformationTheoryIndividuality2020"><cite itemprop="citation" itemscope itemid="doi:10.1007/s12064-020-00313-7">Krakauer et al. 2020</cite></a>)
-              </dd>
-            </dl>
-            <h2 id="summary">Summary</h2>
-            <p>This paper introduces an information theoretic definition of individuality for <a href="/notes/complex_systems/">complex systems</a>.</p>
-            <p>In a few words, the authors idea of individuality is based on the amount of <a href="/notes/information_theory/">information</a> transmitted through time.</p>
-            <blockquote>
-              <p>If the information transmitted forward in time is close to maximal, we take that as evidence for individuality.</p>
-            </blockquote>
-            <p>Formally, a system \(\mathcal{S}\) is considered in interaction with an environment \(\mathcal{E}\). Two channels \(\phi: \mathcal{E} \times \mathcal{S}\rightarrow\mathcal{S}\) and \(\psi : \mathcal{S} \times \mathcal{E} \rightarrow \mathcal{E}\) corresponds to the transition probabilities for \(\mathcal{S}\) and \(\mathcal{E}\) respectively (\(\phi(e, s; s’)\) is the probability to be in state \(s’\) at the next time step for current states \(s\) and \(e\) for \(\mathcal{S}\) and \(\mathcal{E}\)).</p>
-            <p>The predictability of the next state of the system is characterized in terms of <a href="/notes/entropy/">entropy</a> and mutual information by</p>
-            <p>\[ \begin{align*} I(S_n, E_n ; S_{n+1} ) &amp;= I(S_{n+1} ; S_n) + I(S_{n+1} ; E_n | S_n)\newline & = I(S_{n+1} ; E_n) + I(S_{n+1} ; S_n|E_n) \end{align*} \]</p>
-            <p>Depending on which quantity dominates, different types of individuality can be defined</p>
-            <ul>
-              <li>Colonial Individuality: \(A = I(S_{n+1} ; S_n|E_n)\)</li>
-            </ul>
-            <blockquote>
-              <p>Organisms are well adapted when they share through adaptation or learning significant information with the environment in which they live. In addition, they contain a large amount of private information required for effective function. By maximizing this measure, we are able to identify complex organisms in their environments.</p>
-            </blockquote>
-            <ul>
-              <li>Organismal Individuality: \(A^* = I(S_{n+1} ; S_n)\)</li>
-            </ul>
-            <blockquote>
-              <p>Many organisms such as microbes share only a small amount of information with the environment in which hey live. They contain regulatory mechanisms that allow for adaptation through ongoing interaction between their biotic and abiotic environment. By maximizing this measure, we are able to identify “environmentally regulated aggregations,” which we call “colonial individuals.”</p>
-            </blockquote>
-            <ul>
-              <li>Environmental Determined Individuality: \(nC = I(S_{n+1} ; E_n|S_n)\)</li>
-            </ul>
-            <blockquote>
-              <p>This measure quantifies the degree of environmental determinism on the temporal evolution of an individual. When this measure is minimized an individual becomes completely insensitive to the environment — and hence is neither in the organismal or colonial form — and not in any real sense adaptive. It represents the persistence of an environmental memory capable through interaction with the system of generating structure, such as temperature gradients in a fluid that produce vortices.</p>
-            </blockquote>
-            <p>Another additional measure is defined, quantifying contribution of different terms in case of hybrid that have multiple components to their “individuality”. This is called <strong>Environmental Coding</strong>,</p>
-            <p>\[ NTIC=SI(S_{n+1};S_n, E_n)−CI(S_{n+1};S_n, E_n) \]</p>
-            <blockquote>
-              <p>The intuition behind this measure is to quantify the difference between a colonial and organismal measure of individuality. The difference is captured by the difference between shared information (e.g., adaptive information) and the interaction of individual and environment (e.g., regulatory information). One way to think about this is how much information can be encoded about the environment in the system innately (e.g., inherited information) versus how much information needs to be encoded through ongoing interaction. When the measure is large nature dominates nurture. As the measure declines, nurture begins to dominate nature.</p>
-            </blockquote>
-            <h2 id="comments">Comments</h2>
-            <p>This looks like a great way to study <a href="/notes/emergence/">emergence</a> of <a href="/notes/life/">life</a> and <a href="/notes/evolution/">evolutionary processes</a> in <a href="/notes/complex_systems/">complex systems</a>. I gives theoretical grounding into the fact that many complex systems look as if they behaved as individuals.</p>
-            <p>However, the main drawback seems to be in accurately computing mutual information for each of the terms. Also, the definition of the system \(\mathcal{S}\) and environment \(\mathcal{E}\) can be problematic when dealing with systems in which the distinction isn’t clear (such as <a href="/notes/cellular_automata/">Cellular automata</a>).</p>
-            <h2 id="bibliography">Bibliography</h2>
-            <ol class="biblio-list">
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="krakauerInformationTheoryIndividuality2020" itemid="doi:10.1007/s12064-020-00313-7">
-                <span itemprop="author">David Krakauer, Nils Bertschinger, Eckehard Olbrich, Jessica C. Flack, Nihat Ay</span>. <time datetime="2020" itemprop="datePublished">June 1, 2020</time>. "<span itemprop="name">The Information Theory of Individuality</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Theory in Biosciences</i></span> 139 (2):209–23. <a itemprop="sameAs" href="https://doi.org/10.1007/s12064-020-00313-7">DOI</a>.
-              </li>
-            </ol>
-          </div>
-          <div class="text-center" style="font-variant-caps:all-small-caps">
-            Last changed <a class="u-url" href="https://hugocisneros.com/notes/krakauerinformationtheoryindividuality2020/"><time itemprop="datePublished" class="dt-published" datetime="2021-09-02T12:46:00+0200">02/09/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
-          </div>
+      </div>
+    </nav>
+  </header>
+  <main class="content h-card container mt-2 m-auto leading-loose md:px-0 px-2" role="main">
+    <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+      <div class="bg-zinc-100 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
+        <h1 class="article-title p-name" itemprop="name">The information theory of individuality by Krakauer, D., Bertschinger, N., Olbrich, E., Flack, J. C., & Ay, N. (2020)</h1>
+        <div class="article-content e-content p-name" itemprop="articleBody">
+          <dl>
+            <dt>tags</dt>
+            <dd>
+              <a href="/notes/information_theory/">Information theory</a>, <a href="/notes/life/">Life</a>
+            </dd>
+            <dt>source</dt>
+            <dd>
+              (<a href="#krakauerInformationTheoryIndividuality2020"><cite itemprop="citation" itemscope itemid="doi:10.1007/s12064-020-00313-7">Krakauer et al. 2020</cite></a>)
+            </dd>
+          </dl>
+          <h2 id="summary">Summary</h2>
+          <p>This paper introduces an information theoretic definition of individuality for <a href="/notes/complex_systems/">complex systems</a>.</p>
+          <p>In a few words, the authors idea of individuality is based on the amount of <a href="/notes/information_theory/">information</a> transmitted through time.</p>
+          <blockquote>
+            <p>If the information transmitted forward in time is close to maximal, we take that as evidence for individuality.</p>
+          </blockquote>
+          <p>Formally, a system \(\mathcal{S}\) is considered in interaction with an environment \(\mathcal{E}\). Two channels \(\phi: \mathcal{E} \times \mathcal{S}\rightarrow\mathcal{S}\) and \(\psi : \mathcal{S} \times \mathcal{E} \rightarrow \mathcal{E}\) corresponds to the transition probabilities for \(\mathcal{S}\) and \(\mathcal{E}\) respectively (\(\phi(e, s; s’)\) is the probability to be in state \(s’\) at the next time step for current states \(s\) and \(e\) for \(\mathcal{S}\) and \(\mathcal{E}\)).</p>
+          <p>The predictability of the next state of the system is characterized in terms of <a href="/notes/entropy/">entropy</a> and mutual information by</p>
+          <p>\[ \begin{align*} I(S_n, E_n ; S_{n+1} ) &amp;= I(S_{n+1} ; S_n) + I(S_{n+1} ; E_n | S_n)\newline & = I(S_{n+1} ; E_n) + I(S_{n+1} ; S_n|E_n) \end{align*} \]</p>
+          <p>Depending on which quantity dominates, different types of individuality can be defined</p>
+          <ul>
+            <li>Colonial Individuality: \(A = I(S_{n+1} ; S_n|E_n)\)</li>
+          </ul>
+          <blockquote>
+            <p>Organisms are well adapted when they share through adaptation or learning significant information with the environment in which they live. In addition, they contain a large amount of private information required for effective function. By maximizing this measure, we are able to identify complex organisms in their environments.</p>
+          </blockquote>
+          <ul>
+            <li>Organismal Individuality: \(A^* = I(S_{n+1} ; S_n)\)</li>
+          </ul>
+          <blockquote>
+            <p>Many organisms such as microbes share only a small amount of information with the environment in which hey live. They contain regulatory mechanisms that allow for adaptation through ongoing interaction between their biotic and abiotic environment. By maximizing this measure, we are able to identify “environmentally regulated aggregations,” which we call “colonial individuals.”</p>
+          </blockquote>
+          <ul>
+            <li>Environmental Determined Individuality: \(nC = I(S_{n+1} ; E_n|S_n)\)</li>
+          </ul>
+          <blockquote>
+            <p>This measure quantifies the degree of environmental determinism on the temporal evolution of an individual. When this measure is minimized an individual becomes completely insensitive to the environment — and hence is neither in the organismal or colonial form — and not in any real sense adaptive. It represents the persistence of an environmental memory capable through interaction with the system of generating structure, such as temperature gradients in a fluid that produce vortices.</p>
+          </blockquote>
+          <p>Another additional measure is defined, quantifying contribution of different terms in case of hybrid that have multiple components to their “individuality”. This is called <strong>Environmental Coding</strong>,</p>
+          <p>\[ NTIC=SI(S_{n+1};S_n, E_n)−CI(S_{n+1};S_n, E_n) \]</p>
+          <blockquote>
+            <p>The intuition behind this measure is to quantify the difference between a colonial and organismal measure of individuality. The difference is captured by the difference between shared information (e.g., adaptive information) and the interaction of individual and environment (e.g., regulatory information). One way to think about this is how much information can be encoded about the environment in the system innately (e.g., inherited information) versus how much information needs to be encoded through ongoing interaction. When the measure is large nature dominates nurture. As the measure declines, nurture begins to dominate nature.</p>
+          </blockquote>
+          <h2 id="comments">Comments</h2>
+          <p>This looks like a great way to study <a href="/notes/emergence/">emergence</a> of <a href="/notes/life/">life</a> and <a href="/notes/evolution/">evolutionary processes</a> in <a href="/notes/complex_systems/">complex systems</a>. I gives theoretical grounding into the fact that many complex systems look as if they behaved as individuals.</p>
+          <p>However, the main drawback seems to be in accurately computing mutual information for each of the terms. Also, the definition of the system \(\mathcal{S}\) and environment \(\mathcal{E}\) can be problematic when dealing with systems in which the distinction isn’t clear (such as <a href="/notes/cellular_automata/">Cellular automata</a>).</p>
+          <h2 id="bibliography">Bibliography</h2>
+          <ol class="biblio-list">
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="krakauerInformationTheoryIndividuality2020" itemid="doi:10.1007/s12064-020-00313-7">
+              <span itemprop="author">David Krakauer, Nils Bertschinger, Eckehard Olbrich, Jessica C. Flack, Nihat Ay</span>. <time datetime="2020" itemprop="datePublished">June 1, 2020</time>. "<span itemprop="name">The Information Theory of Individuality</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Theory in Biosciences</i></span> 139 (2):209–23. <a itemprop="sameAs" href="https://doi.org/10.1007/s12064-020-00313-7">DOI</a>.
+            </li>
+          </ol>
         </div>
-      </article>
-      <h3>Comments</h3>
-      <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
-      <section id="isso-thread"></section><br>
-      <a href="/notes#krakauerinformationtheoryindividuality2020"><b>← Back to Notes</b></a>
-      <hr>
-    </main>
-    <footer class="footer container h-10 text-center">
-      <ul>
-        <li class="inline-block list-none">
-          <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="/img/RSS.svg" alt="RSS feed icon"></a>
-        </li>
-        <li class="before:content-['•'] inline-block">
-          <a class="text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
-        </li>
-        <li class="before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block">© Hugo Cisneros 2022</li>
-      </ul>
-    </footer>
-  </div>
+        <div class="text-center" style="font-variant-caps:all-small-caps">
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/krakauerinformationtheoryindividuality2020/"><time itemprop="datePublished" class="dt-published" datetime="2021-09-02T12:46:00+0200">02/09/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+        </div>
+      </div>
+    </article>
+    <h3>Comments</h3>
+    <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
+    <section id="isso-thread"></section><br>
+    <a href="/notes#krakauerinformationtheoryindividuality2020"><b>← Back to Notes</b></a>
+    <hr>
+  </main>
+  <footer class="footer container h-10 text-center">
+    <ul class="pl-0">
+      <li class="first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="https://hugocisneros.com/img/RSS.svg" alt="RSS feed icon"></a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="ml-2 text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block list-none"><span class="ml-2">© Hugo Cisneros 2022</span></li>
+    </ul>
+  </footer>
   <link rel="stylesheet" href="/js/katex/katex.min.css">
   <script src="/js/katex/katex.min.js"></script> 
   <script src="/js/katex/contrib/auto-render.min.js"></script> 

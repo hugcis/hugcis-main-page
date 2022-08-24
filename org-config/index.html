@@ -25,153 +25,152 @@
   <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
   <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
   <script>
-  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode()
+  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
 </head>
 <body>
-  <div class="wrapper">
-    <header class="header">
-      <nav>
-        <div class="container flex flex-wrap justify-between items-center mx-auto">
-          <div class="nav-main my-2.5">
-            <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
-          </div><button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
-          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul class="grid grid-flow-col items-center justify-between text-lg my-2.5">
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
-              </li>
-              <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="/img/dark_mode.svg"></button></li>
-            </ul>
-          </div>
+  <header class="md:px-0 px-2">
+    <nav>
+      <div class="container flex flex-wrap justify-between items-center mx-auto">
+        <div class="nav-main my-2.5">
+          <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
+        </div><button type="button" onclick="toggleMenu()" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul class="grid md:grid-flow-col items-center justify-between text-lg my-2.5">
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
+            </li>
+            <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="https://hugocisneros.com/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="https://hugocisneros.com/img/dark_mode.svg"></button></li>
+          </ul>
         </div>
-      </nav>
-    </header>
-    <main class="content h-card container mt-2 m-auto leading-loose" role="main">
-      <h1>Org-mode configuration</h1>
-      <div class="ox-hugo-toc toc">
-        <div class="heading">
-          Table of Contents
-        </div>
-        <ul>
-          <li>
-            <a href="#setting-up-todo-keywords">Setting up “TODO” keywords</a>
-            <ul>
-              <li>
-                <a href="#todo-faces-and-export-settings">“TODO” faces and export settings</a>
-              </li>
-              <li>
-                <a href="#org-todo-bullets">Org “TODO” bullets</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#general-style">General style</a>
-            <ul>
-              <li>
-                <a href="#proportional-width">Proportional width</a>
-              </li>
-              <li>
-                <a href="#hide-face-characters">Hide face characters</a>
-              </li>
-              <li>
-                <a href="#faces-setup">Faces setup</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#org-agenda">Org agenda</a>
-            <ul>
-              <li>
-                <a href="#agenda-style">Agenda style</a>
-              </li>
-              <li>
-                <a href="#super-agenda">Super agenda</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#org-clock">Org clock</a>
-          </li>
-          <li>
-            <a href="#org-custom-commands">Org custom commands</a>
-            <ul>
-              <li>
-                <a href="#close-journal-on-exit">Close journal on exit</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#org-ref-and-bibtex">Org Ref and Bibtex</a>
-          </li>
-          <li>
-            <a href="#org-capture">Org capture</a>
-          </li>
-          <li>
-            <a href="#org-refile">Org Refile</a>
-          </li>
-          <li>
-            <a href="#org-roam">Org Roam</a>
-            <ul>
-              <li>
-                <a href="#configuration">Configuration</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#org-caldav">Org Caldav</a>
-          </li>
-          <li>
-            <a href="#org-journal">Org journal</a>
-          </li>
-          <li>
-            <a href="#misc">Misc</a>
-            <ul>
-              <li>
-                <a href="#timestamp-on-save">Timestamp on save</a>
-              </li>
-              <li>
-                <a href="#make-markdown-mode-variable-width">Make markdown mode variable width</a>
-              </li>
-              <li>
-                <a href="#use-return-to-follow-links-in-org-mode">Use return to follow links in org-mode</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
       </div>
-      <p>This is my org-mode configuration that you can <a href="https://github.com/hugcis/dotfiles/blob/master/.doom.d/org-config.org">download as an org file</a>. You will find the rest of my dotfiles (including my full Doom Emacs configuration) on <a href="https://github.com/hugcis/dotfiles">Github</a>.</p>
-      <p>If you want to use this file for configuration, open it in Emacs and run <code>org-babel-tangle</code>, or <code>C-c C-v t</code> (you need to have org-mode and org-babel installed).</p>
-      <h2 id="setting-up-todo-keywords">Setting up “TODO” keywords</h2>
-      <p>Those keywords are from <a href="http://doc.norang.ca/org-mode.html">“Organize your life in plain text!”</a>. There are three “main” keywords and a <code>WAITING</code>, <code>HOLD</code> and <code>CANCELLED</code> keyword that each require a note for justifying moving to these states.</p>
-      <div class="highlight">
-        <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#b58900">setq</span> <span style="color:#268bd2">org-todo-keywords</span>
+    </nav>
+  </header>
+  <main class="content h-card container mt-2 m-auto leading-loose md:px-0 px-2" role="main">
+    <h1>Org-mode configuration</h1>
+    <div class="ox-hugo-toc toc">
+      <div class="heading">
+        Table of Contents
+      </div>
+      <ul>
+        <li>
+          <a href="#setting-up-todo-keywords">Setting up “TODO” keywords</a>
+          <ul>
+            <li>
+              <a href="#todo-faces-and-export-settings">“TODO” faces and export settings</a>
+            </li>
+            <li>
+              <a href="#org-todo-bullets">Org “TODO” bullets</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#general-style">General style</a>
+          <ul>
+            <li>
+              <a href="#proportional-width">Proportional width</a>
+            </li>
+            <li>
+              <a href="#hide-face-characters">Hide face characters</a>
+            </li>
+            <li>
+              <a href="#faces-setup">Faces setup</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#org-agenda">Org agenda</a>
+          <ul>
+            <li>
+              <a href="#agenda-style">Agenda style</a>
+            </li>
+            <li>
+              <a href="#super-agenda">Super agenda</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#org-clock">Org clock</a>
+        </li>
+        <li>
+          <a href="#org-custom-commands">Org custom commands</a>
+          <ul>
+            <li>
+              <a href="#close-journal-on-exit">Close journal on exit</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#org-ref-and-bibtex">Org Ref and Bibtex</a>
+        </li>
+        <li>
+          <a href="#org-capture">Org capture</a>
+        </li>
+        <li>
+          <a href="#org-refile">Org Refile</a>
+        </li>
+        <li>
+          <a href="#org-roam">Org Roam</a>
+          <ul>
+            <li>
+              <a href="#configuration">Configuration</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#org-caldav">Org Caldav</a>
+        </li>
+        <li>
+          <a href="#org-journal">Org journal</a>
+        </li>
+        <li>
+          <a href="#misc">Misc</a>
+          <ul>
+            <li>
+              <a href="#timestamp-on-save">Timestamp on save</a>
+            </li>
+            <li>
+              <a href="#make-markdown-mode-variable-width">Make markdown mode variable width</a>
+            </li>
+            <li>
+              <a href="#use-return-to-follow-links-in-org-mode">Use return to follow links in org-mode</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <p>This is my org-mode configuration that you can <a href="https://github.com/hugcis/dotfiles/blob/master/.doom.d/org-config.org">download as an org file</a>. You will find the rest of my dotfiles (including my full Doom Emacs configuration) on <a href="https://github.com/hugcis/dotfiles">Github</a>.</p>
+    <p>If you want to use this file for configuration, open it in Emacs and run <code>org-babel-tangle</code>, or <code>C-c C-v t</code> (you need to have org-mode and org-babel installed).</p>
+    <h2 id="setting-up-todo-keywords">Setting up “TODO” keywords</h2>
+    <p>Those keywords are from <a href="http://doc.norang.ca/org-mode.html">“Organize your life in plain text!”</a>. There are three “main” keywords and a <code>WAITING</code>, <code>HOLD</code> and <code>CANCELLED</code> keyword that each require a note for justifying moving to these states.</p>
+    <div class="highlight">
+      <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#b58900">setq</span> <span style="color:#268bd2">org-todo-keywords</span>
 </span></span><span style="display:flex"><span>    (<span style="color:#b58900">quote</span> ((<span style="color:#268bd2">sequence</span> <span style="color:#2aa198">"TODO(t)"</span> <span style="color:#2aa198">"NEXT(n)"</span> <span style="color:#2aa198">"|"</span> <span style="color:#2aa198">"DONE(d)"</span>)
 </span></span><span style="display:flex"><span>            (<span style="color:#268bd2">sequence</span> <span style="color:#2aa198">"WAITING(w@/!)"</span> <span style="color:#2aa198">"HOLD(h@/!)"</span> <span style="color:#2aa198">"|"</span> <span style="color:#2aa198">"CANCELLED(c@/!)"</span>))))
 </span></span></code></pre>
-      </div>
-      <p>This is so I cannot set a headline to <code>DONE</code> if children aren’t <code>DONE</code>.</p>
-      <div class="highlight">
-        <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#b58900">setq-default</span> <span style="color:#268bd2">org-enforce-todo-dependencies</span> <span style="color:#cb4b16">t</span>)
+    </div>
+    <p>This is so I cannot set a headline to <code>DONE</code> if children aren’t <code>DONE</code>.</p>
+    <div class="highlight">
+      <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#b58900">setq-default</span> <span style="color:#268bd2">org-enforce-todo-dependencies</span> <span style="color:#cb4b16">t</span>)
 </span></span></code></pre>
-      </div>
-      <h3 id="todo-faces-and-export-settings">“TODO” faces and export settings</h3>
-      <p>This sets the colors of keywords. Not that important because I also hide them with <code>org-superstar</code>. The keywords are still shown when placing the cursor on them.</p>
-      <div class="highlight">
-        <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#b58900">setq</span> <span style="color:#268bd2">org-todo-keyword-faces</span>
+    </div>
+    <h3 id="todo-faces-and-export-settings">“TODO” faces and export settings</h3>
+    <p>This sets the colors of keywords. Not that important because I also hide them with <code>org-superstar</code>. The keywords are still shown when placing the cursor on them.</p>
+    <div class="highlight">
+      <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#b58900">setq</span> <span style="color:#268bd2">org-todo-keyword-faces</span>
 </span></span><span style="display:flex"><span>    (<span style="color:#b58900">quote</span> ((<span style="color:#2aa198">"TODO"</span> <span style="color:#b58900">:foreground</span> <span style="color:#2aa198">"red"</span> <span style="color:#b58900">:weight</span> <span style="color:#268bd2">bold</span>)
 </span></span><span style="display:flex"><span>            (<span style="color:#2aa198">"NEXT"</span> <span style="color:#b58900">:foreground</span> <span style="color:#2aa198">"blue"</span> <span style="color:#b58900">:weight</span> <span style="color:#268bd2">bold</span>)
 </span></span><span style="display:flex"><span>            (<span style="color:#2aa198">"DONE"</span> <span style="color:#b58900">:foreground</span> <span style="color:#2aa198">"forest green"</span> <span style="color:#b58900">:weight</span> <span style="color:#268bd2">bold</span>)
@@ -183,11 +182,11 @@
 </span></span><span style="display:flex"><span><span style="color:#586e75">;; I don't wan't the keywords in my exports by default</span>
 </span></span><span style="display:flex"><span>(<span style="color:#b58900">setq-default</span> <span style="color:#268bd2">org-export-with-todo-keywords</span> <span style="color:#cb4b16">nil</span>)
 </span></span></code></pre>
-      </div>
-      <h3 id="org-todo-bullets">Org “TODO” bullets</h3>
-      <p>I use <a href="https://github.com/integral-dw/org-superstar-mode">org-superstar</a> to remove the keywords from my org files and replace them with nice icons. This also hides the stars at the beginning of headlines. Different headline levels are recognized with the font-size, formatting and color. This is defined later.</p>
-      <div class="highlight">
-        <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#b58900">with-eval-after-load</span> <span style="color:#2aa198">'org-superstar</span>
+    </div>
+    <h3 id="org-todo-bullets">Org “TODO” bullets</h3>
+    <p>I use <a href="https://github.com/integral-dw/org-superstar-mode">org-superstar</a> to remove the keywords from my org files and replace them with nice icons. This also hides the stars at the beginning of headlines. Different headline levels are recognized with the font-size, formatting and color. This is defined later.</p>
+    <div class="highlight">
+      <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#b58900">with-eval-after-load</span> <span style="color:#2aa198">'org-superstar</span>
 </span></span><span style="display:flex"><span>  (<span style="color:#b58900">setq</span> <span style="color:#268bd2">org-superstar-item-bullet-alist</span>
 </span></span><span style="display:flex"><span>        <span style="color:#719e07">'</span>((<span style="color:#2aa198">?*</span> <span style="color:#719e07">.</span> <span style="color:#2aa198">?•</span>)
 </span></span><span style="display:flex"><span>          (<span style="color:#2aa198">?+</span> <span style="color:#719e07">.</span> <span style="color:#2aa198">?➤</span>)
@@ -207,14 +206,14 @@
 </span></span><span style="display:flex"><span>  (<span style="color:#268bd2">org-superstar-restart</span>))
 </span></span><span style="display:flex"><span>(<span style="color:#b58900">setq</span> <span style="color:#268bd2">org-ellipsis</span> <span style="color:#2aa198">" ▼ "</span>)
 </span></span></code></pre>
-      </div>
-      <p>This results in the following appearance for different keywords: <img src="/ox-hugo/screen_org.jpg" alt=""></p>
-      <h2 id="general-style">General style</h2>
-      <p>This section covers the general look and feel of my org files.</p>
-      <h3 id="proportional-width">Proportional width</h3>
-      <p>I use a function that I add as a hook to all the files I want to automatically set to variable width (text-like font by opposition with programming fonts). You need to have the font installed for this to work.</p>
-      <div class="highlight">
-        <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#b58900">defun</span> <span style="color:#268bd2">my/buffer-face-mode-variable</span> ()
+    </div>
+    <p>This results in the following appearance for different keywords: <img src="/ox-hugo/screen_org.jpg" alt=""></p>
+    <h2 id="general-style">General style</h2>
+    <p>This section covers the general look and feel of my org files.</p>
+    <h3 id="proportional-width">Proportional width</h3>
+    <p>I use a function that I add as a hook to all the files I want to automatically set to variable width (text-like font by opposition with programming fonts). You need to have the font installed for this to work.</p>
+    <div class="highlight">
+      <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#b58900">defun</span> <span style="color:#268bd2">my/buffer-face-mode-variable</span> ()
 </span></span><span style="display:flex"><span>  <span style="color:#2aa198">"Set font to a variable width (proportional) fonts in current buffer"</span>
 </span></span><span style="display:flex"><span>  (<span style="color:#b58900">interactive</span>)
 </span></span><span style="display:flex"><span>  (<span style="color:#b58900">setq</span> <span style="color:#268bd2">buffer-face-mode-face</span> <span style="color:#719e07">'</span>(<span style="color:#b58900">:family</span> <span style="color:#2aa198">"Roboto Slab"</span>
@@ -222,18 +221,18 @@
 </span></span><span style="display:flex"><span>                                <span style="color:#b58900">:width</span> <span style="color:#268bd2">normal</span>))
 </span></span><span style="display:flex"><span>  (<span style="color:#268bd2">buffer-face-mode</span>))
 </span></span></code></pre>
-      </div>
-      <h3 id="hide-face-characters">Hide face characters</h3>
-      <p>Hide <code>*</code>, <code>~</code> and <code>/</code> in org text.</p>
-      <div class="highlight">
-        <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#b58900">setq</span> <span style="color:#268bd2">org-hide-emphasis-markers</span> <span style="color:#cb4b16">t</span>)
+    </div>
+    <h3 id="hide-face-characters">Hide face characters</h3>
+    <p>Hide <code>*</code>, <code>~</code> and <code>/</code> in org text.</p>
+    <div class="highlight">
+      <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#b58900">setq</span> <span style="color:#268bd2">org-hide-emphasis-markers</span> <span style="color:#cb4b16">t</span>)
 </span></span></code></pre>
-      </div>
-      <h3 id="faces-setup">Faces setup</h3>
-      <p>We define a few functions that will be run when we open an org file to style it.</p>
-      <p>The first one sets the text to be variable pitch but revert it back to fixed-pitch for code block, properties, etc.</p>
-      <div class="highlight">
-        <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#b58900">defun</span> <span style="color:#268bd2">my/set-general-faces-org</span> ()
+    </div>
+    <h3 id="faces-setup">Faces setup</h3>
+    <p>We define a few functions that will be run when we open an org file to style it.</p>
+    <p>The first one sets the text to be variable pitch but revert it back to fixed-pitch for code block, properties, etc.</p>
+    <div class="highlight">
+      <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#b58900">defun</span> <span style="color:#268bd2">my/set-general-faces-org</span> ()
 </span></span><span style="display:flex"><span>  (<span style="color:#268bd2">my/buffer-face-mode-variable</span>)
 </span></span><span style="display:flex"><span>  (<span style="color:#b58900">setq</span> <span style="color:#268bd2">line-spacing</span> <span style="color:#2aa198">0.1</span>
 </span></span><span style="display:flex"><span>        <span style="color:#268bd2">org-pretty-entities</span> <span style="color:#cb4b16">t</span>
@@ -265,10 +264,10 @@
 </span></span><span style="display:flex"><span>         <span style="color:#2aa198">'org-property-value</span>
 </span></span><span style="display:flex"><span>         )))
 </span></span></code></pre>
-      </div>
-      <p>This function set the colors and size of headlines.</p>
-      <div class="highlight">
-        <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#b58900">defun</span> <span style="color:#268bd2">my/set-specific-faces-org</span> ()
+    </div>
+    <p>This function set the colors and size of headlines.</p>
+    <div class="highlight">
+      <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#b58900">defun</span> <span style="color:#268bd2">my/set-specific-faces-org</span> ()
 </span></span><span style="display:flex"><span>  (<span style="color:#268bd2">set-face-attribute</span> <span style="color:#2aa198">'org-code</span> <span style="color:#cb4b16">nil</span>
 </span></span><span style="display:flex"><span>                      <span style="color:#b58900">:inherit</span> <span style="color:#719e07">'</span>(<span style="color:#268bd2">shadow</span> <span style="color:#268bd2">fixed-pitch</span>))
 </span></span><span style="display:flex"><span>  <span style="color:#586e75">;; Without indentation the headlines need to be different to be visible</span>
@@ -299,10 +298,10 @@
 </span></span><span style="display:flex"><span>  (<span style="color:#268bd2">set-face-attribute</span> <span style="color:#2aa198">'variable-pitch</span> <span style="color:#cb4b16">nil</span>
 </span></span><span style="display:flex"><span>                      <span style="color:#b58900">:family</span> <span style="color:#2aa198">"Roboto Slab"</span> <span style="color:#b58900">:height</span> <span style="color:#2aa198">1.2</span>))
 </span></span></code></pre>
-      </div>
-      <p>This function will hide some TODO keywords and other keywords and replace them with special symbols.</p>
-      <div class="highlight">
-        <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#b58900">defun</span> <span style="color:#268bd2">my/set-keyword-faces-org</span> ()
+    </div>
+    <p>This function will hide some TODO keywords and other keywords and replace them with special symbols.</p>
+    <div class="highlight">
+      <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#b58900">defun</span> <span style="color:#268bd2">my/set-keyword-faces-org</span> ()
 </span></span><span style="display:flex"><span>  (<span style="color:#268bd2">mapc</span> (<span style="color:#b58900">lambda</span> (<span style="color:#268bd2">pair</span>) (<span style="color:#b58900">push</span> <span style="color:#268bd2">pair</span> <span style="color:#268bd2">prettify-symbols-alist</span>))
 </span></span><span style="display:flex"><span>        <span style="color:#719e07">'</span>(<span style="color:#586e75">;; Syntax</span>
 </span></span><span style="display:flex"><span>          (<span style="color:#2aa198">"TODO"</span> <span style="color:#719e07">.</span>     <span style="color:#2aa198">""</span>)
@@ -324,10 +323,10 @@
 </span></span><span style="display:flex"><span>  )
 </span></span><span style="display:flex"><span>(<span style="color:#268bd2">add-hook</span> <span style="color:#2aa198">'org-mode-hook</span> <span style="color:#2aa198">'my/style-org</span>)
 </span></span></code></pre>
-      </div>
-      <h2 id="org-agenda">Org agenda</h2>
-      <div class="highlight">
-        <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#b58900">setq</span> <span style="color:#268bd2">org-agenda-skip-scheduled-if-done</span> <span style="color:#cb4b16">t</span>
+    </div>
+    <h2 id="org-agenda">Org agenda</h2>
+    <div class="highlight">
+      <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#b58900">setq</span> <span style="color:#268bd2">org-agenda-skip-scheduled-if-done</span> <span style="color:#cb4b16">t</span>
 </span></span><span style="display:flex"><span>      <span style="color:#268bd2">org-agenda-skip-deadline-if-done</span> <span style="color:#cb4b16">t</span>
 </span></span><span style="display:flex"><span>      <span style="color:#268bd2">org-agenda-include-deadlines</span> <span style="color:#cb4b16">t</span>
 </span></span><span style="display:flex"><span>      <span style="color:#268bd2">org-agenda-block-separator</span> <span style="color:#2aa198">#x2501</span>
@@ -341,10 +340,10 @@
 </span></span><span style="display:flex"><span>      <span style="color:#719e07">'</span>((<span style="color:#2aa198">1.0001</span> <span style="color:#719e07">.</span> <span style="color:#268bd2">org-warning</span>)              <span style="color:#586e75">; due yesterday or before</span>
 </span></span><span style="display:flex"><span>        (<span style="color:#2aa198">0.0</span>    <span style="color:#719e07">.</span> <span style="color:#268bd2">org-upcoming-deadline</span>)))  <span style="color:#586e75">; due today or later</span>
 </span></span></code></pre>
-      </div>
-      <p>Most of this was copied from <a href="https://github.com/bzg/dotemacs/blob/master/emacs.org">bzg’s dotfiles</a>.</p>
-      <div class="highlight">
-        <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#b58900">setq-default</span> <span style="color:#268bd2">org-icalendar-include-todo</span> <span style="color:#cb4b16">t</span>)
+    </div>
+    <p>Most of this was copied from <a href="https://github.com/bzg/dotemacs/blob/master/emacs.org">bzg’s dotfiles</a>.</p>
+    <div class="highlight">
+      <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#b58900">setq-default</span> <span style="color:#268bd2">org-icalendar-include-todo</span> <span style="color:#cb4b16">t</span>)
 </span></span><span style="display:flex"><span>(<span style="color:#b58900">setq</span> <span style="color:#268bd2">org-combined-agenda-icalendar-file</span> <span style="color:#2aa198">"~/org/calendar.ics"</span>)
 </span></span><span style="display:flex"><span>(<span style="color:#b58900">setq</span> <span style="color:#268bd2">org-icalendar-combined-name</span> <span style="color:#2aa198">"Hugo Org"</span>)
 </span></span><span style="display:flex"><span>(<span style="color:#b58900">setq</span> <span style="color:#268bd2">org-icalendar-use-scheduled</span> <span style="color:#719e07">'</span>(<span style="color:#268bd2">todo-start</span> <span style="color:#268bd2">event-if-todo</span> <span style="color:#268bd2">event-if-not-todo</span>))
@@ -393,11 +392,11 @@
 </span></span><span style="display:flex"><span>      <span style="color:#268bd2">calendar-week-start-day</span> <span style="color:#2aa198">1</span>
 </span></span><span style="display:flex"><span>      <span style="color:#268bd2">calendar-mark-diary-entries-flag</span> <span style="color:#cb4b16">nil</span>)
 </span></span></code></pre>
-      </div>
-      <h3 id="agenda-style">Agenda style</h3>
-      <p>Those settings adjust the look and feel of the org-agenda.</p>
-      <div class="highlight">
-        <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#b58900">defun</span> <span style="color:#268bd2">my/style-org-agenda</span>()
+    </div>
+    <h3 id="agenda-style">Agenda style</h3>
+    <p>Those settings adjust the look and feel of the org-agenda.</p>
+    <div class="highlight">
+      <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#b58900">defun</span> <span style="color:#268bd2">my/style-org-agenda</span>()
 </span></span><span style="display:flex"><span>  (<span style="color:#268bd2">my/buffer-face-mode-variable</span>)
 </span></span><span style="display:flex"><span>  (<span style="color:#268bd2">set-face-attribute</span> <span style="color:#2aa198">'org-agenda-date</span> <span style="color:#cb4b16">nil</span> <span style="color:#b58900">:height</span> <span style="color:#2aa198">1.1</span>)
 </span></span><span style="display:flex"><span>  (<span style="color:#268bd2">set-face-attribute</span> <span style="color:#2aa198">'org-agenda-date-today</span> <span style="color:#cb4b16">nil</span> <span style="color:#b58900">:height</span> <span style="color:#2aa198">1.1</span> <span style="color:#b58900">:slant</span> <span style="color:#2aa198">'italic</span>)
@@ -425,11 +424,11 @@
 </span></span><span style="display:flex"><span>        (<span style="color:#2aa198">"Calendar"</span> <span style="color:#719e07">,</span>(<span style="color:#268bd2">list</span> (<span style="color:#268bd2">all-the-icons-faicon</span> <span style="color:#2aa198">"calendar"</span>)) <span style="color:#cb4b16">nil</span> <span style="color:#cb4b16">nil</span> <span style="color:#b58900">:ascent</span> <span style="color:#268bd2">center</span>)
 </span></span><span style="display:flex"><span>        (<span style="color:#2aa198">"Reading"</span> <span style="color:#719e07">,</span>(<span style="color:#268bd2">list</span> (<span style="color:#268bd2">all-the-icons-faicon</span> <span style="color:#2aa198">"book"</span>)) <span style="color:#cb4b16">nil</span> <span style="color:#cb4b16">nil</span> <span style="color:#b58900">:ascent</span> <span style="color:#268bd2">center</span>)))
 </span></span></code></pre>
-      </div>
-      <h3 id="super-agenda">Super agenda</h3>
-      <p><a href="https://github.com/alphapapa/org-super-agenda">Org super agenda</a> is a powerful package for easily filtering and grouping agenda items in your views.</p>
-      <div class="highlight">
-        <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#b58900">setq</span> <span style="color:#268bd2">org-agenda-custom-commands</span>
+    </div>
+    <h3 id="super-agenda">Super agenda</h3>
+    <p><a href="https://github.com/alphapapa/org-super-agenda">Org super agenda</a> is a powerful package for easily filtering and grouping agenda items in your views.</p>
+    <div class="highlight">
+      <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#b58900">setq</span> <span style="color:#268bd2">org-agenda-custom-commands</span>
 </span></span><span style="display:flex"><span>      <span style="color:#719e07">'</span>((<span style="color:#2aa198">"z"</span> <span style="color:#2aa198">"Hugo view"</span>
 </span></span><span style="display:flex"><span>         ((<span style="color:#268bd2">agenda</span> <span style="color:#2aa198">""</span> ((<span style="color:#268bd2">org-agenda-span</span> <span style="color:#2aa198">'day</span>)
 </span></span><span style="display:flex"><span>                      (<span style="color:#268bd2">org-super-agenda-groups</span>
@@ -469,10 +468,10 @@
 </span></span><span style="display:flex"><span>                           <span style="color:#b58900">:order</span> <span style="color:#2aa198">10</span>)))))))))
 </span></span><span style="display:flex"><span>(<span style="color:#268bd2">add-hook</span> <span style="color:#2aa198">'org-agenda-mode-hook</span> <span style="color:#2aa198">'org-super-agenda-mode</span>)
 </span></span></code></pre>
-      </div>
-      <h2 id="org-clock">Org clock</h2>
-      <div class="highlight">
-        <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span><span style="color:#586e75">;; Resume clocking task when emacs is restarted</span>
+    </div>
+    <h2 id="org-clock">Org clock</h2>
+    <div class="highlight">
+      <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span><span style="color:#586e75">;; Resume clocking task when emacs is restarted</span>
 </span></span><span style="display:flex"><span>(<span style="color:#268bd2">org-clock-persistence-insinuate</span>)
 </span></span><span style="display:flex"><span><span style="color:#586e75">;; Show lot of clocking history so it's easy to pick items off the C-F11 list</span>
 </span></span><span style="display:flex"><span>(<span style="color:#b58900">setq</span> <span style="color:#268bd2">org-clock-history-length</span> <span style="color:#2aa198">23</span>)
@@ -487,11 +486,11 @@
 </span></span><span style="display:flex"><span><span style="color:#586e75">;; Include current clocking task in clock reports</span>
 </span></span><span style="display:flex"><span>(<span style="color:#b58900">setq</span> <span style="color:#268bd2">org-clock-report-include-clocking-task</span> <span style="color:#cb4b16">t</span>)
 </span></span></code></pre>
-      </div>
-      <h2 id="org-custom-commands">Org custom commands</h2>
-      <p>Define some keybindings and options in org-mode.</p>
-      <div class="highlight">
-        <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#268bd2">add-hook</span> <span style="color:#2aa198">'org-mode-hook</span> <span style="color:#2aa198">'turn-on-auto-fill</span>)
+    </div>
+    <h2 id="org-custom-commands">Org custom commands</h2>
+    <p>Define some keybindings and options in org-mode.</p>
+    <div class="highlight">
+      <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#268bd2">add-hook</span> <span style="color:#2aa198">'org-mode-hook</span> <span style="color:#2aa198">'turn-on-auto-fill</span>)
 </span></span><span style="display:flex"><span>(<span style="color:#268bd2">add-hook</span> <span style="color:#2aa198">'org-mode-hook</span>
 </span></span><span style="display:flex"><span>          (<span style="color:#b58900">lambda</span> ()
 </span></span><span style="display:flex"><span>            (<span style="color:#b58900">setq</span> <span style="color:#268bd2">fill-column</span> <span style="color:#2aa198">80</span>)
@@ -503,11 +502,11 @@
 </span></span><span style="display:flex"><span>            (<span style="color:#268bd2">define-key</span> <span style="color:#268bd2">org-mode-map</span> (<span style="color:#268bd2">kbd</span> <span style="color:#2aa198">"C-c \" \""</span>)
 </span></span><span style="display:flex"><span>              (<span style="color:#b58900">lambda</span> () (<span style="color:#b58900">interactive</span>) (<span style="color:#268bd2">org-zotxt-insert-reference-link</span> <span style="color:#719e07">'</span>(<span style="color:#2aa198">4</span>))))))
 </span></span></code></pre>
-      </div>
-      <h3 id="close-journal-on-exit">Close journal on exit</h3>
-      <p>A small function to make journaling faster by closing the buffer when I save it.</p>
-      <div class="highlight">
-        <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#b58900">defun</span> <span style="color:#268bd2">org-journal-save-entry-and-exit</span>()
+    </div>
+    <h3 id="close-journal-on-exit">Close journal on exit</h3>
+    <p>A small function to make journaling faster by closing the buffer when I save it.</p>
+    <div class="highlight">
+      <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#b58900">defun</span> <span style="color:#268bd2">org-journal-save-entry-and-exit</span>()
 </span></span><span style="display:flex"><span>  <span style="color:#2aa198">"Simple convenience function.
 </span></span></span><span style="display:flex"><span><span style="color:#2aa198">    Saves the buffer of the current day's entry and kills the window
 </span></span></span><span style="display:flex"><span><span style="color:#2aa198">    Similar to org-capture like behavior"</span>
@@ -520,10 +519,10 @@
 </span></span><span style="display:flex"><span>            (<span style="color:#268bd2">define-key</span> <span style="color:#268bd2">org-journal-mode-map</span>
 </span></span><span style="display:flex"><span>              (<span style="color:#268bd2">kbd</span> <span style="color:#2aa198">"C-x C-s"</span>) <span style="color:#2aa198">'org-journal-save-entry-and-exit</span>)))
 </span></span></code></pre>
-      </div>
-      <h2 id="org-ref-and-bibtex">Org Ref and Bibtex</h2>
-      <div class="highlight">
-        <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#b58900">setq</span> <span style="color:#268bd2">org-cite-global-bibliography</span> <span style="color:#719e07">'</span>(<span style="color:#2aa198">"~/Papers/library.json"</span>))
+    </div>
+    <h2 id="org-ref-and-bibtex">Org Ref and Bibtex</h2>
+    <div class="highlight">
+      <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#b58900">setq</span> <span style="color:#268bd2">org-cite-global-bibliography</span> <span style="color:#719e07">'</span>(<span style="color:#2aa198">"~/Papers/library.json"</span>))
 </span></span><span style="display:flex"><span>(<span style="color:#b58900">require</span> <span style="color:#2aa198">'oc-csl</span>)
 </span></span><span style="display:flex"><span>(<span style="color:#b58900">with-eval-after-load</span> <span style="color:#2aa198">'org-ref</span>
 </span></span><span style="display:flex"><span>  (<span style="color:#b58900">setq</span> <span style="color:#268bd2">bibtex-completion-bibliography</span> <span style="color:#719e07">'</span>(<span style="color:#2aa198">"~/Papers/library.json"</span>)
@@ -561,11 +560,11 @@
 </span></span></span><span style="display:flex"><span><span style="color:#2aa198">  \n\n* TODO Summary\n* TODO Comments\n\n
 </span></span></span><span style="display:flex"><span><span style="color:#2aa198">  bibliography:~/Papers/library.json"</span>)
 </span></span></code></pre>
-      </div>
-      <h2 id="org-capture">Org capture</h2>
-      <p>I use org captures mostly for quickly creating new events and event-related TODOs.</p>
-      <div class="highlight">
-        <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#b58900">setq</span> <span style="color:#268bd2">org-capture-templates</span>
+    </div>
+    <h2 id="org-capture">Org capture</h2>
+    <p>I use org captures mostly for quickly creating new events and event-related TODOs.</p>
+    <div class="highlight">
+      <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#b58900">setq</span> <span style="color:#268bd2">org-capture-templates</span>
 </span></span><span style="display:flex"><span>      <span style="color:#719e07">'</span>((<span style="color:#2aa198">"n"</span> <span style="color:#2aa198">"Notes"</span> <span style="color:#268bd2">entry</span>
 </span></span><span style="display:flex"><span>         (<span style="color:#268bd2">file</span> <span style="color:#2aa198">"~/org/inbox.org"</span>) <span style="color:#2aa198">"* %^{Description} %^g\n Added: %U\n%?"</span>)
 </span></span><span style="display:flex"><span>        (<span style="color:#2aa198">"m"</span> <span style="color:#2aa198">"Meeting notes"</span> <span style="color:#268bd2">entry</span>
@@ -577,20 +576,20 @@
 </span></span><span style="display:flex"><span>        (<span style="color:#2aa198">"w"</span> <span style="color:#2aa198">"Work TODO"</span> <span style="color:#268bd2">entry</span>
 </span></span><span style="display:flex"><span>         (<span style="color:#268bd2">file</span> <span style="color:#2aa198">"~/org/work.org"</span>) <span style="color:#2aa198">"* TODO %^{Title}"</span>)))
 </span></span></code></pre>
-      </div>
-      <h2 id="org-refile">Org Refile</h2>
-      <div class="highlight">
-        <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#b58900">setq</span> <span style="color:#268bd2">org-refile-targets</span> <span style="color:#719e07">'</span>((<span style="color:#268bd2">org-agenda-files</span> <span style="color:#719e07">.</span> (<span style="color:#b58900">:maxlevel</span> <span style="color:#719e07">.</span> <span style="color:#2aa198">6</span>))))
+    </div>
+    <h2 id="org-refile">Org Refile</h2>
+    <div class="highlight">
+      <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#b58900">setq</span> <span style="color:#268bd2">org-refile-targets</span> <span style="color:#719e07">'</span>((<span style="color:#268bd2">org-agenda-files</span> <span style="color:#719e07">.</span> (<span style="color:#b58900">:maxlevel</span> <span style="color:#719e07">.</span> <span style="color:#2aa198">6</span>))))
 </span></span><span style="display:flex"><span>(<span style="color:#b58900">setq</span> <span style="color:#268bd2">org-refile-use-outline-path</span> <span style="color:#2aa198">'file</span>)
 </span></span><span style="display:flex"><span>(<span style="color:#b58900">setq</span> <span style="color:#268bd2">org-refile-allow-creating-parent-nodes</span> <span style="color:#2aa198">'confirm</span>)
 </span></span></code></pre>
-      </div>
-      <h2 id="org-roam">Org Roam</h2>
-      <p>I use <a href="https://github.com/org-roam/org-roam">org-roam</a> a lot to take notes and link between them. A large portion of this configuration is heavily borrowed from <a href="https://github.com/jethrokuan/dots">jethrokuan’s dot files</a>.</p>
-      <h3 id="configuration">Configuration</h3>
-      <p>You’ll find the exported notes on <a href="https://hugocisneros.com/notes/">my notes page</a>.</p>
-      <div class="highlight">
-        <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span><span style="color:#586e75">;; V2 displays a warning message</span>
+    </div>
+    <h2 id="org-roam">Org Roam</h2>
+    <p>I use <a href="https://github.com/org-roam/org-roam">org-roam</a> a lot to take notes and link between them. A large portion of this configuration is heavily borrowed from <a href="https://github.com/jethrokuan/dots">jethrokuan’s dot files</a>.</p>
+    <h3 id="configuration">Configuration</h3>
+    <p>You’ll find the exported notes on <a href="https://hugocisneros.com/notes/">my notes page</a>.</p>
+    <div class="highlight">
+      <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span><span style="color:#586e75">;; V2 displays a warning message</span>
 </span></span><span style="display:flex"><span>(<span style="color:#b58900">setq</span> <span style="color:#268bd2">org-roam-v2-ack</span> <span style="color:#cb4b16">t</span>)
 </span></span><span style="display:flex"><span>(<span style="color:#b58900">with-eval-after-load</span> <span style="color:#2aa198">'org-roam</span>
 </span></span><span style="display:flex"><span>  <span style="color:#586e75">;; Roam is always one level deep in my org-directory</span>
@@ -629,11 +628,11 @@
 </span></span><span style="display:flex"><span>  )
 </span></span><span style="display:flex"><span>(<span style="color:#b58900">setq</span> <span style="color:#268bd2">org-id-extra-files</span> (<span style="color:#268bd2">org-roam--list-files</span> <span style="color:#268bd2">org-roam-directory</span>))
 </span></span></code></pre>
-      </div>
-      <h2 id="org-caldav">Org Caldav</h2>
-      <p>I use this function to sync my calendar with a remote calendar on a server running Nextcloud with the <a href="https://github.com/dengste/org-caldav">org-caldav</a> package. This should also work with Google calendar. It allows me to get my org-mode calendar on all my devices and get notifications of upcoming events.</p>
-      <div class="highlight">
-        <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#b58900">defun</span> <span style="color:#268bd2">my/caldav-sync-perso</span> ()
+    </div>
+    <h2 id="org-caldav">Org Caldav</h2>
+    <p>I use this function to sync my calendar with a remote calendar on a server running Nextcloud with the <a href="https://github.com/dengste/org-caldav">org-caldav</a> package. This should also work with Google calendar. It allows me to get my org-mode calendar on all my devices and get notifications of upcoming events.</p>
+    <div class="highlight">
+      <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#b58900">defun</span> <span style="color:#268bd2">my/caldav-sync-perso</span> ()
 </span></span><span style="display:flex"><span>  <span style="color:#2aa198">"Sync my local calendar in ~/org/calendar.org with my remote calendar"</span>
 </span></span><span style="display:flex"><span>  (<span style="color:#b58900">interactive</span>)
 </span></span><span style="display:flex"><span>  (<span style="color:#b58900">let</span> ((<span style="color:#268bd2">org-caldav-inbox</span> <span style="color:#2aa198">"~/org/cal_inbox.org"</span>)
@@ -642,45 +641,44 @@
 </span></span><span style="display:flex"><span>        (<span style="color:#268bd2">org-caldav-files</span> <span style="color:#719e07">'</span>(<span style="color:#2aa198">"~/org/calendar.org"</span>)))
 </span></span><span style="display:flex"><span>    (<span style="color:#268bd2">call-interactively</span> <span style="color:#2aa198">'org-caldav-sync</span>)))
 </span></span></code></pre>
-      </div>
-      <h2 id="org-journal">Org journal</h2>
-      <p><a href="https://github.com/bastibe/org-journal">Org journal</a> is a package to create and maintain a journal/diary within Emacs. Here I set some of the options: the base directory for the journal and GPG encryption of journal files (uses org-crypt).</p>
-      <div class="highlight">
-        <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#b58900">setq</span> <span style="color:#268bd2">org-journal-dir</span> <span style="color:#2aa198">"~/org/journal/"</span>)
+    </div>
+    <h2 id="org-journal">Org journal</h2>
+    <p><a href="https://github.com/bastibe/org-journal">Org journal</a> is a package to create and maintain a journal/diary within Emacs. Here I set some of the options: the base directory for the journal and GPG encryption of journal files (uses org-crypt).</p>
+    <div class="highlight">
+      <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#b58900">setq</span> <span style="color:#268bd2">org-journal-dir</span> <span style="color:#2aa198">"~/org/journal/"</span>)
 </span></span><span style="display:flex"><span>(<span style="color:#b58900">setq</span> <span style="color:#268bd2">org-journal-enable-encryption</span> <span style="color:#cb4b16">nil</span>)
 </span></span></code></pre>
-      </div>
-      <h2 id="misc">Misc</h2>
-      <h3 id="timestamp-on-save">Timestamp on save</h3>
-      <p>Org-roam notes are created with a <code>#+hugo_lastmod: Time-stamp: &lt;&gt;</code> line in the beginning. The hook below makes sure the current time is inserted between the brackets each time I save a file. This is useful to keep track of when I last edited a note.</p>
-      <div class="highlight">
-        <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#268bd2">add-hook</span> <span style="color:#2aa198">'before-save-hook</span> <span style="color:#2aa198">'time-stamp</span>)
+    </div>
+    <h2 id="misc">Misc</h2>
+    <h3 id="timestamp-on-save">Timestamp on save</h3>
+    <p>Org-roam notes are created with a <code>#+hugo_lastmod: Time-stamp: &lt;&gt;</code> line in the beginning. The hook below makes sure the current time is inserted between the brackets each time I save a file. This is useful to keep track of when I last edited a note.</p>
+    <div class="highlight">
+      <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#268bd2">add-hook</span> <span style="color:#2aa198">'before-save-hook</span> <span style="color:#2aa198">'time-stamp</span>)
 </span></span></code></pre>
-      </div>
-      <h3 id="make-markdown-mode-variable-width">Make markdown mode variable width</h3>
-      <p>This is not part of the org-mode configuration, but applies variable width mode to markdown files when I (rarely) edit one.</p>
-      <div class="highlight">
-        <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#268bd2">add-hook</span> <span style="color:#2aa198">'markdown-mode-hook</span> <span style="color:#2aa198">'my/buffer-face-mode-variable</span>)
+    </div>
+    <h3 id="make-markdown-mode-variable-width">Make markdown mode variable width</h3>
+    <p>This is not part of the org-mode configuration, but applies variable width mode to markdown files when I (rarely) edit one.</p>
+    <div class="highlight">
+      <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#268bd2">add-hook</span> <span style="color:#2aa198">'markdown-mode-hook</span> <span style="color:#2aa198">'my/buffer-face-mode-variable</span>)
 </span></span></code></pre>
-      </div>
-      <h3 id="use-return-to-follow-links-in-org-mode">Use return to follow links in org-mode</h3>
-      <div class="highlight">
-        <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#b58900">setq</span> <span style="color:#268bd2">org-return-follows-link</span> <span style="color:#cb4b16">t</span>)
+    </div>
+    <h3 id="use-return-to-follow-links-in-org-mode">Use return to follow links in org-mode</h3>
+    <div class="highlight">
+      <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#b58900">setq</span> <span style="color:#268bd2">org-return-follows-link</span> <span style="color:#cb4b16">t</span>)
 </span></span></code></pre>
-      </div>
-    </main>
-    <footer class="footer container h-10 text-center">
-      <ul>
-        <li class="inline-block list-none">
-          <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="/img/RSS.svg" alt="RSS feed icon"></a>
-        </li>
-        <li class="before:content-['•'] inline-block">
-          <a class="text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
-        </li>
-        <li class="before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block">© Hugo Cisneros 2022</li>
-      </ul>
-    </footer>
-  </div>
+    </div>
+  </main>
+  <footer class="footer container h-10 text-center">
+    <ul class="pl-0">
+      <li class="first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="https://hugocisneros.com/img/RSS.svg" alt="RSS feed icon"></a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="ml-2 text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block list-none"><span class="ml-2">© Hugo Cisneros 2022</span></li>
+    </ul>
+  </footer>
   <script data-goatcounter="https://stats.hugocisneros.com/count" async src="//stats.hugocisneros.com/count.js"></script>
 </body>
 </html>

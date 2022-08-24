@@ -28,119 +28,117 @@
   <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
   <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
   <script>
-  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode()
+  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
 </head>
 <body>
-  <div class="wrapper">
-    <header class="header">
-      <nav>
-        <div class="container flex flex-wrap justify-between items-center mx-auto">
-          <div class="nav-main my-2.5">
-            <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
-          </div><button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
-          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul class="grid grid-flow-col items-center justify-between text-lg my-2.5">
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
-              </li>
-              <li class="p-2.5 first:pl-0 list-none">
-                <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
-              </li>
-              <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="/img/dark_mode.svg"></button></li>
-            </ul>
-          </div>
+  <header class="md:px-0 px-2">
+    <nav>
+      <div class="container flex flex-wrap justify-between items-center mx-auto">
+        <div class="nav-main my-2.5">
+          <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
+        </div><button type="button" onclick="toggleMenu()" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul class="grid md:grid-flow-col items-center justify-between text-lg my-2.5">
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
+            </li>
+            <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="https://hugocisneros.com/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="https://hugocisneros.com/img/dark_mode.svg"></button></li>
+          </ul>
         </div>
-      </nav>
-    </header>
-    <main class="content h-card container mt-2 m-auto leading-loose" role="main">
-      <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-        <div class="bg-zinc-100 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
-          <h1 class="article-title p-name" itemprop="name">Article: What Is an Individual? Biology Seeks Clues in Information Theory.</h1>
-          <div class="article-content e-content p-name" itemprop="articleBody">
-            <dl>
-              <dt>tags</dt>
-              <dd>
-                <a href="/notes/life/">Life</a>
-              </dd>
-              <dt>resources</dt>
-              <dd>
-                (<a href="#krakauerInformationTheoryIndividuality2020"><cite itemprop="citation" itemscope itemid="doi:10.1007/s12064-020-00313-7">Krakauer et al. 2020</cite></a>)
-              </dd>
-              <dt>source</dt>
-              <dd>
-                <a href="https://www.quantamagazine.org/what-is-an-individual-biology-seeks-clues-in-information-theory-20200716/">Quanta Magazine</a>
-              </dd>
-            </dl>
-            <blockquote>
-              <p>“In a way, [biology] is a science of individuality,” said <a href="/notes/melanie_mitchell/">Melanie Mitchell</a>, a computer scientist at the Santa Fe Institute.</p>
-              <p>And yet, the notion of what it means to be an individual often gets glossed over. “So far we have a concept of ‘individual’ that’s very much like the concept of ‘pile,’” said Maxwell Ramstead, a postdoctoral researcher at McGill University. “If there’s a pile of sand, you intuitively know this is a pile of sand. But a pile is not a precisely defined thing. It’s not like after 13 grains, it moves from a collection to a pile.”</p>
-            </blockquote>
-            <p>We tend to see individuals as entities separated from an environment. However, this is far from the only possible definition.</p>
-            <blockquote>
-              <p>“I always say, if Darwin was a microbiologist, we’d have a very different theory of <a href="/notes/evolution/">evolution</a>,” said David Krakauer, an evolutionary theorist and president of the Santa Fe Institute. “You wouldn’t have started with the survival of the fittest organism. It would have been a very different premise.”</p>
-            </blockquote>
-            <p>A scientist from the <a href="/notes/santa_fe_institute/">Santa Fe Institute</a> name Jessica Flack has been working on another definition, based on temporal aspects of individuality instead of spatial aspects. In this definition, organisms aren’t fixed objects but processes or information flows.</p>
-            <blockquote>
-              <p>Krakauer and Flack, in collaboration with colleagues such as Nihat Ay of the Max Planck Institute for Mathematics in the Sciences, realized that they’d need to turn to information theory to formalize their principle of the individual “as kind of a verb.” To them, an individual was an aggregate that “preserved a measure of temporal integrity,” propagating a close-to-maximal amount of information forward in time.</p>
-            </blockquote>
-            <blockquote>
-              <p>Their formalism, […] is based on three axioms. One is that individuality can exist at any level of biological organization, from the subcellular to the social. A second is that individuality can be nested — one individual can exist inside another. The most novel (and perhaps most counterintuitive) axiom, though, is that individuality exists on a continuum, and entities can have quantifiable degrees of it.</p>
-            </blockquote>
-            <p>According to this new definition, there are three distinct types of individuality. The first one is</p>
-            <blockquote>
-              <p>Organismal individual, an entity that is shaped by environmental factors but is strongly self-organizing. Nearly all of the information that defines such an individual is internal and based on its own prior states. “This is a lens that, if you wore it, would allow you to see humans and mammals and birds,” Krakauer said.</p>
-            </blockquote>
-            <p>The second</p>
-            <blockquote>
-              <p>Colonial form, which involves a more complicated relationship between internal and external factors. Individuals in this category might include an ant colony or a spiderweb — distributed systems that are “partially scaffolded” by their environment but still maintain some structure on their own.</p>
-            </blockquote>
-            <p>The third</p>
-            <blockquote>
-              <p>Driven almost entirely by the environment. “If you remove the scaffolding, the [entity] would fall apart,” Krakauer said. It’s like a tornado, which dissipates under the wrong temperature and moisture conditions. The very first life to arise on Earth was probably like this, Krakauer added.</p>
-            </blockquote>
-            <p>This view of life, the authors argue, could reconcile the <a href="/notes/complex_systems/">complex systems</a> view of many systems (cities, networks, companies, colonies) and a non biological life interpretation.</p>
-            <p>These concepts of individuality can be very useful, to interpret individuality of molecules in a cell, of ecosystems, of our planet in the Solar system.</p>
-            <h2 id="bibliography">Bibliography</h2>
-            <ol class="biblio-list">
-              <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="krakauerInformationTheoryIndividuality2020" itemid="doi:10.1007/s12064-020-00313-7">
-                <span itemprop="author">David Krakauer, Nils Bertschinger, Eckehard Olbrich, Jessica C. Flack, Nihat Ay</span>. <time datetime="2020" itemprop="datePublished">June 1, 2020</time>. "<span itemprop="name">The Information Theory of Individuality</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Theory in Biosciences</i></span> 139 (2):209–23. <a itemprop="sameAs" href="https://doi.org/10.1007/s12064-020-00313-7">DOI</a>.&nbsp;<a href="/notes/krakauerinformationtheoryindividuality2020/">See notes</a>
-              </li>
-            </ol>
-          </div>
-          <div class="text-center" style="font-variant-caps:all-small-caps">
-            Last changed <a class="u-url" href="https://hugocisneros.com/notes/what_is_an_individual_biology_seeks_clues_in_information_theory/"><time itemprop="datePublished" class="dt-published" datetime="2020-08-24T09:17:00+0200">24/08/2020</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
-          </div>
+      </div>
+    </nav>
+  </header>
+  <main class="content h-card container mt-2 m-auto leading-loose md:px-0 px-2" role="main">
+    <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+      <div class="bg-zinc-100 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
+        <h1 class="article-title p-name" itemprop="name">Article: What Is an Individual? Biology Seeks Clues in Information Theory.</h1>
+        <div class="article-content e-content p-name" itemprop="articleBody">
+          <dl>
+            <dt>tags</dt>
+            <dd>
+              <a href="/notes/life/">Life</a>
+            </dd>
+            <dt>resources</dt>
+            <dd>
+              (<a href="#krakauerInformationTheoryIndividuality2020"><cite itemprop="citation" itemscope itemid="doi:10.1007/s12064-020-00313-7">Krakauer et al. 2020</cite></a>)
+            </dd>
+            <dt>source</dt>
+            <dd>
+              <a href="https://www.quantamagazine.org/what-is-an-individual-biology-seeks-clues-in-information-theory-20200716/">Quanta Magazine</a>
+            </dd>
+          </dl>
+          <blockquote>
+            <p>“In a way, [biology] is a science of individuality,” said <a href="/notes/melanie_mitchell/">Melanie Mitchell</a>, a computer scientist at the Santa Fe Institute.</p>
+            <p>And yet, the notion of what it means to be an individual often gets glossed over. “So far we have a concept of ‘individual’ that’s very much like the concept of ‘pile,’” said Maxwell Ramstead, a postdoctoral researcher at McGill University. “If there’s a pile of sand, you intuitively know this is a pile of sand. But a pile is not a precisely defined thing. It’s not like after 13 grains, it moves from a collection to a pile.”</p>
+          </blockquote>
+          <p>We tend to see individuals as entities separated from an environment. However, this is far from the only possible definition.</p>
+          <blockquote>
+            <p>“I always say, if Darwin was a microbiologist, we’d have a very different theory of <a href="/notes/evolution/">evolution</a>,” said David Krakauer, an evolutionary theorist and president of the Santa Fe Institute. “You wouldn’t have started with the survival of the fittest organism. It would have been a very different premise.”</p>
+          </blockquote>
+          <p>A scientist from the <a href="/notes/santa_fe_institute/">Santa Fe Institute</a> name Jessica Flack has been working on another definition, based on temporal aspects of individuality instead of spatial aspects. In this definition, organisms aren’t fixed objects but processes or information flows.</p>
+          <blockquote>
+            <p>Krakauer and Flack, in collaboration with colleagues such as Nihat Ay of the Max Planck Institute for Mathematics in the Sciences, realized that they’d need to turn to information theory to formalize their principle of the individual “as kind of a verb.” To them, an individual was an aggregate that “preserved a measure of temporal integrity,” propagating a close-to-maximal amount of information forward in time.</p>
+          </blockquote>
+          <blockquote>
+            <p>Their formalism, […] is based on three axioms. One is that individuality can exist at any level of biological organization, from the subcellular to the social. A second is that individuality can be nested — one individual can exist inside another. The most novel (and perhaps most counterintuitive) axiom, though, is that individuality exists on a continuum, and entities can have quantifiable degrees of it.</p>
+          </blockquote>
+          <p>According to this new definition, there are three distinct types of individuality. The first one is</p>
+          <blockquote>
+            <p>Organismal individual, an entity that is shaped by environmental factors but is strongly self-organizing. Nearly all of the information that defines such an individual is internal and based on its own prior states. “This is a lens that, if you wore it, would allow you to see humans and mammals and birds,” Krakauer said.</p>
+          </blockquote>
+          <p>The second</p>
+          <blockquote>
+            <p>Colonial form, which involves a more complicated relationship between internal and external factors. Individuals in this category might include an ant colony or a spiderweb — distributed systems that are “partially scaffolded” by their environment but still maintain some structure on their own.</p>
+          </blockquote>
+          <p>The third</p>
+          <blockquote>
+            <p>Driven almost entirely by the environment. “If you remove the scaffolding, the [entity] would fall apart,” Krakauer said. It’s like a tornado, which dissipates under the wrong temperature and moisture conditions. The very first life to arise on Earth was probably like this, Krakauer added.</p>
+          </blockquote>
+          <p>This view of life, the authors argue, could reconcile the <a href="/notes/complex_systems/">complex systems</a> view of many systems (cities, networks, companies, colonies) and a non biological life interpretation.</p>
+          <p>These concepts of individuality can be very useful, to interpret individuality of molecules in a cell, of ecosystems, of our planet in the Solar system.</p>
+          <h2 id="bibliography">Bibliography</h2>
+          <ol class="biblio-list">
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="krakauerInformationTheoryIndividuality2020" itemid="doi:10.1007/s12064-020-00313-7">
+              <span itemprop="author">David Krakauer, Nils Bertschinger, Eckehard Olbrich, Jessica C. Flack, Nihat Ay</span>. <time datetime="2020" itemprop="datePublished">June 1, 2020</time>. "<span itemprop="name">The Information Theory of Individuality</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Theory in Biosciences</i></span> 139 (2):209–23. <a itemprop="sameAs" href="https://doi.org/10.1007/s12064-020-00313-7">DOI</a>.&nbsp;<a href="/notes/krakauerinformationtheoryindividuality2020/">See notes</a>
+            </li>
+          </ol>
         </div>
-      </article>
-      <h3>Comments</h3>
-      <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
-      <section id="isso-thread"></section><br>
-      <a href="/notes#what_is_an_individual_biology_seeks_clues_in_information_theory"><b>← Back to Notes</b></a>
-      <hr>
-    </main>
-    <footer class="footer container h-10 text-center">
-      <ul>
-        <li class="inline-block list-none">
-          <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="/img/RSS.svg" alt="RSS feed icon"></a>
-        </li>
-        <li class="before:content-['•'] inline-block">
-          <a class="text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
-        </li>
-        <li class="before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block">© Hugo Cisneros 2022</li>
-      </ul>
-    </footer>
-  </div>
+        <div class="text-center" style="font-variant-caps:all-small-caps">
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/what_is_an_individual_biology_seeks_clues_in_information_theory/"><time itemprop="datePublished" class="dt-published" datetime="2020-08-24T09:17:00+0200">24/08/2020</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+        </div>
+      </div>
+    </article>
+    <h3>Comments</h3>
+    <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
+    <section id="isso-thread"></section><br>
+    <a href="/notes#what_is_an_individual_biology_seeks_clues_in_information_theory"><b>← Back to Notes</b></a>
+    <hr>
+  </main>
+  <footer class="footer container h-10 text-center">
+    <ul class="pl-0">
+      <li class="first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="https://hugocisneros.com/img/RSS.svg" alt="RSS feed icon"></a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="ml-2 text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block list-none"><span class="ml-2">© Hugo Cisneros 2022</span></li>
+    </ul>
+  </footer>
   <link rel="stylesheet" href="/js/katex/katex.min.css">
   <script src="/js/katex/katex.min.js"></script> 
   <script src="/js/katex/contrib/auto-render.min.js"></script> 
