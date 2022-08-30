@@ -62,7 +62,7 @@
       </div>
     </nav>
   </header>
-  <main class="content h-card container mt-2 m-auto leading-loose md:px-0 px-2" role="main">
+  <main class="content h-card container mt-2 m-auto leading-loose md:px-0 px-2 z-0 Page(/_index.md)" role="main">
     <div class="head container grid sm:grid-cols-2 grid-cols-1 justify-around flex-wrap items-center" itemscope itemtype="http://schema.org/Person">
       <div class="picture p-8 max-w-[80%] mx-auto basis-20 grow shrink" itemscope itemtype="http://schema.org/ImageObject">
         <picture><source srcset="/img/main.jpeg"><img class="main-image u-photo mx-auto" itemprop="contentUrl" alt="Main picture" src="/img/main.jpeg"></picture>
@@ -160,7 +160,7 @@
       </div>
     </div>
     <hr>
-    <div id="#open-modal-benchmarking-learning-efficiency-in-deep-reservoir-computing" class="modal-window bg-tp-black invisible fixed top-0 left-0 right-0 bottom-0 transition-all pointer-events-none">
+    <div id="#open-modal-benchmarking-learning-efficiency-in-deep-reservoir-computing" class="modal-window bg-tp-black invisible fixed top-0 left-0 right-0 bottom-0 transition-all pointer-events-none z-50">
       <div class="absolute top-1/2 left-1/2 p-8 bg-white rounded-md max-w-4/5 -translate-x-1/2 -translate-y-1/2">
         <a id="#close-modal-benchmarking-learning-efficiency-in-deep-reservoir-computing" title="Close" class="modal-close">✕</a>
         <h3>Cite <i>Benchmarking Learning Efficiency in Deep Reservoir Computing</i></h3><button class="modal-copy-citation" id="#copy-56ef4e4c">Copy to clipboard</button>
@@ -175,7 +175,7 @@
  }</code></pre>
       </div>
     </div>
-    <div id="#open-modal-visualizing-computation-in-large-scale-cellular-automata" class="modal-window bg-tp-black invisible fixed top-0 left-0 right-0 bottom-0 transition-all pointer-events-none">
+    <div id="#open-modal-visualizing-computation-in-large-scale-cellular-automata" class="modal-window bg-tp-black invisible fixed top-0 left-0 right-0 bottom-0 transition-all pointer-events-none z-50">
       <div class="absolute top-1/2 left-1/2 p-8 bg-white rounded-md max-w-4/5 -translate-x-1/2 -translate-y-1/2">
         <a id="#close-modal-visualizing-computation-in-large-scale-cellular-automata" title="Close" class="modal-close">✕</a>
         <h3>Cite <i>Visualizing computation in large-scale cellular automata</i></h3><button class="modal-copy-citation" id="#copy-5dbe8d51">Copy to clipboard</button>
@@ -193,7 +193,7 @@
  }</code></pre>
       </div>
     </div>
-    <div id="#open-modal-evolving-structures-in-complex-systems" class="modal-window bg-tp-black invisible fixed top-0 left-0 right-0 bottom-0 transition-all pointer-events-none">
+    <div id="#open-modal-evolving-structures-in-complex-systems" class="modal-window bg-tp-black invisible fixed top-0 left-0 right-0 bottom-0 transition-all pointer-events-none z-50">
       <div class="absolute top-1/2 left-1/2 p-8 bg-white rounded-md max-w-4/5 -translate-x-1/2 -translate-y-1/2">
         <a id="#close-modal-evolving-structures-in-complex-systems" title="Close" class="modal-close">✕</a>
         <h3>Cite <i>Evolving Structures in Complex Systems</i></h3><button class="modal-copy-citation" id="#copy-56ef4e4c">Copy to clipboard</button>
@@ -221,7 +221,7 @@
     </ul>
   </footer>
   <script>
-  function toggleModal(e){return t=>{(t.target.id.startsWith("#open-modal")||t.target.id.startsWith("#close-modal")||t.target.className=="open-modal")&&(t.stopPropagation(),e.classList.toggle("invisible"))}}var list=document.getElementsByClassName("open-modal"),id,modWin,closeButton,clipboardCopyButtons;for(let e of list)id=e.attributes["data-target"].textContent,modWin=document.getElementById(id),closeButton=document.getElementById(id.replace("open","close")),e.addEventListener("click",toggleModal(modWin)),closeButton.addEventListener("click",toggleModal(modWin)),modWin.addEventListener("click",toggleModal(modWin));clipboardCopyButtons=document.getElementsByClassName("modal-copy-citation");for(let e of clipboardCopyButtons){let t=e.id.replace("#copy-",""),n=document.getElementById(t);e.addEventListener("click",function(e){return function(){if(!e){var t=this.innerHTML;navigator.clipboard.writeText(n.innerHTML).then(()=>{this.innerHTML="Copied!"},()=>{this.innerHTML="Error copying!"}),e=!0,setTimeout(function(){this.innerHTML=t,e=!1}.bind(this),1e3)}}}(!1),this)}
+  function toggleModal(e){return t=>{(t.target.id.startsWith("#open-modal")||t.target.id.startsWith("#close-modal")||t.target.classList.contains("open-modal"))&&(t.stopPropagation(),e.classList.toggle("invisible"),e.classList.toggle("pointer-events-auto"),document.body.classList.toggle("pointer-events-none"))}}var list=document.getElementsByClassName("open-modal"),id,modWin,closeButton,clipboardCopyButtons;for(let e of list)id=e.attributes["data-target"].textContent,modWin=document.getElementById(id),closeButton=document.getElementById(id.replace("open","close")),e.addEventListener("click",toggleModal(modWin)),closeButton.addEventListener("click",toggleModal(modWin)),modWin.addEventListener("click",toggleModal(modWin));clipboardCopyButtons=document.getElementsByClassName("modal-copy-citation");for(let e of clipboardCopyButtons){let t=e.id.replace("#copy-",""),n=document.getElementById(t);e.addEventListener("click",function(e){return function(){if(!e){var t=this.innerHTML;navigator.clipboard.writeText(n.innerHTML).then(()=>{this.innerHTML="Copied!"},()=>{this.innerHTML="Error copying!"}),e=!0,setTimeout(function(){this.innerHTML=t,e=!1}.bind(this),1e3)}}}(!1),this)}
   </script>
   <script data-goatcounter="https://stats.hugocisneros.com/count" async src="//stats.hugocisneros.com/count.js"></script>
 </body>

@@ -62,7 +62,7 @@
       </div>
     </nav>
   </header>
-  <main class="content h-card container mt-2 m-auto leading-loose md:px-0 px-2" role="main">
+  <main class="content h-card container mt-2 m-auto leading-loose md:px-0 px-2 z-0 Page(/notes/continual_learning.md)" role="main">
     <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
       <div class="bg-zinc-100 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
         <h1 class="article-title p-name" itemprop="name">Continual learning</h1>
@@ -77,8 +77,37 @@
           <p>This is challenging for a fixed neural network architecture since it has a fixed capacity and is bound to either forget things or be unable to learn anything new.</p>
           <p>A definition from the survey (<a href="#delangeContinualLearningSurvey2020"><cite itemprop="citation" itemscope itemid="key:delangeContinualLearningSurvey2020">De Lange et al. 2020</cite></a>):</p>
           <blockquote>
-            <p>The General Continual Learning setting considers an infinite stream of training data where at each time step, the system receives a (number of) new sample(s) drawn non i.i.d from a current distribution that could itself experience sudden of gradual changes.</p>
+            <p>The General Continual Learning setting considers an infinite stream of training data where at each time step, the system receives a (number of) new sample(s) drawn non i.i.d from a current distribution that could itself experience sudden or gradual changes.</p>
           </blockquote>
+          <h2 id="theoretical-foundations">Theoretical foundations</h2>
+          <h3 id="concept-shift">Concept shift</h3>
+          <p>(<a href="#bartlettLearningChangingConcepts1996"><cite itemprop="citation" itemscope itemid="doi:10.1145/238061.238080">Bartlett et al. 1996</cite></a>) explores how to learn under the assumption of concept shift:</p>
+          <blockquote>
+            <p>The learner sees a sequence of random examples, labelled according to a sequence of functions, and must provide an accurate estimate of the target function sequence.</p>
+          </blockquote>
+          <p>Formally, a learner sees at time \(t\) a random example \(x_t\) from some domain \(X\). He also sees the value of \(f_t(x_t) \in \{0, 1\}\) where \(f_t\) is an unknown function from some known class \(F\).</p>
+          <p>The paper addresses two problems of learning with changing concepts:</p>
+          <ul>
+            <li><strong>Estimation:</strong> When can we estimate a sequence \((f_1, \cdots, f_n)\) from observations \(((x_1, f_1(x_1)), \cdots, (x_n, f_n(x_n)))\)?</li>
+            <li><strong>Prediction:</strong> When can one predict the next concept \(f_{n+1}\) from a sequence of concepts \((f_1, \cdots, f_n)\)?</li>
+          </ul>
+          <h3 id="formal-definitions-of-different-aspects-of-continual-learning">Formal definitions of different aspects of continual learning</h3>
+          <h4 id="learning-to-learn">Learning to learn</h4>
+          <p>The paper (<a href="#baxterTheoreticalModelsLearning1998"><cite itemprop="citation" itemscope itemid="doi:10.1007/978-1-4615-5529-2_4">Baxter 1998</cite></a>) defines the problem of learning to learn as follows (notations are chosen to contrast with regular <a href="/notes/supervised_learning/">supervised learning</a>):</p>
+          <ul>
+            <li>an input space \(X\) and an output space \(Y\),</li>
+            <li>a loss function \(l: Y \times Y \rightarrow \mathbb{R}\),</li>
+            <li>an environment \((P, Q)\) where \(P\) is the set of all probability distributions on \(X \times Y\) and \(Q\) is a distribution on \(P\),</li>
+            <li>a hypothesis space family \(H = {\mathcal{H}}\) where each \(\mathcal{H} \in H\) is a set of functions \(h: X \rightarrow Y\).</li>
+          </ul>
+          <p>(<a href="#pentinaMultitaskLifelongLearning2015a"><cite itemprop="citation" itemscope itemid="doi:10.1007/978-3-319-24486-0_13">Pentina, Ben-David 2015</cite></a>)</p>
+          <p>(<a href="#pentinaLifelongLearningWeighted2016"><cite itemprop="citation" itemscope itemid="key:pentinaLifelongLearningWeighted2016">Pentina, Urner 2016</cite></a>)</p>
+          <p>(<a href="#pentinaLifelongLearningNoni2015"><cite itemprop="citation" itemscope itemid="key:pentinaLifelongLearningNoni2015">Pentina, Lampert 2015</cite></a>)</p>
+          <p>(<a href="#balcanLifelongLearningCostly2020"><cite itemprop="citation" itemscope itemid="doi:10.1016/j.tcs.2019.11.010">Balcan et al. 2020</cite></a>)</p>
+          <p>(<a href="#kiferDetectingChangeData2004"><cite itemprop="citation" itemscope itemid="key:kiferDetectingChangeData2004">Kifer et al. 2004</cite></a>)</p>
+          <p>&lt;&amp;ben-davidNotionTaskRelatedness2008&gt;</p>
+          <p>&lt;&amp;ben-davidExploitingTaskRelatedness2003&gt;</p>
+          <p>(<a href="#geisaTheoryOutofdistributionLearning2022"><cite itemprop="citation" itemscope itemid="doi:10.48550/arXiv.2109.14501">Geisa et al. 2022</cite></a>)</p>
           <h2 id="examples-of-continual-learning-systems">Examples of continual learning systems</h2>
           <ul>
             <li>Never Ending Language Learner (NELL) (<a href="#carlsonArchitectureNeverEndingLanguage2010"><cite itemprop="citation" itemscope itemid="doi:10.1002/ajp.20927">Carlson et al. 2010</cite></a>)
@@ -113,6 +142,28 @@
           <ol class="biblio-list">
             <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="delangeContinualLearningSurvey2020">
               <span itemprop="author">Matthias De Lange, Rahaf Aljundi, Marc Masana, Sarah Parisot, Xu Jia, Ales Leonardis, Gregory Slabaugh, Tinne Tuytelaars</span>. <time datetime="2020" itemprop="datePublished">May 26, 2020</time>. "<span itemprop="name">A Continual Learning Survey: Defying Forgetting in Classification Tasks</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:1909.08383 [cs, Stat]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/1909.08383">http://arxiv.org/abs/1909.08383</a>.
+            </li>
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="bartlettLearningChangingConcepts1996" itemid="doi:10.1145/238061.238080">
+              <span itemprop="author">Peter L. Bartlett, Shai Ben-David, Sanjeev R. Kulkarni</span>. <time datetime="1996" itemprop="datePublished">1996</time>. "<span itemprop="name">Learning Changing Concepts by Exploiting the Structure of Change</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Proceedings of the Ninth Annual Conference on Computational Learning Theory - COLT '96</i></span>, 131–39. Desenzano del Garda, Italy: ACM Press. <a itemprop="sameAs" href="https://doi.org/10.1145/238061.238080">DOI</a>.
+            </li>
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="baxterTheoreticalModelsLearning1998" itemid="doi:10.1007/978-1-4615-5529-2_4">
+              <span itemprop="author">Jonathan Baxter</span>. <time datetime="1998" itemprop="datePublished">1998</time>. "<span itemprop="name">Theoretical Models of Learning to Learn</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Learning to Learn</i></span>, edited by Sebastian Thrun and Lorien Pratt, 71–94. Boston, MA: Springer US. <a itemprop="sameAs" href="https://doi.org/10.1007/978-1-4615-5529-2_4">DOI</a>.
+            </li>
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="pentinaMultitaskLifelongLearning2015a" itemid="doi:10.1007/978-3-319-24486-0_13">
+              <span itemprop="author">Anastasia Pentina, Shai Ben-David</span>. <time datetime="2015" itemprop="datePublished">2015</time>. "<span itemprop="name">Multi-task and Lifelong Learning of Kernels</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Algorithmic Learning Theory</i></span>, edited by Kamalika Chaudhuri, CLAUDIO GENTILE, and Sandra Zilles, 194–208. Lecture Notes in Computer Science. Cham: Springer International Publishing. <a itemprop="sameAs" href="https://doi.org/10.1007/978-3-319-24486-0_13">DOI</a>.
+            </li>
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="pentinaLifelongLearningWeighted2016">
+              <span itemprop="author">Anastasia Pentina, Ruth Urner</span>. <time datetime="2016" itemprop="datePublished">2016</time>. "<span itemprop="name">Lifelong Learning with Weighted Majority Votes</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Advances in Neural Information Processing Systems</i></span>. Vol. 29. Curran Associates, Inc.. <a itemprop="sameAs" href="https://proceedings.neurips.cc/paper/2016/hash/f39ae9ff3a81f499230c4126e01f421b-Abstract.html">https://proceedings.neurips.cc/paper/2016/hash/f39ae9ff3a81f499230c4126e01f421b-Abstract.html</a>.
+            </li>
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="pentinaLifelongLearningNoni2015">
+              <span itemprop="author">Anastasia Pentina, Christoph H Lampert</span>. <time datetime="2015" itemprop="datePublished">2015</time>. "<span itemprop="name">Lifelong Learning with Non-i.i.d. Tasks</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Advances in Neural Information Processing Systems</i></span>. Vol. 28. Curran Associates, Inc.. <a itemprop="sameAs" href="https://proceedings.neurips.cc/paper/2015/hash/9232fe81225bcaef853ae32870a2b0fe-Abstract.html">https://proceedings.neurips.cc/paper/2015/hash/9232fe81225bcaef853ae32870a2b0fe-Abstract.html</a>.
+            </li>
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="balcanLifelongLearningCostly2020" itemid="doi:10.1016/j.tcs.2019.11.010">
+              <span itemprop="author">Maria-Florina Balcan, Avrim Blum, Vaishnavh Nagarajan</span>. <time datetime="2020" itemprop="datePublished">February 12, 2020</time>. "<span itemprop="name">Lifelong Learning in Costly Feature Spaces</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Theoretical Computer Science</i></span>, Special Issue on Algorithmic Learning Theory, 808 (February):14–37. <a itemprop="sameAs" href="https://doi.org/10.1016/j.tcs.2019.11.010">DOI</a>.
+            </li>
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="kiferDetectingChangeData2004"><span itemprop="author">Daniel Kifer, Shai Ben-David, Johannes Gehrke</span>. <time datetime="2004" itemprop="datePublished">2004</time>. "<span itemprop="name">Detecting Change in Data Streams</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">VLDB</i></span>, 4:180–91. Toronto, Canada.</li>
+            <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="geisaTheoryOutofdistributionLearning2022" itemid="doi:10.48550/arXiv.2109.14501">
+              <span itemprop="author">Ali Geisa, Ronak Mehta, Hayden S. Helm, Jayanta Dey, Eric Eaton, Jeffery Dick, Carey E. Priebe, Joshua T. Vogelstein</span>. <time datetime="2022" itemprop="datePublished">January 6, 2022</time>. "<span itemprop="name">Towards a Theory of Out-of-distribution Learning</span>". arXiv. <a itemprop="sameAs" href="https://doi.org/10.48550/arXiv.2109.14501">DOI</a>.
             </li>
             <li itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="carlsonArchitectureNeverEndingLanguage2010" itemid="doi:10.1002/ajp.20927">
               <span itemprop="author">Andrew Carlson, Justin Betteridge, Bryan Kisiel</span>. <time datetime="2010" itemprop="datePublished">2010</time>. "<span itemprop="name">Toward an Architecture for Never-ending Language Learning.</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">In Proceedings of the Conference on Artificial Intelligence (AAAI) (2010)</i></span>, 1306–13. <a itemprop="sameAs" href="https://doi.org/10.1002/ajp.20927">DOI</a>.
@@ -152,7 +203,7 @@
           </div>
         </div>
         <div class="text-center" style="font-variant-caps:all-small-caps">
-          Last changed <a class="u-url" href="https://hugocisneros.com/notes/continual_learning/"><time itemprop="datePublished" class="dt-published" datetime="2022-03-04T17:53:00+0100">04/03/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/continual_learning/"><time itemprop="datePublished" class="dt-published" datetime="2022-08-30T16:30:00+0200">30/08/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>
@@ -177,7 +228,7 @@
   <script src="/js/katex/katex.min.js"></script> 
   <script src="/js/katex/contrib/auto-render.min.js"></script> 
   <script>
-  document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"\\[",right:"\\]",display:!0},{left:"$$",right:"$$",display:!0},{left:"\\begin{equation}",right:"\\end{equation}",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1}]})})
+  document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"\\[",right:"\\]",display:!0},{left:"\\begin{align}",right:"\\end{align}",display:!0},{left:"$$",right:"$$",display:!0},{left:"\\begin{equation}",right:"\\end{equation}",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1}]})})
   </script>
   <script data-goatcounter="https://stats.hugocisneros.com/count" async src="//stats.hugocisneros.com/count.js"></script>
 </body>
