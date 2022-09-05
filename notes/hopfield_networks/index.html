@@ -76,7 +76,7 @@
           <p>Hopfield networks are a kind of <a href="/notes/recurrent_neural_networks/">recurrent neural network</a> with binary threshold nodes.</p>
           <h2 id="definition">Definition</h2>
           <p>Nodes have indexes \(i \in \{1, \cdots, n\}\) and are in state \(s_i \in \{-1, 1\}\). Nodes have connections between them, characterized by a weight \(w_{ij}\). Each node also has an associated threshold \(\theta_i\) such that</p>
-          <p>\[\begin{equation*} s_i \leftarrow \begin{cases} +1 & \text{if}\ \sum_j w_{ij} s_j \geq \theta_i, \newline -1 & \text{otherwise}. \end{cases} \end{equation*}\]</p>
+          <p>\[ s_i \leftarrow \begin{cases} +1 & \text{if}\ \sum_j w_{ij} s_j \geq \theta_i, \newline -1 & \text{otherwise}. \end{cases} \]</p>
           <h2 id="energy">Energy</h2>
           <p>A Hopfield network has an associated energy value \[ E = - \frac{1}{2} \sum_{i,j} w_{ij} s_i s_j + \sum_i \theta_i s_i \] which makes it part of the <a href="/notes/ising_model/">Ising models</a>.</p>
           <h2 id="hopfield-networks-and-attention--attention-dot-md">Hopfield networks and <a href="/notes/attention/">attention</a></h2>
@@ -99,7 +99,7 @@
           </div>
         </div>
         <div class="text-center" style="font-variant-caps:all-small-caps">
-          Last changed <a class="u-url" href="https://hugocisneros.com/notes/hopfield_networks/"><time itemprop="datePublished" class="dt-published" datetime="2021-09-02T12:45:00+0200">02/09/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/hopfield_networks/"><time itemprop="datePublished" class="dt-published" datetime="2022-08-30T21:25:00+0200">30/08/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>
