@@ -14,7 +14,7 @@ function search_function() {
     else {
         // Loop through all list items, and hide those who don't
         // match the search query
-        const results = search(filter, 5).map((d) => d[0].toLowerCase());
+        const results = search(filter, 9).map((d) => d[0].toLowerCase());
         for (i = 0; i < li.length; i++) {
             a = li[i].getElementsByClassName("single-note-title")[0];
             txtValue = a.textContent || a.innerText;

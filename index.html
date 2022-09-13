@@ -56,7 +56,7 @@
             <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
               <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
             </li>
-            <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="dark-mode-button-img" src="https://hugocisneros.com/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" src="https://hugocisneros.com/img/dark_mode.svg"></button></li>
+            <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full" aria-label="Toggle between dark and light mode"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="ligh-mode-button-img" alt="A sun icon for switching to light mode" src="https://hugocisneros.com/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" alt="A moon icon for switching to dark mode" src="https://hugocisneros.com/img/dark_mode.svg"></button></li>
           </ul>
         </div>
       </div>
@@ -70,7 +70,7 @@
       <div class="mx-4 ml-8 basis-60 grow shrink-2 leading-snug text-base">
         <a class="u-url font-bold" rel="me" itemprop="url" href="https://hugocisneros.com/">
         <h1 class="text-black dark:text-zinc-300 p-name border-0" itemprop="name">Hugo Cisneros</h1></a>
-        <h3 itemprop="jobTitle">PhD Student</h3>
+        <h2 itemprop="jobTitle" class="text-xl my-0 border-none">PhD Student</h2>
         <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
           <span itemprop="streetAddress">Centre de recherche Inria de Paris<br>
           2 rue Simone IFF</span><br>
@@ -106,7 +106,7 @@
     </ul>
     <h2 id="publications">Publications</h2>
     <div class="pub-wrapper w-full inline-flex flex-wrap items-center my-1.5 p-2.5 rounded bg-slate-100 dark:bg-slate-700 box-border leading-tight justify-around" id="benchmarking-learning-efficiency-in-deep-reservoir-computing" itemscope itemtype="http://schema.org/ScholarlyArticle">
-      <div class="pub-image basis-40 grow-0 shrink" itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img alt="Benchmarking Learning Efficiency in Deep Reservoir Computing paper illustration" itemprop="url" src="/img/collas_thumbnail.png" style="width:100%"></div>
+      <div class="pub-image basis-40 grow-0 shrink" itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img alt="Benchmarking Learning Efficiency in Deep Reservoir Computing paper illustration" itemprop="url" src="/img/collas_thumbnail.png" class="w-full"></div>
       <div class="publication grow shrink-2 basis-3/4 my-1.5 mx-2">
         <b><span itemprop="author">H. Cisneros</span></b>, <span itemprop="author">J. Sivic</span> <span itemprop="author">T. Mikolov</span><br>
         <b><a href="/pdf/benchmarking_learning_efficiency.pdf"><span itemprop="name">Benchmarking Learning Efficiency in Deep Reservoir Computing</span></a></b>
@@ -119,12 +119,12 @@
           Defines a metric of learning efficiency for machine learning models and a benchmark of progressively more difficult language tasks for measuring learning efficiency.
         </div>
         <div class="pub-link-wrapper mt-1.5 text-sm">
-          <span class="publication-link cursor-pointer bg-sky-600 dark:bg-sky-700 rounded-sm p-1 mr-1"><a class="open-modal text-white dark:text-zinc-200" data-target="#open-modal-benchmarking-learning-efficiency-in-deep-reservoir-computing">Cite</a></span> <span class="publication-link bg-sky-600 dark:bg-sky-700 rounded-sm p-1 pr-0 last:pr-1 mr-1"><a class="text-white dark:text-zinc-200" itemprop="mainEntityOfPage" href="https://github.com/hugcis/benchmark_learning_efficiency">Code</a></span> <span class="publication-link bg-sky-600 dark:bg-sky-700 rounded-sm p-1 pr-0 last:pr-1 mr-1"><a class="text-white dark:text-zinc-200" itemprop="mainEntityOfPage" href="https://github.com/hugcis/incremental_tasks">Dataset</a></span> <span class="publication-link bg-sky-600 dark:bg-sky-700 rounded-sm p-1 pr-0 last:pr-1 mr-1"><a class="text-white dark:text-zinc-200" itemprop="mainEntityOfPage" href="https://www.youtube.com/watch?v=6GSpvqqV9XI">Video</a></span>
+          <span class="publication-link cursor-pointer bg-sky-600 dark:bg-sky-700 rounded-sm p-1 mr-1"><button class="open-modal text-white dark:text-zinc-200" data-target="#open-modal-benchmarking-learning-efficiency-in-deep-reservoir-computing">Cite</button></span> <span class="publication-link bg-sky-600 dark:bg-sky-700 rounded-sm p-1 pr-0 last:pr-1 mr-1"><a class="text-white dark:text-zinc-200" itemprop="mainEntityOfPage" href="https://github.com/hugcis/benchmark_learning_efficiency">Code</a></span> <span class="publication-link bg-sky-600 dark:bg-sky-700 rounded-sm p-1 pr-0 last:pr-1 mr-1"><a class="text-white dark:text-zinc-200" itemprop="mainEntityOfPage" href="https://github.com/hugcis/incremental_tasks">Dataset</a></span> <span class="publication-link bg-sky-600 dark:bg-sky-700 rounded-sm p-1 pr-0 last:pr-1 mr-1"><a class="text-white dark:text-zinc-200" itemprop="mainEntityOfPage" href="https://www.youtube.com/watch?v=6GSpvqqV9XI">Video</a></span>
         </div>
       </div>
     </div>
     <div class="pub-wrapper w-full inline-flex flex-wrap items-center my-1.5 p-2.5 rounded bg-slate-100 dark:bg-slate-700 box-border leading-tight justify-around" id="visualizing-computation-in-large-scale-cellular-automata" itemscope itemtype="http://schema.org/ScholarlyArticle">
-      <div class="pub-image basis-40 grow-0 shrink" itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img alt="Visualizing computation in large-scale cellular automata paper illustration" itemprop="url" src="/img/visualize_paper_illustration.jpg" style="width:100%"></div>
+      <div class="pub-image basis-40 grow-0 shrink" itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img alt="Visualizing computation in large-scale cellular automata paper illustration" itemprop="url" src="/img/visualize_paper_illustration.jpg" class="w-full"></div>
       <div class="publication grow shrink-2 basis-3/4 my-1.5 mx-2">
         <b><span itemprop="author">H. Cisneros</span></b>, <span itemprop="author">J. Sivic</span> <span itemprop="author">T. Mikolov</span><br>
         <b><a href="/pdf/visualizing_computation.pdf"><span itemprop="name">Visualizing computation in large-scale cellular automata</span></a></b>
@@ -137,12 +137,12 @@
           Introduces novel reduction methods for processing large-scale complex systems. This enables discovering interesting patterns at multiple scales.
         </div>
         <div class="pub-link-wrapper mt-1.5 text-sm">
-          <span class="publication-link cursor-pointer bg-sky-600 dark:bg-sky-700 rounded-sm p-1 mr-1"><a class="open-modal text-white dark:text-zinc-200" data-target="#open-modal-visualizing-computation-in-large-scale-cellular-automata">Cite</a></span> <span class="publication-link bg-sky-600 dark:bg-sky-700 rounded-sm p-1 pr-0 last:pr-1 mr-1"><a class="text-white dark:text-zinc-200" itemprop="mainEntityOfPage" href="https://www.mitpressjournals.org/doi/abs/10.1162/isal_a_00277">Main URL</a></span> <span class="publication-link bg-sky-600 dark:bg-sky-700 rounded-sm p-1 pr-0 last:pr-1 mr-1"><a class="text-white dark:text-zinc-200" itemprop="mainEntityOfPage" href="https://hugcis.github.io/ALIFE-Paper-2020">Project page</a></span> <span class="publication-link bg-sky-600 dark:bg-sky-700 rounded-sm p-1 pr-0 last:pr-1 mr-1"><a class="text-white dark:text-zinc-200" itemprop="mainEntityOfPage" href="https://arxiv.org/abs/2104.01008">arXiv</a></span> <span class="publication-link bg-sky-600 dark:bg-sky-700 rounded-sm p-1 pr-0 last:pr-1 mr-1"><a class="text-white dark:text-zinc-200" itemprop="mainEntityOfPage" href="https://www.youtube.com/watch?v=ZuQZiewYxY4">Talk</a></span>
+          <span class="publication-link cursor-pointer bg-sky-600 dark:bg-sky-700 rounded-sm p-1 mr-1"><button class="open-modal text-white dark:text-zinc-200" data-target="#open-modal-visualizing-computation-in-large-scale-cellular-automata">Cite</button></span> <span class="publication-link bg-sky-600 dark:bg-sky-700 rounded-sm p-1 pr-0 last:pr-1 mr-1"><a class="text-white dark:text-zinc-200" itemprop="mainEntityOfPage" href="https://www.mitpressjournals.org/doi/abs/10.1162/isal_a_00277">Main URL</a></span> <span class="publication-link bg-sky-600 dark:bg-sky-700 rounded-sm p-1 pr-0 last:pr-1 mr-1"><a class="text-white dark:text-zinc-200" itemprop="mainEntityOfPage" href="https://hugcis.github.io/ALIFE-Paper-2020">Project page</a></span> <span class="publication-link bg-sky-600 dark:bg-sky-700 rounded-sm p-1 pr-0 last:pr-1 mr-1"><a class="text-white dark:text-zinc-200" itemprop="mainEntityOfPage" href="https://arxiv.org/abs/2104.01008">arXiv</a></span> <span class="publication-link bg-sky-600 dark:bg-sky-700 rounded-sm p-1 pr-0 last:pr-1 mr-1"><a class="text-white dark:text-zinc-200" itemprop="mainEntityOfPage" href="https://www.youtube.com/watch?v=ZuQZiewYxY4">Talk</a></span>
         </div>
       </div>
     </div>
     <div class="pub-wrapper w-full inline-flex flex-wrap items-center my-1.5 p-2.5 rounded bg-slate-100 dark:bg-slate-700 box-border leading-tight justify-around" id="evolving-structures-in-complex-systems" itemscope itemtype="http://schema.org/ScholarlyArticle">
-      <div class="pub-image basis-40 grow-0 shrink" itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img alt="Evolving Structures in Complex Systems paper illustration" itemprop="url" src="/img/nn_archi.svg" style="width:100%"></div>
+      <div class="pub-image basis-40 grow-0 shrink" itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img alt="Evolving Structures in Complex Systems paper illustration" itemprop="url" src="/img/nn_archi.svg" class="w-full"></div>
       <div class="publication grow shrink-2 basis-3/4 my-1.5 mx-2">
         <b><span itemprop="author">H. Cisneros</span></b>, <span itemprop="author">J. Sivic</span> <span itemprop="author">T. Mikolov</span><br>
         <b><a href="/pdf/evolving_structures.pdf"><span itemprop="name">Evolving Structures in Complex Systems</span></a></b>
@@ -155,14 +155,14 @@
           Introduces a new metric of increasing complexity for cellular automata and other systems.
         </div>
         <div class="pub-link-wrapper mt-1.5 text-sm">
-          <span class="publication-link cursor-pointer bg-sky-600 dark:bg-sky-700 rounded-sm p-1 mr-1"><a class="open-modal text-white dark:text-zinc-200" data-target="#open-modal-evolving-structures-in-complex-systems">Cite</a></span> <span class="publication-link bg-sky-600 dark:bg-sky-700 rounded-sm p-1 pr-0 last:pr-1 mr-1"><a class="text-white dark:text-zinc-200" itemprop="mainEntityOfPage" href="https://ieeexplore.ieee.org/document/9002840">Main URL</a></span> <span class="publication-link bg-sky-600 dark:bg-sky-700 rounded-sm p-1 pr-0 last:pr-1 mr-1"><a class="text-white dark:text-zinc-200" itemprop="mainEntityOfPage" href="https://arxiv.org/abs/1911.01086">arXiv</a></span> <span class="publication-link bg-sky-600 dark:bg-sky-700 rounded-sm p-1 pr-0 last:pr-1 mr-1"><a class="text-white dark:text-zinc-200" itemprop="mainEntityOfPage" href="https://github.com/hugcis/evolving-structures-in-complex-systems">Code</a></span> <span class="publication-link bg-sky-600 dark:bg-sky-700 rounded-sm p-1 pr-0 last:pr-1 mr-1"><a class="text-white dark:text-zinc-200" itemprop="mainEntityOfPage" href="https://docs.google.com/presentation/d/1KmJvyKHKAeZvPPUGPVRdSEgyD8vUOoKhJtLZUCVxf7A/edit?usp=sharing">Slides</a></span>
+          <span class="publication-link cursor-pointer bg-sky-600 dark:bg-sky-700 rounded-sm p-1 mr-1"><button class="open-modal text-white dark:text-zinc-200" data-target="#open-modal-evolving-structures-in-complex-systems">Cite</button></span> <span class="publication-link bg-sky-600 dark:bg-sky-700 rounded-sm p-1 pr-0 last:pr-1 mr-1"><a class="text-white dark:text-zinc-200" itemprop="mainEntityOfPage" href="https://ieeexplore.ieee.org/document/9002840">Main URL</a></span> <span class="publication-link bg-sky-600 dark:bg-sky-700 rounded-sm p-1 pr-0 last:pr-1 mr-1"><a class="text-white dark:text-zinc-200" itemprop="mainEntityOfPage" href="https://arxiv.org/abs/1911.01086">arXiv</a></span> <span class="publication-link bg-sky-600 dark:bg-sky-700 rounded-sm p-1 pr-0 last:pr-1 mr-1"><a class="text-white dark:text-zinc-200" itemprop="mainEntityOfPage" href="https://github.com/hugcis/evolving-structures-in-complex-systems">Code</a></span> <span class="publication-link bg-sky-600 dark:bg-sky-700 rounded-sm p-1 pr-0 last:pr-1 mr-1"><a class="text-white dark:text-zinc-200" itemprop="mainEntityOfPage" href="https://docs.google.com/presentation/d/1KmJvyKHKAeZvPPUGPVRdSEgyD8vUOoKhJtLZUCVxf7A/edit?usp=sharing">Slides</a></span>
         </div>
       </div>
     </div>
     <hr>
     <div id="#open-modal-benchmarking-learning-efficiency-in-deep-reservoir-computing" class="modal-window bg-tp-black invisible fixed top-0 left-0 right-0 bottom-0 transition-all pointer-events-none z-50">
-      <div class="absolute top-1/2 left-1/2 p-8 bg-white rounded-md max-w-4/5 -translate-x-1/2 -translate-y-1/2">
-        <a id="#close-modal-benchmarking-learning-efficiency-in-deep-reservoir-computing" title="Close" class="modal-close">✕</a>
+      <div class="absolute top-1/2 left-1/2 p-8 bg-white max-w-full rounded-md max-w-4/5 -translate-x-1/2 -translate-y-1/2">
+        <button id="#close-modal-benchmarking-learning-efficiency-in-deep-reservoir-computing" title="Close" class="modal-close">✕</button>
         <h3>Cite <i>Benchmarking Learning Efficiency in Deep Reservoir Computing</i></h3><button class="modal-copy-citation" id="#copy-56ef4e4c">Copy to clipboard</button>
         <pre><code id="56ef4e4c">@inproceedings{9002840,
  author={H. {Cisneros} and J. {Sivic} and T. {Mikolov}},
@@ -176,8 +176,8 @@
       </div>
     </div>
     <div id="#open-modal-visualizing-computation-in-large-scale-cellular-automata" class="modal-window bg-tp-black invisible fixed top-0 left-0 right-0 bottom-0 transition-all pointer-events-none z-50">
-      <div class="absolute top-1/2 left-1/2 p-8 bg-white rounded-md max-w-4/5 -translate-x-1/2 -translate-y-1/2">
-        <a id="#close-modal-visualizing-computation-in-large-scale-cellular-automata" title="Close" class="modal-close">✕</a>
+      <div class="absolute top-1/2 left-1/2 p-8 bg-white max-w-full rounded-md max-w-4/5 -translate-x-1/2 -translate-y-1/2">
+        <button id="#close-modal-visualizing-computation-in-large-scale-cellular-automata" title="Close" class="modal-close">✕</button>
         <h3>Cite <i>Visualizing computation in large-scale cellular automata</i></h3><button class="modal-copy-citation" id="#copy-5dbe8d51">Copy to clipboard</button>
         <pre><code id="5dbe8d51">@article{doi:10.1162/isal_a_00277,
  author = {Cisneros, Hugo and Sivic, Josef and Mikolov, Tomas},
@@ -194,8 +194,8 @@
       </div>
     </div>
     <div id="#open-modal-evolving-structures-in-complex-systems" class="modal-window bg-tp-black invisible fixed top-0 left-0 right-0 bottom-0 transition-all pointer-events-none z-50">
-      <div class="absolute top-1/2 left-1/2 p-8 bg-white rounded-md max-w-4/5 -translate-x-1/2 -translate-y-1/2">
-        <a id="#close-modal-evolving-structures-in-complex-systems" title="Close" class="modal-close">✕</a>
+      <div class="absolute top-1/2 left-1/2 p-8 bg-white max-w-full rounded-md max-w-4/5 -translate-x-1/2 -translate-y-1/2">
+        <button id="#close-modal-evolving-structures-in-complex-systems" title="Close" class="modal-close">✕</button>
         <h3>Cite <i>Evolving Structures in Complex Systems</i></h3><button class="modal-copy-citation" id="#copy-56ef4e4c">Copy to clipboard</button>
         <pre><code id="56ef4e4c">@inproceedings{9002840,
  author={H. {Cisneros} and J. {Sivic} and T. {Mikolov}},
