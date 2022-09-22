@@ -65,12 +65,12 @@
   <main class="content h-card container mt-2 m-auto leading-loose md:px-0 px-2 z-0 Page(/blog/optimal-transport.md)" role="main">
     <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
       <div class="title-container">
-        <h1 class="article-title p-name" itemprop="name">The Elegance of Optimal Transport</h1><b><i itemprop="headline" class="text-lg p-summary">An introduction to optimal transport theory.</i></b>
+        <h1 class="article-title p-name" itemprop="name">The Elegance of Optimal Transport</h1><b><i itemprop="headline" class="article-headline text-lg p-summary">An introduction to optimal transport theory.</i></b>
         <div class="flex justify-between items-center">
           <a class="text-lg text-gray-600 dark:text-gray-400 border-none u-url" href="https://hugocisneros.com/blog/the-elegance-of-optimal-transport/"><time itemprop="datePublished" class="dt-published" datetime="2019-12-07T23:20:20+0100" content="2019-12-07T23:20:20+0100">07/12/2019</time></a> <a class="text-gray-600 dark:text-gray-400 text-right border-none p-author h-card" rel="author" href="https://hugocisneros.com/" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
         <div>
-          Reading time: 10 minutes.
+          Reading time: 9 minutes.
         </div>
       </div>
       <div class="article-content e-content" itemprop="articleBody">
@@ -197,7 +197,7 @@
         <p>There is a lot more to say about optimal transport, but this post only aims at introducing the concept and is already long enough. The theory and mathematics are beautiful and get very advanced the deeper you go with this subject (see e.g. <a href="#villani">[10]</a>). There is a lot of ongoing research into the theory and applications of optimal transport, especially in the machine learning community. If you are interested in getting started learning about it, I suggest you check Gabriel Peyré and Marco Cuturi’s book <a href="https://optimaltransport.github.io/book/"><em>Computational optimal transport</em></a>. It gives a very interesting overview of optimal transport and its applications. It can be read at different levels of mathematical complexity depending on your level of comfort. It is particularly adapted to data science and machine learning people who wish to learn more about the subject and the theory behind it.</p>
       </div>
       <ul class="list-none pl-0 font-sm align-left">
-        <li class="list-none">Tags: <a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200" href="/tags/optimal-transport"><span class="flex flex-row justify-start items-center dark:bg-zinc-900 dark:hover:bg-zinc-700 hover:bg-zinc-200 bg-zinc-100 p-1 rounded-t border-b-2 border-zinc-300 hover:border-zinc-500"><img class="h-5 mr-1 inline" src="https://hugocisneros.com/images/tag_logo.svg" alt="Logo of a tag: indicates that a tag item follows."> Optimal transport</span></a> <a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200" href="/tags/data-science"><span class="flex flex-row justify-start items-center dark:bg-zinc-900 dark:hover:bg-zinc-700 hover:bg-zinc-200 bg-zinc-100 p-1 rounded-t border-b-2 border-zinc-300 hover:border-zinc-500"><img class="h-5 mr-1 inline" src="https://hugocisneros.com/images/tag_logo.svg" alt="Logo of a tag: indicates that a tag item follows."> Data science</span></a> <a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200" href="/tags/theory"><span class="flex flex-row justify-start items-center dark:bg-zinc-900 dark:hover:bg-zinc-700 hover:bg-zinc-200 bg-zinc-100 p-1 rounded-t border-b-2 border-zinc-300 hover:border-zinc-500"><img class="h-5 mr-1 inline" src="https://hugocisneros.com/images/tag_logo.svg" alt="Logo of a tag: indicates that a tag item follows."> Theory</span></a>
+        <li class="list-none">Tags: <a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200" href="/tags/optimal-transport"><span class="flex flex-row justify-start items-center dark:bg-zinc-900 dark:hover:bg-zinc-700 hover:bg-zinc-200 bg-zinc-100 dark:border-zinc-600 py-0.5 px-1 rounded-t border-b-2 border-zinc-300 hover:border-zinc-500"><img class="h-4 mr-2 inline" src="https://hugocisneros.com/images/tag_logo.svg" alt="Logo of a tag: indicates that a tag item follows."> Optimal transport</span></a> <a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200" href="/tags/data-science"><span class="flex flex-row justify-start items-center dark:bg-zinc-900 dark:hover:bg-zinc-700 hover:bg-zinc-200 bg-zinc-100 dark:border-zinc-600 py-0.5 px-1 rounded-t border-b-2 border-zinc-300 hover:border-zinc-500"><img class="h-4 mr-2 inline" src="https://hugocisneros.com/images/tag_logo.svg" alt="Logo of a tag: indicates that a tag item follows."> Data science</span></a> <a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200" href="/tags/theory"><span class="flex flex-row justify-start items-center dark:bg-zinc-900 dark:hover:bg-zinc-700 hover:bg-zinc-200 bg-zinc-100 dark:border-zinc-600 py-0.5 px-1 rounded-t border-b-2 border-zinc-300 hover:border-zinc-500"><img class="h-4 mr-2 inline" src="https://hugocisneros.com/images/tag_logo.svg" alt="Logo of a tag: indicates that a tag item follows."> Theory</span></a>
         </li>
       </ul>
       <hr>
@@ -225,10 +225,10 @@
     <h3>Comments</h3>
     <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
     <section id="isso-thread"></section>
-    <hr>
   </main>
-  <footer class="footer container h-10 text-center">
-    <ul class="pl-0">
+  <footer class="footer container h-10 text-center mt-1">
+    <hr class="my-4">
+    <ul class="pl-0 mt-1">
       <li class="first:before:content-none before:content-['•'] inline-block list-none">
         <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="https://hugocisneros.com/img/RSS.svg" alt="RSS feed icon"></a>
       </li>
