@@ -41,19 +41,19 @@
         <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
         <div class="hidden w-full md:block md:w-auto" id="navbar-default">
           <ul class="grid md:grid-flow-col items-center justify-between text-lg my-2.5">
-            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
               <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
             </li>
-            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
               <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
             </li>
-            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
               <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
             </li>
-            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
               <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
             </li>
-            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
               <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
             </li>
             <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full" aria-label="Toggle between dark and light mode"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="ligh-mode-button-img" alt="A sun icon for switching to light mode" src="https://hugocisneros.com/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" alt="A moon icon for switching to dark mode" src="https://hugocisneros.com/img/dark_mode.svg"></button></li>
@@ -80,6 +80,16 @@
           <p>Transformers are a neural network architecture based on a mechanism called <a href="/notes/attention/">Attention</a>.</p>
           <p>They have been particularly successful for <a href="/notes/nlp/">NLP</a> applications which started around the publication of a very influential paper by Vaswani and colleagues (<a href="#vaswaniAttentionAllYou2017"><cite itemprop="citation" itemscope itemid="key:vaswaniAttentionAllYou2017">Vaswani et al. 2017</cite></a>). Transformers turned out to be <a href="/notes/language_modeling/#lm-with-id-469cee7c-6d99-4f2d-9909-dd262e080681-transformers">very effective</a> <a href="/notes/language_modeling/">language models</a>.</p>
           <p>They also penetrated other fields of machine learning such as <a href="/notes/computer_vision/">Computer vision</a>.</p>
+          <h2 id="transformers-in-pytorch">Transformers in Pytorch</h2>
+          <p><a href="/notes/pytorch/">Pytorch</a> has several implementations of transformers, and the simplest to use is <code>torch.nn.Transformers</code>. For example, their documentation proposes the following example:</p>
+          <div class="highlight">
+            <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="display:flex"><span>transformer_model <span style="color:#719e07">=</span> nn<span style="color:#719e07">.</span>Transformer(nhead<span style="color:#719e07">=</span><span style="color:#2aa198">16</span>, num_encoder_layers<span style="color:#719e07">=</span><span style="color:#2aa198">12</span>)
+</span></span><span style="display:flex"><span>src <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>rand((<span style="color:#2aa198">10</span>, <span style="color:#2aa198">32</span>, <span style="color:#2aa198">512</span>))
+</span></span><span style="display:flex"><span>tgt <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>rand((<span style="color:#2aa198">20</span>, <span style="color:#2aa198">32</span>, <span style="color:#2aa198">512</span>))
+</span></span><span style="display:flex"><span>out <span style="color:#719e07">=</span> transformer_model(src, tgt)h
+</span></span></code></pre>
+          </div>
+          <p>The only issue is, this implementation abstracts away a lot of what is going on inside a Transformer. This is great for rapidly firing up a large and complex model, but not so great for understanding how it works.</p>
           <h2 id="bibliography">Bibliography</h2>
           <ol class="biblio-list pl-0">
             <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="vaswaniAttentionAllYou2017"><span itemprop="author">Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, Illia Polosukhin</span>. <time datetime="2017" itemprop="datePublished">December 5, 2017</time>. "<span itemprop="name">Attention Is All You Need</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:1706.03762 [cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/1706.03762">http://arxiv.org/abs/1706.03762</a>.</span></li>
@@ -252,7 +262,7 @@
           </div>
         </div>
         <div class="text-center" style="font-variant-caps:all-small-caps">
-          Last changed <a class="u-url" href="https://hugocisneros.com/notes/transformers/"><time itemprop="datePublished" class="dt-published" datetime="2022-07-22T09:44:00+0200">22/07/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/transformers/"><time itemprop="datePublished" class="dt-published" datetime="2022-10-19T15:06:00+0200">19/10/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>

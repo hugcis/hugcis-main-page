@@ -4,7 +4,7 @@
     "Matthias Endler <matthias-endler@gmx.net>"
   ],
   "description": "A tiny search engine for static websites",
-  "version": "0.6.3",
+  "version": "0.7.0",
   "license": "Apache-2.0/MIT",
   "files": [
     "tinysearch_engine_bg.wasm",

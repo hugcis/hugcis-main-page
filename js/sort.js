@@ -26,9 +26,9 @@ function sort_by_name(a, b) {
 }
 
 function sort_by_date(a, b) {
-    db = new Date(b.children[0].children[0]
+    db = new Date(b.children[0]
                   .getElementsByTagName("span")[0].innerHTML.trim());
-    da = new Date(a.children[0].children[0]
+    da = new Date(a.children[0]
                   .getElementsByTagName("span")[0].innerHTML.trim());
     return new Date(db) - new Date(da);
 }

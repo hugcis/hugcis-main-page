@@ -41,19 +41,19 @@
         <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
         <div class="hidden w-full md:block md:w-auto" id="navbar-default">
           <ul class="grid md:grid-flow-col items-center justify-between text-lg my-2.5">
-            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
               <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
             </li>
-            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
               <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
             </li>
-            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
               <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
             </li>
-            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
               <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
             </li>
-            <li class="p-2.5 md:first:pl-0 md:border-none border-b list-none">
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
               <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
             </li>
             <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full" aria-label="Toggle between dark and light mode"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="ligh-mode-button-img" alt="A sun icon for switching to light mode" src="https://hugocisneros.com/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" alt="A moon icon for switching to dark mode" src="https://hugocisneros.com/img/dark_mode.svg"></button></li>
@@ -72,9 +72,23 @@
             <dd>
               <a href="/notes/generative_modelling/">Generative modelling</a>
             </dd>
+            <dt>papers</dt>
+            <dd>
+              (<a href="#sohl-dicksteinDeepUnsupervisedLearning2015"><cite itemprop="citation" itemscope itemid="key:sohl-dicksteinDeepUnsupervisedLearning2015">Sohl-Dickstein et al. 2015</cite></a>), (<a href="#hoDenoisingDiffusionProbabilistic2020"><cite itemprop="citation" itemscope itemid="key:hoDenoisingDiffusionProbabilistic2020">Ho et al. 2020</cite></a>)
+            </dd>
           </dl>
-          <h2 id="forward-diffusion">Forward diffusion</h2>
-          <h2 id="iterative-denoising">Iterative denoising</h2>
+          <h2 id="principle-of-diffusion">Principle of diffusion</h2>
+          <h3 id="forward-diffusion">Forward diffusion</h3>
+          <p>An image of size \(N\) by \(N\) \(x_0\), which is a vector in \(\mathbb{R}^{N \times N \times c}\) is diffused at each timestep \(t\) to become \(x_t\). The forward diffusion step is defined as follows: \[ q(\boldsymbol{x}_t | \boldsymbol{x}_{t-1}) = \mathcal{N}(\boldsymbol{x}_t; \sqrt{1 - \beta_t} \boldsymbol{x}_{ t - 1 }, \beta_t I) \] The probability of a sequence of images \(x_1, \ldots, x_T\) is then \[ q(\boldsymbol{x}_1, \ldots, \boldsymbol{x}_T | \boldsymbol{x}_0) = \prod_{t=1}^T q(\boldsymbol{x}_t|\boldsymbol{x}_{t -1}) \]</p>
+          <p>For each timestep a new diffused image is sampled from a gaussian distribution centered on \(\sqrt{1 - \beta_t} \boldsymbol{x}_{ t - 1 }\) with covariance matrix \(\beta_t I\). It gradually perturbs the data independently for each pixel.</p>
+          <p>This choice of scaled mean allows to compute the distribution of \(\boldsymbol{x}_t\) directly for any number of timesteps : \[ q(\mathbf{x}_t | \mathbf{x}_0) = \mathcal{N}(\mathbf{x}_t; \sqrt{\bar{\alpha}_t} \mathbf{x}_0, (1 - \bar{\alpha}_t)\mathbf{I}) \] where \(\bar{\alpha}_t = \prod_{i = 1}^t \alpha_i\) and \(\alpha_t = 1 - \beta_t\)</p>
+          <p>The forward process progressively alters data, mapping the distribution of images to the normal distribution in the limit of infinitely many timesteps.</p>
+          <h3 id="iterative-denoising">Iterative denoising</h3>
+          <h2 id="bibliography">Bibliography</h2>
+          <ol class="biblio-list pl-0">
+            <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="sohl-dicksteinDeepUnsupervisedLearning2015"><span itemprop="author">Jascha Sohl-Dickstein, Eric A. Weiss, Niru Maheswaranathan, Surya Ganguli</span>. <time datetime="2015" itemprop="datePublished">November 18, 2015</time>. "<span itemprop="name">Deep Unsupervised Learning Using Nonequilibrium Thermodynamics</span>". arXiv. <a itemprop="sameAs" href="http://arxiv.org/abs/1503.03585">http://arxiv.org/abs/1503.03585</a>.</span></li>
+            <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="hoDenoisingDiffusionProbabilistic2020"><span itemprop="author">Jonathan Ho, Ajay Jain, Pieter Abbeel</span>. <time datetime="2020" itemprop="datePublished">December 16, 2020</time>. "<span itemprop="name">Denoising Diffusion Probabilistic Models</span>". arXiv. <a itemprop="sameAs" href="http://arxiv.org/abs/2006.11239">http://arxiv.org/abs/2006.11239</a>.</span></li>
+          </ol>
         </div>
         <div class="bl-section">
           <h2>Links to this note</h2>
@@ -93,7 +107,7 @@
           </div>
         </div>
         <div class="text-center" style="font-variant-caps:all-small-caps">
-          Last changed <a class="u-url" href="https://hugocisneros.com/notes/diffusion_models/"><time itemprop="datePublished" class="dt-published" datetime="2022-06-02T13:47:00+0200">02/06/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/diffusion_models/"><time itemprop="datePublished" class="dt-published" datetime="2022-10-19T15:07:00+0200">19/10/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>
