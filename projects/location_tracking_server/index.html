@@ -68,7 +68,7 @@
       <div class="title-container">
         <h1 class="article-title p-name" itemprop="name">Roverland location tracking server</h1><b><i itemprop="headline" class="article-headline text-lg p-summary">Building a self-hosted location tracking server in Rust</i></b>
         <div class="flex justify-between items-center">
-          <a class="text-lg text-gray-600 dark:text-gray-400 border-none u-url" href="https://hugocisneros.com/projects/location_tracking_server/"><time itemprop="datePublished" class="dt-published" datetime="2022-05-30T14:41:22+0200" content="2022-05-30T14:41:22+0200">2022.05.30</time></a>
+          <a class="text-lg text-gray-600 dark:text-gray-400 border-none u-url" href="https://hugocisneros.com/projects/location_tracking_server/"><time itemprop="datePublished" class="dt-published" datetime="2022-05-30T14:41:22+0200" content="2022-05-30T14:41:22+0200">2022.05.30</time></a> <a class="text-gray-600 dark:text-gray-400 text-right border-none p-author h-card" rel="author" href="https://hugocisneros.com/" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
       <div class="article-content e-content" itemprop="articleBody">
@@ -84,11 +84,34 @@
             <a href="https://github.com/hugcis/roverland">GitHub repo</a>
           </li>
         </ul>
+        <p>This project is a location tracking server that receives data from the <a href="https://github.com/aaronpk/Overland-iOS">Overland GPS tracker app</a> running on my phone. This app tracks my location, but instead of sending it to Google or any other big corporation, it sends it to my private server running <a href="https://github.com/hugcis/roverland">Roverland</a>.</p>
+        <p>As I’m writing this, I have been tracking my location for seven months. My whole location history only takes up 43Mb once compressed.</p>
+        <p>Thanks to this project, I can go back in time and figure out exactly where I was anytime (as long as I had my phone with the app turned on) while preserving my privacy. I might also find this location archive useful in the future.</p>
+        <h1 id="features">Features</h1>
+        <ul>
+          <li>Multiple user accounts.</li>
+          <li>Web interface.</li>
+          <li>Location, Altitude, Battery level and state, Movement type, and current wifi name tracking.</li>
+        </ul>
+        <p>Planned:</p>
+        <ul>
+          <li>Location-based search</li>
+          <li>Path optimization</li>
+          <li>Better UI</li>
+          <li>Store user preferences and allow setting colors, theme, etc.</li>
+        </ul>
         <h1 id="a-quick-description-of-the-app">A quick description of the app</h1>
         <figure class="center" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
           <picture><source srcset="/img/roverland_app_dark.png" media="(prefers-color-scheme: dark)"><img src="/img/roverland_app_light.png" alt="A diagram showing the app architecture. Data is collected on the iOS app Overland and sent to a server. Then a web app allows a user to query and visualize the data."></picture>
           <figcaption>
             <h4 itemprop="name">The app architecture</h4>
+          </figcaption>
+        </figure>
+        <h1 id="interface">Interface</h1>
+        <figure itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+          <img itemprop="url" src="/img/roverland_interface_sc.jpg" alt="A figure showing the Roverland app web interface. Locations are displayed as colored dots on a map. A chart at the bottom displays the battery level corresponding to the displayed data.">
+          <figcaption>
+            <h4 itemprop="name">Screenshot of the main map interface (a walk in Paris in October 2022)</h4>
           </figcaption>
         </figure>
       </div>

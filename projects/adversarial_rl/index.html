@@ -68,7 +68,7 @@
       <div class="title-container">
         <h1 class="article-title p-name" itemprop="name">Adversarial examples in reinforcement learning</h1><b><i itemprop="headline" class="article-headline text-lg p-summary">A small review of existing adversarial methods in RL.</i></b>
         <div class="flex justify-between items-center">
-          <a class="text-lg text-gray-600 dark:text-gray-400 border-none u-url" href="https://hugocisneros.com/projects/adversarial_rl/"><time itemprop="datePublished" class="dt-published" datetime="2019-01-30T15:10:00+0200" content="2019-01-30T15:10:00+0200">2019.01.30</time></a>
+          <a class="text-lg text-gray-600 dark:text-gray-400 border-none u-url" href="https://hugocisneros.com/projects/adversarial_rl/"><time itemprop="datePublished" class="dt-published" datetime="2019-01-30T15:10:00+0200" content="2019-01-30T15:10:00+0200">2019.01.30</time></a> <a class="text-gray-600 dark:text-gray-400 text-right border-none p-author h-card" rel="author" href="https://hugocisneros.com/" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
       <div class="article-content e-content" itemprop="articleBody">
@@ -83,6 +83,14 @@
         </ul>
         <h3 id="description">Description</h3>
         <p>The goal of this project was to write a review of adversarial examples in <a href="/notes/reinforcement_learning/">RL</a> as of January 2019. It was also made into a talk for which the slides can be found above.</p>
+        <p>We begin with a brief review of <a href="/notes/adversarial_examples/">adversarial examples</a> in Deep learning. These examples are input values specifically crafted to fool a classifier into assigning it the wrong class. For example, an image could be made to look like a <code>cat</code> but optimized so that a object recognition neural network classifies it as a <code>dog</code>.</p>
+        <p>At the time of the report, most adversarial attacks on RL exploit the flaws within the deep neural networks used in common algorithms such as deep Q-learning. In the review, we identify three classes of attacks:</p>
+        <ul>
+          <li><strong>Non-targeted attacks</strong>: The goal is to make the agent choose an action that is not the optimal one.</li>
+          <li><strong>Targeted attacks</strong>: The goal is to make the agent go in a particular state.</li>
+          <li><strong>Training-time attacks</strong>: These attacks are assumed to be performed during the training of the model, and the goal is to change the training data so that the model is not trained properly.</li>
+        </ul>
+        <p>The field of adversarial attacks is crucial for the development of RL models in production. If we ever have widespread adoption of RL algorithms in production systems, these flaws will be exploited. Researching these attacks is essential for building a better understanding and better defense mechanisms.</p>
         <p>This project was a collaboration with <a href="https://github.com/ClementAcher">Clément Acher</a>, part of a <a href="https://chercheurs.lille.inria.fr/~lazaric/Webpage/MVA-RL_Course17.html">reinforcement learning course</a> taught by <a href="https://chercheurs.lille.inria.fr/~lazaric/Webpage/Home/Home.html">Alessandro Lazaric</a> and <a href="https://teopir.github.io/#teaching">Matteo Pirotta</a>.</p>
       </div>
       <ul class="list-none pl-0 font-sm align-left">
