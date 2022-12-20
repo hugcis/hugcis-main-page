@@ -75,7 +75,10 @@
             </dd>
           </dl>
           <p>Machine learning is about constructing algorithms that can approximate complex functions from observations of input/output pairs. Machine learning is related to <a href="/notes/statistics/">Statistics</a> since its goal is to make predictions based on data.</p>
-          <p>Examples of such functions include:</p>
+          <h2 id="regression">Regression</h2>
+          <p>The goal is to approximate a target function \(f\) or signal \(S\). The output space is often continuous.</p>
+          <h2 id="classification">Classification</h2>
+          <h2 id="applications-of-machine-learning">Applications of machine learning</h2>
           <ul>
             <li>
               <a href="/notes/image_classification/">Image classification</a>
@@ -85,8 +88,21 @@
               <a href="/notes/language/">Language modeling</a>
             </li>
           </ul>
-          <h2 id="regression">Regression</h2>
-          <p>The goal is to approximate a target function \(f\) or signal \(S\).</p>
+          <p>Machine learning is very good at finding a function between two sets of data, no matter if such a function is grounded in reality or not. This is one of the many sources of bias that can exist in ML models, which we need to understand and avoid when using such models in real-world settings.</p>
+          <h3 id="ethically-debatable-applications">Ethically debatable applications</h3>
+          <ul>
+            <li>Patronym-based ethnicity classification (with the caveats it implies) (<a href="#bessudnovPredictingEthnicityData2021"><cite itemprop="citation" itemscope itemid="doi:10.31235/osf.io/wf6p4">Bessudnov et al. 2021</cite></a>)
+            </li>
+            <li>Predicting gender, sexual orientation, etc. from biological data (<a href="#thomasLearningPredictGender2007"><cite itemprop="citation" itemscope itemid="doi:10.1109/BTAS.2007.4401911">Thomas et al. 2007</cite></a>; <a href="#leunerReplicationStudyMachine2019"><cite itemprop="citation" itemscope itemid="doi:10.48550/arXiv.1902.10739">Leuner 2019</cite></a>; <a href="#clemensAccurateMachineLearning2022"><cite itemprop="citation" itemscope itemid="doi:10.1093/cercor/bhac323">Clemens et al. 2022</cite></a>)
+            </li>
+          </ul>
+          <h2 id="bibliography">Bibliography</h2>
+          <ol class="biblio-list pl-0">
+            <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="bessudnovPredictingEthnicityData2021" itemid="doi:10.31235/osf.io/wf6p4"><span itemprop="author">Alexey Bessudnov, Denis Tarasov, Viacheslav Panasovets, Veronica Kostenko, Ivan Smirnov, Vladimir Uspenskiy</span>. <time datetime="2021" itemprop="datePublished">October 18, 2021</time>. "<span itemprop="name">Predicting Ethnicity with Data on Personal Names in Russia</span>". SocArXiv. <a itemprop="sameAs" href="https://doi.org/10.31235/osf.io/wf6p4">DOI</a>.</span></li>
+            <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="thomasLearningPredictGender2007" itemid="doi:10.1109/BTAS.2007.4401911"><span itemprop="author">Vince Thomas, Nitesh V. Chawla, Kevin W. Bowyer, Patrick J. Flynn</span>. <time datetime="2007" itemprop="datePublished">September 2007</time>. "<span itemprop="name">Learning to Predict Gender from Iris Images</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">2007 First IEEE International Conference on Biometrics: Theory, Applications, and Systems</i></span>, 1–5. Crystal City, VA, USA: IEEE. <a itemprop="sameAs" href="https://doi.org/10.1109/BTAS.2007.4401911">DOI</a>.</span></li>
+            <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="leunerReplicationStudyMachine2019" itemid="doi:10.48550/arXiv.1902.10739"><span itemprop="author">John Leuner</span>. <time datetime="2019" itemprop="datePublished">February 27, 2019</time>. "<span itemprop="name">A Replication Study: Machine Learning Models Are Capable of Predicting Sexual Orientation from Facial Images</span>". arXiv. <a itemprop="sameAs" href="https://doi.org/10.48550/arXiv.1902.10739">DOI</a>.</span></li>
+            <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="clemensAccurateMachineLearning2022" itemid="doi:10.1093/cercor/bhac323"><span itemprop="author">Benjamin Clemens, Jeremy Lefort-Besnard, Christoph Ritter, Elke Smith, Mikhail Votinov, Birgit Derntl, Ute Habel, Danilo Bzdok</span>. <time datetime="2022" itemprop="datePublished">September 14, 2022</time>. "<span itemprop="name">Accurate Machine Learning Prediction of Sexual Orientation Based on Brain Morphology and Intrinsic Functional Connectivity</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Cerebral Cortex</i></span>. <a itemprop="sameAs" href="https://doi.org/10.1093/cercor/bhac323">DOI</a>.</span></li>
+          </ol>
         </div>
         <div class="bl-section">
           <h2>Links to this note</h2>
@@ -97,6 +113,9 @@
               </li>
               <li>
                 <a href="/notes/ai_and_climate_change/">AI and climate change</a>
+              </li>
+              <li>
+                <a href="/notes/algorithmic_bias/">Algorithmic bias</a>
               </li>
               <li>
                 <a href="/notes/alternative_learning_mechanisms/">Alternative learning mechanisms</a>
@@ -139,6 +158,9 @@
               </li>
               <li>
                 <a href="/notes/generative_modelling/">Generative modelling</a>
+              </li>
+              <li>
+                <a href="/notes/image_classification/">Image classification</a>
               </li>
               <li>
                 <a href="/notes/implicit_neural_representations/">Implicit neural representations</a>
@@ -225,7 +247,7 @@
           </div>
         </div>
         <div class="text-center" style="font-variant-caps:all-small-caps">
-          Last changed <a class="u-url" href="https://hugocisneros.com/notes/machine_learning/"><time itemprop="datePublished" class="dt-published" datetime="2022-04-19T13:17:00+0200">19/04/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/machine_learning/"><time itemprop="datePublished" class="dt-published" datetime="2022-12-20T16:24:00+0100">20/12/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>

@@ -525,7 +525,8 @@
     </div>
     <h2 id="org-ref-and-bibtex">Org Ref and Bibtex</h2>
     <div class="highlight">
-      <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#b58900">setq</span> <span style="color:#268bd2">org-cite-global-bibliography</span> <span style="color:#719e07">'</span>(<span style="color:#2aa198">"~/Papers/library.json"</span>))
+      <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="display:flex"><span>(<span style="color:#b58900">setq</span> <span style="color:#268bd2">org-cite-global-bibliography</span> <span style="color:#cb4b16">nil</span>)
+</span></span><span style="display:flex"><span>(<span style="color:#268bd2">add-to-list</span> <span style="color:#2aa198">'org-cite-global-bibliography</span> (<span style="color:#268bd2">expand-file-name</span> <span style="color:#2aa198">"~/Papers/library.json"</span>))
 </span></span><span style="display:flex"><span>(<span style="color:#b58900">require</span> <span style="color:#2aa198">'oc-csl</span>)
 </span></span><span style="display:flex"><span>(<span style="color:#b58900">with-eval-after-load</span> <span style="color:#2aa198">'org-ref</span>
 </span></span><span style="display:flex"><span>  (<span style="color:#b58900">setq</span> <span style="color:#268bd2">bibtex-completion-bibliography</span> <span style="color:#719e07">'</span>(<span style="color:#2aa198">"~/Papers/library.json"</span>)
@@ -541,10 +542,10 @@
 </span></span><span style="display:flex"><span>        <span style="color:#268bd2">bibtex-completion-pdf-open-function</span>
 </span></span><span style="display:flex"><span>        (<span style="color:#b58900">lambda</span> (<span style="color:#268bd2">fpath</span>)
 </span></span><span style="display:flex"><span>          (<span style="color:#268bd2">call-process</span> <span style="color:#2aa198">"open"</span> <span style="color:#cb4b16">nil</span> <span style="color:#2aa198">0</span> <span style="color:#cb4b16">nil</span> <span style="color:#268bd2">fpath</span>)))
-</span></span><span style="display:flex"><span>  (<span style="color:#b58900">require</span> <span style="color:#2aa198">'org-ref-helm</span>)
+</span></span><span style="display:flex"><span>  <span style="color:#586e75">;; (require 'org-ref-helm)</span>
 </span></span><span style="display:flex"><span>  (<span style="color:#268bd2">define-key</span> <span style="color:#268bd2">org-mode-map</span> (<span style="color:#268bd2">kbd</span> <span style="color:#2aa198">"C-c ]"</span>) <span style="color:#2aa198">'org-ref-insert-link</span>)
 </span></span><span style="display:flex"><span>  (<span style="color:#b58900">setq</span> <span style="color:#268bd2">org-ref-insert-link-function</span> <span style="color:#2aa198">'org-ref-insert-link-hydra/body</span>
-</span></span><span style="display:flex"><span>        <span style="color:#268bd2">org-ref-insert-cite-function</span> <span style="color:#2aa198">'org-ref-cite-insert-helm</span>
+</span></span><span style="display:flex"><span>        <span style="color:#586e75">;; org-ref-insert-cite-function 'org-ref-cite-insert-helm</span>
 </span></span><span style="display:flex"><span>        <span style="color:#268bd2">org-ref-insert-label-function</span> <span style="color:#2aa198">'org-ref-insert-label-link</span>
 </span></span><span style="display:flex"><span>        <span style="color:#268bd2">org-ref-insert-ref-function</span> <span style="color:#2aa198">'org-ref-insert-ref-link</span>
 </span></span><span style="display:flex"><span>        <span style="color:#268bd2">org-ref-cite-onclick-function</span> (<span style="color:#b58900">lambda</span> (<span style="color:#268bd2">_</span>) (<span style="color:#268bd2">org-ref-citation-hydra/body</span>)))
