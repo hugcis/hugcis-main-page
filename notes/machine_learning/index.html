@@ -65,7 +65,7 @@
   </header>
   <main class="content h-card container mt-2 m-auto leading-loose md:px-0 px-2 z-0" role="main">
     <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-      <div class="bg-zinc-100 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
+      <div class="bg-zinc-200 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
         <h1 class="article-title p-name" itemprop="name">Machine learning</h1>
         <div class="article-content e-content p-name" itemprop="articleBody">
           <dl>
@@ -78,7 +78,9 @@
           <h2 id="regression">Regression</h2>
           <p>The goal is to approximate a target function \(f\) or signal \(S\). The output space is often continuous.</p>
           <h2 id="classification">Classification</h2>
+          <p>The goal is to approximate a target function that assigns label to input points.</p>
           <h2 id="applications-of-machine-learning">Applications of machine learning</h2>
+          <p>Here are a few applications of machine learning. There are many more:</p>
           <ul>
             <li>
               <a href="/notes/image_classification/">Image classification</a>
@@ -87,8 +89,13 @@
             <li>
               <a href="/notes/language/">Language modeling</a>
             </li>
+            <li>Speech recognition</li>
+            <li>Text translation</li>
+            <li>Speech translation</li>
+            <li>Content spam detection and filtering</li>
+            <li>Fraud detection</li>
           </ul>
-          <p>Machine learning is very good at finding a function between two sets of data, no matter if such a function is grounded in reality or not. This is one of the many sources of bias that can exist in ML models, which we need to understand and avoid when using such models in real-world settings.</p>
+          <p>Machine learning is very good at finding a function between two sets of data, no matter if such a function is grounded in reality or not. This is one of the many sources of <a href="/notes/algorithmic_bias/">algorithmic bias</a> that can exist in ML models, which we need to understand and avoid when using such models in real-world settings.</p>
           <h3 id="ethically-debatable-applications">Ethically debatable applications</h3>
           <ul>
             <li>Patronym-based ethnicity classification (with the caveats it implies) (<a href="#bessudnovPredictingEthnicityData2021"><cite itemprop="citation" itemscope itemid="doi:10.31235/osf.io/wf6p4">Bessudnov et al. 2021</cite></a>)
@@ -247,7 +254,7 @@
           </div>
         </div>
         <div class="text-center" style="font-variant-caps:all-small-caps">
-          Last changed <a class="u-url" href="https://hugocisneros.com/notes/machine_learning/"><time itemprop="datePublished" class="dt-published" datetime="2022-12-20T16:24:00+0100">20/12/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/machine_learning/"><time itemprop="datePublished" class="dt-published" datetime="2022-12-21T09:16:00+0100">21/12/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>
@@ -265,7 +272,7 @@
       <li class="ml-2 first:before:content-none before:content-['•'] inline-block list-none">
         <a class="ml-2 text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
       </li>
-      <li class="ml-2 first:before:content-none before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block list-none"><span class="ml-2">© Hugo Cisneros 2022</span></li>
+      <li class="ml-2 first:before:content-none before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block list-none"><span class="ml-2">© Hugo Cisneros 2023</span></li>
     </ul>
   </footer>
   <link rel="stylesheet" href="/js/katex/katex.min.css">

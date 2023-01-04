@@ -65,7 +65,7 @@
   </header>
   <main class="content h-card container mt-2 m-auto leading-loose md:px-0 px-2 z-0" role="main">
     <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-      <div class="bg-zinc-100 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
+      <div class="bg-zinc-200 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
         <h1 class="article-title p-name" itemprop="name">Huffman coding</h1>
         <div class="article-content e-content p-name" itemprop="articleBody">
           <dl>
@@ -74,9 +74,41 @@
               <a href="/notes/compression/">Compression</a>, <a href="/notes/entropy_coding/">Entropy coding</a>
             </dd>
           </dl>
+          <h2 id="python-implementation">Python implementation</h2>
+          <p><a id="code-snippet--huffman"></a></p>
+          <div class="highlight">
+            <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="display:flex"><span><span style="color:#719e07">from</span> heapq <span style="color:#719e07">import</span> heappush, heappop, heapify
+</span></span><span style="display:flex"><span>
+</span></span><span style="display:flex"><span><span style="color:#719e07">def</span> <span style="color:#268bd2">huffman_coding</span>(frequency_dict):
+</span></span><span style="display:flex"><span>    <span style="color:#586e75"># Create a heap of tuples (frequency, character, code)</span>
+</span></span><span style="display:flex"><span>    heap <span style="color:#719e07">=</span> [[frequency, [character, <span style="color:#2aa198">""</span>]] <span style="color:#719e07">for</span> character, frequency <span style="color:#719e07">in</span> frequency_dict<span style="color:#719e07">.</span>items()]
+</span></span><span style="display:flex"><span>    heapify(heap)
+</span></span><span style="display:flex"><span>    <span style="color:#719e07">while</span> <span style="color:#b58900">len</span>(heap) <span style="color:#719e07">&gt;</span> <span style="color:#2aa198">1</span>:
+</span></span><span style="display:flex"><span>        <span style="color:#586e75"># Extract the two nodes with the lowest frequencies</span>
+</span></span><span style="display:flex"><span>        left, right <span style="color:#719e07">=</span> heappop(heap), heappop(heap)
+</span></span><span style="display:flex"><span>        <span style="color:#586e75"># Assign a "0" to the left child and a "1" to the right child</span>
+</span></span><span style="display:flex"><span>        <span style="color:#719e07">for</span> pair <span style="color:#719e07">in</span> left[<span style="color:#2aa198">1</span>:]:
+</span></span><span style="display:flex"><span>            pair[<span style="color:#2aa198">1</span>] <span style="color:#719e07">=</span> <span style="color:#2aa198">"0"</span> <span style="color:#719e07">+</span> pair[<span style="color:#2aa198">1</span>]
+</span></span><span style="display:flex"><span>        <span style="color:#719e07">for</span> pair <span style="color:#719e07">in</span> right[<span style="color:#2aa198">1</span>:]:
+</span></span><span style="display:flex"><span>            pair[<span style="color:#2aa198">1</span>] <span style="color:#719e07">=</span> <span style="color:#2aa198">"1"</span> <span style="color:#719e07">+</span> pair[<span style="color:#2aa198">1</span>]
+</span></span><span style="display:flex"><span>        <span style="color:#586e75"># Merge the two nodes and add the resulting node back to the heap</span>
+</span></span><span style="display:flex"><span>        heappush(heap, [left[<span style="color:#2aa198">0</span>] <span style="color:#719e07">+</span> right[<span style="color:#2aa198">0</span>]] <span style="color:#719e07">+</span> left[<span style="color:#2aa198">1</span>:] <span style="color:#719e07">+</span> right[<span style="color:#2aa198">1</span>:])
+</span></span><span style="display:flex"><span>    <span style="color:#586e75"># Extract the coding dictionary from the heap</span>
+</span></span><span style="display:flex"><span>    <span style="color:#719e07">return</span> <span style="color:#b58900">dict</span>(<span style="color:#b58900">sorted</span>(heappop(heap)[<span style="color:#2aa198">1</span>:], key<span style="color:#719e07">=</span><span style="color:#719e07">lambda</span> p: (<span style="color:#b58900">len</span>(p[<span style="color:#719e07">-</span><span style="color:#2aa198">1</span>]), p)))
+</span></span><span style="display:flex"><span>
+</span></span><span style="display:flex"><span><span style="color:#586e75"># Example usage</span>
+</span></span><span style="display:flex"><span>frequency_dict <span style="color:#719e07">=</span> {<span style="color:#2aa198">'a'</span>: <span style="color:#2aa198">45</span>, <span style="color:#2aa198">'b'</span>: <span style="color:#2aa198">13</span>, <span style="color:#2aa198">'c'</span>: <span style="color:#2aa198">12</span>, <span style="color:#2aa198">'d'</span>: <span style="color:#2aa198">16</span>, <span style="color:#2aa198">'e'</span>: <span style="color:#2aa198">9</span>, <span style="color:#2aa198">'f'</span>: <span style="color:#2aa198">5</span>, <span style="color:#2aa198">'r'</span>: <span style="color:#2aa198">2</span>, <span style="color:#2aa198">'q'</span>: <span style="color:#2aa198">1</span>}
+</span></span><span style="display:flex"><span><span style="color:#b58900">print</span>(huffman_coding(frequency_dict))
+</span></span></code></pre>
+          </div>
+          <p>The code above outputs the following Python dictionary:</p>
+          <div class="highlight">
+            <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text"><span style="display:flex"><span>{'a': '0', 'b': '101', 'c': '100', 'd': '110', 'e': '1111', 'f': '11101', 'q': '111000', 'r': '111001'}
+</span></span></code></pre>
+          </div>
         </div>
         <div class="text-center" style="font-variant-caps:all-small-caps">
-          Last changed <a class="u-url" href="https://hugocisneros.com/notes/huffman_coding/"><time itemprop="datePublished" class="dt-published" datetime="2021-09-30T12:36:00+0200">30/09/2021</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/huffman_coding/"><time itemprop="datePublished" class="dt-published" datetime="2022-12-20T16:59:00+0100">20/12/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>
@@ -94,7 +126,7 @@
       <li class="ml-2 first:before:content-none before:content-['•'] inline-block list-none">
         <a class="ml-2 text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
       </li>
-      <li class="ml-2 first:before:content-none before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block list-none"><span class="ml-2">© Hugo Cisneros 2022</span></li>
+      <li class="ml-2 first:before:content-none before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block list-none"><span class="ml-2">© Hugo Cisneros 2023</span></li>
     </ul>
   </footer>
   <link rel="stylesheet" href="/js/katex/katex.min.css">
