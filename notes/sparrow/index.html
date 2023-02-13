@@ -4,20 +4,20 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
-  <title>GPT-3 - Hugo Cisneros</title>
-  <meta property="og:title" content="GPT-3 - Hugo Cisneros">
+  <title>Sparrow - Hugo Cisneros</title>
+  <meta property="og:title" content="Sparrow - Hugo Cisneros">
   <meta property="og:type" content="article">
   <meta property="og:image" content="/img/main.jpeg">
-  <meta property="og:url" content="https://hugocisneros.com/notes/gpt_3/">
-  <meta property="og:description" content="Notes about GPT-3">
-  <meta name="Description" property="description" content="Notes about GPT-3">
+  <meta property="og:url" content="https://hugocisneros.com/notes/sparrow/">
+  <meta property="og:description" content="Notes about Sparrow">
+  <meta name="Description" property="description" content="Notes about Sparrow">
   <link rel="me" href="https://twitter.com/@cisne_hug">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@cisne_hug">
   <meta name="twitter:creator" content="@cisne_hug">
   <link rel="me" href="https://scholar.social/@hugcis">
   <link rel="me" href="https://github.com/hugcis">
-  <meta property="keywords" content="transformers, nlp, gpt">
+  <meta property="keywords" content="transformers, gpt, chinchilla">
   <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
   <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
   <link rel="stylesheet" href="https://hugocisneros.com/css/style.min.css">
@@ -66,67 +66,40 @@
   <main class="content h-card container mt-2 m-auto leading-loose md:px-0 px-2 z-0" role="main">
     <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
       <div class="bg-zinc-200 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
-        <h1 class="article-title p-name" itemprop="name">GPT-3</h1>
+        <h1 class="article-title p-name" itemprop="name">Sparrow</h1>
         <div class="article-content e-content p-name" itemprop="articleBody">
           <dl>
             <dt>tags</dt>
             <dd>
-              <a href="/notes/transformers/">Transformers</a>, <a href="/notes/nlp/">NLP</a>, <a href="/notes/gpt/">GPT</a>
+              <a href="/notes/transformers/">Transformers</a>, <a href="/notes/gpt/">GPT</a>, <a href="/notes/chinchilla/">Chinchilla</a>
             </dd>
             <dt>paper</dt>
             <dd>
-              (<a href="#brownLanguageModelsAre2020"><cite itemprop="citation" itemscope itemid="key:brownLanguageModelsAre2020">Brown et al. 2020</cite></a>)
+              (<a href="#glaeseImprovingAlignmentDialogue2022"><cite itemprop="citation" itemscope itemid="doi:10.48550/arXiv.2209.14375">Glaese et al. 2022</cite></a>)
+            </dd>
+            <dt>blog post</dt>
+            <dd>
+              <a href="https://www.deepmind.com/blog/building-safer-dialogue-agents">Deepmind announcement blog post</a>
             </dd>
           </dl>
           <h2 id="architecture">Architecture</h2>
-          <p>Like <a href="/notes/gpt_2/">GPT-2</a>, with the addition of locally banded sparse <a href="/notes/attention/">attention</a>.</p>
+          <p>Starts from the Chinchilla 70B model but adds <a href="/notes/reinforcement_learning_with_human_feedback/">RLHF</a> (Reinforcement Learning with Human Feedback). It also adds inline evidence like GopherCite.</p>
           <h2 id="parameter-count">Parameter count</h2>
-          <p>175B</p>
+          <p>70B</p>
           <h2 id="bibliography">Bibliography</h2>
           <ol class="biblio-list pl-0">
-            <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="brownLanguageModelsAre2020"><span itemprop="author">Tom B. Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared Kaplan, Prafulla Dhariwal, Arvind Neelakantan, et al.</span>. <time datetime="2020" itemprop="datePublished">June 4, 2020</time>. "<span itemprop="name">Language Models Are Few-shot Learners</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:2005.14165 [cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2005.14165">http://arxiv.org/abs/2005.14165</a>.</span></li>
+            <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="glaeseImprovingAlignmentDialogue2022" itemid="doi:10.48550/arXiv.2209.14375"><span itemprop="author">Amelia Glaese, Nat McAleese, Maja Trębacz, John Aslanides, Vlad Firoiu, Timo Ewalds, Maribeth Rauh, et al.</span>. <time datetime="2022" itemprop="datePublished">September 28, 2022</time>. "<span itemprop="name">Improving Alignment of Dialogue Agents via Targeted Human Judgements</span>". arXiv. <a itemprop="sameAs" href="https://doi.org/10.48550/arXiv.2209.14375">DOI</a>.</span></li>
           </ol>
         </div>
-        <div class="bl-section">
-          <h2>Links to this note</h2>
-          <div class="backlinks">
-            <ul>
-              <li>
-                <a href="/notes/bloom/">BLOOM</a>
-              </li>
-              <li>
-                <a href="/notes/chatgpt/">ChatGPT</a>
-              </li>
-              <li>
-                <a href="/notes/dall_e/">DALL-E</a>
-              </li>
-              <li>
-                <a href="/notes/gpt/">GPT</a>
-              </li>
-              <li>
-                <a href="/notes/gptinstruct/">GPTInstruct</a>
-              </li>
-              <li>
-                <a href="/notes/jurassic_1/">Jurassic-1</a>
-              </li>
-              <li>
-                <a href="/notes/opt/">OPT: Open Pre-trained Transformer</a>
-              </li>
-              <li>
-                <a href="/notes/turing_nlg/">Turing-NLG</a>
-              </li>
-            </ul>
-          </div>
-        </div>
         <div class="text-center" style="font-variant-caps:all-small-caps">
-          Last changed <a class="u-url" href="https://hugocisneros.com/notes/gpt_3/"><time itemprop="datePublished" class="dt-published" datetime="2022-07-26T10:06:00+0200">26/07/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/sparrow/"><time itemprop="datePublished" class="dt-published" datetime="2023-02-13T13:22:00+0100">13/02/2023</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>
     <h3>Comments</h3>
     <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
     <section id="isso-thread"></section><br>
-    <a href="/notes#gpt_3"><b>← Back to Notes</b></a>
+    <a href="/notes#sparrow"><b>← Back to Notes</b></a>
   </main>
   <footer class="footer container h-10 text-center mt-1">
     <hr class="my-4">

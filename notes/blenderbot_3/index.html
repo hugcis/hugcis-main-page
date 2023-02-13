@@ -4,20 +4,20 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
-  <title>GPT-3 - Hugo Cisneros</title>
-  <meta property="og:title" content="GPT-3 - Hugo Cisneros">
+  <title>BlenderBot 3 - Hugo Cisneros</title>
+  <meta property="og:title" content="BlenderBot 3 - Hugo Cisneros">
   <meta property="og:type" content="article">
   <meta property="og:image" content="/img/main.jpeg">
-  <meta property="og:url" content="https://hugocisneros.com/notes/gpt_3/">
-  <meta property="og:description" content="Notes about GPT-3">
-  <meta name="Description" property="description" content="Notes about GPT-3">
+  <meta property="og:url" content="https://hugocisneros.com/notes/blenderbot_3/">
+  <meta property="og:description" content="Notes about BlenderBot 3">
+  <meta name="Description" property="description" content="Notes about BlenderBot 3">
   <link rel="me" href="https://twitter.com/@cisne_hug">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@cisne_hug">
   <meta name="twitter:creator" content="@cisne_hug">
   <link rel="me" href="https://scholar.social/@hugcis">
   <link rel="me" href="https://github.com/hugcis">
-  <meta property="keywords" content="transformers, nlp, gpt">
+  <meta property="keywords" content="transformers, gpt">
   <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
   <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
   <link rel="stylesheet" href="https://hugocisneros.com/css/style.min.css">
@@ -66,25 +66,30 @@
   <main class="content h-card container mt-2 m-auto leading-loose md:px-0 px-2 z-0" role="main">
     <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
       <div class="bg-zinc-200 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
-        <h1 class="article-title p-name" itemprop="name">GPT-3</h1>
+        <h1 class="article-title p-name" itemprop="name">BlenderBot 3</h1>
         <div class="article-content e-content p-name" itemprop="articleBody">
           <dl>
             <dt>tags</dt>
             <dd>
-              <a href="/notes/transformers/">Transformers</a>, <a href="/notes/nlp/">NLP</a>, <a href="/notes/gpt/">GPT</a>
+              <a href="/notes/transformers/">Transformers</a>, <a href="/notes/gpt/">GPT</a>, <a href="/notes/opt/">OPT: Open Pre-trained Transformer</a>, <a href="/notes/nlp/">NLP</a>
+            </dd>
+            <dt>blog post</dt>
+            <dd>
+              <a href="https://ai.facebook.com/blog/blenderbot-3-a-175b-parameter-publicly-available-chatbot-that-improves-its-skills-and-safety-over-time/">Meta AI announcement blog post</a>
             </dd>
             <dt>paper</dt>
             <dd>
-              (<a href="#brownLanguageModelsAre2020"><cite itemprop="citation" itemscope itemid="key:brownLanguageModelsAre2020">Brown et al. 2020</cite></a>)
+              (<a href="#shusterBlenderBotDeployedConversational2022"><cite itemprop="citation" itemscope itemid="doi:10.48550/arXiv.2208.03188">Shuster et al. 2022</cite></a>)
             </dd>
           </dl>
           <h2 id="architecture">Architecture</h2>
-          <p>Like <a href="/notes/gpt_2/">GPT-2</a>, with the addition of locally banded sparse <a href="/notes/attention/">attention</a>.</p>
+          <p>It is based on a pre-trained <a href="/notes/opt/">OPT</a> model, with some optimizations to make it better as a dialog agent, such as long term memory and the ability to search the web.</p>
+          <p>It uses human feedback to fine-tune its results on some tasks.</p>
           <h2 id="parameter-count">Parameter count</h2>
           <p>175B</p>
           <h2 id="bibliography">Bibliography</h2>
           <ol class="biblio-list pl-0">
-            <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="brownLanguageModelsAre2020"><span itemprop="author">Tom B. Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared Kaplan, Prafulla Dhariwal, Arvind Neelakantan, et al.</span>. <time datetime="2020" itemprop="datePublished">June 4, 2020</time>. "<span itemprop="name">Language Models Are Few-shot Learners</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:2005.14165 [cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2005.14165">http://arxiv.org/abs/2005.14165</a>.</span></li>
+            <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="shusterBlenderBotDeployedConversational2022" itemid="doi:10.48550/arXiv.2208.03188"><span itemprop="author">Kurt Shuster, Jing Xu, Mojtaba Komeili, Da Ju, Eric Michael Smith, Stephen Roller, Megan Ung, et al.</span>. <time datetime="2022" itemprop="datePublished">August 10, 2022</time>. "<span itemprop="name">Blenderbot 3: A Deployed Conversational Agent That Continually Learns to Responsibly Engage</span>". arXiv. <a itemprop="sameAs" href="https://doi.org/10.48550/arXiv.2208.03188">DOI</a>.</span></li>
           </ol>
         </div>
         <div class="bl-section">
@@ -92,41 +97,20 @@
           <div class="backlinks">
             <ul>
               <li>
-                <a href="/notes/bloom/">BLOOM</a>
-              </li>
-              <li>
                 <a href="/notes/chatgpt/">ChatGPT</a>
-              </li>
-              <li>
-                <a href="/notes/dall_e/">DALL-E</a>
-              </li>
-              <li>
-                <a href="/notes/gpt/">GPT</a>
-              </li>
-              <li>
-                <a href="/notes/gptinstruct/">GPTInstruct</a>
-              </li>
-              <li>
-                <a href="/notes/jurassic_1/">Jurassic-1</a>
-              </li>
-              <li>
-                <a href="/notes/opt/">OPT: Open Pre-trained Transformer</a>
-              </li>
-              <li>
-                <a href="/notes/turing_nlg/">Turing-NLG</a>
               </li>
             </ul>
           </div>
         </div>
         <div class="text-center" style="font-variant-caps:all-small-caps">
-          Last changed <a class="u-url" href="https://hugocisneros.com/notes/gpt_3/"><time itemprop="datePublished" class="dt-published" datetime="2022-07-26T10:06:00+0200">26/07/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/blenderbot_3/"><time itemprop="datePublished" class="dt-published" datetime="2023-02-13T13:18:00+0100">13/02/2023</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>
     <h3>Comments</h3>
     <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
     <section id="isso-thread"></section><br>
-    <a href="/notes#gpt_3"><b>← Back to Notes</b></a>
+    <a href="/notes#blenderbot_3"><b>← Back to Notes</b></a>
   </main>
   <footer class="footer container h-10 text-center mt-1">
     <hr class="my-4">
