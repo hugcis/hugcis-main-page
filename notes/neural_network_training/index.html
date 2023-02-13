@@ -74,13 +74,20 @@
               <a href="/notes/neural_networks/">Neural networks</a>, <a href="/notes/machine_learning/">Machine learning</a>, <a href="/notes/optimization/">Optimization</a>
             </dd>
           </dl>
+          <p>A common algorithm for neural network training is <a href="/notes/backpropagation/">backpropagation</a>.</p>
           <h2 id="neural-network-training-as-development-in-program-space">Neural network training as development in program space</h2>
           <p>A neural network as a whole can be seen as a <a href="/notes/dynamical_systems/">dynamical system</a>. Its state is the collection of its parameters, and its evolution function is the <a href="/notes/optimization/">optimization</a> step taken when training the network.</p>
           <p>A neural network has parameters \(\theta_t\) at time \(t\) which can be seen as its state. In standard <a href="/notes/supervised_learning/">supervised learning</a>, the parameters are updated by the chosen <a href="/notes/optimization/">optimization</a> <a href="/notes/algorithm/">algorithm</a> and a set of training pairs \((\bm{X}_t, \bm{Y}_t)\). This is the update rule changing the state of that dynamical system at each training step.</p>
           <p>In such a framework, the goal of training the neural network is to reach a form of <a href="/notes/attractor/">attractor</a>: further optimization steps don’t change the state (parameters) of the neural network.</p>
-          <p>This attractor should correspond to useful functional properties for the network, a measured by a cost function. <a href="/notes/meta_learning/">Meta-learning</a> can be used to learn the evolution function itself to make the dynamical system converge to better attractors in the least amount of steps.</p>
+          <p>This attractor should correspond to useful functional properties for the network, a measured by a cost function. <a href="/notes/meta_learning/">Meta-learning</a> can be used to learn the evolution function itself to make the dynamical system converge to better attractors in the least amount of steps, as done in (<a href="#tancikLearnedInitializationsOptimizing2021"><cite itemprop="citation" itemscope itemid="key:tancikLearnedInitializationsOptimizing2021">Tancik et al. 2021</cite></a>).</p>
           <h3 id="program-evolution">Program evolution</h3>
           <p>A neural network is a program, an <a href="/notes/algorithm/">algorithm</a>. Its parameters specify a sequence of steps from input data to output prediction. Training a neural network is like moving in the algorithmic space towards programs with better performance according to a given cost function.</p>
+          <h2 id="bibliography">Bibliography</h2>
+          <ol class="biblio-list pl-0">
+            <li class="list-none my-4 mx-2">
+              <span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="tancikLearnedInitializationsOptimizing2021"><span itemprop="author">Matthew Tancik, Ben Mildenhall, Terrance Wang, Divi Schmidt, Pratul P. Srinivasan, Jonathan T. Barron, Ren Ng</span>. <time datetime="2021" itemprop="datePublished">March 23, 2021</time>. "<span itemprop="name">Learned Initializations for Optimizing Coordinate-based Neural Representations</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:2012.02189 [cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2012.02189">http://arxiv.org/abs/2012.02189</a>.</span>&nbsp;<a href="/notes/tanciklearnedinitializationsoptimizing2021/">See notes</a>
+            </li>
+          </ol>
         </div>
         <div class="bl-section">
           <h2>Links to this note</h2>
@@ -93,13 +100,16 @@
                 <a href="/notes/yenetworkdeconvolution2020/">Notes on: Network Deconvolution by Ye, C., Evanusa, M., He, H., Mitrokhin, A., Goldstein, T., Yorke, J. A., Fermuller, Cornelia, … (2020)</a>
               </li>
               <li>
+                <a href="/notes/quantization/">Quantization</a>
+              </li>
+              <li>
                 <a href="/notes/the_lottery_ticket_hypothesis/">The Lottery ticket hypothesis</a>
               </li>
             </ul>
           </div>
         </div>
         <div class="text-center" style="font-variant-caps:all-small-caps">
-          Last changed <a class="u-url" href="https://hugocisneros.com/notes/neural_network_training/"><time itemprop="datePublished" class="dt-published" datetime="2022-04-14T20:12:00+0200">14/04/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/neural_network_training/"><time itemprop="datePublished" class="dt-published" datetime="2023-02-02T18:19:00+0100">02/02/2023</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>
