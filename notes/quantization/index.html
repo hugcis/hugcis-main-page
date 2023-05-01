@@ -83,7 +83,9 @@
             <li>
               <p>Dynamic quantization (weights quantized with activations read/stored in floating point and quantized for compute)</p>
               <p>To quantize all <code>Linear</code> layers in a model to use <code>int8</code> weights and activations, use the following code:</p>
-              <p>#+begin_src python import torch.quantization quantized_model = torch.quantization.quantize_dynamic(model, {torch.nn.Linear}, dtype=torch.qint8) #+end_src python</p>
+              <p>#+begin_src python</p>
+              <p>import torch.quantization quantized_model = torch.quantization.quantize_dynamic(model, {torch.nn.Linear}, dtype=torch.qint8)</p>
+              <p>#+end_src python</p>
             </li>
             <li>
               <p>Static quantization (weights quantized, activations quantized, calibration required post training). This option requires calibration with a representative dataset to determine optimal quantization parameters for the activations.</p>
@@ -98,7 +100,7 @@
           </ol>
         </div>
         <div class="text-center" style="font-variant-caps:all-small-caps">
-          Last changed <a class="u-url" href="https://hugocisneros.com/notes/quantization/"><time itemprop="datePublished" class="dt-published" datetime="2023-02-22T12:00:00+0100">22/02/2023</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/quantization/"><time itemprop="datePublished" class="dt-published" datetime="2023-05-01T08:13:00+0200">01/05/2023</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>
