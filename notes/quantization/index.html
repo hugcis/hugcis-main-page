@@ -83,9 +83,11 @@
             <li>
               <p>Dynamic quantization (weights quantized with activations read/stored in floating point and quantized for compute)</p>
               <p>To quantize all <code>Linear</code> layers in a model to use <code>int8</code> weights and activations, use the following code:</p>
-              <p>#+begin_src python</p>
-              <p>import torch.quantization quantized_model = torch.quantization.quantize_dynamic(model, {torch.nn.Linear}, dtype=torch.qint8)</p>
-              <p>#+end_src python</p>
+              <div class="highlight">
+                <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="display:flex"><span><span style="color:#719e07">import</span> torch.quantization
+</span></span><span style="display:flex"><span>quantized_model <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>quantization<span style="color:#719e07">.</span>quantize_dynamic(model, {torch<span style="color:#719e07">.</span>nn<span style="color:#719e07">.</span>Linear}, dtype<span style="color:#719e07">=</span>torch<span style="color:#719e07">.</span>qint8)
+</span></span></code></pre>
+              </div>
             </li>
             <li>
               <p>Static quantization (weights quantized, activations quantized, calibration required post training). This option requires calibration with a representative dataset to determine optimal quantization parameters for the activations.</p>
@@ -100,7 +102,7 @@
           </ol>
         </div>
         <div class="text-center" style="font-variant-caps:all-small-caps">
-          Last changed <a class="u-url" href="https://hugocisneros.com/notes/quantization/"><time itemprop="datePublished" class="dt-published" datetime="2023-05-01T08:13:00+0200">01/05/2023</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/quantization/"><time itemprop="datePublished" class="dt-published" datetime="2023-05-01T08:18:00+0200">01/05/2023</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>
