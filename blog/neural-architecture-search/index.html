@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
+  <title>Neural Architecture Search - Hugo Cisneros</title>
+  <meta property="og:title" content="Neural Architecture Search - Hugo Cisneros">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="/img/nas_triad.svg">
+  <meta property="og:url" content="https://hugocisneros.com/blog/neural-architecture-search/">
+  <meta property="og:description" content="An introduction and survey in Neural Architecture Search">
+  <meta name="Description" property="description" content="An introduction and survey in Neural Architecture Search">
+  <link rel="me" href="https://twitter.com/@cisne_hug">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@cisne_hug">
+  <meta name="twitter:creator" content="@cisne_hug">
+  <link rel="me" href="https://scholar.social/@hugcis">
+  <link rel="me" href="https://github.com/hugcis">
+  <meta property="keywords" content="neural architecture search, neural networks, machine learning, deep learning, evolution, reinforcement learning">
+  <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
+  <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
+  <link rel="stylesheet" href="https://hugocisneros.com/css/style.min.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link href="https://hugocisneros.com/index.xml" type="application/atom+xml" rel="alternate" title="Sitewide Atom feed">
+  <meta name="theme-color" content="#ffffff">
+  <script>
+  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
+  </script>
+</head>
+<body>
+  <header class="md:px-0 px-2">
+    <nav>
+      <div class="container flex flex-wrap justify-between items-center mx-auto">
+        <div class="nav-main my-2.5">
+          <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
+        </div><button type="button" onclick="toggleMenu()" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul class="grid md:grid-flow-col items-center justify-between text-lg my-2.5 grid-cols-1 pl-0 text-center">
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
+            </li>
+            <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full" aria-label="Toggle between dark and light mode"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="ligh-mode-button-img" alt="A sun icon for switching to light mode" src="https://hugocisneros.com/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" alt="A moon icon for switching to dark mode" src="https://hugocisneros.com/img/dark_mode.svg"></button></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="content h-card container mt-2 m-auto leading-loose md:px-0 px-2 z-0" role="main">
+    <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+      <div class="title-container">
+        <h1 class="article-title p-name" itemprop="name">Neural Architecture Search</h1><b><i itemprop="headline" class="article-headline text-lg p-summary">Searching for the right neural network.</i></b>
+        <div class="flex justify-between items-center">
+          <a class="text-lg text-gray-600 dark:text-gray-400 border-none u-url" href="https://hugocisneros.com/blog/neural-architecture-search/"><time itemprop="datePublished" class="dt-published" datetime="2020-01-14T09:17:29+0100" content="2020-01-14T09:17:29+0100">2020.01.14</time></a> <a class="text-gray-600 dark:text-gray-400 text-right border-none p-author h-card" rel="author" href="https://hugocisneros.com/" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+        </div>
+        <div>
+          Reading time: 7 minutes.
+        </div>
+      </div>
+      <div class="article-content e-content" itemprop="articleBody">
+        <p>Neural Architecture Search (NAS) is a relatively new but already successful and productive subfield of machine learning, usually seen as part of Deep Learning. It is also often thought of as part of <a href="https://en.wikipedia.org/wiki/Automated_machine_learning">AutoML</a> (see <a href="#automl">[1]</a>). AutoML corresponds to finding ways of automating some of the most tedious aspect of machine learning and data science. This includes hyperparameter search, feature engineering and model selection from an always growing catalog of battle tested algorithms as well as experimental models.</p>
+        <h2 id="a-search-problem">A search problem</h2>
+        <p>One could argue that a lot of research in deep learning has been essentially based on finding new clever neural network architectures that could beat the previous state of the art on some dataset. I am not saying that this particular line of work has been more important than some other ideas researchers have come up with. Some of these enabled faster training, better performance or less expensive computations. However, neural network architecture changes — usually deeply thought through and rationalized changes like “let’s double the number of convolutional layers” — were at the root of many early successes of deep learning.</p>
+        <figure class="center" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+          <img itemprop="url" src="/img/layers.svg" alt="Number of layers in some well known CNN architectures." width="500">
+          <figcaption>
+            <h4 itemprop="name">Let's add even more layers! - Number of layers in some CNN architectures.</h4>
+          </figcaption>
+        </figure>
+        <p style="font-size:13px"><i>Disclaimer: The number of layers is certainly not the only measure of complexity increase for a deep neural network, and the purpose of this visualization is to highlight a general trend rather than compare the models.</i></p>
+        <p>Looking back, this whole process can be seen as a large search game. Each player was searching for the right configuration, the right number of layers, filters and activations. The reward was the test score on CIFAR-10, Imagenet or some other dataset (the comparison is not so surprising when we observe that many NAS papers use <a href="#reinforcement-learning">reinforcement learning</a>).</p>
+        <p>And this has not been easy, because nobody really knew what they were doing: should you keep adding layers, should you change the number of filters or the size of your convolutions? Something progressively started to seem more and more obvious to several researchers: there should be a way to automate this whole process. This idea was explored early in the history of machine learning <a href="#first_nas">[2]</a>, but has gained renewed interest recently.</p>
+        <h3 id="why-search-for-architectures">Why search for architectures?</h3>
+        <p>Searching for a model is tedious, but is NAS just another hyperparameter optimization task? The success of deep learning is often attributed to the powerful feature engineering process it can implement. Hierarchical and complex features are <em>learned</em> through optimization rather than painfully designed, sometimes using computationally expensive mathematical operations. However, not all deep neural networks achieve this with equal efficiency, and some recent progress, e.g. in computer vision were driven by the design of increasingly efficient architectures leveraging some properties of input data (translation invariance in the case of <a href="https://en.wikipedia.org/wiki/Convolutional_neural_network">convolutional neural networks</a>, <a href="#cnn">[3]</a>).</p>
+        <p>We do not yet completely understand how and why architectures are better than others, but it is natural to want to automate this process of constructing and finding new ones and use optimization to make it more efficient. We already have a powerful tool for automating the learning process in our models: optimization. Why not apply it to learning the architectures themselves? This is sometimes called <em>meta-learning</em>.</p>
+        <h3 id="challenges-of-nas">Challenges of NAS</h3>
+        <p>Neural architecture search might sound like a reasonable and natural idea, but it is much more complex than it looks. To use optimization algorithms to solve it, it needs to be well defined and to have clear objectives.</p>
+        <figure class="center" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+          <img itemprop="url" src="/img/nas_triad.svg" alt="The three main components of NAS are: the search space, the search strategy and the evaluation method" width="500">
+          <figcaption>
+            <h4 itemprop="name">Three components of Neural Architecture Search</h4>
+          </figcaption>
+        </figure>
+        <h4 id="the-search-space">The search space</h4>
+        <p>While the problem can easily be framed as a search problem, it is not immediately clear what space we are searching in. This is a recurring issue in challenging search problems: it is hard to define the <em>granularity</em> at which we are searching. For instance with a simple neural network, should we allow any number of layers, neurons per layer, or activation functions? By restricting the space to a small set of building blocks we might make the search much quicker but at the cost of reducing the expressive power of the resulting networks.</p>
+        <figure class="center" style="width:80%" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+          <img itemprop="url" src="/img/simple_search.svg" alt="A neural network diagram with 3 layers and activations." width="240">
+          <figcaption>
+            <h4 itemprop="name">A simple search among 2 possible activations for each layer. Fixed number of layers and units per layers. There are only 6 possible networks of this kind.</h4>
+          </figcaption>
+        </figure>
+        <p>There are many different ways of specifying the search space. One can focus on few elements such as activation functions, or manipulate bigger components such as blocks.</p>
+        <figure class="center" style="width:80%" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+          <img itemprop="url" src="/img/complex_search.svg" alt="A neural network diagram with 3 layers and activations." width="300">
+          <figcaption>
+            <h4 itemprop="name">Now we allow the number of layers and units per layers to change. The number of possible networks explodes!</h4>
+          </figcaption>
+        </figure>
+        <h4 id="how-to-search">How to search?</h4>
+        <p>Another question with neural architecture search is the way the space should be explored. It cannot be done with traditional optimization techniques because of the several undesirable properties of this search space, identified by Miller et al. in 1989 <a href="#first_nas">[2]</a>:</p>
+        <ul>
+          <li>Size: the space is <strong>extremely large</strong> if we consider even quite simple topologies</li>
+          <li>Undifferentiable: changes in network parameters are discrete and can have discontinuous effects on the network behavior. Therefore the space is <strong>not differentiable</strong>.</li>
+          <li>Indirect mapping between architecture and performance: a number of parameters influence the performance of an architecture including random sampling of training data, making the space <strong>complex and noisy</strong>.</li>
+          <li>Deceptive: small changes in network architecture can have strong and unpredictable impact on the performance. Conversely, dissimilar architectures might have comparable good performances. The space is <strong>deceptive and multimodal</strong>.</li>
+        </ul>
+        <h4 id="what-is-a-_good_-neural-network">What is a <em>good</em> neural network?</h4>
+        <p>Searching neural network is one thing, but one has to know when to stop searching and settle on an architecture. There are however many ways to evaluate a NAS algorithm, and this depends on the what we expect our resulting architecture to achieve:</p>
+        <blockquote>
+          <p>Are we only trying to find a good architecture for a specific downstream task? If so, should it give the best results for this task with minimal training, maximal computational efficiency or minimal amount of data? Therefore, what should the result be compared to? Other search methods or manually designed networks?</p>
+          <p>Maybe we should rather be looking for a good <strong>transferable</strong> architecture that has interesting performances on a range of tasks, and performs well with minimal training.</p>
+        </blockquote>
+        <p>This is not just a theoretical problem, and random search is a <em>very</em> competitive baseline to many famous published NAS methods, as argued by Li and Talwalkar in <a href="#random_search">[4]</a>.</p>
+        <h3 id="what-is-the-final-goal">What is the final goal?</h3>
+        <p>Theoretically, “solving” the NAS problem would mean being in possession of a system that can find the best possible neural network for any given task. Moreover, given that neural networks are universal approximators, this would probably be close or equivalent to general artificial intelligence. Whatever problem (or function, or input/output pairs from a function) we throw at our machine, it could spit out a neural network that computes it! Now imagine putting this machine in our physical worlds with sensors that can perceive the world around it. Would it return something similar to our brain as its optimal neural network? Or could it find something much better and more efficient? Of course, there are several limitation to this reasoning, but I believe the general idea to be true:</p>
+        <blockquote>
+          <p>Solving NAS is equivalent to obtaining general Artificial intelligence</p>
+        </blockquote>
+        <p>Or at least, it would be such a step forward it would make the end goal suddenly look much more achievable. However, none of this gives us insights into creating such a general purpose neural network-spitting machine. In the rest of the post, we will detail a few research directions that have been explored to this end.</p>
+        <h2 id="neuroevolution">Neuroevolution</h2>
+        <h3 id="genetic-algorithms">Genetic algorithms</h3>
+        <h2 id="reinforcement-learning">Reinforcement learning</h2>
+        <p>Another historically popular approach to NAS was to think of the neural network-generating algorithm as a kind of “intelligent designer agent”. This agent is tasked with the creation of a neural network architecture and makes decisions according to its internal policy. The reward of the agent is the performance of the resulting neural network on some downstream task. This could be seen as automating the research game (easily framed as a RL problem) by using artificial agents.</p>
+        <p>This approach was taken in <a href="#rnn_nas">[5]</a>, in which the authors train a <a href="https://hugocisneros.com/notes/recurrent_neural_networks/">recurrent neural network</a> (RNN) to generate a model description one hyper-parameter at a time. The RNN takes the last item as input for the next step. The search space they experiment with is quite large, albeit limited compared to the endless possibilities of NAS..</p>
+        <p>At the time, authors reported encouraging state of the art results on image datasets and language modeling on the Penn Tree Bank (PTB) dataset. They also transfer recurrent neural network cells found with their methods from the world-level PTB dataset to the character-level PTB dataset, showing some amount of transferability of their found architectures</p>
+        <h2 id="conclusion">Conclusion</h2>
+        <p>Ultimately with this kind of very popular sub-field of machine learning, the volume of available literature is so huge that we often get in a <em>The rich get richer</em> type of situation where papers from big companies or labs with especially good PR tend to overshadow all the others and absorb most citations from other researchers.</p>
+        <p>This is especially true when people not familiar with the field carry out a superficial-ish survey of available literature — which is my case for this post, and I apologize in advance for falling into the same trap. I still believe that eventually people get the credit they deserve — which might sound naive — but it can take years, and in the meantime winners may take all.</p>
+      </div>
+      <ul class="list-none pl-0 font-sm align-left">
+        <li class="list-none">Tags: <a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200" href="/tags/neural-architecture-search"><span class="flex flex-row justify-start items-center dark:bg-zinc-900 dark:hover:bg-zinc-700 hover:bg-zinc-300 bg-zinc-200 dark:border-zinc-600 py-0.5 px-1 rounded-t border-b-2 border-zinc-300 hover:border-zinc-500"><img class="h-4 mr-2 inline" src="https://hugocisneros.com/images/tag_logo.svg" alt="Logo of a tag: indicates that a tag item follows."> Neural architecture search</span></a> <a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200" href="/tags/neural-networks"><span class="flex flex-row justify-start items-center dark:bg-zinc-900 dark:hover:bg-zinc-700 hover:bg-zinc-300 bg-zinc-200 dark:border-zinc-600 py-0.5 px-1 rounded-t border-b-2 border-zinc-300 hover:border-zinc-500"><img class="h-4 mr-2 inline" src="https://hugocisneros.com/images/tag_logo.svg" alt="Logo of a tag: indicates that a tag item follows."> Neural networks</span></a> <a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200" href="/tags/machine-learning"><span class="flex flex-row justify-start items-center dark:bg-zinc-900 dark:hover:bg-zinc-700 hover:bg-zinc-300 bg-zinc-200 dark:border-zinc-600 py-0.5 px-1 rounded-t border-b-2 border-zinc-300 hover:border-zinc-500"><img class="h-4 mr-2 inline" src="https://hugocisneros.com/images/tag_logo.svg" alt="Logo of a tag: indicates that a tag item follows."> Machine learning</span></a> <a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200" href="/tags/deep-learning"><span class="flex flex-row justify-start items-center dark:bg-zinc-900 dark:hover:bg-zinc-700 hover:bg-zinc-300 bg-zinc-200 dark:border-zinc-600 py-0.5 px-1 rounded-t border-b-2 border-zinc-300 hover:border-zinc-500"><img class="h-4 mr-2 inline" src="https://hugocisneros.com/images/tag_logo.svg" alt="Logo of a tag: indicates that a tag item follows."> Deep learning</span></a> <a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200" href="/tags/evolution"><span class="flex flex-row justify-start items-center dark:bg-zinc-900 dark:hover:bg-zinc-700 hover:bg-zinc-300 bg-zinc-200 dark:border-zinc-600 py-0.5 px-1 rounded-t border-b-2 border-zinc-300 hover:border-zinc-500"><img class="h-4 mr-2 inline" src="https://hugocisneros.com/images/tag_logo.svg" alt="Logo of a tag: indicates that a tag item follows."> Evolution</span></a> <a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200" href="/tags/reinforcement-learning"><span class="flex flex-row justify-start items-center dark:bg-zinc-900 dark:hover:bg-zinc-700 hover:bg-zinc-300 bg-zinc-200 dark:border-zinc-600 py-0.5 px-1 rounded-t border-b-2 border-zinc-300 hover:border-zinc-500"><img class="h-4 mr-2 inline" src="https://hugocisneros.com/images/tag_logo.svg" alt="Logo of a tag: indicates that a tag item follows."> Reinforcement learning</span></a>
+        </li>
+      </ul>
+      <hr>
+      <div class="mb-8">
+        <h3>References</h3>
+        <div class="references-list">
+          <ol>
+            <li class="list-decimal" id="automl"><b>Frank Hutter, Lars Kotthoff & Joaquin Vanschoren</b>.Automated Machine Learning: Methods, Systems, Challenges.</li>
+            <li class="list-decimal" id="first_nas"><b>Miller, G. F., Todd, P. M. & Hegde, S. U.</b>.Designing Neural Networks using Genetic Algorithms. in ICGA vol. 89 379–384 (1989).</li>
+            <li class="list-decimal" id="cnn"><b>Kunihiko Fukushima</b>.Neocognitron: A Self-organizing Neural Network Model for a Mechanism of Pattern Recognition Unaffected by Shift in Position. Biological Cybernetics. 36 (4): 193–202</li>
+            <li class="list-decimal" id="random_search"><b>Li, L. & Talwalkar, A.</b>.Random Search and Reproducibility for Neural Architecture Search. arXiv:1902.07638 [cs, stat] (2019).</li>
+            <li class="list-decimal" id="rnn_nas"><b>Zoph, B. & Le, Q. V.</b>.Neural Architecture Search with Reinforcement Learning. arXiv:1611.01578 [cs] (2017).</li>
+          </ol>
+        </div>
+      </div>
+      <div class="text-neutral-500 mb-4">
+        Last modified <span itemprop="dateModified" datetime="2020-01-14T09:17:29+0100" content="2020-01-14T09:17:29+0100">14/01/2020</span>
+      </div>
+    </article>
+    <h3>Comments</h3>
+    <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
+    <section id="isso-thread"></section>
+  </main>
+  <footer class="footer container h-10 text-center mt-1">
+    <hr class="my-4">
+    <ul class="pl-0 mt-1">
+      <li class="first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="https://hugocisneros.com/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="https://hugocisneros.com/img/RSS.svg" alt="RSS feed icon"></a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="ml-2 text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block list-none"><span class="ml-2">© Hugo Cisneros 2025</span></li>
+    </ul>
+  </footer>
+  <script data-goatcounter="https://stats.hugocisneros.com/count" async src="//stats.hugocisneros.com/count.js"></script>
+</body>
+</html>
