@@ -40,7 +40,8 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
   <link href="https://hugocisneros.com/index.xml" type="application/atom+xml" rel="alternate" title="Sitewide Atom feed">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#f5f5f5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#27272a" media="(prefers-color-scheme: dark)">
   <script>
   function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
@@ -62,19 +63,19 @@
         <div class="hidden w-full md:block md:w-auto" id="navbar-default">
           <ul class="grid md:grid-flow-col items-center justify-between text-lg my-2.5 grid-cols-1 pl-0 text-center">
             <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
-              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/blog/">Blog</a>
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0 transition-colors duration-150" href="/blog/">Blog</a>
             </li>
             <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
-              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/notes/">Notes</a>
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0 transition-colors duration-150" href="/notes/">Notes</a>
             </li>
             <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
-              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/projects/">Projects</a>
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0 transition-colors duration-150" href="/projects/">Projects</a>
             </li>
             <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
-              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/resume/">Resume</a>
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0 transition-colors duration-150" href="/resume/">Resume</a>
             </li>
             <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
-              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0" href="/contact/">Contact</a>
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0 transition-colors duration-150" href="/contact/">Contact</a>
             </li>
             <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full" aria-label="Toggle between dark and light mode"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="ligh-mode-button-img" alt="A sun icon for switching to light mode" src="https://hugocisneros.com/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" alt="A moon icon for switching to dark mode" src="https://hugocisneros.com/img/dark_mode.svg"></button></li>
           </ul>
@@ -83,6 +84,23 @@
     </nav>
   </header>
   <main class="content h-card container mt-2 m-auto leading-loose md:px-0 px-2 z-0" role="main">
+    <nav aria-label="Breadcrumb" class="breadcrumb text-sm text-gray-500 dark:text-gray-400 mb-4">
+      <ol class="flex flex-wrap items-center" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="flex items-center">
+          <a itemprop="item" href="https://hugocisneros.com/" class="border-none hover:text-gray-700 dark:hover:text-gray-200"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1"><span class="mx-2">/</span>
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="flex items-center">
+          <a itemprop="item" href="https://hugocisneros.com/notes/" class="border-none hover:text-gray-700 dark:hover:text-gray-200"><span itemprop="name">Notes</span></a>
+          <meta itemprop="position" content="2"><span class="mx-2">/</span>
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="flex items-center">
+          <span itemprop="name" class="text-gray-900 dark:text-gray-100 font-medium" aria-current="page">PDF</span>
+          <meta itemprop="item" content="https://hugocisneros.com/notes/pdf/">
+          <meta itemprop="position" content="3">
+        </li>
+      </ol>
+    </nav>
     <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
       <div class="bg-zinc-200 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
         <h1 class="article-title p-name" itemprop="name">PDF</h1>
@@ -105,7 +123,7 @@
           </div>
         </div>
         <div class="text-center" style="font-variant-caps:all-small-caps">
-          Last changed <a class="u-url" href="https://hugocisneros.com/notes/pdf/"><time itemprop="datePublished" class="dt-published" datetime="2022-04-19T16:46:00+0200">19/04/2022</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/pdf/"><time itemprop="datePublished" class="dt-published" datetime="2022-04-19T16:46:00+0200">2022.04.19</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>
