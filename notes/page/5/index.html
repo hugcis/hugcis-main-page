@@ -40,9 +40,6 @@
   <script>
   function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https:\/\/hugocisneros.com\/"},{"@type":"ListItem","position":2,"name":"Notes","item":"https:\/\/hugocisneros.com\/notes\/"}]}
-  </script>
 </head>
 <body>
   <header class="md:px-0 px-2">
@@ -76,7 +73,7 @@
     </nav>
   </header>
   <main class="content h-card container mt-2 m-auto leading-loose md:px-0 px-2 z-0" role="main">
-    <h1 class="p-name">Notes</h1>
+    <h1 class="p-name flex items-center">Notes <a class="rss-link ml-2 border-none" href="https://hugocisneros.com/notes/index.xml" type="application/rss+xml" title="Notes RSS feed"><img class="rss-icon w-4 opacity-40" src="https://hugocisneros.com/img/RSS.svg" alt="RSS feed icon"></a></h1>
     <div id="main-graph">
       <svg id="note-graph" class="rounded-lg">
       <defs>
