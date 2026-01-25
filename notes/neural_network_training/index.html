@@ -101,34 +101,36 @@
       </ol>
     </nav>
     <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-      <div class="bg-zinc-200 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
-        <h1 class="article-title p-name" itemprop="name">Neural network training</h1>
-        <div class="article-content e-content p-name" itemprop="articleBody">
-          <dl>
-            <dt>tags</dt>
-            <dd>
-              <a href="/notes/neural_networks/">Neural networks</a>, <a href="/notes/machine_learning/">Machine learning</a>, <a href="/notes/optimization/">Optimization</a>
-            </dd>
-          </dl>
-          <p>A common algorithm for neural network training is <a href="/notes/backpropagation/">backpropagation</a>.</p>
-          <h2 id="neural-network-training-as-development-in-program-space">Neural network training as development in program space</h2>
-          <p>A neural network as a whole can be seen as a <a href="/notes/dynamical_systems/">dynamical system</a>. Its state is the collection of its parameters, and its evolution function is the <a href="/notes/optimization/">optimization</a> step taken when training the network.</p>
-          <p>A neural network has parameters \(\theta_t\) at time \(t\) which can be seen as its state. In standard <a href="/notes/supervised_learning/">supervised learning</a>, the parameters are updated by the chosen <a href="/notes/optimization/">optimization</a> <a href="/notes/algorithm/">algorithm</a> and a set of training pairs \((\bm{X}_t, \bm{Y}_t)\). This is the update rule changing the state of that dynamical system at each training step.</p>
-          <p>In such a framework, the goal of training the neural network is to reach a form of <a href="/notes/attractor/">attractor</a>: further optimization steps don’t change the state (parameters) of the neural network.</p>
-          <p>This attractor should correspond to useful functional properties for the network, a measured by a cost function. <a href="/notes/meta_learning/">Meta-learning</a> can be used to learn the evolution function itself to make the dynamical system converge to better attractors in the least amount of steps, as done in (<a href="#tancikLearnedInitializationsOptimizing2021"><cite itemprop="citation" itemscope itemid="key:tancikLearnedInitializationsOptimizing2021">Tancik et al. 2021</cite></a>).</p>
-          <h3 id="program-evolution">Program evolution</h3>
-          <p>A neural network is a program, an <a href="/notes/algorithm/">algorithm</a>. Its parameters specify a sequence of steps from input data to output prediction. Training a neural network is like moving in the algorithmic space towards programs with better performance according to a given cost function.</p>
-          <h2 id="bibliography">Bibliography</h2>
-          <ol class="biblio-list pl-0">
-            <li class="list-none my-4 mx-2">
-              <span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="tancikLearnedInitializationsOptimizing2021"><span itemprop="author">Matthew Tancik, Ben Mildenhall, Terrance Wang, Divi Schmidt, Pratul P. Srinivasan, Jonathan T. Barron, Ren Ng</span>. <time datetime="2021" itemprop="datePublished">March 23, 2021</time>. "<span itemprop="name">Learned Initializations for Optimizing Coordinate-based Neural Representations</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:2012.02189 [cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2012.02189">http://arxiv.org/abs/2012.02189</a>.</span>&nbsp;<a href="/notes/tanciklearnedinitializationsoptimizing2021/">See notes</a>
-            </li>
-          </ol>
+      <div class="note-page bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg mb-6 overflow-hidden">
+        <div class="p-5 sm:p-6">
+          <h1 class="text-xl sm:text-2xl font-semibold mb-4 p-name text-zinc-900 dark:text-zinc-100" itemprop="name">Neural network training</h1>
+          <div class="article-content e-content p-name prose dark:prose-invert max-w-none" itemprop="articleBody">
+            <dl>
+              <dt>tags</dt>
+              <dd>
+                <a href="/notes/neural_networks/">Neural networks</a>, <a href="/notes/machine_learning/">Machine learning</a>, <a href="/notes/optimization/">Optimization</a>
+              </dd>
+            </dl>
+            <p>A common algorithm for neural network training is <a href="/notes/backpropagation/">backpropagation</a>.</p>
+            <h2 id="neural-network-training-as-development-in-program-space">Neural network training as development in program space</h2>
+            <p>A neural network as a whole can be seen as a <a href="/notes/dynamical_systems/">dynamical system</a>. Its state is the collection of its parameters, and its evolution function is the <a href="/notes/optimization/">optimization</a> step taken when training the network.</p>
+            <p>A neural network has parameters \(\theta_t\) at time \(t\) which can be seen as its state. In standard <a href="/notes/supervised_learning/">supervised learning</a>, the parameters are updated by the chosen <a href="/notes/optimization/">optimization</a> <a href="/notes/algorithm/">algorithm</a> and a set of training pairs \((\bm{X}_t, \bm{Y}_t)\). This is the update rule changing the state of that dynamical system at each training step.</p>
+            <p>In such a framework, the goal of training the neural network is to reach a form of <a href="/notes/attractor/">attractor</a>: further optimization steps don’t change the state (parameters) of the neural network.</p>
+            <p>This attractor should correspond to useful functional properties for the network, a measured by a cost function. <a href="/notes/meta_learning/">Meta-learning</a> can be used to learn the evolution function itself to make the dynamical system converge to better attractors in the least amount of steps, as done in (<a href="#tancikLearnedInitializationsOptimizing2021"><cite itemprop="citation" itemscope itemid="key:tancikLearnedInitializationsOptimizing2021">Tancik et al. 2021</cite></a>).</p>
+            <h3 id="program-evolution">Program evolution</h3>
+            <p>A neural network is a program, an <a href="/notes/algorithm/">algorithm</a>. Its parameters specify a sequence of steps from input data to output prediction. Training a neural network is like moving in the algorithmic space towards programs with better performance according to a given cost function.</p>
+            <h2 id="bibliography">Bibliography</h2>
+            <ol class="biblio-list pl-0">
+              <li class="list-none my-4 mx-2">
+                <span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="tancikLearnedInitializationsOptimizing2021"><span itemprop="author">Matthew Tancik, Ben Mildenhall, Terrance Wang, Divi Schmidt, Pratul P. Srinivasan, Jonathan T. Barron, Ren Ng</span>. <time datetime="2021" itemprop="datePublished">March 23, 2021</time>. "<span itemprop="name">Learned Initializations for Optimizing Coordinate-based Neural Representations</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:2012.02189 [cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2012.02189">http://arxiv.org/abs/2012.02189</a>.</span>&nbsp;<a href="/notes/tanciklearnedinitializationsoptimizing2021/">See notes</a>
+              </li>
+            </ol>
+          </div>
         </div>
-        <div class="bl-section">
-          <h2>Links to this note</h2>
+        <div class="bl-section px-5 sm:px-6 py-4 border-t border-zinc-200 dark:border-zinc-600">
+          <h2 class="text-sm font-semibold mb-2 mt-0 text-zinc-500 dark:text-zinc-400">Links to this note</h2>
           <div class="backlinks">
-            <ul>
+            <ul class="m-0 pl-5 text-sm">
               <li>
                 <a href="/notes/double_descent/">Double descent</a>
               </li>
@@ -147,15 +149,15 @@
             </ul>
           </div>
         </div>
-        <div class="text-center" style="font-variant-caps:all-small-caps">
+        <div class="border-t border-zinc-200 dark:border-zinc-600 px-5 sm:px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400 text-center" style="font-variant-caps:all-small-caps">
           Last changed <a class="u-url" href="https://hugocisneros.com/notes/neural_network_training/"><time itemprop="datePublished" class="dt-published" datetime="2023-02-02T18:19:00+0100">2023.02.02</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>
     <h3>Comments</h3>
     <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
-    <section id="isso-thread"></section><br>
-    <a href="/notes#neural_network_training"><b>← Back to Notes</b></a>
+    <section id="isso-thread"></section><a href="/notes#neural_network_training" class="inline-flex items-center gap-2 mt-4 px-4 py-2 text-sm font-medium text-inherit bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg hover:border-zinc-400 dark:hover:border-zinc-500 hover:shadow-md transition-all duration-150"><svg class="inline-block" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path></svg>Back to Notes</a>
   </main>
   <footer class="footer container h-10 text-center mt-1">
     <hr class="my-4">

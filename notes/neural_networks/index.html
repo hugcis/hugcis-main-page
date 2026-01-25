@@ -99,43 +99,45 @@
       </ol>
     </nav>
     <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-      <div class="bg-zinc-200 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
-        <h1 class="article-title p-name" itemprop="name">Neural networks</h1>
-        <div class="article-content e-content p-name" itemprop="articleBody">
-          <dl>
-            <dt>tags</dt>
-            <dd>
-              <a href="/notes/machine_learning/">Machine learning</a>
-            </dd>
-          </dl>
-          <h2 id="two-layers-neural-network">Two-layers neural network</h2>
-          <p>Mathematically, a simple two-layers neural network with relu non-linearities can be written like below. For an input vector \(x \in \mathbb{R}^D\), \(\mathbf{a} = (a_1, \cdots, a_N)\in \mathbb{R}^M\) are the <em>output weights</em>, \(\mathbf{b} = (b_1, \cdots, b_N)\in \mathbb{R}^D\) are the <em>input weights</em></p>
-          <p>\[ h(x) = \frac{1}{m} \sum_{i=1}^m a_i \max\{ b_i^\top x,0\}, \]</p>
-          <h2 id="universal-approximation-theorem">Universal approximation theorem</h2>
-          <p>Cybenko showed in 1989 that a neural network of arbitrary width with sigmoid activation function could approximate any continuous function (<a href="#cybenkoApproximationSuperpositionsSigmoidal1989"><cite itemprop="citation" itemscope itemid="doi:10.1007/BF02551274">Cybenko 1989</cite></a>).</p>
-          <p>Barron added rates of convergence by enforcing smoothness condition on the target function (<a href="#barronUniversalApproximationBounds1993"><cite itemprop="citation" itemscope itemid="doi:10.1109/18.256500">Barron 1993</cite></a>).</p>
-          <h2 id="training-a-neural-network-is-hard-in-general">Training a neural network is hard in general</h2>
-          <p>The established way of training a neural network is to use the <a href="/notes/backpropagation/">backpropagation</a> <a href="/notes/algorithm/">algorithm</a> and <a href="/notes/gradient_descent/">gradient descent</a> methods.</p>
-          <p>“Training a 3-node neural network is NP-complete” (<a href="#blumTraining3nodeNeural1992"><cite itemprop="citation" itemscope itemid="doi:10.1016/S0893-6080(05)80010-3">Blum, Rivest 1992</cite></a>). However practice has shown we can actually efficiently train them. But there are still major unanswered question that Leo Breiman was already raising in 1995 (<a href="#breimanReflectionsRefereeingPapers2018"><cite itemprop="citation" itemscope itemid="doi:10.1201/9780429492525-2">Breiman 2018</cite></a>):</p>
-          <blockquote>
-            <ul>
-              <li>Why don ’t heavily parameterized neural networks overfit the data?</li>
-              <li>What is the effective number of parameters?</li>
-              <li>Why doesn’t backpropagation head for a poor local minima?</li>
-            </ul>
-          </blockquote>
-          <h2 id="bibliography">Bibliography</h2>
-          <ol class="biblio-list pl-0">
-            <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="cybenkoApproximationSuperpositionsSigmoidal1989" itemid="doi:10.1007/BF02551274"><span itemprop="author">G. Cybenko</span>. <time datetime="1989" itemprop="datePublished">December 1989</time>. "<span itemprop="name">Approximation by Superpositions of a Sigmoidal Function</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Mathematics of Control, Signals, and Systems</i></span> 2 (4):303–14. <a itemprop="sameAs" href="https://doi.org/10.1007/BF02551274">DOI</a>.</span></li>
-            <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="barronUniversalApproximationBounds1993" itemid="doi:10.1109/18.256500"><span itemprop="author">A. R. Barron</span>. <time datetime="1993" itemprop="datePublished">May 1993</time>. "<span itemprop="name">Universal Approximation Bounds for Superpositions of a Sigmoidal Function</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">IEEE Transactions on Information Theory</i></span> 39 (3):930–45. <a itemprop="sameAs" href="https://doi.org/10.1109/18.256500">DOI</a>.</span></li>
-            <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="blumTraining3nodeNeural1992" itemid="doi:10.1016/S0893-6080(05)80010-3"><span itemprop="author">Avrim L. Blum, Ronald L. Rivest</span>. <time datetime="1992" itemprop="datePublished">January 1, 1992</time>. "<span itemprop="name">Training a 3-node Neural Network Is Np-complete</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Neural Networks</i></span> 5 (1):117–27. <a itemprop="sameAs" href="https://doi.org/10.1016/S0893-6080(05)80010-3">DOI</a>.</span></li>
-            <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="breimanReflectionsRefereeingPapers2018" itemid="doi:10.1201/9780429492525-2"><span itemprop="author">Leo Breiman</span>. <time datetime="2018" itemprop="datePublished">March 5, 2018</time>. "<span itemprop="name">Reflections After Refereeing Papers for NIPS</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">The Mathematics of Generalization</i></span>, 1st ed., 11–15. CRC Press. <a itemprop="sameAs" href="https://doi.org/10.1201/9780429492525-2">DOI</a>.</span></li>
-          </ol>
+      <div class="note-page bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg mb-6 overflow-hidden">
+        <div class="p-5 sm:p-6">
+          <h1 class="text-xl sm:text-2xl font-semibold mb-4 p-name text-zinc-900 dark:text-zinc-100" itemprop="name">Neural networks</h1>
+          <div class="article-content e-content p-name prose dark:prose-invert max-w-none" itemprop="articleBody">
+            <dl>
+              <dt>tags</dt>
+              <dd>
+                <a href="/notes/machine_learning/">Machine learning</a>
+              </dd>
+            </dl>
+            <h2 id="two-layers-neural-network">Two-layers neural network</h2>
+            <p>Mathematically, a simple two-layers neural network with relu non-linearities can be written like below. For an input vector \(x \in \mathbb{R}^D\), \(\mathbf{a} = (a_1, \cdots, a_N)\in \mathbb{R}^M\) are the <em>output weights</em>, \(\mathbf{b} = (b_1, \cdots, b_N)\in \mathbb{R}^D\) are the <em>input weights</em></p>
+            <p>\[ h(x) = \frac{1}{m} \sum_{i=1}^m a_i \max\{ b_i^\top x,0\}, \]</p>
+            <h2 id="universal-approximation-theorem">Universal approximation theorem</h2>
+            <p>Cybenko showed in 1989 that a neural network of arbitrary width with sigmoid activation function could approximate any continuous function (<a href="#cybenkoApproximationSuperpositionsSigmoidal1989"><cite itemprop="citation" itemscope itemid="doi:10.1007/BF02551274">Cybenko 1989</cite></a>).</p>
+            <p>Barron added rates of convergence by enforcing smoothness condition on the target function (<a href="#barronUniversalApproximationBounds1993"><cite itemprop="citation" itemscope itemid="doi:10.1109/18.256500">Barron 1993</cite></a>).</p>
+            <h2 id="training-a-neural-network-is-hard-in-general">Training a neural network is hard in general</h2>
+            <p>The established way of training a neural network is to use the <a href="/notes/backpropagation/">backpropagation</a> <a href="/notes/algorithm/">algorithm</a> and <a href="/notes/gradient_descent/">gradient descent</a> methods.</p>
+            <p>“Training a 3-node neural network is NP-complete” (<a href="#blumTraining3nodeNeural1992"><cite itemprop="citation" itemscope itemid="doi:10.1016/S0893-6080(05)80010-3">Blum, Rivest 1992</cite></a>). However practice has shown we can actually efficiently train them. But there are still major unanswered question that Leo Breiman was already raising in 1995 (<a href="#breimanReflectionsRefereeingPapers2018"><cite itemprop="citation" itemscope itemid="doi:10.1201/9780429492525-2">Breiman 2018</cite></a>):</p>
+            <blockquote>
+              <ul>
+                <li>Why don ’t heavily parameterized neural networks overfit the data?</li>
+                <li>What is the effective number of parameters?</li>
+                <li>Why doesn’t backpropagation head for a poor local minima?</li>
+              </ul>
+            </blockquote>
+            <h2 id="bibliography">Bibliography</h2>
+            <ol class="biblio-list pl-0">
+              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="cybenkoApproximationSuperpositionsSigmoidal1989" itemid="doi:10.1007/BF02551274"><span itemprop="author">G. Cybenko</span>. <time datetime="1989" itemprop="datePublished">December 1989</time>. "<span itemprop="name">Approximation by Superpositions of a Sigmoidal Function</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Mathematics of Control, Signals, and Systems</i></span> 2 (4):303–14. <a itemprop="sameAs" href="https://doi.org/10.1007/BF02551274">DOI</a>.</span></li>
+              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="barronUniversalApproximationBounds1993" itemid="doi:10.1109/18.256500"><span itemprop="author">A. R. Barron</span>. <time datetime="1993" itemprop="datePublished">May 1993</time>. "<span itemprop="name">Universal Approximation Bounds for Superpositions of a Sigmoidal Function</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">IEEE Transactions on Information Theory</i></span> 39 (3):930–45. <a itemprop="sameAs" href="https://doi.org/10.1109/18.256500">DOI</a>.</span></li>
+              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="blumTraining3nodeNeural1992" itemid="doi:10.1016/S0893-6080(05)80010-3"><span itemprop="author">Avrim L. Blum, Ronald L. Rivest</span>. <time datetime="1992" itemprop="datePublished">January 1, 1992</time>. "<span itemprop="name">Training a 3-node Neural Network Is Np-complete</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Neural Networks</i></span> 5 (1):117–27. <a itemprop="sameAs" href="https://doi.org/10.1016/S0893-6080(05)80010-3">DOI</a>.</span></li>
+              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="breimanReflectionsRefereeingPapers2018" itemid="doi:10.1201/9780429492525-2"><span itemprop="author">Leo Breiman</span>. <time datetime="2018" itemprop="datePublished">March 5, 2018</time>. "<span itemprop="name">Reflections After Refereeing Papers for NIPS</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">The Mathematics of Generalization</i></span>, 1st ed., 11–15. CRC Press. <a itemprop="sameAs" href="https://doi.org/10.1201/9780429492525-2">DOI</a>.</span></li>
+            </ol>
+          </div>
         </div>
-        <div class="bl-section">
-          <h2>Links to this note</h2>
+        <div class="bl-section px-5 sm:px-6 py-4 border-t border-zinc-200 dark:border-zinc-600">
+          <h2 class="text-sm font-semibold mb-2 mt-0 text-zinc-500 dark:text-zinc-400">Links to this note</h2>
           <div class="backlinks">
-            <ul>
+            <ul class="m-0 pl-5 text-sm">
               <li>
                 <a href="/notes/adaptive_computation_time/">Adaptive Computation Time</a>
               </li>
@@ -313,15 +315,15 @@
             </ul>
           </div>
         </div>
-        <div class="text-center" style="font-variant-caps:all-small-caps">
+        <div class="border-t border-zinc-200 dark:border-zinc-600 px-5 sm:px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400 text-center" style="font-variant-caps:all-small-caps">
           Last changed <a class="u-url" href="https://hugocisneros.com/notes/neural_networks/"><time itemprop="datePublished" class="dt-published" datetime="2022-04-06T13:48:00+0200">2022.04.06</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>
     <h3>Comments</h3>
     <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
-    <section id="isso-thread"></section><br>
-    <a href="/notes#neural_networks"><b>← Back to Notes</b></a>
+    <section id="isso-thread"></section><a href="/notes#neural_networks" class="inline-flex items-center gap-2 mt-4 px-4 py-2 text-sm font-medium text-inherit bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg hover:border-zinc-400 dark:hover:border-zinc-500 hover:shadow-md transition-all duration-150"><svg class="inline-block" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path></svg>Back to Notes</a>
   </main>
   <footer class="footer container h-10 text-center mt-1">
     <hr class="my-4">

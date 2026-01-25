@@ -99,46 +99,48 @@
       </ol>
     </nav>
     <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-      <div class="bg-zinc-200 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
-        <h1 class="article-title p-name" itemprop="name">Self-supervised learning</h1>
-        <div class="article-content e-content p-name" itemprop="articleBody">
-          <dl>
-            <dt>tags</dt>
-            <dd>
-              <a href="/notes/machine_learning/">Machine learning</a>
-            </dd>
-          </dl>
-          <h2 id="definition">Definition</h2>
-          <p>Self supervised learning (SSL) is a learning paradigm based on the idea of using information contained within the training data to build better representations of it. Self-supervised models are usually trained to predict hidden parts of the input data from its visible parts.</p>
-          <h2 id="ssl-in-nlp--nlp-dot-md">SSL in <a href="/notes/nlp/">NLP</a></h2>
-          <p>Self-supervised learning has been used for a long time in NLP. In <a href="/notes/language_modeling/">Language modeling</a>, one tries to predict words from previous ones. Recent language deep learning models have introduced other techniques such as allowing a <a href="/notes/transformers/">transformer</a> to read words forward and backward but partially masking them (<a href="#devlinBERTPretrainingDeep2019"><cite itemprop="citation" itemscope itemid="doi:10.48550/arXiv.1810.04805">Devlin et al. 2019</cite></a>).</p>
-          <p><a href="/notes/word_vectors/">Word vectors</a> is another example of successful self-supervised learning which goal is to learn rich vector representations for words from their context.</p>
-          <h2 id="sll-in-computer-vision--computer-vision-dot-md">SLL in <a href="/notes/computer_vision/">Computer vision</a></h2>
-          <p>In 2019 and 2020 self-supervised became more and more widespread in the vision community as the results on standard benchmarks started to match regular <a href="/notes/supervised_learning/">supervised learning</a>.</p>
-          <h2 id="bibliography">Bibliography</h2>
-          <ol class="biblio-list pl-0">
-            <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="devlinBERTPretrainingDeep2019" itemid="doi:10.48550/arXiv.1810.04805"><span itemprop="author">Jacob Devlin, Ming-Wei Chang, Kenton Lee, Kristina Toutanova</span>. <time datetime="2019" itemprop="datePublished">May 24, 2019</time>. "<span itemprop="name">BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding</span>". arXiv. <a itemprop="sameAs" href="https://doi.org/10.48550/arXiv.1810.04805">DOI</a>.</span></li>
-          </ol>
+      <div class="note-page bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg mb-6 overflow-hidden">
+        <div class="p-5 sm:p-6">
+          <h1 class="text-xl sm:text-2xl font-semibold mb-4 p-name text-zinc-900 dark:text-zinc-100" itemprop="name">Self-supervised learning</h1>
+          <div class="article-content e-content p-name prose dark:prose-invert max-w-none" itemprop="articleBody">
+            <dl>
+              <dt>tags</dt>
+              <dd>
+                <a href="/notes/machine_learning/">Machine learning</a>
+              </dd>
+            </dl>
+            <h2 id="definition">Definition</h2>
+            <p>Self supervised learning (SSL) is a learning paradigm based on the idea of using information contained within the training data to build better representations of it. Self-supervised models are usually trained to predict hidden parts of the input data from its visible parts.</p>
+            <h2 id="ssl-in-nlp--nlp-dot-md">SSL in <a href="/notes/nlp/">NLP</a></h2>
+            <p>Self-supervised learning has been used for a long time in NLP. In <a href="/notes/language_modeling/">Language modeling</a>, one tries to predict words from previous ones. Recent language deep learning models have introduced other techniques such as allowing a <a href="/notes/transformers/">transformer</a> to read words forward and backward but partially masking them (<a href="#devlinBERTPretrainingDeep2019"><cite itemprop="citation" itemscope itemid="doi:10.48550/arXiv.1810.04805">Devlin et al. 2019</cite></a>).</p>
+            <p><a href="/notes/word_vectors/">Word vectors</a> is another example of successful self-supervised learning which goal is to learn rich vector representations for words from their context.</p>
+            <h2 id="sll-in-computer-vision--computer-vision-dot-md">SLL in <a href="/notes/computer_vision/">Computer vision</a></h2>
+            <p>In 2019 and 2020 self-supervised became more and more widespread in the vision community as the results on standard benchmarks started to match regular <a href="/notes/supervised_learning/">supervised learning</a>.</p>
+            <h2 id="bibliography">Bibliography</h2>
+            <ol class="biblio-list pl-0">
+              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="devlinBERTPretrainingDeep2019" itemid="doi:10.48550/arXiv.1810.04805"><span itemprop="author">Jacob Devlin, Ming-Wei Chang, Kenton Lee, Kristina Toutanova</span>. <time datetime="2019" itemprop="datePublished">May 24, 2019</time>. "<span itemprop="name">BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding</span>". arXiv. <a itemprop="sameAs" href="https://doi.org/10.48550/arXiv.1810.04805">DOI</a>.</span></li>
+            </ol>
+          </div>
         </div>
-        <div class="bl-section">
-          <h2>Links to this note</h2>
+        <div class="bl-section px-5 sm:px-6 py-4 border-t border-zinc-200 dark:border-zinc-600">
+          <h2 class="text-sm font-semibold mb-2 mt-0 text-zinc-500 dark:text-zinc-400">Links to this note</h2>
           <div class="backlinks">
-            <ul>
+            <ul class="m-0 pl-5 text-sm">
               <li>
                 <a href="/notes/hudrinkingfirehosecontinual2020/">Notes on: Drinking from a Firehose: Continual Learning with Web-scale Natural Language by Hu, H., Sener, O., Sha, F., & Koltun, V. (2020)</a>
               </li>
             </ul>
           </div>
         </div>
-        <div class="text-center" style="font-variant-caps:all-small-caps">
+        <div class="border-t border-zinc-200 dark:border-zinc-600 px-5 sm:px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400 text-center" style="font-variant-caps:all-small-caps">
           Last changed <a class="u-url" href="https://hugocisneros.com/notes/self_supervised_learning/"><time itemprop="datePublished" class="dt-published" datetime="2021-03-25T09:58:00+0100">2021.03.25</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>
     <h3>Comments</h3>
     <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
-    <section id="isso-thread"></section><br>
-    <a href="/notes#self_supervised_learning"><b>← Back to Notes</b></a>
+    <section id="isso-thread"></section><a href="/notes#self_supervised_learning" class="inline-flex items-center gap-2 mt-4 px-4 py-2 text-sm font-medium text-inherit bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg hover:border-zinc-400 dark:hover:border-zinc-500 hover:shadow-md transition-all duration-150"><svg class="inline-block" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path></svg>Back to Notes</a>
   </main>
   <footer class="footer container h-10 text-center mt-1">
     <hr class="my-4">

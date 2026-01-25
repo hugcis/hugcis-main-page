@@ -99,56 +99,58 @@
       </ol>
     </nav>
     <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-      <div class="bg-zinc-200 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
-        <h1 class="article-title p-name" itemprop="name">On the expressive power of programming languages by Felleisen, M. (1991)</h1>
-        <div class="article-content e-content p-name" itemprop="articleBody">
-          <dl>
-            <dt>source</dt>
-            <dd>
-              (<a href="#felleisenExpressivePowerProgramming1991"><cite itemprop="citation" itemscope itemid="doi:10.1016/0167-6423(91)90036-W">Felleisen 1991</cite></a>)
-            </dd>
-            <dt>tags</dt>
-            <dd>
-              <a href="/notes/programming_languages/">Programming languages</a>
-            </dd>
-            <dt>resources</dt>
-            <dd>
-              <a href="https://pwlconf.org/2019/shriram-krishnamurthi/">PWL Conf talk</a>
-            </dd>
-          </dl>
-          <h2 id="summary">Summary</h2>
-          <p>Programming languages have different levels of expressiveness. <code>While</code> can be used to create <code>for</code> loops, binary <code>if</code> statements can implement multi-<code>if</code> statements, etc.</p>
-          <p>Turing tarpit: once we get to programming languages that are <a href="/notes/turing_completeness/">universal</a>, everything can be re-written into anything and the notion of “expressiveness” of programming languages doesn’t make much sense.</p>
-          <p>For a language \(L\) and \(F + L\) the addition of some features, can we say the second is more expressive than the first? Intuitively, this is related to some form of re-writing of programs into one another.</p>
-          <p>\(F + L\) isn’t more expressive than \(L\) when a macro for \(F\) to \(L\) exists. This means that for all programs \(P\) in \(L+F\), \(P_L\) its extension in \(L\), the two programs are equal.</p>
-          <p>When \(F\) is expressive relative to \(L\), you need to show that there cannot possibly exist such a macro.</p>
-          <h3 id="a-definition-of-equality">A definition of equality</h3>
-          <p>Equality is hard to define formally with programming languages. Is there a way in the language to tell them apart? If not, two things can be said to be equal within that language. But an even more general definition of equality: if for all contexts \(C\), \(C[e_1]\) halts iff \(C[e_2]\) halts (additional “trick”: programs with errors don’t terminate). The power of the definition comes from the fact that it has to hold for all contexts. This is called <em>observational equivalence</em>.</p>
-          <p>With this definition of equality, we can re-frame expressiveness. If we have of a language with more features, are all things previously considered equal still equal?</p>
-          <h3 id="key-theorem">Key theorem</h3>
-          <p>If we suppose \(F\) is written as a local macro, then for each terms that are equal under \(L\) they will be equal under \(F+L\). This means it hasn’t added power to \(L\).</p>
-          <p>With this, how do we show expressiveness? We show that we can find a context in \(L + F\) which makes two previously equal things distinguishable. \(F\) added power to the language \(L\).</p>
-          <h3 id="examples">Examples</h3>
-          <p>With this one can show that a <code>halts</code> statement does add expressiveness to a language. Similarly, state gives the power to count compared to a pure functional language.</p>
-          <h3 id="conclusions">Conclusions</h3>
-          <p>Local vs global transformations, in all of the above, transformations were local. But things like state can for example be implemented in functional programming through store-passing style.</p>
-          <p>When two languages are not as expressive, no local transformations can work.</p>
-          <p>This gives us two great definitions of equality and expressiveness.</p>
-          <p>Macros in language can add expressiveness, but expressiveness isn’t always suitable because they break existing equalities. However they can help avoid global transformations when a feature is needed.</p>
-          <h2 id="bibliography">Bibliography</h2>
-          <ol class="biblio-list pl-0">
-            <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="felleisenExpressivePowerProgramming1991" itemid="doi:10.1016/0167-6423(91)90036-W"><span itemprop="author">Matthias Felleisen</span>. <time datetime="1991" itemprop="datePublished">December 1, 1991</time>. "<span itemprop="name">On the Expressive Power of Programming Languages</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Science of Computer Programming</i></span> 17 (1):35–75. <a itemprop="sameAs" href="https://doi.org/10.1016/0167-6423(91)90036-W">DOI</a>.</span></li>
-          </ol>
+      <div class="note-page bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg mb-6 overflow-hidden">
+        <div class="p-5 sm:p-6">
+          <h1 class="text-xl sm:text-2xl font-semibold mb-4 p-name text-zinc-900 dark:text-zinc-100" itemprop="name">On the expressive power of programming languages by Felleisen, M. (1991)</h1>
+          <div class="article-content e-content p-name prose dark:prose-invert max-w-none" itemprop="articleBody">
+            <dl>
+              <dt>source</dt>
+              <dd>
+                (<a href="#felleisenExpressivePowerProgramming1991"><cite itemprop="citation" itemscope itemid="doi:10.1016/0167-6423(91)90036-W">Felleisen 1991</cite></a>)
+              </dd>
+              <dt>tags</dt>
+              <dd>
+                <a href="/notes/programming_languages/">Programming languages</a>
+              </dd>
+              <dt>resources</dt>
+              <dd>
+                <a href="https://pwlconf.org/2019/shriram-krishnamurthi/">PWL Conf talk</a>
+              </dd>
+            </dl>
+            <h2 id="summary">Summary</h2>
+            <p>Programming languages have different levels of expressiveness. <code>While</code> can be used to create <code>for</code> loops, binary <code>if</code> statements can implement multi-<code>if</code> statements, etc.</p>
+            <p>Turing tarpit: once we get to programming languages that are <a href="/notes/turing_completeness/">universal</a>, everything can be re-written into anything and the notion of “expressiveness” of programming languages doesn’t make much sense.</p>
+            <p>For a language \(L\) and \(F + L\) the addition of some features, can we say the second is more expressive than the first? Intuitively, this is related to some form of re-writing of programs into one another.</p>
+            <p>\(F + L\) isn’t more expressive than \(L\) when a macro for \(F\) to \(L\) exists. This means that for all programs \(P\) in \(L+F\), \(P_L\) its extension in \(L\), the two programs are equal.</p>
+            <p>When \(F\) is expressive relative to \(L\), you need to show that there cannot possibly exist such a macro.</p>
+            <h3 id="a-definition-of-equality">A definition of equality</h3>
+            <p>Equality is hard to define formally with programming languages. Is there a way in the language to tell them apart? If not, two things can be said to be equal within that language. But an even more general definition of equality: if for all contexts \(C\), \(C[e_1]\) halts iff \(C[e_2]\) halts (additional “trick”: programs with errors don’t terminate). The power of the definition comes from the fact that it has to hold for all contexts. This is called <em>observational equivalence</em>.</p>
+            <p>With this definition of equality, we can re-frame expressiveness. If we have of a language with more features, are all things previously considered equal still equal?</p>
+            <h3 id="key-theorem">Key theorem</h3>
+            <p>If we suppose \(F\) is written as a local macro, then for each terms that are equal under \(L\) they will be equal under \(F+L\). This means it hasn’t added power to \(L\).</p>
+            <p>With this, how do we show expressiveness? We show that we can find a context in \(L + F\) which makes two previously equal things distinguishable. \(F\) added power to the language \(L\).</p>
+            <h3 id="examples">Examples</h3>
+            <p>With this one can show that a <code>halts</code> statement does add expressiveness to a language. Similarly, state gives the power to count compared to a pure functional language.</p>
+            <h3 id="conclusions">Conclusions</h3>
+            <p>Local vs global transformations, in all of the above, transformations were local. But things like state can for example be implemented in functional programming through store-passing style.</p>
+            <p>When two languages are not as expressive, no local transformations can work.</p>
+            <p>This gives us two great definitions of equality and expressiveness.</p>
+            <p>Macros in language can add expressiveness, but expressiveness isn’t always suitable because they break existing equalities. However they can help avoid global transformations when a feature is needed.</p>
+            <h2 id="bibliography">Bibliography</h2>
+            <ol class="biblio-list pl-0">
+              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="felleisenExpressivePowerProgramming1991" itemid="doi:10.1016/0167-6423(91)90036-W"><span itemprop="author">Matthias Felleisen</span>. <time datetime="1991" itemprop="datePublished">December 1, 1991</time>. "<span itemprop="name">On the Expressive Power of Programming Languages</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Science of Computer Programming</i></span> 17 (1):35–75. <a itemprop="sameAs" href="https://doi.org/10.1016/0167-6423(91)90036-W">DOI</a>.</span></li>
+            </ol>
+          </div>
         </div>
-        <div class="text-center" style="font-variant-caps:all-small-caps">
+        <div class="border-t border-zinc-200 dark:border-zinc-600 px-5 sm:px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400 text-center" style="font-variant-caps:all-small-caps">
           Last changed <a class="u-url" href="https://hugocisneros.com/notes/felleisenexpressivepowerprogramming1991/"><time itemprop="datePublished" class="dt-published" datetime="2021-03-25T09:58:00+0100">2021.03.25</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>
     <h3>Comments</h3>
     <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
-    <section id="isso-thread"></section><br>
-    <a href="/notes#felleisenexpressivepowerprogramming1991"><b>← Back to Notes</b></a>
+    <section id="isso-thread"></section><a href="/notes#felleisenexpressivepowerprogramming1991" class="inline-flex items-center gap-2 mt-4 px-4 py-2 text-sm font-medium text-inherit bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg hover:border-zinc-400 dark:hover:border-zinc-500 hover:shadow-md transition-all duration-150"><svg class="inline-block" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path></svg>Back to Notes</a>
   </main>
   <footer class="footer container h-10 text-center mt-1">
     <hr class="my-4">

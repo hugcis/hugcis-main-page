@@ -99,35 +99,37 @@
       </ol>
     </nav>
     <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-      <div class="bg-zinc-200 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
-        <h1 class="article-title p-name" itemprop="name">Edge detection</h1>
-        <div class="article-content e-content p-name" itemprop="articleBody">
-          <dl>
-            <dt>tags</dt>
-            <dd>
-              <a href="/notes/image_processing/">Image processing</a>
-            </dd>
-          </dl>
-          <h2 id="canny-edge-detection">Canny edge detection</h2>
-          <p>Canny edge detection in the most famous edge detection algorithm, originally developed by John Canny in 1986.</p>
-          <p>The algorithm has 5 steps:</p>
-          <ol>
-            <li>Smooth the image with Gaussian filtering.</li>
-            <li>Intensity gradients. First derivative in the horizontal (\(\mathbf{G}_x\)) and vertical (\(\mathbf{G}_y\)) directions are computed. Gradient intensity \(\mathbf{G} = \sqrt{\mathbf{G}_x^2 + \mathbf{G}_y^2}\) and direction \(\mathbf{\Theta} = \text{atan2}(\mathbf{G}_y, \mathbf{G}_x)\) are then computed.</li>
-            <li>Edge thinning to reduce blurring from the first two steps. Only largest edge intensity with respect to negative and positive gradient directions are preserved.</li>
-            <li>Double threshold to remove remaining edges caused by noise or color variation. Edge pixels are marked either as strong edge, weak edge or removed with two thresholds.</li>
-            <li>Only weak edge pixels connected to strong edge pixels are kept.</li>
-          </ol>
+      <div class="note-page bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg mb-6 overflow-hidden">
+        <div class="p-5 sm:p-6">
+          <h1 class="text-xl sm:text-2xl font-semibold mb-4 p-name text-zinc-900 dark:text-zinc-100" itemprop="name">Edge detection</h1>
+          <div class="article-content e-content p-name prose dark:prose-invert max-w-none" itemprop="articleBody">
+            <dl>
+              <dt>tags</dt>
+              <dd>
+                <a href="/notes/image_processing/">Image processing</a>
+              </dd>
+            </dl>
+            <h2 id="canny-edge-detection">Canny edge detection</h2>
+            <p>Canny edge detection in the most famous edge detection algorithm, originally developed by John Canny in 1986.</p>
+            <p>The algorithm has 5 steps:</p>
+            <ol>
+              <li>Smooth the image with Gaussian filtering.</li>
+              <li>Intensity gradients. First derivative in the horizontal (\(\mathbf{G}_x\)) and vertical (\(\mathbf{G}_y\)) directions are computed. Gradient intensity \(\mathbf{G} = \sqrt{\mathbf{G}_x^2 + \mathbf{G}_y^2}\) and direction \(\mathbf{\Theta} = \text{atan2}(\mathbf{G}_y, \mathbf{G}_x)\) are then computed.</li>
+              <li>Edge thinning to reduce blurring from the first two steps. Only largest edge intensity with respect to negative and positive gradient directions are preserved.</li>
+              <li>Double threshold to remove remaining edges caused by noise or color variation. Edge pixels are marked either as strong edge, weak edge or removed with two thresholds.</li>
+              <li>Only weak edge pixels connected to strong edge pixels are kept.</li>
+            </ol>
+          </div>
         </div>
-        <div class="text-center" style="font-variant-caps:all-small-caps">
+        <div class="border-t border-zinc-200 dark:border-zinc-600 px-5 sm:px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400 text-center" style="font-variant-caps:all-small-caps">
           Last changed <a class="u-url" href="https://hugocisneros.com/notes/edge_detection/"><time itemprop="datePublished" class="dt-published" datetime="2020-07-14T08:30:00+0200">2020.07.14</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>
     <h3>Comments</h3>
     <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
-    <section id="isso-thread"></section><br>
-    <a href="/notes#edge_detection"><b>← Back to Notes</b></a>
+    <section id="isso-thread"></section><a href="/notes#edge_detection" class="inline-flex items-center gap-2 mt-4 px-4 py-2 text-sm font-medium text-inherit bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg hover:border-zinc-400 dark:hover:border-zinc-500 hover:shadow-md transition-all duration-150"><svg class="inline-block" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path></svg>Back to Notes</a>
   </main>
   <footer class="footer container h-10 text-center mt-1">
     <hr class="my-4">

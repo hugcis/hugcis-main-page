@@ -99,41 +99,43 @@
       </ol>
     </nav>
     <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-      <div class="bg-zinc-200 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
-        <h1 class="article-title p-name" itemprop="name">Efficient Neural Architecture Search via Parameter Sharing by Pham, H., Guan, M. Y., Zoph, B., Le, Q. V., & Dean, J. (2018)</h1>
-        <div class="article-content e-content p-name" itemprop="articleBody">
-          <dl>
-            <dt>tags</dt>
-            <dd>
-              <a href="/notes/neural_architecture_search/">Neural architecture search</a>
-            </dd>
-            <dt>source</dt>
-            <dd>
-              (<a href="#phamEfficientNeuralArchitecture2018"><cite itemprop="citation" itemscope itemid="key:phamEfficientNeuralArchitecture2018">Pham et al. 2018</cite></a>)
-            </dd>
-          </dl>
-          <h2 id="summary">Summary</h2>
-          <p>Like other papers, the controller is a RNN that generates each part of the architecture in sequence. The main contribution of this paper is to introduce parameter sharing in child models. For, this, it represents all possible architectures in a single DAG of operations and share weights between same operations. They explain how to design a RNN cell with their model, a convolutional network (and convolutional cell to build a CNN) and how to train. Training is done in two alternating steps:</p>
-          <ul>
-            <li>Train parameters for a fixed policy: gradient are estimated by sampling architectures and average the gradients for each of them (apparently works when sampling only 1 architecture).</li>
-            <li>Train the policy (controller parameters) The authors present results on text and vision tasks.</li>
-          </ul>
-          <h2 id="comments">Comments</h2>
-          <p>This approach seems more interesting than before, because the weight sharing gives a significant speedup. The task are however rather small compared to SOTA in 2018.</p>
-          <h2 id="bibliography">Bibliography</h2>
-          <ol class="biblio-list pl-0">
-            <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="phamEfficientNeuralArchitecture2018"><span itemprop="author">Hieu Pham, Melody Y. Guan, Barret Zoph, Quoc V. Le, Jeff Dean</span>. <time datetime="2018" itemprop="datePublished">February 11, 2018</time>. "<span itemprop="name">Efficient Neural Architecture Search via Parameter Sharing</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:1802.03268 [cs, Stat]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/1802.03268">http://arxiv.org/abs/1802.03268</a>.</span></li>
-          </ol>
+      <div class="note-page bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg mb-6 overflow-hidden">
+        <div class="p-5 sm:p-6">
+          <h1 class="text-xl sm:text-2xl font-semibold mb-4 p-name text-zinc-900 dark:text-zinc-100" itemprop="name">Efficient Neural Architecture Search via Parameter Sharing by Pham, H., Guan, M. Y., Zoph, B., Le, Q. V., & Dean, J. (2018)</h1>
+          <div class="article-content e-content p-name prose dark:prose-invert max-w-none" itemprop="articleBody">
+            <dl>
+              <dt>tags</dt>
+              <dd>
+                <a href="/notes/neural_architecture_search/">Neural architecture search</a>
+              </dd>
+              <dt>source</dt>
+              <dd>
+                (<a href="#phamEfficientNeuralArchitecture2018"><cite itemprop="citation" itemscope itemid="key:phamEfficientNeuralArchitecture2018">Pham et al. 2018</cite></a>)
+              </dd>
+            </dl>
+            <h2 id="summary">Summary</h2>
+            <p>Like other papers, the controller is a RNN that generates each part of the architecture in sequence. The main contribution of this paper is to introduce parameter sharing in child models. For, this, it represents all possible architectures in a single DAG of operations and share weights between same operations. They explain how to design a RNN cell with their model, a convolutional network (and convolutional cell to build a CNN) and how to train. Training is done in two alternating steps:</p>
+            <ul>
+              <li>Train parameters for a fixed policy: gradient are estimated by sampling architectures and average the gradients for each of them (apparently works when sampling only 1 architecture).</li>
+              <li>Train the policy (controller parameters) The authors present results on text and vision tasks.</li>
+            </ul>
+            <h2 id="comments">Comments</h2>
+            <p>This approach seems more interesting than before, because the weight sharing gives a significant speedup. The task are however rather small compared to SOTA in 2018.</p>
+            <h2 id="bibliography">Bibliography</h2>
+            <ol class="biblio-list pl-0">
+              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="phamEfficientNeuralArchitecture2018"><span itemprop="author">Hieu Pham, Melody Y. Guan, Barret Zoph, Quoc V. Le, Jeff Dean</span>. <time datetime="2018" itemprop="datePublished">February 11, 2018</time>. "<span itemprop="name">Efficient Neural Architecture Search via Parameter Sharing</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:1802.03268 [cs, Stat]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/1802.03268">http://arxiv.org/abs/1802.03268</a>.</span></li>
+            </ol>
+          </div>
         </div>
-        <div class="text-center" style="font-variant-caps:all-small-caps">
+        <div class="border-t border-zinc-200 dark:border-zinc-600 px-5 sm:px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400 text-center" style="font-variant-caps:all-small-caps">
           Last changed <a class="u-url" href="https://hugocisneros.com/notes/phamefficientneuralarchitecture2018/"><time itemprop="datePublished" class="dt-published" datetime="2022-12-23T17:40:00+0100">2022.12.23</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>
     <h3>Comments</h3>
     <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
-    <section id="isso-thread"></section><br>
-    <a href="/notes#phamefficientneuralarchitecture2018"><b>← Back to Notes</b></a>
+    <section id="isso-thread"></section><a href="/notes#phamefficientneuralarchitecture2018" class="inline-flex items-center gap-2 mt-4 px-4 py-2 text-sm font-medium text-inherit bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg hover:border-zinc-400 dark:hover:border-zinc-500 hover:shadow-md transition-all duration-150"><svg class="inline-block" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path></svg>Back to Notes</a>
   </main>
   <footer class="footer container h-10 text-center mt-1">
     <hr class="my-4">

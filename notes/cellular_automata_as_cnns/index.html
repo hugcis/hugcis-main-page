@@ -95,54 +95,56 @@
       </ol>
     </nav>
     <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-      <div class="bg-zinc-200 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
-        <div class="title-image py-2"><img src="/img/rnn_and_gol.jpg" alt="RNN and Game of life" style="width:100%"></div>
-        <h1 class="article-title p-name" itemprop="name">Cellular automata as convolutional neural networks</h1>
-        <div class="article-content e-content p-name" itemprop="articleBody">
-          <dl>
-            <dt>tags</dt>
-            <dd>
-              <a href="/notes/cellular_automata/">Cellular automata</a>, <a href="/notes/convolutional_neural_networks/">Convolutional neural networks</a>
-            </dd>
-          </dl>
-          <h2 id="motivation">Motivation</h2>
-          <p><a href="/notes/cellular_automata/">Cellular automata</a> are computational models based on several principles such as translation-invariance and parallelism of computations. These principles also motivated the creation of <a href="/notes/convolutional_neural_networks/">Convolutional neural networks</a> — used initially for images and text —, making this model well-suited to reason about cellular automata.</p>
-          <p>There is indeed a deep connection between the two models, making it seem like there are two expressions of the same idea: <strong>spatially organized information</strong> <strong>can be processed locally in parallel</strong>.</p>
-          <p>Here is an example with the <a href="/notes/conway_s_game_of_life/">Game of Life</a>:</p>
-          <figure>
-            <img src="/ox-hugo/ca_cnn.png" alt="Game of life step with highlighted local update">
-            <figcaption>
-              <p><span class="figure-number">Figure 1:</span> Any cell update in the Game of Life could be expressed with a neural network, making the global update a series of convolutions + non-linearities</p>
-            </figcaption>
-          </figure>
-          <h2 id="relevant-literature">Relevant literature <span class="tag"><span class="nn">nn</span><span class="ca">ca</span></span></h2>
-          <p>Cellular automata can easily be represented as Convolutional Neural Networks (CNNs). This relation has already been investigated in (<a href="#gilpinCellularAutomataConvolutional2018"><cite itemprop="citation" itemscope itemid="key:gilpinCellularAutomataConvolutional2018">Gilpin 2018</cite></a>) or (<a href="#mordvintsevGrowingNeuralCellular2020"><cite itemprop="citation" itemscope itemid="doi:10.23915/distill.00023">Mordvintsev et al. 2020</cite></a>) for instance. This idea has advantages and drawbacks:</p>
-          <ul>
-            <li>Computational cost of using floating points operations is higher than discrete operations.</li>
-            <li>Discrete operations can lead to exponential growth of the number of possible configurations and update rules in a CA. This is why rules aren’t represented as bijective tables matching neighborhoods to states anymore in (<a href="#mordvintsevGrowingNeuralCellular2020"><cite itemprop="citation" itemscope itemid="doi:10.23915/distill.00023">Mordvintsev et al. 2020</cite></a>).
-            </li>
-            <li>The use of floating point operations is mainly there to be able to compute gradients for gradient based optimization. This is against a <em>non-supervised</em> philosophy I am trying to work on. Training cellular automata is basically re-implementing a “recurrent convolutional neural network”: this might lead to interesting models but isn’t exploiting all the potential of those computational models</li>
-            <li>Ultimately computations in a computer are discrete and Mordvintsev et al. eventually use quantization to discretize the CA, resulting in an approximation of a discrete automaton.</li>
-          </ul>
-          <h2 id="graph-networks">Graph networks</h2>
-          <p>CNNs could be considered a particular architecture of <a href="/notes/neural_networks/">neural network</a> especially designed for regular grid-like graphs.</p>
-          <p>However, a CA can have arbitrary structures as long as the rule is defined to deal with this type of structures. This extends the concept of CA-CNN to <a href="/notes/graph_neural_networks/">graph neural networks</a>.</p>
-          <h2 id="turing-completeness">Turing-completeness</h2>
-          <p><a href="/notes/turing_completeness/">Turing-completeness</a> of convolutional neural networks can be directly inferred from this close relation with cellular automata. The condition is to consider a <em>recurrent-convolutional</em> network where the output is fed back to the network at each step. A simple <a href="/notes/elementary_cellular_automata/">ECA</a> rule such as rule 110 is easily implemented in this type of convolutional neural network, hence <a href="/notes/turing_completeness_of_cellular_automata/">Turing-completeness</a>.</p>
-          <h2 id="bibliography">Bibliography</h2>
-          <ol class="biblio-list pl-0">
-            <li class="list-none my-4 mx-2">
-              <span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="gilpinCellularAutomataConvolutional2018"><span itemprop="author">William Gilpin</span>. <time datetime="2018" itemprop="datePublished">September 9, 2018</time>. "<span itemprop="name">Cellular Automata as Convolutional Neural Networks</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:1809.02942 [cond-mat, Physics:nlin, Physics:physics]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/1809.02942">http://arxiv.org/abs/1809.02942</a>.</span>&nbsp;<a href="/notes/gilpincellularautomataconvolutional2018/">See notes</a>
-            </li>
-            <li class="list-none my-4 mx-2">
-              <span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="mordvintsevGrowingNeuralCellular2020" itemid="doi:10.23915/distill.00023"><span itemprop="author">Alexander Mordvintsev, Ettore Randazzo, Eyvind Niklasson, Michael Levin</span>. <time datetime="2020" itemprop="datePublished">February 11, 2020</time>. "<span itemprop="name">Growing Neural Cellular Automata</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Distill</i></span> 5 (2):e23. <a itemprop="sameAs" href="https://doi.org/10.23915/distill.00023">DOI</a>.</span>&nbsp;<a href="/notes/mordvintsevgrowingneuralcellular2020/">See notes</a>
-            </li>
-          </ol>
-        </div>
-        <div class="bl-section">
-          <h2>Links to this note</h2>
-          <div class="backlinks">
+      <div class="note-page bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg mb-6 overflow-hidden">
+        <div class="title-image"><img src="/img/rnn_and_gol.jpg" alt="RNN and Game of life" class="w-full"></div>
+        <div class="p-5 sm:p-6">
+          <h1 class="text-xl sm:text-2xl font-semibold mb-4 p-name text-zinc-900 dark:text-zinc-100" itemprop="name">Cellular automata as convolutional neural networks</h1>
+          <div class="article-content e-content p-name prose dark:prose-invert max-w-none" itemprop="articleBody">
+            <dl>
+              <dt>tags</dt>
+              <dd>
+                <a href="/notes/cellular_automata/">Cellular automata</a>, <a href="/notes/convolutional_neural_networks/">Convolutional neural networks</a>
+              </dd>
+            </dl>
+            <h2 id="motivation">Motivation</h2>
+            <p><a href="/notes/cellular_automata/">Cellular automata</a> are computational models based on several principles such as translation-invariance and parallelism of computations. These principles also motivated the creation of <a href="/notes/convolutional_neural_networks/">Convolutional neural networks</a> — used initially for images and text —, making this model well-suited to reason about cellular automata.</p>
+            <p>There is indeed a deep connection between the two models, making it seem like there are two expressions of the same idea: <strong>spatially organized information</strong> <strong>can be processed locally in parallel</strong>.</p>
+            <p>Here is an example with the <a href="/notes/conway_s_game_of_life/">Game of Life</a>:</p>
+            <figure>
+              <img src="/ox-hugo/ca_cnn.png" alt="Game of life step with highlighted local update">
+              <figcaption>
+                <p><span class="figure-number">Figure 1:</span> Any cell update in the Game of Life could be expressed with a neural network, making the global update a series of convolutions + non-linearities</p>
+              </figcaption>
+            </figure>
+            <h2 id="relevant-literature">Relevant literature <span class="tag"><span class="nn">nn</span><span class="ca">ca</span></span></h2>
+            <p>Cellular automata can easily be represented as Convolutional Neural Networks (CNNs). This relation has already been investigated in (<a href="#gilpinCellularAutomataConvolutional2018"><cite itemprop="citation" itemscope itemid="key:gilpinCellularAutomataConvolutional2018">Gilpin 2018</cite></a>) or (<a href="#mordvintsevGrowingNeuralCellular2020"><cite itemprop="citation" itemscope itemid="doi:10.23915/distill.00023">Mordvintsev et al. 2020</cite></a>) for instance. This idea has advantages and drawbacks:</p>
             <ul>
+              <li>Computational cost of using floating points operations is higher than discrete operations.</li>
+              <li>Discrete operations can lead to exponential growth of the number of possible configurations and update rules in a CA. This is why rules aren’t represented as bijective tables matching neighborhoods to states anymore in (<a href="#mordvintsevGrowingNeuralCellular2020"><cite itemprop="citation" itemscope itemid="doi:10.23915/distill.00023">Mordvintsev et al. 2020</cite></a>).
+              </li>
+              <li>The use of floating point operations is mainly there to be able to compute gradients for gradient based optimization. This is against a <em>non-supervised</em> philosophy I am trying to work on. Training cellular automata is basically re-implementing a “recurrent convolutional neural network”: this might lead to interesting models but isn’t exploiting all the potential of those computational models</li>
+              <li>Ultimately computations in a computer are discrete and Mordvintsev et al. eventually use quantization to discretize the CA, resulting in an approximation of a discrete automaton.</li>
+            </ul>
+            <h2 id="graph-networks">Graph networks</h2>
+            <p>CNNs could be considered a particular architecture of <a href="/notes/neural_networks/">neural network</a> especially designed for regular grid-like graphs.</p>
+            <p>However, a CA can have arbitrary structures as long as the rule is defined to deal with this type of structures. This extends the concept of CA-CNN to <a href="/notes/graph_neural_networks/">graph neural networks</a>.</p>
+            <h2 id="turing-completeness">Turing-completeness</h2>
+            <p><a href="/notes/turing_completeness/">Turing-completeness</a> of convolutional neural networks can be directly inferred from this close relation with cellular automata. The condition is to consider a <em>recurrent-convolutional</em> network where the output is fed back to the network at each step. A simple <a href="/notes/elementary_cellular_automata/">ECA</a> rule such as rule 110 is easily implemented in this type of convolutional neural network, hence <a href="/notes/turing_completeness_of_cellular_automata/">Turing-completeness</a>.</p>
+            <h2 id="bibliography">Bibliography</h2>
+            <ol class="biblio-list pl-0">
+              <li class="list-none my-4 mx-2">
+                <span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="gilpinCellularAutomataConvolutional2018"><span itemprop="author">William Gilpin</span>. <time datetime="2018" itemprop="datePublished">September 9, 2018</time>. "<span itemprop="name">Cellular Automata as Convolutional Neural Networks</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:1809.02942 [cond-mat, Physics:nlin, Physics:physics]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/1809.02942">http://arxiv.org/abs/1809.02942</a>.</span>&nbsp;<a href="/notes/gilpincellularautomataconvolutional2018/">See notes</a>
+              </li>
+              <li class="list-none my-4 mx-2">
+                <span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="mordvintsevGrowingNeuralCellular2020" itemid="doi:10.23915/distill.00023"><span itemprop="author">Alexander Mordvintsev, Ettore Randazzo, Eyvind Niklasson, Michael Levin</span>. <time datetime="2020" itemprop="datePublished">February 11, 2020</time>. "<span itemprop="name">Growing Neural Cellular Automata</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Distill</i></span> 5 (2):e23. <a itemprop="sameAs" href="https://doi.org/10.23915/distill.00023">DOI</a>.</span>&nbsp;<a href="/notes/mordvintsevgrowingneuralcellular2020/">See notes</a>
+              </li>
+            </ol>
+          </div>
+        </div>
+        <div class="bl-section px-5 sm:px-6 py-4 border-t border-zinc-200 dark:border-zinc-600">
+          <h2 class="text-sm font-semibold mb-2 mt-0 text-zinc-500 dark:text-zinc-400">Links to this note</h2>
+          <div class="backlinks">
+            <ul class="m-0 pl-5 text-sm">
               <li>
                 <a href="/notes/art_with_cellular_automata/">Art with Cellular Automata</a>
               </li>
@@ -164,15 +166,15 @@
             </ul>
           </div>
         </div>
-        <div class="text-center" style="font-variant-caps:all-small-caps">
+        <div class="border-t border-zinc-200 dark:border-zinc-600 px-5 sm:px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400 text-center" style="font-variant-caps:all-small-caps">
           Last changed <a class="u-url" href="https://hugocisneros.com/notes/cellular_automata_as_cnns/"><time itemprop="datePublished" class="dt-published" datetime="2021-09-01T17:30:00+0200">2021.09.01</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>
     <h3>Comments</h3>
     <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
-    <section id="isso-thread"></section><br>
-    <a href="/notes#cellular_automata_as_cnns"><b>← Back to Notes</b></a>
+    <section id="isso-thread"></section><a href="/notes#cellular_automata_as_cnns" class="inline-flex items-center gap-2 mt-4 px-4 py-2 text-sm font-medium text-inherit bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg hover:border-zinc-400 dark:hover:border-zinc-500 hover:shadow-md transition-all duration-150"><svg class="inline-block" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path></svg>Back to Notes</a>
   </main>
   <footer class="footer container h-10 text-center mt-1">
     <hr class="my-4">

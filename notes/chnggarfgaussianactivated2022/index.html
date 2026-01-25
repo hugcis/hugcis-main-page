@@ -100,31 +100,32 @@
       </ol>
     </nav>
     <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-      <div class="bg-zinc-200 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
-        <h1 class="article-title p-name" itemprop="name">GARF: Gaussian Activated Radiance Fields for High Fidelity Reconstruction and Pose Estimation by Chng, S., Ramasinghe, S., Sherrah, J., & Lucey, S. (2022)</h1>
-        <div class="article-content e-content p-name" itemprop="articleBody">
-          <dl>
-            <dt>tags</dt>
-            <dd>
-              <a href="/notes/implicit_neural_representations/">Implicit neural representations</a>, <a href="/notes/implicit_neural_representations/#neural-radiance-fields">NeRF</a>
-            </dd>
-            <dt>source</dt>
-            <dd>
-              (<a href="#chngGARFGaussianActivated2022"><cite itemprop="citation" itemscope itemid="key:chngGARFGaussianActivated2022">Chng et al. 2022</cite></a>)
-            </dd>
-            <dt>web</dt>
-            <dd>
-              <a href="https://sfchng.github.io/garf/">https://sfchng.github.io/garf/</a>
-            </dd>
-          </dl>
-          <h2 id="summary">Summary</h2>
-          <p>This paper introduces a positional embedding-free <a href="/notes/implicit_neural_representations/#neural-radiance-fields">NeRF</a> architecture which uses gaussian activation functions. These activation functions were introduced as part of Gaussian-MLPs in (<a href="#ramasinghePeriodicityUnifyingFramework2022"><cite itemprop="citation" itemscope itemid="key:ramasinghePeriodicityUnifyingFramework2022">Ramasinghe, Lucey 2022</cite></a>).</p>
-          <p>This alternative activation function enables GARF to model first derivatives of the target signal better than Positional embeddings MLPs (PE-MLPs) (<a href="#mildenhallNeRFRepresentingScenes2020"><cite itemprop="citation" itemscope itemid="key:mildenhallNeRFRepresentingScenes2020">Mildenhall et al. 2020</cite></a>; <a href="#sitzmannImplicitNeuralRepresentations2020"><cite itemprop="citation" itemscope itemid="key:sitzmannImplicitNeuralRepresentations2020">Sitzmann et al. 2020</cite></a>). It also overcomes the initialization issues with SIRENs (<a href="#sitzmannImplicitNeuralRepresentations2020"><cite itemprop="citation" itemscope itemid="key:sitzmannImplicitNeuralRepresentations2020">Sitzmann et al. 2020</cite></a>) without using a specific initialization scheme.</p>
-          <h2 id="comments">Comments</h2>
-          <h3 id="implementation">Implementation</h3>
-          <p>We give a very simple implementation of this paper’s main idea on a 2D image to show how straightforward it is to use it.</p>
-          <div class="highlight">
-            <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="display:flex"><span><span style="color:#719e07">import</span> skimage
+      <div class="note-page bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg mb-6 overflow-hidden">
+        <div class="p-5 sm:p-6">
+          <h1 class="text-xl sm:text-2xl font-semibold mb-4 p-name text-zinc-900 dark:text-zinc-100" itemprop="name">GARF: Gaussian Activated Radiance Fields for High Fidelity Reconstruction and Pose Estimation by Chng, S., Ramasinghe, S., Sherrah, J., & Lucey, S. (2022)</h1>
+          <div class="article-content e-content p-name prose dark:prose-invert max-w-none" itemprop="articleBody">
+            <dl>
+              <dt>tags</dt>
+              <dd>
+                <a href="/notes/implicit_neural_representations/">Implicit neural representations</a>, <a href="/notes/implicit_neural_representations/#neural-radiance-fields">NeRF</a>
+              </dd>
+              <dt>source</dt>
+              <dd>
+                (<a href="#chngGARFGaussianActivated2022"><cite itemprop="citation" itemscope itemid="key:chngGARFGaussianActivated2022">Chng et al. 2022</cite></a>)
+              </dd>
+              <dt>web</dt>
+              <dd>
+                <a href="https://sfchng.github.io/garf/">https://sfchng.github.io/garf/</a>
+              </dd>
+            </dl>
+            <h2 id="summary">Summary</h2>
+            <p>This paper introduces a positional embedding-free <a href="/notes/implicit_neural_representations/#neural-radiance-fields">NeRF</a> architecture which uses gaussian activation functions. These activation functions were introduced as part of Gaussian-MLPs in (<a href="#ramasinghePeriodicityUnifyingFramework2022"><cite itemprop="citation" itemscope itemid="key:ramasinghePeriodicityUnifyingFramework2022">Ramasinghe, Lucey 2022</cite></a>).</p>
+            <p>This alternative activation function enables GARF to model first derivatives of the target signal better than Positional embeddings MLPs (PE-MLPs) (<a href="#mildenhallNeRFRepresentingScenes2020"><cite itemprop="citation" itemscope itemid="key:mildenhallNeRFRepresentingScenes2020">Mildenhall et al. 2020</cite></a>; <a href="#sitzmannImplicitNeuralRepresentations2020"><cite itemprop="citation" itemscope itemid="key:sitzmannImplicitNeuralRepresentations2020">Sitzmann et al. 2020</cite></a>). It also overcomes the initialization issues with SIRENs (<a href="#sitzmannImplicitNeuralRepresentations2020"><cite itemprop="citation" itemscope itemid="key:sitzmannImplicitNeuralRepresentations2020">Sitzmann et al. 2020</cite></a>) without using a specific initialization scheme.</p>
+            <h2 id="comments">Comments</h2>
+            <h3 id="implementation">Implementation</h3>
+            <p>We give a very simple implementation of this paper’s main idea on a 2D image to show how straightforward it is to use it.</p>
+            <div class="highlight">
+              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="display:flex"><span><span style="color:#719e07">import</span> skimage
 </span></span><span style="display:flex"><span><span style="color:#719e07">import</span> matplotlib.pyplot <span style="color:#719e07">as</span> plt
 </span></span><span style="display:flex"><span><span style="color:#719e07">import</span> tensorflow <span style="color:#719e07">as</span> tf
 </span></span><span style="display:flex"><span><span style="color:#719e07">import</span> tensorflow.keras <span style="color:#719e07">as</span> keras
@@ -134,13 +135,13 @@
 </span></span><span style="display:flex"><span>plt<span style="color:#719e07">.</span>imshow(img, cmap<span style="color:#719e07">=</span><span style="color:#2aa198">'gray'</span>)
 </span></span><span style="display:flex"><span>plt<span style="color:#719e07">.</span>savefig(<span style="color:#2aa198">"~/img/garf1.png"</span>)
 </span></span></code></pre>
-          </div>
-          <figure>
-            <img src="/ox-hugo/garf1.png">
-          </figure>
-          <p><a id="code-snippet--create-model"></a></p>
-          <div class="highlight">
-            <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="display:flex"><span><span style="color:#586e75"># Make a meshgrid</span>
+            </div>
+            <figure>
+              <img src="/ox-hugo/garf1.png">
+            </figure>
+            <p><a id="code-snippet--create-model"></a></p>
+            <div class="highlight">
+              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="display:flex"><span><span style="color:#586e75"># Make a meshgrid</span>
 </span></span><span style="display:flex"><span>normalized_grid <span style="color:#719e07">=</span> (np<span style="color:#719e07">.</span>mgrid[:img<span style="color:#719e07">.</span>shape[<span style="color:#2aa198">0</span>], :img<span style="color:#719e07">.</span>shape[<span style="color:#2aa198">1</span>]] <span style="color:#719e07">/</span> <span style="color:#b58900">len</span>(img))
 </span></span><span style="display:flex"><span>X <span style="color:#719e07">=</span> normalized_grid<span style="color:#719e07">.</span>reshape((<span style="color:#2aa198">2</span>, <span style="color:#719e07">-</span><span style="color:#2aa198">1</span>))<span style="color:#719e07">.</span>T<span style="color:#719e07">.</span>astype(<span style="color:#2aa198">"f4"</span>) <span style="color:#719e07">*</span> <span style="color:#2aa198">2</span> <span style="color:#719e07">-</span> <span style="color:#2aa198">1</span>
 </span></span><span style="display:flex"><span>X <span style="color:#719e07">*=</span> <span style="color:#2aa198">32</span> <span style="color:#586e75"># this scaling factor make the training easier</span>
@@ -165,10 +166,10 @@
 </span></span><span style="display:flex"><span>model<span style="color:#719e07">.</span>compile(loss<span style="color:#719e07">=</span><span style="color:#2aa198">'mse'</span>, optimizer<span style="color:#719e07">=</span><span style="color:#2aa198">'adam'</span>)
 </span></span><span style="display:flex"><span>model<span style="color:#719e07">.</span>summary()
 </span></span></code></pre>
-          </div>
-          <p>We get the following simple model description:</p>
-          <div class="highlight">
-            <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text"><span style="display:flex"><span>Model: "sequential_3"
+            </div>
+            <p>We get the following simple model description:</p>
+            <div class="highlight">
+              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text"><span style="display:flex"><span>Model: "sequential_3"
 </span></span><span style="display:flex"><span>_________________________________________________________________
 </span></span><span style="display:flex"><span>Layer (type)                Output Shape              Param #
 </span></span><span style="display:flex"><span>================================================================
@@ -194,16 +195,16 @@
 </span></span><span style="display:flex"><span>Non-trainable params: 0
 </span></span><span style="display:flex"><span>________________________________________________________________
 </span></span></code></pre>
-          </div>
-          <p>We now fit the model (with a large batch size since each batch is a single pixel).</p>
-          <div class="highlight">
-            <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="display:flex"><span>model<span style="color:#719e07">.</span>fit(X, y, batch_size<span style="color:#719e07">=</span><span style="color:#2aa198">1024</span>, epochs<span style="color:#719e07">=</span><span style="color:#2aa198">100</span>)
+            </div>
+            <p>We now fit the model (with a large batch size since each batch is a single pixel).</p>
+            <div class="highlight">
+              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="display:flex"><span>model<span style="color:#719e07">.</span>fit(X, y, batch_size<span style="color:#719e07">=</span><span style="color:#2aa198">1024</span>, epochs<span style="color:#719e07">=</span><span style="color:#2aa198">100</span>)
 </span></span></code></pre>
-          </div>
-          <p>Finally we show the results for our fitted image as well as its neighbor “imagined” pixels.</p>
-          <p><a id="code-snippet--result-img"></a></p>
-          <div class="highlight">
-            <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="display:flex"><span><span style="color:#586e75"># Scale the grid by a factor of 2 for predicting pixels outside</span>
+            </div>
+            <p>Finally we show the results for our fitted image as well as its neighbor “imagined” pixels.</p>
+            <p><a id="code-snippet--result-img"></a></p>
+            <div class="highlight">
+              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="display:flex"><span><span style="color:#586e75"># Scale the grid by a factor of 2 for predicting pixels outside</span>
 </span></span><span style="display:flex"><span><span style="color:#586e75"># of the original image</span>
 </span></span><span style="display:flex"><span>y_pred <span style="color:#719e07">=</span> model<span style="color:#719e07">.</span>predict(X <span style="color:#719e07">*</span> <span style="color:#2aa198">2</span>, batch_size<span style="color:#719e07">=</span><span style="color:#2aa198">8192</span>)
 </span></span><span style="display:flex"><span>plt<span style="color:#719e07">.</span>figure(figsize<span style="color:#719e07">=</span>(<span style="color:#2aa198">10</span>, <span style="color:#2aa198">10</span>))
@@ -214,28 +215,29 @@
 </span></span><span style="display:flex"><span>))
 </span></span><span style="display:flex"><span>plt<span style="color:#719e07">.</span>savefig(<span style="color:#2aa198">"~/img/garf2.png"</span>)
 </span></span></code></pre>
+            </div>
+            <p>The output is relatively good for the image itself but the impressive part is how natural looking is the rest of imagined pixels. And all this without any specific initialization scheme or positional embeddings.</p>
+            <figure>
+              <img src="/ox-hugo/garf2.png">
+            </figure>
+            <h2 id="bibliography">Bibliography</h2>
+            <ol class="biblio-list pl-0">
+              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="chngGARFGaussianActivated2022"><span itemprop="author">Shin-Fang Chng, Sameera Ramasinghe, Jamie Sherrah, Simon Lucey</span>. <time datetime="2022" itemprop="datePublished">April 12, 2022</time>. "<span itemprop="name">GARF: Gaussian Activated Radiance Fields for High Fidelity Reconstruction and Pose Estimation</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:2204.05735 [cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2204.05735">http://arxiv.org/abs/2204.05735</a>.</span></li>
+              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="ramasinghePeriodicityUnifyingFramework2022"><span itemprop="author">Sameera Ramasinghe, Simon Lucey</span>. <time datetime="2022" itemprop="datePublished">March 17, 2022</time>. "<span itemprop="name">Beyond Periodicity: Towards a Unifying Framework for Activations in Coordinate-mlps</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:2111.15135 [cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2111.15135">http://arxiv.org/abs/2111.15135</a>.</span></li>
+              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="mildenhallNeRFRepresentingScenes2020"><span itemprop="author">Ben Mildenhall, Pratul P. Srinivasan, Matthew Tancik, Jonathan T. Barron, Ravi Ramamoorthi, Ren Ng</span>. <time datetime="2020" itemprop="datePublished">August 3, 2020</time>. "<span itemprop="name">Nerf: Representing Scenes as Neural Radiance Fields for View Synthesis</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:2003.08934 [cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2003.08934">http://arxiv.org/abs/2003.08934</a>.</span></li>
+              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="sitzmannImplicitNeuralRepresentations2020"><span itemprop="author">Vincent Sitzmann, Julien N. P. Martel, Alexander W. Bergman, David B. Lindell, Gordon Wetzstein</span>. <time datetime="2020" itemprop="datePublished">June 17, 2020</time>. "<span itemprop="name">Implicit Neural Representations with Periodic Activation Functions</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:2006.09661 [cs, Eess]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2006.09661">http://arxiv.org/abs/2006.09661</a>.</span></li>
+            </ol>
           </div>
-          <p>The output is relatively good for the image itself but the impressive part is how natural looking is the rest of imagined pixels. And all this without any specific initialization scheme or positional embeddings.</p>
-          <figure>
-            <img src="/ox-hugo/garf2.png">
-          </figure>
-          <h2 id="bibliography">Bibliography</h2>
-          <ol class="biblio-list pl-0">
-            <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="chngGARFGaussianActivated2022"><span itemprop="author">Shin-Fang Chng, Sameera Ramasinghe, Jamie Sherrah, Simon Lucey</span>. <time datetime="2022" itemprop="datePublished">April 12, 2022</time>. "<span itemprop="name">GARF: Gaussian Activated Radiance Fields for High Fidelity Reconstruction and Pose Estimation</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:2204.05735 [cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2204.05735">http://arxiv.org/abs/2204.05735</a>.</span></li>
-            <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="ramasinghePeriodicityUnifyingFramework2022"><span itemprop="author">Sameera Ramasinghe, Simon Lucey</span>. <time datetime="2022" itemprop="datePublished">March 17, 2022</time>. "<span itemprop="name">Beyond Periodicity: Towards a Unifying Framework for Activations in Coordinate-mlps</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:2111.15135 [cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2111.15135">http://arxiv.org/abs/2111.15135</a>.</span></li>
-            <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="mildenhallNeRFRepresentingScenes2020"><span itemprop="author">Ben Mildenhall, Pratul P. Srinivasan, Matthew Tancik, Jonathan T. Barron, Ravi Ramamoorthi, Ren Ng</span>. <time datetime="2020" itemprop="datePublished">August 3, 2020</time>. "<span itemprop="name">Nerf: Representing Scenes as Neural Radiance Fields for View Synthesis</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:2003.08934 [cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2003.08934">http://arxiv.org/abs/2003.08934</a>.</span></li>
-            <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="sitzmannImplicitNeuralRepresentations2020"><span itemprop="author">Vincent Sitzmann, Julien N. P. Martel, Alexander W. Bergman, David B. Lindell, Gordon Wetzstein</span>. <time datetime="2020" itemprop="datePublished">June 17, 2020</time>. "<span itemprop="name">Implicit Neural Representations with Periodic Activation Functions</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:2006.09661 [cs, Eess]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2006.09661">http://arxiv.org/abs/2006.09661</a>.</span></li>
-          </ol>
         </div>
-        <div class="text-center" style="font-variant-caps:all-small-caps">
+        <div class="border-t border-zinc-200 dark:border-zinc-600 px-5 sm:px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400 text-center" style="font-variant-caps:all-small-caps">
           Last changed <a class="u-url" href="https://hugocisneros.com/notes/chnggarfgaussianactivated2022/"><time itemprop="datePublished" class="dt-published" datetime="2022-04-26T13:08:00+0200">2022.04.26</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>
     <h3>Comments</h3>
     <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
-    <section id="isso-thread"></section><br>
-    <a href="/notes#chnggarfgaussianactivated2022"><b>← Back to Notes</b></a>
+    <section id="isso-thread"></section><a href="/notes#chnggarfgaussianactivated2022" class="inline-flex items-center gap-2 mt-4 px-4 py-2 text-sm font-medium text-inherit bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg hover:border-zinc-400 dark:hover:border-zinc-500 hover:shadow-md transition-all duration-150"><svg class="inline-block" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path></svg>Back to Notes</a>
   </main>
   <footer class="footer container h-10 text-center mt-1">
     <hr class="my-4">

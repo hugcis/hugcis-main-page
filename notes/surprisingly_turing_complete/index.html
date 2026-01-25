@@ -97,52 +97,54 @@
       </ol>
     </nav>
     <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-      <div class="bg-zinc-200 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
-        <h1 class="article-title p-name" itemprop="name">Surprisingly Turing-Complete</h1>
-        <div class="article-content e-content p-name" itemprop="articleBody">
-          <dl>
-            <dt>tags</dt>
-            <dd>
-              <a href="/notes/turing_completeness/">Turing-completeness</a>
-            </dd>
-            <dt>source</dt>
-            <dd>
-              <a href="https://www.gwern.net/Turing-complete#accidentally-turing-complete">Gwern Branwen’s website</a>
-            </dd>
-          </dl>
-          <h2 id="turing-completeness--turing-completeness-dot-md--is-common"><a href="/notes/turing_completeness/">Turing-completeness</a> is common</h2>
-          <blockquote>
-            <p>TC [Turing-completeness], […] is […] weirdly common: one might think that such universality as a system being smart enough to be able to run any program might be difficult or hard to achieve, but it turns out to be the opposite and it is difficult to write a useful system which does not immediately tip over into TC.</p>
-          </blockquote>
-          <p>I’ve often been amazed at how common TC can be in sufficiently complicated systems. Because it is so common, Gwern decides to distinguish <em>Accidentally</em> Turing complete systems from <em>Surprisingly</em> Turing complete ones.</p>
-          <p>Accidentally Turing complete systems aren’t very interesting. They’re usually the result of too much <a href="/notes/complexity/">complexity</a> built into a game / standard / system / etc.</p>
-          <h2 id="surprisingly-turing-complete">Surprisingly Turing-complete</h2>
-          <p>The other list is made of systems where one of the primitive is powerful enough to make the whole thing Turing complete. They are really not supposed to be TC; naturally, they are very inefficient, often achieving TC via implementation of a CA construction.</p>
-          <h2 id="implications-for-computer-security--computer-security-dot-md">Implications for <a href="/notes/computer_security/">computer security</a></h2>
-          <p>Beyond the interest these unexpectedly TC systems represent, security implications can be problematic.</p>
-          <blockquote>
-            <p>Why this effort to make a language in which many programs can’t be written? Because TC is intimately tied to <a href="/notes/godel_s_theorem/">Gödel’s incompleteness theorem</a> & <a href="/notes/rice_s_theorem/">Rice’s theorem</a>, allowing TC means that one is forfeiting all sorts of provability properties: in a non-TC language, one may be able to easily prove all sorts of useful things to know; for example, that programs terminate, that they are type-safe or not, that they can be easily converted into a logical theorem, that they consume a bounded amount of resources, that one implementation of a protocol is correct or equivalent to another implementation, that there are a lack of side-effects and a program can be transformed into a logically-equivalent but faster version</p>
-          </blockquote>
+      <div class="note-page bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg mb-6 overflow-hidden">
+        <div class="p-5 sm:p-6">
+          <h1 class="text-xl sm:text-2xl font-semibold mb-4 p-name text-zinc-900 dark:text-zinc-100" itemprop="name">Surprisingly Turing-Complete</h1>
+          <div class="article-content e-content p-name prose dark:prose-invert max-w-none" itemprop="articleBody">
+            <dl>
+              <dt>tags</dt>
+              <dd>
+                <a href="/notes/turing_completeness/">Turing-completeness</a>
+              </dd>
+              <dt>source</dt>
+              <dd>
+                <a href="https://www.gwern.net/Turing-complete#accidentally-turing-complete">Gwern Branwen’s website</a>
+              </dd>
+            </dl>
+            <h2 id="turing-completeness--turing-completeness-dot-md--is-common"><a href="/notes/turing_completeness/">Turing-completeness</a> is common</h2>
+            <blockquote>
+              <p>TC [Turing-completeness], […] is […] weirdly common: one might think that such universality as a system being smart enough to be able to run any program might be difficult or hard to achieve, but it turns out to be the opposite and it is difficult to write a useful system which does not immediately tip over into TC.</p>
+            </blockquote>
+            <p>I’ve often been amazed at how common TC can be in sufficiently complicated systems. Because it is so common, Gwern decides to distinguish <em>Accidentally</em> Turing complete systems from <em>Surprisingly</em> Turing complete ones.</p>
+            <p>Accidentally Turing complete systems aren’t very interesting. They’re usually the result of too much <a href="/notes/complexity/">complexity</a> built into a game / standard / system / etc.</p>
+            <h2 id="surprisingly-turing-complete">Surprisingly Turing-complete</h2>
+            <p>The other list is made of systems where one of the primitive is powerful enough to make the whole thing Turing complete. They are really not supposed to be TC; naturally, they are very inefficient, often achieving TC via implementation of a CA construction.</p>
+            <h2 id="implications-for-computer-security--computer-security-dot-md">Implications for <a href="/notes/computer_security/">computer security</a></h2>
+            <p>Beyond the interest these unexpectedly TC systems represent, security implications can be problematic.</p>
+            <blockquote>
+              <p>Why this effort to make a language in which many programs can’t be written? Because TC is intimately tied to <a href="/notes/godel_s_theorem/">Gödel’s incompleteness theorem</a> & <a href="/notes/rice_s_theorem/">Rice’s theorem</a>, allowing TC means that one is forfeiting all sorts of provability properties: in a non-TC language, one may be able to easily prove all sorts of useful things to know; for example, that programs terminate, that they are type-safe or not, that they can be easily converted into a logical theorem, that they consume a bounded amount of resources, that one implementation of a protocol is correct or equivalent to another implementation, that there are a lack of side-effects and a program can be transformed into a logically-equivalent but faster version</p>
+            </blockquote>
+          </div>
         </div>
-        <div class="bl-section">
-          <h2>Links to this note</h2>
+        <div class="bl-section px-5 sm:px-6 py-4 border-t border-zinc-200 dark:border-zinc-600">
+          <h2 class="text-sm font-semibold mb-2 mt-0 text-zinc-500 dark:text-zinc-400">Links to this note</h2>
           <div class="backlinks">
-            <ul>
+            <ul class="m-0 pl-5 text-sm">
               <li>
                 <a href="/notes/turing_completeness/">Turing-completeness</a>
               </li>
             </ul>
           </div>
         </div>
-        <div class="text-center" style="font-variant-caps:all-small-caps">
+        <div class="border-t border-zinc-200 dark:border-zinc-600 px-5 sm:px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400 text-center" style="font-variant-caps:all-small-caps">
           Last changed <a class="u-url" href="https://hugocisneros.com/notes/surprisingly_turing_complete/"><time itemprop="datePublished" class="dt-published" datetime="2020-07-09T12:43:00+0200">2020.07.09</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>
     <h3>Comments</h3>
     <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
-    <section id="isso-thread"></section><br>
-    <a href="/notes#surprisingly_turing_complete"><b>← Back to Notes</b></a>
+    <section id="isso-thread"></section><a href="/notes#surprisingly_turing_complete" class="inline-flex items-center gap-2 mt-4 px-4 py-2 text-sm font-medium text-inherit bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg hover:border-zinc-400 dark:hover:border-zinc-500 hover:shadow-md transition-all duration-150"><svg class="inline-block" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path></svg>Back to Notes</a>
   </main>
   <footer class="footer container h-10 text-center mt-1">
     <hr class="my-4">

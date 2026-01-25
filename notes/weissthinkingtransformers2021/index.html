@@ -100,57 +100,59 @@
       </ol>
     </nav>
     <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-      <div class="bg-zinc-200 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
-        <h1 class="article-title p-name" itemprop="name">Thinking Like Transformers by Weiss, G., Goldberg, Y., & Yahav, E. (2021)</h1>
-        <div class="article-content e-content p-name" itemprop="articleBody">
-          <dl>
-            <dt>tags</dt>
-            <dd>
-              <a href="/notes/nlp/">NLP</a>, <a href="/notes/computer_science/">Computer science</a>
-            </dd>
-            <dt>source</dt>
-            <dd>
-              (<a href="#weissThinkingTransformers2021"><cite itemprop="citation" itemscope itemid="key:weissThinkingTransformers2021">Weiss et al. 2021</cite></a>)
-            </dd>
-          </dl>
-          <h2 id="summary">Summary</h2>
-          <p>This paper introduces a <a href="/notes/programming_languages/">programming language</a> that is inspired by the way <a href="/notes/transformers/">Transformers</a> process input data. The language is called Restricted Access Sequence Processing Language (RASP).</p>
-          <p>Data is represented as sequences, which is the structure transformers manipulate (since they have been designed for <a href="/notes/nlp/">NLP</a> applications). The language has two types of internal data representation:</p>
-          <ul>
-            <li><em>Sequence operators</em> (s-ops) are functions that translate sequences into sequences. For example, the <code>tokens</code> operator is the identity and the <code>length</code> operator is defined by <code>length(["h", "i"]) = [2, 2]</code>.</li>
-            <li>Selectors are functions that takes two sequences and a boolean predicate that can be applied to all pairs of input values. It returns a matrix which values are the result of the boolean op on pairs of values. \[ \text{select}([1, 2, 3], [0, 3, 4], &lt;) = \begin{bmatrix} \text{F} & \text{T} & \text{T}\newline \text{F} & \text{T} & \text{T}\newline \text{F} & \text{F} & \text{T} \end{bmatrix} \] Selectors are paired with aggregators that will convert a selector matrix and a sequence to a sequence. The selector filters and average input values: \[ \text{aggregate}(\begin{bmatrix} \text{F} & \text{T} & \text{T} \newline \text{F} & \text{T} & \text{T}\newline \text{F} & \text{F} & \text{T} \end{bmatrix} , [0, 12, 3]) = [7.5, 7.5, 3] \]</li>
-          </ul>
-          <p>Correspondence between RASP ops and transformer components:</p>
-          <ul>
-            <li>Built-in s-ops like <code>indices</code> and <code>tokens</code> are similar to input <a href="/notes/word_vectors/">embeddings</a> of a transformer.
-            </li>
-            <li>Element-wise s-ops are related to feed-forward components in transformers which are just regular <a href="/notes/neural_networks/">neural networks</a>.
-            </li>
-            <li>Selection and aggregation are akin to <a href="/notes/attention/">attention</a> in transformers.
-            </li>
-          </ul>
-          <p>To evaluate how “good” this new language is for understanding and designing transformer architectures, the authors study three main questions:</p>
-          <blockquote>
-            <ol>
-              <li>its ability to upper bound the number of heads and layers required to solve a task,</li>
-              <li>the tightness of that bound,</li>
-              <li>its feasibility in a transformer</li>
+      <div class="note-page bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg mb-6 overflow-hidden">
+        <div class="p-5 sm:p-6">
+          <h1 class="text-xl sm:text-2xl font-semibold mb-4 p-name text-zinc-900 dark:text-zinc-100" itemprop="name">Thinking Like Transformers by Weiss, G., Goldberg, Y., & Yahav, E. (2021)</h1>
+          <div class="article-content e-content p-name prose dark:prose-invert max-w-none" itemprop="articleBody">
+            <dl>
+              <dt>tags</dt>
+              <dd>
+                <a href="/notes/nlp/">NLP</a>, <a href="/notes/computer_science/">Computer science</a>
+              </dd>
+              <dt>source</dt>
+              <dd>
+                (<a href="#weissThinkingTransformers2021"><cite itemprop="citation" itemscope itemid="key:weissThinkingTransformers2021">Weiss et al. 2021</cite></a>)
+              </dd>
+            </dl>
+            <h2 id="summary">Summary</h2>
+            <p>This paper introduces a <a href="/notes/programming_languages/">programming language</a> that is inspired by the way <a href="/notes/transformers/">Transformers</a> process input data. The language is called Restricted Access Sequence Processing Language (RASP).</p>
+            <p>Data is represented as sequences, which is the structure transformers manipulate (since they have been designed for <a href="/notes/nlp/">NLP</a> applications). The language has two types of internal data representation:</p>
+            <ul>
+              <li><em>Sequence operators</em> (s-ops) are functions that translate sequences into sequences. For example, the <code>tokens</code> operator is the identity and the <code>length</code> operator is defined by <code>length(["h", "i"]) = [2, 2]</code>.</li>
+              <li>Selectors are functions that takes two sequences and a boolean predicate that can be applied to all pairs of input values. It returns a matrix which values are the result of the boolean op on pairs of values. \[ \text{select}([1, 2, 3], [0, 3, 4], &lt;) = \begin{bmatrix} \text{F} & \text{T} & \text{T}\newline \text{F} & \text{T} & \text{T}\newline \text{F} & \text{F} & \text{T} \end{bmatrix} \] Selectors are paired with aggregators that will convert a selector matrix and a sequence to a sequence. The selector filters and average input values: \[ \text{aggregate}(\begin{bmatrix} \text{F} & \text{T} & \text{T} \newline \text{F} & \text{T} & \text{T}\newline \text{F} & \text{F} & \text{T} \end{bmatrix} , [0, 12, 3]) = [7.5, 7.5, 3] \]</li>
+            </ul>
+            <p>Correspondence between RASP ops and transformer components:</p>
+            <ul>
+              <li>Built-in s-ops like <code>indices</code> and <code>tokens</code> are similar to input <a href="/notes/word_vectors/">embeddings</a> of a transformer.
+              </li>
+              <li>Element-wise s-ops are related to feed-forward components in transformers which are just regular <a href="/notes/neural_networks/">neural networks</a>.
+              </li>
+              <li>Selection and aggregation are akin to <a href="/notes/attention/">attention</a> in transformers.
+              </li>
+            </ul>
+            <p>To evaluate how “good” this new language is for understanding and designing transformer architectures, the authors study three main questions:</p>
+            <blockquote>
+              <ol>
+                <li>its ability to upper bound the number of heads and layers required to solve a task,</li>
+                <li>the tightness of that bound,</li>
+                <li>its feasibility in a transformer</li>
+              </ol>
+            </blockquote>
+            <h2 id="bibliography">Bibliography</h2>
+            <ol class="biblio-list pl-0">
+              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="weissThinkingTransformers2021"><span itemprop="author">Gail Weiss, Yoav Goldberg, Eran Yahav</span>. <time datetime="2021" itemprop="datePublished">June 13, 2021</time>. "<span itemprop="name">Thinking Like Transformers</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:2106.06981 [cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2106.06981">http://arxiv.org/abs/2106.06981</a>.</span></li>
             </ol>
-          </blockquote>
-          <h2 id="bibliography">Bibliography</h2>
-          <ol class="biblio-list pl-0">
-            <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="weissThinkingTransformers2021"><span itemprop="author">Gail Weiss, Yoav Goldberg, Eran Yahav</span>. <time datetime="2021" itemprop="datePublished">June 13, 2021</time>. "<span itemprop="name">Thinking Like Transformers</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:2106.06981 [cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2106.06981">http://arxiv.org/abs/2106.06981</a>.</span></li>
-          </ol>
+          </div>
         </div>
-        <div class="text-center" style="font-variant-caps:all-small-caps">
+        <div class="border-t border-zinc-200 dark:border-zinc-600 px-5 sm:px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400 text-center" style="font-variant-caps:all-small-caps">
           Last changed <a class="u-url" href="https://hugocisneros.com/notes/weissthinkingtransformers2021/"><time itemprop="datePublished" class="dt-published" datetime="2021-08-25T15:19:00+0200">2021.08.25</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>
     <h3>Comments</h3>
     <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
-    <section id="isso-thread"></section><br>
-    <a href="/notes#weissthinkingtransformers2021"><b>← Back to Notes</b></a>
+    <section id="isso-thread"></section><a href="/notes#weissthinkingtransformers2021" class="inline-flex items-center gap-2 mt-4 px-4 py-2 text-sm font-medium text-inherit bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg hover:border-zinc-400 dark:hover:border-zinc-500 hover:shadow-md transition-all duration-150"><svg class="inline-block" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path></svg>Back to Notes</a>
   </main>
   <footer class="footer container h-10 text-center mt-1">
     <hr class="my-4">

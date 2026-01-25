@@ -100,45 +100,47 @@
       </ol>
     </nav>
     <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-      <div class="bg-zinc-200 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
-        <h1 class="article-title p-name" itemprop="name">Gradient descent</h1>
-        <div class="article-content e-content p-name" itemprop="articleBody">
-          <dl>
-            <dt>tags</dt>
-            <dd>
-              <a href="/notes/optimization/">Optimization</a>, <a href="/notes/algorithm/">Algorithm</a>
-            </dd>
-            <dt>resources</dt>
-            <dd>
-              <a href="https://drive.google.com/file/d/1e_9W8q9PL20iqOR-pfK89eILc_VtYaw1/view">Slides by Christian S. Perone</a>
-            </dd>
-          </dl>
-          <h2 id="fixed-learning-rate">Fixed learning rate</h2>
-          <p>The simplest way to apply the gradient descent algorithm on a function \(g\) convex and $L-$smooth on \(\mathbb{R}^d\) is to use the parameter update:</p>
-          <p>\[ \theta_t = \theta_{t-1} - \gamma g’(\theta_{t-1}) \]</p>
-          <p>This is based on the standard first-order approximation of the function \(g\). It can be very sensitive to the learning rate and suffer from pathological curvature.</p>
-          <h3 id="momentum">Momentum</h3>
-          <p>Momentum has been introduced in the gradient descent algorithm to dampen oscillations in the pathological cases and accelerating descent. Trajectories are less sensitive to changes in the loss landscape.</p>
-          <p>\[ \begin{align} V_{t + 1} = \beta V_t + g’(\theta_{t})\newline \theta_{t + 1} = \theta_t - \gamma V_{t + 1} \end{align}\]</p>
-          <h2 id="line-search">Line search</h2>
-          <p>Another common way to apply the gradient descent algorithm with non fixed learning rate is to use line search at each step. This corresponds to searching for the best \(\gamma\) to use in \(\theta_{} + \gamma \Delta\theta\) (in gradient descent, \(\Delta\theta = - g’(\theta)\)).</p>
-          <h3 id="exact-line-search">Exact line search</h3>
-          <p>For exact line search, we take \(\gamma = \arg\min_{s\geq 0} g(\theta + s \Delta \theta)\). This method is used when the cost of minimizing the function above is low compared to computing the search direction \(\Delta\theta\).</p>
-          <h3 id="backtracking-line-search">Backtracking line search</h3>
-          <p>This is an <a href="/notes/algorithm/">algorithm</a> for inexact line search. It depends on two parameters \(0 &lt; \alpha &lt; 0.5\) and \(0 &lt; \beta &lt; 1\). It is composed of one step which is run until the following condition is verified</p>
-          <p>\[ g(\theta + t&nbsp;\Delta \theta)&gt; g(\theta) + \alpha t \nabla g(\theta)^T \Delta\theta \]</p>
-          <p>At each step, \(t \leftarrow \beta t\), \(t\) is initialized to 1.</p>
-          <h2 id="sgd-and-global-minima">SGD and global minima</h2>
-          <p>(<a href="#liuBadGlobalMinima2020"><cite itemprop="citation" itemscope itemid="key:liuBadGlobalMinima2020">Liu et al. 2020</cite></a>)</p>
-          <h2 id="bibliography">Bibliography</h2>
-          <ol class="biblio-list pl-0">
-            <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="liuBadGlobalMinima2020"><span itemprop="author">Shengchao Liu, Dimitris S. Papailiopoulos, Dimitris Achlioptas</span>. <time datetime="2020" itemprop="datePublished">2020</time>. "<span itemprop="name">Bad Global Minima Exist and SGD Can Reach Them</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Advances in Neural Information Processing Systems 33: Annual Conference on Neural Information Processing Systems 2020, Neurips 2020, December 6-12, 2020, Virtual</i></span>, edited by Hugo Larochelle, Marc'Aurelio Ranzato, Raia Hadsell, Maria-Florina Balcan, and Hsuan-Tien Lin. <a itemprop="sameAs" href="https://proceedings.neurips.cc/paper/2020/hash/618491e20a9b686b79e158c293ab4f91-Abstract.html">https://proceedings.neurips.cc/paper/2020/hash/618491e20a9b686b79e158c293ab4f91-Abstract.html</a>.</span></li>
-          </ol>
+      <div class="note-page bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg mb-6 overflow-hidden">
+        <div class="p-5 sm:p-6">
+          <h1 class="text-xl sm:text-2xl font-semibold mb-4 p-name text-zinc-900 dark:text-zinc-100" itemprop="name">Gradient descent</h1>
+          <div class="article-content e-content p-name prose dark:prose-invert max-w-none" itemprop="articleBody">
+            <dl>
+              <dt>tags</dt>
+              <dd>
+                <a href="/notes/optimization/">Optimization</a>, <a href="/notes/algorithm/">Algorithm</a>
+              </dd>
+              <dt>resources</dt>
+              <dd>
+                <a href="https://drive.google.com/file/d/1e_9W8q9PL20iqOR-pfK89eILc_VtYaw1/view">Slides by Christian S. Perone</a>
+              </dd>
+            </dl>
+            <h2 id="fixed-learning-rate">Fixed learning rate</h2>
+            <p>The simplest way to apply the gradient descent algorithm on a function \(g\) convex and $L-$smooth on \(\mathbb{R}^d\) is to use the parameter update:</p>
+            <p>\[ \theta_t = \theta_{t-1} - \gamma g’(\theta_{t-1}) \]</p>
+            <p>This is based on the standard first-order approximation of the function \(g\). It can be very sensitive to the learning rate and suffer from pathological curvature.</p>
+            <h3 id="momentum">Momentum</h3>
+            <p>Momentum has been introduced in the gradient descent algorithm to dampen oscillations in the pathological cases and accelerating descent. Trajectories are less sensitive to changes in the loss landscape.</p>
+            <p>\[ \begin{align} V_{t + 1} = \beta V_t + g’(\theta_{t})\newline \theta_{t + 1} = \theta_t - \gamma V_{t + 1} \end{align}\]</p>
+            <h2 id="line-search">Line search</h2>
+            <p>Another common way to apply the gradient descent algorithm with non fixed learning rate is to use line search at each step. This corresponds to searching for the best \(\gamma\) to use in \(\theta_{} + \gamma \Delta\theta\) (in gradient descent, \(\Delta\theta = - g’(\theta)\)).</p>
+            <h3 id="exact-line-search">Exact line search</h3>
+            <p>For exact line search, we take \(\gamma = \arg\min_{s\geq 0} g(\theta + s \Delta \theta)\). This method is used when the cost of minimizing the function above is low compared to computing the search direction \(\Delta\theta\).</p>
+            <h3 id="backtracking-line-search">Backtracking line search</h3>
+            <p>This is an <a href="/notes/algorithm/">algorithm</a> for inexact line search. It depends on two parameters \(0 &lt; \alpha &lt; 0.5\) and \(0 &lt; \beta &lt; 1\). It is composed of one step which is run until the following condition is verified</p>
+            <p>\[ g(\theta + t&nbsp;\Delta \theta)&gt; g(\theta) + \alpha t \nabla g(\theta)^T \Delta\theta \]</p>
+            <p>At each step, \(t \leftarrow \beta t\), \(t\) is initialized to 1.</p>
+            <h2 id="sgd-and-global-minima">SGD and global minima</h2>
+            <p>(<a href="#liuBadGlobalMinima2020"><cite itemprop="citation" itemscope itemid="key:liuBadGlobalMinima2020">Liu et al. 2020</cite></a>)</p>
+            <h2 id="bibliography">Bibliography</h2>
+            <ol class="biblio-list pl-0">
+              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="liuBadGlobalMinima2020"><span itemprop="author">Shengchao Liu, Dimitris S. Papailiopoulos, Dimitris Achlioptas</span>. <time datetime="2020" itemprop="datePublished">2020</time>. "<span itemprop="name">Bad Global Minima Exist and SGD Can Reach Them</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Advances in Neural Information Processing Systems 33: Annual Conference on Neural Information Processing Systems 2020, Neurips 2020, December 6-12, 2020, Virtual</i></span>, edited by Hugo Larochelle, Marc'Aurelio Ranzato, Raia Hadsell, Maria-Florina Balcan, and Hsuan-Tien Lin. <a itemprop="sameAs" href="https://proceedings.neurips.cc/paper/2020/hash/618491e20a9b686b79e158c293ab4f91-Abstract.html">https://proceedings.neurips.cc/paper/2020/hash/618491e20a9b686b79e158c293ab4f91-Abstract.html</a>.</span></li>
+            </ol>
+          </div>
         </div>
-        <div class="bl-section">
-          <h2>Links to this note</h2>
+        <div class="bl-section px-5 sm:px-6 py-4 border-t border-zinc-200 dark:border-zinc-600">
+          <h2 class="text-sm font-semibold mb-2 mt-0 text-zinc-500 dark:text-zinc-400">Links to this note</h2>
           <div class="backlinks">
-            <ul>
+            <ul class="m-0 pl-5 text-sm">
               <li>
                 <a href="/notes/genetic_algorithm/">Genetic algorithms</a>
               </li>
@@ -169,15 +171,15 @@
             </ul>
           </div>
         </div>
-        <div class="text-center" style="font-variant-caps:all-small-caps">
+        <div class="border-t border-zinc-200 dark:border-zinc-600 px-5 sm:px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400 text-center" style="font-variant-caps:all-small-caps">
           Last changed <a class="u-url" href="https://hugocisneros.com/notes/gradient_descent/"><time itemprop="datePublished" class="dt-published" datetime="2022-03-07T16:57:00+0100">2022.03.07</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>
     <h3>Comments</h3>
     <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
-    <section id="isso-thread"></section><br>
-    <a href="/notes#gradient_descent"><b>← Back to Notes</b></a>
+    <section id="isso-thread"></section><a href="/notes#gradient_descent" class="inline-flex items-center gap-2 mt-4 px-4 py-2 text-sm font-medium text-inherit bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg hover:border-zinc-400 dark:hover:border-zinc-500 hover:shadow-md transition-all duration-150"><svg class="inline-block" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path></svg>Back to Notes</a>
   </main>
   <footer class="footer container h-10 text-center mt-1">
     <hr class="my-4">

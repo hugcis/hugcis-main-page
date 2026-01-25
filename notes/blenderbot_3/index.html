@@ -100,52 +100,54 @@
       </ol>
     </nav>
     <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-      <div class="bg-zinc-200 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
-        <h1 class="article-title p-name" itemprop="name">BlenderBot 3</h1>
-        <div class="article-content e-content p-name" itemprop="articleBody">
-          <dl>
-            <dt>tags</dt>
-            <dd>
-              <a href="/notes/transformers/">Transformers</a>, <a href="/notes/gpt/">GPT</a>, <a href="/notes/opt/">OPT: Open Pre-trained Transformer</a>, <a href="/notes/nlp/">NLP</a>
-            </dd>
-            <dt>blog post</dt>
-            <dd>
-              <a href="https://ai.facebook.com/blog/blenderbot-3-a-175b-parameter-publicly-available-chatbot-that-improves-its-skills-and-safety-over-time/">Meta AI announcement blog post</a>
-            </dd>
-            <dt>paper</dt>
-            <dd>
-              (<a href="#shusterBlenderBotDeployedConversational2022"><cite itemprop="citation" itemscope itemid="doi:10.48550/arXiv.2208.03188">Shuster et al. 2022</cite></a>)
-            </dd>
-          </dl>
-          <h2 id="architecture">Architecture</h2>
-          <p>It is based on a pre-trained <a href="/notes/opt/">OPT</a> model, with some optimizations to make it better as a dialog agent, such as long term memory and the ability to search the web.</p>
-          <p>It uses human feedback to fine-tune its results on some tasks.</p>
-          <h2 id="parameter-count">Parameter count</h2>
-          <p>175B</p>
-          <h2 id="bibliography">Bibliography</h2>
-          <ol class="biblio-list pl-0">
-            <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="shusterBlenderBotDeployedConversational2022" itemid="doi:10.48550/arXiv.2208.03188"><span itemprop="author">Kurt Shuster, Jing Xu, Mojtaba Komeili, Da Ju, Eric Michael Smith, Stephen Roller, Megan Ung, et al.</span>. <time datetime="2022" itemprop="datePublished">August 10, 2022</time>. "<span itemprop="name">Blenderbot 3: A Deployed Conversational Agent That Continually Learns to Responsibly Engage</span>". arXiv. <a itemprop="sameAs" href="https://doi.org/10.48550/arXiv.2208.03188">DOI</a>.</span></li>
-          </ol>
+      <div class="note-page bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg mb-6 overflow-hidden">
+        <div class="p-5 sm:p-6">
+          <h1 class="text-xl sm:text-2xl font-semibold mb-4 p-name text-zinc-900 dark:text-zinc-100" itemprop="name">BlenderBot 3</h1>
+          <div class="article-content e-content p-name prose dark:prose-invert max-w-none" itemprop="articleBody">
+            <dl>
+              <dt>tags</dt>
+              <dd>
+                <a href="/notes/transformers/">Transformers</a>, <a href="/notes/gpt/">GPT</a>, <a href="/notes/opt/">OPT: Open Pre-trained Transformer</a>, <a href="/notes/nlp/">NLP</a>
+              </dd>
+              <dt>blog post</dt>
+              <dd>
+                <a href="https://ai.facebook.com/blog/blenderbot-3-a-175b-parameter-publicly-available-chatbot-that-improves-its-skills-and-safety-over-time/">Meta AI announcement blog post</a>
+              </dd>
+              <dt>paper</dt>
+              <dd>
+                (<a href="#shusterBlenderBotDeployedConversational2022"><cite itemprop="citation" itemscope itemid="doi:10.48550/arXiv.2208.03188">Shuster et al. 2022</cite></a>)
+              </dd>
+            </dl>
+            <h2 id="architecture">Architecture</h2>
+            <p>It is based on a pre-trained <a href="/notes/opt/">OPT</a> model, with some optimizations to make it better as a dialog agent, such as long term memory and the ability to search the web.</p>
+            <p>It uses human feedback to fine-tune its results on some tasks.</p>
+            <h2 id="parameter-count">Parameter count</h2>
+            <p>175B</p>
+            <h2 id="bibliography">Bibliography</h2>
+            <ol class="biblio-list pl-0">
+              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="shusterBlenderBotDeployedConversational2022" itemid="doi:10.48550/arXiv.2208.03188"><span itemprop="author">Kurt Shuster, Jing Xu, Mojtaba Komeili, Da Ju, Eric Michael Smith, Stephen Roller, Megan Ung, et al.</span>. <time datetime="2022" itemprop="datePublished">August 10, 2022</time>. "<span itemprop="name">Blenderbot 3: A Deployed Conversational Agent That Continually Learns to Responsibly Engage</span>". arXiv. <a itemprop="sameAs" href="https://doi.org/10.48550/arXiv.2208.03188">DOI</a>.</span></li>
+            </ol>
+          </div>
         </div>
-        <div class="bl-section">
-          <h2>Links to this note</h2>
+        <div class="bl-section px-5 sm:px-6 py-4 border-t border-zinc-200 dark:border-zinc-600">
+          <h2 class="text-sm font-semibold mb-2 mt-0 text-zinc-500 dark:text-zinc-400">Links to this note</h2>
           <div class="backlinks">
-            <ul>
+            <ul class="m-0 pl-5 text-sm">
               <li>
                 <a href="/notes/chatgpt/">ChatGPT</a>
               </li>
             </ul>
           </div>
         </div>
-        <div class="text-center" style="font-variant-caps:all-small-caps">
+        <div class="border-t border-zinc-200 dark:border-zinc-600 px-5 sm:px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400 text-center" style="font-variant-caps:all-small-caps">
           Last changed <a class="u-url" href="https://hugocisneros.com/notes/blenderbot_3/"><time itemprop="datePublished" class="dt-published" datetime="2023-02-13T13:18:00+0100">2023.02.13</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>
     <h3>Comments</h3>
     <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
-    <section id="isso-thread"></section><br>
-    <a href="/notes#blenderbot_3"><b>← Back to Notes</b></a>
+    <section id="isso-thread"></section><a href="/notes#blenderbot_3" class="inline-flex items-center gap-2 mt-4 px-4 py-2 text-sm font-medium text-inherit bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg hover:border-zinc-400 dark:hover:border-zinc-500 hover:shadow-md transition-all duration-150"><svg class="inline-block" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path></svg>Back to Notes</a>
   </main>
   <footer class="footer container h-10 text-center mt-1">
     <hr class="my-4">

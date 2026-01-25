@@ -99,31 +99,32 @@
       </ol>
     </nav>
     <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-      <div class="bg-zinc-200 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
-        <h1 class="article-title p-name" itemprop="name">Make</h1>
-        <div class="article-content e-content p-name" itemprop="articleBody">
-          <dl>
-            <dt>tags</dt>
-            <dd>
-              <a href="/notes/coding/">Coding</a>
-            </dd>
-          </dl>
-          <p>Make is a build automation tool.</p>
-          <h2 id="don-t-deal-with-tabs">Don’t deal with tabs</h2>
-          <p>I have been annoyed with tabs in Makefiles many times. Some editors or copy-pasting functions automatically convert tabs to space and vice-versa and this can break your Makefile.</p>
-          <p>With GNU Make 4.0 or later, it is possible to set the prefix to some other fixed token. To use <code>&gt;</code> as a prefix, put this at the beginning of your Makefile:</p>
-          <div class="highlight">
-            <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-makefile" data-lang="makefile"><span style="display:flex"><span>ifeq (<span style="color:#719e07">$(</span><span style="color:#268bd2">origin</span> .<span style="color:#268bd2">RECIPEPREFIX</span><span style="color:#719e07">)</span>, undefined)
+      <div class="note-page bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg mb-6 overflow-hidden">
+        <div class="p-5 sm:p-6">
+          <h1 class="text-xl sm:text-2xl font-semibold mb-4 p-name text-zinc-900 dark:text-zinc-100" itemprop="name">Make</h1>
+          <div class="article-content e-content p-name prose dark:prose-invert max-w-none" itemprop="articleBody">
+            <dl>
+              <dt>tags</dt>
+              <dd>
+                <a href="/notes/coding/">Coding</a>
+              </dd>
+            </dl>
+            <p>Make is a build automation tool.</p>
+            <h2 id="don-t-deal-with-tabs">Don’t deal with tabs</h2>
+            <p>I have been annoyed with tabs in Makefiles many times. Some editors or copy-pasting functions automatically convert tabs to space and vice-versa and this can break your Makefile.</p>
+            <p>With GNU Make 4.0 or later, it is possible to set the prefix to some other fixed token. To use <code>&gt;</code> as a prefix, put this at the beginning of your Makefile:</p>
+            <div class="highlight">
+              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-makefile" data-lang="makefile"><span style="display:flex"><span>ifeq (<span style="color:#719e07">$(</span><span style="color:#268bd2">origin</span> .<span style="color:#268bd2">RECIPEPREFIX</span><span style="color:#719e07">)</span>, undefined)
 </span></span><span style="display:flex"><span>  <span style="color:#719e07">$(</span><span style="color:#268bd2">error</span> "<span style="color:#268bd2">This</span> <span style="color:#268bd2">Make</span> <span style="color:#268bd2">does</span> <span style="color:#268bd2">not</span> <span style="color:#268bd2">support</span> .<span style="color:#268bd2">RECIPEPREFIX</span>. \
 </span></span><span style="display:flex"><span>    <span style="color:#268bd2">Please</span> <span style="color:#268bd2">use</span> <span style="color:#268bd2">GNU</span> <span style="color:#268bd2">Make</span> 4.0 <span style="color:#268bd2">or</span> <span style="color:#268bd2">later</span>"<span style="color:#719e07">)</span>
 </span></span><span style="display:flex"><span>endif
 </span></span><span style="display:flex"><span><span style="color:#268bd2">.RECIPEPREFIX</span> <span style="color:#719e07">=</span> &gt;
 </span></span></code></pre>
-          </div>
-          <h2 id="document-a-make-file-for-a-user">Document a make file for a user</h2>
-          <p>Large Makefiles with lots of recipes can be overwhelming for someone trying your software for the first time. Many conventions exist about which standard recipes should be there, but it is also efficient to document them. This can be done by adding the following recipe to the Makefile (which will be run by default, to change this behavior, remove the first line):</p>
-          <div class="highlight">
-            <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-makefile" data-lang="makefile"><span style="display:flex"><span><span style="color:#268bd2">.DEFAULT_GOAL</span> <span style="color:#719e07">:=</span> <span style="color:#b58900">help</span>
+            </div>
+            <h2 id="document-a-make-file-for-a-user">Document a make file for a user</h2>
+            <p>Large Makefiles with lots of recipes can be overwhelming for someone trying your software for the first time. Many conventions exist about which standard recipes should be there, but it is also efficient to document them. This can be done by adding the following recipe to the Makefile (which will be run by default, to change this behavior, remove the first line):</p>
+            <div class="highlight">
+              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-makefile" data-lang="makefile"><span style="display:flex"><span><span style="color:#268bd2">.DEFAULT_GOAL</span> <span style="color:#719e07">:=</span> <span style="color:#b58900">help</span>
 </span></span><span style="display:flex"><span><span style="color:#268bd2">.PHONY</span><span style="color:#719e07">:</span> help
 </span></span><span style="display:flex"><span>
 </span></span><span style="display:flex"><span><span style="color:#268bd2">help</span><span style="color:#719e07">:</span>
@@ -131,17 +132,18 @@
 </span></span></span><span style="display:flex"><span>  | sed -n <span style="color:#2aa198">'s/^\(.*\): \(.*\)##\(.*\)/\1|\3/p'</span> <span style="color:#cb4b16">\
 </span></span></span><span style="display:flex"><span>  | column -t  -s <span style="color:#2aa198">'|'</span>
 </span></span></code></pre>
+            </div>
           </div>
         </div>
-        <div class="text-center" style="font-variant-caps:all-small-caps">
+        <div class="border-t border-zinc-200 dark:border-zinc-600 px-5 sm:px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400 text-center" style="font-variant-caps:all-small-caps">
           Last changed <a class="u-url" href="https://hugocisneros.com/notes/make/"><time itemprop="datePublished" class="dt-published" datetime="2020-07-01T20:23:00+0200">2020.07.01</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>
     <h3>Comments</h3>
     <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
-    <section id="isso-thread"></section><br>
-    <a href="/notes#make"><b>← Back to Notes</b></a>
+    <section id="isso-thread"></section><a href="/notes#make" class="inline-flex items-center gap-2 mt-4 px-4 py-2 text-sm font-medium text-inherit bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg hover:border-zinc-400 dark:hover:border-zinc-500 hover:shadow-md transition-all duration-150"><svg class="inline-block" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path></svg>Back to Notes</a>
   </main>
   <footer class="footer container h-10 text-center mt-1">
     <hr class="my-4">

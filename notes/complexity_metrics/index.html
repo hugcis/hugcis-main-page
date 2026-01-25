@@ -99,60 +99,62 @@
       </ol>
     </nav>
     <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-      <div class="bg-zinc-200 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
-        <h1 class="article-title p-name" itemprop="name">Complexity metrics</h1>
-        <div class="article-content e-content p-name" itemprop="articleBody">
-          <dl>
-            <dt>tags</dt>
-            <dd>
-              <a href="/notes/complexity/">Complexity</a>
-            </dd>
-          </dl>
-          <p>To study the complexity of various systems, researchers have come up with various metrics. They are based on several principles such as <a href="/notes/information_theory/">Information theory</a> or <a href="/notes/algorithmic_information_theory/">Algorithmic Information theory</a>. Many of these metrics are described in (<a href="#grassbergerRandomnessInformationComplexity1989"><cite itemprop="citation" itemscope itemid="key:grassbergerRandomnessInformationComplexity1989">Grassberger 1989</cite></a>).</p>
-          <h2 id="shannon-entropy-and-kolmogorov-complexity">Shannon entropy and Kolmogorov Complexity</h2>
-          <p>The paper (<a href="#grunwaldShannonInformationKolmogorov2004"><cite itemprop="citation" itemscope itemid="key:grunwaldShannonInformationKolmogorov2004">Grunwald, Vitányi 2004</cite></a>) is a great description and analysis of two of the most important <a href="/notes/complexity/">Complexity</a> metrics:</p>
-          <ul>
-            <li>
-              <a href="/notes/entropy/">Shannon entropy</a>
-            </li>
-            <li>
-              <a href="/notes/kolmogorov_complexity/">Kolmogorov complexity</a>
-            </li>
-          </ul>
-          <h2 id="information-theoretic-metrics">Information-theoretic metrics</h2>
-          <ul>
-            <li>
-              <a href="/notes/entropy/">Shannon entropy</a>
-            </li>
-          </ul>
-          <h2 id="ait-based-metrics">AIT based metrics</h2>
-          <p>For a <a href="/notes/turing_completeness/">Universal computer</a> \(U\) the algorithmic information of \(S\) relative to \(U\) is defined as the length of the shortest program that yields \(S\) on \(U\). \[ C_U(S) = \min_{Prog_U(S)} \text{Len}[Prog_U(S)] \]</p>
-          <p>This quantity is called algorithmic information, or <a href="/notes/kolmogorov_complexity/">Solomonoff–Kolmogorov–Chaitin complexity</a>.</p>
-          <h2 id="compression-based-metrics">Compression-based metrics</h2>
-          <p>It is not possible for a given sequence to estimate reliably its algorithmic information, because we cannot know if we have found the shortest description. A solution is to restrict the encoding method, and <a href="/notes/lempel_ziv_welch_algorithm/">LZW algorithm</a> complexity is one of them (<a href="#lempelComplexityFiniteSequences1976"><cite itemprop="citation" itemscope itemid="doi:10.1109/TIT.1976.1055501">Lempel, Ziv 1976</cite></a>).</p>
-          <h2 id="others">Others</h2>
-          <ul>
-            <li>
-              <a href="/notes/epsilon_machines/">Epsilon machines</a>
-            </li>
-            <li>
-              <a href="/notes/statistical_complexity/">Statistical complexity</a>
-            </li>
-            <li>In (<a href="#cisnerosEvolvingStructuresComplex2019"><cite itemprop="citation" itemscope itemid="doi:10.1109/SSCI44817.2019.9002840">Cisneros et al. 2019</cite></a>), we propose a complexity metric which is based on the compression quality of a local neural network based prediction model.
-            </li>
-          </ul>
-          <h2 id="bibliography">Bibliography</h2>
-          <ol class="biblio-list pl-0">
-            <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="grassbergerRandomnessInformationComplexity1989"><span itemprop="author">Peter Grassberger</span>. <time datetime="1989" itemprop="datePublished">1989</time>. "<span itemprop="name">Randomness, Information, and Complexity</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Proceedings of the 5th Mexican School on Statistical Physics</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/1208.3459">http://arxiv.org/abs/1208.3459</a>.</span></li>
-            <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="grunwaldShannonInformationKolmogorov2004"><span itemprop="author">Peter Grunwald, Paul Vitányi</span>. <time datetime="2004" itemprop="datePublished">2004</time>. "<span itemprop="name">Shannon Information and Kolmogorov Complexity</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv Preprint Cs/0410002</i></span>.</span></li>
-            <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="lempelComplexityFiniteSequences1976" itemid="doi:10.1109/TIT.1976.1055501"><span itemprop="author">A. Lempel, J. Ziv</span>. <time datetime="1976" itemprop="datePublished">January 1976</time>. "<span itemprop="name">On the Complexity of Finite Sequences</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">IEEE Transactions on Information Theory</i></span> 22 (1):75–81. <a itemprop="sameAs" href="https://doi.org/10.1109/TIT.1976.1055501">DOI</a>.</span></li>
-            <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="cisnerosEvolvingStructuresComplex2019" itemid="doi:10.1109/SSCI44817.2019.9002840"><span itemprop="author">Hugo Cisneros, Josef Sivic, Tomas Mikolov</span>. <time datetime="2019" itemprop="datePublished">December 2019</time>. "<span itemprop="name">Evolving Structures in Complex Systems</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">2019 IEEE Symposium Series on Computational Intelligence (SSCI)</i></span>, 230–37. Xiamen, China: IEEE. <a itemprop="sameAs" href="https://doi.org/10.1109/SSCI44817.2019.9002840">DOI</a>.</span></li>
-          </ol>
-        </div>
-        <div class="bl-section">
-          <h2>Links to this note</h2>
-          <div class="backlinks">
+      <div class="note-page bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg mb-6 overflow-hidden">
+        <div class="p-5 sm:p-6">
+          <h1 class="text-xl sm:text-2xl font-semibold mb-4 p-name text-zinc-900 dark:text-zinc-100" itemprop="name">Complexity metrics</h1>
+          <div class="article-content e-content p-name prose dark:prose-invert max-w-none" itemprop="articleBody">
+            <dl>
+              <dt>tags</dt>
+              <dd>
+                <a href="/notes/complexity/">Complexity</a>
+              </dd>
+            </dl>
+            <p>To study the complexity of various systems, researchers have come up with various metrics. They are based on several principles such as <a href="/notes/information_theory/">Information theory</a> or <a href="/notes/algorithmic_information_theory/">Algorithmic Information theory</a>. Many of these metrics are described in (<a href="#grassbergerRandomnessInformationComplexity1989"><cite itemprop="citation" itemscope itemid="key:grassbergerRandomnessInformationComplexity1989">Grassberger 1989</cite></a>).</p>
+            <h2 id="shannon-entropy-and-kolmogorov-complexity">Shannon entropy and Kolmogorov Complexity</h2>
+            <p>The paper (<a href="#grunwaldShannonInformationKolmogorov2004"><cite itemprop="citation" itemscope itemid="key:grunwaldShannonInformationKolmogorov2004">Grunwald, Vitányi 2004</cite></a>) is a great description and analysis of two of the most important <a href="/notes/complexity/">Complexity</a> metrics:</p>
             <ul>
+              <li>
+                <a href="/notes/entropy/">Shannon entropy</a>
+              </li>
+              <li>
+                <a href="/notes/kolmogorov_complexity/">Kolmogorov complexity</a>
+              </li>
+            </ul>
+            <h2 id="information-theoretic-metrics">Information-theoretic metrics</h2>
+            <ul>
+              <li>
+                <a href="/notes/entropy/">Shannon entropy</a>
+              </li>
+            </ul>
+            <h2 id="ait-based-metrics">AIT based metrics</h2>
+            <p>For a <a href="/notes/turing_completeness/">Universal computer</a> \(U\) the algorithmic information of \(S\) relative to \(U\) is defined as the length of the shortest program that yields \(S\) on \(U\). \[ C_U(S) = \min_{Prog_U(S)} \text{Len}[Prog_U(S)] \]</p>
+            <p>This quantity is called algorithmic information, or <a href="/notes/kolmogorov_complexity/">Solomonoff–Kolmogorov–Chaitin complexity</a>.</p>
+            <h2 id="compression-based-metrics">Compression-based metrics</h2>
+            <p>It is not possible for a given sequence to estimate reliably its algorithmic information, because we cannot know if we have found the shortest description. A solution is to restrict the encoding method, and <a href="/notes/lempel_ziv_welch_algorithm/">LZW algorithm</a> complexity is one of them (<a href="#lempelComplexityFiniteSequences1976"><cite itemprop="citation" itemscope itemid="doi:10.1109/TIT.1976.1055501">Lempel, Ziv 1976</cite></a>).</p>
+            <h2 id="others">Others</h2>
+            <ul>
+              <li>
+                <a href="/notes/epsilon_machines/">Epsilon machines</a>
+              </li>
+              <li>
+                <a href="/notes/statistical_complexity/">Statistical complexity</a>
+              </li>
+              <li>In (<a href="#cisnerosEvolvingStructuresComplex2019"><cite itemprop="citation" itemscope itemid="doi:10.1109/SSCI44817.2019.9002840">Cisneros et al. 2019</cite></a>), we propose a complexity metric which is based on the compression quality of a local neural network based prediction model.
+              </li>
+            </ul>
+            <h2 id="bibliography">Bibliography</h2>
+            <ol class="biblio-list pl-0">
+              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="grassbergerRandomnessInformationComplexity1989"><span itemprop="author">Peter Grassberger</span>. <time datetime="1989" itemprop="datePublished">1989</time>. "<span itemprop="name">Randomness, Information, and Complexity</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Proceedings of the 5th Mexican School on Statistical Physics</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/1208.3459">http://arxiv.org/abs/1208.3459</a>.</span></li>
+              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="grunwaldShannonInformationKolmogorov2004"><span itemprop="author">Peter Grunwald, Paul Vitányi</span>. <time datetime="2004" itemprop="datePublished">2004</time>. "<span itemprop="name">Shannon Information and Kolmogorov Complexity</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv Preprint Cs/0410002</i></span>.</span></li>
+              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="lempelComplexityFiniteSequences1976" itemid="doi:10.1109/TIT.1976.1055501"><span itemprop="author">A. Lempel, J. Ziv</span>. <time datetime="1976" itemprop="datePublished">January 1976</time>. "<span itemprop="name">On the Complexity of Finite Sequences</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">IEEE Transactions on Information Theory</i></span> 22 (1):75–81. <a itemprop="sameAs" href="https://doi.org/10.1109/TIT.1976.1055501">DOI</a>.</span></li>
+              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="cisnerosEvolvingStructuresComplex2019" itemid="doi:10.1109/SSCI44817.2019.9002840"><span itemprop="author">Hugo Cisneros, Josef Sivic, Tomas Mikolov</span>. <time datetime="2019" itemprop="datePublished">December 2019</time>. "<span itemprop="name">Evolving Structures in Complex Systems</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">2019 IEEE Symposium Series on Computational Intelligence (SSCI)</i></span>, 230–37. Xiamen, China: IEEE. <a itemprop="sameAs" href="https://doi.org/10.1109/SSCI44817.2019.9002840">DOI</a>.</span></li>
+            </ol>
+          </div>
+        </div>
+        <div class="bl-section px-5 sm:px-6 py-4 border-t border-zinc-200 dark:border-zinc-600">
+          <h2 class="text-sm font-semibold mb-2 mt-0 text-zinc-500 dark:text-zinc-400">Links to this note</h2>
+          <div class="backlinks">
+            <ul class="m-0 pl-5 text-sm">
               <li>
                 <a href="/notes/assembly_theory/">Assembly theory</a>
               </li>
@@ -180,15 +182,15 @@
             </ul>
           </div>
         </div>
-        <div class="text-center" style="font-variant-caps:all-small-caps">
+        <div class="border-t border-zinc-200 dark:border-zinc-600 px-5 sm:px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400 text-center" style="font-variant-caps:all-small-caps">
           Last changed <a class="u-url" href="https://hugocisneros.com/notes/complexity_metrics/"><time itemprop="datePublished" class="dt-published" datetime="2022-04-20T13:32:00+0200">2022.04.20</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>
     <h3>Comments</h3>
     <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
-    <section id="isso-thread"></section><br>
-    <a href="/notes#complexity_metrics"><b>← Back to Notes</b></a>
+    <section id="isso-thread"></section><a href="/notes#complexity_metrics" class="inline-flex items-center gap-2 mt-4 px-4 py-2 text-sm font-medium text-inherit bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg hover:border-zinc-400 dark:hover:border-zinc-500 hover:shadow-md transition-all duration-150"><svg class="inline-block" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path></svg>Back to Notes</a>
   </main>
   <footer class="footer container h-10 text-center mt-1">
     <hr class="my-4">

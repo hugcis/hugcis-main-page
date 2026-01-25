@@ -99,28 +99,30 @@
       </ol>
     </nav>
     <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-      <div class="bg-zinc-200 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
-        <h1 class="article-title p-name" itemprop="name">Backward RNN</h1>
-        <div class="article-content e-content p-name" itemprop="articleBody">
-          <dl>
-            <dt>tags</dt>
-            <dd>
-              <a href="/notes/recurrent_neural_networks/">Recurrent neural networks</a>
-            </dd>
-          </dl>
-          <p>Regular RNNs process input in sequence. When applied to a language modeling task, one tries to predict a word given the previous ones. For example, with the sentence <code>The quick brown fox jumps over the lazy</code>, a classical RNN will initialize and internal state \(s_0\) and process each word in sequence, starting from <code>The</code> and updating its internal state with each new word in order to make a final prediction.</p>
-          <p>A backward RNN reverses this idea, building it internal state starting from the last word <code>lazy</code> (the one we can expect to have the most information for prediction) and process the sentence backward. It should be simpler for such network to learn to properly select meaningful information rather than starting from the first word which might not be useful at all.</p>
-          <p>A variant of this idea, would be to use the same principle and apply it forward in a transformer-like language model training situation. To predict <code>fox</code> in <code>The quick brown &lt;?&gt; jumps over the lazy dog</code>, the network would start by looking at <code>brown</code> and <code>jumps</code>, and then <code>quick</code> and <code>over</code>, etc.</p>
+      <div class="note-page bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg mb-6 overflow-hidden">
+        <div class="p-5 sm:p-6">
+          <h1 class="text-xl sm:text-2xl font-semibold mb-4 p-name text-zinc-900 dark:text-zinc-100" itemprop="name">Backward RNN</h1>
+          <div class="article-content e-content p-name prose dark:prose-invert max-w-none" itemprop="articleBody">
+            <dl>
+              <dt>tags</dt>
+              <dd>
+                <a href="/notes/recurrent_neural_networks/">Recurrent neural networks</a>
+              </dd>
+            </dl>
+            <p>Regular RNNs process input in sequence. When applied to a language modeling task, one tries to predict a word given the previous ones. For example, with the sentence <code>The quick brown fox jumps over the lazy</code>, a classical RNN will initialize and internal state \(s_0\) and process each word in sequence, starting from <code>The</code> and updating its internal state with each new word in order to make a final prediction.</p>
+            <p>A backward RNN reverses this idea, building it internal state starting from the last word <code>lazy</code> (the one we can expect to have the most information for prediction) and process the sentence backward. It should be simpler for such network to learn to properly select meaningful information rather than starting from the first word which might not be useful at all.</p>
+            <p>A variant of this idea, would be to use the same principle and apply it forward in a transformer-like language model training situation. To predict <code>fox</code> in <code>The quick brown &lt;?&gt; jumps over the lazy dog</code>, the network would start by looking at <code>brown</code> and <code>jumps</code>, and then <code>quick</code> and <code>over</code>, etc.</p>
+          </div>
         </div>
-        <div class="text-center" style="font-variant-caps:all-small-caps">
+        <div class="border-t border-zinc-200 dark:border-zinc-600 px-5 sm:px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400 text-center" style="font-variant-caps:all-small-caps">
           Last changed <a class="u-url" href="https://hugocisneros.com/notes/backward_rnn/"><time itemprop="datePublished" class="dt-published" datetime="2020-07-14T08:33:00+0200">2020.07.14</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>
     <h3>Comments</h3>
     <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
-    <section id="isso-thread"></section><br>
-    <a href="/notes#backward_rnn"><b>← Back to Notes</b></a>
+    <section id="isso-thread"></section><a href="/notes#backward_rnn" class="inline-flex items-center gap-2 mt-4 px-4 py-2 text-sm font-medium text-inherit bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg hover:border-zinc-400 dark:hover:border-zinc-500 hover:shadow-md transition-all duration-150"><svg class="inline-block" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path></svg>Back to Notes</a>
   </main>
   <footer class="footer container h-10 text-center mt-1">
     <hr class="my-4">

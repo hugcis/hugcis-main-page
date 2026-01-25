@@ -100,50 +100,52 @@
       </ol>
     </nav>
     <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-      <div class="bg-zinc-200 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
-        <h1 class="article-title p-name" itemprop="name">Neural architecture search</h1>
-        <div class="article-content e-content p-name" itemprop="articleBody">
-          <dl>
-            <dt>tags</dt>
-            <dd>
-              <a href="/notes/search_algorithms/">Search</a>, <a href="/notes/neural_networks/">Neural networks</a>
-            </dd>
-          </dl>
-          <p>Neural architecture search (NAS) is a method for finding <a href="/notes/neural_networks/">neural networks</a> architectures. It is usually based on three main components:</p>
-          <dl>
-            <dt>Search space</dt>
-            <dd>Type of network that can be built.</dd>
-            <dt>Search strategy</dt>
-            <dd>The approach for exploring the space.</dd>
-            <dt>Performance estimation strategy</dt>
-            <dd>The way the performance of a constructed neural network is evaluated (without actually building it or training/running it).</dd>
-          </dl>
-          <h2 id="reinforcement-learning--reinforcement-learning-dot-md--based-nas"><a href="/notes/reinforcement_learning/">Reinforcement learning</a>-based NAS</h2>
-          <p>The original idea was called Neural architecture search and is based on the use of a <a href="/notes/recurrent_neural_networks/">RNN</a> as a controller and generator of architectures. The search-space is pre-defined and explored in a rigid way. (<a href="#zophNeuralArchitectureSearch2017"><cite itemprop="citation" itemscope itemid="key:zophNeuralArchitectureSearch2017">Zoph, Le 2017</cite></a>).</p>
-          <p>The process of generating architectures from the first article was extremely lengthy and replaced later by a more constrained search. (<a href="#zophLearningTransferableArchitectures2018"><cite itemprop="citation" itemscope itemid="key:zophLearningTransferableArchitectures2018">Zoph et al. 2018</cite></a>).</p>
-          <p>Recent ideas include the use of parameter sharing across architectures because the main bottleneck of previous techniques was essentially in the training of each child model. This results in significant speedup of RL-based NAS. (<a href="#phamEfficientNeuralArchitecture2018"><cite itemprop="citation" itemscope itemid="key:phamEfficientNeuralArchitecture2018">Pham et al. 2018</cite></a>)</p>
-          <h2 id="neuroevolution">Neuroevolution</h2>
-          <p>This field is more focused on <a href="/notes/evolution/">evolution</a> neural network through evolutionary methods such as e.g <a href="/notes/genetic_algorithm/">genetic algorithms</a>. One of the main work that made that field popular is <a href="/notes/neat/">NEAT</a> (<a href="#stanleyEvolvingNeuralNetworks2002"><cite itemprop="citation" itemscope itemid="doi:10.1162/106365602320169811">Stanley, Miikkulainen 2002</cite></a>).</p>
-          <h2 id="bibliography">Bibliography</h2>
-          <ol class="biblio-list pl-0">
-            <li class="list-none my-4 mx-2">
-              <span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="zophNeuralArchitectureSearch2017"><span itemprop="author">Barret Zoph, Quoc V. Le</span>. <time datetime="2017" itemprop="datePublished">February 15, 2017</time>. "<span itemprop="name">Neural Architecture Search with Reinforcement Learning</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:1611.01578 [cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/1611.01578">http://arxiv.org/abs/1611.01578</a>.</span>&nbsp;<a href="/notes/zophneuralarchitecturesearch2017/">See notes</a>
-            </li>
-            <li class="list-none my-4 mx-2">
-              <span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="zophLearningTransferableArchitectures2018"><span itemprop="author">Barret Zoph, Vijay Vasudevan, Jonathon Shlens, Quoc V. Le</span>. <time datetime="2018" itemprop="datePublished">April 11, 2018</time>. "<span itemprop="name">Learning Transferable Architectures for Scalable Image Recognition</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:1707.07012 [cs, Stat]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/1707.07012">http://arxiv.org/abs/1707.07012</a>.</span>&nbsp;<a href="/notes/zophlearningtransferablearchitectures2018/">See notes</a>
-            </li>
-            <li class="list-none my-4 mx-2">
-              <span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="phamEfficientNeuralArchitecture2018"><span itemprop="author">Hieu Pham, Melody Y. Guan, Barret Zoph, Quoc V. Le, Jeff Dean</span>. <time datetime="2018" itemprop="datePublished">February 11, 2018</time>. "<span itemprop="name">Efficient Neural Architecture Search via Parameter Sharing</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:1802.03268 [cs, Stat]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/1802.03268">http://arxiv.org/abs/1802.03268</a>.</span>&nbsp;<a href="/notes/phamefficientneuralarchitecture2018/">See notes</a>
-            </li>
-            <li class="list-none my-4 mx-2">
-              <span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="stanleyEvolvingNeuralNetworks2002" itemid="doi:10.1162/106365602320169811"><span itemprop="author">Kenneth O. Stanley, Risto Miikkulainen</span>. <time datetime="2002" itemprop="datePublished">June 2002</time>. "<span itemprop="name">Evolving Neural Networks Through Augmenting Topologies</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Evolutionary Computation</i></span> 10 (2):99–127. <a itemprop="sameAs" href="https://doi.org/10.1162/106365602320169811">DOI</a>.</span>&nbsp;<a href="/notes/stanleyevolvingneuralnetworks2002/">See notes</a>
-            </li>
-          </ol>
+      <div class="note-page bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg mb-6 overflow-hidden">
+        <div class="p-5 sm:p-6">
+          <h1 class="text-xl sm:text-2xl font-semibold mb-4 p-name text-zinc-900 dark:text-zinc-100" itemprop="name">Neural architecture search</h1>
+          <div class="article-content e-content p-name prose dark:prose-invert max-w-none" itemprop="articleBody">
+            <dl>
+              <dt>tags</dt>
+              <dd>
+                <a href="/notes/search_algorithms/">Search</a>, <a href="/notes/neural_networks/">Neural networks</a>
+              </dd>
+            </dl>
+            <p>Neural architecture search (NAS) is a method for finding <a href="/notes/neural_networks/">neural networks</a> architectures. It is usually based on three main components:</p>
+            <dl>
+              <dt>Search space</dt>
+              <dd>Type of network that can be built.</dd>
+              <dt>Search strategy</dt>
+              <dd>The approach for exploring the space.</dd>
+              <dt>Performance estimation strategy</dt>
+              <dd>The way the performance of a constructed neural network is evaluated (without actually building it or training/running it).</dd>
+            </dl>
+            <h2 id="reinforcement-learning--reinforcement-learning-dot-md--based-nas"><a href="/notes/reinforcement_learning/">Reinforcement learning</a>-based NAS</h2>
+            <p>The original idea was called Neural architecture search and is based on the use of a <a href="/notes/recurrent_neural_networks/">RNN</a> as a controller and generator of architectures. The search-space is pre-defined and explored in a rigid way. (<a href="#zophNeuralArchitectureSearch2017"><cite itemprop="citation" itemscope itemid="key:zophNeuralArchitectureSearch2017">Zoph, Le 2017</cite></a>).</p>
+            <p>The process of generating architectures from the first article was extremely lengthy and replaced later by a more constrained search. (<a href="#zophLearningTransferableArchitectures2018"><cite itemprop="citation" itemscope itemid="key:zophLearningTransferableArchitectures2018">Zoph et al. 2018</cite></a>).</p>
+            <p>Recent ideas include the use of parameter sharing across architectures because the main bottleneck of previous techniques was essentially in the training of each child model. This results in significant speedup of RL-based NAS. (<a href="#phamEfficientNeuralArchitecture2018"><cite itemprop="citation" itemscope itemid="key:phamEfficientNeuralArchitecture2018">Pham et al. 2018</cite></a>)</p>
+            <h2 id="neuroevolution">Neuroevolution</h2>
+            <p>This field is more focused on <a href="/notes/evolution/">evolution</a> neural network through evolutionary methods such as e.g <a href="/notes/genetic_algorithm/">genetic algorithms</a>. One of the main work that made that field popular is <a href="/notes/neat/">NEAT</a> (<a href="#stanleyEvolvingNeuralNetworks2002"><cite itemprop="citation" itemscope itemid="doi:10.1162/106365602320169811">Stanley, Miikkulainen 2002</cite></a>).</p>
+            <h2 id="bibliography">Bibliography</h2>
+            <ol class="biblio-list pl-0">
+              <li class="list-none my-4 mx-2">
+                <span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="zophNeuralArchitectureSearch2017"><span itemprop="author">Barret Zoph, Quoc V. Le</span>. <time datetime="2017" itemprop="datePublished">February 15, 2017</time>. "<span itemprop="name">Neural Architecture Search with Reinforcement Learning</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:1611.01578 [cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/1611.01578">http://arxiv.org/abs/1611.01578</a>.</span>&nbsp;<a href="/notes/zophneuralarchitecturesearch2017/">See notes</a>
+              </li>
+              <li class="list-none my-4 mx-2">
+                <span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="zophLearningTransferableArchitectures2018"><span itemprop="author">Barret Zoph, Vijay Vasudevan, Jonathon Shlens, Quoc V. Le</span>. <time datetime="2018" itemprop="datePublished">April 11, 2018</time>. "<span itemprop="name">Learning Transferable Architectures for Scalable Image Recognition</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:1707.07012 [cs, Stat]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/1707.07012">http://arxiv.org/abs/1707.07012</a>.</span>&nbsp;<a href="/notes/zophlearningtransferablearchitectures2018/">See notes</a>
+              </li>
+              <li class="list-none my-4 mx-2">
+                <span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="phamEfficientNeuralArchitecture2018"><span itemprop="author">Hieu Pham, Melody Y. Guan, Barret Zoph, Quoc V. Le, Jeff Dean</span>. <time datetime="2018" itemprop="datePublished">February 11, 2018</time>. "<span itemprop="name">Efficient Neural Architecture Search via Parameter Sharing</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:1802.03268 [cs, Stat]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/1802.03268">http://arxiv.org/abs/1802.03268</a>.</span>&nbsp;<a href="/notes/phamefficientneuralarchitecture2018/">See notes</a>
+              </li>
+              <li class="list-none my-4 mx-2">
+                <span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="stanleyEvolvingNeuralNetworks2002" itemid="doi:10.1162/106365602320169811"><span itemprop="author">Kenneth O. Stanley, Risto Miikkulainen</span>. <time datetime="2002" itemprop="datePublished">June 2002</time>. "<span itemprop="name">Evolving Neural Networks Through Augmenting Topologies</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Evolutionary Computation</i></span> 10 (2):99–127. <a itemprop="sameAs" href="https://doi.org/10.1162/106365602320169811">DOI</a>.</span>&nbsp;<a href="/notes/stanleyevolvingneuralnetworks2002/">See notes</a>
+              </li>
+            </ol>
+          </div>
         </div>
-        <div class="bl-section">
-          <h2>Links to this note</h2>
+        <div class="bl-section px-5 sm:px-6 py-4 border-t border-zinc-200 dark:border-zinc-600">
+          <h2 class="text-sm font-semibold mb-2 mt-0 text-zinc-500 dark:text-zinc-400">Links to this note</h2>
           <div class="backlinks">
-            <ul>
+            <ul class="m-0 pl-5 text-sm">
               <li>
                 <a href="/notes/neat/">NEAT</a>
               </li>
@@ -168,15 +170,15 @@
             </ul>
           </div>
         </div>
-        <div class="text-center" style="font-variant-caps:all-small-caps">
+        <div class="border-t border-zinc-200 dark:border-zinc-600 px-5 sm:px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400 text-center" style="font-variant-caps:all-small-caps">
           Last changed <a class="u-url" href="https://hugocisneros.com/notes/neural_architecture_search/"><time itemprop="datePublished" class="dt-published" datetime="2023-02-02T18:17:00+0100">2023.02.02</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>
     <h3>Comments</h3>
     <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
-    <section id="isso-thread"></section><br>
-    <a href="/notes#neural_architecture_search"><b>← Back to Notes</b></a>
+    <section id="isso-thread"></section><a href="/notes#neural_architecture_search" class="inline-flex items-center gap-2 mt-4 px-4 py-2 text-sm font-medium text-inherit bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg hover:border-zinc-400 dark:hover:border-zinc-500 hover:shadow-md transition-all duration-150"><svg class="inline-block" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path></svg>Back to Notes</a>
   </main>
   <footer class="footer container h-10 text-center mt-1">
     <hr class="my-4">

@@ -95,30 +95,31 @@
       </ol>
     </nav>
     <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-      <div class="bg-zinc-200 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
-        <div class="title-image py-2"><img src="/img/rule30.png" alt="Elementary cellular automaton rule 30" style="width:100%"></div>
-        <h1 class="article-title p-name" itemprop="name">Elementary cellular automata</h1>
-        <div class="article-content e-content p-name" itemprop="articleBody">
-          <dl>
-            <dt>tags</dt>
-            <dd>
-              <a href="/notes/cellular_automata/">Cellular automata</a>
-            </dd>
-            <dt>resources</dt>
-            <dd>
-              <a href="https://mathworld.wolfram.com/ElementaryCellularAutomaton.html">Wolfram Mathworld</a>, <a href="https://en.wikipedia.org/wiki/Elementary_cellular_automaton">Wikipedia</a>
-            </dd>
-          </dl>
-          <p>ECA are one of the simplest form of 1D cellular automata possible. The grid is a 1-dimensional array of cells in state <code>0</code> or <code>1</code> (<code>dead</code> or <code>alive</code>). The size of the neighborhood being used for the update is 3 (one cell to the left, the main cell and one cell to the right).</p>
-          <p>Each of those \(2^3\) neighborhoods of size 3 can be mapped to either state <code>1</code> or <code>0</code>. There are \(2^{2^3} = 2^8 = 256\) possible mappings and therefore 256 possible ECA rules.</p>
-          <p>From this very simple definition, rules with various unexpected behavior emerge. Wolfram constructed a classification of those behavior, known as Wolfram’s classification (<a href="#wolframNewKindScience2002"><cite itemprop="citation" itemscope itemid="key:wolframNewKindScience2002">Wolfram 2002</cite></a>).</p>
-          <h2 id="computational-hierarchy">Computational hierarchy</h2>
-          <p>ECA can be listed exhaustively and they represent all the available ways of computing within some strict constraints. One may wonder if some are better than others at computing some things? Or faster, more efficient? Some automata seem to be unable to compute anything like rule 30 whereas some are Turing complete: rule 110 (<a href="#cookUniversalityElementaryCellular2004"><cite itemprop="citation" itemscope itemid="key:cookUniversalityElementaryCellular2004">Cook 2004</cite></a>).</p>
-          <p>(<a href="#hudcovaComputationalHierarchyElementary2021"><cite itemprop="citation" itemscope itemid="doi:10.1162/isal_a_00447">Hudcová, Mikolov 2021</cite></a>) explores some ways such a hierarchy could be constructed.</p>
-          <h2 id="simple-implementation">Simple implementation</h2>
-          <p>In <a href="/notes/python/">Python</a>, taking advantage of Numpy’s array manipulation. This implementation is much faster than looping through elements of the grid to update them, but uses slightly more memory. The <a href="/notes/algorithm/">algorithm</a> is simply based on the standard ECA update.</p>
-          <div class="highlight">
-            <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="display:flex"><span><span style="color:#719e07">import</span> numpy <span style="color:#719e07">as</span> np
+      <div class="note-page bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg mb-6 overflow-hidden">
+        <div class="title-image"><img src="/img/rule30.png" alt="Elementary cellular automaton rule 30" class="w-full"></div>
+        <div class="p-5 sm:p-6">
+          <h1 class="text-xl sm:text-2xl font-semibold mb-4 p-name text-zinc-900 dark:text-zinc-100" itemprop="name">Elementary cellular automata</h1>
+          <div class="article-content e-content p-name prose dark:prose-invert max-w-none" itemprop="articleBody">
+            <dl>
+              <dt>tags</dt>
+              <dd>
+                <a href="/notes/cellular_automata/">Cellular automata</a>
+              </dd>
+              <dt>resources</dt>
+              <dd>
+                <a href="https://mathworld.wolfram.com/ElementaryCellularAutomaton.html">Wolfram Mathworld</a>, <a href="https://en.wikipedia.org/wiki/Elementary_cellular_automaton">Wikipedia</a>
+              </dd>
+            </dl>
+            <p>ECA are one of the simplest form of 1D cellular automata possible. The grid is a 1-dimensional array of cells in state <code>0</code> or <code>1</code> (<code>dead</code> or <code>alive</code>). The size of the neighborhood being used for the update is 3 (one cell to the left, the main cell and one cell to the right).</p>
+            <p>Each of those \(2^3\) neighborhoods of size 3 can be mapped to either state <code>1</code> or <code>0</code>. There are \(2^{2^3} = 2^8 = 256\) possible mappings and therefore 256 possible ECA rules.</p>
+            <p>From this very simple definition, rules with various unexpected behavior emerge. Wolfram constructed a classification of those behavior, known as Wolfram’s classification (<a href="#wolframNewKindScience2002"><cite itemprop="citation" itemscope itemid="key:wolframNewKindScience2002">Wolfram 2002</cite></a>).</p>
+            <h2 id="computational-hierarchy">Computational hierarchy</h2>
+            <p>ECA can be listed exhaustively and they represent all the available ways of computing within some strict constraints. One may wonder if some are better than others at computing some things? Or faster, more efficient? Some automata seem to be unable to compute anything like rule 30 whereas some are Turing complete: rule 110 (<a href="#cookUniversalityElementaryCellular2004"><cite itemprop="citation" itemscope itemid="key:cookUniversalityElementaryCellular2004">Cook 2004</cite></a>).</p>
+            <p>(<a href="#hudcovaComputationalHierarchyElementary2021"><cite itemprop="citation" itemscope itemid="doi:10.1162/isal_a_00447">Hudcová, Mikolov 2021</cite></a>) explores some ways such a hierarchy could be constructed.</p>
+            <h2 id="simple-implementation">Simple implementation</h2>
+            <p>In <a href="/notes/python/">Python</a>, taking advantage of Numpy’s array manipulation. This implementation is much faster than looping through elements of the grid to update them, but uses slightly more memory. The <a href="/notes/algorithm/">algorithm</a> is simply based on the standard ECA update.</p>
+            <div class="highlight">
+              <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="display:flex"><span><span style="color:#719e07">import</span> numpy <span style="color:#719e07">as</span> np
 </span></span><span style="display:flex"><span><span style="color:#719e07">import</span> matplotlib
 </span></span><span style="display:flex"><span><span style="color:#719e07">import</span> matplotlib.pyplot <span style="color:#719e07">as</span> plt
 </span></span><span style="display:flex"><span>fig, ax <span style="color:#719e07">=</span> plt<span style="color:#719e07">.</span>subplots(figsize<span style="color:#719e07">=</span>(<span style="color:#2aa198">3</span>,<span style="color:#2aa198">2</span>))
@@ -150,22 +151,23 @@
 </span></span><span style="display:flex"><span>fig<span style="color:#719e07">.</span>tight_layout()
 </span></span><span style="display:flex"><span>fig<span style="color:#719e07">.</span>savefig(<span style="color:#2aa198">'img/plots/ca_rule54.png'</span>)
 </span></span></code></pre>
+            </div>
+            <p>Results:</p>
+            <figure>
+              <img src="/img/plots/ca_rule54.png">
+            </figure>
+            <h2 id="bibliography">Bibliography</h2>
+            <ol class="biblio-list pl-0">
+              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="wolframNewKindScience2002"><span itemprop="author">Stephen Wolfram</span>. <time datetime="2002" itemprop="datePublished">2002</time>. <i>A New Kind of Science</i>. Champaign, IL: Wolfram Media. <a itemprop="sameAs" href="https://www.wolframscience.com/nks/">https://www.wolframscience.com/nks/</a>.</span></li>
+              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="cookUniversalityElementaryCellular2004"><span itemprop="author">Matthew Cook</span>. <time datetime="2004" itemprop="datePublished">2004</time>. "<span itemprop="name">Universality in Elementary Cellular Automata</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Complex Systems</i></span>, 40.</span></li>
+              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="hudcovaComputationalHierarchyElementary2021" itemid="doi:10.1162/isal_a_00447"><span itemprop="author">Barbora Hudcová, Tomáš Mikolov</span>. <time datetime="2021" itemprop="datePublished">July 19, 2021</time>. "<span itemprop="name">Computational Hierarchy of Elementary Cellular Automata</span>". In . MIT Press. <a itemprop="sameAs" href="https://doi.org/10.1162/isal_a_00447">DOI</a>.</span></li>
+            </ol>
           </div>
-          <p>Results:</p>
-          <figure>
-            <img src="/img/plots/ca_rule54.png">
-          </figure>
-          <h2 id="bibliography">Bibliography</h2>
-          <ol class="biblio-list pl-0">
-            <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="wolframNewKindScience2002"><span itemprop="author">Stephen Wolfram</span>. <time datetime="2002" itemprop="datePublished">2002</time>. <i>A New Kind of Science</i>. Champaign, IL: Wolfram Media. <a itemprop="sameAs" href="https://www.wolframscience.com/nks/">https://www.wolframscience.com/nks/</a>.</span></li>
-            <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="cookUniversalityElementaryCellular2004"><span itemprop="author">Matthew Cook</span>. <time datetime="2004" itemprop="datePublished">2004</time>. "<span itemprop="name">Universality in Elementary Cellular Automata</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Complex Systems</i></span>, 40.</span></li>
-            <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="hudcovaComputationalHierarchyElementary2021" itemid="doi:10.1162/isal_a_00447"><span itemprop="author">Barbora Hudcová, Tomáš Mikolov</span>. <time datetime="2021" itemprop="datePublished">July 19, 2021</time>. "<span itemprop="name">Computational Hierarchy of Elementary Cellular Automata</span>". In . MIT Press. <a itemprop="sameAs" href="https://doi.org/10.1162/isal_a_00447">DOI</a>.</span></li>
-          </ol>
         </div>
-        <div class="bl-section">
-          <h2>Links to this note</h2>
+        <div class="bl-section px-5 sm:px-6 py-4 border-t border-zinc-200 dark:border-zinc-600">
+          <h2 class="text-sm font-semibold mb-2 mt-0 text-zinc-500 dark:text-zinc-400">Links to this note</h2>
           <div class="backlinks">
-            <ul>
+            <ul class="m-0 pl-5 text-sm">
               <li>
                 <a href="/notes/cellular_automata/">Cellular automata</a>
               </li>
@@ -181,15 +183,15 @@
             </ul>
           </div>
         </div>
-        <div class="text-center" style="font-variant-caps:all-small-caps">
+        <div class="border-t border-zinc-200 dark:border-zinc-600 px-5 sm:px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400 text-center" style="font-variant-caps:all-small-caps">
           Last changed <a class="u-url" href="https://hugocisneros.com/notes/elementary_cellular_automata/"><time itemprop="datePublished" class="dt-published" datetime="2022-03-15T11:02:00+0100">2022.03.15</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>
     <h3>Comments</h3>
     <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
-    <section id="isso-thread"></section><br>
-    <a href="/notes#elementary_cellular_automata"><b>← Back to Notes</b></a>
+    <section id="isso-thread"></section><a href="/notes#elementary_cellular_automata" class="inline-flex items-center gap-2 mt-4 px-4 py-2 text-sm font-medium text-inherit bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg hover:border-zinc-400 dark:hover:border-zinc-500 hover:shadow-md transition-all duration-150"><svg class="inline-block" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path></svg>Back to Notes</a>
   </main>
   <footer class="footer container h-10 text-center mt-1">
     <hr class="my-4">

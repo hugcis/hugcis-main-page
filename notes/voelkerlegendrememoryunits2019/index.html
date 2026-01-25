@@ -99,39 +99,41 @@
       </ol>
     </nav>
     <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-      <div class="bg-zinc-200 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
-        <h1 class="article-title p-name" itemprop="name">Legendre Memory Units: Continuous-Time Representation in Recurrent Neural Networks by Voelker, A., Kajić, I., & Eliasmith, C. (2019)</h1>
-        <div class="article-content e-content p-name" itemprop="articleBody">
-          <dl>
-            <dt>tags</dt>
-            <dd>
-              <a href="/notes/recurrent_neural_networks/">Recurrent neural networks</a>
-            </dd>
-            <dt>source</dt>
-            <dd>
-              (<a href="#voelkerLegendreMemoryUnits2019"><cite itemprop="citation" itemscope itemid="key:voelkerLegendreMemoryUnits2019">Voelker et al. 2019</cite></a>)
-            </dd>
-          </dl>
-          <h2 id="summary">Summary</h2>
-          <p>This paper introduces the LMU recurrent cell. This cell is based on a similar-ish idea to LSTM to maintain a memory hidden state. The main idea of the paper is to make this memory satisfy a set of first order ordinary differential equations.</p>
-          <p>\begin{equation} \theta \dot{m}(t) = Am(t) + Bu(t) \end{equation}</p>
-          <p>This system has a solution which represents sliding windows of \(u\) via Legendre polynomials. This new unit is tested on a range of tasks. A memory only task, a permuted MNIST task and a dynamical chaotic system prediction task.</p>
-          <h2 id="comments">Comments</h2>
-          <p>Unfortunately, my understanding of this paper is slightly limited. The approach is interesting and has good properties, however the new RNN cell is tested on a small set of task that independently demonstrate useful properties but not all of them together (e.g. good MNIST prediction + long-term dependency).</p>
-          <h2 id="bibliography">Bibliography</h2>
-          <ol class="biblio-list pl-0">
-            <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="voelkerLegendreMemoryUnits2019"><span itemprop="author">Aaron Voelker, Ivana Kajić, Chris Eliasmith</span>. <time datetime="2019" itemprop="datePublished">2019</time>. "<span itemprop="name">Legendre Memory Units: Continuous-time Representation in Recurrent Neural Networks</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Advances in Neural Information Processing Systems 32</i></span>, edited by H. Wallach, H. Larochelle, A. Beygelzimer, F. d\textquotesingle Alché-Buc, E. Fox, and R. Garnett, 15544–53. Curran Associates, Inc.. <a itemprop="sameAs" href="http://papers.nips.cc/paper/9689-legendre-memory-units-continuous-time-representation-in-recurrent-neural-networks.pdf">http://papers.nips.cc/paper/9689-legendre-memory-units-continuous-time-representation-in-recurrent-neural-networks.pdf</a>.</span></li>
-          </ol>
+      <div class="note-page bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg mb-6 overflow-hidden">
+        <div class="p-5 sm:p-6">
+          <h1 class="text-xl sm:text-2xl font-semibold mb-4 p-name text-zinc-900 dark:text-zinc-100" itemprop="name">Legendre Memory Units: Continuous-Time Representation in Recurrent Neural Networks by Voelker, A., Kajić, I., & Eliasmith, C. (2019)</h1>
+          <div class="article-content e-content p-name prose dark:prose-invert max-w-none" itemprop="articleBody">
+            <dl>
+              <dt>tags</dt>
+              <dd>
+                <a href="/notes/recurrent_neural_networks/">Recurrent neural networks</a>
+              </dd>
+              <dt>source</dt>
+              <dd>
+                (<a href="#voelkerLegendreMemoryUnits2019"><cite itemprop="citation" itemscope itemid="key:voelkerLegendreMemoryUnits2019">Voelker et al. 2019</cite></a>)
+              </dd>
+            </dl>
+            <h2 id="summary">Summary</h2>
+            <p>This paper introduces the LMU recurrent cell. This cell is based on a similar-ish idea to LSTM to maintain a memory hidden state. The main idea of the paper is to make this memory satisfy a set of first order ordinary differential equations.</p>
+            <p>\begin{equation} \theta \dot{m}(t) = Am(t) + Bu(t) \end{equation}</p>
+            <p>This system has a solution which represents sliding windows of \(u\) via Legendre polynomials. This new unit is tested on a range of tasks. A memory only task, a permuted MNIST task and a dynamical chaotic system prediction task.</p>
+            <h2 id="comments">Comments</h2>
+            <p>Unfortunately, my understanding of this paper is slightly limited. The approach is interesting and has good properties, however the new RNN cell is tested on a small set of task that independently demonstrate useful properties but not all of them together (e.g. good MNIST prediction + long-term dependency).</p>
+            <h2 id="bibliography">Bibliography</h2>
+            <ol class="biblio-list pl-0">
+              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="voelkerLegendreMemoryUnits2019"><span itemprop="author">Aaron Voelker, Ivana Kajić, Chris Eliasmith</span>. <time datetime="2019" itemprop="datePublished">2019</time>. "<span itemprop="name">Legendre Memory Units: Continuous-time Representation in Recurrent Neural Networks</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Advances in Neural Information Processing Systems 32</i></span>, edited by H. Wallach, H. Larochelle, A. Beygelzimer, F. d\textquotesingle Alché-Buc, E. Fox, and R. Garnett, 15544–53. Curran Associates, Inc.. <a itemprop="sameAs" href="http://papers.nips.cc/paper/9689-legendre-memory-units-continuous-time-representation-in-recurrent-neural-networks.pdf">http://papers.nips.cc/paper/9689-legendre-memory-units-continuous-time-representation-in-recurrent-neural-networks.pdf</a>.</span></li>
+            </ol>
+          </div>
         </div>
-        <div class="text-center" style="font-variant-caps:all-small-caps">
+        <div class="border-t border-zinc-200 dark:border-zinc-600 px-5 sm:px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400 text-center" style="font-variant-caps:all-small-caps">
           Last changed <a class="u-url" href="https://hugocisneros.com/notes/voelkerlegendrememoryunits2019/"><time itemprop="datePublished" class="dt-published" datetime="2023-02-02T16:38:00+0100">2023.02.02</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>
     <h3>Comments</h3>
     <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
-    <section id="isso-thread"></section><br>
-    <a href="/notes#voelkerlegendrememoryunits2019"><b>← Back to Notes</b></a>
+    <section id="isso-thread"></section><a href="/notes#voelkerlegendrememoryunits2019" class="inline-flex items-center gap-2 mt-4 px-4 py-2 text-sm font-medium text-inherit bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg hover:border-zinc-400 dark:hover:border-zinc-500 hover:shadow-md transition-all duration-150"><svg class="inline-block" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path></svg>Back to Notes</a>
   </main>
   <footer class="footer container h-10 text-center mt-1">
     <hr class="my-4">

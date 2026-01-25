@@ -100,42 +100,44 @@
       </ol>
     </nav>
     <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-      <div class="bg-zinc-200 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
-        <h1 class="article-title p-name" itemprop="name">Frank-Wolfe algorithm</h1>
-        <div class="article-content e-content p-name" itemprop="articleBody">
-          <dl>
-            <dt>tags</dt>
-            <dd>
-              <a href="/notes/optimization/">Optimization</a>, <a href="/notes/algorithm/">Algorithm</a>
-            </dd>
-            <dt>resources</dt>
-            <dd>
-              <a href="https://fa.bianp.net/blog/2018/notes-on-the-frank-wolfe-algorithm-part-i/">Fabian Pedregosa’s series on FW</a>
-            </dd>
-          </dl>
-          <h2 id="definition">Definition</h2>
-          <p>It was originally published in (<a href="#frankAlgorithmQuadraticProgramming1956"><cite itemprop="citation" itemscope itemid="doi:10.1002/nav.3800030109">Frank, Wolfe 1956</cite></a>) and (<a href="#jaggiRevisitingFrankWolfeProjectionFree2013"><cite itemprop="citation" itemscope itemid="key:jaggiRevisitingFrankWolfeProjectionFree2013">Jaggi 2013</cite></a>) gives a more recent overview.</p>
-          <p>For a function \(f\) differentiable with $L$-Lipschitz gradients, and its domain \(\mathcal{C}\) is a convex and compact set, we want to solve the <a href="/notes/optimization/">optimization</a> problem:</p>
-          <p>\[ \min_{\boldsymbol{x} \in \mathcal{C}} f(\boldsymbol{x}) \]</p>
-          <p>The algorithm starts with an initial guess \(\boldsymbol{x}_0\) and constructs a sequence of values \(\boldsymbol{x}_1, \boldsymbol{x}_2, \cdots\) which converges to the solution. We can write the algorithm as follows:</p>
-          <p>\begin{align} & \textbf{Input}: \text{initial guess $ xx_0$, tolerance $\delta &gt; 0$} \nonumber \\ & \textbf{For }t=0, 1, \ldots \textbf{ do } \\ &amp;\quad \boldsymbol{s}_t \in \argmax_{\boldsymbol{s} \in \mathcal{C}} \langle -\nabla f(\boldsymbol{x}_t), \boldsymbol{s}\rangle \\ &amp;\quad \boldsymbol{d}_t = \boldsymbol{s}_t - \boldsymbol{x}_t\\ &amp;\quad g_t = \langle \nabla - f(\boldsymbol{x}_t), \boldsymbol{d}_t \rangle\\ &amp;\quad \textbf{If } g_t &lt; \delta: \\ &amp;\quad\quad \text{// exit if gap is below tolerance }\nonumber\\ &amp;\quad\quad\textbf{return } \boldsymbol{x}_t\\ &amp;\quad {\textbf{Variant 1}}: \text{set step size as} \nonumber\\ &amp;\quad\qquad\gamma_t = \min \left\{\frac{g_t}{L\|\boldsymbol{d}_t\|^2}, 1 \right\}\\ &amp;\quad \textbf{Variant 2}: \text{set step size by line search} \nonumber\\ &amp;\quad\qquad \gamma_t = \argmin_{\gamma \in [0, 1]} f(\boldsymbol{x}_t + \gamma \boldsymbol{d}_t)\\ &amp;\quad \textbf{Variant 2}: \text{step size schedule} \nonumber\\ &amp;\quad\qquad \gamma_t = \frac{2}{t+1}\\ &amp;\quad\boldsymbol{x}_{t+1} = \boldsymbol{x}_t + \gamma_t \boldsymbol{d}_t~.\\ &amp;\textbf{end For loop}\\ & \textbf{return } \boldsymbol{x}_t \end{align}</p>
-          <p>Line 9 can be re-written \(\quad\boldsymbol{x}_{t+1} = \boldsymbol{x}_t + \gamma_t (\boldsymbol{s}_t - \boldsymbol{x}_t)\), meaning that the algorithm moves in the direction of the vector \(\boldsymbol{s}_t\) with a step size that decreases as the algorithm progresses.</p>
-          <p>The vector \(\boldsymbol{s}_t\) is the result of another optimization problem that is sometimes called the <em>linear minimization oracle</em>. The result is a vector within the constraint domain \(\mathcal{C}\) that correlates maximally with the negative gradient. There are many ways to find a step size for the FW algorithm, of which two variants are shown above.</p>
-          <h2 id="bibliography">Bibliography</h2>
-          <ol class="biblio-list pl-0">
-            <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="frankAlgorithmQuadraticProgramming1956" itemid="doi:10.1002/nav.3800030109"><span itemprop="author">Marguerite Frank, Philip Wolfe</span>. <time datetime="1956" itemprop="datePublished">1956</time>. "<span itemprop="name">An Algorithm for Quadratic Programming</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Naval Research Logistics Quarterly</i></span> 3 (1-2):95–110. <a itemprop="sameAs" href="https://doi.org/10.1002/nav.3800030109">DOI</a>.</span></li>
-            <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="jaggiRevisitingFrankWolfeProjectionFree2013"><span itemprop="author">Martin Jaggi</span>. <time datetime="2013" itemprop="datePublished">2013</time>. "<span itemprop="name">Revisiting Frank-wolfe: Projection-free Sparse Convex Optimization</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Proceedings of the 30th International Conference on Machine Learning, ICML 2013, Atlanta, GA, USA, 16-21 June 2013</i></span>, 28:427–35. JMLR Workshop and Conference Proceedings. JMLR.org. <a itemprop="sameAs" href="http://proceedings.mlr.press/v28/jaggi13.html">http://proceedings.mlr.press/v28/jaggi13.html</a>.</span></li>
-          </ol>
+      <div class="note-page bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg mb-6 overflow-hidden">
+        <div class="p-5 sm:p-6">
+          <h1 class="text-xl sm:text-2xl font-semibold mb-4 p-name text-zinc-900 dark:text-zinc-100" itemprop="name">Frank-Wolfe algorithm</h1>
+          <div class="article-content e-content p-name prose dark:prose-invert max-w-none" itemprop="articleBody">
+            <dl>
+              <dt>tags</dt>
+              <dd>
+                <a href="/notes/optimization/">Optimization</a>, <a href="/notes/algorithm/">Algorithm</a>
+              </dd>
+              <dt>resources</dt>
+              <dd>
+                <a href="https://fa.bianp.net/blog/2018/notes-on-the-frank-wolfe-algorithm-part-i/">Fabian Pedregosa’s series on FW</a>
+              </dd>
+            </dl>
+            <h2 id="definition">Definition</h2>
+            <p>It was originally published in (<a href="#frankAlgorithmQuadraticProgramming1956"><cite itemprop="citation" itemscope itemid="doi:10.1002/nav.3800030109">Frank, Wolfe 1956</cite></a>) and (<a href="#jaggiRevisitingFrankWolfeProjectionFree2013"><cite itemprop="citation" itemscope itemid="key:jaggiRevisitingFrankWolfeProjectionFree2013">Jaggi 2013</cite></a>) gives a more recent overview.</p>
+            <p>For a function \(f\) differentiable with $L$-Lipschitz gradients, and its domain \(\mathcal{C}\) is a convex and compact set, we want to solve the <a href="/notes/optimization/">optimization</a> problem:</p>
+            <p>\[ \min_{\boldsymbol{x} \in \mathcal{C}} f(\boldsymbol{x}) \]</p>
+            <p>The algorithm starts with an initial guess \(\boldsymbol{x}_0\) and constructs a sequence of values \(\boldsymbol{x}_1, \boldsymbol{x}_2, \cdots\) which converges to the solution. We can write the algorithm as follows:</p>
+            <p>\begin{align} & \textbf{Input}: \text{initial guess $ xx_0$, tolerance $\delta &gt; 0$} \nonumber \\ & \textbf{For }t=0, 1, \ldots \textbf{ do } \\ &amp;\quad \boldsymbol{s}_t \in \argmax_{\boldsymbol{s} \in \mathcal{C}} \langle -\nabla f(\boldsymbol{x}_t), \boldsymbol{s}\rangle \\ &amp;\quad \boldsymbol{d}_t = \boldsymbol{s}_t - \boldsymbol{x}_t\\ &amp;\quad g_t = \langle \nabla - f(\boldsymbol{x}_t), \boldsymbol{d}_t \rangle\\ &amp;\quad \textbf{If } g_t &lt; \delta: \\ &amp;\quad\quad \text{// exit if gap is below tolerance }\nonumber\\ &amp;\quad\quad\textbf{return } \boldsymbol{x}_t\\ &amp;\quad {\textbf{Variant 1}}: \text{set step size as} \nonumber\\ &amp;\quad\qquad\gamma_t = \min \left\{\frac{g_t}{L\|\boldsymbol{d}_t\|^2}, 1 \right\}\\ &amp;\quad \textbf{Variant 2}: \text{set step size by line search} \nonumber\\ &amp;\quad\qquad \gamma_t = \argmin_{\gamma \in [0, 1]} f(\boldsymbol{x}_t + \gamma \boldsymbol{d}_t)\\ &amp;\quad \textbf{Variant 2}: \text{step size schedule} \nonumber\\ &amp;\quad\qquad \gamma_t = \frac{2}{t+1}\\ &amp;\quad\boldsymbol{x}_{t+1} = \boldsymbol{x}_t + \gamma_t \boldsymbol{d}_t~.\\ &amp;\textbf{end For loop}\\ & \textbf{return } \boldsymbol{x}_t \end{align}</p>
+            <p>Line 9 can be re-written \(\quad\boldsymbol{x}_{t+1} = \boldsymbol{x}_t + \gamma_t (\boldsymbol{s}_t - \boldsymbol{x}_t)\), meaning that the algorithm moves in the direction of the vector \(\boldsymbol{s}_t\) with a step size that decreases as the algorithm progresses.</p>
+            <p>The vector \(\boldsymbol{s}_t\) is the result of another optimization problem that is sometimes called the <em>linear minimization oracle</em>. The result is a vector within the constraint domain \(\mathcal{C}\) that correlates maximally with the negative gradient. There are many ways to find a step size for the FW algorithm, of which two variants are shown above.</p>
+            <h2 id="bibliography">Bibliography</h2>
+            <ol class="biblio-list pl-0">
+              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="frankAlgorithmQuadraticProgramming1956" itemid="doi:10.1002/nav.3800030109"><span itemprop="author">Marguerite Frank, Philip Wolfe</span>. <time datetime="1956" itemprop="datePublished">1956</time>. "<span itemprop="name">An Algorithm for Quadratic Programming</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Naval Research Logistics Quarterly</i></span> 3 (1-2):95–110. <a itemprop="sameAs" href="https://doi.org/10.1002/nav.3800030109">DOI</a>.</span></li>
+              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="jaggiRevisitingFrankWolfeProjectionFree2013"><span itemprop="author">Martin Jaggi</span>. <time datetime="2013" itemprop="datePublished">2013</time>. "<span itemprop="name">Revisiting Frank-wolfe: Projection-free Sparse Convex Optimization</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Proceedings of the 30th International Conference on Machine Learning, ICML 2013, Atlanta, GA, USA, 16-21 June 2013</i></span>, 28:427–35. JMLR Workshop and Conference Proceedings. JMLR.org. <a itemprop="sameAs" href="http://proceedings.mlr.press/v28/jaggi13.html">http://proceedings.mlr.press/v28/jaggi13.html</a>.</span></li>
+            </ol>
+          </div>
         </div>
-        <div class="text-center" style="font-variant-caps:all-small-caps">
+        <div class="border-t border-zinc-200 dark:border-zinc-600 px-5 sm:px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400 text-center" style="font-variant-caps:all-small-caps">
           Last changed <a class="u-url" href="https://hugocisneros.com/notes/frank_wolfe_algorithm/"><time itemprop="datePublished" class="dt-published" datetime="2022-09-22T12:44:00+0200">2022.09.22</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>
     <h3>Comments</h3>
     <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
-    <section id="isso-thread"></section><br>
-    <a href="/notes#frank_wolfe_algorithm"><b>← Back to Notes</b></a>
+    <section id="isso-thread"></section><a href="/notes#frank_wolfe_algorithm" class="inline-flex items-center gap-2 mt-4 px-4 py-2 text-sm font-medium text-inherit bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg hover:border-zinc-400 dark:hover:border-zinc-500 hover:shadow-md transition-all duration-150"><svg class="inline-block" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path></svg>Back to Notes</a>
   </main>
   <footer class="footer container h-10 text-center mt-1">
     <hr class="my-4">

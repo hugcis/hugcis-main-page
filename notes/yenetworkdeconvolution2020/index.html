@@ -100,45 +100,47 @@
       </ol>
     </nav>
     <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-      <div class="bg-zinc-200 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
-        <h1 class="article-title p-name" itemprop="name">Network Deconvolution by Ye, C., Evanusa, M., He, H., Mitrokhin, A., Goldstein, T., Yorke, J. A., Fermuller, Cornelia, … (2020)</h1>
-        <div class="article-content e-content p-name" itemprop="articleBody">
-          <dl>
-            <dt>tags</dt>
-            <dd>
-              <a href="/notes/convolutional_neural_networks/">Convolutional neural networks</a>, <a href="/notes/neural_network_training/">Neural network training</a>
-            </dd>
-            <dt>source</dt>
-            <dd>
-              (<a href="#yeNetworkDeconvolution2020"><cite itemprop="citation" itemscope itemid="key:yeNetworkDeconvolution2020">Ye et al. 2020</cite></a>)
-            </dd>
-          </dl>
-          <h2 id="summary">Summary</h2>
-          <p>This paper introduces so-called <em>Network Deconvolution</em>, advertised as a way to remove pixel-wise and channel-wise correlation in deep neural networks.</p>
-          <p>The authors base their new operator on the optimal configuration for \(L_2\) linear regression, where <a href="/notes/gradient_descent/">gradient descent</a> converges in one single step if and only if:</p>
-          <p>\[ \frac{1}{N}X^t X = I \] where \(X\) is the feature matrix and \(N\) the number of samples.</p>
-          <p>This means that input features should be normalized and uncorrelated for <a href="/notes/gradient_descent/">gradient descent</a> to converge the fastest. This can be achieved, either by correcting the gradient with the Hessian matrix, or manipulating input features so as to normalize them and remove correlations.</p>
-          <p>An algorithm to construct this deconvolution operator is introduced. \(D \approx (Cov + \epsilon \cdot I) ^{-\frac{1}{2}}\), where \(Cov = \frac{1}{N}(X-\mu)^t (X-\mu)\).</p>
-          <p>Actual deconvolution operator approximation is done with some sampling to accelerate computations. After training, a running average of \(D\) is frozen and can be used for evaluation.</p>
-          <p>Deconvolution is presented as a unification of commonly used normalization techniques such as channel-wise decorrelation or BatchNorm.</p>
-          <p>The authors report what looks like pretty consistent improvement over BatchNorm on image classification tasks. This improvement is not very large however (less than top-5 1% accuracy on ImageNet).</p>
-          <h2 id="comments">Comments</h2>
-          <p>This paper demonstrates what seems like a generalization of deep learning training acceleration techniques rooted in somewhat theoretically sound ideas. These theoretical ideas are based on the linear version of the problem however, which doesn’t translate well to deep networks most of the time. <a href="https://openreview.net/forum?id=rkeu30EtvS">Reviews</a> are positive overall, and the paper may set a new standard for these normalization techniques, although comparison with recent work apart from BatchNorm is lacking in the paper.</p>
-          <p>These acceleration techniques seem to only have empirical foundations for deep learning as of today, and may well be rendered useless by some new training algorithm someday.</p>
-          <h2 id="bibliography">Bibliography</h2>
-          <ol class="biblio-list pl-0">
-            <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="yeNetworkDeconvolution2020"><span itemprop="author">Chengxi Ye, Matthew Evanusa, Hua He, Anton Mitrokhin, Tom Goldstein, James A Yorke, Cornelia Fermüller, Yiannis Aloimonos</span>. <time datetime="2020" itemprop="datePublished">2020</time>. "<span itemprop="name">Network Deconvolution</span>". In , 20.</span></li>
-          </ol>
+      <div class="note-page bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg mb-6 overflow-hidden">
+        <div class="p-5 sm:p-6">
+          <h1 class="text-xl sm:text-2xl font-semibold mb-4 p-name text-zinc-900 dark:text-zinc-100" itemprop="name">Network Deconvolution by Ye, C., Evanusa, M., He, H., Mitrokhin, A., Goldstein, T., Yorke, J. A., Fermuller, Cornelia, … (2020)</h1>
+          <div class="article-content e-content p-name prose dark:prose-invert max-w-none" itemprop="articleBody">
+            <dl>
+              <dt>tags</dt>
+              <dd>
+                <a href="/notes/convolutional_neural_networks/">Convolutional neural networks</a>, <a href="/notes/neural_network_training/">Neural network training</a>
+              </dd>
+              <dt>source</dt>
+              <dd>
+                (<a href="#yeNetworkDeconvolution2020"><cite itemprop="citation" itemscope itemid="key:yeNetworkDeconvolution2020">Ye et al. 2020</cite></a>)
+              </dd>
+            </dl>
+            <h2 id="summary">Summary</h2>
+            <p>This paper introduces so-called <em>Network Deconvolution</em>, advertised as a way to remove pixel-wise and channel-wise correlation in deep neural networks.</p>
+            <p>The authors base their new operator on the optimal configuration for \(L_2\) linear regression, where <a href="/notes/gradient_descent/">gradient descent</a> converges in one single step if and only if:</p>
+            <p>\[ \frac{1}{N}X^t X = I \] where \(X\) is the feature matrix and \(N\) the number of samples.</p>
+            <p>This means that input features should be normalized and uncorrelated for <a href="/notes/gradient_descent/">gradient descent</a> to converge the fastest. This can be achieved, either by correcting the gradient with the Hessian matrix, or manipulating input features so as to normalize them and remove correlations.</p>
+            <p>An algorithm to construct this deconvolution operator is introduced. \(D \approx (Cov + \epsilon \cdot I) ^{-\frac{1}{2}}\), where \(Cov = \frac{1}{N}(X-\mu)^t (X-\mu)\).</p>
+            <p>Actual deconvolution operator approximation is done with some sampling to accelerate computations. After training, a running average of \(D\) is frozen and can be used for evaluation.</p>
+            <p>Deconvolution is presented as a unification of commonly used normalization techniques such as channel-wise decorrelation or BatchNorm.</p>
+            <p>The authors report what looks like pretty consistent improvement over BatchNorm on image classification tasks. This improvement is not very large however (less than top-5 1% accuracy on ImageNet).</p>
+            <h2 id="comments">Comments</h2>
+            <p>This paper demonstrates what seems like a generalization of deep learning training acceleration techniques rooted in somewhat theoretically sound ideas. These theoretical ideas are based on the linear version of the problem however, which doesn’t translate well to deep networks most of the time. <a href="https://openreview.net/forum?id=rkeu30EtvS">Reviews</a> are positive overall, and the paper may set a new standard for these normalization techniques, although comparison with recent work apart from BatchNorm is lacking in the paper.</p>
+            <p>These acceleration techniques seem to only have empirical foundations for deep learning as of today, and may well be rendered useless by some new training algorithm someday.</p>
+            <h2 id="bibliography">Bibliography</h2>
+            <ol class="biblio-list pl-0">
+              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="yeNetworkDeconvolution2020"><span itemprop="author">Chengxi Ye, Matthew Evanusa, Hua He, Anton Mitrokhin, Tom Goldstein, James A Yorke, Cornelia Fermüller, Yiannis Aloimonos</span>. <time datetime="2020" itemprop="datePublished">2020</time>. "<span itemprop="name">Network Deconvolution</span>". In , 20.</span></li>
+            </ol>
+          </div>
         </div>
-        <div class="text-center" style="font-variant-caps:all-small-caps">
+        <div class="border-t border-zinc-200 dark:border-zinc-600 px-5 sm:px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400 text-center" style="font-variant-caps:all-small-caps">
           Last changed <a class="u-url" href="https://hugocisneros.com/notes/yenetworkdeconvolution2020/"><time itemprop="datePublished" class="dt-published" datetime="2021-03-25T09:58:00+0100">2021.03.25</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>
     <h3>Comments</h3>
     <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
-    <section id="isso-thread"></section><br>
-    <a href="/notes#yenetworkdeconvolution2020"><b>← Back to Notes</b></a>
+    <section id="isso-thread"></section><a href="/notes#yenetworkdeconvolution2020" class="inline-flex items-center gap-2 mt-4 px-4 py-2 text-sm font-medium text-inherit bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg hover:border-zinc-400 dark:hover:border-zinc-500 hover:shadow-md transition-all duration-150"><svg class="inline-block" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path></svg>Back to Notes</a>
   </main>
   <footer class="footer container h-10 text-center mt-1">
     <hr class="my-4">

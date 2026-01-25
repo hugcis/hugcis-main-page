@@ -99,53 +99,55 @@
       </ol>
     </nav>
     <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-      <div class="bg-zinc-200 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
-        <h1 class="article-title p-name" itemprop="name">Learned Initializations for Optimizing Coordinate-Based Neural Representations by Tancik, M., Mildenhall, B., Wang, T., Schmidt, D., Srinivasan, P. P., Barron, J. T., & Ng, R. (2021)</h1>
-        <div class="article-content e-content p-name" itemprop="articleBody">
-          <dl>
-            <dt>tags</dt>
-            <dd>
-              <a href="/notes/implicit_neural_representations/#neural-radiance-fields">Neural radiance fields</a>, <a href="/notes/meta_learning/">Meta-learning</a>
-            </dd>
-            <dt>source</dt>
-            <dd>
-              (<a href="#tancikLearnedInitializationsOptimizing2021"><cite itemprop="citation" itemscope itemid="key:tancikLearnedInitializationsOptimizing2021">Tancik et al. 2021</cite></a>)
-            </dd>
-          </dl>
-          <h2 id="summary">Summary</h2>
-          <p>This paper explores <a href="/notes/meta_learning/">meta-learning</a> techniques for improving the quality and speed of convergence of learned <a href="/notes/implicit_neural_representations/">implicit neural representations</a>.</p>
-          <p>The authors use meta-learning to optimize the initial weights \(\theta_0\) of the neural networks such that it minimizes the loss \(L(\theta_m)\) when the network is optimized on a new unseen observations.</p>
-          <p>As a meta-learning problem, there is an <em>inner loop</em> and an <em>outer loop</em>:</p>
-          <ul>
-            <li>The inner loop is the optimization procedure to go from a \(\theta_0\) to an optimized \(\theta_m\) for a specific observation T. This can be done with classical <a href="/notes/optimization/">optimization</a> methods
-            </li>
-            <li>The outer loop is about shifting the position of the \(\theta_0\) to make the inner loop results better on average. This cannot be done with the usual learning algorithms.</li>
-          </ul>
-          <p>Two algorithms are considered for that outer-loop:</p>
-          <ul>
-            <li>
-              <a href="/notes/meta_learning/#maml">MAML</a> where the update \(\theta_0^{(j+1)} = \theta_0^j - \beta\nabla_\theta L(\theta_m(\theta, T_j))\) is computed by taking inner-loop steps with different step sizes
-            </li>
-            <li>
-              <a href="/notes/meta_learning/#reptile">Reptile</a> where the update \(\theta_0^{(j+1)} = \theta_0^j - \beta\left( \theta_m(\theta_0^j, T_j) - \theta_0^j \right)\) is a step towards the optimized weights from an observation
-            </li>
-          </ul>
-          <p>This setup gives very good results. The training of neural representations is faster and of better quality than with other types of initialization (even initialization trained to match the output of the met-learned one).</p>
-          <p>The results are encouraging both for image regression and view synthesis of 3D objects.</p>
-          <h2 id="bibliography">Bibliography</h2>
-          <ol class="biblio-list pl-0">
-            <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="tancikLearnedInitializationsOptimizing2021"><span itemprop="author">Matthew Tancik, Ben Mildenhall, Terrance Wang, Divi Schmidt, Pratul P. Srinivasan, Jonathan T. Barron, Ren Ng</span>. <time datetime="2021" itemprop="datePublished">March 23, 2021</time>. "<span itemprop="name">Learned Initializations for Optimizing Coordinate-based Neural Representations</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:2012.02189 [cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2012.02189">http://arxiv.org/abs/2012.02189</a>.</span></li>
-          </ol>
+      <div class="note-page bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg mb-6 overflow-hidden">
+        <div class="p-5 sm:p-6">
+          <h1 class="text-xl sm:text-2xl font-semibold mb-4 p-name text-zinc-900 dark:text-zinc-100" itemprop="name">Learned Initializations for Optimizing Coordinate-Based Neural Representations by Tancik, M., Mildenhall, B., Wang, T., Schmidt, D., Srinivasan, P. P., Barron, J. T., & Ng, R. (2021)</h1>
+          <div class="article-content e-content p-name prose dark:prose-invert max-w-none" itemprop="articleBody">
+            <dl>
+              <dt>tags</dt>
+              <dd>
+                <a href="/notes/implicit_neural_representations/#neural-radiance-fields">Neural radiance fields</a>, <a href="/notes/meta_learning/">Meta-learning</a>
+              </dd>
+              <dt>source</dt>
+              <dd>
+                (<a href="#tancikLearnedInitializationsOptimizing2021"><cite itemprop="citation" itemscope itemid="key:tancikLearnedInitializationsOptimizing2021">Tancik et al. 2021</cite></a>)
+              </dd>
+            </dl>
+            <h2 id="summary">Summary</h2>
+            <p>This paper explores <a href="/notes/meta_learning/">meta-learning</a> techniques for improving the quality and speed of convergence of learned <a href="/notes/implicit_neural_representations/">implicit neural representations</a>.</p>
+            <p>The authors use meta-learning to optimize the initial weights \(\theta_0\) of the neural networks such that it minimizes the loss \(L(\theta_m)\) when the network is optimized on a new unseen observations.</p>
+            <p>As a meta-learning problem, there is an <em>inner loop</em> and an <em>outer loop</em>:</p>
+            <ul>
+              <li>The inner loop is the optimization procedure to go from a \(\theta_0\) to an optimized \(\theta_m\) for a specific observation T. This can be done with classical <a href="/notes/optimization/">optimization</a> methods
+              </li>
+              <li>The outer loop is about shifting the position of the \(\theta_0\) to make the inner loop results better on average. This cannot be done with the usual learning algorithms.</li>
+            </ul>
+            <p>Two algorithms are considered for that outer-loop:</p>
+            <ul>
+              <li>
+                <a href="/notes/meta_learning/#maml">MAML</a> where the update \(\theta_0^{(j+1)} = \theta_0^j - \beta\nabla_\theta L(\theta_m(\theta, T_j))\) is computed by taking inner-loop steps with different step sizes
+              </li>
+              <li>
+                <a href="/notes/meta_learning/#reptile">Reptile</a> where the update \(\theta_0^{(j+1)} = \theta_0^j - \beta\left( \theta_m(\theta_0^j, T_j) - \theta_0^j \right)\) is a step towards the optimized weights from an observation
+              </li>
+            </ul>
+            <p>This setup gives very good results. The training of neural representations is faster and of better quality than with other types of initialization (even initialization trained to match the output of the met-learned one).</p>
+            <p>The results are encouraging both for image regression and view synthesis of 3D objects.</p>
+            <h2 id="bibliography">Bibliography</h2>
+            <ol class="biblio-list pl-0">
+              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="tancikLearnedInitializationsOptimizing2021"><span itemprop="author">Matthew Tancik, Ben Mildenhall, Terrance Wang, Divi Schmidt, Pratul P. Srinivasan, Jonathan T. Barron, Ren Ng</span>. <time datetime="2021" itemprop="datePublished">March 23, 2021</time>. "<span itemprop="name">Learned Initializations for Optimizing Coordinate-based Neural Representations</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:2012.02189 [cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2012.02189">http://arxiv.org/abs/2012.02189</a>.</span></li>
+            </ol>
+          </div>
         </div>
-        <div class="text-center" style="font-variant-caps:all-small-caps">
+        <div class="border-t border-zinc-200 dark:border-zinc-600 px-5 sm:px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400 text-center" style="font-variant-caps:all-small-caps">
           Last changed <a class="u-url" href="https://hugocisneros.com/notes/tanciklearnedinitializationsoptimizing2021/"><time itemprop="datePublished" class="dt-published" datetime="2021-08-25T16:39:00+0200">2021.08.25</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>
     <h3>Comments</h3>
     <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
-    <section id="isso-thread"></section><br>
-    <a href="/notes#tanciklearnedinitializationsoptimizing2021"><b>← Back to Notes</b></a>
+    <section id="isso-thread"></section><a href="/notes#tanciklearnedinitializationsoptimizing2021" class="inline-flex items-center gap-2 mt-4 px-4 py-2 text-sm font-medium text-inherit bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg hover:border-zinc-400 dark:hover:border-zinc-500 hover:shadow-md transition-all duration-150"><svg class="inline-block" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path></svg>Back to Notes</a>
   </main>
   <footer class="footer container h-10 text-center mt-1">
     <hr class="my-4">

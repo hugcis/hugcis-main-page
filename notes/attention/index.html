@@ -99,39 +99,41 @@
       </ol>
     </nav>
     <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-      <div class="bg-zinc-200 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
-        <h1 class="article-title p-name" itemprop="name">Attention</h1>
-        <div class="article-content e-content p-name" itemprop="articleBody">
-          <dl>
-            <dt>tags</dt>
-            <dd>
-              <a href="/notes/neural_networks/">Neural networks</a>
-            </dd>
-          </dl>
-          <h2 id="implementation">Implementation</h2>
-          <p>Self-attention is a weighted average of all input elements from a sequence, with a weight proportional to a similarity score between representations. The input \(x \in \mathbb{R}^{L \times F}\) is projected by matrices \(W_Q \in \mathbb{R}^{F \times D}\), \(W_K \in \mathbb{R}^{F\times D}\) and \(W_V \in \mathbb{R}^{F\times M}\) to representations \(Q\) (<em>queries</em>), \(K\) (<em>keys</em>) and \(V\) (<em>values</em>).</p>
-          <p>\[ Q = xW_Q\] \[ K = xW_K\] \[ V = xW_V\]</p>
-          <p>Output for all positions in a sequence \(x\), is written</p>
-          <p>\[A(x) = V’ = \text{softmax}\left( \dfrac{QK^{T}}{\sqrt{D}} \right) V.\]</p>
-          <p>The softmax is applied row-wise in the equation above.</p>
-          <h2 id="possible-interpretation">Possible interpretation</h2>
-          <p>Keys and queries have a relatively simple interpretation. The keys are embeddings of tokens that expose some useful information about them:</p>
-          <p>The key \(K_3\) associated with <code>cat</code> should probably encode some information about the fact that it’s a noun, that it refers to a living entity, an animal, etc. On the other hand, the key \(K_2\) encodes the fact that <code>pretty</code> is an adjective, and is used to denote some positive things about the subject’s appearance. That key is probably close to keys for <code>beautiful</code> and <code>nice</code>.</p>
-          <figure>
-            <img src="/ox-hugo/contour.png">
-          </figure>
-          <p>The query encodes another type of information about what types of keys would be useful for that particular token. In the case of query \(Q_3\) it is probably useful to attend to any adjective-like key that could show something interesting about the current word. Therefore, the quantity \(\text{softmax}\left( \dfrac{QK^{T}}{\sqrt{D}} \right)\) will be larger and will contribute more heavily in the resulting vector \(V’\). This is illustrated in the graph above with heavier edges.</p>
-          <h2 id="is-it-necessary">Is it necessary?</h2>
-          <p>Maybe not (<a href="#zhaiAttentionFreeTransformer2021"><cite itemprop="citation" itemscope itemid="key:zhaiAttentionFreeTransformer2021">Zhai et al. 2021</cite></a>).</p>
-          <h2 id="bibliography">Bibliography</h2>
-          <ol class="biblio-list pl-0">
-            <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="zhaiAttentionFreeTransformer2021"><span itemprop="author">Shuangfei Zhai, Walter Talbott, Nitish Srivastava, Chen Huang, Hanlin Goh, Ruixiang Zhang, Josh Susskind</span>. <time datetime="2021" itemprop="datePublished">May 28, 2021</time>. "<span itemprop="name">An Attention Free Transformer</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:2105.14103 [cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2105.14103">http://arxiv.org/abs/2105.14103</a>.</span></li>
-          </ol>
+      <div class="note-page bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg mb-6 overflow-hidden">
+        <div class="p-5 sm:p-6">
+          <h1 class="text-xl sm:text-2xl font-semibold mb-4 p-name text-zinc-900 dark:text-zinc-100" itemprop="name">Attention</h1>
+          <div class="article-content e-content p-name prose dark:prose-invert max-w-none" itemprop="articleBody">
+            <dl>
+              <dt>tags</dt>
+              <dd>
+                <a href="/notes/neural_networks/">Neural networks</a>
+              </dd>
+            </dl>
+            <h2 id="implementation">Implementation</h2>
+            <p>Self-attention is a weighted average of all input elements from a sequence, with a weight proportional to a similarity score between representations. The input \(x \in \mathbb{R}^{L \times F}\) is projected by matrices \(W_Q \in \mathbb{R}^{F \times D}\), \(W_K \in \mathbb{R}^{F\times D}\) and \(W_V \in \mathbb{R}^{F\times M}\) to representations \(Q\) (<em>queries</em>), \(K\) (<em>keys</em>) and \(V\) (<em>values</em>).</p>
+            <p>\[ Q = xW_Q\] \[ K = xW_K\] \[ V = xW_V\]</p>
+            <p>Output for all positions in a sequence \(x\), is written</p>
+            <p>\[A(x) = V’ = \text{softmax}\left( \dfrac{QK^{T}}{\sqrt{D}} \right) V.\]</p>
+            <p>The softmax is applied row-wise in the equation above.</p>
+            <h2 id="possible-interpretation">Possible interpretation</h2>
+            <p>Keys and queries have a relatively simple interpretation. The keys are embeddings of tokens that expose some useful information about them:</p>
+            <p>The key \(K_3\) associated with <code>cat</code> should probably encode some information about the fact that it’s a noun, that it refers to a living entity, an animal, etc. On the other hand, the key \(K_2\) encodes the fact that <code>pretty</code> is an adjective, and is used to denote some positive things about the subject’s appearance. That key is probably close to keys for <code>beautiful</code> and <code>nice</code>.</p>
+            <figure>
+              <img src="/ox-hugo/contour.png">
+            </figure>
+            <p>The query encodes another type of information about what types of keys would be useful for that particular token. In the case of query \(Q_3\) it is probably useful to attend to any adjective-like key that could show something interesting about the current word. Therefore, the quantity \(\text{softmax}\left( \dfrac{QK^{T}}{\sqrt{D}} \right)\) will be larger and will contribute more heavily in the resulting vector \(V’\). This is illustrated in the graph above with heavier edges.</p>
+            <h2 id="is-it-necessary">Is it necessary?</h2>
+            <p>Maybe not (<a href="#zhaiAttentionFreeTransformer2021"><cite itemprop="citation" itemscope itemid="key:zhaiAttentionFreeTransformer2021">Zhai et al. 2021</cite></a>).</p>
+            <h2 id="bibliography">Bibliography</h2>
+            <ol class="biblio-list pl-0">
+              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="zhaiAttentionFreeTransformer2021"><span itemprop="author">Shuangfei Zhai, Walter Talbott, Nitish Srivastava, Chen Huang, Hanlin Goh, Ruixiang Zhang, Josh Susskind</span>. <time datetime="2021" itemprop="datePublished">May 28, 2021</time>. "<span itemprop="name">An Attention Free Transformer</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:2105.14103 [cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2105.14103">http://arxiv.org/abs/2105.14103</a>.</span></li>
+            </ol>
+          </div>
         </div>
-        <div class="bl-section">
-          <h2>Links to this note</h2>
+        <div class="bl-section px-5 sm:px-6 py-4 border-t border-zinc-200 dark:border-zinc-600">
+          <h2 class="text-sm font-semibold mb-2 mt-0 text-zinc-500 dark:text-zinc-400">Links to this note</h2>
           <div class="backlinks">
-            <ul>
+            <ul class="m-0 pl-5 text-sm">
               <li>
                 <a href="/notes/attention_graph_networks/">Attention graph networks</a>
               </li>
@@ -180,15 +182,15 @@
             </ul>
           </div>
         </div>
-        <div class="text-center" style="font-variant-caps:all-small-caps">
+        <div class="border-t border-zinc-200 dark:border-zinc-600 px-5 sm:px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400 text-center" style="font-variant-caps:all-small-caps">
           Last changed <a class="u-url" href="https://hugocisneros.com/notes/attention/"><time itemprop="datePublished" class="dt-published" datetime="2021-06-14T10:29:00+0200">2021.06.14</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>
     <h3>Comments</h3>
     <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
-    <section id="isso-thread"></section><br>
-    <a href="/notes#attention"><b>← Back to Notes</b></a>
+    <section id="isso-thread"></section><a href="/notes#attention" class="inline-flex items-center gap-2 mt-4 px-4 py-2 text-sm font-medium text-inherit bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg hover:border-zinc-400 dark:hover:border-zinc-500 hover:shadow-md transition-all duration-150"><svg class="inline-block" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path></svg>Back to Notes</a>
   </main>
   <footer class="footer container h-10 text-center mt-1">
     <hr class="my-4">

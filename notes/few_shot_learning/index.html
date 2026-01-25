@@ -100,47 +100,49 @@
       </ol>
     </nav>
     <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-      <div class="bg-zinc-200 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
-        <h1 class="article-title p-name" itemprop="name">Few-shot learning</h1>
-        <div class="article-content e-content p-name" itemprop="articleBody">
-          <dl>
-            <dt>tags</dt>
-            <dd>
-              <a href="/notes/machine_learning/">Machine learning</a>, <a href="/notes/transfer_learning/">Transfer learning</a>
-            </dd>
-            <dt>resources</dt>
-            <dd>
-              <a href="https://research.aimultiple.com/few-shot-learning/">AI Multiple post</a>
-            </dd>
-          </dl>
-          <p>Few-shot learning (FSL) can be considered as a kind of <a href="/notes/meta_learning/">meta-learning</a> problem where the model learns how to learn to solve different problems.</p>
-          <p>FSL tasks are referred to as N-way K-shots, where N corresponds to the number of examples in each training classes and K is the number of separate training tasks for the model meta-training. A test time, the model will only see N examples of each of the classes it has to learn. One specific case if one-shot learning, where a model only sees a single image before being tested.</p>
-          <h2 id="datasets">Datasets</h2>
-          <p>A typical task for few-shot learning is <a href="/notes/image_classification/">image classification</a> on multiple sets of classes. For example, the <a href="https://github.com/yaoyao-liu/mini-imagenet-tools">mini-ImageNet Dataset</a> (<a href="#vinyalsMatchingNetworksOne2016"><cite itemprop="citation" itemscope itemid="key:vinyalsMatchingNetworksOne2016">Vinyals et al. 2016</cite></a>) is an image dataset with 64 meta-training, 16 meta-validation and 20 meta-testing classes. To evaluate a FSL model on mini-ImageNet, one trains the model on the meta-training classes and tests on the meta-testing ones.</p>
-          <h2 id="bibliography">Bibliography</h2>
-          <ol class="biblio-list pl-0">
-            <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="vinyalsMatchingNetworksOne2016"><span itemprop="author">Oriol Vinyals, Charles Blundell, Tim Lillicrap, Koray Kavukcuoglu, Daan Wierstra</span>. <time datetime="2016" itemprop="datePublished">2016</time>. "<span itemprop="name">Matching Networks for One Shot Learning</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Advances in Neural Information Processing Systems 29: Annual Conference on Neural Information Processing Systems 2016, December 5-10, 2016, Barcelona, Spain</i></span>, edited by Daniel D. Lee, Masashi Sugiyama, Ulrike von Luxburg, Isabelle Guyon, and Roman Garnett, 3630–38. <a itemprop="sameAs" href="https://proceedings.neurips.cc/paper/2016/hash/90e1357833654983612fb05e3ec9148c-Abstract.html">https://proceedings.neurips.cc/paper/2016/hash/90e1357833654983612fb05e3ec9148c-Abstract.html</a>.</span></li>
-          </ol>
+      <div class="note-page bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg mb-6 overflow-hidden">
+        <div class="p-5 sm:p-6">
+          <h1 class="text-xl sm:text-2xl font-semibold mb-4 p-name text-zinc-900 dark:text-zinc-100" itemprop="name">Few-shot learning</h1>
+          <div class="article-content e-content p-name prose dark:prose-invert max-w-none" itemprop="articleBody">
+            <dl>
+              <dt>tags</dt>
+              <dd>
+                <a href="/notes/machine_learning/">Machine learning</a>, <a href="/notes/transfer_learning/">Transfer learning</a>
+              </dd>
+              <dt>resources</dt>
+              <dd>
+                <a href="https://research.aimultiple.com/few-shot-learning/">AI Multiple post</a>
+              </dd>
+            </dl>
+            <p>Few-shot learning (FSL) can be considered as a kind of <a href="/notes/meta_learning/">meta-learning</a> problem where the model learns how to learn to solve different problems.</p>
+            <p>FSL tasks are referred to as N-way K-shots, where N corresponds to the number of examples in each training classes and K is the number of separate training tasks for the model meta-training. A test time, the model will only see N examples of each of the classes it has to learn. One specific case if one-shot learning, where a model only sees a single image before being tested.</p>
+            <h2 id="datasets">Datasets</h2>
+            <p>A typical task for few-shot learning is <a href="/notes/image_classification/">image classification</a> on multiple sets of classes. For example, the <a href="https://github.com/yaoyao-liu/mini-imagenet-tools">mini-ImageNet Dataset</a> (<a href="#vinyalsMatchingNetworksOne2016"><cite itemprop="citation" itemscope itemid="key:vinyalsMatchingNetworksOne2016">Vinyals et al. 2016</cite></a>) is an image dataset with 64 meta-training, 16 meta-validation and 20 meta-testing classes. To evaluate a FSL model on mini-ImageNet, one trains the model on the meta-training classes and tests on the meta-testing ones.</p>
+            <h2 id="bibliography">Bibliography</h2>
+            <ol class="biblio-list pl-0">
+              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="vinyalsMatchingNetworksOne2016"><span itemprop="author">Oriol Vinyals, Charles Blundell, Tim Lillicrap, Koray Kavukcuoglu, Daan Wierstra</span>. <time datetime="2016" itemprop="datePublished">2016</time>. "<span itemprop="name">Matching Networks for One Shot Learning</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Advances in Neural Information Processing Systems 29: Annual Conference on Neural Information Processing Systems 2016, December 5-10, 2016, Barcelona, Spain</i></span>, edited by Daniel D. Lee, Masashi Sugiyama, Ulrike von Luxburg, Isabelle Guyon, and Roman Garnett, 3630–38. <a itemprop="sameAs" href="https://proceedings.neurips.cc/paper/2016/hash/90e1357833654983612fb05e3ec9148c-Abstract.html">https://proceedings.neurips.cc/paper/2016/hash/90e1357833654983612fb05e3ec9148c-Abstract.html</a>.</span></li>
+            </ol>
+          </div>
         </div>
-        <div class="bl-section">
-          <h2>Links to this note</h2>
+        <div class="bl-section px-5 sm:px-6 py-4 border-t border-zinc-200 dark:border-zinc-600">
+          <h2 class="text-sm font-semibold mb-2 mt-0 text-zinc-500 dark:text-zinc-400">Links to this note</h2>
           <div class="backlinks">
-            <ul>
+            <ul class="m-0 pl-5 text-sm">
               <li>
                 <a href="/notes/zero_shot_learning/">Zero-shot learning</a>
               </li>
             </ul>
           </div>
         </div>
-        <div class="text-center" style="font-variant-caps:all-small-caps">
+        <div class="border-t border-zinc-200 dark:border-zinc-600 px-5 sm:px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400 text-center" style="font-variant-caps:all-small-caps">
           Last changed <a class="u-url" href="https://hugocisneros.com/notes/few_shot_learning/"><time itemprop="datePublished" class="dt-published" datetime="2022-04-19T13:31:00+0200">2022.04.19</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>
     <h3>Comments</h3>
     <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
-    <section id="isso-thread"></section><br>
-    <a href="/notes#few_shot_learning"><b>← Back to Notes</b></a>
+    <section id="isso-thread"></section><a href="/notes#few_shot_learning" class="inline-flex items-center gap-2 mt-4 px-4 py-2 text-sm font-medium text-inherit bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg hover:border-zinc-400 dark:hover:border-zinc-500 hover:shadow-md transition-all duration-150"><svg class="inline-block" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path></svg>Back to Notes</a>
   </main>
   <footer class="footer container h-10 text-center mt-1">
     <hr class="my-4">

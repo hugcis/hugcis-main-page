@@ -101,35 +101,37 @@
       </ol>
     </nav>
     <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-      <div class="bg-zinc-200 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
-        <h1 class="article-title p-name" itemprop="name">Kolmogorov complexity</h1>
-        <div class="article-content e-content p-name" itemprop="articleBody">
-          <dl>
-            <dt>tags</dt>
-            <dd>
-              <a href="/notes/complexity/">Complexity</a>, <a href="/notes/algorithmic_information_theory/">Algorithmic Information theory</a>, <a href="/notes/computability_theory/">Computability theory</a>
-            </dd>
-          </dl>
-          <h2 id="definition">Definition</h2>
-          <h2 id="invariance-theorem">Invariance theorem</h2>
-          <p>For two descriptive languages \(L_1\) and \(L_2\) and their respective associated Kolmogorov complexity functions \(K_1\) and \(K_2\), there exist a constant \(c\) — dependant only on \(L_1, L_2\) such that \[ \forall s, -c \leq K_1(s) - K_2(s) \leq c \]</p>
-          <p>In other words, there is always a bounded difference between the Kolmogorov complexity in two separate description languages.</p>
-          <p>This is proven by using the fact that the two descriptive languages have to be <a href="/notes/turing_completeness/">Turing-complete</a> and therefore there exists an interpreter in \(L_1\) for \(L_2\) of finite size \(l\).</p>
-          <h2 id="uncomputability">Uncomputability</h2>
-          <h3 id="lemma">Lemma</h3>
-          <p>There exist strings of arbitrarily large Kolmogorov complexity. Formally: for each \(n \in \mathbb{N}\), there is a string s with \(K(s) \geq n\).</p>
-          <p>Proof: Otherwise infinitely many sequences would have finitely many generating programs.</p>
-          <h3 id="theorem">Theorem</h3>
-          <p>Kolmogorov complexity is not <a href="/notes/computability_theory/">computable</a>. There doesn’t exist a program that can compute for any string \(s\) the quantity \(K(s)\).</p>
-          <p>Proof: Let’s assume that a given description language (e.g. a common programming language) has an interepreter of size \(I\) in our Universal Turing machine and that there exist a program of lenght \(N\) that computes the Kolmogorov complexity of any string. We can write a program of fixed small size \(S\) that loops for each string of increasing length and stops when the result of the Kolmogorov complexity function is above \(2*(N+I+S)\).</p>
-          <p>Therefore, we found a contradiction with a string which Kolmogorov complexity is actually smaller than what our supposed function outputed.</p>
-          <h2 id="upper-bound">Upper bound</h2>
-          <p>Kolmogorov complexity is upper bounded by</p>
+      <div class="note-page bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg mb-6 overflow-hidden">
+        <div class="p-5 sm:p-6">
+          <h1 class="text-xl sm:text-2xl font-semibold mb-4 p-name text-zinc-900 dark:text-zinc-100" itemprop="name">Kolmogorov complexity</h1>
+          <div class="article-content e-content p-name prose dark:prose-invert max-w-none" itemprop="articleBody">
+            <dl>
+              <dt>tags</dt>
+              <dd>
+                <a href="/notes/complexity/">Complexity</a>, <a href="/notes/algorithmic_information_theory/">Algorithmic Information theory</a>, <a href="/notes/computability_theory/">Computability theory</a>
+              </dd>
+            </dl>
+            <h2 id="definition">Definition</h2>
+            <h2 id="invariance-theorem">Invariance theorem</h2>
+            <p>For two descriptive languages \(L_1\) and \(L_2\) and their respective associated Kolmogorov complexity functions \(K_1\) and \(K_2\), there exist a constant \(c\) — dependant only on \(L_1, L_2\) such that \[ \forall s, -c \leq K_1(s) - K_2(s) \leq c \]</p>
+            <p>In other words, there is always a bounded difference between the Kolmogorov complexity in two separate description languages.</p>
+            <p>This is proven by using the fact that the two descriptive languages have to be <a href="/notes/turing_completeness/">Turing-complete</a> and therefore there exists an interpreter in \(L_1\) for \(L_2\) of finite size \(l\).</p>
+            <h2 id="uncomputability">Uncomputability</h2>
+            <h3 id="lemma">Lemma</h3>
+            <p>There exist strings of arbitrarily large Kolmogorov complexity. Formally: for each \(n \in \mathbb{N}\), there is a string s with \(K(s) \geq n\).</p>
+            <p>Proof: Otherwise infinitely many sequences would have finitely many generating programs.</p>
+            <h3 id="theorem">Theorem</h3>
+            <p>Kolmogorov complexity is not <a href="/notes/computability_theory/">computable</a>. There doesn’t exist a program that can compute for any string \(s\) the quantity \(K(s)\).</p>
+            <p>Proof: Let’s assume that a given description language (e.g. a common programming language) has an interepreter of size \(I\) in our Universal Turing machine and that there exist a program of lenght \(N\) that computes the Kolmogorov complexity of any string. We can write a program of fixed small size \(S\) that loops for each string of increasing length and stops when the result of the Kolmogorov complexity function is above \(2*(N+I+S)\).</p>
+            <p>Therefore, we found a contradiction with a string which Kolmogorov complexity is actually smaller than what our supposed function outputed.</p>
+            <h2 id="upper-bound">Upper bound</h2>
+            <p>Kolmogorov complexity is upper bounded by</p>
+          </div>
         </div>
-        <div class="bl-section">
-          <h2>Links to this note</h2>
+        <div class="bl-section px-5 sm:px-6 py-4 border-t border-zinc-200 dark:border-zinc-600">
+          <h2 class="text-sm font-semibold mb-2 mt-0 text-zinc-500 dark:text-zinc-400">Links to this note</h2>
           <div class="backlinks">
-            <ul>
+            <ul class="m-0 pl-5 text-sm">
               <li>
                 <a href="/notes/berry_s_paradox/">Berry's paradox</a>
               </li>
@@ -145,15 +147,15 @@
             </ul>
           </div>
         </div>
-        <div class="text-center" style="font-variant-caps:all-small-caps">
+        <div class="border-t border-zinc-200 dark:border-zinc-600 px-5 sm:px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400 text-center" style="font-variant-caps:all-small-caps">
           Last changed <a class="u-url" href="https://hugocisneros.com/notes/kolmogorov_complexity/"><time itemprop="datePublished" class="dt-published" datetime="2021-03-25T09:58:00+0100">2021.03.25</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>
     <h3>Comments</h3>
     <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
-    <section id="isso-thread"></section><br>
-    <a href="/notes#kolmogorov_complexity"><b>← Back to Notes</b></a>
+    <section id="isso-thread"></section><a href="/notes#kolmogorov_complexity" class="inline-flex items-center gap-2 mt-4 px-4 py-2 text-sm font-medium text-inherit bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg hover:border-zinc-400 dark:hover:border-zinc-500 hover:shadow-md transition-all duration-150"><svg class="inline-block" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path></svg>Back to Notes</a>
   </main>
   <footer class="footer container h-10 text-center mt-1">
     <hr class="my-4">

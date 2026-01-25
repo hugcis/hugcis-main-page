@@ -100,43 +100,45 @@
       </ol>
     </nav>
     <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-      <div class="bg-zinc-200 dark:bg-zinc-700 pb-2 pt-1 px-3 rounded-lg mb-4">
-        <h1 class="article-title p-name" itemprop="name">Memorizing Transformers by Wu, Y., Rabe, M. N., Hutchins, D., & Szegedy, C. (2022)</h1>
-        <div class="article-content e-content p-name" itemprop="articleBody">
-          <dl>
-            <dt>source</dt>
-            <dd>
-              (<a href="#wuMemorizingTransformers2022"><cite itemprop="citation" itemscope itemid="doi:10.48550/arXiv.2203.08913">Wu et al. 2022</cite></a>)
-            </dd>
-            <dt>tags</dt>
-            <dd>
-              <a href="/notes/transformers/">Transformers</a>, <a href="/notes/memory_in_neural_networks/">Memory in neural networks</a>
-            </dd>
-          </dl>
-          <h2 id="summary">Summary</h2>
-          <p>This paper introduces a method to extend the classical <a href="/notes/transformers/">Transformer</a> <a href="/notes/neural_networks/">neural network</a> model with an addressable memory that can be queried and updated at inference time.</p>
-          <p>This memory is addressed using an <a href="/notes/attention/">attention</a> mechanism. It is a set of cached attention (key, value) vector pairs. At some arbitrary depth of the attention “stack” the memory mechanism is inserted.</p>
-          <p>A query \(\bm{Q}\) is used both for the self-attention over the local context (the other tokens in the input) as well as the (key, value) pairs stored in the memory. We write \(\bm{K}_l\), \(\bm{V}_l\) the key value matrices of the local context. The local self-attention output (denoted \(\bm{V}_c\) in the paper) is computed as follows:</p>
-          <p>\[\bm{V}_l’ = \text{softmax}\left( \dfrac{\bm{Q}\bm{K}_l^{T}}{\sqrt{D}} \right) \bm{V}_l.\]</p>
-          <p>For each query (i.e. each input token position), a set of \(k\) keys is retrieved from memory. They correspond to the \(k\) nearest neighbor keys to the query.</p>
-          <p>Combining the memory with the query is done similarly to standard attention, except that each query has a different set of (key, value) pairs to attend to. With \(\bm{K}_m\) and \(\bm{V}_m\) the matrix of (key, values) retrieved from the memory for query \(\bm{q}_i\) we have: \[\bm{v}_{m, i} ’ = \text{softmax}\left(\dfrac{\bm{q}_i \bm{K}_m^{T}}{\sqrt{D}} \right) \bm{V}_m.\]</p>
-          <p>Then the final value matrix is computed by combining \(\bm{V}_l’\) and \(\bm{V}_{m}’\):</p>
-          <p>\[ \bm{V} = \bm{V}_m \odot g + \bm{V}_l \odot (1 - g) \]</p>
-          <p>with \(g = \sigma(b_g)\) is the sigmoid of a per-head scalar parameter that determines how much importance is given to the external memory.</p>
-          <h2 id="bibliography">Bibliography</h2>
-          <ol class="biblio-list pl-0">
-            <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="wuMemorizingTransformers2022" itemid="doi:10.48550/arXiv.2203.08913"><span itemprop="author">Yuhuai Wu, Markus N. Rabe, DeLesley Hutchins, Christian Szegedy</span>. <time datetime="2022" itemprop="datePublished">March 16, 2022</time>. "<span itemprop="name">Memorizing Transformers</span>". arXiv. <a itemprop="sameAs" href="https://doi.org/10.48550/arXiv.2203.08913">DOI</a>.</span></li>
-          </ol>
+      <div class="note-page bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg mb-6 overflow-hidden">
+        <div class="p-5 sm:p-6">
+          <h1 class="text-xl sm:text-2xl font-semibold mb-4 p-name text-zinc-900 dark:text-zinc-100" itemprop="name">Memorizing Transformers by Wu, Y., Rabe, M. N., Hutchins, D., & Szegedy, C. (2022)</h1>
+          <div class="article-content e-content p-name prose dark:prose-invert max-w-none" itemprop="articleBody">
+            <dl>
+              <dt>source</dt>
+              <dd>
+                (<a href="#wuMemorizingTransformers2022"><cite itemprop="citation" itemscope itemid="doi:10.48550/arXiv.2203.08913">Wu et al. 2022</cite></a>)
+              </dd>
+              <dt>tags</dt>
+              <dd>
+                <a href="/notes/transformers/">Transformers</a>, <a href="/notes/memory_in_neural_networks/">Memory in neural networks</a>
+              </dd>
+            </dl>
+            <h2 id="summary">Summary</h2>
+            <p>This paper introduces a method to extend the classical <a href="/notes/transformers/">Transformer</a> <a href="/notes/neural_networks/">neural network</a> model with an addressable memory that can be queried and updated at inference time.</p>
+            <p>This memory is addressed using an <a href="/notes/attention/">attention</a> mechanism. It is a set of cached attention (key, value) vector pairs. At some arbitrary depth of the attention “stack” the memory mechanism is inserted.</p>
+            <p>A query \(\bm{Q}\) is used both for the self-attention over the local context (the other tokens in the input) as well as the (key, value) pairs stored in the memory. We write \(\bm{K}_l\), \(\bm{V}_l\) the key value matrices of the local context. The local self-attention output (denoted \(\bm{V}_c\) in the paper) is computed as follows:</p>
+            <p>\[\bm{V}_l’ = \text{softmax}\left( \dfrac{\bm{Q}\bm{K}_l^{T}}{\sqrt{D}} \right) \bm{V}_l.\]</p>
+            <p>For each query (i.e. each input token position), a set of \(k\) keys is retrieved from memory. They correspond to the \(k\) nearest neighbor keys to the query.</p>
+            <p>Combining the memory with the query is done similarly to standard attention, except that each query has a different set of (key, value) pairs to attend to. With \(\bm{K}_m\) and \(\bm{V}_m\) the matrix of (key, values) retrieved from the memory for query \(\bm{q}_i\) we have: \[\bm{v}_{m, i} ’ = \text{softmax}\left(\dfrac{\bm{q}_i \bm{K}_m^{T}}{\sqrt{D}} \right) \bm{V}_m.\]</p>
+            <p>Then the final value matrix is computed by combining \(\bm{V}_l’\) and \(\bm{V}_{m}’\):</p>
+            <p>\[ \bm{V} = \bm{V}_m \odot g + \bm{V}_l \odot (1 - g) \]</p>
+            <p>with \(g = \sigma(b_g)\) is the sigmoid of a per-head scalar parameter that determines how much importance is given to the external memory.</p>
+            <h2 id="bibliography">Bibliography</h2>
+            <ol class="biblio-list pl-0">
+              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="wuMemorizingTransformers2022" itemid="doi:10.48550/arXiv.2203.08913"><span itemprop="author">Yuhuai Wu, Markus N. Rabe, DeLesley Hutchins, Christian Szegedy</span>. <time datetime="2022" itemprop="datePublished">March 16, 2022</time>. "<span itemprop="name">Memorizing Transformers</span>". arXiv. <a itemprop="sameAs" href="https://doi.org/10.48550/arXiv.2203.08913">DOI</a>.</span></li>
+            </ol>
+          </div>
         </div>
-        <div class="text-center" style="font-variant-caps:all-small-caps">
+        <div class="border-t border-zinc-200 dark:border-zinc-600 px-5 sm:px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400 text-center" style="font-variant-caps:all-small-caps">
           Last changed <a class="u-url" href="https://hugocisneros.com/notes/wumemorizingtransformers2022/"><time itemprop="datePublished" class="dt-published" datetime="2022-05-25T13:26:00+0200">2022.05.25</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>
     <h3>Comments</h3>
     <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
-    <section id="isso-thread"></section><br>
-    <a href="/notes#wumemorizingtransformers2022"><b>← Back to Notes</b></a>
+    <section id="isso-thread"></section><a href="/notes#wumemorizingtransformers2022" class="inline-flex items-center gap-2 mt-4 px-4 py-2 text-sm font-medium text-inherit bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg hover:border-zinc-400 dark:hover:border-zinc-500 hover:shadow-md transition-all duration-150"><svg class="inline-block" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path></svg>Back to Notes</a>
   </main>
   <footer class="footer container h-10 text-center mt-1">
     <hr class="my-4">
