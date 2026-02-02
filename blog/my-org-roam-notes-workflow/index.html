@@ -100,7 +100,7 @@
         <p>Some people expressed interest in my <a href="https://www.orgroam.com/">org roam</a> <a href="/notes/">notes</a> workflow. Setting this up has been an interesting project, teaching me about <a href="/notes/emacs">Emacs</a>, <a href="/notes/org_mode">org-mode</a> and a little about web frontend. This post will describe my current workflow in as much details as possible.</p>
         <p>Hopefully, you’ll learn to create an automated build script to publish your notes on the web and convert your org-roam note network into a graph like the one below.</p>
         <figure class="center" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-          <img itemprop="url" src="/img/note-graph.svg" alt="Note graph screenshot">
+          <img itemprop="url" src="/img/note-graph.svg" alt="Note graph screenshot" loading="lazy" decoding="async">
           <figcaption>
             <h4 itemprop="name">Note graph screenshot</h4>
           </figcaption>
@@ -154,7 +154,7 @@
         <h4 id="simple-html">Simple HTML</h4>
         <p>The simplest way is to use org’s embedded HTML export function (for example you can call <code>M-x org-html-export-to-html</code> when the note is open). For the note above, this will give you this simple HTML result:</p>
         <figure class="center" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-          <img itemprop="url" src="/img/note-html.png" alt="Note exported to plain HTML">
+          <img itemprop="url" src="/img/note-html.png" alt="Note exported to plain HTML" loading="lazy" decoding="async">
           <figcaption>
             <h4 itemprop="name">Note exported to plain HTML</h4>
           </figcaption>
@@ -345,9 +345,29 @@
         Last modified <span itemprop="dateModified" datetime="2021-08-05T10:40:00+0200" content="2021-08-05T10:40:00+0200">2021.08.05</span>
       </div>
     </article>
+    <section id="comments-container" class="comments-section" data-slug="/blog/my-org-roam-notes-workflow"></section>
     <h3>Comments</h3>
-    <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
-    <section id="isso-thread"></section>
+    <div id="comments-list" class="comments-list">
+      <p id="comments-loading" class="comments-loading">Loading comments...</p>
+    </div>
+    <p id="comments-error" class="comments-error" style="display:none"></p>
+    <form id="comment-form" class="comment-form" name="comment-form">
+      <h4>Leave a comment</h4>
+      <div class="form-group">
+        <label for="comment-name">Name <span class="required">*</span></label> <input type="text" id="comment-name" name="name" required="" maxlength="100" placeholder="Your name">
+      </div>
+      <div class="form-group">
+        <label for="comment-email">Email <span class="optional">(optional, not displayed)</span></label> <input type="email" id="comment-email" name="email" maxlength="254" placeholder="your@email.com">
+      </div>
+      <div class="form-group">
+        <label for="comment-content">Comment <span class="required">*</span></label> 
+        <textarea id="comment-content" name="content" required="" maxlength="10000" rows="4" placeholder="Write your comment..."></textarea>
+      </div>
+      <div id="turnstile-container" class="turnstile-container"></div><input type="hidden" id="turnstile-token" name="turnstile_token">
+      <p id="form-error" class="form-error" style="display:none"></p>
+      <p id="form-success" class="form-success" style="display:none"></p><button type="submit" class="comment-submit-btn">Post Comment</button>
+    </form>
+    <script src="/js/comments.js" defer></script>
   </main>
   <footer class="footer container h-10 text-center mt-1">
     <hr class="my-4">

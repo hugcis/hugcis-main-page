@@ -99,7 +99,7 @@
         <h2 id="a-search-problem">A search problem</h2>
         <p>One could argue that a lot of research in deep learning has been essentially based on finding new clever neural network architectures that could beat the previous state of the art on some dataset. I am not saying that this particular line of work has been more important than some other ideas researchers have come up with. Some of these enabled faster training, better performance or less expensive computations. However, neural network architecture changes — usually deeply thought through and rationalized changes like “let’s double the number of convolutional layers” — were at the root of many early successes of deep learning.</p>
         <figure class="center" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-          <img itemprop="url" src="/img/layers.svg" alt="Number of layers in some well known CNN architectures." width="500">
+          <img itemprop="url" src="/img/layers.svg" alt="Number of layers in some well known CNN architectures." width="500" loading="lazy" decoding="async">
           <figcaption>
             <h4 itemprop="name">Let's add even more layers! - Number of layers in some CNN architectures.</h4>
           </figcaption>
@@ -113,7 +113,7 @@
         <h3 id="challenges-of-nas">Challenges of NAS</h3>
         <p>Neural architecture search might sound like a reasonable and natural idea, but it is much more complex than it looks. To use optimization algorithms to solve it, it needs to be well defined and to have clear objectives.</p>
         <figure class="center" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-          <img itemprop="url" src="/img/nas_triad.svg" alt="The three main components of NAS are: the search space, the search strategy and the evaluation method" width="500">
+          <img itemprop="url" src="/img/nas_triad.svg" alt="The three main components of NAS are: the search space, the search strategy and the evaluation method" width="500" loading="lazy" decoding="async">
           <figcaption>
             <h4 itemprop="name">Three components of Neural Architecture Search</h4>
           </figcaption>
@@ -121,14 +121,14 @@
         <h4 id="the-search-space">The search space</h4>
         <p>While the problem can easily be framed as a search problem, it is not immediately clear what space we are searching in. This is a recurring issue in challenging search problems: it is hard to define the <em>granularity</em> at which we are searching. For instance with a simple neural network, should we allow any number of layers, neurons per layer, or activation functions? By restricting the space to a small set of building blocks we might make the search much quicker but at the cost of reducing the expressive power of the resulting networks.</p>
         <figure class="center" style="width:80%" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-          <img itemprop="url" src="/img/simple_search.svg" alt="A neural network diagram with 3 layers and activations." width="240">
+          <img itemprop="url" src="/img/simple_search.svg" alt="A neural network diagram with 3 layers and activations." width="240" loading="lazy" decoding="async">
           <figcaption>
             <h4 itemprop="name">A simple search among 2 possible activations for each layer. Fixed number of layers and units per layers. There are only 6 possible networks of this kind.</h4>
           </figcaption>
         </figure>
         <p>There are many different ways of specifying the search space. One can focus on few elements such as activation functions, or manipulate bigger components such as blocks.</p>
         <figure class="center" style="width:80%" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-          <img itemprop="url" src="/img/complex_search.svg" alt="A neural network diagram with 3 layers and activations." width="300">
+          <img itemprop="url" src="/img/complex_search.svg" alt="A neural network diagram with 3 layers and activations." width="300" loading="lazy" decoding="async">
           <figcaption>
             <h4 itemprop="name">Now we allow the number of layers and units per layers to change. The number of possible networks explodes!</h4>
           </figcaption>
@@ -185,9 +185,29 @@
         Last modified <span itemprop="dateModified" datetime="2020-01-14T09:17:29+0100" content="2020-01-14T09:17:29+0100">2020.01.14</span>
       </div>
     </article>
+    <section id="comments-container" class="comments-section" data-slug="/blog/neural-architecture-search"></section>
     <h3>Comments</h3>
-    <script data-isso="https://comment.hugocisneros.com/" data-isso-require-author="true" data-isso-vote="true" src="https://comment.hugocisneros.com/js/embed.min.js"></script>
-    <section id="isso-thread"></section>
+    <div id="comments-list" class="comments-list">
+      <p id="comments-loading" class="comments-loading">Loading comments...</p>
+    </div>
+    <p id="comments-error" class="comments-error" style="display:none"></p>
+    <form id="comment-form" class="comment-form" name="comment-form">
+      <h4>Leave a comment</h4>
+      <div class="form-group">
+        <label for="comment-name">Name <span class="required">*</span></label> <input type="text" id="comment-name" name="name" required="" maxlength="100" placeholder="Your name">
+      </div>
+      <div class="form-group">
+        <label for="comment-email">Email <span class="optional">(optional, not displayed)</span></label> <input type="email" id="comment-email" name="email" maxlength="254" placeholder="your@email.com">
+      </div>
+      <div class="form-group">
+        <label for="comment-content">Comment <span class="required">*</span></label> 
+        <textarea id="comment-content" name="content" required="" maxlength="10000" rows="4" placeholder="Write your comment..."></textarea>
+      </div>
+      <div id="turnstile-container" class="turnstile-container"></div><input type="hidden" id="turnstile-token" name="turnstile_token">
+      <p id="form-error" class="form-error" style="display:none"></p>
+      <p id="form-success" class="form-success" style="display:none"></p><button type="submit" class="comment-submit-btn">Post Comment</button>
+    </form>
+    <script src="/js/comments.js" defer></script>
   </main>
   <footer class="footer container h-10 text-center mt-1">
     <hr class="my-4">
