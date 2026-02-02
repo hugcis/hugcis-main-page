@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
+  <link rel="canonical" href="https://hugocisneros.com/blog/take-your-adblocker-to-go/">
+  <title>Take your Adblocker to go - Hugo Cisneros</title>
+  <meta property="og:title" content="Take your Adblocker to go - Hugo Cisneros">
+  <meta property="og:site_name" content="Hugo Cisneros">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2026-01-02T10:40:00+02:00">
+  <meta property="article:modified_time" content="2026-01-02T10:40:00+02:00">
+  <meta property="article:tag" content="Ads">
+  <meta property="article:tag" content="Web">
+  <meta property="article:tag" content="VPN">
+  <meta property="article:tag" content="Tailscale">
+  <meta property="article:author" content="Hugo Cisneros">
+  <meta property="og:image" content="https://hugocisneros.com/img/pi-tail-light.png">
+  <meta property="og:image:alt" content="Take your Adblocker to go">
+  <meta property="og:url" content="https://hugocisneros.com/blog/take-your-adblocker-to-go/">
+  <meta property="og:description" content="Set up a free, portable adblocker for all your devices using Pi-hole and Tailscale.">
+  <meta name="Description" property="description" content="Set up a free, portable adblocker for all your devices using Pi-hole and Tailscale.">
+  <link rel="me" href="https://twitter.com/@cisne_hug">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@cisne_hug">
+  <meta name="twitter:creator" content="@cisne_hug">
+  <meta name="twitter:title" content="Take your Adblocker to go">
+  <meta name="twitter:description" content="Set up a free, portable adblocker for all your devices using Pi-hole and Tailscale.">
+  <meta name="twitter:image" content="https://hugocisneros.com/img/pi-tail-light.png">
+  <link rel="me" href="https://scholar.social/@hugcis">
+  <link rel="me" href="https://github.com/hugcis">
+  <meta name="keywords" content="ads,web,vpn,tailscale">
+  <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
+  <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
+  <link rel="stylesheet" href="https://hugocisneros.com/css/style.min.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link href="https://hugocisneros.com/index.xml" type="application/atom+xml" rel="alternate" title="Sitewide Atom feed">
+  <meta name="theme-color" content="#f5f5f5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#27272a" media="(prefers-color-scheme: dark)">
+  <script>
+  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/blog\/take-your-adblocker-to-go\/"},"headline":"Take your Adblocker to go","description":"Set up a free, portable adblocker for all your devices using Pi-hole and Tailscale.","datePublished":"2026-01-02T10:40:00\u002b02:00","dateModified":"2026-01-02T10:40:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":623,"keywords":["Ads","Web","VPN","Tailscale"],"image":"\/img\/pi-tail-light.png"}
+  </script>
+</head>
+<body>
+  <header class="md:px-0 px-2">
+    <nav>
+      <div class="container flex flex-wrap justify-between items-center mx-auto">
+        <div class="nav-main my-2.5">
+          <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
+        </div><button type="button" onclick="toggleMenu()" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul class="grid md:grid-flow-col items-center justify-between text-lg my-2.5 grid-cols-1 pl-0 text-center">
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0 transition-colors duration-150" href="/blog/">Blog</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0 transition-colors duration-150" href="/notes/">Notes</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0 transition-colors duration-150" href="/projects/">Projects</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0 transition-colors duration-150" href="/resume/">Resume</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0 transition-colors duration-150" href="/contact/">Contact</a>
+            </li>
+            <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full" aria-label="Toggle between dark and light mode"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="ligh-mode-button-img" alt="A sun icon for switching to light mode" src="https://hugocisneros.com/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" alt="A moon icon for switching to dark mode" src="https://hugocisneros.com/img/dark_mode.svg"></button></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="content h-card container mt-2 m-auto leading-loose md:px-0 px-2 z-0" role="main">
+    <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+      <div class="title-container">
+        <h1 class="article-title p-name" itemprop="name">Take your Adblocker to go</h1><b><i itemprop="headline" class="article-headline text-lg p-summary">Ads are harder to block on a phone. Here's a simple setup that works everywhere.</i></b>
+        <div class="flex justify-between items-center">
+          <a class="text-lg text-gray-600 dark:text-gray-400 border-none u-url" href="https://hugocisneros.com/blog/take-your-adblocker-to-go/"><time itemprop="datePublished" class="dt-published" datetime="2026-01-02T10:40:00+0200" content="2026-01-02T10:40:00+0200">2026.01.02</time></a> <a class="text-gray-600 dark:text-gray-400 text-right border-none p-author h-card" rel="author" href="https://hugocisneros.com/" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+        </div>
+      </div>
+      <div class="article-content e-content" itemprop="articleBody">
+        <figure itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+          <img src="/img/pi-tail-light.png" alt="Cartoon spy in trench coat and sunglasses running with a briefcase bearing Pi-hole and Tailscale logos" class="block dark:hidden"> <img src="/img/pi-tail-dark.png" alt="Cartoon spy in trench coat and sunglasses running with a briefcase bearing Pi-hole and Tailscale logos" class="hidden dark:block">
+        </figure>
+        <p>If you’re like me, you have a deep distaste for the ads, trackers, and popups plaguing every website and app you use.</p>
+        <p>Browser adblockers help on your laptop. But what about your phone? Your tablet? Your family’s devices?</p>
+        <p>In this post, I’ll show you how to set up a free, self-hosted VPN and adblocker that works on all your devices, at home and on the go. You can even share it with friends and family.</p>
+        <p>You’ll need:</p>
+        <ul>
+          <li>A Raspberry Pi or home server (something that stays up) connected to the internet</li>
+          <li>One or more devices (phone, laptop, tablet) to block ads on</li>
+        </ul>
+        <h2 id="step-1-setting-up-a-pi-hole-on-your-raspberry-pi-or-server">Step 1: Setting up a Pi-hole on your Raspberry Pi (or server)</h2>
+        <p><a href="https://pi-hole.net/">Pi-hole</a> is a lightweight, fast, and actively maintained project for DNS-based Ad Blocking.</p>
+        <p>It is supported by a good set of operating systems, and can be easily installed and setup to block ads for your network.</p>
+        <p>Installing Pi-hole is as simple as running:</p>
+        <div class="highlight">
+          <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="display:flex"><span>curl -sSL https://install.pi-hole.net | bash
+</span></span></code></pre>
+        </div>
+        <h3 id="configure-network">Configure network</h3>
+        <p>After installing Pi-hole, you can start using it right away by setting your Pi’s IP address as your device’s DNS resolver.</p>
+        <p>If you want to make it work on your whole network, even for new devices, you should follow the <a href="https://docs.pi-hole.net/main/post-install/">Pi-hole post-install instructions</a>. It will explain how to configure your router to use the Pi as a local DNS resolver. I recommend using the Pi as the primary resolver, and other DNS as fallbacks in case your primary fails. For extra privacy and control, you can <a href="https://docs.pi-hole.net/guides/dns/unbound/#pi-hole-as-all-around-dns-solution">configure the Pi-hole to do the DNS resolution itself</a>, using unbound, to not rely on third party DNS resolvers.</p>
+        <h3 id="customizing-blocklists">Customizing blocklists</h3>
+        <p>From the admin interface at <code>http://pi.hole/admin/login</code>, you can add and update Gravity lists (blocklists). For an exhaustive blocklist reference, see the <a href="https://github.com/hagezi/dns-blocklists">dns-blocklists GitHub repo</a>.</p>
+        <p>I only use these two (<a href="https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.txt">list 1</a>, <a href="https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts">list 2</a>), but this is enough to block about 30% of my traffic!</p>
+        <figure itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+          <img itemprop="url" src="/img/pi-admin.jpg" alt="Pi-hole admin interface showing the Subscribed lists page with two enabled blocklists: StevenBlack hosts and hagezi dns-blocklists pro" loading="lazy" decoding="async">
+          <figcaption>
+            <p>Pi-hole admin interface with custom blocklists enabled</p>
+          </figcaption>
+        </figure>
+        <h2 id="step-2-installing-tailscale">Step 2: Installing Tailscale</h2>
+        <p>The <a href="https://tailscale.com/download/linux/rpi-bullseye">Tailscale installation doc</a> has a very simple and detailed installation process. You first need to create an account, and install Tailscale on both the machine with the fresh Pi-hole install, and any device you want to use it with.</p>
+        <h3 id="make-sure-tailscale-starts-on-boot">Make sure Tailscale starts on boot</h3>
+        <p>Although Tailscale should be able to take care of this itself, you can easily ensure that it will always start when you boot your Pi by running:</p>
+        <div class="highlight">
+          <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="display:flex"><span>sudo systemctl <span style="color:#b58900">enable</span> tailscale.service
+</span></span></code></pre>
+        </div>
+        <h3 id="setup-the-pi-as-your-global-dns-nameserver">Setup the Pi as your global DNS nameserver</h3>
+        <p>Now that your Tailscale network is up, you can select a nameserver to serve as your network’s DNS resolver.</p>
+        <figure itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+          <img itemprop="url" src="/img/tailscale-setup.jpg" alt="Tailscale admin console DNS settings page showing the Nameservers section with a global nameserver configured to the Pi-hole IP address and Override DNS servers toggle enabled" loading="lazy" decoding="async">
+          <figcaption>
+            <p>Tailscale DNS settings with Pi-hole configured as the global nameserver</p>
+          </figcaption>
+        </figure>
+        <h3 id="using-tailscale-on-your-phone">Using Tailscale on your phone</h3>
+        <p>Tailscale has apps for <a href="https://apps.apple.com/app/tailscale/id1470499037">iOS</a> and <a href="https://play.google.com/store/apps/details?id=com.tailscale.ipn">Android</a>. Once installed, you can add a shortcut to your Control Center (iOS) or Quick Settings (Android) to toggle it with a single tap.</p>
+        <figure itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+          <img itemprop="url" src="/img/iphone-shortcut.jpg" alt="iPhone Control Center showing the Tailscale shortcut icon among other quick toggles" loading="lazy" decoding="async">
+          <figcaption>
+            <p>Tailscale shortcut in iOS Control Center for quick access</p>
+          </figcaption>
+        </figure>
+        <h3 id="optional-use-a-device-as-exit-node">(Optional) Use a device as exit node</h3>
+        <p>An added bonus of a Tailscale network is that you can use the Raspberry Pi as an <a href="https://tailscale.com/kb/1103/exit-nodes">exit node</a>, making it possible to route all traffic as if it was originating from it. This is useful when you travel abroad and want to access geofenced content, or if you are on an untrusted network.</p>
+        <p>You’ll have to make sure that you enable IP forwarding on the Pi, which is explained in details in <a href="https://tailscale.com/kb/1103/exit-nodes?tab=linux#advertise-a-device-as-an-exit-node">the Tailscale doc</a>. Then you just need to run</p>
+        <div class="highlight">
+          <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="display:flex"><span>sudo tailscale <span style="color:#b58900">set</span> --advertise-exit-node
+</span></span><span style="display:flex"><span>sudo tailscale up
+</span></span></code></pre>
+        </div>
+        <h2 id="the-complete-setup">The complete setup</h2>
+        <figure itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+          <img itemprop="url" src="/img/tailnet.png" alt="Diagram of a Tailscale network with a central Raspberry Pi running Pi-hole, showing active and inactive devices connected to the tailnet, with arrows indicating DNS resolution through the Pi and external traffic routing for the exit node scenario" loading="lazy" decoding="async">
+          <figcaption>
+            <p>Overview of the tailnet architecture with Pi-hole DNS and exit node</p>
+          </figcaption>
+        </figure>
+        <p>That’s it. You now have a portable VPN and adblocker that follows you everywhere: no subscriptions, no third-party services logging your traffic, and full control over what gets blocked.</p>
+      </div>
+      <ul class="list-none pl-0 font-sm align-left">
+        <li class="list-none">Tags: <a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200" href="/tags/ads"><span class="flex flex-row justify-start items-center dark:bg-zinc-900 dark:hover:bg-zinc-700 hover:bg-zinc-300 bg-zinc-200 dark:border-zinc-600 py-0.5 px-1 rounded-t border-b-2 border-zinc-300 hover:border-zinc-500"><img class="h-4 mr-2 inline" src="https://hugocisneros.com/images/tag_logo.svg" alt="Logo of a tag: indicates that a tag item follows."> Ads</span></a> <a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200" href="/tags/web"><span class="flex flex-row justify-start items-center dark:bg-zinc-900 dark:hover:bg-zinc-700 hover:bg-zinc-300 bg-zinc-200 dark:border-zinc-600 py-0.5 px-1 rounded-t border-b-2 border-zinc-300 hover:border-zinc-500"><img class="h-4 mr-2 inline" src="https://hugocisneros.com/images/tag_logo.svg" alt="Logo of a tag: indicates that a tag item follows."> Web</span></a> <a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200" href="/tags/vpn"><span class="flex flex-row justify-start items-center dark:bg-zinc-900 dark:hover:bg-zinc-700 hover:bg-zinc-300 bg-zinc-200 dark:border-zinc-600 py-0.5 px-1 rounded-t border-b-2 border-zinc-300 hover:border-zinc-500"><img class="h-4 mr-2 inline" src="https://hugocisneros.com/images/tag_logo.svg" alt="Logo of a tag: indicates that a tag item follows."> VPN</span></a> <a class="inline-block mt-2 mr-2 border-none text-neutral-800 dark:text-neutral-200" href="/tags/tailscale"><span class="flex flex-row justify-start items-center dark:bg-zinc-900 dark:hover:bg-zinc-700 hover:bg-zinc-300 bg-zinc-200 dark:border-zinc-600 py-0.5 px-1 rounded-t border-b-2 border-zinc-300 hover:border-zinc-500"><img class="h-4 mr-2 inline" src="https://hugocisneros.com/images/tag_logo.svg" alt="Logo of a tag: indicates that a tag item follows."> Tailscale</span></a>
+        </li>
+      </ul>
+      <div class="text-neutral-500 mb-4">
+        Last modified <span itemprop="dateModified" datetime="2026-01-02T10:40:00+0200" content="2026-01-02T10:40:00+0200">2026.01.02</span>
+      </div>
+    </article>
+    <section id="comments-container" class="comments-section" data-slug="/blog/take-your-adblocker-to-go"></section>
+    <h3>Comments</h3>
+    <div id="comments-list" class="comments-list">
+      <p id="comments-loading" class="comments-loading">Loading comments...</p>
+    </div>
+    <p id="comments-error" class="comments-error" style="display:none"></p>
+    <form id="comment-form" class="comment-form" name="comment-form">
+      <h4>Leave a comment</h4>
+      <div class="form-group">
+        <label for="comment-name">Name <span class="required">*</span></label> <input type="text" id="comment-name" name="name" required="" maxlength="100" placeholder="Your name">
+      </div>
+      <div class="form-group">
+        <label for="comment-email">Email <span class="optional">(optional, not displayed)</span></label> <input type="email" id="comment-email" name="email" maxlength="254" placeholder="your@email.com">
+      </div>
+      <div class="form-group">
+        <label for="comment-content">Comment <span class="required">*</span></label> 
+        <textarea id="comment-content" name="content" required="" maxlength="10000" rows="4" placeholder="Write your comment..."></textarea>
+      </div>
+      <div id="turnstile-container" class="turnstile-container"></div><input type="hidden" id="turnstile-token" name="turnstile_token">
+      <p id="form-error" class="form-error" style="display:none"></p>
+      <p id="form-success" class="form-success" style="display:none"></p><button type="submit" class="comment-submit-btn">Post Comment</button>
+    </form>
+    <script src="/js/comments.js" defer></script>
+  </main>
+  <footer class="footer container h-10 text-center mt-1">
+    <hr class="my-4">
+    <ul class="pl-0 mt-1">
+      <li class="first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="https://hugocisneros.com/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="https://hugocisneros.com/img/RSS.svg" alt="RSS feed icon"></a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="ml-2 text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block list-none"><span class="ml-2">© Hugo Cisneros 2026</span></li>
+    </ul>
+  </footer>
+  <script data-goatcounter="https://stats.hugocisneros.com/count" async src="//stats.hugocisneros.com/count.js"></script>
+</body>
+</html>
