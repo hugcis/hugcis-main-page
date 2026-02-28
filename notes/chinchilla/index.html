@@ -35,6 +35,9 @@
   <meta name="keywords" content="transformers,gpt,nlp">
   <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
   <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Source+Sans+3:ital,wght@0,300..900;1,300..900&amp;display=swap">
   <link rel="stylesheet" href="https://hugocisneros.com/css/style.min.css">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -56,27 +59,37 @@
     <nav>
       <div class="container flex flex-wrap justify-between items-center mx-auto">
         <div class="nav-main my-2.5">
-          <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300 hover:border-b-0">Hugo Cisneros</a>
+          <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl font-serif text-zinc-600 dark:text-zinc-300 no-underline-anim">Hugo Cisneros</a>
         </div><button type="button" onclick="toggleMenu()" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
         <div class="hidden w-full md:block md:w-auto" id="navbar-default">
           <ul class="grid md:grid-flow-col items-center justify-between text-lg my-2.5 grid-cols-1 pl-0 text-center">
             <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
-              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0 transition-colors duration-150" href="/blog/">Blog</a>
+              <a class="text-zinc-600 dark:text-zinc-300 no-underline-anim transition-colors duration-150" href="/blog/">Blog</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none border-b-2 border-accent">
+              <a class="text-zinc-600 dark:text-zinc-300 no-underline-anim transition-colors duration-150 text-accent dark:text-accent-light font-medium" href="/notes/">Notes</a>
             </li>
             <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
-              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0 transition-colors duration-150" href="/notes/">Notes</a>
+              <a class="text-zinc-600 dark:text-zinc-300 no-underline-anim transition-colors duration-150" href="/projects/">Projects</a>
             </li>
             <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
-              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0 transition-colors duration-150" href="/projects/">Projects</a>
+              <a class="text-zinc-600 dark:text-zinc-300 no-underline-anim transition-colors duration-150" href="/resume/">Resume</a>
             </li>
             <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
-              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0 transition-colors duration-150" href="/resume/">Resume</a>
+              <a class="text-zinc-600 dark:text-zinc-300 no-underline-anim transition-colors duration-150" href="/contact/">Contact</a>
             </li>
-            <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
-              <a class="text-zinc-600 dark:text-zinc-300 hover:border-b-0 transition-colors duration-150" href="/contact/">Contact</a>
-            </li>
-            <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full" aria-label="Toggle between dark and light mode"><img class="h-7 w-7 max-h-full mb-1.5 p-1.5 hidden dark:inline" id="ligh-mode-button-img" alt="A sun icon for switching to light mode" src="https://hugocisneros.com/img/light_mode.svg"> <img class="h-7 w-7 max-h-full mb-1.5 p-1.5 inline dark:hidden" id="dark-mode-button-img" alt="A moon icon for switching to dark mode" src="https://hugocisneros.com/img/dark_mode.svg"></button></li>
+            <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full" aria-label="Toggle between dark and light mode"><svg class="h-5 w-5 hidden dark:inline text-zinc-300 hover:text-accent-light transition-colors" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg><svg class="h-5 w-5 inline dark:hidden text-zinc-500 hover:text-accent transition-colors" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path></svg></button></li>
           </ul>
         </div>
       </div>
@@ -168,14 +181,20 @@
     <script src="/js/comments.js" defer></script> <a href="/notes#chinchilla" class="inline-flex items-center gap-2 mt-4 px-4 py-2 text-sm font-medium text-inherit bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg hover:border-zinc-400 dark:hover:border-zinc-500 hover:shadow-md transition-all duration-150"><svg class="inline-block" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2">
     <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path></svg>Back to Notes</a>
   </main>
-  <footer class="footer container h-10 text-center mt-1">
+  <footer class="footer container text-center mt-1 py-6">
     <hr class="my-4">
+    <div class="flex items-center justify-center gap-4 mb-3">
+      <a href="https://github.com/hugcis" class="text-zinc-500 dark:text-zinc-400 hover:text-accent dark:hover:text-accent-light no-underline-anim" aria-label="GitHub" title="GitHub"><svg class="w-5 h-5" viewbox="0 0 24 24" fill="currentcolor">
+      <path d="M12 0C5.37.0.0 5.37.0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57.0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925.0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18.0.0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225.0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22.0 1.605-.015 2.895-.015 3.3.0.315.225.69.825.57A12.02 12.02.0 0024 12c0-6.63-5.37-12-12-12z"></path></svg></a><a href="https://scholar.google.com/citations?user=_uSIl-0AAAAJ&amp;hl=en" class="text-zinc-500 dark:text-zinc-400 hover:text-accent dark:hover:text-accent-light no-underline-anim" aria-label="Google Scholar" title="Google Scholar"><svg class="w-5 h-5" viewbox="0 0 24 24" fill="currentcolor">
+      <path d="M5.242 13.769.0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977.0-5.548 1.748-6.758 4.269zM12 10a7 7 0 100 14 7 7 0 000-14z"></path></svg></a><a href="https://scholar.social/@hugcis" rel="me" class="text-zinc-500 dark:text-zinc-400 hover:text-accent dark:hover:text-accent-light no-underline-anim" aria-label="Mastodon" title="Mastodon"><svg class="w-5 h-5" viewbox="0 0 24 24" fill="currentcolor">
+      <path d="M23.268 5.313c-.35-2.578-2.617-4.61-5.304-5.004C17.51.242 15.792.0 11.813.0h-.03c-3.98.0-4.835.242-5.288.309C3.882.692 1.496 2.518.917 5.127.64 6.412.61 7.837.661 9.143c.074 1.874.088 3.745.26 5.611.118 1.24.325 2.47.62 3.68.55 2.237 2.777 4.098 4.96 4.857 2.336.792 4.849.923 7.256.38.265-.061.527-.132.786-.213.585-.184 1.27-.39 1.774-.753a.057.057.0 00.023-.043v-1.809a.052.052.0 00-.02-.041.053.053.0 00-.046-.01 20.282 20.282.0 01-4.709.545c-2.73.0-3.463-1.284-3.674-1.818a5.593 5.593.0 01-.319-1.433.053.053.0 01.066-.054 19.648 19.648.0 004.581.536c.394.0.787.0 1.183-.014 2.136-.064 4.411-.132 6.426-.78a.077.077.0 00.055-.032c.803-1.267 1.074-3.06 1.08-4.634a18.22 18.22.0 00-.021-.57zM19.5 9.412v5.493h-2.178V9.607c0-1.148-.466-1.735-1.443-1.735-1.065.0-1.596.691-1.596 2.06v2.922H12.12V9.932c0-1.37-.532-2.06-1.597-2.06-.977.0-1.443.587-1.443 1.735v5.298H6.9V9.412c0-1.147.29-2.06.876-2.736.603-.676 1.392-1.022 2.375-1.022 1.137.0 1.997.432 2.567 1.297L12 8.078l1.282-1.127c.57-.865 1.431-1.297 2.567-1.297.983.0 1.773.346 2.375 1.022.585.676.876 1.589.876 2.736z"></path></svg></a>
+    </div>
     <ul class="pl-0 mt-1">
       <li class="first:before:content-none before:content-['•'] inline-block list-none">
-        <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 border-none" href="https://hugocisneros.com/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="https://hugocisneros.com/img/RSS.svg" alt="RSS feed icon"></a>
+        <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 no-underline-anim" href="https://hugocisneros.com/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="https://hugocisneros.com/img/RSS.svg" alt="RSS feed icon" width="16" height="16"></a>
       </li>
       <li class="ml-2 first:before:content-none before:content-['•'] inline-block list-none">
-        <a class="ml-2 text-neutral-800 dark:text-neutral-400 border-none" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
+        <a class="ml-2 text-neutral-800 dark:text-neutral-400 no-underline-anim" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
       </li>
       <li class="ml-2 first:before:content-none before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block list-none"><span class="ml-2">© Hugo Cisneros 2026</span></li>
     </ul>
