@@ -26,7 +26,7 @@
   <meta name="twitter:site" content="@cisne_hug">
   <meta name="twitter:creator" content="@cisne_hug">
   <meta name="twitter:title" content="Notes on: Curiosity-Driven Exploration by Self-Supervised Prediction by Pathak, D., Agrawal, P., Efros, A. A., &amp; Darrell, T. (2017)">
-  <meta name="twitter:description" content="tags Reinforcement learning source (Pathak et al. 2017) Summary This paper presents a curiosity-based method for training RL agents. These agents are given a reward \(r_t\) which is the sum of an …">
+  <meta name="twitter:description" content="tags Reinforcement learning source (Pathak et al. 2017) DONE Summary This paper presents a curiosity-based method for training RL agents. These agents are given a reward \(r_t\) which is the sum of an …">
   <meta name="twitter:image" content="https://hugocisneros.com/img/main.jpeg">
   <link rel="me" href="https://scholar.social/@hugcis">
   <link rel="me" href="https://github.com/hugcis">
@@ -51,7 +51,7 @@
   function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/pathakcuriositydrivenexplorationselfsupervised2017\/"},"headline":"Notes on: Curiosity-Driven Exploration by Self-Supervised Prediction by Pathak, D., Agrawal, P., Efros, A. A., …","description":"tags Reinforcement learning source (Pathak et al. 2017) Summary This paper presents a curiosity-based method for training RL agents. These agents are given a …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2021-03-25T09:57:00\u002b01:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":616,"keywords":["Reinforcement learning"]}
+  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/pathakcuriositydrivenexplorationselfsupervised2017\/"},"headline":"Notes on: Curiosity-Driven Exploration by Self-Supervised Prediction by Pathak, D., Agrawal, P., Efros, A. A., …","description":"tags Reinforcement learning source (Pathak et al. 2017) DONE Summary This paper presents a curiosity-based method for training RL agents. These agents are given …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2021-03-25T09:57:00\u002b01:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":600,"keywords":["Reinforcement learning"]}
   </script>
 </head>
 <body>
@@ -128,7 +128,7 @@
                 (<a href="#pathakCuriosityDrivenExplorationSelfSupervised2017"><cite itemprop="citation" itemscope itemid="doi:10.1109/CVPRW.2017.70">Pathak et al. 2017</cite></a>)
               </dd>
             </dl>
-            <h2 id="summary">Summary</h2>
+            <h2 id="summary"><span class="org-todo done DONE">DONE</span> Summary</h2>
             <p>This paper presents a curiosity-based method for training <a href="/notes/reinforcement_learning/">RL</a> agents. These agents are given a reward \(r_t\) which is the sum of an intrinsic and an extrinsic rewards. The latter is mostly (if not always) 0, while the former is constructed progressively during exploration by an Intrisic Curiosity Module (ICM).</p>
             <p>The module is illustrated below (figure from the paper).</p>
             <figure>
@@ -143,7 +143,7 @@
             </ul>
             <p>The intrinsic reward is the scaled squared difference between estimated \(\hat{\phi}(s_{t + 1})\) and \(\phi(s_{t + 1})\). This setup rewards exploration because large errors in the prediction of the next state’s feature encoding will lead to more exploration of that region of the environment. Moreover, parts of the environment that are completely unpredictable and unaffected by the actions will have no incentive in being encoded by the ICM. The model should therefore “distill” the current state to only its essential parts.</p>
             <p>Results are impressive, especially in the sparse and very sparse reward settings (see paper for details) where the model still learn significantly better policies than other methods in terms of extrinsic reward.</p>
-            <h2 id="comments">Comments</h2>
+            <h2 id="comments"><span class="org-todo done DONE">DONE</span> Comments</h2>
             <p>Comment on generalization in RL from the paper:</p>
             <blockquote>
               <p>It is common practice to evaluate reinforcement learning approaches in the same environment that was used for training. However, we feel that it is also important to evaluate on a separate “testing set” as well. This allows us to gauge how much of what has been learned is specific to the training environment (i.e. memorized), and how much might constitute “generalizable skills” that could be applied to new settings.</p>
@@ -156,7 +156,7 @@
             </blockquote>
             <h2 id="bibliography">Bibliography</h2>
             <ol class="biblio-list pl-0">
-              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="pathakCuriosityDrivenExplorationSelfSupervised2017" itemid="doi:10.1109/CVPRW.2017.70"><span itemprop="author">Deepak Pathak, Pulkit Agrawal, Alexei A. Efros, Trevor Darrell</span>. <time datetime="2017" itemprop="datePublished">July 2017</time>. "<span itemprop="name">Curiosity-driven Exploration by Self-supervised Prediction</span>". In <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">2017 IEEE Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)</i></span>, 488–89. Honolulu, HI, USA: IEEE. <a itemprop="sameAs" href="https://doi.org/10.1109/CVPRW.2017.70">DOI</a>.</span></li>
+              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="pathakCuriosityDrivenExplorationSelfSupervised2017" itemid="doi:10.1109/CVPRW.2017.70"><span itemprop="author">Deepak Pathak, Pulkit Agrawal, Alexei A. Efros, Trevor Darrell</span>. <time datetime="2017" itemprop="datePublished">July 2017</time>. In , 488–89. IEEE. <a itemprop="sameAs" href="https://doi.org/10.1109/CVPRW.2017.70">DOI</a>.</span></li>
             </ol>
           </div>
         </div>

@@ -26,7 +26,7 @@
   <meta name="twitter:site" content="@cisne_hug">
   <meta name="twitter:creator" content="@cisne_hug">
   <meta name="twitter:title" content="Notes on: Scaling down Deep Learning by Greydanus, S. (2020)">
-  <meta name="twitter:description" content="tags Neural networks source (Greydanus 2020) Summary This paper introduces a minimalist 1D version of the MNIST dataset for studying some basic properties of neural networks. The authors simplify the …">
+  <meta name="twitter:description" content="tags Neural networks source (Greydanus 2020) DONE Summary This paper introduces a minimalist 1D version of the MNIST dataset for studying some basic properties of neural networks. The authors simplify …">
   <meta name="twitter:image" content="https://hugocisneros.com/img/main.jpeg">
   <link rel="me" href="https://scholar.social/@hugcis">
   <link rel="me" href="https://github.com/hugcis">
@@ -51,7 +51,7 @@
   function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/greydanusscalingdeeplearning2020\/"},"headline":"Notes on: Scaling down Deep Learning by Greydanus, S. (2020)","description":"tags Neural networks source (Greydanus 2020) Summary This paper introduces a minimalist 1D version of the MNIST dataset for studying some basic properties of …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2022-08-04T14:03:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":204,"keywords":["Neural networks"]}
+  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/greydanusscalingdeeplearning2020\/"},"headline":"Notes on: Scaling down Deep Learning by Greydanus, S. (2020)","description":"tags Neural networks source (Greydanus 2020) DONE Summary This paper introduces a minimalist 1D version of the MNIST dataset for studying some basic properties …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2022-08-04T14:03:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":199,"keywords":["Neural networks"]}
   </script>
 </head>
 <body>
@@ -128,7 +128,7 @@
                 (<a href="#greydanusScalingDeepLearning2020"><cite itemprop="citation" itemscope itemid="key:greydanusScalingDeepLearning2020">Greydanus 2020</cite></a>)
               </dd>
             </dl>
-            <h2 id="summary">Summary</h2>
+            <h2 id="summary"><span class="org-todo done DONE">DONE</span> Summary</h2>
             <p>This paper introduces a minimalist 1D version of the MNIST dataset for studying some basic properties of neural networks. The authors simplify the MNIST dataset by assigning a 1D glyph to each digit. These glyphs are padded, translated, sheared and blurred to build a dataset of multiple different objects.</p>
             <p>The figure from the paper shown below illustrates this dataset’s construction:</p>
             <figure>
@@ -149,11 +149,11 @@
               <li>The use of strong spatial priors such as translation invariance</li>
               <li>Pooling methods</li>
             </ul>
-            <h2 id="comments">Comments</h2>
+            <h2 id="comments"><span class="org-todo done DONE">DONE</span> Comments</h2>
             <p>This is an interesting paper, which for once isn’t about getting bigger models or better results than the state of the art. The small MNIST dataset may lead to interesting insights into the functioning of neural networks but I’m not sure that will be enough for solving the big questions about deep learning. The secrets of those huge recent models might elude us for a while simply because we don’t have the resources (mathematical or computational) to study them.</p>
             <h2 id="bibliography">Bibliography</h2>
             <ol class="biblio-list pl-0">
-              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="greydanusScalingDeepLearning2020"><span itemprop="author">Sam Greydanus</span>. <time datetime="2020" itemprop="datePublished">November 29, 2020</time>. "<span itemprop="name">Scaling *down* Deep Learning</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:2011.14439 [cs, Stat]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2011.14439">http://arxiv.org/abs/2011.14439</a>.</span></li>
+              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="greydanusScalingDeepLearning2020"><span itemprop="author">Sam Greydanus</span>. <time datetime="2020" itemprop="datePublished">November 29, 2020</time>. <a itemprop="sameAs" href="http://arxiv.org/abs/2011.14439">http://arxiv.org/abs/2011.14439</a>.</span></li>
             </ol>
           </div>
         </div>

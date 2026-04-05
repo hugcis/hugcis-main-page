@@ -28,7 +28,7 @@
   <meta name="twitter:site" content="@cisne_hug">
   <meta name="twitter:creator" content="@cisne_hug">
   <meta name="twitter:title" content="Notes on: One model for the learning of language by Yang, Y., &amp; Piantadosi, S. T. (2022)">
-  <meta name="twitter:description" content="source (Yang, Piantadosi 2022) tags NLP, Artificial Intelligence, Machine learning Summary This paper introduces a model for learning language from few examples while generalizing effectively. This …">
+  <meta name="twitter:description" content="source (Yang, Piantadosi 2022) tags NLP, Artificial Intelligence, Machine learning DONE Summary This paper introduces a model for learning language from few examples while generalizing effectively. …">
   <meta name="twitter:image" content="https://hugocisneros.com/img/main.jpeg">
   <link rel="me" href="https://scholar.social/@hugcis">
   <link rel="me" href="https://github.com/hugcis">
@@ -53,7 +53,7 @@
   function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/yangonemodellearning2022\/"},"headline":"Notes on: One model for the learning of language by Yang, Y., \u0026amp; Piantadosi, S. T. (2022)","description":"source (Yang, Piantadosi 2022) tags NLP, Artificial Intelligence, Machine learning Summary This paper introduces a model for learning language from few examples …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2022-01-31T13:55:00\u002b01:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":310,"keywords":["NLP","Artificial Intelligence","Machine learning"]}
+  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/yangonemodellearning2022\/"},"headline":"Notes on: One model for the learning of language by Yang, Y., \u0026amp; Piantadosi, S. T. (2022)","description":"source (Yang, Piantadosi 2022) tags NLP, Artificial Intelligence, Machine learning DONE Summary This paper introduces a model for learning language from few …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2022-01-31T13:55:00\u002b01:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":312,"keywords":["NLP","Artificial Intelligence","Machine learning"]}
   </script>
 </head>
 <body>
@@ -130,7 +130,7 @@
                 <a href="/notes/nlp/">NLP</a>, <a href="/notes/artificial_intelligence/">Artificial Intelligence</a>, <a href="/notes/machine_learning/">Machine learning</a>
               </dd>
             </dl>
-            <h2 id="summary">Summary</h2>
+            <h2 id="summary"><span class="org-todo done DONE">DONE</span> Summary</h2>
             <p>This paper introduces a model for learning language from few examples while generalizing effectively.</p>
             <p>This model builds sentences with function that are combinations of elementary functions, including:</p>
             <ul>
@@ -149,7 +149,7 @@
               <li>Hypotheses can be constructed from multiple other sub-hypotheses.</li>
               <li>For non-deterministic expressions, multiple execution path are considered simultaneously.</li>
             </ul>
-            <h2 id="comments">Comments</h2>
+            <h2 id="comments"><span class="org-todo done DONE">DONE</span> Comments</h2>
             <p>It is hard to tell how scalable the method is. Also relatively few details are given about the inference and how it is performed.</p>
             <p>I think it is very cool to see “constructive” models of language that can “compute” the language instead of simply predicting the next token statistically. It also feels like this has a much better potential to be a data efficient language model.</p>
             <h2 id="bibliography">Bibliography</h2>

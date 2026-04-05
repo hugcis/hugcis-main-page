@@ -27,7 +27,7 @@
   <meta name="twitter:site" content="@cisne_hug">
   <meta name="twitter:creator" content="@cisne_hug">
   <meta name="twitter:title" content="Notes on: Generalization over different cellular automata rules learned by a deep feed-forward neural network by Aach, M., Goebbert, J. H., &amp; Jitsev, J. (2021)">
-  <meta name="twitter:description" content="source (Aach et al. 2021) tags Cellular automata, Neural networks Summary This paper studies the generalization abilities of neural networks on tasks involving learning the dynamics of cellular …">
+  <meta name="twitter:description" content="source (Aach et al. 2021) tags Cellular automata, Neural networks DONE Summary This paper studies the generalization abilities of neural networks on tasks involving learning the dynamics of cellular …">
   <meta name="twitter:image" content="https://hugocisneros.com/img/main.jpeg">
   <link rel="me" href="https://scholar.social/@hugcis">
   <link rel="me" href="https://github.com/hugcis">
@@ -52,7 +52,7 @@
   function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/aachgeneralizationdifferentcellular2021\/"},"headline":"Notes on: Generalization over different cellular automata rules learned by a deep feed-forward neural network …","description":"source (Aach et al. 2021) tags Cellular automata, Neural networks Summary This paper studies the generalization abilities of neural networks on tasks involving …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2021-04-26T20:53:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":310,"keywords":["Cellular automata","Neural networks"]}
+  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/aachgeneralizationdifferentcellular2021\/"},"headline":"Notes on: Generalization over different cellular automata rules learned by a deep feed-forward neural network …","description":"source (Aach et al. 2021) tags Cellular automata, Neural networks DONE Summary This paper studies the generalization abilities of neural networks on tasks …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2021-04-26T20:53:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":309,"keywords":["Cellular automata","Neural networks"]}
   </script>
 </head>
 <body>
@@ -129,7 +129,7 @@
                 <a href="/notes/cellular_automata/">Cellular automata</a>, <a href="/notes/neural_networks/">Neural networks</a>
               </dd>
             </dl>
-            <h2 id="summary">Summary</h2>
+            <h2 id="summary"><span class="org-todo done DONE">DONE</span> Summary</h2>
             <p>This paper studies the <a href="/notes/generalization_in_machine_learning/">generalization</a> abilities of <a href="/notes/neural_networks/">neural networks</a> on tasks involving learning the dynamics of <a href="/notes/cellular_automata/">cellular automata</a> rules from examples.</p>
             <p>Neural networks are trained to predict the next state of a CA from the three previous timesteps. Different training examples for a single rule corresponds to different initialization.</p>
             <p>The authors study three kinds of generalization:</p>
@@ -148,7 +148,7 @@
             <p>For training and validation, all configurations above reach more than 90% accuracy. For the simple and level 1 generalizations (same CA rules), the test accuracy is also very high (&gt; 90%). The test accuracy drops significantly for Level 2 and 3, where the network probably has trouble inferring the rule from the 4 previous steps only, whereas before it could have memorized those rules during training.</p>
             <h2 id="bibliography">Bibliography</h2>
             <ol class="biblio-list pl-0">
-              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="aachGeneralizationDifferentCellular2021"><span itemprop="author">Marcel Aach, Jens Henrik Goebbert, Jenia Jitsev</span>. <time datetime="2021" itemprop="datePublished">March 27, 2021</time>. "<span itemprop="name">Generalization over Different Cellular Automata Rules Learned by a Deep Feed-forward Neural Network</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:2103.14886 [nlin]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2103.14886">http://arxiv.org/abs/2103.14886</a>.</span></li>
+              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="aachGeneralizationDifferentCellular2021"><span itemprop="author">Marcel Aach, Jens Henrik Goebbert, Jenia Jitsev</span>. <time datetime="2021" itemprop="datePublished">March 27, 2021</time>. "<span itemprop="name">Generalization over Different Cellular Automata Rules Learned by a Deep Feed-Forward Neural Network</span>". <a itemprop="sameAs" href="http://arxiv.org/abs/2103.14886">http://arxiv.org/abs/2103.14886</a>.</span></li>
             </ol>
           </div>
         </div>

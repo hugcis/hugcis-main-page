@@ -51,7 +51,7 @@
   function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/layernorm\/"},"headline":"LayerNorm","description":"tags Neural networks paper (Ba et al. 2016) Definition Layer Normalization is a technique used in deep learning to normalize the inputs to a layer in a neural …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2023-02-21T15:44:00\u002b01:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":220,"keywords":["Neural networks"]}
+  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/layernorm\/"},"headline":"LayerNorm","description":"tags Neural networks paper (Ba et al. 2016) Definition Layer Normalization is a technique used in deep learning to normalize the inputs to a layer in a neural …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2023-02-21T15:44:00\u002b01:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":219,"keywords":["Neural networks"]}
   </script>
 </head>
 <body>
@@ -137,7 +137,7 @@
             <p>It has been found to be particularly effective in reducing the internal covariate shift problem, which is the tendency of the distribution of inputs to a layer to change as the parameters of previous layers are updated during training. By normalizing the inputs to each layer, layer normalization can help stabilize the <a href="/notes/neural_network_training/">neural network learning</a> process and improve convergence.</p>
             <h2 id="bibliography">Bibliography</h2>
             <ol class="biblio-list pl-0">
-              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="baLayerNormalization2016" itemid="doi:10.48550/arXiv.1607.06450"><span itemprop="author">Jimmy Lei Ba, Jamie Ryan Kiros, Geoffrey E. Hinton</span>. <time datetime="2016" itemprop="datePublished">July 21, 2016</time>. "<span itemprop="name">Layer Normalization</span>". arXiv. <a itemprop="sameAs" href="https://doi.org/10.48550/arXiv.1607.06450">DOI</a>.</span></li>
+              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="baLayerNormalization2016" itemid="doi:10.48550/arXiv.1607.06450"><span itemprop="author">Jimmy Lei Ba, Jamie Ryan Kiros, Geoffrey E. Hinton</span>. <time datetime="2016" itemprop="datePublished">July 21, 2016</time>. July 21, 2016<a itemprop="sameAs" href="https://doi.org/10.48550/arXiv.1607.06450">DOI</a>.</span></li>
             </ol>
           </div>
         </div>

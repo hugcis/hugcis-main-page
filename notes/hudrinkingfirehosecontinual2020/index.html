@@ -26,7 +26,7 @@
   <meta name="twitter:site" content="@cisne_hug">
   <meta name="twitter:creator" content="@cisne_hug">
   <meta name="twitter:title" content="Notes on: Drinking from a Firehose: Continual Learning with Web-scale Natural Language by Hu, H., Sener, O., Sha, F., &amp; Koltun, V. (2020)">
-  <meta name="twitter:description" content="tags Continual learning source (Hu et al. 2020) Summary This paper focuses on the problem of (self-)supervised continual learning with deep neural networks. The Firehose dataset introduced by the …">
+  <meta name="twitter:description" content="tags Continual learning source (Hu et al. 2020) DONE Summary This paper focuses on the problem of (self-)supervised continual learning with deep neural networks. The Firehose dataset introduced by the …">
   <meta name="twitter:image" content="https://hugocisneros.com/img/main.jpeg">
   <link rel="me" href="https://scholar.social/@hugcis">
   <link rel="me" href="https://github.com/hugcis">
@@ -51,7 +51,7 @@
   function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/hudrinkingfirehosecontinual2020\/"},"headline":"Notes on: Drinking from a Firehose: Continual Learning with Web-scale Natural Language by Hu, H., Sener, O., …","description":"tags Continual learning source (Hu et al. 2020) Summary This paper focuses on the problem of (self-)supervised continual learning with deep neural networks. The …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2021-03-25T09:57:00\u002b01:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":286,"keywords":["Continual learning"]}
+  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/hudrinkingfirehosecontinual2020\/"},"headline":"Notes on: Drinking from a Firehose: Continual Learning with Web-scale Natural Language by Hu, H., Sener, O., …","description":"tags Continual learning source (Hu et al. 2020) DONE Summary This paper focuses on the problem of (self-)supervised continual learning with deep neural …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2021-03-25T09:57:00\u002b01:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":275,"keywords":["Continual learning"]}
   </script>
 </head>
 <body>
@@ -128,17 +128,17 @@
                 (<a href="#huDrinkingFirehoseContinual2020"><cite itemprop="citation" itemscope itemid="key:huDrinkingFirehoseContinual2020">Hu et al. 2020</cite></a>)
               </dd>
             </dl>
-            <h2 id="summary">Summary</h2>
+            <h2 id="summary"><span class="org-todo done DONE">DONE</span> Summary</h2>
             <p>This paper focuses on the problem of (<a href="/notes/self_supervised_learning/">self-</a>)<a href="/notes/supervised_learning/">supervised</a> <a href="/notes/continual_learning/">continual learning</a> with deep <a href="/notes/neural_networks/">neural networks</a>. The Firehose dataset introduced by the authors is a large database of timestamped tweets. The goal is to learn a <a href="/notes/language_modeling/">language model</a> for each user from the dataset, which is called Personalized online language learning (POLL).</p>
             <p>The authors also introduce a new extension of <a href="/notes/gradient_descent/">gradient descent</a> for continual learning. It is based on a replay buffer to retain information about past examples and a validation buffer used to choose the ideal number of gradient steps at each steps.</p>
             <p>This new gradient method called ConGraD outperforms Online GD on most settings studied in the paper.</p>
-            <h2 id="comments">Comments</h2>
+            <h2 id="comments"><span class="org-todo done DONE">DONE</span> Comments</h2>
             <p>Because the authors are introducing a new dataset and online learning framework, it seems natural their method is not optimal and will be improved upon.</p>
             <p>I think the concept of continual learning is much more interesting than traditional supervised learning. It looks more adapted to real world situations where data is changing and unpredictable.</p>
             <p>However, we are still framing <a href="/notes/continual_learning/">continual learning</a> as a weird hybrid loss function taking into account the history of data and future data. It seems like the probabilistic-ally correct way of doing that but isn’t satisfying in my opinion. Nature, if seen as a learning process, doesn’t optimize for past examples, and keeps changing in response to the environment. Sure, it has the capability to retain information and pass it through time (e.g. successful evolutionary strategies) but it doesn’t seem to be optimizing for a hybrid loss function.</p>
             <h2 id="bibliography">Bibliography</h2>
             <ol class="biblio-list pl-0">
-              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="huDrinkingFirehoseContinual2020"><span itemprop="author">Hexiang Hu, Ozan Sener, Fei Sha, Vladlen Koltun</span>. <time datetime="2020" itemprop="datePublished">November 1, 2020</time>. "<span itemprop="name">Drinking from a Firehose: Continual Learning with Web-scale Natural Language</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:2007.09335 [cs, Stat]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2007.09335">http://arxiv.org/abs/2007.09335</a>.</span></li>
+              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="huDrinkingFirehoseContinual2020"><span itemprop="author">Hexiang Hu, Ozan Sener, Fei Sha, Vladlen Koltun</span>. <time datetime="2020" itemprop="datePublished">November 1, 2020</time>. <a itemprop="sameAs" href="http://arxiv.org/abs/2007.09335">http://arxiv.org/abs/2007.09335</a>.</span></li>
             </ol>
           </div>
         </div>

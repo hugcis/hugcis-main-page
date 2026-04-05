@@ -26,7 +26,7 @@
   <meta name="twitter:site" content="@cisne_hug">
   <meta name="twitter:creator" content="@cisne_hug">
   <meta name="twitter:title" content="Notes on: Nyströmformer: A Nyström-Based Algorithm for Approximating Self-Attention by Xiong, Y., Zeng, Z., Chakraborty, R., Tan, M., Fung, G., Li, Y., &amp; Singh, V. (2021)">
-  <meta name="twitter:description" content="tags Transformers source (Xiong et al. 2021) Summary This paper describes a way of applying the Nyström method for approximating matrix multiplication to transformers. More precisely, the …">
+  <meta name="twitter:description" content="tags Transformers source (Xiong et al. 2021) TODO Summary This paper describes a way of applying the Nyström method for approximating matrix multiplication to transformers. More precisely, the …">
   <meta name="twitter:image" content="https://hugocisneros.com/img/main.jpeg">
   <link rel="me" href="https://scholar.social/@hugcis">
   <link rel="me" href="https://github.com/hugcis">
@@ -51,7 +51,7 @@
   function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/xiongnystromformernystr2021\/"},"headline":"Notes on: Nyströmformer: A Nyström-Based Algorithm for Approximating Self-Attention by Xiong, Y., Zeng, Z., …","description":"tags Transformers source (Xiong et al. 2021) Summary This paper describes a way of applying the Nyström method for approximating matrix multiplication to …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2021-09-02T12:52:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":174,"keywords":["Transformers"]}
+  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/xiongnystromformernystr2021\/"},"headline":"Notes on: Nyströmformer: A Nyström-Based Algorithm for Approximating Self-Attention by Xiong, Y., Zeng, Z., …","description":"tags Transformers source (Xiong et al. 2021) TODO Summary This paper describes a way of applying the Nyström method for approximating matrix multiplication to …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2021-09-02T12:52:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":167,"keywords":["Transformers"]}
   </script>
 </head>
 <body>
@@ -128,7 +128,7 @@
                 (<a href="#xiongNystrOmformerNystr2021"><cite itemprop="citation" itemscope itemid="key:xiongNystrOmformerNystr2021">Xiong et al. 2021</cite></a>)
               </dd>
             </dl>
-            <h2 id="summary">Summary</h2>
+            <h2 id="summary"><span class="org-todo todo TODO">TODO</span> Summary</h2>
             <p>This paper describes a way of applying the <a href="/notes/nystrom_method/">Nyström method</a> for approximating matrix multiplication to transformers. More precisely, the approximation is used in the <a href="/notes/attention/">self-attention</a> mechanism’s softmax calculation.</p>
             <p>This approximation adresses one of the biggest downside of attention: its computational complexity. The authors claim that their method reduces it from \(O(n^2)\) to \(O(n)\).</p>
             <p>The goal of the method is to efficiently approximate the matrix</p>
@@ -139,10 +139,10 @@
             <p>The full matrix \(S\) can be approximated using only \(m\) columns and \(m\) rows</p>
             <p>\[ \hat{S} = \begin{bmatrix} A_S \newline F_S \end{bmatrix} A^+ \begin{bmatrix} A_S & B_S \end{bmatrix} \]</p>
             <h3 id="linearized-self-attention-via-the-nyström-method">Linearized self-attention via the Nyström method</h3>
-            <h2 id="comments">Comments</h2>
+            <h2 id="comments"><span class="org-todo todo TODO">TODO</span> Comments</h2>
             <h2 id="bibliography">Bibliography</h2>
             <ol class="biblio-list pl-0">
-              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="xiongNystrOmformerNystr2021"><span itemprop="author">Yunyang Xiong, Zhanpeng Zeng, Rudrasis Chakraborty, Mingxing Tan, Glenn Fung, Yin Li, Vikas Singh</span>. <time datetime="2021" itemprop="datePublished">February 7, 2021</time>. "<span itemprop="name">Nystr\"omformer: A Nystr\"om-based Algorithm for Approximating Self-attention</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:2102.03902 [cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2102.03902">http://arxiv.org/abs/2102.03902</a>.</span></li>
+              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="xiongNystrOmformerNystr2021"><span itemprop="author">Yunyang Xiong, Zhanpeng Zeng, Rudrasis Chakraborty, Mingxing Tan, Glenn Fung, Yin Li, Vikas Singh</span>. <time datetime="2021" itemprop="datePublished">February 7, 2021</time>. <a itemprop="sameAs" href="http://arxiv.org/abs/2102.03902">http://arxiv.org/abs/2102.03902</a>.</span></li>
             </ol>
           </div>
         </div>

@@ -26,7 +26,7 @@
   <meta name="twitter:site" content="@cisne_hug">
   <meta name="twitter:creator" content="@cisne_hug">
   <meta name="twitter:title" content="Notes on: On the expressive power of programming languages by Felleisen, M. (1991)">
-  <meta name="twitter:description" content="source (Felleisen 1991) tags Programming languages resources PWL Conf talk Summary Programming languages have different levels of expressiveness. While can be used to create for loops, binary if …">
+  <meta name="twitter:description" content="source (Felleisen 1991) tags Programming languages resources PWL Conf talk DONE Summary Programming languages have different levels of expressiveness. While can be used to create for loops, binary if …">
   <meta name="twitter:image" content="https://hugocisneros.com/img/main.jpeg">
   <link rel="me" href="https://scholar.social/@hugcis">
   <link rel="me" href="https://github.com/hugcis">
@@ -51,7 +51,7 @@
   function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/felleisenexpressivepowerprogramming1991\/"},"headline":"Notes on: On the expressive power of programming languages by Felleisen, M. (1991)","description":"source (Felleisen 1991) tags Programming languages resources PWL Conf talk Summary Programming languages have different levels of expressiveness. While can be …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2021-03-25T09:58:00\u002b01:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":460,"keywords":["Programming languages"]}
+  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/felleisenexpressivepowerprogramming1991\/"},"headline":"Notes on: On the expressive power of programming languages by Felleisen, M. (1991)","description":"source (Felleisen 1991) tags Programming languages resources PWL Conf talk DONE Summary Programming languages have different levels of expressiveness. While can …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2021-03-25T09:58:00\u002b01:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":461,"keywords":["Programming languages"]}
   </script>
 </head>
 <body>
@@ -132,7 +132,7 @@
                 <a href="https://pwlconf.org/2019/shriram-krishnamurthi/">PWL Conf talk</a>
               </dd>
             </dl>
-            <h2 id="summary">Summary</h2>
+            <h2 id="summary"><span class="org-todo done DONE">DONE</span> Summary</h2>
             <p>Programming languages have different levels of expressiveness. <code>While</code> can be used to create <code>for</code> loops, binary <code>if</code> statements can implement multi-<code>if</code> statements, etc.</p>
             <p>Turing tarpit: once we get to programming languages that are <a href="/notes/turing_completeness/">universal</a>, everything can be re-written into anything and the notion of “expressiveness” of programming languages doesn’t make much sense.</p>
             <p>For a language \(L\) and \(F + L\) the addition of some features, can we say the second is more expressive than the first? Intuitively, this is related to some form of re-writing of programs into one another.</p>

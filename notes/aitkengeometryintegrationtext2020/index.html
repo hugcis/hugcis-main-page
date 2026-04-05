@@ -27,7 +27,7 @@
   <meta name="twitter:site" content="@cisne_hug">
   <meta name="twitter:creator" content="@cisne_hug">
   <meta name="twitter:title" content="Notes on: The geometry of integration in text classification RNNs by Aitken, K., Ramasesh, V. V., Garg, A., Cao, Y., Sussillo, D., &amp; Maheswaranathan, N. (2020)">
-  <meta name="twitter:description" content="tags RNN, NLP source (Aitken et al. 2020) Summary This paper takes a dynamical system based approach to study learning in RNNs. Gradient descent optimization in RNNs allows them to learn a simplified …">
+  <meta name="twitter:description" content="tags RNN, NLP source (Aitken et al. 2020) DONE Summary This paper takes a dynamical system based approach to study learning in RNNs. Gradient descent optimization in RNNs allows them to learn a …">
   <meta name="twitter:image" content="https://hugocisneros.com/img/main.jpeg">
   <link rel="me" href="https://scholar.social/@hugcis">
   <link rel="me" href="https://github.com/hugcis">
@@ -52,7 +52,7 @@
   function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/aitkengeometryintegrationtext2020\/"},"headline":"Notes on: The geometry of integration in text classification RNNs by Aitken, K., Ramasesh, V. V., Garg, A., …","description":"tags RNN, NLP source (Aitken et al. 2020) Summary This paper takes a dynamical system based approach to study learning in RNNs. Gradient descent optimization in …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2021-03-25T10:20:00\u002b01:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":462,"keywords":["RNN","NLP"]}
+  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/aitkengeometryintegrationtext2020\/"},"headline":"Notes on: The geometry of integration in text classification RNNs by Aitken, K., Ramasesh, V. V., Garg, A., …","description":"tags RNN, NLP source (Aitken et al. 2020) DONE Summary This paper takes a dynamical system based approach to study learning in RNNs. Gradient descent …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2021-03-25T10:20:00\u002b01:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":441,"keywords":["RNN","NLP"]}
   </script>
 </head>
 <body>
@@ -129,7 +129,7 @@
                 (<a href="#aitkenGeometryIntegrationText2020"><cite itemprop="citation" itemscope itemid="key:aitkenGeometryIntegrationText2020">Aitken et al. 2020</cite></a>)
               </dd>
             </dl>
-            <h2 id="summary">Summary</h2>
+            <h2 id="summary"><span class="org-todo done DONE">DONE</span> Summary</h2>
             <p>This paper takes a <a href="/notes/dynamical_systems/">dynamical system</a> based approach to study learning in RNNs. <a href="/notes/gradient_descent/">Gradient descent</a> <a href="/notes/optimization/">optimization</a> in RNNs allows them to learn a simplified form of memory and information processing.</p>
             <p>The authors use simple text classification tasks to try and understand if these learned properties can be understood by looking at the state dynamics of RNNs.</p>
             <p>The RNNs usually behave like <a href="/notes/attractor_networks/">attractor networks</a>, with the hidden state lying on a low-dimensional manifold.</p>
@@ -143,15 +143,15 @@
             <p>With the more involved task of ordered classification (star review prediction), RNN still learn low dimensional attractors. The integration is now apparently twofold: sentiment and intensity both play a role for the final score.</p>
             <h3 id="multi-label-classification">Multi-label classification</h3>
             <p>With multi-label classification, a RNN keeps track of all classes combinations like if they were different classes.</p>
-            <h2 id="comments">Comments</h2>
+            <h2 id="comments"><span class="org-todo done DONE">DONE</span> Comments</h2>
             <p>I’m particularly interested in this kind of work trying to understand how these neural networks work. Gradient descent seems pretty good at finding shortcuts in data. This makes it particularly efficient for relatively simple tasks like <a href="/notes/text_classification/">sentence classification</a> or relatively OK <a href="/notes/language_modeling/">language modeling</a>, but fails to construct more complex primitives or attractors.</p>
             <p><a href="/notes/neuroscience/">Neuroscience</a> seems to have shown that at least parts of our brain functions use attractor dynamics like RNNs, but they likely weren’t found through the same kind of optimization.</p>
             <p>It is interesting to think about this in connection with (<a href="#katharopoulosTransformersAreRNNs2020"><cite itemprop="citation" itemscope itemid="key:katharopoulosTransformersAreRNNs2020">Katharopoulos et al. 2020</cite></a>). This also mean that the powerful transformers also act like some kind of fancy integrator in a large space. It seems like this would be limiting their capabilities, since our brain doesn’t look like its only doing integration.</p>
             <h2 id="bibliography">Bibliography</h2>
             <ol class="biblio-list pl-0">
-              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="aitkenGeometryIntegrationText2020"><span itemprop="author">Kyle Aitken, Vinay V. Ramasesh, Ankush Garg, Yuan Cao, David Sussillo, Niru Maheswaranathan</span>. <time datetime="2020" itemprop="datePublished">October 28, 2020</time>. "<span itemprop="name">The Geometry of Integration in Text Classification Rnns</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:2010.15114 [cs, Stat]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2010.15114">http://arxiv.org/abs/2010.15114</a>.</span></li>
+              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="aitkenGeometryIntegrationText2020"><span itemprop="author">Kyle Aitken, Vinay V. Ramasesh, Ankush Garg, Yuan Cao, David Sussillo, Niru Maheswaranathan</span>. <time datetime="2020" itemprop="datePublished">October 28, 2020</time>. <a itemprop="sameAs" href="http://arxiv.org/abs/2010.15114">http://arxiv.org/abs/2010.15114</a>.</span></li>
               <li class="list-none my-4 mx-2">
-                <span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="katharopoulosTransformersAreRNNs2020"><span itemprop="author">Angelos Katharopoulos, Apoorv Vyas, Nikolaos Pappas, François Fleuret</span>. <time datetime="2020" itemprop="datePublished">June 29, 2020</time>. "<span itemprop="name">Transformers Are Rnns: Fast Autoregressive Transformers with Linear Attention</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:2006.16236 [cs, Stat]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2006.16236">http://arxiv.org/abs/2006.16236</a>.</span>&nbsp;<a href="/notes/katharopoulostransformersarernns2020/">See notes</a>
+                <span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="katharopoulosTransformersAreRNNs2020"><span itemprop="author">Angelos Katharopoulos, Apoorv Vyas, Nikolaos Pappas, François Fleuret</span>. <time datetime="2020" itemprop="datePublished">June 29, 2020</time>. <a itemprop="sameAs" href="http://arxiv.org/abs/2006.16236">http://arxiv.org/abs/2006.16236</a>.</span>&nbsp;<a href="/notes/katharopoulostransformersarernns2020/">See notes</a>
               </li>
             </ol>
           </div>

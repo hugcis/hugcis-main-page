@@ -26,7 +26,7 @@
   <meta name="twitter:site" content="@cisne_hug">
   <meta name="twitter:creator" content="@cisne_hug">
   <meta name="twitter:title" content="Notes on: Pretrained Transformers as Universal Computation Engines by Lu, K., Grover, A., Abbeel, P., &amp; Mordatch, I. (2021)">
-  <meta name="twitter:description" content="source (Lu et al. 2021) tags Transformers Summary Different types of neural network architecture encode different kinds of biases. For example, convolutional neural networks perform local, …">
+  <meta name="twitter:description" content="source (Lu et al. 2021) tags Transformers DONE Summary Different types of neural network architecture encode different kinds of biases. For example, convolutional neural networks perform local, …">
   <meta name="twitter:image" content="https://hugocisneros.com/img/main.jpeg">
   <link rel="me" href="https://scholar.social/@hugcis">
   <link rel="me" href="https://github.com/hugcis">
@@ -51,7 +51,7 @@
   function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/lupretrainedtransformersuniversal2021\/"},"headline":"Notes on: Pretrained Transformers as Universal Computation Engines by Lu, K., Grover, A., Abbeel, P., \u0026amp; …","description":"source (Lu et al. 2021) tags Transformers Summary Different types of neural network architecture encode different kinds of biases. For example, convolutional …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2021-08-25T15:19:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":513,"keywords":["Transformers"]}
+  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/lupretrainedtransformersuniversal2021\/"},"headline":"Notes on: Pretrained Transformers as Universal Computation Engines by Lu, K., Grover, A., Abbeel, P., \u0026amp; …","description":"source (Lu et al. 2021) tags Transformers DONE Summary Different types of neural network architecture encode different kinds of biases. For example, …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2021-08-25T15:19:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":507,"keywords":["Transformers"]}
   </script>
 </head>
 <body>
@@ -128,7 +128,7 @@
                 <a href="/notes/transformers/">Transformers</a>
               </dd>
             </dl>
-            <h2 id="summary">Summary</h2>
+            <h2 id="summary"><span class="org-todo done DONE">DONE</span> Summary</h2>
             <p>Different types of <a href="/notes/neural_networks/">neural network</a> architecture encode different kinds of biases. For example, <a href="/notes/convolutional_neural_networks/">convolutional neural networks</a> perform local, translation-invariant operations and <a href="/notes/recurrent_neural_networks/">recurrent neural networks</a> operate on sequential data.</p>
             <p>One can use these biases in randomly initialized networks as a basis for interesting computations. This is on of the motivation for <a href="/notes/reservoir_computing/">reservoir computing</a> with <a href="/notes/echo_state_networks/">echo-state networks</a>, which uses fixed random recurrent neural network and a simple trainable linear transformation to perform complex computations. The intuition behind this is model is that interesting computations may be happening within the random RNN (and they are probably increasingly likely with bigger RNN). The linear layer can select useful computations and filter out the rest to give a result.</p>
             <p>This paper invastigates something similar to that idea. However, instead of random models they investigate the capacity of pretrained models, more precisely pretrained <a href="/notes/transformers/">transformers</a>.</p>
@@ -147,7 +147,7 @@
               <li>Remote homology detection</li>
             </ul>
             <p>The paper uses a range of setups to understand which combination of architecture/pretraining/etc. works the best.</p>
-            <h2 id="comments">Comments</h2>
+            <h2 id="comments"><span class="org-todo done DONE">DONE</span> Comments</h2>
             <p>The part which is most interesting to me is not the main result of that paper but the results from table 3, shown below</p>
             <figure>
               <img src="/ox-hugo/luPretrainedTransformersUniversal2021bis.png">
@@ -158,7 +158,7 @@
             <p>I also think that it is nice to find some evidence for a set of primitives being learned by <a href="/notes/language_modeling/">language models</a> and this may pave the way for unsupervised models that keep learning new things and reusing these elementary functions.</p>
             <h2 id="bibliography">Bibliography</h2>
             <ol class="biblio-list pl-0">
-              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="luPretrainedTransformersUniversal2021"><span itemprop="author">Kevin Lu, Aditya Grover, Pieter Abbeel, Igor Mordatch</span>. <time datetime="2021" itemprop="datePublished">March 9, 2021</time>. "<span itemprop="name">Pretrained Transformers as Universal Computation Engines</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:2103.05247 [cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2103.05247">http://arxiv.org/abs/2103.05247</a>.</span></li>
+              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="luPretrainedTransformersUniversal2021"><span itemprop="author">Kevin Lu, Aditya Grover, Pieter Abbeel, Igor Mordatch</span>. <time datetime="2021" itemprop="datePublished">March 9, 2021</time>. <a itemprop="sameAs" href="http://arxiv.org/abs/2103.05247">http://arxiv.org/abs/2103.05247</a>.</span></li>
             </ol>
           </div>
         </div>

@@ -26,7 +26,7 @@
   <meta name="twitter:site" content="@cisne_hug">
   <meta name="twitter:creator" content="@cisne_hug">
   <meta name="twitter:title" content="Notes on: Learned Initializations for Optimizing Coordinate-Based Neural Representations by Tancik, M., Mildenhall, B., Wang, T., Schmidt, D., Srinivasan, P. P., Barron, J. T., &amp; Ng, R. (2021)">
-  <meta name="twitter:description" content="tags Neural radiance fields, Meta-learning source (Tancik et al. 2021) Summary This paper explores meta-learning techniques for improving the quality and speed of convergence of learned implicit …">
+  <meta name="twitter:description" content="tags Neural radiance fields, Meta-learning source (Tancik et al. 2021) DONE Summary This paper explores meta-learning techniques for improving the quality and speed of convergence of learned implicit …">
   <meta name="twitter:image" content="https://hugocisneros.com/img/main.jpeg">
   <link rel="me" href="https://scholar.social/@hugcis">
   <link rel="me" href="https://github.com/hugcis">
@@ -51,7 +51,7 @@
   function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/tanciklearnedinitializationsoptimizing2021\/"},"headline":"Notes on: Learned Initializations for Optimizing Coordinate-Based Neural Representations by Tancik, M., …","description":"tags Neural radiance fields, Meta-learning source (Tancik et al. 2021) Summary This paper explores meta-learning techniques for improving the quality and speed …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2021-08-25T16:39:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":261,"keywords":["Neural radiance fields"]}
+  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/tanciklearnedinitializationsoptimizing2021\/"},"headline":"Notes on: Learned Initializations for Optimizing Coordinate-Based Neural Representations by Tancik, M., …","description":"tags Neural radiance fields, Meta-learning source (Tancik et al. 2021) DONE Summary This paper explores meta-learning techniques for improving the quality and …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2021-08-25T16:39:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":253,"keywords":["Neural radiance fields"]}
   </script>
 </head>
 <body>
@@ -128,7 +128,7 @@
                 (<a href="#tancikLearnedInitializationsOptimizing2021"><cite itemprop="citation" itemscope itemid="key:tancikLearnedInitializationsOptimizing2021">Tancik et al. 2021</cite></a>)
               </dd>
             </dl>
-            <h2 id="summary">Summary</h2>
+            <h2 id="summary"><span class="org-todo done DONE">DONE</span> Summary</h2>
             <p>This paper explores <a href="/notes/meta_learning/">meta-learning</a> techniques for improving the quality and speed of convergence of learned <a href="/notes/implicit_neural_representations/">implicit neural representations</a>.</p>
             <p>The authors use meta-learning to optimize the initial weights \(\theta_0\) of the neural networks such that it minimizes the loss \(L(\theta_m)\) when the network is optimized on a new unseen observations.</p>
             <p>As a meta-learning problem, there is an <em>inner loop</em> and an <em>outer loop</em>:</p>
@@ -150,7 +150,7 @@
             <p>The results are encouraging both for image regression and view synthesis of 3D objects.</p>
             <h2 id="bibliography">Bibliography</h2>
             <ol class="biblio-list pl-0">
-              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="tancikLearnedInitializationsOptimizing2021"><span itemprop="author">Matthew Tancik, Ben Mildenhall, Terrance Wang, Divi Schmidt, Pratul P. Srinivasan, Jonathan T. Barron, Ren Ng</span>. <time datetime="2021" itemprop="datePublished">March 23, 2021</time>. "<span itemprop="name">Learned Initializations for Optimizing Coordinate-based Neural Representations</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Arxiv:2012.02189 [cs]</i></span>. <a itemprop="sameAs" href="http://arxiv.org/abs/2012.02189">http://arxiv.org/abs/2012.02189</a>.</span></li>
+              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="tancikLearnedInitializationsOptimizing2021"><span itemprop="author">Matthew Tancik, Ben Mildenhall, Terrance Wang, Divi Schmidt, Pratul P. Srinivasan, Jonathan T. Barron, Ren Ng</span>. <time datetime="2021" itemprop="datePublished">March 23, 2021</time>. <a itemprop="sameAs" href="http://arxiv.org/abs/2012.02189">http://arxiv.org/abs/2012.02189</a>.</span></li>
             </ol>
           </div>
         </div>

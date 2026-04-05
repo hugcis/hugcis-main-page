@@ -27,7 +27,7 @@
   <meta name="twitter:site" content="@cisne_hug">
   <meta name="twitter:creator" content="@cisne_hug">
   <meta name="twitter:title" content="Notes on: Memorizing Transformers by Wu, Y., Rabe, M. N., Hutchins, D., &amp; Szegedy, C. (2022)">
-  <meta name="twitter:description" content="source (Wu et al. 2022) tags Transformers, Memory in neural networks Summary This paper introduces a method to extend the classical Transformer neural network model with an addressable memory that can …">
+  <meta name="twitter:description" content="source (Wu et al. 2022) tags Transformers, Memory in neural networks TODO Summary This paper introduces a method to extend the classical Transformer neural network model with an addressable memory …">
   <meta name="twitter:image" content="https://hugocisneros.com/img/main.jpeg">
   <link rel="me" href="https://scholar.social/@hugcis">
   <link rel="me" href="https://github.com/hugcis">
@@ -52,7 +52,7 @@
   function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/wumemorizingtransformers2022\/"},"headline":"Notes on: Memorizing Transformers by Wu, Y., Rabe, M. N., Hutchins, D., \u0026amp; Szegedy, C. (2022)","description":"source (Wu et al. 2022) tags Transformers, Memory in neural networks Summary This paper introduces a method to extend the classical Transformer neural network …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2022-05-25T13:26:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":277,"keywords":["Transformers","Memory in neural networks"]}
+  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/wumemorizingtransformers2022\/"},"headline":"Notes on: Memorizing Transformers by Wu, Y., Rabe, M. N., Hutchins, D., \u0026amp; Szegedy, C. (2022)","description":"source (Wu et al. 2022) tags Transformers, Memory in neural networks TODO Summary This paper introduces a method to extend the classical Transformer neural …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2022-05-25T13:26:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":276,"keywords":["Transformers","Memory in neural networks"]}
   </script>
 </head>
 <body>
@@ -129,7 +129,7 @@
                 <a href="/notes/transformers/">Transformers</a>, <a href="/notes/memory_in_neural_networks/">Memory in neural networks</a>
               </dd>
             </dl>
-            <h2 id="summary">Summary</h2>
+            <h2 id="summary"><span class="org-todo todo TODO">TODO</span> Summary</h2>
             <p>This paper introduces a method to extend the classical <a href="/notes/transformers/">Transformer</a> <a href="/notes/neural_networks/">neural network</a> model with an addressable memory that can be queried and updated at inference time.</p>
             <p>This memory is addressed using an <a href="/notes/attention/">attention</a> mechanism. It is a set of cached attention (key, value) vector pairs. At some arbitrary depth of the attention “stack” the memory mechanism is inserted.</p>
             <p>A query \(\bm{Q}\) is used both for the self-attention over the local context (the other tokens in the input) as well as the (key, value) pairs stored in the memory. We write \(\bm{K}_l\), \(\bm{V}_l\) the key value matrices of the local context. The local self-attention output (denoted \(\bm{V}_c\) in the paper) is computed as follows:</p>
@@ -141,7 +141,7 @@
             <p>with \(g = \sigma(b_g)\) is the sigmoid of a per-head scalar parameter that determines how much importance is given to the external memory.</p>
             <h2 id="bibliography">Bibliography</h2>
             <ol class="biblio-list pl-0">
-              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="wuMemorizingTransformers2022" itemid="doi:10.48550/arXiv.2203.08913"><span itemprop="author">Yuhuai Wu, Markus N. Rabe, DeLesley Hutchins, Christian Szegedy</span>. <time datetime="2022" itemprop="datePublished">March 16, 2022</time>. "<span itemprop="name">Memorizing Transformers</span>". arXiv. <a itemprop="sameAs" href="https://doi.org/10.48550/arXiv.2203.08913">DOI</a>.</span></li>
+              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="wuMemorizingTransformers2022" itemid="doi:10.48550/arXiv.2203.08913"><span itemprop="author">Yuhuai Wu, Markus N. Rabe, DeLesley Hutchins, Christian Szegedy</span>. <time datetime="2022" itemprop="datePublished">March 16, 2022</time>. arXiv. <a itemprop="sameAs" href="https://doi.org/10.48550/arXiv.2203.08913">DOI</a>.</span></li>
             </ol>
           </div>
         </div>

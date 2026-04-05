@@ -26,7 +26,7 @@
   <meta name="twitter:site" content="@cisne_hug">
   <meta name="twitter:creator" content="@cisne_hug">
   <meta name="twitter:title" content="Notes on: Next Generation Reservoir Computing by Gauthier, D. J., Bollt, E., Griffith, A., &amp; Barbosa, W. A. S. (2021)">
-  <meta name="twitter:description" content="source (Gauthier et al. 2021) tags Reservoir computing Summary This paper bases itself on the demonstration that some reservoir computers (echo-state networks) are mathematically identical to …">
+  <meta name="twitter:description" content="source (Gauthier et al. 2021) tags Reservoir computing DONE Summary This paper bases itself on the demonstration that some reservoir computers (echo-state networks) are mathematically identical to …">
   <meta name="twitter:image" content="https://hugocisneros.com/img/main.jpeg">
   <link rel="me" href="https://scholar.social/@hugcis">
   <link rel="me" href="https://github.com/hugcis">
@@ -51,7 +51,7 @@
   function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/gauthiernextgenerationreservoir2021\/"},"headline":"Notes on: Next Generation Reservoir Computing by Gauthier, D. J., Bollt, E., Griffith, A., \u0026amp; Barbosa, W. A. S. …","description":"source (Gauthier et al. 2021) tags Reservoir computing Summary This paper bases itself on the demonstration that some reservoir computers (echo-state networks) …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2022-01-29T14:51:00\u002b01:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":295,"keywords":["Reservoir computing"]}
+  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/gauthiernextgenerationreservoir2021\/"},"headline":"Notes on: Next Generation Reservoir Computing by Gauthier, D. J., Bollt, E., Griffith, A., \u0026amp; Barbosa, W. A. S. …","description":"source (Gauthier et al. 2021) tags Reservoir computing DONE Summary This paper bases itself on the demonstration that some reservoir computers (echo-state …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2022-01-29T14:51:00\u002b01:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":274,"keywords":["Reservoir computing"]}
   </script>
 </head>
 <body>
@@ -128,7 +128,7 @@
                 <a href="/notes/reservoir_computing/">Reservoir computing</a>
               </dd>
             </dl>
-            <h2 id="summary">Summary</h2>
+            <h2 id="summary"><span class="org-todo done DONE">DONE</span> Summary</h2>
             <p>This paper bases itself on the demonstration that some <a href="/notes/reservoir_computing/">reservoir computers</a> (<a href="/notes/echo_state_networks/">echo-state networks</a>) are mathematically identical to nonlinear vector autoregression (NVAR) machines (<a href="#bolltExplainingSurprisingSuccess2021"><cite itemprop="citation" itemscope itemid="doi:10.1063/5.0024890">Bollt 2021</cite></a>). A NVAR is just a <a href="/notes/machine_learning/#regression">regression</a> over a feature vector composed of \(k\) time-delay observations of the dynamical system to be learned and nonlinear functions of these observations.</p>
             <p>The authors introduce <strong>Next-Generation Reservoir computing</strong> (NG-RC) which is essentially a NVAR. Instead of the standard RC setup, they regress the outer layer over a vector</p>
             <p>\[\mathbb{O}_{\text{total} }= c + \mathbb{O}_{\text{lin}} + \mathbb{O}_{\text{nonlin}}\]</p>
@@ -136,13 +136,13 @@
             <p>Then, the output layer computes the NVAR output as a linear transformation of the feature vector, through \(\mathbf{Y}_i = \mathbf{W}_{\text{out}} \mathbb{O}_{\text{total}, i}\).</p>
             <p>For a training dataset \(\mathbf{Y}_d\), output \(\mathbf{Y}\) is matched to it by solving a <a href="/notes/ordinary_least_squares/">least-square linear regression problem</a>.</p>
             <p>The authors then evaluate the NG-RC model on two chaotic dynamical systems and show some performance scores and a few train/test trajectories comparisons.</p>
-            <h2 id="comments">Comments</h2>
+            <h2 id="comments"><span class="org-todo done DONE">DONE</span> Comments</h2>
             <p>There doesn’t seem to be any comparison against standard <a href="/notes/reservoir_computing/">RC</a>, which is what this model is supposed to replace.</p>
             <p>The benefits of reservoir computing probably lie beyond <a href="/notes/echo_state_networks/">echo-state networks</a>. With different reservoirs, one can harness the computations of complex non-linear dynamical systems which might not be possible using only <a href="/notes/recurrent_neural_networks/">recurrent neural networks</a>.</p>
             <h2 id="bibliography">Bibliography</h2>
             <ol class="biblio-list pl-0">
               <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="gauthierNextGenerationReservoir2021" itemid="doi:10.1038/s41467-021-25801-2"><span itemprop="author">Daniel J. Gauthier, Erik Bollt, Aaron Griffith, Wendson A. S. Barbosa</span>. <time datetime="2021" itemprop="datePublished">September 21, 2021</time>. "<span itemprop="name">Next Generation Reservoir Computing</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Nature Communications</i></span> 12 (1). Nature Publishing Group:5564. <a itemprop="sameAs" href="https://doi.org/10.1038/s41467-021-25801-2">DOI</a>.</span></li>
-              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="bolltExplainingSurprisingSuccess2021" itemid="doi:10.1063/5.0024890"><span itemprop="author">Erik Bollt</span>. <time datetime="2021" itemprop="datePublished">January 2021</time>. "<span itemprop="name">On Explaining the Surprising Success of Reservoir Computing Forecaster of Chaos? the Universal Machine Learning Dynamical System with Contrast to VAR and DMD</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Chaos (woodbury, N.Y.)</i></span> 31 (1):013108. <a itemprop="sameAs" href="https://doi.org/10.1063/5.0024890">DOI</a>.</span></li>
+              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="bolltExplainingSurprisingSuccess2021" itemid="doi:10.1063/5.0024890"><span itemprop="author">Erik Bollt</span>. <time datetime="2021" itemprop="datePublished">January 2021</time>. <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Chaos (Woodbury, N.Y.)</i></span> 31 (1):013108. <a itemprop="sameAs" href="https://doi.org/10.1063/5.0024890">DOI</a>.</span></li>
             </ol>
           </div>
         </div>
