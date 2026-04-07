@@ -50,6 +50,9 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/note-graph\/"},"headline":"Notes Graph","description":"Explore the full knowledge graph of my notes. Nodes are sized by PageRank centrality and colored by community.","datePublished":"0001-01-01T00:00:00Z","dateModified":"0001-01-01T00:00:00Z","author":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":0}
   </script>
+  <style>
+  main.content{max-width:100%;padding:0;margin:0}
+  </style>
 </head>
 <body>
   <header class="md:px-0 px-2">
@@ -93,58 +96,33 @@
     </nav>
   </header>
   <main class="content h-card container mt-2 m-auto leading-loose md:px-0 px-2 z-0" role="main">
-    <nav aria-label="Breadcrumb" class="breadcrumb text-sm text-gray-500 dark:text-gray-400 mb-4">
-      <ol class="flex flex-wrap items-center" itemscope itemtype="https://schema.org/BreadcrumbList">
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="flex items-center">
-          <a itemprop="item" href="https://hugocisneros.com/" class="border-none hover:text-gray-700 dark:hover:text-gray-200"><span itemprop="name">Home</span></a>
-          <meta itemprop="position" content="1"><span class="mx-2">/</span>
-        </li>
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="flex items-center">
-          <a itemprop="item" href="https://hugocisneros.com/notes/" class="border-none hover:text-gray-700 dark:hover:text-gray-200"><span itemprop="name">Notes</span></a>
-          <meta itemprop="position" content="2"><span class="mx-2">/</span>
-        </li>
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="flex items-center">
-          <span itemprop="name" class="text-gray-900 dark:text-gray-100 font-medium" aria-current="page">Notes Graph</span>
-          <meta itemprop="item" content="https://hugocisneros.com/notes/note-graph/">
-          <meta itemprop="position" content="3">
-        </li>
-      </ol>
-    </nav>
-    <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
-      <div class="note-page bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg mb-6 overflow-hidden">
-        <div class="p-5 sm:p-6">
-          <h1 class="text-xl sm:text-2xl font-semibold mb-4 p-name text-zinc-900 dark:text-zinc-100" itemprop="name">Notes Graph</h1>
-          <div class="article-content e-content p-name prose dark:prose-invert max-w-none" itemprop="articleBody"></div>
-        </div>
-        <div class="border-t border-zinc-200 dark:border-zinc-600 px-5 sm:px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400 text-center" style="font-variant-caps:all-small-caps">
-          Last changed <a class="u-url" href="https://hugocisneros.com/notes/note-graph/"><time itemprop="datePublished" class="dt-published" datetime="0001-01-01T00:00:00Z">0001.01.01</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+    <div id="graph-page" class="relative w-full" style="height:calc(100vh - 80px)">
+      <div class="absolute top-0 left-0 right-0 z-10 flex items-center gap-4 p-3 pointer-events-none">
+        <a href="https://hugocisneros.com/notes/" class="pointer-events-auto px-3 py-1.5 text-sm font-medium rounded-lg bg-white/90 dark:bg-zinc-800/90 backdrop-blur text-zinc-600 dark:text-zinc-300 border border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-700 transition-colors no-underline-anim">← Back to notes</a>
+        <div class="pointer-events-auto relative w-64">
+          <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-400 pointer-events-none" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><input type="text" id="graph-search" placeholder="Search nodes..." autocomplete="off" class="w-full pl-9 pr-3 py-1.5 text-sm rounded-lg bg-white/90 dark:bg-zinc-800/90 backdrop-blur border border-zinc-300 dark:border-zinc-600 text-zinc-700 dark:text-zinc-200 focus:outline-none focus:ring-2 focus:ring-accent dark:focus:ring-accent-light">
+          <ul id="graph-search-results" class="hidden absolute top-full left-0 right-0 mt-1 max-h-64 overflow-y-auto bg-white dark:bg-zinc-800 border border-zinc-300 dark:border-zinc-600 rounded-lg shadow-lg text-sm z-20"></ul>
         </div>
       </div>
-    </article>
-    <section id="comments-container" class="comments-section" data-slug="/notes/note-graph"></section>
-    <h3>Comments</h3>
-    <div id="comments-list" class="comments-list">
-      <p id="comments-loading" class="comments-loading">Loading comments...</p>
+      <div id="graph-sidebar" style="position:absolute;top:0;right:0;height:100%;width:320px;z-index:10;transform:translateX(100%);transition:transform .2s ease-in-out;overflow-y:auto;border-left:1px solid #d4d4d8" class="bg-white dark:bg-zinc-800 shadow-lg">
+        <div class="p-4">
+          <button id="sidebar-close" class="absolute top-3 right-3 p-1 rounded text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-700 transition-colors" aria-label="Close sidebar"><svg class="w-5 h-5" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+          <div id="sidebar-content"></div>
+        </div>
+      </div><svg id="graph-explorer" class="w-full h-full bg-slate-200 dark:bg-neutral-700">
+      <defs>
+        <filter x="0" y="0" width="1" height="1" id="label-bg">
+          <feflood flood-color="#f7f7f7" flood-opacity=".9"></feflood>
+          <fecomposite in="SourceGraphic" operator="xor"></fecomposite>
+        </filter>
+      </defs></svg>
     </div>
-    <p id="comments-error" class="comments-error" style="display:none"></p>
-    <form id="comment-form" class="comment-form" name="comment-form">
-      <h4>Leave a comment</h4>
-      <div class="form-group">
-        <label for="comment-name">Name <span class="required">*</span></label> <input type="text" id="comment-name" name="name" required="" maxlength="100" placeholder="Your name">
-      </div>
-      <div class="form-group">
-        <label for="comment-email">Email <span class="optional">(optional, not displayed)</span></label> <input type="email" id="comment-email" name="email" maxlength="254" placeholder="your@email.com">
-      </div>
-      <div class="form-group">
-        <label for="comment-content">Comment <span class="required">*</span></label> 
-        <textarea id="comment-content" name="content" required="" maxlength="10000" rows="4" placeholder="Write your comment..."></textarea>
-      </div>
-      <div id="turnstile-container" class="turnstile-container"></div><input type="hidden" id="turnstile-token" name="turnstile_token">
-      <p id="form-error" class="form-error" style="display:none"></p>
-      <p id="form-success" class="form-success" style="display:none"></p><button type="submit" class="comment-submit-btn">Post Comment</button>
-    </form>
-    <script src="/js/comments.js" defer></script> <a href="/notes#note-graph" class="inline-flex items-center gap-2 mt-4 px-4 py-2 text-sm font-medium text-inherit bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg hover:border-zinc-400 dark:hover:border-zinc-500 hover:shadow-md transition-all duration-150"><svg class="inline-block" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2">
-    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path></svg>Back to Notes</a>
+    <script src="https://hugocisneros.com/js/d3.v7.min.js"></script> 
+    <script src="https://hugocisneros.com/js/graph_explorer.js"></script>
   </main>
   <footer class="footer container text-center mt-1 py-6">
     <hr class="my-4">
