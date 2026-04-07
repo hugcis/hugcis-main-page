@@ -52,7 +52,7 @@
   function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/glam\/"},"headline":"GLaM","description":" tags Transformers, NLP paper (Du et al. 2021) Architecture The model is a mixture of 64 expert decoder-only transformer architectures. Two experts are …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2022-07-26T10:01:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":68,"keywords":["Transformers","NLP"]}
+  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/glam\/"},"headline":"GLaM","description":"tags Transformers, NLP paper (Du et al. 2021) Architecture The model is a mixture of 64 expert decoder-only transformer architectures. Two experts are activated …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2022-07-26T10:01:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":76,"keywords":["Transformers","NLP"]}
   </script>
 </head>
 <body>
@@ -135,7 +135,7 @@
             <p>1.2T total, 96B active per token.</p>
             <h2 id="bibliography">Bibliography</h2>
             <ol class="biblio-list pl-0">
-              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="duGLaMEfficientScaling2021"><span itemprop="author">Nan Du, Yanping Huang, Andrew M. Dai, Simon Tong, Dmitry Lepikhin, Yuanzhong Xu, Maxim Krikun, et al.</span>. <time datetime="2021" itemprop="datePublished">December 13, 2021</time>. December 13, 2021<a itemprop="sameAs" href="http://arxiv.org/abs/2112.06905">http://arxiv.org/abs/2112.06905</a>.</span></li>
+              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="duGLaMEfficientScaling2021"><span itemprop="author">Nan Du, Yanping Huang, Andrew M. Dai, Simon Tong, Dmitry Lepikhin, Yuanzhong Xu, Maxim Krikun, et al.</span>. <time datetime="2021" itemprop="datePublished">December 13, 2021</time>. "<span itemprop="name">GLaM: Efficient Scaling of Language Models with Mixture-of-Experts</span>". December 13, 2021<a itemprop="sameAs" href="http://arxiv.org/abs/2112.06905">http://arxiv.org/abs/2112.06905</a>.</span></li>
             </ol>
           </div>
         </div>
