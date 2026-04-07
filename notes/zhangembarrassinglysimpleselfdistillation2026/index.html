@@ -12,7 +12,7 @@
   <meta property="og:type" content="article">
   <meta property="article:published_time" content="0001-01-01T00:00:00Z">
   <meta property="article:modified_time" content="2026-04-07T12:37:00+02:00">
-  <meta property="article:tag" content="Knowledge distillation">
+  <meta property="article:tag" content="Distillation">
   <meta property="article:tag" content="Language modeling">
   <meta property="article:tag" content="Program synthesis">
   <meta property="article:tag" content="Large language models">
@@ -29,11 +29,11 @@
   <meta name="twitter:site" content="@cisne_hug">
   <meta name="twitter:creator" content="@cisne_hug">
   <meta name="twitter:title" content="Notes on: Embarrassingly Simple Self-Distillation Improves Code Generation by Zhang, R., Bai, R. H., Zheng, H., Jaitly, N., Collobert, R., &amp; Zhang, Y. (2026)">
-  <meta name="twitter:description" content="tags Knowledge distillation, Language modeling, Program synthesis, Large language models source (Zhang et al. 2026) Summary This paper introduces simple self-distillation (SSD), a method where an LLM …">
+  <meta name="twitter:description" content="tags Distillation, Language modeling, Program synthesis, Large language models source (Zhang et al. 2026) Summary This paper introduces simple self-distillation (SSD), a method where an LLM improves …">
   <meta name="twitter:image" content="https://hugocisneros.com/img/main.jpeg">
   <link rel="me" href="https://scholar.social/@hugcis">
   <link rel="me" href="https://github.com/hugcis">
-  <meta name="keywords" content="knowledge distillation,language modeling,program synthesis,large language models">
+  <meta name="keywords" content="distillation,language modeling,program synthesis,large language models">
   <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
   <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -54,7 +54,7 @@
   function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/zhangembarrassinglysimpleselfdistillation2026\/"},"headline":"Notes on: Embarrassingly Simple Self-Distillation Improves Code Generation by Zhang, R., Bai, R. H., Zheng, …","description":"tags Knowledge distillation, Language modeling, Program synthesis, Large language models source (Zhang et al. 2026) Summary This paper introduces simple …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2026-04-07T12:37:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":763,"keywords":["Knowledge distillation","Language modeling","Program synthesis","Large language models"]}
+  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/zhangembarrassinglysimpleselfdistillation2026\/"},"headline":"Notes on: Embarrassingly Simple Self-Distillation Improves Code Generation by Zhang, R., Bai, R. H., Zheng, …","description":"tags Distillation, Language modeling, Program synthesis, Large language models source (Zhang et al. 2026) Summary This paper introduces simple self-distillation …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2026-04-07T12:37:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":760,"keywords":["Distillation","Language modeling","Program synthesis","Large language models"]}
   </script>
 </head>
 <body>
@@ -127,7 +127,7 @@
             <dl>
               <dt>tags</dt>
               <dd>
-                <a href="/notes/knowledge_distillation/">Knowledge distillation</a>, <a href="/notes/language_modeling/">Language modeling</a>, <a href="/notes/program_synthesis/">Program synthesis</a>, <a href="/notes/llm/">Large language models</a>
+                <a href="/notes/distillation/">Distillation</a>, <a href="/notes/language_modeling/">Language modeling</a>, <a href="/notes/program_synthesis/">Program synthesis</a>, <a href="/notes/llm/">Large language models</a>
               </dd>
               <dt>source</dt>
               <dd>
@@ -152,11 +152,11 @@
             <p>A surprisingly elegant result. The key insight is that models contain latent capability unrealized under any fixed decoding configuration. This reframes <a href="/notes/self_training/">self-improvement</a> as unlocking existing knowledge rather than acquiring new knowledge. The precision-exploration conflict is a particularly clean abstraction that may apply beyond code generation to any structured generation task with a mix of constrained and <a href="/notes/open_ended_evolution/">open-ended</a> positions.</p>
             <p>The “bad data, good results” experiment (Section 4.4) is perhaps the most striking finding: training on mostly gibberish still improves the model. This strongly supports the claim that the benefit comes from distribution reshaping rather than learning from correct solutions, which distinguishes SSD from typical <a href="/notes/self_training/">self-training</a> approaches that rely on data quality.</p>
             <p>Another implication from this result is that the “raw” distribution inherited from the usual learning pipelines (pre-mid-post-training) creates probability distributions that are suboptimal for a range of problems.</p>
-            <p>The connection to <a href="/notes/knowledge_distillation/">Knowledge distillation</a> is interesting: unlike traditional distillation where a larger teacher transfers knowledge to a smaller student, here the model is both teacher and student, with the “teaching signal” coming from the temperature-shifted sampling distribution rather than from a more capable model. The theoretical decomposition (Equation 4 in the paper) into support compression, within-support reshaping, and base-model alignment terms makes this more precise.</p>
+            <p>The connection to <a href="/notes/distillation/">Distillation</a> is interesting: unlike traditional distillation where a larger teacher transfers knowledge to a smaller student, here the model is both teacher and student, with the “teaching signal” coming from the temperature-shifted sampling distribution rather than from a more capable model. The theoretical decomposition (Equation 4 in the paper) into support compression, within-support reshaping, and base-model alignment terms makes this more precise.</p>
             <p>It would be interesting to see whether this approach <a href="/notes/transfer_learning/">transfers</a> to other structured generation domains beyond code, and whether the lock/fork distinction holds for natural language generation tasks where correctness is less binary.</p>
             <h2 id="connections">Connections</h2>
             <ul>
-              <li>Related to <a href="/notes/knowledge_distillation/">Knowledge distillation</a> because SSD is a form of self-distillation where the model distills from its own temperature-shifted distribution
+              <li>Related to <a href="/notes/distillation/">Distillation</a> because SSD is a form of self-distillation where the model distills from its own temperature-shifted distribution
               </li>
               <li>Related to <a href="/notes/language_modeling/">Language modeling</a> because the method uses standard cross-entropy fine-tuning and the analysis centers on next-token distributions
               </li>
