@@ -11,7 +11,7 @@
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
   <meta property="article:published_time" content="0001-01-01T00:00:00Z">
-  <meta property="article:modified_time" content="2026-04-07T09:00:00+02:00">
+  <meta property="article:modified_time" content="2026-04-07T11:15:00+02:00">
   <meta property="article:author" content="Hugo Cisneros">
   <meta property="og:image" content="https://hugocisneros.com/img/main.jpeg">
   <meta property="og:image:width" content="400">
@@ -49,7 +49,7 @@
   function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/qucoralautonomousmultiagent2026\/"},"headline":"Notes on: CORAL: Towards Autonomous Multi-Agent Evolution for Open-Ended Discovery by Ao Qu, Han Zheng, Zijian …","description":"tags Open-ended evolution, Co-evolution, Quality diversity, Genetic algorithms, Coding agent, LLM source (Qu et al. 2026) Summary CORAL is a framework for …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2026-04-07T09:00:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":804}
+  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/qucoralautonomousmultiagent2026\/"},"headline":"Notes on: CORAL: Towards Autonomous Multi-Agent Evolution for Open-Ended Discovery by Ao Qu, Han Zheng, Zijian …","description":"tags Open-ended evolution, Co-evolution, Quality diversity, Genetic algorithms, Coding agent, LLM source (Qu et al. 2026) Summary CORAL is a framework for …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2026-04-07T11:15:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":804}
   </script>
 </head>
 <body>
@@ -115,6 +115,9 @@
       <div class="note-page bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg mb-6 overflow-hidden">
         <div class="p-5 sm:p-6">
           <h1 class="text-xl sm:text-2xl font-semibold mb-4 p-name text-zinc-900 dark:text-zinc-100" itemprop="name">CORAL: Towards Autonomous Multi-Agent Evolution for Open-Ended Discovery by Ao Qu, Han Zheng, Zijian Zhou, Yihao Yan, Yihong Tang, Shao Yong Ong, Fenglu Hong, Kaichen Zhou, Chonghe Jiang, Minwei Kong, Jiacheng Zhu, Xuan Jiang, Sirui Li, Cathy Wu, Bryan Kian Hsiang Low, Jinhua Zhao, Paul Pu Liang (2026)</h1>
+          <div class="bg-amber-50 dark:bg-amber-950 border border-amber-200 dark:border-amber-800 rounded-md p-3 mb-4 text-sm text-amber-800 dark:text-amber-200">
+            This note was initially drafted with LLM assistance. Generated notes are periodically reviewed and revised by the author.
+          </div>
           <div class="article-content e-content p-name prose dark:prose-invert max-w-none" itemprop="articleBody">
             <dl>
               <dt>tags</dt>
@@ -135,10 +138,12 @@
               <li>Distinguishes three paradigms for LLM-based open-ended discovery: fixed evolutionary search, autonomous single-agent evolution, and autonomous multi-agent evolution, with increasing agent autonomy at each level.</li>
               <li>Shared persistent memory as file system: agents store scored attempts, free-form notes (observations, failure modes), and reusable skills (scripts + natural-language descriptions) in a shared directory, enabling knowledge diffusion without explicit communication protocols.</li>
               <li>Heartbeat mechanism with three types: per-iteration reflection (write notes), periodic consolidation (merge findings into skills), and stagnation-triggered redirection (pivot strategy when stuck). These replace the fixed search loop of prior methods.</li>
-              <li>Agents exhibit emergent collaborative behaviors: cross-agent information transfer accounts for 36% of attempts on kernel engineering, with 66% of new records originating from cross-agent parents.</li>
+              <li>Agents exhibit <a href="/notes/emergence/">emergent</a> collaborative behaviors: cross-agent information transfer accounts for 36% of attempts on kernel engineering, with 66% of new records originating from cross-agent parents.
+              </li>
               <li>Exploration diversity is high: pairwise Jaccard similarity of strategy keywords is only 0.43 on kernel engineering and 0.31 on polyominoes, meaning each agent explores substantially different regions of the solution space.</li>
               <li>Knowledge accumulation is causally important: disabling notes and skills causes an 18.6% regression on kernel engineering (1,350 to 1,601 cycles).</li>
-              <li>All agents use Claude Opus 4.6 via Claude Code, and multi-agent results also generalize to open-source models (MiniMax M2.5 + OpenCode).</li>
+              <li>All agents use Claude Opus 4.6 via Claude Code, and <a href="/notes/multi_agent_collaboration/">multi-agent</a> results also generalize to open-source models (MiniMax M2.5 + OpenCode).
+              </li>
             </ul>
             <h2 id="comments">Comments</h2>
             <p>CORAL represents a natural evolution of the LLM-as-mutation-operator paradigm established by FunSearch and AlphaEvolve, pushing toward full agent autonomy in the evolutionary loop. The key insight is that for complex open-ended problems, the search decisions themselves (what to explore, what to remember, when to pivot) are as important as the mutations, and LLM agents are capable of making these decisions autonomously.</p>
@@ -173,7 +178,7 @@
           </div>
         </div>
         <div class="border-t border-zinc-200 dark:border-zinc-600 px-5 sm:px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400 text-center" style="font-variant-caps:all-small-caps">
-          Last changed <a class="u-url" href="https://hugocisneros.com/notes/qucoralautonomousmultiagent2026/"><time itemprop="datePublished" class="dt-published" datetime="2026-04-07T09:00:00+0200">2026.04.07</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/qucoralautonomousmultiagent2026/"><time itemprop="datePublished" class="dt-published" datetime="2026-04-07T11:15:00+0200">2026.04.07</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>

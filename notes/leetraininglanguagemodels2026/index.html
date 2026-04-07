@@ -11,7 +11,7 @@
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
   <meta property="article:published_time" content="0001-01-01T00:00:00Z">
-  <meta property="article:modified_time" content="2026-04-07T10:44:00+02:00">
+  <meta property="article:modified_time" content="2026-04-07T11:11:00+02:00">
   <meta property="article:tag" content="Cellular automata">
   <meta property="article:tag" content="Neural cellular automata">
   <meta property="article:tag" content="Transfer learning">
@@ -54,7 +54,7 @@
   function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/leetraininglanguagemodels2026\/"},"headline":"Notes on: Training Language Models via Neural Cellular Automata by Dan Lee, Seungwook Han, Akarsh Kumar, …","description":"tags Cellular automata, Neural cellular automata, Transfer learning, Kolmogorov complexity source (Lee et al. 2026) Summary This paper proposes using neural …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2026-04-07T10:44:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":720,"keywords":["Cellular automata","Neural cellular automata","Transfer learning","Kolmogorov complexity"]}
+  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/leetraininglanguagemodels2026\/"},"headline":"Notes on: Training Language Models via Neural Cellular Automata by Dan Lee, Seungwook Han, Akarsh Kumar, …","description":"tags Cellular automata, Neural cellular automata, Transfer learning, Kolmogorov complexity source (Lee et al. 2026) Summary This paper proposes using neural …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2026-04-07T11:11:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":737,"keywords":["Cellular automata","Neural cellular automata","Transfer learning","Kolmogorov complexity"]}
   </script>
 </head>
 <body>
@@ -120,6 +120,9 @@
       <div class="note-page bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg mb-6 overflow-hidden">
         <div class="p-5 sm:p-6">
           <h1 class="text-xl sm:text-2xl font-semibold mb-4 p-name text-zinc-900 dark:text-zinc-100" itemprop="name">Training Language Models via Neural Cellular Automata by Dan Lee, Seungwook Han, Akarsh Kumar, Pulkit Agrawal (2026)</h1>
+          <div class="bg-amber-50 dark:bg-amber-950 border border-amber-200 dark:border-amber-800 rounded-md p-3 mb-4 text-sm text-amber-800 dark:text-amber-200">
+            This note was initially drafted with LLM assistance. Generated notes are periodically reviewed and revised by the author.
+          </div>
           <div class="article-content e-content p-name prose dark:prose-invert max-w-none" itemprop="articleBody">
             <dl>
               <dt>tags</dt>
@@ -132,7 +135,7 @@
               </dd>
             </dl>
             <h2 id="summary">Summary</h2>
-            <p>This paper proposes using neural cellular automata (NCA) as a source of synthetic, non-linguistic data for <em>pre-pre-training</em> large language models: an initial training phase on synthetic data that precedes standard pre-training on natural language corpora.</p>
+            <p>This paper proposes using neural cellular automata (NCA) as a source of synthetic, non-linguistic data for <em>pre-pre-training</em> large language models: an initial training phase on <a href="/notes/synthetic_training_data/">synthetic data</a> that precedes standard pre-training on natural language corpora.</p>
             <p>The authors use 2D discrete NCA on a 12x12 grid with 10 states, where the transition rule is parameterized by a randomly sampled neural network (3x3 convolution + MLP). Trajectories are tokenized into patches and serialized as sequences for autoregressive training with a 1.6B parameter Llama-based transformer.</p>
             <p>The key finding is that pre-pre-training on only 164M NCA tokens improves downstream language modeling perplexity by up to 6% and accelerates convergence by 1.6x across web text, math, and code domains. Remarkably, this outperforms pre-pre-training on 1.6B tokens of natural language (C4) with more compute. The gains transfer to reasoning benchmarks including GSM8K, HumanEval, and BigBench-Lite.</p>
             <p>The paper investigates what drives transfer through ablations. Attention layers capture the most transferable computational primitives, while MLP layers encode domain-specific statistics. The optimal NCA complexity varies by downstream domain: code benefits from simpler dynamics (30 to 40% gzip compressibility), while web text and math favor more complex ones (50%+). This aligns with the intrinsic <a href="/notes/kolmogorov_complexity/">Kolmogorov complexity</a> of the target corpora, suggesting that matching synthetic data complexity to the target domain maximizes transfer.</p>
@@ -153,7 +156,7 @@
             <p>This is a striking result that connects <a href="/notes/cellular_automata/">cellular automata</a> research with <a href="/notes/llm/">LLM</a> training in an unexpected way. The finding that 160M tokens of NCA data outperform 1.6B tokens of natural language for pre-pre-training is surprising and suggests that the structure of training data, not its semantic content, is what matters most for acquiring general computational primitives. The question is whether the warm start really benefits from any given structure of the input token</p>
             <p>The connection to in-context learning is compelling: since each NCA sequence is generated by a unique random rule, next-token prediction forces the model to perform implicit Bayesian inference over the latent rule, exactly the mechanism underlying in-context learning in transformers.</p>
             <p>The paper is reminiscent of the <a href="/notes/cellular_automata_as_cnns/">cellular automata as CNNs</a> perspective from (<a href="#mordvintsevGrowingNeuralCellular2020"><cite itemprop="citation" itemscope itemid="doi:10.23915/distill.00023">Mordvintsev et al. 2020</cite></a>), but applied in the opposite direction: rather than using neural networks to <em>simulate</em> CA, this work uses CA dynamics to <em>train</em> neural networks.</p>
-            <p>The complexity matching finding is also noteworthy: it suggests that effective synthetic pre-training requires calibrating the statistical properties of the synthetic data to match the target domain, which connects to broader questions about <a href="/notes/kolmogorov_complexity/">Kolmogorov complexity</a> and what structural features matter for learning useful representations.</p>
+            <p>The complexity matching finding is also noteworthy: it suggests that effective synthetic pre-training requires calibrating the statistical properties of the synthetic data to match the target domain, which connects to broader questions about <a href="/notes/kolmogorov_complexity/">Kolmogorov complexity</a> and what structural features matter for learning useful representations ((<a href="#cisnerosEvolvingStructuresComplex2019"><cite itemprop="citation" itemscope itemid="doi:10.1109/SSCI44817.2019.9002840">Cisneros et al. 2019</cite></a>))</p>
             <h2 id="connections">Connections</h2>
             <ul>
               <li>Directly builds on <a href="/notes/mordvintsevgrowingneuralcellular2020/">Notes on: Growing Neural Cellular Automata</a> which introduced the NCA framework used here for synthetic data generation
@@ -173,11 +176,12 @@
               <li class="list-none my-4 mx-2">
                 <span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="mordvintsevGrowingNeuralCellular2020" itemid="doi:10.23915/distill.00023"><span itemprop="author">Alexander Mordvintsev, Ettore Randazzo, Eyvind Niklasson, Michael Levin</span>. <time datetime="2020" itemprop="datePublished">February 11, 2020</time>. <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">Distill</i></span> 5 (2):e23. <a itemprop="sameAs" href="https://doi.org/10.23915/distill.00023">DOI</a>.</span>&nbsp;<a href="/notes/mordvintsevgrowingneuralcellular2020/">See notes</a>
               </li>
+              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="cisnerosEvolvingStructuresComplex2019" itemid="doi:10.1109/SSCI44817.2019.9002840"><span itemprop="author">Hugo Cisneros, Josef Sivic, Tomas Mikolov</span>. <time datetime="2019" itemprop="datePublished">December 2019</time>. In , 230–37. IEEE. <a itemprop="sameAs" href="https://doi.org/10.1109/SSCI44817.2019.9002840">DOI</a>.</span></li>
             </ol>
           </div>
         </div>
         <div class="border-t border-zinc-200 dark:border-zinc-600 px-5 sm:px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400 text-center" style="font-variant-caps:all-small-caps">
-          Last changed <a class="u-url" href="https://hugocisneros.com/notes/leetraininglanguagemodels2026/"><time itemprop="datePublished" class="dt-published" datetime="2026-04-07T10:44:00+0200">2026.04.07</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/leetraininglanguagemodels2026/"><time itemprop="datePublished" class="dt-published" datetime="2026-04-07T11:11:00+0200">2026.04.07</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>
