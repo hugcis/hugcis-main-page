@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
+  <link rel="canonical" href="https://hugocisneros.com/notes/geospatial_ai/">
+  <title>Geospatial AI - Hugo Cisneros</title>
+  <meta property="og:title" content="Geospatial AI - Hugo Cisneros">
+  <meta property="og:site_name" content="Hugo Cisneros">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="0001-01-01T00:00:00Z">
+  <meta property="article:modified_time" content="2026-04-07T16:26:00+02:00">
+  <meta property="article:tag" content="Machine learning">
+  <meta property="article:tag" content="LLM">
+  <meta property="article:tag" content="Agent">
+  <meta property="article:tag" content="Computer vision">
+  <meta property="article:author" content="Hugo Cisneros">
+  <meta property="og:image" content="https://hugocisneros.com/img/main.jpeg">
+  <meta property="og:image:width" content="400">
+  <meta property="og:image:height" content="400">
+  <meta property="og:image:alt" content="Geospatial AI">
+  <meta property="og:url" content="https://hugocisneros.com/notes/geospatial_ai/">
+  <meta property="og:description" content="Notes about Geospatial AI">
+  <meta name="Description" property="description" content="Notes about Geospatial AI">
+  <link rel="me" href="https://twitter.com/@cisne_hug">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@cisne_hug">
+  <meta name="twitter:creator" content="@cisne_hug">
+  <meta name="twitter:title" content="Geospatial AI">
+  <meta name="twitter:description" content="tags Machine learning, LLM, Agent, Computer vision, Retrieval augmented generation The application of AI and LLMs to geospatial data like satellite imagery, GIS databases, mapping, and Earth …">
+  <meta name="twitter:image" content="https://hugocisneros.com/img/main.jpeg">
+  <link rel="me" href="https://scholar.social/@hugcis">
+  <link rel="me" href="https://github.com/hugcis">
+  <meta name="keywords" content="machine learning,llm,agent,computer vision">
+  <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
+  <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Source+Sans+3:ital,wght@0,300..900;1,300..900&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Source+Sans+3:ital,wght@0,300..900;1,300..900&amp;display=swap" media="print" onload='this.media="all"'><noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Source+Sans+3:ital,wght@0,300..900;1,300..900&amp;display=swap"></noscript>
+  <link rel="stylesheet" href="https://hugocisneros.com/css/style.min.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link href="https://hugocisneros.com/index.xml" type="application/atom+xml" rel="alternate" title="Sitewide Atom feed">
+  <meta name="theme-color" content="#f5f5f5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#27272a" media="(prefers-color-scheme: dark)">
+  <script>
+  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/geospatial_ai\/"},"headline":"Geospatial AI","description":"tags Machine learning, LLM, Agent, Computer vision, Retrieval augmented generation The application of AI and LLMs to geospatial data like satellite imagery, GIS …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2026-04-07T16:26:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":777,"keywords":["Machine learning","LLM","Agent","Computer vision"]}
+  </script>
+</head>
+<body>
+  <header class="md:px-0 px-2">
+    <nav>
+      <div class="container flex flex-wrap justify-between items-center mx-auto">
+        <div class="nav-main my-2.5">
+          <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl font-serif text-zinc-600 dark:text-zinc-300 no-underline-anim">Hugo Cisneros</a>
+        </div><button type="button" onclick="toggleMenu()" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul class="grid md:grid-flow-col items-center justify-between text-lg my-2.5 grid-cols-1 pl-0 text-center">
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 no-underline-anim transition-colors duration-150" href="/blog/">Blog</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none border-b-2 border-accent">
+              <a class="text-zinc-600 dark:text-zinc-300 no-underline-anim transition-colors duration-150 text-accent dark:text-accent-light font-medium" href="/notes/">Notes</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 no-underline-anim transition-colors duration-150" href="/projects/">Projects</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 no-underline-anim transition-colors duration-150" href="/resume/">Resume</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 no-underline-anim transition-colors duration-150" href="/contact/">Contact</a>
+            </li>
+            <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full" aria-label="Toggle between dark and light mode"><svg class="h-5 w-5 hidden dark:inline text-zinc-300 hover:text-accent-light transition-colors" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg><svg class="h-5 w-5 inline dark:hidden text-zinc-500 hover:text-accent transition-colors" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path></svg></button></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="content h-card container mt-2 m-auto leading-loose md:px-0 px-2 z-0" role="main">
+    <nav aria-label="Breadcrumb" class="breadcrumb text-sm text-gray-500 dark:text-gray-400 mb-4">
+      <ol class="flex flex-wrap items-center" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="flex items-center">
+          <a itemprop="item" href="https://hugocisneros.com/" class="border-none hover:text-gray-700 dark:hover:text-gray-200"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1"><span class="mx-2">/</span>
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="flex items-center">
+          <a itemprop="item" href="https://hugocisneros.com/notes/" class="border-none hover:text-gray-700 dark:hover:text-gray-200"><span itemprop="name">Notes</span></a>
+          <meta itemprop="position" content="2"><span class="mx-2">/</span>
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="flex items-center">
+          <span itemprop="name" class="text-gray-900 dark:text-gray-100 font-medium" aria-current="page">Geospatial AI</span>
+          <meta itemprop="item" content="https://hugocisneros.com/notes/geospatial_ai/">
+          <meta itemprop="position" content="3">
+        </li>
+      </ol>
+    </nav>
+    <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+      <div class="note-page bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg mb-6 overflow-hidden">
+        <div class="p-5 sm:p-6">
+          <h1 class="text-xl sm:text-2xl font-semibold mb-4 p-name text-zinc-900 dark:text-zinc-100" itemprop="name">Geospatial AI</h1>
+          <div class="article-content e-content p-name prose dark:prose-invert max-w-none" itemprop="articleBody">
+            <dl>
+              <dt>tags</dt>
+              <dd>
+                <a href="/notes/machine_learning/">Machine learning</a>, <a href="/notes/llm/">LLM</a>, <a href="/notes/agent/">Agent</a>, <a href="/notes/computer_vision/">Computer vision</a>, <a href="/notes/retrieval_augmented_generation/">Retrieval augmented generation</a>
+              </dd>
+            </dl>
+            <p>The application of AI and <a href="/notes/llm/">LLMs</a> to geospatial data like satellite imagery, GIS databases, mapping, and Earth observation. LLMs have become production-grade tools across the geospatial industry in 2024–2026.</p>
+            <h2 id="enterprise-gis-plus-llms">Enterprise GIS + LLMs</h2>
+            <p>The dominant deployment pattern (as of early 2026) is <strong>agentic orchestration</strong>: LLMs serve as reasoning layers that invoke specialized GIS tools, spatial databases, and domain-specific <a href="/notes/foundation_models/">Foundation models</a> rather than embedding all geospatial knowledge in model weights.</p>
+            <p>Key deployments:</p>
+            <ul>
+              <li><strong>Esri + Microsoft</strong> (July 2025): Azure OpenAI across ArcGIS. ArcGIS Pro Assistant generates ArcPy/SQL from natural language.</li>
+              <li>
+                <strong>CARTO AI Agents</strong> (early 2025): first “Agentic GIS” platform. Agents reason with spatial data in customer warehouses (BigQuery, Snowflake, Databricks). Open-source toolkit <code>@carto/agentic-deckgl</code> for map control via tool calls. Supports <a href="/notes/model_context_protocol/">Model Context Protocol</a>.
+              </li>
+              <li><strong>NASA Earth Copilot</strong>: natural language queries of 100+ PB of Earth observation data, built on Azure OpenAI.</li>
+              <li><strong>Planet Labs + Anthropic</strong> (March 2025): Claude for analyzing near-daily imagery from 200+ satellites—pattern recognition, anomaly detection, NL querying.</li>
+              <li><strong>Satellogic</strong>: GPUs deployed directly on orbit, AI running in real-time on satellites, downlinking insights within minutes. NextGen platform (Oct 2025) features 30cm resolution with onboard AI.</li>
+            </ul>
+            <h2 id="geospatial-foundation-models">Geospatial Foundation Models</h2>
+            <p>See <a href="/notes/foundation_models/">Foundation models</a>.</p>
+            <p>Key models in the geospatial domain (as of early 2026):</p>
+            <ul>
+              <li>
+                <strong>AlphaEarth Foundations</strong> (Google, July 2025): integrates optical, SAR, LiDAR, climate, and text into 64-dim embeddings per 10m² cell. 1.4 trillion embedding footprints/year via Earth Engine. 24% lower error, 16× more storage-efficient. (<a href="https://www.nature.com/articles/s41586-025-09065-4">Nature</a>)
+              </li>
+              <li>
+                <strong>Prithvi-EO-2.0</strong> (NASA/IBM, Dec 2024): 600M params, trained on 4.2M time-series samples from Harmonized Landsat-Sentinel-2. 75.6% avg on GEO-Bench (<a href="#szwarcmanPrithviEO2VersatileMultiTemporal2024"><cite itemprop="citation" itemscope itemid="key:szwarcmanPrithviEO2VersatileMultiTemporal2024">Szwarcman et al. 2024</cite></a>).
+              </li>
+              <li>
+                <strong>Clay Foundation Model</strong>: trained on 70M satellite/aerial images, 6400 GPU-hours on H100s. Channel-adaptive (varying bands/resolutions), 768-dim embeddings. (<a href="https://huggingface.co/made-with-clay">Hugging Face</a>)
+              </li>
+              <li><strong>TerraMind</strong> (ESA + IBM, April 2025): first “any-to-any” multimodal generative AI for Earth observation, Apache 2.0, outperforms comparable models by 8%+.</li>
+              <li>
+                <strong>OlmoEarth</strong> (Allen AI, 2025): ~10 TB of Earth observations, global mangrove maps at 97% accuracy updated 2× faster (<a href="https://olmoearth.allenai.org/">OlmoEarth</a>)
+              </li>
+            </ul>
+            <h2 id="autonomous-gis-agents">Autonomous GIS Agents</h2>
+            <p>The concept of “Autonomous GIS” was formalized by Penn State’s Zhenlong Li (2023). Li’s 2025 research agenda defines five autonomy levels (routine → workflow → data → result → knowledge-aware) and three operational scales (local, centralized, infrastructure).</p>
+            <ul>
+              <li><strong>GIS Copilot</strong> (2025): integrates LLM-Find (data), LLM-Geo (analysis), LLM-Cat (cartography) into QGIS. 86% success rate across 100+ multi-step tasks.</li>
+              <li>
+                <strong>Google Geospatial Reasoning</strong> (April 2025): Gemini 2.5 + Earth Engine + BigQuery + Maps. Scored 0.82 ± 0.02 on benchmarks (vs 0.50 baseline). (<a href="https://research.google/blog/geospatial-reasoning/">Google Research</a>)
+              </li>
+              <li><strong>Foursquare Spatial Agent</strong> (Feb 2026): multi-agent system (Planner, Data Prep, Analyst, Cartographer) using H3 hexagonal indexing, DuckDB, Kepler.gl.</li>
+              <li>
+                <strong>GeoAgent</strong> (Université Paris Cité, ECML PKDD 2025): code interpreter + static analysis + RAG within Monte Carlo Tree Search (<a href="#chenLLMAgentAutomatic2024"><cite itemprop="citation" itemscope itemid="key:chenLLMAgentAutomatic2024">Chen et al. 2024</cite></a>).
+              </li>
+            </ul>
+            <h2 id="frontier-lab-involvement">Frontier Lab Involvement</h2>
+            <p>As of early 2026:</p>
+            <ul>
+              <li><strong>Google</strong>: AlphaEarth, Earth AI, GenCast (weather, published in <em>Nature</em> Dec 2024, outperforms ECMWF in 97.2% of tests), Open Buildings v3 (1.8B footprints).</li>
+              <li><strong>OpenAI</strong>: o3 reasoning model identified overhead imagery locations without GEOINT-specific training (GEOINT Symposium, May 2025).</li>
+              <li><strong>Mistral AI</strong>: three-year framework with French Ministry of Armed Forces (Dec 2025). ESA “Ask ESA” platform built on Mistral LLMs. Sovereign AI positioning.</li>
+              <li><strong>Meta</strong>: Segment Anything Model (SAM → SAM 2 → SAM 3), segment-geospatial (SamGeo) package. Overture Maps Foundation (2.3B building footprints as of late 2025).</li>
+              <li><strong>Microsoft</strong>: Planetary Computer Pro (Build 2025), 1.2-1.4B building footprints (Jan 2026 count).</li>
+            </ul>
+            <h2 id="geospatial-driving-llm-capabilities">Geospatial Driving LLM Capabilities</h2>
+            <p>Geospatial requirements push four frontier capabilities:</p>
+            <ol>
+              <li>
+                <strong>Structured output generation</strong>: GeoJSON Agents (2025) achieved 97.14% accuracy via multi-agent architecture vs 48.57% for general LLMs (<a href="#luoGeoJSONAgentsMultiAgent2025"><cite itemprop="citation" itemscope itemid="key:luoGeoJSONAgentsMultiAgent2025">Luo et al. 2025</cite></a>).
+              </li>
+              <li><strong>Multi-step agentic planning</strong>: complex workflows like nine-step logistics routing (geocoding → route creation → geometry extraction → intersection → reporting).</li>
+              <li><strong>Multimodal processing</strong>: 6+ spectral bands, temporal sequences, resolutions from 0.1m to 30m.</li>
+              <li>
+                <strong>Spatial RAG</strong>: Spatial-RAG (Feb 2025) introduced sparse-dense hybrid retrieval combining SQL + LLM semantic matching, ~86% delivery rate on geospatial QA (<a href="#yuSpatialRAGSpatialRetrieval2025"><cite itemprop="citation" itemscope itemid="key:yuSpatialRAGSpatialRetrieval2025">Yu et al. 2025</cite></a>).
+              </li>
+            </ol>
+            <p>GeoLLM (ICLR 2024) showed LLMs embed “remarkable spatial information about locations” from internet text—fine-tuning GPT-3.5 with OpenStreetMap data yielded 70% improvement in predicting population density, wealth, income. (<a href="https://openreview.net/forum?id=TqL2xBwXP3">OpenReview</a>)</p>
+            <h2 id="bibliography">Bibliography</h2>
+            <ol class="biblio-list pl-0">
+              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="szwarcmanPrithviEO2VersatileMultiTemporal2024"><span itemprop="author">Daniela Szwarcman, Sujit Roy, Paolo Fraccaro, Þorsteinn Elí Gíslason, Benedikt Blumenstiel, Rinki Ghosal, Pedro Henrique de Oliveira, et al.</span>. <time datetime="2024" itemprop="datePublished">December 5, 2024</time>. "<span itemprop="name">Prithvi-EO-2.0: A Versatile Multi-Temporal Foundation Model for Earth Observation Applications</span>". <a itemprop="sameAs" href="https://arxiv.org/abs/2412.02732">https://arxiv.org/abs/2412.02732</a>.</span></li>
+              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="chenLLMAgentAutomatic2024"><span itemprop="author">Yuxing Chen, Weijie Wang, Sylvain Lobry, Camille Kurtz</span>. <time datetime="2024" itemprop="datePublished">October 24, 2024</time>. "<span itemprop="name">An LLM Agent for Automatic Geospatial Data Analysis</span>". <a itemprop="sameAs" href="https://arxiv.org/abs/2410.18792">https://arxiv.org/abs/2410.18792</a>.</span></li>
+              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="luoGeoJSONAgentsMultiAgent2025"><span itemprop="author">Qianqian Luo, Qingming Lin, Liuchang Xu, Sensen Wu, Ruichen Mao, Chao Wang, Hailin Feng, Bo Huang, Zhenhong Du</span>. <time datetime="2025" itemprop="datePublished">September 11, 2025</time>. "<span itemprop="name">GeoJSON Agents: A Multi-Agent LLM Architecture for Geospatial Analysis</span>". <a itemprop="sameAs" href="https://arxiv.org/abs/2509.08863">https://arxiv.org/abs/2509.08863</a>.</span></li>
+              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="yuSpatialRAGSpatialRetrieval2025"><span itemprop="author">Dazhou Yu, Riyang Bao, Ruiyu Ning, Jinghong Peng, Gengchen Mai, Liang Zhao</span>. <time datetime="2025" itemprop="datePublished">February 4, 2025</time>. "<span itemprop="name">Spatial-RAG: Spatial Retrieval Augmented Generation for Real-World Geospatial Reasoning Questions</span>". <a itemprop="sameAs" href="https://arxiv.org/abs/2502.18470">https://arxiv.org/abs/2502.18470</a>.</span></li>
+            </ol>
+          </div>
+        </div>
+        <div class="bl-section px-5 sm:px-6 py-4 border-t border-zinc-200 dark:border-zinc-600">
+          <h2 class="text-sm font-semibold mb-2 mt-0 text-zinc-500 dark:text-zinc-400">Links to this note</h2>
+          <div class="backlinks">
+            <ul class="m-0 pl-5 text-sm">
+              <li>
+                <a href="/notes/foundation_models/">Foundation models</a>
+              </li>
+              <li>
+                <a href="/notes/notes/">Knowledge Base Index</a>
+              </li>
+              <li>
+                <a href="/notes/model_context_protocol/">Model Context Protocol</a>
+              </li>
+              <li>
+                <a href="/notes/spatial_reasoning/">Spatial Reasoning</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-zinc-200 dark:border-zinc-600 px-5 sm:px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400 text-center" style="font-variant-caps:all-small-caps">
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/geospatial_ai/"><time itemprop="datePublished" class="dt-published" datetime="2026-04-07T16:26:00+0200">2026.04.07</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+        </div>
+      </div>
+    </article>
+    <section id="comments-container" class="comments-section" data-slug="/notes/geospatial_ai"></section>
+    <h3>Comments</h3>
+    <div id="comments-list" class="comments-list">
+      <p id="comments-loading" class="comments-loading">Loading comments...</p>
+    </div>
+    <p id="comments-error" class="comments-error" style="display:none"></p>
+    <form id="comment-form" class="comment-form" name="comment-form">
+      <h4>Leave a comment</h4>
+      <div class="form-group">
+        <label for="comment-name">Name <span class="required">*</span></label> <input type="text" id="comment-name" name="name" required="" maxlength="100" placeholder="Your name">
+      </div>
+      <div class="form-group">
+        <label for="comment-email">Email <span class="optional">(optional, not displayed)</span></label> <input type="email" id="comment-email" name="email" maxlength="254" placeholder="your@email.com">
+      </div>
+      <div class="form-group">
+        <label for="comment-content">Comment <span class="required">*</span></label> 
+        <textarea id="comment-content" name="content" required="" maxlength="10000" rows="4" placeholder="Write your comment..."></textarea>
+      </div>
+      <div id="turnstile-container" class="turnstile-container"></div><input type="hidden" id="turnstile-token" name="turnstile_token">
+      <p id="form-error" class="form-error" style="display:none"></p>
+      <p id="form-success" class="form-success" style="display:none"></p><button type="submit" class="comment-submit-btn">Post Comment</button>
+    </form>
+    <script src="/js/comments.js" defer></script> <a href="/notes#geospatial_ai" class="inline-flex items-center gap-2 mt-4 px-4 py-2 text-sm font-medium text-inherit bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg hover:border-zinc-400 dark:hover:border-zinc-500 hover:shadow-md transition-all duration-150"><svg class="inline-block" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path></svg>Back to Notes</a>
+  </main>
+  <footer class="footer container text-center mt-1 py-6">
+    <hr class="my-4">
+    <div class="flex items-center justify-center gap-4 mb-3">
+      <a href="https://github.com/hugcis" class="text-zinc-500 dark:text-zinc-400 hover:text-accent dark:hover:text-accent-light no-underline-anim" aria-label="GitHub" title="GitHub"><svg class="w-5 h-5" viewbox="0 0 24 24" fill="currentcolor">
+      <path d="M12 0C5.37.0.0 5.37.0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57.0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925.0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18.0.0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225.0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22.0 1.605-.015 2.895-.015 3.3.0.315.225.69.825.57A12.02 12.02.0 0024 12c0-6.63-5.37-12-12-12z"></path></svg></a><a href="https://scholar.google.com/citations?user=_uSIl-0AAAAJ&amp;hl=en" class="text-zinc-500 dark:text-zinc-400 hover:text-accent dark:hover:text-accent-light no-underline-anim" aria-label="Google Scholar" title="Google Scholar"><svg class="w-5 h-5" viewbox="0 0 24 24" fill="currentcolor">
+      <path d="M5.242 13.769.0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977.0-5.548 1.748-6.758 4.269zM12 10a7 7 0 100 14 7 7 0 000-14z"></path></svg></a><a href="https://scholar.social/@hugcis" rel="me" class="text-zinc-500 dark:text-zinc-400 hover:text-accent dark:hover:text-accent-light no-underline-anim" aria-label="Mastodon" title="Mastodon"><svg class="w-5 h-5" viewbox="0 0 24 24" fill="currentcolor">
+      <path d="M23.268 5.313c-.35-2.578-2.617-4.61-5.304-5.004C17.51.242 15.792.0 11.813.0h-.03c-3.98.0-4.835.242-5.288.309C3.882.692 1.496 2.518.917 5.127.64 6.412.61 7.837.661 9.143c.074 1.874.088 3.745.26 5.611.118 1.24.325 2.47.62 3.68.55 2.237 2.777 4.098 4.96 4.857 2.336.792 4.849.923 7.256.38.265-.061.527-.132.786-.213.585-.184 1.27-.39 1.774-.753a.057.057.0 00.023-.043v-1.809a.052.052.0 00-.02-.041.053.053.0 00-.046-.01 20.282 20.282.0 01-4.709.545c-2.73.0-3.463-1.284-3.674-1.818a5.593 5.593.0 01-.319-1.433.053.053.0 01.066-.054 19.648 19.648.0 004.581.536c.394.0.787.0 1.183-.014 2.136-.064 4.411-.132 6.426-.78a.077.077.0 00.055-.032c.803-1.267 1.074-3.06 1.08-4.634a18.22 18.22.0 00-.021-.57zM19.5 9.412v5.493h-2.178V9.607c0-1.148-.466-1.735-1.443-1.735-1.065.0-1.596.691-1.596 2.06v2.922H12.12V9.932c0-1.37-.532-2.06-1.597-2.06-.977.0-1.443.587-1.443 1.735v5.298H6.9V9.412c0-1.147.29-2.06.876-2.736.603-.676 1.392-1.022 2.375-1.022 1.137.0 1.997.432 2.567 1.297L12 8.078l1.282-1.127c.57-.865 1.431-1.297 2.567-1.297.983.0 1.773.346 2.375 1.022.585.676.876 1.589.876 2.736z"></path></svg></a>
+    </div>
+    <ul class="pl-0 mt-1">
+      <li class="first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 no-underline-anim" href="https://hugocisneros.com/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="https://hugocisneros.com/img/RSS.svg" alt="RSS feed icon" width="16" height="16"></a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="ml-2 text-neutral-800 dark:text-neutral-400 no-underline-anim" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block list-none"><span class="ml-2">© Hugo Cisneros 2026</span></li>
+    </ul>
+  </footer>
+  <link rel="stylesheet" href="/js/katex/katex.min.css">
+  <script src="/js/katex/katex.min.js"></script> 
+  <script src="/js/katex/contrib/auto-render.min.js"></script> 
+  <script>
+  document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"\\[",right:"\\]",display:!0},{left:"\\begin{align}",right:"\\end{align}",display:!0},{left:"$$",right:"$$",display:!0},{left:"\\begin{equation}",right:"\\end{equation}",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1}]})})
+  </script>
+  <script data-goatcounter="https://stats.hugocisneros.com/count" async src="//stats.hugocisneros.com/count.js"></script>
+</body>
+</html>

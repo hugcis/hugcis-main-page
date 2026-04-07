@@ -11,7 +11,7 @@
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
   <meta property="article:published_time" content="0001-01-01T00:00:00Z">
-  <meta property="article:modified_time" content="2022-08-04T13:42:00+02:00">
+  <meta property="article:modified_time" content="2026-04-07T16:02:00+02:00">
   <meta property="article:tag" content="NLP">
   <meta property="article:tag" content="Evaluating NLP">
   <meta property="article:author" content="Hugo Cisneros">
@@ -52,7 +52,7 @@
   function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/semantic_similarity\/"},"headline":"Semantic similarity","description":"tags NLP, Evaluating NLP N-gram matching For two sequences \\(x\\) and \\(\\hat{x}\\), we denote the sequence of $n$-grams with \\(S_x^n\\) and \\(S^n_{\\hat{x}}\\). The …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2022-08-04T13:42:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":646,"keywords":["NLP","Evaluating NLP"]}
+  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/semantic_similarity\/"},"headline":"Semantic similarity","description":"tags NLP, Evaluating NLP N-gram matching For two sequences \\(x\\) and \\(\\hat{x}\\), we denote the sequence of $n$-grams with \\(S_x^n\\) and \\(S^n_{\\hat{x}}\\). The …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2026-04-07T16:02:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":649,"keywords":["NLP","Evaluating NLP"]}
   </script>
 </head>
 <body>
@@ -147,6 +147,7 @@
             <p><strong>ROUGE-\(n\)</strong> computes Exact-\(R_n\) (usually \(n = 1, 2\)), while <strong>ROUGE-\(L\)</strong> is a variant of Exact-\(R_1\) with the numerator replaced by the length of the longest common subsequence.</p>
             <h2 id="edit-distance-based-metrics">Edit-distance-based metrics</h2>
             <h2 id="embedding-based-metrics">Embedding-based metrics</h2>
+            <p>See <a href="/notes/text_embeddings/">Text embeddings</a>.</p>
             <h3 id="universal-sentence-encoder">Universal sentence encoder</h3>
             <p>The Universal sentence encoder (USE) (<a href="#cerUniversalSentenceEncoder2018"><cite itemprop="citation" itemscope itemid="key:cerUniversalSentenceEncoder2018">Cer et al. 2018</cite></a>) can embed a sentence into a single vector. The distance between two sentence embeddings (usually normalized and therefore cosine distance), can then be used as a proxy for semantic similarity.</p>
             <h2 id="learned-metrics">Learned metrics</h2>
@@ -169,6 +170,9 @@
           <div class="backlinks">
             <ul class="m-0 pl-5 text-sm">
               <li>
+                <a href="/notes/contrastive_learning/">Contrastive learning</a>
+              </li>
+              <li>
                 <a href="/notes/notes/">Knowledge Base Index</a>
               </li>
               <li>
@@ -181,7 +185,7 @@
           </div>
         </div>
         <div class="border-t border-zinc-200 dark:border-zinc-600 px-5 sm:px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400 text-center" style="font-variant-caps:all-small-caps">
-          Last changed <a class="u-url" href="https://hugocisneros.com/notes/semantic_similarity/"><time itemprop="datePublished" class="dt-published" datetime="2022-08-04T13:42:00+0200">2022.08.04</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/semantic_similarity/"><time itemprop="datePublished" class="dt-published" datetime="2026-04-07T16:02:00+0200">2026.04.07</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>

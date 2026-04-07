@@ -11,7 +11,7 @@
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
   <meta property="article:published_time" content="0001-01-01T00:00:00Z">
-  <meta property="article:modified_time" content="2021-03-25T09:58:00+01:00">
+  <meta property="article:modified_time" content="2026-04-07T16:00:00+02:00">
   <meta property="article:tag" content="Machine learning">
   <meta property="article:author" content="Hugo Cisneros">
   <meta property="og:image" content="https://hugocisneros.com/img/main.jpeg">
@@ -51,7 +51,7 @@
   function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/self_supervised_learning\/"},"headline":"Self-supervised learning","description":"tags Machine learning Definition Self supervised learning (SSL) is a learning paradigm based on the idea of using information contained within the training data …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2021-03-25T09:58:00\u002b01:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":176,"keywords":["Machine learning"]}
+  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/self_supervised_learning\/"},"headline":"Self-supervised learning","description":"tags Machine learning Definition Self supervised learning (SSL) is a learning paradigm based on the idea of using information contained within the training data …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2026-04-07T16:00:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":182,"keywords":["Machine learning"]}
   </script>
 </head>
 <body>
@@ -129,8 +129,10 @@
             <h2 id="ssl-in-nlp--nlp-dot-md">SSL in <a href="/notes/nlp/">NLP</a></h2>
             <p>Self-supervised learning has been used for a long time in NLP. In <a href="/notes/language_modeling/">Language modeling</a>, one tries to predict words from previous ones. Recent language deep learning models have introduced other techniques such as allowing a <a href="/notes/transformers/">transformer</a> to read words forward and backward but partially masking them (<a href="#devlinBERTPretrainingDeep2019"><cite itemprop="citation" itemscope itemid="doi:10.48550/arXiv.1810.04805">Devlin et al. 2019</cite></a>).</p>
             <p><a href="/notes/word_vectors/">Word vectors</a> is another example of successful self-supervised learning which goal is to learn rich vector representations for words from their context.</p>
-            <h2 id="sll-in-computer-vision--computer-vision-dot-md">SLL in <a href="/notes/computer_vision/">Computer vision</a></h2>
+            <h2 id="ssl-in-computer-vision--computer-vision-dot-md">SSL in <a href="/notes/computer_vision/">Computer vision</a></h2>
             <p>In 2019 and 2020 self-supervised became more and more widespread in the vision community as the results on standard benchmarks started to match regular <a href="/notes/supervised_learning/">supervised learning</a>.</p>
+            <h2 id="training-of-ssl-models">Training of SSL models</h2>
+            <p><a href="/notes/contrastive_learning/">Contrastive learning</a></p>
             <h2 id="bibliography">Bibliography</h2>
             <ol class="biblio-list pl-0">
               <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="devlinBERTPretrainingDeep2019" itemid="doi:10.48550/arXiv.1810.04805"><span itemprop="author">Jacob Devlin, Ming-Wei Chang, Kenton Lee, Kristina Toutanova</span>. <time datetime="2019" itemprop="datePublished">May 24, 2019</time>. "<span itemprop="name">BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding</span>". May 24, 2019<a itemprop="sameAs" href="https://doi.org/10.48550/arXiv.1810.04805">DOI</a>.</span></li>
@@ -141,6 +143,9 @@
           <h2 class="text-sm font-semibold mb-2 mt-0 text-zinc-500 dark:text-zinc-400">Links to this note</h2>
           <div class="backlinks">
             <ul class="m-0 pl-5 text-sm">
+              <li>
+                <a href="/notes/foundation_models/">Foundation models</a>
+              </li>
               <li>
                 <a href="/notes/notes/">Knowledge Base Index</a>
               </li>
@@ -154,7 +159,7 @@
           </div>
         </div>
         <div class="border-t border-zinc-200 dark:border-zinc-600 px-5 sm:px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400 text-center" style="font-variant-caps:all-small-caps">
-          Last changed <a class="u-url" href="https://hugocisneros.com/notes/self_supervised_learning/"><time itemprop="datePublished" class="dt-published" datetime="2021-03-25T09:58:00+0100">2021.03.25</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/self_supervised_learning/"><time itemprop="datePublished" class="dt-published" datetime="2026-04-07T16:00:00+0200">2026.04.07</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>
