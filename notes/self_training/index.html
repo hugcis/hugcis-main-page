@@ -4,33 +4,36 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
-  <link rel="canonical" href="https://hugocisneros.com/notes/language_modeling/">
-  <title>Language modeling - Hugo Cisneros</title>
-  <meta property="og:title" content="Language modeling - Hugo Cisneros">
+  <link rel="canonical" href="https://hugocisneros.com/notes/self_training/">
+  <title>Self-training - Hugo Cisneros</title>
+  <meta property="og:title" content="Self-training - Hugo Cisneros">
   <meta property="og:site_name" content="Hugo Cisneros">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
   <meta property="article:published_time" content="0001-01-01T00:00:00Z">
-  <meta property="article:modified_time" content="2022-04-11T15:07:00+02:00">
-  <meta property="article:tag" content="NLP">
+  <meta property="article:modified_time" content="2026-04-07T12:32:00+02:00">
+  <meta property="article:tag" content="Machine learning">
+  <meta property="article:tag" content="Knowledge distillation">
+  <meta property="article:tag" content="Language modeling">
+  <meta property="article:tag" content="LLM">
   <meta property="article:author" content="Hugo Cisneros">
   <meta property="og:image" content="https://hugocisneros.com/img/main.jpeg">
   <meta property="og:image:width" content="400">
   <meta property="og:image:height" content="400">
-  <meta property="og:image:alt" content="Language modeling">
-  <meta property="og:url" content="https://hugocisneros.com/notes/language_modeling/">
-  <meta property="og:description" content="Notes about Language modeling">
-  <meta name="Description" property="description" content="Notes about Language modeling">
+  <meta property="og:image:alt" content="Self-training">
+  <meta property="og:url" content="https://hugocisneros.com/notes/self_training/">
+  <meta property="og:description" content="Notes about Self-training">
+  <meta name="Description" property="description" content="Notes about Self-training">
   <link rel="me" href="https://twitter.com/@cisne_hug">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@cisne_hug">
   <meta name="twitter:creator" content="@cisne_hug">
-  <meta name="twitter:title" content="Language modeling">
-  <meta name="twitter:description" content="tags NLP LM with RNNs Different models have been studied, starting from the initial recurrent neural network based language model (Mikolov et al. 2011). Recurrent neural networks LSTM were then used …">
+  <meta name="twitter:title" content="Self-training">
+  <meta name="twitter:description" content="tags Machine learning, Knowledge distillation, Language modeling, LLM Implications for open-ended evolution Looking at self training through the lense of Open-ended Evolution, it feels like pure self …">
   <meta name="twitter:image" content="https://hugocisneros.com/img/main.jpeg">
   <link rel="me" href="https://scholar.social/@hugcis">
   <link rel="me" href="https://github.com/hugcis">
-  <meta name="keywords" content="nlp">
+  <meta name="keywords" content="machine learning,knowledge distillation,language modeling,llm">
   <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
   <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,7 +54,7 @@
   function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/language_modeling\/"},"headline":"Language modeling","description":"tags NLP LM with RNNs Different models have been studied, starting from the initial recurrent neural network based language model (Mikolov et al. 2011). …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2022-04-11T15:07:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":306,"keywords":["NLP"]}
+  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/self_training\/"},"headline":"Self-training","description":"tags Machine learning, Knowledge distillation, Language modeling, LLM Implications for open-ended evolution Looking at self training through the lense of …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2026-04-07T12:32:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":95,"keywords":["Machine learning","Knowledge distillation","Language modeling","LLM"]}
   </script>
 </head>
 <body>
@@ -107,8 +110,8 @@
           <meta itemprop="position" content="2"><span class="mx-2">/</span>
         </li>
         <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="flex items-center">
-          <span itemprop="name" class="text-gray-900 dark:text-gray-100 font-medium" aria-current="page">Language modeling</span>
-          <meta itemprop="item" content="https://hugocisneros.com/notes/language_modeling/">
+          <span itemprop="name" class="text-gray-900 dark:text-gray-100 font-medium" aria-current="page">Self-training</span>
+          <meta itemprop="item" content="https://hugocisneros.com/notes/self_training/">
           <meta itemprop="position" content="3">
         </li>
       </ol>
@@ -116,51 +119,17 @@
     <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
       <div class="note-page bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg mb-6 overflow-hidden">
         <div class="p-5 sm:p-6">
-          <h1 class="text-xl sm:text-2xl font-semibold mb-4 p-name text-zinc-900 dark:text-zinc-100" itemprop="name">Language modeling</h1>
+          <h1 class="text-xl sm:text-2xl font-semibold mb-4 p-name text-zinc-900 dark:text-zinc-100" itemprop="name">Self-training</h1>
           <div class="article-content e-content p-name prose dark:prose-invert max-w-none" itemprop="articleBody">
             <dl>
               <dt>tags</dt>
               <dd>
-                <a href="/notes/nlp/">NLP</a>
+                <a href="/notes/machine_learning/">Machine learning</a>, <a href="/notes/knowledge_distillation/">Knowledge distillation</a>, <a href="/notes/language_modeling/">Language modeling</a>, <a href="/notes/llm/">LLM</a>
               </dd>
             </dl>
-            <h2 id="lm-with-rnns">LM with RNNs</h2>
-            <p>Different models have been studied, starting from the initial <a href="/notes/recurrent_neural_networks/">recurrent neural network</a> based language model (<a href="#mikolovRecurrentNeuralNetwork2011"><cite itemprop="citation" itemscope itemid="key:mikolovRecurrentNeuralNetwork2011">Mikolov et al. 2011</cite></a>). <a href="/notes/recurrent_neural_networks/">Recurrent neural networks</a></p>
-            <p>LSTM were then used with more success than previous models (<a href="#zarembaRecurrentNeuralNetwork2015"><cite itemprop="citation" itemscope itemid="key:zarembaRecurrentNeuralNetwork2015">Zaremba et al. 2015</cite></a>).</p>
-            <p>Recently, <a href="#lm-with-transformers--transformers-dot-md">transformers seem to have dominated language modeling</a>. However it is not clear if this is due to their real superiority over RNNs or their practical scalability (<a href="#meritySingleHeadedAttention2019"><cite itemprop="citation" itemscope itemid="key:meritySingleHeadedAttention2019">Merity 2019</cite></a>).</p>
-            <h2 id="lm-with-transformers--transformers-dot-md">LM with <a href="/notes/transformers/">Transformers</a></h2>
-            <p>Existing models:</p>
-            <ul>
-              <li>GPT-2, introduced in (<a href="#radfordLanguageModelsAre2019"><cite itemprop="citation" itemscope itemid="key:radfordLanguageModelsAre2019">Radford et al. 2019</cite></a>) and on <a href="https://openai.com/blog/better-language-models/">this page</a>.
-              </li>
-              <li>GPT-3, introduced in (<a href="#brownLanguageModelsAre2020"><cite itemprop="citation" itemscope itemid="key:brownLanguageModelsAre2020">Brown et al. 2020</cite></a>).
-              </li>
-              <li>BERT</li>
-              <li>RoBERTa</li>
-              <li>XLM</li>
-              <li>BART</li>
-              <li>AlBERT</li>
-              <li>CamemBERT</li>
-              <li>T5</li>
-            </ul>
-            <h2 id="language-modeling-and-compression--compression-dot-md">Language modeling and <a href="/notes/compression/">Compression</a></h2>
-            <h2 id="text-generation">Text generation</h2>
-            <p>Language models can be used to generate text from a prompt or starting sentence. This is the kind of examples that made models like GPT-2 and GPT-3 famous, because of their ability to generate long sequences of apparently coherent text (<a href="#radfordLanguageModelsAre2019"><cite itemprop="citation" itemscope itemid="key:radfordLanguageModelsAre2019">Radford et al. 2019</cite></a>; <a href="#brownLanguageModelsAre2020"><cite itemprop="citation" itemscope itemid="key:brownLanguageModelsAre2020">Brown et al. 2020</cite></a>).</p>
-            <h2 id="other-applications">Other applications</h2>
-            <h3 id="language-modeling-for-automated-theorem-proving--automated-theorem-proving-dot-md">Language modeling for <a href="/notes/automated_theorem_proving/">Automated theorem proving</a></h3>
-            <p>(<a href="#poluGenerativeLanguageModeling2020"><cite itemprop="citation" itemscope itemid="key:poluGenerativeLanguageModeling2020">Polu, Sutskever 2020</cite></a>)</p>
-            <h3 id="language-modeling-for-reinforcement-learning--reinforcement-learning-dot-md">Language modeling for <a href="/notes/reinforcement_learning/">Reinforcement Learning</a></h3>
-            <p>(<a href="#jannerReinforcementLearningOne2021"><cite itemprop="citation" itemscope itemid="key:jannerReinforcementLearningOne2021">Janner et al. 2021</cite></a>)</p>
-            <h2 id="bibliography">Bibliography</h2>
-            <ol class="biblio-list pl-0">
-              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="mikolovRecurrentNeuralNetwork2011"><span itemprop="author">Tomas Mikolov, Martin Karafiat, Lukas Burget, Jan Cernocky, Sanjeev Khudanpur</span>. <time datetime="2011" itemprop="datePublished">2011</time>. "<span itemprop="name">Recurrent Neural Network Based Language Model</span>". In , 4.</span></li>
-              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="zarembaRecurrentNeuralNetwork2015"><span itemprop="author">Wojciech Zaremba, Ilya Sutskever, Oriol Vinyals</span>. <time datetime="2015" itemprop="datePublished">February 19, 2015</time>. "<span itemprop="name">Recurrent Neural Network Regularization</span>". <a itemprop="sameAs" href="http://arxiv.org/abs/1409.2329">http://arxiv.org/abs/1409.2329</a>.</span></li>
-              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="meritySingleHeadedAttention2019"><span itemprop="author">Stephen Merity</span>. <time datetime="2019" itemprop="datePublished">November 26, 2019</time>. "<span itemprop="name">Single Headed Attention RNN: Stop Thinking With Your Head</span>". <a itemprop="sameAs" href="http://arxiv.org/abs/1911.11423">http://arxiv.org/abs/1911.11423</a>.</span></li>
-              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="radfordLanguageModelsAre2019"><span itemprop="author">Alec Radford, Jeffrey Wu, Rewon Child, David Luan, Dario Amodei, Ilya Sutskever</span>. <time datetime="2019" itemprop="datePublished">2019</time>. "<span itemprop="name">Language Models Are Unsupervised Multitask Learners</span>". <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Periodical"><i itemprop="name">OpenAI Blog</i></span> 1 (8):9.</span></li>
-              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="brownLanguageModelsAre2020"><span itemprop="author">Tom B. Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared Kaplan, Prafulla Dhariwal, Arvind Neelakantan, et al.</span>. <time datetime="2020" itemprop="datePublished">June 4, 2020</time>. "<span itemprop="name">Language Models Are Few-Shot Learners</span>". <a itemprop="sameAs" href="http://arxiv.org/abs/2005.14165">http://arxiv.org/abs/2005.14165</a>.</span></li>
-              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="poluGenerativeLanguageModeling2020"><span itemprop="author">Stanislas Polu, Ilya Sutskever</span>. <time datetime="2020" itemprop="datePublished">September 7, 2020</time>. "<span itemprop="name">Generative Language Modeling for Automated Theorem Proving</span>". <a itemprop="sameAs" href="http://arxiv.org/abs/2009.03393">http://arxiv.org/abs/2009.03393</a>.</span></li>
-              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="jannerReinforcementLearningOne2021"><span itemprop="author">Michael Janner, Qiyang Li, Sergey Levine</span>. <time datetime="2021" itemprop="datePublished">June 3, 2021</time>. "<span itemprop="name">Reinforcement Learning as One Big Sequence Modeling Problem</span>". <a itemprop="sameAs" href="http://arxiv.org/abs/2106.02039">http://arxiv.org/abs/2106.02039</a>.</span></li>
-            </ol>
+            <h2 id="implications-for-open-ended-evolution">Implications for open-ended evolution</h2>
+            <p>Looking at self training through the lense of <a href="/notes/open_ended_evolution/">Open-ended Evolution</a>, it feels like pure self training (only a model with itself) cannot lead to radical improvement or novel behavior since it is fundamentally limited by the original distribution that the model is capable of modeling.</p>
+            <p>Only external inputs (harness, environment, etc.) can lead the model to change its output distribution significantly enough, whereas self-learning can help with refining an existing distribution, by pruning tails, or increasing the strength of certain subspaces for example.</p>
           </div>
         </div>
         <div class="bl-section px-5 sm:px-6 py-4 border-t border-zinc-200 dark:border-zinc-600">
@@ -168,68 +137,17 @@
           <div class="backlinks">
             <ul class="m-0 pl-5 text-sm">
               <li>
-                <a href="/notes/compression/">Compression</a>
-              </li>
-              <li>
-                <a href="/notes/notes/">Knowledge Base Index</a>
-              </li>
-              <li>
-                <a href="/notes/llm/">LLM</a>
-              </li>
-              <li>
-                <a href="/notes/llm_harness/">LLM Harness</a>
-              </li>
-              <li>
-                <a href="/notes/nlp/">NLP</a>
-              </li>
-              <li>
-                <a href="/notes/benderclimbingnlumeaning2020/">Notes on: Climbing towards NLU: On Meaning, Form, and Understanding in the Age of Data by Bender, E. M., & Koller, A. (2020)</a>
-              </li>
-              <li>
-                <a href="/notes/hudrinkingfirehosecontinual2020/">Notes on: Drinking from a Firehose: Continual Learning with Web-scale Natural Language by Hu, H., Sener, O., Sha, F., & Koltun, V. (2020)</a>
-              </li>
-              <li>
                 <a href="/notes/zhangembarrassinglysimpleselfdistillation2026/">Notes on: Embarrassingly Simple Self-Distillation Improves Code Generation by Zhang, R., Bai, R. H., Zheng, H., Jaitly, N., Collobert, R., & Zhang, Y. (2026)</a>
-              </li>
-              <li>
-                <a href="/notes/zophneuralarchitecturesearch2017/">Notes on: Neural Architecture Search with Reinforcement Learning by Zoph, B., & Le, Q. V. (2017)</a>
-              </li>
-              <li>
-                <a href="/notes/lupretrainedtransformersuniversal2021/">Notes on: Pretrained Transformers as Universal Computation Engines by Lu, K., Grover, A., Abbeel, P., & Mordatch, I. (2021)</a>
-              </li>
-              <li>
-                <a href="/notes/aitkengeometryintegrationtext2020/">Notes on: The geometry of integration in text classification RNNs by Aitken, K., Ramasesh, V. V., Garg, A., Cao, Y., Sussillo, D., & Maheswaranathan, N. (2020)</a>
-              </li>
-              <li>
-                <a href="/notes/katharopoulostransformersarernns2020/">Notes on: Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention by Katharopoulos, A., Vyas, A., Pappas, N., & Fleuret, F. (2020)</a>
-              </li>
-              <li>
-                <a href="/notes/quantization/">Quantization</a>
-              </li>
-              <li>
-                <a href="/notes/self_supervised_learning/">Self-supervised learning</a>
-              </li>
-              <li>
-                <a href="/notes/self_training/">Self-training</a>
-              </li>
-              <li>
-                <a href="/notes/transformers/">Transformers</a>
-              </li>
-              <li>
-                <a href="/notes/word_vectors/">Word vectors</a>
-              </li>
-              <li>
-                <a href="/notes/xlnet/">XLNet</a>
               </li>
             </ul>
           </div>
         </div>
         <div class="border-t border-zinc-200 dark:border-zinc-600 px-5 sm:px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400 text-center" style="font-variant-caps:all-small-caps">
-          Last changed <a class="u-url" href="https://hugocisneros.com/notes/language_modeling/"><time itemprop="datePublished" class="dt-published" datetime="2022-04-11T15:07:00+0200">2022.04.11</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/self_training/"><time itemprop="datePublished" class="dt-published" datetime="2026-04-07T12:32:00+0200">2026.04.07</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>
-    <section id="comments-container" class="comments-section" data-slug="/notes/language_modeling"></section>
+    <section id="comments-container" class="comments-section" data-slug="/notes/self_training"></section>
     <h3>Comments</h3>
     <div id="comments-list" class="comments-list">
       <p id="comments-loading" class="comments-loading">Loading comments...</p>
@@ -251,7 +169,7 @@
       <p id="form-error" class="form-error" style="display:none"></p>
       <p id="form-success" class="form-success" style="display:none"></p><button type="submit" class="comment-submit-btn">Post Comment</button>
     </form>
-    <script src="/js/comments.js" defer></script> <a href="/notes#language_modeling" class="inline-flex items-center gap-2 mt-4 px-4 py-2 text-sm font-medium text-inherit bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg hover:border-zinc-400 dark:hover:border-zinc-500 hover:shadow-md transition-all duration-150"><svg class="inline-block" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2">
+    <script src="/js/comments.js" defer></script> <a href="/notes#self_training" class="inline-flex items-center gap-2 mt-4 px-4 py-2 text-sm font-medium text-inherit bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg hover:border-zinc-400 dark:hover:border-zinc-500 hover:shadow-md transition-all duration-150"><svg class="inline-block" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2">
     <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path></svg>Back to Notes</a>
   </main>
   <footer class="footer container text-center mt-1 py-6">
