@@ -11,7 +11,7 @@
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
   <meta property="article:published_time" content="0001-01-01T00:00:00Z">
-  <meta property="article:modified_time" content="2026-04-07T12:37:00+02:00">
+  <meta property="article:modified_time" content="2026-04-08T14:10:00+02:00">
   <meta property="article:tag" content="Distillation">
   <meta property="article:tag" content="Language modeling">
   <meta property="article:tag" content="Program synthesis">
@@ -54,7 +54,7 @@
   function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/zhangembarrassinglysimpleselfdistillation2026\/"},"headline":"Notes on: Embarrassingly Simple Self-Distillation Improves Code Generation by Zhang, R., Bai, R. H., Zheng, …","description":"tags Distillation, Language modeling, Program synthesis, Large language models source (Zhang et al. 2026) Summary This paper introduces simple self-distillation …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2026-04-07T12:37:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":760,"keywords":["Distillation","Language modeling","Program synthesis","Large language models"]}
+  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/zhangembarrassinglysimpleselfdistillation2026\/"},"headline":"Notes on: Embarrassingly Simple Self-Distillation Improves Code Generation by Zhang, R., Bai, R. H., Zheng, …","description":"tags Distillation, Language modeling, Program synthesis, Large language models source (Zhang et al. 2026) Summary This paper introduces simple self-distillation …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2026-04-08T14:10:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":768,"keywords":["Distillation","Language modeling","Program synthesis","Large language models"]}
   </script>
 </head>
 <body>
@@ -135,7 +135,8 @@
               </dd>
             </dl>
             <h2 id="summary">Summary</h2>
-            <p>This paper introduces <em>simple self-distillation</em> (SSD), a method where an <a href="/notes/llm/">LLM</a> improves its own code generation by sampling solutions from itself with specific temperature and truncation settings, then fine-tuning on those raw, unverified samples using standard supervised fine-tuning (cross-entropy loss). Crucially, SSD requires no external teacher model, no verifier, no execution environment, no reward model, and no reinforcement learning. This technique requires only the model itself and a set of problem prompts.</p>
+            <p>This paper introduces <em>simple self-distillation</em> (SSD), a method where an <a href="/notes/llm/">LLM</a> improves its own code generation by sampling solutions from itself with specific temperature and truncation settings, then fine-tuning on those raw, unverified samples using standard supervised fine-tuning (cross-entropy loss).</p>
+            <p>Crucially, SSD requires no external teacher model, no verifier (as opposed to <a href="/notes/reinforcement_learning_with_verifiable_rewards/">Reinforcement learning with verifiable rewards</a>), no execution environment, no reward model, and no reinforcement learning. This technique requires only the model itself and a set of problem prompts.</p>
             <p>SSD achieves substantial gains: Qwen3-30B-Instruct improves from 42.4% to 55.3% pass@1 on LiveCodeBench v6, a +30% relative improvement. The method generalizes across both Qwen and Llama model families at 4B, 8B, and 30B scale, including both instruct and thinking variants. Gains concentrate on harder problems, and pass@5 often improves more than pass@1, suggesting SSD preserves generation diversity rather than collapsing to a single mode.</p>
             <p>The paper provides a compelling mechanistic explanation through the <em>precision-exploration conflict</em>: code generation interleaves “lock” positions (where the correct token is clear and distractors must be suppressed) and “fork” positions (where multiple valid algorithmic approaches exist and diversity should be preserved). A single global decoding temperature cannot satisfy both simultaneously. SSD resolves this by reshaping token distributions in a context-dependent way — performing <em>support compression</em> (trimming diffuse tails) and <em>within-support reshaping</em> (redistributing mass among viable tokens). The authors validate this through toy simulations, real-model analysis on Qwen3-30B-Instruct, and a formal theoretical decomposition of the SSD objective into three interpretable terms (Equation 4).</p>
             <h2 id="key-ideas">Key Ideas</h2>
@@ -173,8 +174,18 @@
             </ol>
           </div>
         </div>
+        <div class="bl-section px-5 sm:px-6 py-4 border-t border-zinc-200 dark:border-zinc-600">
+          <h2 class="text-sm font-semibold mb-2 mt-0 text-zinc-500 dark:text-zinc-400">Links to this note</h2>
+          <div class="backlinks">
+            <ul class="m-0 pl-5 text-sm">
+              <li>
+                <a href="/notes/hubotterreinforcementlearningselfdistillation2026/">Notes on: Reinforcement Learning via Self-Distillation by Hübotter, J., Lübeck, F., Behric, L., Baumann, A., Bagatella, M., Marta, D., Hakimi, I., Shenfeld, I., Kleine Buening, T., Guestrin, C. & Krause, A. (2026)</a>
+              </li>
+            </ul>
+          </div>
+        </div>
         <div class="border-t border-zinc-200 dark:border-zinc-600 px-5 sm:px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400 text-center" style="font-variant-caps:all-small-caps">
-          Last changed <a class="u-url" href="https://hugocisneros.com/notes/zhangembarrassinglysimpleselfdistillation2026/"><time itemprop="datePublished" class="dt-published" datetime="2026-04-07T12:37:00+0200">2026.04.07</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/zhangembarrassinglysimpleselfdistillation2026/"><time itemprop="datePublished" class="dt-published" datetime="2026-04-08T14:10:00+0200">2026.04.08</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>

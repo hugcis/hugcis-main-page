@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
+  <link rel="canonical" href="https://hugocisneros.com/notes/hubotterreinforcementlearningselfdistillation2026/">
+  <title>Notes on: Reinforcement Learning via Self-Distillation by Hübotter, J., Lübeck, F., Behric, L., Baumann, A., Bagatella, M., Marta, D., Hakimi, I., Shenfeld, I., Kleine Buening, T., Guestrin, C. & Krause, A. (2026) - Hugo Cisneros</title>
+  <meta property="og:title" content="Notes on: Reinforcement Learning via Self-Distillation by Hübotter, J., Lübeck, F., Behric, L., Baumann, A., Bagatella, M., Marta, D., Hakimi, I., Shenfeld, I., Kleine Buening, T., Guestrin, C. &amp; Krause, A. (2026) - Hugo Cisneros">
+  <meta property="og:site_name" content="Hugo Cisneros">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="0001-01-01T00:00:00Z">
+  <meta property="article:modified_time" content="2026-04-08T14:10:00+02:00">
+  <meta property="article:tag" content="Reinforcement learning">
+  <meta property="article:tag" content="Distillation">
+  <meta property="article:tag" content="Large language models">
+  <meta property="article:author" content="Hugo Cisneros">
+  <meta property="og:image" content="https://hugocisneros.com/img/main.jpeg">
+  <meta property="og:image:width" content="400">
+  <meta property="og:image:height" content="400">
+  <meta property="og:image:alt" content="Notes on: Reinforcement Learning via Self-Distillation by Hübotter, J., Lübeck, F., Behric, L., Baumann, A., Bagatella, M., Marta, D., Hakimi, I., Shenfeld, I., Kleine Buening, T., Guestrin, C. &amp; Krause, A. (2026)">
+  <meta property="og:url" content="https://hugocisneros.com/notes/hubotterreinforcementlearningselfdistillation2026/">
+  <meta property="og:description" content="Notes about Reinforcement Learning via Self-Distillation by Hübotter, J., Lübeck, F., Behric, L., Baumann, A., Bagatella, M., Marta, D., Hakimi, I., Shenfeld, I., Kleine Buening, T., Guestrin, C. &amp; Krause, A. (2026)">
+  <meta name="Description" property="description" content="Notes about Reinforcement Learning via Self-Distillation by Hübotter, J., Lübeck, F., Behric, L., Baumann, A., Bagatella, M., Marta, D., Hakimi, I., Shenfeld, I., Kleine Buening, T., Guestrin, C. &amp; Krause, A. (2026)">
+  <link rel="me" href="https://twitter.com/@cisne_hug">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@cisne_hug">
+  <meta name="twitter:creator" content="@cisne_hug">
+  <meta name="twitter:title" content="Notes on: Reinforcement Learning via Self-Distillation by Hübotter, J., Lübeck, F., Behric, L., Baumann, A., Bagatella, M., Marta, D., Hakimi, I., Shenfeld, I., Kleine Buening, T., Guestrin, C. &amp; Krause, A. (2026)">
+  <meta name="twitter:description" content="tags Reinforcement learning, Distillation, Large language models, In-context learning source (Hübotter et al. 2026) Summary This paper introduces Self-Distillation Policy Optimization (SDPO), a new …">
+  <meta name="twitter:image" content="https://hugocisneros.com/img/main.jpeg">
+  <link rel="me" href="https://scholar.social/@hugcis">
+  <link rel="me" href="https://github.com/hugcis">
+  <meta name="keywords" content="reinforcement learning,distillation,large language models">
+  <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
+  <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Source+Sans+3:ital,wght@0,300..900;1,300..900&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Source+Sans+3:ital,wght@0,300..900;1,300..900&amp;display=swap" media="print" onload='this.media="all"'><noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Source+Sans+3:ital,wght@0,300..900;1,300..900&amp;display=swap"></noscript>
+  <link rel="stylesheet" href="https://hugocisneros.com/css/style.min.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link href="https://hugocisneros.com/index.xml" type="application/atom+xml" rel="alternate" title="Sitewide Atom feed">
+  <meta name="theme-color" content="#f5f5f5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#27272a" media="(prefers-color-scheme: dark)">
+  <script>
+  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/hubotterreinforcementlearningselfdistillation2026\/"},"headline":"Notes on: Reinforcement Learning via Self-Distillation by Hübotter, J., Lübeck, F., Behric, L., Baumann, A., …","description":"tags Reinforcement learning, Distillation, Large language models, In-context learning source (Hübotter et al. 2026) Summary This paper introduces …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2026-04-08T14:10:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":781,"keywords":["Reinforcement learning","Distillation","Large language models"]}
+  </script>
+</head>
+<body>
+  <header class="md:px-0 px-2">
+    <nav>
+      <div class="container flex flex-wrap justify-between items-center mx-auto">
+        <div class="nav-main my-2.5">
+          <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl font-serif text-zinc-600 dark:text-zinc-300 no-underline-anim">Hugo Cisneros</a>
+        </div><button type="button" onclick="toggleMenu()" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul class="grid md:grid-flow-col items-center justify-between text-lg my-2.5 grid-cols-1 pl-0 text-center">
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 no-underline-anim transition-colors duration-150" href="/blog/">Blog</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none border-b-2 border-accent">
+              <a class="text-zinc-600 dark:text-zinc-300 no-underline-anim transition-colors duration-150 text-accent dark:text-accent-light font-medium" href="/notes/">Notes</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 no-underline-anim transition-colors duration-150" href="/projects/">Projects</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 no-underline-anim transition-colors duration-150" href="/resume/">Resume</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 no-underline-anim transition-colors duration-150" href="/contact/">Contact</a>
+            </li>
+            <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full" aria-label="Toggle between dark and light mode"><svg class="h-5 w-5 hidden dark:inline text-zinc-300 hover:text-accent-light transition-colors" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg><svg class="h-5 w-5 inline dark:hidden text-zinc-500 hover:text-accent transition-colors" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path></svg></button></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="content h-card container mt-2 m-auto leading-loose md:px-0 px-2 z-0" role="main">
+    <nav aria-label="Breadcrumb" class="breadcrumb text-sm text-gray-500 dark:text-gray-400 mb-4">
+      <ol class="flex flex-wrap items-center" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="flex items-center">
+          <a itemprop="item" href="https://hugocisneros.com/" class="border-none hover:text-gray-700 dark:hover:text-gray-200"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1"><span class="mx-2">/</span>
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="flex items-center">
+          <a itemprop="item" href="https://hugocisneros.com/notes/" class="border-none hover:text-gray-700 dark:hover:text-gray-200"><span itemprop="name">Notes</span></a>
+          <meta itemprop="position" content="2"><span class="mx-2">/</span>
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="flex items-center">
+          <span itemprop="name" class="text-gray-900 dark:text-gray-100 font-medium" aria-current="page">Notes on: Reinforcement Learning via …</span>
+          <meta itemprop="item" content="https://hugocisneros.com/notes/hubotterreinforcementlearningselfdistillation2026/">
+          <meta itemprop="position" content="3">
+        </li>
+      </ol>
+    </nav>
+    <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+      <div class="note-page bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg mb-6 overflow-hidden">
+        <div class="p-5 sm:p-6">
+          <h1 class="text-xl sm:text-2xl font-semibold mb-4 p-name text-zinc-900 dark:text-zinc-100" itemprop="name">Reinforcement Learning via Self-Distillation by Hübotter, J., Lübeck, F., Behric, L., Baumann, A., Bagatella, M., Marta, D., Hakimi, I., Shenfeld, I., Kleine Buening, T., Guestrin, C. & Krause, A. (2026)</h1>
+          <div class="bg-amber-50 dark:bg-amber-950 border border-amber-200 dark:border-amber-800 rounded-md p-3 mb-4 text-sm text-amber-800 dark:text-amber-200">
+            This note was initially drafted with LLM assistance. Generated notes are periodically reviewed and revised by the author.
+          </div>
+          <div class="article-content e-content p-name prose dark:prose-invert max-w-none" itemprop="articleBody">
+            <dl>
+              <dt>tags</dt>
+              <dd>
+                <a href="/notes/reinforcement_learning/">Reinforcement learning</a>, <a href="/notes/distillation/">Distillation</a>, <a href="/notes/llm/">Large language models</a>, <a href="/notes/in_context_learning/">In-context learning</a>
+              </dd>
+              <dt>source</dt>
+              <dd>
+                (<a href="#hubotterReinforcementLearningSelfDistillation2026"><cite itemprop="citation" itemscope itemid="key:hubotterReinforcementLearningSelfDistillation2026">Hübotter et al. 2026</cite></a>)
+              </dd>
+            </dl>
+            <h2 id="summary">Summary</h2>
+            <p>This paper introduces <strong>Self-Distillation Policy Optimization (SDPO)</strong>, a new algorithm for post-training <a href="/notes/llm/">large language models</a> with <a href="/notes/reinforcement_learning/">reinforcement learning</a>. Current methods for <a href="/notes/reinforcement_learning_with_verifiable_rewards/">RL with verifiable rewards</a> (RLVR), such as GRPO, learn only from sparse scalar outcome rewards (e.g., pass/fail), creating a severe credit-assignment bottleneck. The authors formalize a more general setting called <strong>Reinforcement Learning with Rich Feedback (RLRF)</strong>, where environments provide tokenized feedback (runtime errors, judge evaluations) explaining <em>why</em> an attempt failed.</p>
+            <p>SDPO’s core insight is that the same model can serve as both student and teacher: conditioned on the rich feedback, the model can retrospectively identify where its original attempt went wrong. SDPO re-evaluates the log-probabilities of the original rollout under this feedback-augmented “self-teacher” context, then minimizes the KL divergence between the student and self-teacher next-token distributions. This yields dense, logit-level credit assignment without any external teacher model or explicit reward model. The method can be implemented as a drop-in replacement for GRPO by simply swapping the advantage computation.</p>
+            <p>Evaluated on scientific reasoning (SciKnowEval), tool use (ToolAlpaca), and competitive programming (LiveCodeBench v6), SDPO consistently outperforms strong GRPO baselines. On LCBv6, SDPO achieves 48.8% vs. GRPO’s 41.2% with Qwen3-8B, reaching GRPO’s final accuracy in 4x fewer generations. SDPO also produces substantially shorter, more concise reasoning traces (up to 11x shorter). The method’s effectiveness scales with model size, suggesting that self-teaching is an emergent capability. The paper further demonstrates <strong><a href="/notes/test_time_compute/">Test-Time</a> Self-Distillation</strong>, where SDPO applied at test time to individual hard questions accelerates solution discovery by 3x compared to best-of-k sampling.</p>
+            <h2 id="key-ideas">Key Ideas</h2>
+            <ul>
+              <li><strong>RLRF formalization:</strong> Extends RLVR by allowing arbitrary tokenized feedback from the environment, not just scalar rewards</li>
+              <li>
+                <strong>Self-teacher mechanism:</strong> The same policy conditioned on feedback serves as its own teacher, leveraging <a href="/notes/in_context_learning/">in-context learning</a> for retrospective error identification
+              </li>
+              <li><strong>Dense credit assignment:</strong> SDPO assigns per-token logit-level advantages, unlike GRPO’s constant sequence-level advantages</li>
+              <li>
+                <strong>No external teacher needed:</strong> Unlike standard <a href="/notes/distillation/">distillation</a>, SDPO uses the model itself — the self-teacher improves during training, enabling bootstrapping from a weak initial model to a strong final one
+              </li>
+              <li><strong>Works without rich feedback:</strong> Even in standard RLVR settings with only scalar rewards, SDPO outperforms GRPO by using successful rollouts as implicit feedback for failed attempts</li>
+              <li><strong>Concise reasoning:</strong> SDPO consistently produces shorter generations while achieving higher accuracy, suggesting it improves reasoning <em>efficiency</em> rather than just scaling response length</li>
+              <li><strong>Test-time self-distillation:</strong> SDPO can be applied at test time to specialize the model on a single hard question, compressing interaction context into model weights</li>
+              <li><strong>Emergent with scale:</strong> SDPO’s gains grow with model size, with self-teaching ability appearing to be an emergent phenomenon</li>
+            </ul>
+            <h2 id="comments">Comments</h2>
+            <p>SDPO is a compelling contribution that elegantly bridges <a href="/notes/distillation/">distillation</a> and <a href="/notes/reinforcement_learning/">reinforcement learning</a>. The key novelty is recognizing that LLMs’ <a href="/notes/in_context_learning/">in-context learning</a> ability can be repurposed for credit assignment — the model can “see” its own mistakes when given feedback. This is conceptually related to <a href="/notes/self_training/">self-training</a>, but operates at the logit level rather than generating new samples.</p>
+            <p>The finding that SDPO produces much shorter reasoning traces is particularly interesting — it suggests that verbose “chain-of-thought” patterns in GRPO-trained models may be artifacts of poor credit assignment rather than genuine reasoning. The test-time self-distillation application is also novel, showing that RL-style learning can happen on individual questions at inference time.</p>
+            <p>A limitation is that SDPO’s advantage over GRPO diminishes for smaller models (below Qwen3-0.6B), which makes sense since the self-teacher relies on in-context learning ability. The paper is closely related to (<a href="#zhangEmbarrassinglySimpleSelfDistillation2026"><cite itemprop="citation" itemscope itemid="key:zhangEmbarrassinglySimpleSelfDistillation2026">Zhang et al. 2026</cite></a>), which also uses self-distillation for code generation but in an off-policy, SFT-based manner.</p>
+            <h2 id="connections">Connections</h2>
+            <ul>
+              <li>Related to <a href="/notes/reinforcement_learning/">Reinforcement learning</a> as it introduces a new policy gradient algorithm for LLM post-training
+              </li>
+              <li>Related to <a href="/notes/distillation/">Distillation</a> because the core mechanism is knowledge distillation, but from the model to itself rather than from a separate teacher
+              </li>
+              <li>Related to <a href="/notes/in_context_learning/">In-context learning</a> as SDPO fundamentally relies on the model’s ability to learn from feedback in-context
+              </li>
+              <li>Related to <a href="/notes/self_training/">Self-training</a> as both involve a model improving from its own outputs, though SDPO operates at the logit level rather than generating new training samples
+              </li>
+              <li>Related to <a href="/notes/zhangembarrassinglysimpleselfdistillation2026/">Notes on: Embarrassingly Simple Self-Distillation</a> as both use self-distillation for improving code generation, but SDPO is on-policy and uses RL while SSD uses off-policy SFT
+              </li>
+              <li>Related to <a href="/notes/reinforcement_learning_with_human_feedback/">Reinforcement learning with human feedback</a> as SDPO extends the RLVR paradigm that RLHF pioneered for LLM alignment
+              </li>
+              <li>Related to <a href="/notes/llm/">Large language models</a> as the method is specifically designed for post-training LLMs
+              </li>
+            </ul>
+            <h2 id="bibliography">Bibliography</h2>
+            <ol class="biblio-list pl-0">
+              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="hubotterReinforcementLearningSelfDistillation2026"><span itemprop="author">Jonas Hübotter, Frederike Lübeck, Lejs Behric, Anton Baumann, Marco Bagatella, Daniel Marta, Ido Hakimi, et al.</span>. <time datetime="2026" itemprop="datePublished">January 28, 2026</time>. "<span itemprop="name">Reinforcement Learning via Self-Distillation</span>". <a itemprop="sameAs" href="https://arxiv.org/abs/2601.20802">https://arxiv.org/abs/2601.20802</a>.</span></li>
+              <li class="list-none my-4 mx-2">
+                <span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="zhangEmbarrassinglySimpleSelfDistillation2026"><span itemprop="author">Ruixiang Zhang, Richard He Bai, Huangjie Zheng, Navdeep Jaitly, Ronan Collobert, Yizhe Zhang</span>. <time datetime="2026" itemprop="datePublished">April 1, 2026</time>. "<span itemprop="name">Embarrassingly Simple Self-Distillation Improves Code Generation</span>". <a itemprop="sameAs" href="https://arxiv.org/abs/2604.01193">https://arxiv.org/abs/2604.01193</a>.</span>&nbsp;<a href="/notes/zhangembarrassinglysimpleselfdistillation2026/">See notes</a>
+              </li>
+            </ol>
+          </div>
+        </div>
+        <div class="border-t border-zinc-200 dark:border-zinc-600 px-5 sm:px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400 text-center" style="font-variant-caps:all-small-caps">
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/hubotterreinforcementlearningselfdistillation2026/"><time itemprop="datePublished" class="dt-published" datetime="2026-04-08T14:10:00+0200">2026.04.08</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+        </div>
+      </div>
+    </article>
+    <section id="comments-container" class="comments-section" data-slug="/notes/hubotterreinforcementlearningselfdistillation2026"></section>
+    <h3>Comments</h3>
+    <div id="comments-list" class="comments-list">
+      <p id="comments-loading" class="comments-loading">Loading comments...</p>
+    </div>
+    <p id="comments-error" class="comments-error" style="display:none"></p>
+    <form id="comment-form" class="comment-form" name="comment-form">
+      <h4>Leave a comment</h4>
+      <div class="form-group">
+        <label for="comment-name">Name <span class="required">*</span></label> <input type="text" id="comment-name" name="name" required="" maxlength="100" placeholder="Your name">
+      </div>
+      <div class="form-group">
+        <label for="comment-email">Email <span class="optional">(optional, not displayed)</span></label> <input type="email" id="comment-email" name="email" maxlength="254" placeholder="your@email.com">
+      </div>
+      <div class="form-group">
+        <label for="comment-content">Comment <span class="required">*</span></label> 
+        <textarea id="comment-content" name="content" required="" maxlength="10000" rows="4" placeholder="Write your comment..."></textarea>
+      </div>
+      <div id="turnstile-container" class="turnstile-container"></div><input type="hidden" id="turnstile-token" name="turnstile_token">
+      <p id="form-error" class="form-error" style="display:none"></p>
+      <p id="form-success" class="form-success" style="display:none"></p><button type="submit" class="comment-submit-btn">Post Comment</button>
+    </form>
+    <script src="/js/comments.js" defer></script> <a href="/notes#hubotterreinforcementlearningselfdistillation2026" class="inline-flex items-center gap-2 mt-4 px-4 py-2 text-sm font-medium text-inherit bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg hover:border-zinc-400 dark:hover:border-zinc-500 hover:shadow-md transition-all duration-150"><svg class="inline-block" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path></svg>Back to Notes</a>
+  </main>
+  <footer class="footer container text-center mt-1 py-6">
+    <hr class="my-4">
+    <div class="flex items-center justify-center gap-4 mb-3">
+      <a href="https://github.com/hugcis" class="text-zinc-500 dark:text-zinc-400 hover:text-accent dark:hover:text-accent-light no-underline-anim" aria-label="GitHub" title="GitHub"><svg class="w-5 h-5" viewbox="0 0 24 24" fill="currentcolor">
+      <path d="M12 0C5.37.0.0 5.37.0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57.0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925.0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18.0.0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225.0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22.0 1.605-.015 2.895-.015 3.3.0.315.225.69.825.57A12.02 12.02.0 0024 12c0-6.63-5.37-12-12-12z"></path></svg></a><a href="https://scholar.google.com/citations?user=_uSIl-0AAAAJ&amp;hl=en" class="text-zinc-500 dark:text-zinc-400 hover:text-accent dark:hover:text-accent-light no-underline-anim" aria-label="Google Scholar" title="Google Scholar"><svg class="w-5 h-5" viewbox="0 0 24 24" fill="currentcolor">
+      <path d="M5.242 13.769.0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977.0-5.548 1.748-6.758 4.269zM12 10a7 7 0 100 14 7 7 0 000-14z"></path></svg></a><a href="https://scholar.social/@hugcis" rel="me" class="text-zinc-500 dark:text-zinc-400 hover:text-accent dark:hover:text-accent-light no-underline-anim" aria-label="Mastodon" title="Mastodon"><svg class="w-5 h-5" viewbox="0 0 24 24" fill="currentcolor">
+      <path d="M23.268 5.313c-.35-2.578-2.617-4.61-5.304-5.004C17.51.242 15.792.0 11.813.0h-.03c-3.98.0-4.835.242-5.288.309C3.882.692 1.496 2.518.917 5.127.64 6.412.61 7.837.661 9.143c.074 1.874.088 3.745.26 5.611.118 1.24.325 2.47.62 3.68.55 2.237 2.777 4.098 4.96 4.857 2.336.792 4.849.923 7.256.38.265-.061.527-.132.786-.213.585-.184 1.27-.39 1.774-.753a.057.057.0 00.023-.043v-1.809a.052.052.0 00-.02-.041.053.053.0 00-.046-.01 20.282 20.282.0 01-4.709.545c-2.73.0-3.463-1.284-3.674-1.818a5.593 5.593.0 01-.319-1.433.053.053.0 01.066-.054 19.648 19.648.0 004.581.536c.394.0.787.0 1.183-.014 2.136-.064 4.411-.132 6.426-.78a.077.077.0 00.055-.032c.803-1.267 1.074-3.06 1.08-4.634a18.22 18.22.0 00-.021-.57zM19.5 9.412v5.493h-2.178V9.607c0-1.148-.466-1.735-1.443-1.735-1.065.0-1.596.691-1.596 2.06v2.922H12.12V9.932c0-1.37-.532-2.06-1.597-2.06-.977.0-1.443.587-1.443 1.735v5.298H6.9V9.412c0-1.147.29-2.06.876-2.736.603-.676 1.392-1.022 2.375-1.022 1.137.0 1.997.432 2.567 1.297L12 8.078l1.282-1.127c.57-.865 1.431-1.297 2.567-1.297.983.0 1.773.346 2.375 1.022.585.676.876 1.589.876 2.736z"></path></svg></a>
+    </div>
+    <ul class="pl-0 mt-1">
+      <li class="first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 no-underline-anim" href="https://hugocisneros.com/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="https://hugocisneros.com/img/RSS.svg" alt="RSS feed icon" width="16" height="16"></a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="ml-2 text-neutral-800 dark:text-neutral-400 no-underline-anim" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block list-none"><span class="ml-2">© Hugo Cisneros 2026</span></li>
+    </ul>
+  </footer>
+  <link rel="stylesheet" href="/js/katex/katex.min.css">
+  <script src="/js/katex/katex.min.js"></script> 
+  <script src="/js/katex/contrib/auto-render.min.js"></script> 
+  <script>
+  document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"\\[",right:"\\]",display:!0},{left:"\\begin{align}",right:"\\end{align}",display:!0},{left:"$$",right:"$$",display:!0},{left:"\\begin{equation}",right:"\\end{equation}",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1}]})})
+  </script>
+  <script data-goatcounter="https://stats.hugocisneros.com/count" async src="//stats.hugocisneros.com/count.js"></script>
+</body>
+</html>

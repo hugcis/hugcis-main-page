@@ -11,7 +11,7 @@
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
   <meta property="article:published_time" content="0001-01-01T00:00:00Z">
-  <meta property="article:modified_time" content="2026-04-07T12:32:00+02:00">
+  <meta property="article:modified_time" content="2026-04-08T13:47:00+02:00">
   <meta property="article:tag" content="Machine learning">
   <meta property="article:tag" content="Distillation">
   <meta property="article:tag" content="Language modeling">
@@ -54,7 +54,7 @@
   function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/self_training\/"},"headline":"Self-training","description":"tags Machine learning, Distillation, Language modeling, LLM Implications for open-ended evolution Looking at self training through the lense of Open-ended …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2026-04-07T12:32:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":94,"keywords":["Machine learning","Distillation","Language modeling","LLM"]}
+  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/self_training\/"},"headline":"Self-training","description":"tags Machine learning, Distillation, Language modeling, LLM Implications for open-ended evolution Looking at self training through the lense of Open-ended …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2026-04-08T13:47:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":111,"keywords":["Machine learning","Distillation","Language modeling","LLM"]}
   </script>
 </head>
 <body>
@@ -130,6 +130,7 @@
             <h2 id="implications-for-open-ended-evolution">Implications for open-ended evolution</h2>
             <p>Looking at self training through the lense of <a href="/notes/open_ended_evolution/">Open-ended Evolution</a>, it feels like pure self training (only a model with itself) cannot lead to radical improvement or novel behavior since it is fundamentally limited by the original distribution that the model is capable of modeling.</p>
             <p>Only external inputs (harness, environment, etc.) can lead the model to change its output distribution significantly enough, whereas self-learning can help with refining an existing distribution, by pruning tails, or increasing the strength of certain subspaces for example.</p>
+            <p>This environment can be provided in the form of rewards, which makes it akin to <a href="/notes/reinforcement_learning/">Reinforcement learning</a>.</p>
           </div>
         </div>
         <div class="bl-section px-5 sm:px-6 py-4 border-t border-zinc-200 dark:border-zinc-600">
@@ -143,13 +144,16 @@
                 <a href="/notes/zhangembarrassinglysimpleselfdistillation2026/">Notes on: Embarrassingly Simple Self-Distillation Improves Code Generation by Zhang, R., Bai, R. H., Zheng, H., Jaitly, N., Collobert, R., & Zhang, Y. (2026)</a>
               </li>
               <li>
+                <a href="/notes/hubotterreinforcementlearningselfdistillation2026/">Notes on: Reinforcement Learning via Self-Distillation by Hübotter, J., Lübeck, F., Behric, L., Baumann, A., Bagatella, M., Marta, D., Hakimi, I., Shenfeld, I., Kleine Buening, T., Guestrin, C. & Krause, A. (2026)</a>
+              </li>
+              <li>
                 <a href="/notes/synthetic_training_data/">Synthetic training data</a>
               </li>
             </ul>
           </div>
         </div>
         <div class="border-t border-zinc-200 dark:border-zinc-600 px-5 sm:px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400 text-center" style="font-variant-caps:all-small-caps">
-          Last changed <a class="u-url" href="https://hugocisneros.com/notes/self_training/"><time itemprop="datePublished" class="dt-published" datetime="2026-04-07T12:32:00+0200">2026.04.07</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/self_training/"><time itemprop="datePublished" class="dt-published" datetime="2026-04-08T13:47:00+0200">2026.04.08</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>
