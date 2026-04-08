@@ -4,37 +4,36 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
-  <link rel="canonical" href="https://hugocisneros.com/notes/chenattentionresiduals2026/">
-  <title>Notes on: Attention Residuals by Kimi Team, Guangyu Chen, Yu Zhang, Jianlin Su et al. (2026) - Hugo Cisneros</title>
-  <meta property="og:title" content="Notes on: Attention Residuals by Kimi Team, Guangyu Chen, Yu Zhang, Jianlin Su et al. (2026) - Hugo Cisneros">
+  <link rel="canonical" href="https://hugocisneros.com/notes/linear_attention/">
+  <title>Linear Attention - Hugo Cisneros</title>
+  <meta property="og:title" content="Linear Attention - Hugo Cisneros">
   <meta property="og:site_name" content="Hugo Cisneros">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
   <meta property="article:published_time" content="0001-01-01T00:00:00Z">
-  <meta property="article:modified_time" content="2026-04-08T18:16:00+02:00">
-  <meta property="article:tag" content="Transformers">
-  <meta property="article:tag" content="LLM">
-  <meta property="article:tag" content="Scaling laws">
+  <meta property="article:modified_time" content="2026-04-08T18:14:00+02:00">
   <meta property="article:tag" content="Attention">
-  <meta property="article:tag" content="Residual neural networks">
+  <meta property="article:tag" content="Transformers">
+  <meta property="article:tag" content="Machine learning">
+  <meta property="article:tag" content="Applied maths">
   <meta property="article:author" content="Hugo Cisneros">
   <meta property="og:image" content="https://hugocisneros.com/img/main.jpeg">
   <meta property="og:image:width" content="400">
   <meta property="og:image:height" content="400">
-  <meta property="og:image:alt" content="Notes on: Attention Residuals by Kimi Team, Guangyu Chen, Yu Zhang, Jianlin Su et al. (2026)">
-  <meta property="og:url" content="https://hugocisneros.com/notes/chenattentionresiduals2026/">
-  <meta property="og:description" content="Notes about Attention Residuals by Kimi Team, Guangyu Chen, Yu Zhang, Jianlin Su et al. (2026)">
-  <meta name="Description" property="description" content="Notes about Attention Residuals by Kimi Team, Guangyu Chen, Yu Zhang, Jianlin Su et al. (2026)">
+  <meta property="og:image:alt" content="Linear Attention">
+  <meta property="og:url" content="https://hugocisneros.com/notes/linear_attention/">
+  <meta property="og:description" content="Notes about Linear Attention">
+  <meta name="Description" property="description" content="Notes about Linear Attention">
   <link rel="me" href="https://twitter.com/@cisne_hug">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@cisne_hug">
   <meta name="twitter:creator" content="@cisne_hug">
-  <meta name="twitter:title" content="Notes on: Attention Residuals by Kimi Team, Guangyu Chen, Yu Zhang, Jianlin Su et al. (2026)">
-  <meta name="twitter:description" content="tags Transformers, LLM, Scaling laws, Attention, Residual neural networks source (Chen et al. 2026) Summary Standard residual connections in modern LLMs accumulate all layer outputs with fixed unit …">
+  <meta name="twitter:title" content="Linear Attention">
+  <meta name="twitter:description" content="tags Attention, Transformers, Machine learning, Applied maths Attention variants that replace softmax with linear kernels, reducing complexity from quadratic to linear in sequence lengt">
   <meta name="twitter:image" content="https://hugocisneros.com/img/main.jpeg">
   <link rel="me" href="https://scholar.social/@hugcis">
   <link rel="me" href="https://github.com/hugcis">
-  <meta name="keywords" content="transformers,llm,scaling laws,attention,residual neural networks">
+  <meta name="keywords" content="attention,transformers,machine learning,applied maths">
   <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
   <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -55,7 +54,7 @@
   function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/chenattentionresiduals2026\/"},"headline":"Notes on: Attention Residuals by Kimi Team, Guangyu Chen, Yu Zhang, Jianlin Su et al. (2026)","description":"tags Transformers, LLM, Scaling laws, Attention, Residual neural networks source (Chen et al. 2026) Summary Standard residual connections in modern LLMs …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2026-04-08T18:16:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":796,"keywords":["Transformers","LLM","Scaling laws","Attention","Residual neural networks"]}
+  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/linear_attention\/"},"headline":"Linear Attention","description":"tags Attention, Transformers, Machine learning, Applied maths Attention variants that replace softmax with linear kernels, reducing complexity from quadratic to …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2026-04-08T18:14:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":24,"keywords":["Attention","Transformers","Machine learning","Applied maths"]}
   </script>
 </head>
 <body>
@@ -111,8 +110,8 @@
           <meta itemprop="position" content="2"><span class="mx-2">/</span>
         </li>
         <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="flex items-center">
-          <span itemprop="name" class="text-gray-900 dark:text-gray-100 font-medium" aria-current="page">Notes on: Attention Residuals by Kimi Team, …</span>
-          <meta itemprop="item" content="https://hugocisneros.com/notes/chenattentionresiduals2026/">
+          <span itemprop="name" class="text-gray-900 dark:text-gray-100 font-medium" aria-current="page">Linear Attention</span>
+          <meta itemprop="item" content="https://hugocisneros.com/notes/linear_attention/">
           <meta itemprop="position" content="3">
         </li>
       </ol>
@@ -120,72 +119,39 @@
     <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
       <div class="note-page bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg mb-6 overflow-hidden">
         <div class="p-5 sm:p-6">
-          <h1 class="text-xl sm:text-2xl font-semibold mb-4 p-name text-zinc-900 dark:text-zinc-100" itemprop="name">Attention Residuals by Kimi Team, Guangyu Chen, Yu Zhang, Jianlin Su et al. (2026)</h1>
-          <div class="bg-amber-50 dark:bg-amber-950 border border-amber-200 dark:border-amber-800 rounded-md p-3 mb-4 text-sm text-amber-800 dark:text-amber-200">
-            This note was initially drafted with LLM assistance. Generated notes are periodically reviewed and revised by the author.
-          </div>
+          <h1 class="text-xl sm:text-2xl font-semibold mb-4 p-name text-zinc-900 dark:text-zinc-100" itemprop="name">Linear Attention</h1>
           <div class="article-content e-content p-name prose dark:prose-invert max-w-none" itemprop="articleBody">
             <dl>
               <dt>tags</dt>
               <dd>
-                <a href="/notes/transformers/">Transformers</a>, <a href="/notes/llm/">LLM</a>, <a href="/notes/scaling_laws/">Scaling laws</a>, <a href="/notes/attention/">Attention</a>, <a href="/notes/residual_networks/">Residual neural networks</a>
-              </dd>
-              <dt>source</dt>
-              <dd>
-                (<a href="#chenAttentionResiduals2026"><cite itemprop="citation" itemscope itemid="key:chenAttentionResiduals2026">Chen et al. 2026</cite></a>)
+                <a href="/notes/attention/">Attention</a>, <a href="/notes/transformers/">Transformers</a>, <a href="/notes/machine_learning/">Machine learning</a>, <a href="/notes/applied_maths/">Applied maths</a>
               </dd>
             </dl>
-            <h2 id="summary">Summary</h2>
-            <p>Standard residual connections in modern LLMs accumulate all layer outputs with fixed unit weights via PreNorm, causing uncontrolled hidden-state growth with depth and progressively diluting each layer’s contribution. This paper proposes <strong>Attention Residuals</strong> (AttnRes), which replaces this fixed accumulation with softmax attention over preceding layer outputs. Each layer selectively aggregates earlier representations using learned, input-dependent weights computed from a single pseudo-query vector per layer. The authors draw a formal duality between depth-wise accumulation in <a href="/notes/residual_networks/">residual networks</a> and sequential recurrence in <a href="/notes/recurrent_neural_networks/">RNNs</a>, arguing that just as <a href="/notes/transformers/">Transformers</a> replaced recurrence with <a href="/notes/attention/">attention</a> over the sequence dimension, AttnRes does the same over the depth dimension.</p>
-            <p>To make this practical at scale, the paper introduces <strong>Block AttnRes</strong>, which partitions layers into blocks and applies attention over block-level representations, reducing memory and communication overhead from \(O(Ld)\) to \(O(Nd)\). Combined with cross-stage caching for pipeline parallelism and a two-phase inference computation strategy, Block AttnRes becomes a drop-in replacement with less than 2% inference latency overhead and under 4% training overhead.</p>
-            <p><a href="/notes/scaling_laws/">Scaling law</a> experiments across five model sizes confirm consistent improvements, with Block AttnRes matching the loss of a baseline trained with 1.25x more compute. The method is integrated into the Kimi Linear architecture (48B total / 3B activated MoE parameters) and pre-trained on 1.4T tokens, yielding improvements across all downstream benchmarks including MMLU (+1.1), GPQA-Diamond (+7.5), HumanEval (+3.1), and Minerva Math (+3.6).</p>
-            <h2 id="key-ideas">Key Ideas</h2>
-            <ul>
-              <li><strong>Depth-wise attention</strong>: Replace fixed unit-weight residual accumulation with softmax attention over all preceding layer outputs, allowing content-dependent, selective aggregation across depth.</li>
-              <li><strong>Pseudo-query mechanism</strong>: Each layer has a single learned pseudo-query vector \(\mathbf{w}_l \in \mathbb{R}^d\) that computes attention weights over RMSNorm’d keys from previous layer outputs — decoupled from the forward computation, enabling parallel computation.</li>
-              <li><strong>Block AttnRes</strong>: Partition \(L\) layers into \(N\) blocks; within each block, layers accumulate via standard residual; across blocks, apply full attention over \(N\) block-level representations. \(N \approx 8\) recovers most of the gain.</li>
-              <li><strong>Unified structured-matrix framework</strong>: Standard residuals, Highway networks, mHC, DenseFormer, and AttnRes are all characterized as different depth mixing matrices \(\mathbf{M} \in \mathbb{R}^{L \times L}\) with varying semiseparable rank and input dependence.</li>
-              <li><strong>Cross-stage caching</strong>: For pipeline parallelism, cache block representations locally across virtual stages to eliminate redundant communication, reducing peak per-transition cost from \(O( C)\) to \(O(P)\).</li>
-              <li><strong>Two-phase inference</strong>: Phase 1 batches inter-block attention for all layers in a block simultaneously; Phase 2 handles sequential intra-block attention with online softmax merge, amortizing memory access.</li>
-              <li><strong>PreNorm dilution mitigation</strong>: AttnRes confines hidden-state growth within blocks, yielding bounded periodic output magnitudes and more uniform gradient distribution across depth.</li>
-            </ul>
-            <h2 id="comments">Comments</h2>
-            <p>This paper makes a compelling argument by drawing the parallel between how attention replaced recurrence over the sequence dimension and extending the same idea to the depth dimension. The insight that standard residual connections are equivalent to depth-wise <a href="/notes/linear_attention/"><em>linear</em> attention</a> (all-ones mixing matrix) is elegant and provides a clean theoretical motivation.</p>
-            <p>The practical engineering is notable: Block AttnRes achieves most of the gains of full AttnRes while being genuinely deployable at scale with minimal overhead. The \(N \approx 8\) finding is convenient — it means only 8 stored block representations regardless of total depth.</p>
-            <p>The structured-matrix perspective (Section 6.2) unifying residual variants is particularly valuable, connecting DenseFormer, mHC, Highway networks, and AttnRes through the lens of semiseparable rank and input dependence. This provides a systematic vocabulary for comparing future residual connection designs.</p>
-            <p>One limitation acknowledged by the authors: the architecture sweep (Figure 7) shows AttnRes favors deeper, narrower models, but this does not directly translate to deployment recommendations due to the sequential computation cost of deeper models. The scaling law experiments also use hyperparameters optimized for the baseline, which the authors note makes the comparison conservative.</p>
-            <h2 id="connections">Connections</h2>
-            <ul>
-              <li>Directly extends <a href="/notes/residual_networks/">Residual neural networks</a> by replacing fixed unit-weight accumulation with learned, input-dependent depth-wise attention
-              </li>
-              <li>Applies the same transition from linear to softmax attention that <a href="/notes/transformers/">Transformers</a> made over the sequence dimension, now over the depth dimension
-              </li>
-              <li>Draws formal duality with <a href="/notes/recurrent_neural_networks/">Recurrent neural networks</a>: standard residuals are to depth what RNNs are to sequence, and AttnRes replaces both with attention
+            <p>Attention variants that replace softmax with linear kernels, reducing complexity from quadratic to linear in sequence lengt</p>
+          </div>
+        </div>
+        <div class="bl-section px-5 sm:px-6 py-4 border-t border-zinc-200 dark:border-zinc-600">
+          <h2 class="text-sm font-semibold mb-2 mt-0 text-zinc-500 dark:text-zinc-400">Links to this note</h2>
+          <div class="backlinks">
+            <ul class="m-0 pl-5 text-sm">
+              <li>
+                <a href="/notes/chenattentionresiduals2026/">Notes on: Attention Residuals by Kimi Team, Guangyu Chen, Yu Zhang, Jianlin Su et al. (2026)</a>
               </li>
               <li>
-                <a href="/notes/scaling_laws/">Scaling laws</a> experiments validate consistent improvement across model sizes, with Block AttnRes equivalent to 1.25x compute advantage
+                <a href="/notes/minimaxscalingtesttimecompute2025/">Notes on: MiniMax-M1: Scaling Test-Time Compute Efficiently with Lightning Attention by MiniMax (2025)</a>
               </li>
-              <li>Addresses <a href="/notes/layernorm/">LayerNorm</a> (PreNorm) dilution problem: the unweighted accumulation in PreNorm residuals causes hidden-state magnitudes to grow as \(O(L)\), which AttnRes mitigates
-              </li>
-              <li>Uses RMSNorm on keys to prevent magnitude bias in depth-wise attention, connecting to <a href="/notes/batch_normalization/">Batch normalization</a> principles
-              </li>
-              <li>Related to <a href="/notes/katharopoulostransformersarernns2020/">linear attention</a> work: the structured-matrix analysis shows standard residuals perform depth-wise linear attention, while AttnRes upgrades this to softmax attention
-              </li>
-              <li>Architecture uses Mixture-of-Experts (related to <a href="/notes/switch_transformer/">Switch Transformer</a> and <a href="/notes/glam/">GLaM</a>) with 48B total / 3B activated parameters
+              <li>
+                <a href="/notes/katharopoulostransformersarernns2020/">Notes on: Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention by Katharopoulos, A., Vyas, A., Pappas, N., & Fleuret, F. (2020)</a>
               </li>
             </ul>
-            <h2 id="bibliography">Bibliography</h2>
-            <ol class="biblio-list pl-0">
-              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="chenAttentionResiduals2026"><span itemprop="author">Guangyu Chen, Yu Zhang, Jianlin Su, Weixin Xu, Siyuan Pan, Yaoyu Wang, Yucheng Wang, et al.</span>. <time datetime="2026" itemprop="datePublished">March 16, 2026</time>. "<span itemprop="name">Attention Residuals</span>". <a itemprop="sameAs" href="https://arxiv.org/abs/2603.15031">https://arxiv.org/abs/2603.15031</a>.</span></li>
-            </ol>
           </div>
         </div>
         <div class="border-t border-zinc-200 dark:border-zinc-600 px-5 sm:px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400 text-center" style="font-variant-caps:all-small-caps">
-          Last changed <a class="u-url" href="https://hugocisneros.com/notes/chenattentionresiduals2026/"><time itemprop="datePublished" class="dt-published" datetime="2026-04-08T18:16:00+0200">2026.04.08</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/linear_attention/"><time itemprop="datePublished" class="dt-published" datetime="2026-04-08T18:14:00+0200">2026.04.08</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>
-    <section id="comments-container" class="comments-section" data-slug="/notes/chenattentionresiduals2026"></section>
+    <section id="comments-container" class="comments-section" data-slug="/notes/linear_attention"></section>
     <h3>Comments</h3>
     <div id="comments-list" class="comments-list">
       <p id="comments-loading" class="comments-loading">Loading comments...</p>
@@ -207,7 +173,7 @@
       <p id="form-error" class="form-error" style="display:none"></p>
       <p id="form-success" class="form-success" style="display:none"></p><button type="submit" class="comment-submit-btn">Post Comment</button>
     </form>
-    <script src="/js/comments.js" defer></script> <a href="/notes#chenattentionresiduals2026" class="inline-flex items-center gap-2 mt-4 px-4 py-2 text-sm font-medium text-inherit bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg hover:border-zinc-400 dark:hover:border-zinc-500 hover:shadow-md transition-all duration-150"><svg class="inline-block" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2">
+    <script src="/js/comments.js" defer></script> <a href="/notes#linear_attention" class="inline-flex items-center gap-2 mt-4 px-4 py-2 text-sm font-medium text-inherit bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg hover:border-zinc-400 dark:hover:border-zinc-500 hover:shadow-md transition-all duration-150"><svg class="inline-block" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2">
     <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path></svg>Back to Notes</a>
   </main>
   <footer class="footer container text-center mt-1 py-6">

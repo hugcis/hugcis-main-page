@@ -11,7 +11,7 @@
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
   <meta property="article:published_time" content="0001-01-01T00:00:00Z">
-  <meta property="article:modified_time" content="2021-09-02T12:07:00+02:00">
+  <meta property="article:modified_time" content="2026-04-08T18:14:00+02:00">
   <meta property="article:tag" content="Transformers">
   <meta property="article:tag" content="RNN">
   <meta property="article:author" content="Hugo Cisneros">
@@ -52,7 +52,7 @@
   function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/katharopoulostransformersarernns2020\/"},"headline":"Notes on: Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention by Katharopoulos, A., …","description":"tags Transformers, RNN source (Katharopoulos et al. 2020) Summary Transformers have traditionally been described as different models from RNNs. This is because …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2021-09-02T12:07:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":573,"keywords":["Transformers","RNN"]}
+  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/katharopoulostransformersarernns2020\/"},"headline":"Notes on: Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention by Katharopoulos, A., …","description":"tags Transformers, RNN source (Katharopoulos et al. 2020) Summary Transformers have traditionally been described as different models from RNNs. This is because …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2026-04-08T18:14:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":573,"keywords":["Transformers","RNN"]}
   </script>
 </head>
 <body>
@@ -140,7 +140,7 @@
             <p>\[A_l(x) = V’ = \text{softmax}\left( \dfrac{QK^{T}}{\sqrt{D}} \right) V.\]</p>
             <p>The equation above can be generalized to any similarity function \(\text{sim}\), and if \(V’_i\) designates the $i$-th row of \(V’\),</p>
             <p>\[ V’_i = \dfrac{\sum_{j = 1}^N \text{sim}(Q_i, K_j) V_j}{\sum_{j = 1}^N \text{sim}(Q_i, K_j)} \]</p>
-            <h3 id="linearizing-attention">Linearizing attention</h3>
+            <h3 id="linearizing-attention--dot-dot-linear-attention-dot-md"><a href="/notes/linear_attention/">Linearizing attention</a></h3>
             <p>In particular, all <a href="/notes/kernel_methods/">kernels</a> \(k(x, y) = \langle\phi(x), \phi(y)\rangle_\mathcal{S} : \mathbb{R}^{2\times F} \rightarrow \mathbb{R}_+\) can be used as a similarity function, changing the equation above to</p>
             <p>\[ V’_i = \dfrac{\phi(Q_i)^T \sum_{j = 1}^N \phi(K_j) V_j^T}{ \phi(Q_i)^T \sum_{j = 1}^N \phi(K_j)}.\]</p>
             <p>Because the right term of the numerator and denominator above does not depend on \(i\), it can be computed once for all sequence, and time and memory complexity become \(\mathcal{O}(N)\).</p>
@@ -175,7 +175,7 @@
           </div>
         </div>
         <div class="border-t border-zinc-200 dark:border-zinc-600 px-5 sm:px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400 text-center" style="font-variant-caps:all-small-caps">
-          Last changed <a class="u-url" href="https://hugocisneros.com/notes/katharopoulostransformersarernns2020/"><time itemprop="datePublished" class="dt-published" datetime="2021-09-02T12:07:00+0200">2021.09.02</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/katharopoulostransformersarernns2020/"><time itemprop="datePublished" class="dt-published" datetime="2026-04-08T18:14:00+0200">2026.04.08</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>

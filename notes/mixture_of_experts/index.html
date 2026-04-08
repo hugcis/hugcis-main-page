@@ -11,7 +11,7 @@
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
   <meta property="article:published_time" content="0001-01-01T00:00:00Z">
-  <meta property="article:modified_time" content="2026-04-08T13:56:00+02:00">
+  <meta property="article:modified_time" content="2026-04-08T18:11:00+02:00">
   <meta property="article:tag" content="Transformers">
   <meta property="article:tag" content="LLM">
   <meta property="article:tag" content="Machine learning">
@@ -29,7 +29,7 @@
   <meta name="twitter:site" content="@cisne_hug">
   <meta name="twitter:creator" content="@cisne_hug">
   <meta name="twitter:title" content="Mixture of Experts">
-  <meta name="twitter:description" content="tags Transformers, LLM, Machine learning, Scaling laws">
+  <meta name="twitter:description" content="tags Transformers, LLM, Machine learning, Scaling laws Sparse neural network architecture that routes inputs to a subset of expert subnetworks, enabling parameter scaling without proportional compute …">
   <meta name="twitter:image" content="https://hugocisneros.com/img/main.jpeg">
   <link rel="me" href="https://scholar.social/@hugcis">
   <link rel="me" href="https://github.com/hugcis">
@@ -54,7 +54,7 @@
   function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/mixture_of_experts\/"},"headline":"Mixture of Experts","description":" tags Transformers, LLM, Machine learning, Scaling laws ","datePublished":"0001-01-01T00:00:00Z","dateModified":"2026-04-08T13:56:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":7,"keywords":["Transformers","LLM","Machine learning","Scaling laws"]}
+  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/mixture_of_experts\/"},"headline":"Mixture of Experts","description":"tags Transformers, LLM, Machine learning, Scaling laws Sparse neural network architecture that routes inputs to a subset of expert subnetworks, enabling …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2026-04-08T18:11:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":27,"keywords":["Transformers","LLM","Machine learning","Scaling laws"]}
   </script>
 </head>
 <body>
@@ -127,12 +127,16 @@
                 <a href="/notes/transformers/">Transformers</a>, <a href="/notes/llm/">LLM</a>, <a href="/notes/machine_learning/">Machine learning</a>, <a href="/notes/scaling_laws/">Scaling laws</a>
               </dd>
             </dl>
+            <p>Sparse neural network architecture that routes inputs to a subset of expert subnetworks, enabling parameter scaling without proportional compute increase.</p>
           </div>
         </div>
         <div class="bl-section px-5 sm:px-6 py-4 border-t border-zinc-200 dark:border-zinc-600">
           <h2 class="text-sm font-semibold mb-2 mt-0 text-zinc-500 dark:text-zinc-400">Links to this note</h2>
           <div class="backlinks">
             <ul class="m-0 pl-5 text-sm">
+              <li>
+                <a href="/notes/foundation_models/">Foundation models</a>
+              </li>
               <li>
                 <a href="/notes/minimaxscalingtesttimecompute2025/">Notes on: MiniMax-M1: Scaling Test-Time Compute Efficiently with Lightning Attention by MiniMax (2025)</a>
               </li>
@@ -143,7 +147,7 @@
           </div>
         </div>
         <div class="border-t border-zinc-200 dark:border-zinc-600 px-5 sm:px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400 text-center" style="font-variant-caps:all-small-caps">
-          Last changed <a class="u-url" href="https://hugocisneros.com/notes/mixture_of_experts/"><time itemprop="datePublished" class="dt-published" datetime="2026-04-08T13:56:00+0200">2026.04.08</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/mixture_of_experts/"><time itemprop="datePublished" class="dt-published" datetime="2026-04-08T18:11:00+0200">2026.04.08</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>
