@@ -4,34 +4,34 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
-  <link rel="canonical" href="https://hugocisneros.com/notes/algorithm/">
-  <title>Algorithm - Hugo Cisneros</title>
-  <meta property="og:title" content="Algorithm - Hugo Cisneros">
+  <link rel="canonical" href="https://hugocisneros.com/notes/token_credit_assignment/">
+  <title>Token-level credit assignment in reasoning traces - Hugo Cisneros</title>
+  <meta property="og:title" content="Token-level credit assignment in reasoning traces - Hugo Cisneros">
   <meta property="og:site_name" content="Hugo Cisneros">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
   <meta property="article:published_time" content="0001-01-01T00:00:00Z">
-  <meta property="article:modified_time" content="2020-07-10T09:13:00+02:00">
-  <meta property="article:tag" content="Computer science">
-  <meta property="article:tag" content="Coding">
+  <meta property="article:modified_time" content="2026-04-09T14:48:00+02:00">
+  <meta property="article:tag" content="Reinforcement learning">
+  <meta property="article:tag" content="Distillation">
   <meta property="article:author" content="Hugo Cisneros">
   <meta property="og:image" content="https://hugocisneros.com/img/main.jpeg">
   <meta property="og:image:width" content="400">
   <meta property="og:image:height" content="400">
-  <meta property="og:image:alt" content="Algorithm">
-  <meta property="og:url" content="https://hugocisneros.com/notes/algorithm/">
-  <meta property="og:description" content="Notes about Algorithm">
-  <meta name="Description" property="description" content="Notes about Algorithm">
+  <meta property="og:image:alt" content="Token-level credit assignment in reasoning traces">
+  <meta property="og:url" content="https://hugocisneros.com/notes/token_credit_assignment/">
+  <meta property="og:description" content="Notes about Token-level credit assignment in reasoning traces">
+  <meta name="Description" property="description" content="Notes about Token-level credit assignment in reasoning traces">
   <link rel="me" href="https://twitter.com/@cisne_hug">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@cisne_hug">
   <meta name="twitter:creator" content="@cisne_hug">
-  <meta name="twitter:title" content="Algorithm">
-  <meta name="twitter:description" content="tags Computer science, Coding">
+  <meta name="twitter:title" content="Token-level credit assignment in reasoning traces">
+  <meta name="twitter:description" content="tags Reinforcement learning, Distillation, Self-training Three early 2026 papers (MiniMax-M1 (CISPO), Zhang et al. (SSD), and Hübotter et al. (SDPO)) converge on a shared structural observation: not …">
   <meta name="twitter:image" content="https://hugocisneros.com/img/main.jpeg">
   <link rel="me" href="https://scholar.social/@hugcis">
   <link rel="me" href="https://github.com/hugcis">
-  <meta name="keywords" content="computer science,coding">
+  <meta name="keywords" content="reinforcement learning,distillation">
   <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
   <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,7 +52,7 @@
   function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/algorithm\/"},"headline":"Algorithm","description":" tags Computer science, Coding ","datePublished":"0001-01-01T00:00:00Z","dateModified":"2020-07-10T09:13:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":4,"keywords":["Computer science","Coding"]}
+  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/token_credit_assignment\/"},"headline":"Token-level credit assignment in reasoning traces","description":"tags Reinforcement learning, Distillation, Self-training Three early 2026 papers (MiniMax-M1 (CISPO), Zhang et al. (SSD), and Hübotter et al. (SDPO)) converge …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2026-04-09T14:48:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":732,"keywords":["Reinforcement learning","Distillation"]}
   </script>
 </head>
 <body>
@@ -108,8 +108,8 @@
           <meta itemprop="position" content="2"><span class="mx-2">/</span>
         </li>
         <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="flex items-center">
-          <span itemprop="name" class="text-gray-900 dark:text-gray-100 font-medium" aria-current="page">Algorithm</span>
-          <meta itemprop="item" content="https://hugocisneros.com/notes/algorithm/">
+          <span itemprop="name" class="text-gray-900 dark:text-gray-100 font-medium" aria-current="page">Token-level credit assignment in reasoning traces</span>
+          <meta itemprop="item" content="https://hugocisneros.com/notes/token_credit_assignment/">
           <meta itemprop="position" content="3">
         </li>
       </ol>
@@ -117,98 +117,88 @@
     <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
       <div class="note-page bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg mb-6 overflow-hidden">
         <div class="p-5 sm:p-6">
-          <h1 class="text-xl sm:text-2xl font-semibold mb-4 p-name text-zinc-900 dark:text-zinc-100" itemprop="name">Algorithm</h1>
+          <h1 class="text-xl sm:text-2xl font-semibold mb-4 p-name text-zinc-900 dark:text-zinc-100" itemprop="name">Token-level credit assignment in reasoning traces</h1>
           <div class="article-content e-content p-name prose dark:prose-invert max-w-none" itemprop="articleBody">
             <dl>
               <dt>tags</dt>
               <dd>
-                <a href="/notes/computer_science/">Computer science</a>, <a href="/notes/coding/">Coding</a>
+                <a href="/notes/reinforcement_learning/">Reinforcement learning</a>, <a href="/notes/distillation/">Distillation</a>, <a href="/notes/self_training/">Self-training</a>
               </dd>
             </dl>
-          </div>
-        </div>
-        <div class="bl-section px-5 sm:px-6 py-4 border-t border-zinc-200 dark:border-zinc-600">
-          <h2 class="text-sm font-semibold mb-2 mt-0 text-zinc-500 dark:text-zinc-400">Links to this note</h2>
-          <div class="backlinks">
-            <ul class="m-0 pl-5 text-sm">
-              <li>
-                <a href="/notes/adaptive_computation_time/">Adaptive Computation Time</a>
-              </li>
-              <li>
-                <a href="/notes/backpropagation/">Backpropagation</a>
-              </li>
-              <li>
-                <a href="/notes/continual_learning/">Continual learning</a>
-              </li>
-              <li>
-                <a href="/notes/dijkstra_s_algorithm/">Dijkstra's algorithm</a>
-              </li>
-              <li>
-                <a href="/notes/elementary_cellular_automata/">Elementary cellular automata</a>
-              </li>
-              <li>
-                <a href="/notes/fast_marching_method/">Fast Marching method</a>
-              </li>
-              <li>
-                <a href="/notes/frank_wolfe_algorithm/">Frank-Wolfe algorithm</a>
-              </li>
-              <li>
-                <a href="/notes/generative_art/">Generative art</a>
-              </li>
-              <li>
-                <a href="/notes/gradient_descent/">Gradient descent</a>
-              </li>
-              <li>
-                <a href="/notes/graham_scan/">Graham scan</a>
-              </li>
-              <li>
-                <a href="/notes/grpo/">GRPO</a>
-              </li>
-              <li>
-                <a href="/notes/hash_functions/">Hash functions</a>
-              </li>
-              <li>
-                <a href="/notes/notes/">Knowledge Base Index</a>
-              </li>
-              <li>
-                <a href="/notes/knuth_morris_pratt_string_searching_algorithm/">Knuth-Morris-Pratt string-searching algorithm</a>
-              </li>
-              <li>
-                <a href="/notes/levenshtein_automata/">Levenshtein automata</a>
-              </li>
-              <li>
-                <a href="/notes/levenshtein_distance/">Levenshtein distance</a>
-              </li>
-              <li>
-                <a href="/notes/neural_network_training/">Neural network training</a>
-              </li>
-              <li>
-                <a href="/notes/neural_networks/">Neural networks</a>
-              </li>
-              <li>
-                <a href="/notes/neural_networks_as_dynamical_systems/">Neural networks as dynamical systems</a>
-              </li>
-              <li>
-                <a href="/notes/pattern_defeating_quicksort/">Pattern-defeating quicksort</a>
-              </li>
-              <li>
-                <a href="/notes/ppo/">PPO</a>
-              </li>
-              <li>
-                <a href="/notes/search_algorithms/">Search algorithms</a>
-              </li>
-              <li>
-                <a href="/notes/stable_marriage_problem/">Stable marriage problem</a>
-              </li>
+            <p>Three early 2026 papers (MiniMax-M1 (CISPO), Zhang et al. (SSD), and Hübotter et al. (SDPO)) converge on a shared structural observation: <strong>not all tokens in a reasoning trace are equally important for <a href="/notes/machine_learning/">learning</a></strong>, and naive uniform treatment of tokens is a core failure mode of current training methods.</p>
+            <h2 id="the-fork-filler-distinction">The fork/filler distinction</h2>
+            <p>All three papers implicitly or explicitly distinguish between two kinds of positions in generated sequences:</p>
+            <ul>
+              <li><strong>Fork tokens</strong>: they are rare but critical positions where the model makes a genuine reasoning decision (redirecting a chain of thought, choosing an algorithm, catching an error). Examples: “However”, “Wait”, “Recheck” in COT traces, or algorithmic branching points in code.</li>
+              <li><strong>Filler/lock tokens</strong>: some high-frequency, low-information tokens where the correct continuation is largely determined by context (boilerplate reasoning steps, syntactic completions, connective phrases).</li>
             </ul>
+            <p>Standard <a href="/notes/reinforcement_learning/">reinforcement learning</a> methods like <a href="/notes/ppo/">PPO</a> and <a href="/notes/grpo/">GRPO</a> assign uniform or near-uniform credit across all tokens in a successful rollout, which means filler tokens receive the same reinforcement as fork tokens. This leads to verbose, inefficient reasoning traces and undertrained decision points.</p>
+            <h2 id="three-solutions-at-different-levels">Three solutions at different levels</h2>
+            <p>Each paper addresses this problem at a different level of the training pipeline:</p>
+            <h3 id="cispo--cite-minimaxscalingtesttimecompute2025">CISPO ((<a href="#minimaxScalingTestTimeCompute2025"><cite itemprop="citation" itemscope itemid="key:minimaxScalingTestTimeCompute2025">MiniMax 2025</cite></a>))</h3>
+            <p><a href="/notes/minimaxscalingtesttimecompute2025/">MiniMax-M1</a> introduces Clipped IS-weight Policy Optimization, which clips importance sampling weights at the <strong>sequence level</strong> rather than clipping token-level policy ratios as in PPO/GRPO.</p>
+            <p>The motivation is that fork tokens are rare and have the largest policy shifts, but also are disproportionately suppressed by token-level clipping. By moving clipping to the sequence level, CISPO ensures full gradient flow through these critical positions. This is especially important in their hybrid softmax/linear attention architecture where the problem is amplified.</p>
+            <h3 id="ssd--cite-zhangembarrassinglysimpleselfdistillation2026">SSD ((<a href="#zhangEmbarrassinglySimpleSelfDistillation2026"><cite itemprop="citation" itemscope itemid="key:zhangEmbarrassinglySimpleSelfDistillation2026">Zhang et al. 2026</cite></a>))</h3>
+            <p><a href="/notes/zhangembarrassinglysimpleselfdistillation2026/">Simple Self-Distillation</a> approaches the problem from the distribution-reshaping side. By sampling from the model at a shifted temperature with truncation, then fine-tuning on those samples, SSD performs <strong>support compression</strong> at lock/filler positions (sharpening diffuse tails into spikes) and <strong>within-support reshaping</strong> at fork positions (redistributing mass among viable alternatives).</p>
+            <p>This is a form of implicit token-level credit assignment: the training signal is concentrated where the distribution actually needs to change (forks), not where it’s already peaked (fillers). Even training on 62% gibberish data still improves the model. This confirms that the benefit of the method comes from distribution geometry, not content quality.</p>
+            <h3 id="sdpo--cite-hubotterreinforcementlearningselfdistillation2026">SDPO ((<a href="#hubotterReinforcementLearningSelfDistillation2026"><cite itemprop="citation" itemscope itemid="key:hubotterReinforcementLearningSelfDistillation2026">Hübotter et al. 2026</cite></a>))</h3>
+            <p><a href="/notes/hubotterreinforcementlearningselfdistillation2026/">Self-Distillation Policy Optimization</a> is the most direct solution. By conditioning the model on rich feedback (error messages, judge evaluations) and using it as its own teacher via <a href="/notes/in_context_learning/">in-context learning</a>, SDPO produces <strong>dense per-token logit-level advantages</strong>. The self-teacher can retrospectively identify exactly which tokens in a failed rollout were wrong, replacing GRPO’s flat sequence-level advantage with targeted credit.</p>
+            <p>The result: SDPO produces reasoning traces up to <strong>11x shorter</strong> while improving accuracy — strong evidence that verbose COT in GRPO-trained models is an artifact of poor credit assignment rather than genuine reasoning.</p>
+            <h2 id="comparison">Comparison</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Method</th>
+                  <th>Level</th>
+                  <th>Mechanism</th>
+                  <th>Requires</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>CISPO</td>
+                  <td>Sequence-level clipping</td>
+                  <td>Preserve rare fork gradients</td>
+                  <td>Standard rewards</td>
+                </tr>
+                <tr>
+                  <td>SSD</td>
+                  <td>Distribution reshaping</td>
+                  <td>Compress fillers, flatten forks via temperature</td>
+                  <td>Only the model + prompts</td>
+                </tr>
+                <tr>
+                  <td>SDPO</td>
+                  <td>Per-token advantages</td>
+                  <td>Dense credit via retrospective self-evaluation</td>
+                  <td>Rich feedback (errors, judges)</td>
+                </tr>
+              </tbody>
+            </table>
+            <p>SDPO is the most principled on the credit-assignment axis. It doesn’t just preserve fork signals (CISPO) or implicitly compress fillers (SSD), it directly identifies which tokens matter. The cost is needing structured feedback; CISPO and SSD work with standard scalar rewards or no rewards at all.</p>
+            <h2 id="implications">Implications</h2>
+            <p>The convergence of these three independent approaches suggests that <strong>token-level credit assignment in reasoning traces</strong> is a fundamental bottleneck in current LLM post-training. The verbose, meandering chains of thought produced by GRPO-trained models may largely be artifacts of uniform reinforcement on filler tokens, not a necessary feature of reasoning. Methods that differentiate between forks and fillers, whether through clipping strategy, distribution reshaping, or dense advantages will consistently produce shorter, more accurate reasoning.</p>
+            <p>This also re-frames <a href="/notes/distillation/">distillation</a> and <a href="/notes/self_training/">self-training</a> more broadly: the value of these methods may lie less in transferring knowledge and more in <strong>reshaping probability distributions</strong> to allocate model capacity toward decision points rather than filler.</p>
+            <h2 id="bibliography">Bibliography</h2>
+            <ol class="biblio-list pl-0">
+              <li class="list-none my-4 mx-2">
+                <span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="minimaxScalingTestTimeCompute2025"><span itemprop="author">MiniMax</span>. <time datetime="2025" itemprop="datePublished">June 16, 2025</time>. "<span itemprop="name">MiniMax-M1: Scaling Test-Time Compute Efficiently with Lightning Attention</span>". <a itemprop="sameAs" href="https://arxiv.org/abs/2506.13585">https://arxiv.org/abs/2506.13585</a>.</span>&nbsp;<a href="/notes/minimaxscalingtesttimecompute2025/">See notes</a>
+              </li>
+              <li class="list-none my-4 mx-2">
+                <span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="zhangEmbarrassinglySimpleSelfDistillation2026"><span itemprop="author">Ruixiang Zhang, Richard He Bai, Huangjie Zheng, Navdeep Jaitly, Ronan Collobert, Yizhe Zhang</span>. <time datetime="2026" itemprop="datePublished">April 1, 2026</time>. "<span itemprop="name">Embarrassingly Simple Self-Distillation Improves Code Generation</span>". <a itemprop="sameAs" href="https://arxiv.org/abs/2604.01193">https://arxiv.org/abs/2604.01193</a>.</span>&nbsp;<a href="/notes/zhangembarrassinglysimpleselfdistillation2026/">See notes</a>
+              </li>
+              <li class="list-none my-4 mx-2">
+                <span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="hubotterReinforcementLearningSelfDistillation2026"><span itemprop="author">Jonas Hübotter, Frederike Lübeck, Lejs Behric, Anton Baumann, Marco Bagatella, Daniel Marta, Ido Hakimi, et al.</span>. <time datetime="2026" itemprop="datePublished">January 28, 2026</time>. "<span itemprop="name">Reinforcement Learning via Self-Distillation</span>". <a itemprop="sameAs" href="https://arxiv.org/abs/2601.20802">https://arxiv.org/abs/2601.20802</a>.</span>&nbsp;<a href="/notes/hubotterreinforcementlearningselfdistillation2026/">See notes</a>
+              </li>
+            </ol>
           </div>
         </div>
         <div class="border-t border-zinc-200 dark:border-zinc-600 px-5 sm:px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400 text-center" style="font-variant-caps:all-small-caps">
-          Last changed <a class="u-url" href="https://hugocisneros.com/notes/algorithm/"><time itemprop="datePublished" class="dt-published" datetime="2020-07-10T09:13:00+0200">2020.07.10</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/token_credit_assignment/"><time itemprop="datePublished" class="dt-published" datetime="2026-04-09T14:48:00+0200">2026.04.09</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>
-    <section id="comments-container" class="comments-section" data-slug="/notes/algorithm"></section>
+    <section id="comments-container" class="comments-section" data-slug="/notes/token_credit_assignment"></section>
     <h3>Comments</h3>
     <div id="comments-list" class="comments-list">
       <p id="comments-loading" class="comments-loading">Loading comments...</p>
@@ -230,7 +220,7 @@
       <p id="form-error" class="form-error" style="display:none"></p>
       <p id="form-success" class="form-success" style="display:none"></p><button type="submit" class="comment-submit-btn">Post Comment</button>
     </form>
-    <script src="/js/comments.js" defer></script> <a href="/notes#algorithm" class="inline-flex items-center gap-2 mt-4 px-4 py-2 text-sm font-medium text-inherit bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg hover:border-zinc-400 dark:hover:border-zinc-500 hover:shadow-md transition-all duration-150"><svg class="inline-block" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2">
+    <script src="/js/comments.js" defer></script> <a href="/notes#token_credit_assignment" class="inline-flex items-center gap-2 mt-4 px-4 py-2 text-sm font-medium text-inherit bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg hover:border-zinc-400 dark:hover:border-zinc-500 hover:shadow-md transition-all duration-150"><svg class="inline-block" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2">
     <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path></svg>Back to Notes</a>
   </main>
   <footer class="footer container text-center mt-1 py-6">

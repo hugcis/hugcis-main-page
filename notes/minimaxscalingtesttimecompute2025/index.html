@@ -11,7 +11,7 @@
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
   <meta property="article:published_time" content="0001-01-01T00:00:00Z">
-  <meta property="article:modified_time" content="2026-04-08T18:16:00+02:00">
+  <meta property="article:modified_time" content="2026-04-09T14:21:00+02:00">
   <meta property="article:tag" content="Foundation models">
   <meta property="article:tag" content="Reinforcement learning">
   <meta property="article:tag" content="Transformers">
@@ -54,7 +54,7 @@
   function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/minimaxscalingtesttimecompute2025\/"},"headline":"Notes on: MiniMax-M1: Scaling Test-Time Compute Efficiently with Lightning Attention by MiniMax (2025)","description":"tags Foundation models, Reinforcement learning, Transformers, Scaling laws source (MiniMax 2025) Summary MiniMax-M1 is the first open-weight, large-scale …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2026-04-08T18:16:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":686,"keywords":["Foundation models","Reinforcement learning","Transformers","Scaling laws"]}
+  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/minimaxscalingtesttimecompute2025\/"},"headline":"Notes on: MiniMax-M1: Scaling Test-Time Compute Efficiently with Lightning Attention by MiniMax (2025)","description":"tags Foundation models, Reinforcement learning, Transformers, Scaling laws source (MiniMax 2025) Summary MiniMax-M1 is the first open-weight, large-scale …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2026-04-09T14:21:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":686,"keywords":["Foundation models","Reinforcement learning","Transformers","Scaling laws"]}
   </script>
 </head>
 <body>
@@ -151,7 +151,7 @@
               <li>Online monitoring and recalibration of generative reward models to prevent length bias exploitation</li>
             </ul>
             <h2 id="comments">Comments</h2>
-            <p>This paper represents a significant engineering achievement in training a competitive open-weight reasoning model with a non-standard architecture. The hybrid softmax/linear attention approach is the key differentiator — while most reasoning models rely on full softmax attention, MiniMax-M1 demonstrates that efficient architectures can be competitive. The connection to <a href="/notes/katharopoulostransformersarernns2020/">linear attention research</a> ((<a href="#katharopoulosTransformersAreRNNs2020"><cite itemprop="citation" itemscope itemid="key:katharopoulosTransformersAreRNNs2020">Katharopoulos et al. 2020</cite></a>)) is direct, as lightning attention is an I/O-aware implementation of linear attention.</p>
+            <p>This paper represents a significant engineering achievement in training a competitive open-weight reasoning model with a non-standard architecture. The hybrid softmax/linear attention approach is the key differentiator — while most reasoning models rely on full softmax attention, MiniMax-M1 demonstrates that efficient architectures can be competitive. The connection to <a href="/notes/katharopoulostransformersarernns2020/">linear attention research</a> (<a href="#katharopoulosTransformersAreRNNs2020"><cite itemprop="citation" itemscope itemid="key:katharopoulosTransformersAreRNNs2020">Katharopoulos et al. 2020</cite></a>) is direct, as lightning attention is an I/O-aware implementation of linear attention.</p>
             <p>The CISPO algorithm addresses a real problem: standard PPO/GRPO clipping can suppress learning on rare but semantically important tokens. This is especially relevant for reasoning models where “fork” tokens that redirect the chain of thought are both rare and critical. The <a href="/notes/switch_transformer/">Switch transformer</a> and other MoE models have shown parameter efficiency benefits, but MiniMax-M1 is notable for combining MoE with linear attention for reasoning.</p>
             <p>The practical details around training stability — precision fixes, repetition detection, reward model bias mitigation — are valuable contributions for anyone scaling RL training on large models. The $534K training cost demonstrates that competitive reasoning models can be trained at accessible (relative to frontier labs) compute budgets.</p>
             <h2 id="connections">Connections</h2>
@@ -181,7 +181,7 @@
           </div>
         </div>
         <div class="border-t border-zinc-200 dark:border-zinc-600 px-5 sm:px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400 text-center" style="font-variant-caps:all-small-caps">
-          Last changed <a class="u-url" href="https://hugocisneros.com/notes/minimaxscalingtesttimecompute2025/"><time itemprop="datePublished" class="dt-published" datetime="2026-04-08T18:16:00+0200">2026.04.08</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/minimaxscalingtesttimecompute2025/"><time itemprop="datePublished" class="dt-published" datetime="2026-04-09T14:21:00+0200">2026.04.09</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>

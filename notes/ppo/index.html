@@ -4,29 +4,35 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
-  <link rel="canonical" href="https://hugocisneros.com/tags/algorithm/">
-  <title>Algorithm - Hugo Cisneros</title>
-  <meta property="og:title" content="Algorithm - Hugo Cisneros">
+  <link rel="canonical" href="https://hugocisneros.com/notes/ppo/">
+  <title>PPO - Hugo Cisneros</title>
+  <meta property="og:title" content="PPO - Hugo Cisneros">
   <meta property="og:site_name" content="Hugo Cisneros">
   <meta property="og:locale" content="en_us">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="0001-01-01T00:00:00Z">
+  <meta property="article:modified_time" content="2026-04-09T14:37:00+02:00">
+  <meta property="article:tag" content="Reinforcement learning">
+  <meta property="article:tag" content="Algorithm">
+  <meta property="article:tag" content="Machine learning">
+  <meta property="article:author" content="Hugo Cisneros">
   <meta property="og:image" content="https://hugocisneros.com/img/main.jpeg">
   <meta property="og:image:width" content="400">
   <meta property="og:image:height" content="400">
-  <meta property="og:image:alt" content="Algorithm">
-  <meta property="og:url" content="https://hugocisneros.com/tags/algorithm/">
-  <meta property="og:description" content="All articles tagged with Algorithm">
-  <meta name="Description" property="description" content="All articles tagged with Algorithm">
+  <meta property="og:image:alt" content="PPO">
+  <meta property="og:url" content="https://hugocisneros.com/notes/ppo/">
+  <meta property="og:description" content="Notes about PPO">
+  <meta name="Description" property="description" content="Notes about PPO">
   <link rel="me" href="https://twitter.com/@cisne_hug">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@cisne_hug">
   <meta name="twitter:creator" content="@cisne_hug">
-  <meta name="twitter:title" content="Algorithm">
-  <meta name="twitter:description" content="Hugo Cisneros' personal page">
+  <meta name="twitter:title" content="PPO">
+  <meta name="twitter:description" content="tags Reinforcement learning, Algorithm, Machine learning">
   <meta name="twitter:image" content="https://hugocisneros.com/img/main.jpeg">
   <link rel="me" href="https://scholar.social/@hugcis">
   <link rel="me" href="https://github.com/hugcis">
-  <link rel="next" href="https://hugocisneros.com/tags/algorithm/page/2/">
+  <meta name="keywords" content="reinforcement learning,algorithm,machine learning">
   <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
   <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,6 +52,9 @@
   <script>
   function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/ppo\/"},"headline":"PPO","description":" tags Reinforcement learning, Algorithm, Machine learning ","datePublished":"0001-01-01T00:00:00Z","dateModified":"2026-04-09T14:37:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":6,"keywords":["Reinforcement learning","Algorithm","Machine learning"]}
+  </script>
 </head>
 <body>
   <header class="md:px-0 px-2">
@@ -60,8 +69,8 @@
             <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
               <a class="text-zinc-600 dark:text-zinc-300 no-underline-anim transition-colors duration-150" href="/blog/">Blog</a>
             </li>
-            <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
-              <a class="text-zinc-600 dark:text-zinc-300 no-underline-anim transition-colors duration-150" href="/notes/">Notes</a>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none border-b-2 border-accent">
+              <a class="text-zinc-600 dark:text-zinc-300 no-underline-anim transition-colors duration-150 text-accent dark:text-accent-light font-medium" href="/notes/">Notes</a>
             </li>
             <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
               <a class="text-zinc-600 dark:text-zinc-300 no-underline-anim transition-colors duration-150" href="/projects/">Projects</a>
@@ -89,93 +98,75 @@
     </nav>
   </header>
   <main class="content h-card container mt-2 m-auto leading-loose md:px-0 px-2 z-0" role="main">
-    <br>
-    <a href="/tags/"><b>← Browse all tags</b></a>
-    <div class="list">
-      <h1 class="list-title">Algorithm</h1>
-      <h2>Notes</h2>
-      <div class="mb-12 lg:mx-8">
-        <a href="https://hugocisneros.com/notes/grpo/" itemprop="url" class="grid grid-cols-list-item items-center pb-2 border-b-2 text-black dark:text-zinc-300 hover:text-neutral-500 dark:border-zinc-600 hover:dark:border-zinc-300 hover:dark:text-zinc-100">
-        <h3 itemprop="name" class="border-none pb-0 my-6 col-span-2">GRPO</h3></a>
-        <meta itemprop="author" content="Hugo Cisneros">
+    <nav aria-label="Breadcrumb" class="breadcrumb text-sm text-gray-500 dark:text-gray-400 mb-4">
+      <ol class="flex flex-wrap items-center" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="flex items-center">
+          <a itemprop="item" href="https://hugocisneros.com/" class="border-none hover:text-gray-700 dark:hover:text-gray-200"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1"><span class="mx-2">/</span>
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="flex items-center">
+          <a itemprop="item" href="https://hugocisneros.com/notes/" class="border-none hover:text-gray-700 dark:hover:text-gray-200"><span itemprop="name">Notes</span></a>
+          <meta itemprop="position" content="2"><span class="mx-2">/</span>
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="flex items-center">
+          <span itemprop="name" class="text-gray-900 dark:text-gray-100 font-medium" aria-current="page">PPO</span>
+          <meta itemprop="item" content="https://hugocisneros.com/notes/ppo/">
+          <meta itemprop="position" content="3">
+        </li>
+      </ol>
+    </nav>
+    <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+      <div class="note-page bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg mb-6 overflow-hidden">
+        <div class="p-5 sm:p-6">
+          <h1 class="text-xl sm:text-2xl font-semibold mb-4 p-name text-zinc-900 dark:text-zinc-100" itemprop="name">PPO</h1>
+          <div class="article-content e-content p-name prose dark:prose-invert max-w-none" itemprop="articleBody">
+            <dl>
+              <dt>tags</dt>
+              <dd>
+                <a href="/notes/reinforcement_learning/">Reinforcement learning</a>, <a href="/notes/algorithm/">Algorithm</a>, <a href="/notes/machine_learning/">Machine learning</a>
+              </dd>
+            </dl>
+          </div>
+        </div>
+        <div class="bl-section px-5 sm:px-6 py-4 border-t border-zinc-200 dark:border-zinc-600">
+          <h2 class="text-sm font-semibold mb-2 mt-0 text-zinc-500 dark:text-zinc-400">Links to this note</h2>
+          <div class="backlinks">
+            <ul class="m-0 pl-5 text-sm">
+              <li>
+                <a href="/notes/token_credit_assignment/">Token-level credit assignment in reasoning traces</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-zinc-200 dark:border-zinc-600 px-5 sm:px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400 text-center" style="font-variant-caps:all-small-caps">
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/ppo/"><time itemprop="datePublished" class="dt-published" datetime="2026-04-09T14:37:00+0200">2026.04.09</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+        </div>
       </div>
-      <div class="mb-12 lg:mx-8">
-        <a href="https://hugocisneros.com/notes/ppo/" itemprop="url" class="grid grid-cols-list-item items-center pb-2 border-b-2 text-black dark:text-zinc-300 hover:text-neutral-500 dark:border-zinc-600 hover:dark:border-zinc-300 hover:dark:text-zinc-100">
-        <h3 itemprop="name" class="border-none pb-0 my-6 col-span-2">PPO</h3></a>
-        <meta itemprop="author" content="Hugo Cisneros">
-      </div>
-      <div class="mb-12 lg:mx-8">
-        <a href="https://hugocisneros.com/notes/backpropagation/" itemprop="url" class="grid grid-cols-list-item items-center pb-2 border-b-2 text-black dark:text-zinc-300 hover:text-neutral-500 dark:border-zinc-600 hover:dark:border-zinc-300 hover:dark:text-zinc-100">
-        <h3 itemprop="name" class="border-none pb-0 my-6 col-span-2">Backpropagation</h3></a>
-        <meta itemprop="author" content="Hugo Cisneros">
-      </div>
-      <div class="mb-12 lg:mx-8">
-        <a href="https://hugocisneros.com/notes/generative_art/" itemprop="url" class="grid grid-cols-list-item items-center pb-2 border-b-2 text-black dark:text-zinc-300 hover:text-neutral-500 dark:border-zinc-600 hover:dark:border-zinc-300 hover:dark:text-zinc-100">
-        <h3 itemprop="name" class="border-none pb-0 my-6 col-span-2">Generative art</h3></a>
-        <meta itemprop="author" content="Hugo Cisneros">
-      </div>
-      <div class="mb-12 lg:mx-8">
-        <a href="https://hugocisneros.com/notes/frank_wolfe_algorithm/" itemprop="url" class="grid grid-cols-list-item items-center pb-2 border-b-2 text-black dark:text-zinc-300 hover:text-neutral-500 dark:border-zinc-600 hover:dark:border-zinc-300 hover:dark:text-zinc-100">
-        <h3 itemprop="name" class="border-none pb-0 my-6 col-span-2">Frank-Wolfe algorithm</h3></a>
-        <meta itemprop="author" content="Hugo Cisneros">
-      </div>
-      <div class="mb-12 lg:mx-8">
-        <a href="https://hugocisneros.com/notes/graham_scan/" itemprop="url" class="grid grid-cols-list-item items-center pb-2 border-b-2 text-black dark:text-zinc-300 hover:text-neutral-500 dark:border-zinc-600 hover:dark:border-zinc-300 hover:dark:text-zinc-100">
-        <h3 itemprop="name" class="border-none pb-0 my-6 col-span-2">Graham scan</h3></a>
-        <meta itemprop="author" content="Hugo Cisneros">
-      </div>
-      <div class="mb-12 lg:mx-8">
-        <a href="https://hugocisneros.com/notes/pattern_defeating_quicksort/" itemprop="url" class="grid grid-cols-list-item items-center pb-2 border-b-2 text-black dark:text-zinc-300 hover:text-neutral-500 dark:border-zinc-600 hover:dark:border-zinc-300 hover:dark:text-zinc-100">
-        <h3 itemprop="name" class="border-none pb-0 my-6 col-span-2">Pattern-defeating quicksort</h3></a>
-        <meta itemprop="author" content="Hugo Cisneros">
-      </div>
-      <div class="mb-12 lg:mx-8">
-        <a href="https://hugocisneros.com/notes/gradient_descent/" itemprop="url" class="grid grid-cols-list-item items-center pb-2 border-b-2 text-black dark:text-zinc-300 hover:text-neutral-500 dark:border-zinc-600 hover:dark:border-zinc-300 hover:dark:text-zinc-100">
-        <h3 itemprop="name" class="border-none pb-0 my-6 col-span-2">Gradient descent</h3></a>
-        <meta itemprop="author" content="Hugo Cisneros">
-      </div>
-      <div class="mb-12 lg:mx-8">
-        <a href="https://hugocisneros.com/notes/levenshtein_automata/" itemprop="url" class="grid grid-cols-list-item items-center pb-2 border-b-2 text-black dark:text-zinc-300 hover:text-neutral-500 dark:border-zinc-600 hover:dark:border-zinc-300 hover:dark:text-zinc-100">
-        <h3 itemprop="name" class="border-none pb-0 my-6 col-span-2">Levenshtein automata</h3></a>
-        <meta itemprop="author" content="Hugo Cisneros">
-      </div>
-      <div class="mb-12 lg:mx-8">
-        <a href="https://hugocisneros.com/notes/levenshtein_distance/" itemprop="url" class="grid grid-cols-list-item items-center pb-2 border-b-2 text-black dark:text-zinc-300 hover:text-neutral-500 dark:border-zinc-600 hover:dark:border-zinc-300 hover:dark:text-zinc-100">
-        <h3 itemprop="name" class="border-none pb-0 my-6 col-span-2">Levenshtein distance</h3></a>
-        <meta itemprop="author" content="Hugo Cisneros">
-      </div>
-      <div class="mb-12 lg:mx-8">
-        <a href="https://hugocisneros.com/notes/knuth_morris_pratt_string_searching_algorithm/" itemprop="url" class="grid grid-cols-list-item items-center pb-2 border-b-2 text-black dark:text-zinc-300 hover:text-neutral-500 dark:border-zinc-600 hover:dark:border-zinc-300 hover:dark:text-zinc-100">
-        <h3 itemprop="name" class="border-none pb-0 my-6 col-span-2">Knuth-Morris-Pratt string-searching algorithm</h3></a>
-        <meta itemprop="author" content="Hugo Cisneros">
-      </div>
-      <div class="mb-12 lg:mx-8">
-        <a href="https://hugocisneros.com/notes/search_algorithms/" itemprop="url" class="grid grid-cols-list-item items-center pb-2 border-b-2 text-black dark:text-zinc-300 hover:text-neutral-500 dark:border-zinc-600 hover:dark:border-zinc-300 hover:dark:text-zinc-100">
-        <h3 itemprop="name" class="border-none pb-0 my-6 col-span-2">Search algorithms</h3></a>
-        <meta itemprop="author" content="Hugo Cisneros">
-      </div>
-      <div class="mb-12 lg:mx-8">
-        <a href="https://hugocisneros.com/notes/stable_marriage_problem/" itemprop="url" class="grid grid-cols-list-item items-center pb-2 border-b-2 text-black dark:text-zinc-300 hover:text-neutral-500 dark:border-zinc-600 hover:dark:border-zinc-300 hover:dark:text-zinc-100">
-        <h3 itemprop="name" class="border-none pb-0 my-6 col-span-2">Stable marriage problem</h3></a>
-        <meta itemprop="author" content="Hugo Cisneros">
-      </div>
-      <div class="mb-12 lg:mx-8">
-        <a href="https://hugocisneros.com/notes/fast_marching_method/" itemprop="url" class="grid grid-cols-list-item items-center pb-2 border-b-2 text-black dark:text-zinc-300 hover:text-neutral-500 dark:border-zinc-600 hover:dark:border-zinc-300 hover:dark:text-zinc-100">
-        <h3 itemprop="name" class="border-none pb-0 my-6 col-span-2">Fast Marching method</h3></a>
-        <meta itemprop="author" content="Hugo Cisneros">
-      </div>
-      <div class="mb-12 lg:mx-8">
-        <a href="https://hugocisneros.com/notes/dijkstra_s_algorithm/" itemprop="url" class="grid grid-cols-list-item items-center pb-2 border-b-2 text-black dark:text-zinc-300 hover:text-neutral-500 dark:border-zinc-600 hover:dark:border-zinc-300 hover:dark:text-zinc-100">
-        <h3 itemprop="name" class="border-none pb-0 my-6 col-span-2">Dijkstra's algorithm</h3></a>
-        <meta itemprop="author" content="Hugo Cisneros">
-      </div>
-      <div class="mb-12 lg:mx-8">
-        <a href="https://hugocisneros.com/notes/adaptive_computation_time/" itemprop="url" class="grid grid-cols-list-item items-center pb-2 border-b-2 text-black dark:text-zinc-300 hover:text-neutral-500 dark:border-zinc-600 hover:dark:border-zinc-300 hover:dark:text-zinc-100">
-        <h3 itemprop="name" class="border-none pb-0 my-6 col-span-2">Adaptive Computation Time</h3></a>
-        <meta itemprop="author" content="Hugo Cisneros">
-      </div>
-      <hr>
+    </article>
+    <section id="comments-container" class="comments-section" data-slug="/notes/ppo"></section>
+    <h3>Comments</h3>
+    <div id="comments-list" class="comments-list">
+      <p id="comments-loading" class="comments-loading">Loading comments...</p>
     </div>
+    <p id="comments-error" class="comments-error" style="display:none"></p>
+    <form id="comment-form" class="comment-form" name="comment-form">
+      <h4>Leave a comment</h4>
+      <div class="form-group">
+        <label for="comment-name">Name <span class="required">*</span></label> <input type="text" id="comment-name" name="name" required="" maxlength="100" placeholder="Your name">
+      </div>
+      <div class="form-group">
+        <label for="comment-email">Email <span class="optional">(optional, not displayed)</span></label> <input type="email" id="comment-email" name="email" maxlength="254" placeholder="your@email.com">
+      </div>
+      <div class="form-group">
+        <label for="comment-content">Comment <span class="required">*</span></label> 
+        <textarea id="comment-content" name="content" required="" maxlength="10000" rows="4" placeholder="Write your comment..."></textarea>
+      </div>
+      <div id="turnstile-container" class="turnstile-container"></div><input type="hidden" id="turnstile-token" name="turnstile_token">
+      <p id="form-error" class="form-error" style="display:none"></p>
+      <p id="form-success" class="form-success" style="display:none"></p><button type="submit" class="comment-submit-btn">Post Comment</button>
+    </form>
+    <script src="/js/comments.js" defer></script> <a href="/notes#ppo" class="inline-flex items-center gap-2 mt-4 px-4 py-2 text-sm font-medium text-inherit bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg hover:border-zinc-400 dark:hover:border-zinc-500 hover:shadow-md transition-all duration-150"><svg class="inline-block" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path></svg>Back to Notes</a>
   </main>
   <footer class="footer container text-center mt-1 py-6">
     <hr class="my-4">
@@ -195,6 +186,12 @@
       <li class="ml-2 first:before:content-none before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block list-none"><span class="ml-2">© Hugo Cisneros 2026</span></li>
     </ul>
   </footer>
+  <link rel="stylesheet" href="/js/katex/katex.min.css">
+  <script src="/js/katex/katex.min.js"></script> 
+  <script src="/js/katex/contrib/auto-render.min.js"></script> 
+  <script>
+  document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"\\[",right:"\\]",display:!0},{left:"\\begin{align}",right:"\\end{align}",display:!0},{left:"$$",right:"$$",display:!0},{left:"\\begin{equation}",right:"\\end{equation}",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1}]})})
+  </script>
   <script data-goatcounter="https://stats.hugocisneros.com/count" async src="//stats.hugocisneros.com/count.js"></script>
 </body>
 </html>
