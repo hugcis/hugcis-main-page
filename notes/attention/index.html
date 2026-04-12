@@ -11,7 +11,7 @@
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
   <meta property="article:published_time" content="0001-01-01T00:00:00Z">
-  <meta property="article:modified_time" content="2026-04-08T18:13:00+02:00">
+  <meta property="article:modified_time" content="2026-04-12T10:44:00+02:00">
   <meta property="article:tag" content="Neural networks">
   <meta property="article:tag" content="Transformers">
   <meta property="article:author" content="Hugo Cisneros">
@@ -52,7 +52,7 @@
   function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/attention\/"},"headline":"Attention","description":"tags Neural networks, Transformers Implementation Self-attention is a weighted average of all input elements from a sequence, with a weight proportional to a …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2026-04-08T18:13:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":294,"keywords":["Neural networks","Transformers"]}
+  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/attention\/"},"headline":"Attention","description":"tags Neural networks, Transformers Implementation Self-attention is a weighted average of all input elements from a sequence, with a weight proportional to a …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2026-04-12T10:44:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":296,"keywords":["Neural networks","Transformers"]}
   </script>
 </head>
 <body>
@@ -130,14 +130,15 @@
             <p>\[ Q = xW_Q\] \[ K = xW_K\] \[ V = xW_V\]</p>
             <p>Output for all positions in a sequence \(x\), is written</p>
             <p>\[A(x) = V’ = \text{softmax}\left( \dfrac{QK^{T}}{\sqrt{D}} \right) V.\]</p>
-            <p>The softmax is applied row-wise in the equation above.</p>
+            <p>The <a href="/notes/softmax/">softmax</a> is applied row-wise in the equation above.</p>
             <h2 id="possible-interpretation">Possible interpretation</h2>
-            <p>Keys and queries have a relatively simple interpretation. The keys are embeddings of tokens that expose some useful information about them:</p>
+            <p>Keys and queries have a relatively simple interpretation. The keys are <a href="/notes/text_embeddings/">embeddings</a> of tokens that expose some useful information about them:</p>
             <p>The key \(K_3\) associated with <code>cat</code> should probably encode some information about the fact that it’s a noun, that it refers to a living entity, an animal, etc. On the other hand, the key \(K_2\) encodes the fact that <code>pretty</code> is an adjective, and is used to denote some positive things about the subject’s appearance. That key is probably close to keys for <code>beautiful</code> and <code>nice</code>.</p>
             <figure>
               <img src="/ox-hugo/contour.png">
             </figure>
             <p>The query encodes another type of information about what types of keys would be useful for that particular token. In the case of query \(Q_3\) it is probably useful to attend to any adjective-like key that could show something interesting about the current word. Therefore, the quantity \(\text{softmax}\left( \dfrac{QK^{T}}{\sqrt{D}} \right)\) will be larger and will contribute more heavily in the resulting vector \(V’\). This is illustrated in the graph above with heavier edges.</p>
+            <h2 id="attention-optimization--optimization-dot-md">Attention <a href="/notes/optimization/">optimization</a></h2>
             <h2 id="is-it-necessary">Is it necessary?</h2>
             <p>Maybe not (<a href="#zhaiAttentionFreeTransformer2021"><cite itemprop="citation" itemscope itemid="key:zhaiAttentionFreeTransformer2021">Zhai et al. 2021</cite></a>).</p>
             <h2 id="bibliography">Bibliography</h2>
@@ -208,7 +209,7 @@
           </div>
         </div>
         <div class="border-t border-zinc-200 dark:border-zinc-600 px-5 sm:px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400 text-center" style="font-variant-caps:all-small-caps">
-          Last changed <a class="u-url" href="https://hugocisneros.com/notes/attention/"><time itemprop="datePublished" class="dt-published" datetime="2026-04-08T18:13:00+0200">2026.04.08</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/attention/"><time itemprop="datePublished" class="dt-published" datetime="2026-04-12T10:44:00+0200">2026.04.12</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>
