@@ -128,8 +128,81 @@
         </ul>
         <h2 id="description">Description</h2>
         <p>This project is a renderer that raymarches 3D signed distance field (SDF) scenes and outputs SVG files with hatching lines. The hatching strokes follow surface tangent directions, with density controlled by lighting, producing an engraving or etching aesthetic inspired by Piter Pasma’s “rayhatching” technique.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <figure itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+            <img itemprop="url" src="/img/hatchforge_sculpture_3095346956.png" alt="Sculpture scene rendered with HatchForge" loading="lazy" decoding="async">
+            <figcaption>
+              <p>A sculpture scene rendered with hatched tangent-following strokes.</p>
+            </figcaption>
+          </figure>
+          <figure itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+            <img itemprop="url" src="/img/hatchforge_bubbles_42.png" alt="Bubbles scene" loading="lazy" decoding="async">
+            <figcaption>
+              <p>Bubbles scene: many overlapping spheres.</p>
+            </figcaption>
+          </figure>
+          <figure itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+            <img itemprop="url" src="/img/hatchforge_cubeframe_1674487801.png" alt="Cube frame scene" loading="lazy" decoding="async">
+            <figcaption>
+              <p>A cube frame built from boolean SDF operations.</p>
+            </figcaption>
+          </figure>
+          <figure itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+            <img itemprop="url" src="/img/hatchforge_output.png" alt="Composite output" loading="lazy" decoding="async">
+            <figcaption>
+              <p>Composite render combining multiple primitives.</p>
+            </figcaption>
+          </figure>
+        </div>
         <p>The rendering pipeline has three passes. First, a Rust backend raymarches the SDF scene per-pixel using rayon parallelism, producing hit, brightness, and hatch angle buffers. Then a flow field line tracer connects polylines through the 2D angle field, enforcing minimum spacing that varies with brightness to create light and shadow. Finally, the polylines are written out as SVG.</p>
         <p>Scenes are defined in Python as trees of SDF nodes (spheres, boxes, tori, boolean operations, transforms) which are evaluated natively in Rust via PyO3, giving roughly 150x speedup over pure Python.</p>
+        <h3 id="defining-a-scene">Defining a scene</h3>
+        <p>A scene is a tree built from primitives, combined with boolean or smooth operators, transformed, and tagged with a hatch direction. For example, a sculpture made of a displaced sphere with cross-beams and floating rings, sitting on a carved ground plane:</p>
+        <div class="highlight">
+          <pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="display:flex"><span><span style="color:#719e07">from</span> _hatchforge <span style="color:#719e07">import</span> SdfNode, RenderConfig, TraceConfig
+</span></span><span style="display:flex"><span><span style="color:#719e07">from</span> render_scene <span style="color:#719e07">import</span> render_scene
+</span></span><span style="display:flex"><span><span style="color:#719e07">import</span> math
+</span></span><span style="display:flex"><span>
+</span></span><span style="display:flex"><span>PI <span style="color:#719e07">=</span> math<span style="color:#719e07">.</span>pi
+</span></span><span style="display:flex"><span>
+</span></span><span style="display:flex"><span><span style="color:#586e75"># Central form: a bumpy sphere smooth-unioned with two crossing beams</span>
+</span></span><span style="display:flex"><span>sphere <span style="color:#719e07">=</span> SdfNode<span style="color:#719e07">.</span>sphere((<span style="color:#2aa198">0</span>, <span style="color:#2aa198">0</span>, <span style="color:#2aa198">0</span>), <span style="color:#2aa198">0.95</span>)<span style="color:#719e07">.</span>displace(freq<span style="color:#719e07">=</span><span style="color:#2aa198">11.0</span>, amp<span style="color:#719e07">=</span><span style="color:#2aa198">0.03</span>)
+</span></span><span style="display:flex"><span>beam_x <span style="color:#719e07">=</span> SdfNode<span style="color:#719e07">.</span>box_((<span style="color:#2aa198">8.0</span>, <span style="color:#2aa198">0.08</span>, <span style="color:#2aa198">0.08</span>))<span style="color:#719e07">.</span>round(<span style="color:#2aa198">0.02</span>)
+</span></span><span style="display:flex"><span>beam_z <span style="color:#719e07">=</span> SdfNode<span style="color:#719e07">.</span>box_((<span style="color:#2aa198">0.08</span>, <span style="color:#2aa198">0.08</span>, <span style="color:#2aa198">8.0</span>))<span style="color:#719e07">.</span>round(<span style="color:#2aa198">0.02</span>)
+</span></span><span style="display:flex"><span>
+</span></span><span style="display:flex"><span>form <span style="color:#719e07">=</span> (
+</span></span><span style="display:flex"><span>    sphere
+</span></span><span style="display:flex"><span>    <span style="color:#719e07">.</span>smooth_union(beam_x, <span style="color:#2aa198">0.8</span>)
+</span></span><span style="display:flex"><span>    <span style="color:#719e07">.</span>smooth_union(beam_z, <span style="color:#2aa198">0.8</span>)
+</span></span><span style="display:flex"><span>    <span style="color:#719e07">.</span>hatch_dir(<span style="color:#2aa198">0.5</span>, <span style="color:#2aa198">0.3</span>, <span style="color:#2aa198">0.8</span>)  <span style="color:#586e75"># strokes follow this tangent</span>
+</span></span><span style="display:flex"><span>)
+</span></span><span style="display:flex"><span>
+</span></span><span style="display:flex"><span><span style="color:#586e75"># Floating rings around the form</span>
+</span></span><span style="display:flex"><span>ring <span style="color:#719e07">=</span> (
+</span></span><span style="display:flex"><span>    SdfNode<span style="color:#719e07">.</span>torus(<span style="color:#2aa198">1.12</span>, <span style="color:#2aa198">0.10</span>)
+</span></span><span style="display:flex"><span>    <span style="color:#719e07">.</span>hatch_dir(<span style="color:#2aa198">0</span>, <span style="color:#2aa198">0</span>, <span style="color:#2aa198">1</span>)
+</span></span><span style="display:flex"><span>    <span style="color:#719e07">.</span>rotate_x(PI <span style="color:#719e07">/</span> <span style="color:#2aa198">2</span>)
+</span></span><span style="display:flex"><span>    <span style="color:#719e07">.</span>translate((<span style="color:#2aa198">0</span>, <span style="color:#2aa198">0</span>, <span style="color:#2aa198">0.9</span>))
+</span></span><span style="display:flex"><span>)
+</span></span><span style="display:flex"><span>
+</span></span><span style="display:flex"><span><span style="color:#586e75"># Ground plane with the sculpture carved out of it</span>
+</span></span><span style="display:flex"><span>ground <span style="color:#719e07">=</span> SdfNode<span style="color:#719e07">.</span>plane_y(<span style="color:#719e07">-</span><span style="color:#2aa198">1.45</span>)<span style="color:#719e07">.</span>hatch_dir(<span style="color:#2aa198">0.4</span>, <span style="color:#2aa198">0.9</span>, <span style="color:#719e07">-</span><span style="color:#2aa198">0.2</span>)
+</span></span><span style="display:flex"><span>scene <span style="color:#719e07">=</span> ground<span style="color:#719e07">.</span>smooth_subtract(form, <span style="color:#2aa198">0.25</span>)<span style="color:#719e07">.</span>union(form)<span style="color:#719e07">.</span>union(ring)
+</span></span><span style="display:flex"><span>
+</span></span><span style="display:flex"><span><span style="color:#586e75"># Orient and place in front of the camera</span>
+</span></span><span style="display:flex"><span>scene <span style="color:#719e07">=</span> scene<span style="color:#719e07">.</span>rotate_y(<span style="color:#2aa198">0.4</span>)<span style="color:#719e07">.</span>rotate_x(<span style="color:#2aa198">0.2</span>)<span style="color:#719e07">.</span>translate((<span style="color:#2aa198">0</span>, <span style="color:#719e07">-</span><span style="color:#2aa198">0.2</span>, <span style="color:#2aa198">3.5</span>))
+</span></span><span style="display:flex"><span>
+</span></span><span style="display:flex"><span>render_scene(
+</span></span><span style="display:flex"><span>    scene,
+</span></span><span style="display:flex"><span>    <span style="color:#2aa198">"output/sculpture.svg"</span>,
+</span></span><span style="display:flex"><span>    render_cfg<span style="color:#719e07">=</span>RenderConfig(width<span style="color:#719e07">=</span><span style="color:#2aa198">100</span>, height<span style="color:#719e07">=</span><span style="color:#2aa198">100</span>, buf_scale<span style="color:#719e07">=</span><span style="color:#2aa198">18</span>,
+</span></span><span style="display:flex"><span>                            light_dir<span style="color:#719e07">=</span>(<span style="color:#2aa198">0.7</span>, <span style="color:#2aa198">1.0</span>, <span style="color:#2aa198">0.4</span>), shadows<span style="color:#719e07">=</span><span style="color:#cb4b16">True</span>),
+</span></span><span style="display:flex"><span>    trace_cfg<span style="color:#719e07">=</span>TraceConfig(step_size<span style="color:#719e07">=</span><span style="color:#2aa198">0.04</span>, min_space<span style="color:#719e07">=</span><span style="color:#2aa198">0.06</span>, max_space<span style="color:#719e07">=</span><span style="color:#2aa198">0.7</span>),
+</span></span><span style="display:flex"><span>    stroke_width<span style="color:#719e07">=</span><span style="color:#2aa198">0.04</span>,
+</span></span><span style="display:flex"><span>)
+</span></span></code></pre>
+        </div>
+        <p>Every node exposes the same fluent API — <code>.translate</code>, <code>.rotate_x/y/z</code>, <code>.round</code>, <code>.displace</code>, <code>.repeat_xz</code>, plus <code>union</code> / <code>intersect</code> / <code>subtract</code> (and their <code>smooth_*</code> variants with a blending radius <code>k</code>). <code>hatch_dir</code> sets the 3D tangent that strokes follow on that subtree’s surface.</p>
         <h3 id="tech-stack">Tech stack</h3>
         <ul>
           <li><strong>Rust</strong> with PyO3 for the raymarching and line tracing engine</li>
