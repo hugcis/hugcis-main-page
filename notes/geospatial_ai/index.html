@@ -11,7 +11,7 @@
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
   <meta property="article:published_time" content="0001-01-01T00:00:00Z">
-  <meta property="article:modified_time" content="2026-04-07T19:25:00+02:00">
+  <meta property="article:modified_time" content="2026-04-19T14:00:00+02:00">
   <meta property="article:tag" content="Machine learning">
   <meta property="article:tag" content="LLM">
   <meta property="article:tag" content="Agent">
@@ -54,7 +54,7 @@
   function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/geospatial_ai\/"},"headline":"Geospatial AI","description":"tags Machine learning, LLM, Agent, Computer vision, Retrieval augmented generation The application of AI and LLMs to geospatial data like satellite imagery, GIS …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2026-04-07T19:25:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":786,"keywords":["Machine learning","LLM","Agent","Computer vision"]}
+  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/geospatial_ai\/"},"headline":"Geospatial AI","description":"tags Machine learning, LLM, Agent, Computer vision, Retrieval augmented generation The application of AI and LLMs to geospatial data like satellite imagery, GIS …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2026-04-19T14:00:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":790,"keywords":["Machine learning","LLM","Agent","Computer vision"]}
   </script>
 </head>
 <body>
@@ -129,7 +129,7 @@
             </dl>
             <p>The application of AI and <a href="/notes/llm/">LLMs</a> to geospatial data like satellite imagery, GIS databases, mapping, and Earth observation. LLMs have become production-grade tools across the geospatial industry in 2024–2026.</p>
             <h2 id="enterprise-gis-plus-llms">Enterprise GIS + LLMs</h2>
-            <p>The dominant deployment pattern (as of early 2026) is <strong>agentic orchestration</strong>: LLMs serve as reasoning layers that invoke specialized GIS tools, spatial databases, and domain-specific <a href="/notes/foundation_models/">Foundation models</a> rather than embedding all geospatial knowledge in model weights.</p>
+            <p>The dominant deployment pattern (as of early 2026) is <strong>agentic orchestration</strong>: LLMs serve as <a href="/notes/multimodal_reasoning/">reasoning</a> layers that invoke specialized GIS tools, spatial databases, and domain-specific <a href="/notes/foundation_models/">Foundation models</a> rather than embedding all geospatial knowledge in model weights.</p>
             <p>Key deployments:</p>
             <ul>
               <li><strong>Esri + Microsoft</strong> (July 2025): Azure OpenAI across ArcGIS. ArcGIS Pro Assistant generates ArcPy/SQL from natural language.</li>
@@ -185,13 +185,17 @@
               <li>
                 <strong>Structured output generation</strong>: GeoJSON Agents (2025) achieved 97.14% accuracy via multi-agent architecture vs 48.57% for general LLMs (<a href="#luoGeoJSONAgentsMultiAgent2025"><cite itemprop="citation" itemscope itemid="key:luoGeoJSONAgentsMultiAgent2025">Luo et al. 2025</cite></a>).
               </li>
-              <li><strong>Multi-step agentic planning</strong>: complex workflows like nine-step logistics routing (geocoding → route creation → geometry extraction → intersection → reporting).</li>
+              <li><strong>Multi-step <a href="/notes/agentic_reinforcement_learning/">agentic planning</a></strong>: complex workflows like nine-step logistics routing (geocoding → route creation → geometry extraction → intersection → reporting).</li>
               <li><strong>Multimodal processing</strong>: 6+ spectral bands, temporal sequences, resolutions from 0.1m to 30m.</li>
               <li>
-                <strong>Spatial RAG</strong>: Spatial-RAG (Feb 2025) introduced sparse-dense hybrid retrieval combining SQL + LLM semantic matching, ~86% delivery rate on geospatial QA (<a href="#yuSpatialRAGSpatialRetrieval2025"><cite itemprop="citation" itemscope itemid="key:yuSpatialRAGSpatialRetrieval2025">Yu et al. 2025</cite></a>).
+                <strong>Spatial RAG</strong>: Spatial-<a href="/notes/retrieval_augmented_generation/">RAG</a> (Feb 2025) introduced sparse-dense hybrid retrieval combining SQL + LLM semantic matching, ~86% delivery rate on geospatial QA (<a href="#yuSpatialRAGSpatialRetrieval2025"><cite itemprop="citation" itemscope itemid="key:yuSpatialRAGSpatialRetrieval2025">Yu et al. 2025</cite></a>).
+              </li>
+              <li>
+                <a href="/notes/visual_question_answering/">Visual question answering</a>
               </li>
             </ol>
             <p>GeoLLM (ICLR 2024) showed LLMs embed “remarkable spatial information about locations” from internet text—fine-tuning GPT-3.5 with OpenStreetMap data yielded 70% improvement in predicting population density, wealth, income. (<a href="https://openreview.net/forum?id=TqL2xBwXP3">OpenReview</a>)</p>
+            <h2 id="evaluations">Evaluations</h2>
             <h2 id="bibliography">Bibliography</h2>
             <ol class="biblio-list pl-0">
               <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="szwarcmanPrithviEO2VersatileMultiTemporal2024"><span itemprop="author">Daniela Szwarcman, Sujit Roy, Paolo Fraccaro, Þorsteinn Elí Gíslason, Benedikt Blumenstiel, Rinki Ghosal, Pedro Henrique de Oliveira, et al.</span>. <time datetime="2024" itemprop="datePublished">December 5, 2024</time>. "<span itemprop="name">Prithvi-EO-2.0: A Versatile Multi-Temporal Foundation Model for Earth Observation Applications</span>". <a itemprop="sameAs" href="https://arxiv.org/abs/2412.02732">https://arxiv.org/abs/2412.02732</a>.</span></li>
@@ -224,7 +228,7 @@
           </div>
         </div>
         <div class="border-t border-zinc-200 dark:border-zinc-600 px-5 sm:px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400 text-center" style="font-variant-caps:all-small-caps">
-          Last changed <a class="u-url" href="https://hugocisneros.com/notes/geospatial_ai/"><time itemprop="datePublished" class="dt-published" datetime="2026-04-07T19:25:00+0200">2026.04.07</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/geospatial_ai/"><time itemprop="datePublished" class="dt-published" datetime="2026-04-19T14:00:00+0200">2026.04.19</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>

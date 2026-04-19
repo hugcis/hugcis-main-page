@@ -11,7 +11,7 @@
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
   <meta property="article:published_time" content="0001-01-01T00:00:00Z">
-  <meta property="article:modified_time" content="2026-04-07T16:38:00+02:00">
+  <meta property="article:modified_time" content="2026-04-19T14:00:00+02:00">
   <meta property="article:tag" content="LLM">
   <meta property="article:tag" content="Vision transformer">
   <meta property="article:author" content="Hugo Cisneros">
@@ -52,7 +52,7 @@
   function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/vision_language_models\/"},"headline":"Vision Language Models","description":"tags LLM, Vision transformer Vision language models (VLMs) are generative AI models trained on both text and images. They can be effective tools for Image …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2026-04-07T16:38:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":223,"keywords":["LLM","Vision transformer"]}
+  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/vision_language_models\/"},"headline":"Vision Language Models","description":"tags LLM, Vision transformer Vision language models (VLMs) are generative AI models trained on both text and images. They can be effective tools for Image …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2026-04-19T14:00:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":231,"keywords":["LLM","Vision transformer"]}
   </script>
 </head>
 <body>
@@ -143,6 +143,14 @@
               </li>
               <li>Meta <strong>Segment Anything Model</strong> (SAM → SAM 2 → SAM 3, 2025): “promptable concept segmentation”, open-vocabulary detection where text prompts segment every matching instance. The open-source <strong>segment-geospatial (SamGeo)</strong> package integrates SAM into QGIS and ArcGIS workflows.</li>
             </ul>
+            <h2 id="chain-of-thought">Chain-of-thought</h2>
+            <p><a href="/notes/multimodal_reasoning/">Multimodal reasoning</a></p>
+            <h2 id="use-cases">Use cases</h2>
+            <ul>
+              <li>
+                <a href="/notes/visual_question_answering/">Visual question answering</a>
+              </li>
+            </ul>
             <h2 id="bibliography">Bibliography</h2>
             <ol class="biblio-list pl-0">
               <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="liuRemoteCLIPVisionLanguage2023"><span itemprop="author">Fan Liu, Delong Chen, Zhangqingyun Guan, Xiaocong Zhou, Jiale Zhu, Qiaolin Ye, Liyong Fu, Jun Zhou</span>. <time datetime="2023" itemprop="datePublished">June 19, 2023</time>. "<span itemprop="name">RemoteCLIP: A Vision Language Foundation Model for Remote Sensing</span>". <a itemprop="sameAs" href="https://arxiv.org/abs/2306.11029">https://arxiv.org/abs/2306.11029</a>.</span></li>
@@ -157,10 +165,16 @@
                 <a href="/notes/zhengdeepeyesincentivizing2025/">Notes on: DeepEyes: Incentivizing "Thinking with Images" via Reinforcement Learning by Ziwei Zheng, Michael Yang, Jack Hong, Chenxiao Zhao, Guohai Xu, Le Yang, Chao Shen, Xing Yu (2025)</a>
               </li>
               <li>
+                <a href="/notes/agentic_reinforcement_learning/">Agentic reinforcement learning</a>
+              </li>
+              <li>
                 <a href="/notes/foundation_models/">Foundation models</a>
               </li>
               <li>
                 <a href="/notes/notes/">Knowledge Base Index</a>
+              </li>
+              <li>
+                <a href="/notes/multimodal_reasoning/">Multimodal reasoning</a>
               </li>
               <li>
                 <a href="/notes/carionendtoendobject2020/">Notes on: End-to-End Object Detection with Transformers by Nicolas Carion, Francisco Massa, Gabriel Synnaeve, Nicolas Usunier, Alexander Kirillov, Sergey Zagoruyko (2020)</a>
@@ -177,11 +191,14 @@
               <li>
                 <a href="/notes/carionsamsegmentanything2025/">Notes on: SAM 3: Segment Anything with Concepts by Nicolas Carion, Laura Gustafson, Yuan-Ting Hu, Shoubhik Debnath, Ronghang Hu, Didac Suris, Chaitanya Ryali, Kalyan Vasudev Alwala, Haitham Khedr, Andrew Huang, Jie Lei, Tengyu Ma, Baishan Guo, Arpit Kalla, Markus Marks, Joseph Greer, Meng Wang, Peize Sun, Roman Rädle, Triantafyllos Afouras, Effrosyni Mavroudi, Katherine Xu, Tsung-Han Wu, Yu Zhou, Liliane Momeni, Rishi Hazra, Shuangrui Ding, Sagar Vaze, Francois Porcher, Feng Li, Siyuan Li, Aishwarya Kamath, Ho Kei Cheng, Piotr Dollár, Nikhila Ravi, Kate Saenko, Pengchuan Zhang, Christoph Feichtenhofer (2025)</a>
               </li>
+              <li>
+                <a href="/notes/visual_question_answering/">Visual question answering</a>
+              </li>
             </ul>
           </div>
         </div>
         <div class="border-t border-zinc-200 dark:border-zinc-600 px-5 sm:px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400 text-center" style="font-variant-caps:all-small-caps">
-          Last changed <a class="u-url" href="https://hugocisneros.com/notes/vision_language_models/"><time itemprop="datePublished" class="dt-published" datetime="2026-04-07T16:38:00+0200">2026.04.07</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/vision_language_models/"><time itemprop="datePublished" class="dt-published" datetime="2026-04-19T14:00:00+0200">2026.04.19</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>
