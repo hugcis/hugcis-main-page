@@ -137,7 +137,7 @@
             <p>This part is related to <a href="/notes/neural_architecture_search/">Neural architecture search</a>: algorithms learn to create the learning architectures.</p>
             <h3 id="meta-learning-the-learning-algorithms-themselves">Meta-learning the learning algorithms themselves</h3>
             <p>This part wants to avoid learning algorithms such as SGD and instead learn them directly. Ex: Model Agnostic Meta Learning (MAML) aims at finding an initial set of weights that is the fastest at learning a range of tasks.</p>
-            <p>Another idea is to use RNN (Turing complete) trained via an outer loop optimization algorithm to be the most sample-efficient learning algorithm and use it then to train other models. This has been done in (<a href="#wangLearningReinforcementLearn2017"><cite itemprop="citation" itemscope itemid="key:wangLearningReinforcementLearn2017">Wang et al. 2017</cite></a>) and (<a href="#duanRLFastReinforcement2016"><cite itemprop="citation" itemscope itemid="key:duanRLFastReinforcement2016">Duan et al. 2016</cite></a>) in the context of Reinforcement learning, with policy gradients as the outer loop (in nature this would be the role of evolution).</p>
+            <p>Another idea is to use RNN (Turing complete) trained via an outer loop optimization algorithm to be the most sample-efficient learning algorithm and use it then to train other models. This has been done in (<a href="#wangLearningReinforcementLearn2017"><cite itemprop="citation" itemscope itemid="key:wangLearningReinforcementLearn2017">Wang et al. 2017</cite></a>) and (<a href="#duanRLFastReinforcement2016"><cite itemprop="citation" itemscope itemid="key:duanRLFastReinforcement2016">Duan et al. 2016</cite></a>) in the context of <a href="/notes/reinforcement_learning/">Reinforcement learning</a>, with policy gradients as the outer loop (in nature this would be the role of evolution).</p>
             <p>The main question with meta-learning is: what tasks should the meta-learner learn on ? The author argues that can be learned too.</p>
             <h3 id="automatically-generating-effective-learning-environments">Automatically generating effective learning environments</h3>
             <p>We should have algorithms that can learn to generate learning environments. This includes defining a reward in this environment. This is likely the hardest of the three pillars. This is what people attempt at reproducing in Alife simulations, coevolution, self-play (Dota, Go, etc.). They all more or less fail to create this open-ended complexity explosion like what happened on Earth. This is usually due to the fact that the environmental component of the algorithm is not evolving.</p>
@@ -149,7 +149,9 @@
             </ul>
             <p>search).</p>
             <ul>
-              <li>Quality diversity, meaning that the algorithm should be able to generate</li>
+              <li>
+                <a href="/notes/quality_diversity/">Quality diversity</a>, meaning that the algorithm should be able to generate
+              </li>
             </ul>
             <p>many solutions to a problem where each of those solutions is as high performing as possible for its type (or species) this is related to MAP-elites.</p>
             <p>The authors believe that POET is a step in that direction.</p>

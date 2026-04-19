@@ -129,7 +129,7 @@
               </dd>
             </dl>
             <h2 id="summary">Summary</h2>
-            <p>This paper introduces the LMU recurrent cell. This cell is based on a similar-ish idea to LSTM to maintain a memory hidden state. The main idea of the paper is to make this memory satisfy a set of first order ordinary differential equations.</p>
+            <p>This paper introduces the LMU recurrent cell. This cell is based on a similar-ish idea to LSTM to maintain a memory hidden state. The main idea of the paper is to make this memory satisfy a set of first order ordinary <a href="/notes/differential_equations/">differential equations</a>.</p>
             <p>\begin{equation} \theta \dot{m}(t) = Am(t) + Bu(t) \end{equation}</p>
             <p>This system has a solution which represents sliding windows of \(u\) via Legendre polynomials. This new unit is tested on a range of tasks. A memory only task, a permuted MNIST task and a dynamical chaotic system prediction task.</p>
             <h2 id="comments">Comments</h2>

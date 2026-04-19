@@ -148,7 +148,7 @@
               <li>Train-with-large-block / infer-with-small-block generalizes well, enabling dynamic block-size scheduling at inference.</li>
             </ul>
             <h2 id="comments">Comments</h2>
-            <p>Speculative decoding and diffusion language modeling have mostly been independent research lines; the clever move here is to use each for what it is good at (diffusion for parallelism, autoregressive for quality) rather than pitting them against each other. The “target knows best” framing is consistent with what EAGLE-style methods already exploit at the logit/hidden level, but DFlash pushes it further by making the draft model a KV-conditioned diffusion adapter.</p>
+            <p>Speculative decoding and diffusion <a href="/notes/language_modeling/">language modeling</a> have mostly been independent research lines; the clever move here is to use each for what it is good at (diffusion for parallelism, autoregressive for quality) rather than pitting them against each other. The “target knows best” framing is consistent with what EAGLE-style methods already exploit at the logit/hidden level, but DFlash pushes it further by making the draft model a KV-conditioned diffusion adapter.</p>
             <p>Limitations worth flagging: the acceptance-length improvement depends on harvesting hidden features from 5 target-model layers at prefill, which costs memory that scales with block size; block-size scheduling is left as future work; and the evaluation is restricted to Qwen3 / LLaMA-3.1-8B with fairly short 2K-token generations, so behavior on very-long contexts remains open.</p>
             <h2 id="connections">Connections</h2>
             <ul>
