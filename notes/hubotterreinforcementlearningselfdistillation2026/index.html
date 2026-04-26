@@ -11,7 +11,7 @@
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
   <meta property="article:published_time" content="0001-01-01T00:00:00Z">
-  <meta property="article:modified_time" content="2026-04-26T13:50:00+02:00">
+  <meta property="article:modified_time" content="2026-04-26T17:14:00+02:00">
   <meta property="article:tag" content="Reinforcement learning">
   <meta property="article:tag" content="Distillation">
   <meta property="article:tag" content="Large language models">
@@ -53,7 +53,7 @@
   function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/hubotterreinforcementlearningselfdistillation2026\/"},"headline":"Notes on: Reinforcement Learning via Self-Distillation by Hübotter, J., Lübeck, F., Behric, L., Baumann, A., …","description":"tags Reinforcement learning, Distillation, Large language models, In-context learning source (Hübotter et al. 2026) Summary This paper introduces …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2026-04-26T13:50:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":779,"keywords":["Reinforcement learning","Distillation","Large language models"]}
+  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/hubotterreinforcementlearningselfdistillation2026\/"},"headline":"Notes on: Reinforcement Learning via Self-Distillation by Hübotter, J., Lübeck, F., Behric, L., Baumann, A., …","description":"tags Reinforcement learning, Distillation, Large language models, In-context learning source (Hübotter et al. 2026) Summary This paper introduces …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2026-04-26T17:14:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":853,"keywords":["Reinforcement learning","Distillation","Large language models"]}
   </script>
 </head>
 <body>
@@ -166,9 +166,11 @@
               </li>
               <li>Related to <a href="/notes/self_training/">Self-training</a> as both involve a model improving from its own outputs, though SDPO operates at the logit level rather than generating new training samples
               </li>
-              <li>Related to <a href="/notes/zhangembarrassinglysimpleselfdistillation2026/">Notes on: Embarrassingly Simple Self-Distillation</a> as both use self-distillation for improving code generation, but SDPO is on-policy and uses RL while SSD uses off-policy SFT
+              <li>Related to <a href="/notes/zhangembarrassinglysimpleselfdistillation2026/">Notes on: Embarrassingly Simple Self-Distillation</a> as both use self-distillation for improving code generation, but SDPO is an instance of <a href="/notes/on_policy_distillation/">on-policy distillation</a> (rollouts sampled from the current policy) while SSD uses off-policy SFT
               </li>
               <li>Related to <a href="/notes/reinforcement_learning_with_human_feedback/">Reinforcement learning with human feedback</a> as SDPO extends the RLVR paradigm that RLHF pioneered for LLM alignment
+              </li>
+              <li>Related to <a href="/notes/inverse_reinforcement_learning/">Inverse reinforcement learning</a> in spirit: rather than relying on an explicit scalar reward, SDPO extracts a per-token training signal from the model’s feedback-conditioned distribution — recovering an implicit reward from rich auxiliary information, in the same family as the demonstration-conditioned IRL formulation used by (<a href="#shenfeldSelfDistillationContinual2026"><cite itemprop="citation" itemscope itemid="key:shenfeldSelfDistillationContinual2026">Shenfeld et al. 2026</cite></a>)
               </li>
               <li>Related to <a href="/notes/llm/">Large language models</a> as the method is specifically designed for post-training LLMs
               </li>
@@ -178,6 +180,9 @@
               <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="hubotterReinforcementLearningSelfDistillation2026"><span itemprop="author">Jonas Hübotter, Frederike Lübeck, Lejs Behric, Anton Baumann, Marco Bagatella, Daniel Marta, Ido Hakimi, et al.</span>. <time datetime="2026" itemprop="datePublished">January 28, 2026</time>. "<span itemprop="name">Reinforcement Learning via Self-Distillation</span>". <a itemprop="sameAs" href="https://arxiv.org/abs/2601.20802">https://arxiv.org/abs/2601.20802</a>.</span></li>
               <li class="list-none my-4 mx-2">
                 <span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="zhangEmbarrassinglySimpleSelfDistillation2026"><span itemprop="author">Ruixiang Zhang, Richard He Bai, Huangjie Zheng, Navdeep Jaitly, Ronan Collobert, Yizhe Zhang</span>. <time datetime="2026" itemprop="datePublished">April 1, 2026</time>. "<span itemprop="name">Embarrassingly Simple Self-Distillation Improves Code Generation</span>". <a itemprop="sameAs" href="https://arxiv.org/abs/2604.01193">https://arxiv.org/abs/2604.01193</a>.</span>&nbsp;<a href="/notes/zhangembarrassinglysimpleselfdistillation2026/">See notes</a>
+              </li>
+              <li class="list-none my-4 mx-2">
+                <span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="shenfeldSelfDistillationContinual2026"><span itemprop="author">Idan Shenfeld, Mehul Damani, Jonas Hübotter, Pulkit Agrawal</span>. <time datetime="2026" itemprop="datePublished">January 27, 2026</time>. "<span itemprop="name">Self-Distillation Enables Continual Learning</span>". <a itemprop="sameAs" href="https://arxiv.org/abs/2601.19897">https://arxiv.org/abs/2601.19897</a>.</span>&nbsp;<a href="/notes/shenfeldselfdistillationcontinual2026/">See notes</a>
               </li>
             </ol>
           </div>
@@ -193,7 +198,7 @@
           </div>
         </div>
         <div class="border-t border-zinc-200 dark:border-zinc-600 px-5 sm:px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400 text-center" style="font-variant-caps:all-small-caps">
-          Last changed <a class="u-url" href="https://hugocisneros.com/notes/hubotterreinforcementlearningselfdistillation2026/"><time itemprop="datePublished" class="dt-published" datetime="2026-04-26T13:50:00+0200">2026.04.26</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/hubotterreinforcementlearningselfdistillation2026/"><time itemprop="datePublished" class="dt-published" datetime="2026-04-26T17:14:00+0200">2026.04.26</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>
