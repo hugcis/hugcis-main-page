@@ -11,12 +11,10 @@
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
   <meta property="article:published_time" content="0001-01-01T00:00:00Z">
-  <meta property="article:modified_time" content="2026-04-19T12:05:00+02:00">
+  <meta property="article:modified_time" content="2026-04-26T13:55:00+02:00">
   <meta property="article:tag" content="Vision Language Models">
   <meta property="article:tag" content="Grounding">
   <meta property="article:tag" content="Synthetic training data">
-  <meta property="article:tag" content="Spatial Reasoning">
-  <meta property="article:tag" content="Foundation models">
   <meta property="article:author" content="Hugo Cisneros">
   <meta property="og:image" content="https://hugocisneros.com/img/main.jpeg">
   <meta property="og:image:width" content="400">
@@ -34,7 +32,7 @@
   <meta name="twitter:image" content="https://hugocisneros.com/img/main.jpeg">
   <link rel="me" href="https://scholar.social/@hugcis">
   <link rel="me" href="https://github.com/hugcis">
-  <meta name="keywords" content="vision language models,grounding,synthetic training data,spatial reasoning,foundation models">
+  <meta name="keywords" content="vision language models,grounding,synthetic training data">
   <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
   <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -55,7 +53,7 @@
   function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/clarkmolmo2video2026\/"},"headline":"Notes on: Molmo2: Open Weights and Data for Vision-Language Models with Video Understanding and Grounding by …","description":"tags Vision Language Models, Grounding, Synthetic training data, Spatial Reasoning, Foundation models source (Clark et al. 2026) Summary Molmo2 is a family of …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2026-04-19T12:05:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":1259,"keywords":["Vision Language Models","Grounding","Synthetic training data","Spatial Reasoning","Foundation models"]}
+  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/clarkmolmo2video2026\/"},"headline":"Notes on: Molmo2: Open Weights and Data for Vision-Language Models with Video Understanding and Grounding by …","description":"tags Vision Language Models, Grounding, Synthetic training data, Spatial Reasoning, Foundation models source (Clark et al. 2026) Summary Molmo2 is a family of …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2026-04-26T13:55:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":1259,"keywords":["Vision Language Models","Grounding","Synthetic training data"]}
   </script>
 </head>
 <body>
@@ -142,7 +140,8 @@
             <h2 id="key-ideas">Key Ideas</h2>
             <ul>
               <li>Fully open VLM with explicit <strong>no-distillation</strong> principle: all training data is human- or open-source-derived, no outputs from closed VLMs used as supervision.</li>
-              <li>Three-stage training: image-only pre-training (captioning + pointing + NLP) → joint video/image SFT → short long-context SFT (seq 36,864, F=384) for long-video handling.</li>
+              <li>Three-stage training: image-only pre-training (captioning + pointing + NLP) → joint video/image <a href="/notes/supervised_fine_tuning/">SFT</a> → short long-context SFT (seq 36,864, F=384) for long-video handling.
+              </li>
               <li>Sequence <strong>packing</strong> + <strong>message-tree</strong> encoding: 3.8 examples per 16,348-token sequence on average, yielding ~15x training efficiency while masking cross-example attention.</li>
               <li><strong>Bi-directional attention</strong> between visual tokens (rather than causal) boosts both QA and captioning.</li>
               <li><strong>Token-weighting</strong> scheme: fixed 0.1 weight for video captions, 0.2 for image captions, 4/√n for other tasks — prevents long-output captioning from swamping the loss.</li>
@@ -209,7 +208,7 @@
           </div>
         </div>
         <div class="border-t border-zinc-200 dark:border-zinc-600 px-5 sm:px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400 text-center" style="font-variant-caps:all-small-caps">
-          Last changed <a class="u-url" href="https://hugocisneros.com/notes/clarkmolmo2video2026/"><time itemprop="datePublished" class="dt-published" datetime="2026-04-19T12:05:00+0200">2026.04.19</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/clarkmolmo2video2026/"><time itemprop="datePublished" class="dt-published" datetime="2026-04-26T13:55:00+0200">2026.04.26</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>

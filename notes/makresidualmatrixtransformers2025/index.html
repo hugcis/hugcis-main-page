@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
+  <link rel="canonical" href="https://hugocisneros.com/notes/makresidualmatrixtransformers2025/">
+  <title>Notes on: Residual Matrix Transformers: Scaling the Size of the Residual Stream by Brian Mak, Jeffrey Flanigan (2025) - Hugo Cisneros</title>
+  <meta property="og:title" content="Notes on: Residual Matrix Transformers: Scaling the Size of the Residual Stream by Brian Mak, Jeffrey Flanigan (2025) - Hugo Cisneros">
+  <meta property="og:site_name" content="Hugo Cisneros">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="0001-01-01T00:00:00Z">
+  <meta property="article:modified_time" content="2026-04-26T13:45:00+02:00">
+  <meta property="article:tag" content="Transformers">
+  <meta property="article:tag" content="LLM">
+  <meta property="article:tag" content="Scaling laws">
+  <meta property="article:tag" content="Attention">
+  <meta property="article:tag" content="Residual neural networks">
+  <meta property="article:tag" content="Memory in neural networks">
+  <meta property="article:author" content="Hugo Cisneros">
+  <meta property="og:image" content="https://hugocisneros.com/img/main.jpeg">
+  <meta property="og:image:width" content="400">
+  <meta property="og:image:height" content="400">
+  <meta property="og:image:alt" content="Notes on: Residual Matrix Transformers: Scaling the Size of the Residual Stream by Brian Mak, Jeffrey Flanigan (2025)">
+  <meta property="og:url" content="https://hugocisneros.com/notes/makresidualmatrixtransformers2025/">
+  <meta property="og:description" content="Notes about Residual Matrix Transformers: Scaling the Size of the Residual Stream by Brian Mak, Jeffrey Flanigan (2025)">
+  <meta name="Description" property="description" content="Notes about Residual Matrix Transformers: Scaling the Size of the Residual Stream by Brian Mak, Jeffrey Flanigan (2025)">
+  <link rel="me" href="https://twitter.com/@cisne_hug">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@cisne_hug">
+  <meta name="twitter:creator" content="@cisne_hug">
+  <meta name="twitter:title" content="Notes on: Residual Matrix Transformers: Scaling the Size of the Residual Stream by Brian Mak, Jeffrey Flanigan (2025)">
+  <meta name="twitter:description" content="tags Transformers, LLM, Scaling laws, Attention, Residual neural networks, Memory in neural networks source (Mak, Flanigan 2025) Summary Standard Transformers use a residual stream of dimension \(D\) …">
+  <meta name="twitter:image" content="https://hugocisneros.com/img/main.jpeg">
+  <link rel="me" href="https://scholar.social/@hugcis">
+  <link rel="me" href="https://github.com/hugcis">
+  <meta name="keywords" content="transformers,llm,scaling laws,attention,residual neural networks,memory in neural networks">
+  <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
+  <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Source+Sans+3:ital,wght@0,300..900;1,300..900&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Source+Sans+3:ital,wght@0,300..900;1,300..900&amp;display=swap" media="print" onload='this.media="all"'><noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Source+Sans+3:ital,wght@0,300..900;1,300..900&amp;display=swap"></noscript>
+  <link rel="stylesheet" href="https://hugocisneros.com/css/style.min.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link href="https://hugocisneros.com/index.xml" type="application/atom+xml" rel="alternate" title="Sitewide Atom feed">
+  <meta name="theme-color" content="#f5f5f5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#27272a" media="(prefers-color-scheme: dark)">
+  <script>
+  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/makresidualmatrixtransformers2025\/"},"headline":"Notes on: Residual Matrix Transformers: Scaling the Size of the Residual Stream by Brian Mak, Jeffrey Flanigan …","description":"tags Transformers, LLM, Scaling laws, Attention, Residual neural networks, Memory in neural networks source (Mak, Flanigan 2025) Summary Standard Transformers …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2026-04-26T13:45:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":1214,"keywords":["Transformers","LLM","Scaling laws","Attention","Residual neural networks","Memory in neural networks"]}
+  </script>
+</head>
+<body>
+  <header class="md:px-0 px-2">
+    <nav>
+      <div class="container flex flex-wrap justify-between items-center mx-auto">
+        <div class="nav-main my-2.5">
+          <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl font-serif text-zinc-600 dark:text-zinc-300 no-underline-anim">Hugo Cisneros</a>
+        </div><button type="button" onclick="toggleMenu()" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul class="grid md:grid-flow-col items-center justify-between text-lg my-2.5 grid-cols-1 pl-0 text-center">
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 no-underline-anim transition-colors duration-150" href="/blog/">Blog</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none border-b-2 border-accent">
+              <a class="text-zinc-600 dark:text-zinc-300 no-underline-anim transition-colors duration-150 text-accent dark:text-accent-light font-medium" href="/notes/">Notes</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 no-underline-anim transition-colors duration-150" href="/projects/">Projects</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 no-underline-anim transition-colors duration-150" href="/resume/">Resume</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 no-underline-anim transition-colors duration-150" href="/contact/">Contact</a>
+            </li>
+            <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full" aria-label="Toggle between dark and light mode"><svg class="h-5 w-5 hidden dark:inline text-zinc-300 hover:text-accent-light transition-colors" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg><svg class="h-5 w-5 inline dark:hidden text-zinc-500 hover:text-accent transition-colors" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path></svg></button></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="content h-card container mt-2 m-auto leading-loose md:px-0 px-2 z-0" role="main">
+    <nav aria-label="Breadcrumb" class="breadcrumb text-sm text-gray-500 dark:text-gray-400 mb-4">
+      <ol class="flex flex-wrap items-center" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="flex items-center">
+          <a itemprop="item" href="https://hugocisneros.com/" class="border-none hover:text-gray-700 dark:hover:text-gray-200"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1"><span class="mx-2">/</span>
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="flex items-center">
+          <a itemprop="item" href="https://hugocisneros.com/notes/" class="border-none hover:text-gray-700 dark:hover:text-gray-200"><span itemprop="name">Notes</span></a>
+          <meta itemprop="position" content="2"><span class="mx-2">/</span>
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="flex items-center">
+          <span itemprop="name" class="text-gray-900 dark:text-gray-100 font-medium" aria-current="page">Notes on: Residual Matrix Transformers: Scaling …</span>
+          <meta itemprop="item" content="https://hugocisneros.com/notes/makresidualmatrixtransformers2025/">
+          <meta itemprop="position" content="3">
+        </li>
+      </ol>
+    </nav>
+    <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+      <div class="note-page bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg mb-6 overflow-hidden">
+        <div class="p-5 sm:p-6">
+          <h1 class="text-xl sm:text-2xl font-semibold mb-4 p-name text-zinc-900 dark:text-zinc-100" itemprop="name">Residual Matrix Transformers: Scaling the Size of the Residual Stream by Brian Mak, Jeffrey Flanigan (2025)</h1>
+          <div class="bg-amber-50 dark:bg-amber-950 border border-amber-200 dark:border-amber-800 rounded-md p-3 mb-4 text-sm text-amber-800 dark:text-amber-200">
+            This note was initially drafted with LLM assistance. Generated notes are periodically reviewed and revised by the author.
+          </div>
+          <div class="article-content e-content p-name prose dark:prose-invert max-w-none" itemprop="articleBody">
+            <dl>
+              <dt>tags</dt>
+              <dd>
+                <a href="/notes/transformers/">Transformers</a>, <a href="/notes/llm/">LLM</a>, <a href="/notes/scaling_laws/">Scaling laws</a>, <a href="/notes/attention/">Attention</a>, <a href="/notes/residual_networks/">Residual neural networks</a>, <a href="/notes/memory_in_neural_networks/">Memory in neural networks</a>
+              </dd>
+              <dt>source</dt>
+              <dd>
+                (<a href="#makResidualMatrixTransformers2025"><cite itemprop="citation" itemscope itemid="key:makResidualMatrixTransformers2025">Mak, Flanigan 2025</cite></a>)
+              </dd>
+            </dl>
+            <h2 id="summary">Summary</h2>
+            <p>Standard <a href="/notes/transformers/">Transformers</a> use a residual stream of dimension \(D\) as a “memory bus” where every layer reads and writes features (Elhage et al., 2021). Resizing this bus also resizes every weight matrix, so the bandwidth of the residual stream is structurally tied to parameter count and per-token FLOPs. The <em>Residual Matrix Transformer</em> (RMT) breaks this coupling by replacing the residual <em>vector</em> at each token position with an outer-product memory <em>matrix</em> \(M \in \mathbb{R}^{D_k \times D_v}\) (Kohonen, 1972; Anderson, 1972). Each attention head becomes a (key, value) pair stored into the matrix via \(M = \text{Norm}(\sum_p q^{(p)} \otimes x^{(p)})\), and is read out by tensor contraction \(x^{( r)} \approx q^{( r)} \cdot_1 M\). The key vectors \(r_Q, r_K, r_V, r_O \in \mathbb{R}^{D_k}\) take the place of the standard \(W_Q, W_K, W_V, W_O\) projection matrices, so scaling the residual stream along the \(D_k\) axis costs almost no extra parameters or FLOPs.</p>
+            <p>The authors prove (Table 1) that storage/retrieval through the outer-product memory has comparable or better mean/variance propagation than linear projections, satisfying Glorot-style initialization criteria in nearly every layer. Empirically, on OpenWebText and matched to GPT-2 dimensions, the RMT matches a 405M-parameter <a href="/notes/scaling_laws/">scaling-law</a>-trained transformer with 25% fewer parameters, 58% fewer FLOPs, and 41% fewer training tokens (Table 3). Scaling the residual stream from \(D_k=384\) up to \(D_k=4096\) at fixed model size and fixed compute monotonically reduces dev loss (Figure 6) — a new scaling axis that does not exist in the standard transformer. On zero-shot downstream evaluations the RMT also outperforms a transformer that is 33% larger across LAMBADA, OpenWebText perplexity, ARC-C/E, HellaSwag, PIQA, and Winogrande.</p>
+            <p>The main practical caveat is wall-clock runtime: per-step time is currently ∼4% slower than the transformer because the implementation is not hardware-aware. Memory at training is roughly equal (the larger residual is offset by the smaller model), and inference memory is actually lower since only one residual matrix per sequence needs to be cached for autoregressive decoding.</p>
+            <h2 id="key-ideas">Key Ideas</h2>
+            <ul>
+              <li><strong>Outer-product memory residual stream</strong>: each token’s residual is a matrix \(M = \text{Norm}(\sum_p q^{(p)} \otimes x^{(p)})\) rather than a vector, storing features as outer products of learned key vectors and head outputs.</li>
+              <li><strong>Key-vector adapters replace projection matrices</strong>: \(W_Q^{(h)}, W_K^{(h)}, W_V^{(h)}, W_O^{(h)} \in \mathbb{R}^{D_h \times D}\) are replaced by key vectors \(r_Q^{(h)}, r_K^{(h)}, r_V^{(h)}, w_O^{(h)} \in \mathbb{R}^{D_k}\). Tensor contraction \(\cdot_1\) retrieves $D_v × N$-shaped Q/K/V tensors from the residual matrix, so the SHA op is unchanged in shape and cost.</li>
+              <li><strong>Feed-forward keeps its weights</strong>: unlike the attention block, the FF layer retains its \(W_1, W_2\) matrices because Geva et al. (2021) and Meng et al. (2022) show FF weights store factual associations — only the read/write <em>interface</em> is replaced by key vectors.</li>
+              <li><strong>Independent scaling of residual stream</strong>: \(D_k\) can be increased without touching the rest of the model. A 100% increase in \(D_k\) adds &lt;1% parameters and &lt;1% FLOPs, versus 100%/94% for the standard transformer (Figure 1).</li>
+              <li><strong>Improved variance propagation</strong>: closed-form analysis shows that, except for the attention storage op, RMT layer ratios \(\sigma^2_{\text{out}} / \sigma^2_{\text{in}}\) are closer to 1 under Xavier initialization, making deeper RMTs better behaved at init.</li>
+              <li><strong>New scaling axis</strong>: at fixed model size, dataset size, and compute, expanding \(D_k\) monotonically lowers loss (Figure 6, \(D_k\) from 384 to 4096), yielding 23% FLOP and 25% token savings to reach the same final loss as a matched-residual GPT-2-small.</li>
+              <li><strong>Beats prior residual-stream variants</strong>: outperforms Depthwise LSTM, Hierarchical Aggregation, Highway Transformer, and the standard transformer on per-FLOP loss (Figure 5) while using fewer parameters than all of them.</li>
+              <li><strong>Connection to associative memory</strong>: the storage/retrieval operations are exactly those of classical correlation matrix memories (Kohonen 1972, Anderson 1972, Gmitro et al. 1989) — the residual stream is reframed as a per-token associative store.</li>
+            </ul>
+            <h2 id="comments">Comments</h2>
+            <p>The reframing of the residual stream as an associative outer-product memory is elegant and exposes a real architectural slack: the residual-stream “bandwidth” was always tied to projection-matrix width, and decoupling these turns out to give a free scaling axis. The Pareto improvement on per-FLOP and per-parameter loss is striking — 25% fewer parameters and 58% fewer FLOPs to reach the same loss as a GPT-2-medium-shaped transformer is a large delta for a “drop-in” architectural change.</p>
+            <p>The connection to <a href="/notes/hopfield_networks/">Hopfield Networks</a> / classical correlation matrix memories (Kohonen 1972, Anderson 1972) is more than an analogy: the storage rule \(M = \sum_p q^{(p)} \otimes x^{(p)}\) is the textbook outer-product associative memory, and retrieval \(x^{( r)} \approx q^{( r)} \cdot_1 M\) is the matched-key read-out. This places RMT in a lineage with <a href="/notes/memory_in_neural_networks/">memory-augmented neural networks</a>, recasting “the residual stream is a memory bus” (Elhage et al.) as literally true rather than metaphorical.</p>
+            <p>The paper is also a nice complement to other recent residual-stream modifications. Where <a href="/notes/chenattentionresiduals2026/">Attention Residuals (Chen et al. 2026)</a> adds learned softmax attention <em>across depth</em> (replacing fixed unit-weight accumulation with learned weights), RMT changes the <em>storage substrate</em> within each layer position (vector → matrix). The two modifications operate on orthogonal axes and could in principle be combined.</p>
+            <p>The runtime gap (4% slower per step) is the headline limitation, and it is purely an engineering artifact: the tensor contractions are not yet hardware-aware. If a fused kernel closed this gap, the FLOP/parameter efficiency would translate directly into wall-clock training-time savings — making this a strong candidate for production-scale revisits. The LayerNorm-based normalization choice (vs. unnormalized outer-product memories) also raises questions about how it interacts with <a href="/notes/layernorm/">LayerNorm</a>’s known role in stabilizing pre-norm transformers.</p>
+            <p>The experiments stop at 405M parameters and 6B tokens due to compute constraints, so it is genuinely unknown whether the gains persist at billion-token frontier scale or whether other residual-stream pathologies emerge. Still, the <a href="/notes/chinchilla/">Chinchilla</a>-optimal training-token regime is respected, which makes the comparison cleaner than many recent architecture papers.</p>
+            <h2 id="connections">Connections</h2>
+            <ul>
+              <li>Directly extends <a href="/notes/transformers/">Transformers</a> by replacing the residual <em>vector</em> with an outer-product residual <em>matrix</em>, decoupling residual-stream width from projection-matrix width.
+              </li>
+              <li>Builds on <a href="/notes/residual_networks/">Residual neural networks</a>: keeps the additive identity-shortcut structure but changes what flows through the shortcut.
+              </li>
+              <li>Reframes the residual stream as a <a href="/notes/memory_in_neural_networks/">memory-in-neural-network</a> mechanism; storage/retrieval is the classical Kohonen/Anderson correlation matrix memory, closely related to <a href="/notes/hopfield_networks/">Hopfield Networks</a> and modern continuous Hopfield variants.
+              </li>
+              <li>Defines a new axis along which <a href="/notes/scaling_laws/">scaling laws</a> / <a href="/notes/the_scaling_hypothesis/">the scaling hypothesis</a> can be explored: residual-stream size \(D_k\) at fixed model size and per-example compute.
+              </li>
+              <li>Trained at <a href="/notes/chinchilla/">Chinchilla</a>-optimal token budgets (\(20\times\) non-embedding parameters), making the per-FLOP comparison meaningful.
+              </li>
+              <li>Complements <a href="/notes/chenattentionresiduals2026/">Attention Residuals (Chen et al. 2026)</a>: AttnRes modifies <em>how</em> residual contributions are mixed across depth (depth-wise attention), RMT modifies <em>what data structure</em> each token’s residual is (matrix vs vector). Orthogonal modifications.
+              </li>
+              <li>Cites and improves over Highway Transformer (Chai et al. 2020) and depthwise-LSTM residual managers (Xu et al. 2024) — all variants the Block-AttnRes paper also compares against.</li>
+              <li>Uses <a href="/notes/layernorm/">LayerNorm</a>-style normalization on the outer-product memory; pre-norm insertion is structurally identical to the standard transformer block.
+              </li>
+              <li>Inherits the <a href="/notes/attention/">attention</a> block’s softmax SHA computation unchanged — the RMT change is in the <em>interface</em> to the residual stream, not in attention itself.
+              </li>
+              <li>Connects to <a href="/notes/andersonmoredifferent1972/">More Is Different (Anderson 1972)</a> only via shared author Anderson on the original outer-product memory paper (Anderson, J.A. 1972 — a different Anderson than P.W. Anderson; bibliographic overlap, not conceptual).
+              </li>
+            </ul>
+            <h2 id="bibliography">Bibliography</h2>
+            <ol class="biblio-list pl-0">
+              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="makResidualMatrixTransformers2025"><span itemprop="author">Brian Mak, Jeffrey Flanigan</span>. <time datetime="2025" itemprop="datePublished">June 28, 2025</time>. "<span itemprop="name">Residual Matrix Transformers: Scaling the Size of the Residual Stream</span>". <a itemprop="sameAs" href="https://arxiv.org/abs/2506.22696">https://arxiv.org/abs/2506.22696</a>.</span></li>
+            </ol>
+          </div>
+        </div>
+        <div class="border-t border-zinc-200 dark:border-zinc-600 px-5 sm:px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400 text-center" style="font-variant-caps:all-small-caps">
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/makresidualmatrixtransformers2025/"><time itemprop="datePublished" class="dt-published" datetime="2026-04-26T13:45:00+0200">2026.04.26</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+        </div>
+      </div>
+    </article>
+    <section id="comments-container" class="comments-section" data-slug="/notes/makresidualmatrixtransformers2025"></section>
+    <h3>Comments</h3>
+    <div id="comments-list" class="comments-list">
+      <p id="comments-loading" class="comments-loading">Loading comments...</p>
+    </div>
+    <p id="comments-error" class="comments-error" style="display:none"></p>
+    <form id="comment-form" class="comment-form" name="comment-form">
+      <h4>Leave a comment</h4>
+      <div class="form-group">
+        <label for="comment-name">Name <span class="required">*</span></label> <input type="text" id="comment-name" name="name" required="" maxlength="100" placeholder="Your name">
+      </div>
+      <div class="form-group">
+        <label for="comment-email">Email <span class="optional">(optional, not displayed)</span></label> <input type="email" id="comment-email" name="email" maxlength="254" placeholder="your@email.com">
+      </div>
+      <div class="form-group">
+        <label for="comment-content">Comment <span class="required">*</span></label> 
+        <textarea id="comment-content" name="content" required="" maxlength="10000" rows="4" placeholder="Write your comment..."></textarea>
+      </div>
+      <div id="turnstile-container" class="turnstile-container"></div><input type="hidden" id="turnstile-token" name="turnstile_token">
+      <p id="form-error" class="form-error" style="display:none"></p>
+      <p id="form-success" class="form-success" style="display:none"></p><button type="submit" class="comment-submit-btn">Post Comment</button>
+    </form>
+    <script src="/js/comments.js" defer></script> <a href="/notes#makresidualmatrixtransformers2025" class="inline-flex items-center gap-2 mt-4 px-4 py-2 text-sm font-medium text-inherit bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg hover:border-zinc-400 dark:hover:border-zinc-500 hover:shadow-md transition-all duration-150"><svg class="inline-block" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path></svg>Back to Notes</a>
+  </main>
+  <footer class="footer container text-center mt-1 py-6">
+    <hr class="my-4">
+    <div class="flex items-center justify-center gap-4 mb-3">
+      <a href="https://github.com/hugcis" class="text-zinc-500 dark:text-zinc-400 hover:text-accent dark:hover:text-accent-light no-underline-anim" aria-label="GitHub" title="GitHub"><svg class="w-5 h-5" viewbox="0 0 24 24" fill="currentcolor">
+      <path d="M12 0C5.37.0.0 5.37.0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57.0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925.0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18.0.0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225.0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22.0 1.605-.015 2.895-.015 3.3.0.315.225.69.825.57A12.02 12.02.0 0024 12c0-6.63-5.37-12-12-12z"></path></svg></a><a href="https://scholar.google.com/citations?user=_uSIl-0AAAAJ&amp;hl=en" class="text-zinc-500 dark:text-zinc-400 hover:text-accent dark:hover:text-accent-light no-underline-anim" aria-label="Google Scholar" title="Google Scholar"><svg class="w-5 h-5" viewbox="0 0 24 24" fill="currentcolor">
+      <path d="M5.242 13.769.0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977.0-5.548 1.748-6.758 4.269zM12 10a7 7 0 100 14 7 7 0 000-14z"></path></svg></a><a href="https://scholar.social/@hugcis" rel="me" class="text-zinc-500 dark:text-zinc-400 hover:text-accent dark:hover:text-accent-light no-underline-anim" aria-label="Mastodon" title="Mastodon"><svg class="w-5 h-5" viewbox="0 0 24 24" fill="currentcolor">
+      <path d="M23.268 5.313c-.35-2.578-2.617-4.61-5.304-5.004C17.51.242 15.792.0 11.813.0h-.03c-3.98.0-4.835.242-5.288.309C3.882.692 1.496 2.518.917 5.127.64 6.412.61 7.837.661 9.143c.074 1.874.088 3.745.26 5.611.118 1.24.325 2.47.62 3.68.55 2.237 2.777 4.098 4.96 4.857 2.336.792 4.849.923 7.256.38.265-.061.527-.132.786-.213.585-.184 1.27-.39 1.774-.753a.057.057.0 00.023-.043v-1.809a.052.052.0 00-.02-.041.053.053.0 00-.046-.01 20.282 20.282.0 01-4.709.545c-2.73.0-3.463-1.284-3.674-1.818a5.593 5.593.0 01-.319-1.433.053.053.0 01.066-.054 19.648 19.648.0 004.581.536c.394.0.787.0 1.183-.014 2.136-.064 4.411-.132 6.426-.78a.077.077.0 00.055-.032c.803-1.267 1.074-3.06 1.08-4.634a18.22 18.22.0 00-.021-.57zM19.5 9.412v5.493h-2.178V9.607c0-1.148-.466-1.735-1.443-1.735-1.065.0-1.596.691-1.596 2.06v2.922H12.12V9.932c0-1.37-.532-2.06-1.597-2.06-.977.0-1.443.587-1.443 1.735v5.298H6.9V9.412c0-1.147.29-2.06.876-2.736.603-.676 1.392-1.022 2.375-1.022 1.137.0 1.997.432 2.567 1.297L12 8.078l1.282-1.127c.57-.865 1.431-1.297 2.567-1.297.983.0 1.773.346 2.375 1.022.585.676.876 1.589.876 2.736z"></path></svg></a>
+    </div>
+    <ul class="pl-0 mt-1">
+      <li class="first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 no-underline-anim" href="https://hugocisneros.com/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="https://hugocisneros.com/img/RSS.svg" alt="RSS feed icon" width="16" height="16"></a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="ml-2 text-neutral-800 dark:text-neutral-400 no-underline-anim" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block list-none"><span class="ml-2">© Hugo Cisneros 2026</span></li>
+    </ul>
+  </footer>
+  <link rel="stylesheet" href="/js/katex/katex.min.css">
+  <script src="/js/katex/katex.min.js"></script> 
+  <script src="/js/katex/contrib/auto-render.min.js"></script> 
+  <script>
+  document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"\\[",right:"\\]",display:!0},{left:"\\begin{align}",right:"\\end{align}",display:!0},{left:"$$",right:"$$",display:!0},{left:"\\begin{equation}",right:"\\end{equation}",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1}]})})
+  </script>
+  <script data-goatcounter="https://stats.hugocisneros.com/count" async src="//stats.hugocisneros.com/count.js"></script>
+</body>
+</html>

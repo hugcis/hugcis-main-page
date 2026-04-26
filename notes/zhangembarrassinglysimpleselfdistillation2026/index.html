@@ -135,7 +135,7 @@
               </dd>
             </dl>
             <h2 id="summary">Summary</h2>
-            <p>This paper introduces <em>simple self-distillation</em> (SSD), a method where an <a href="/notes/llm/">LLM</a> improves its own code generation by sampling solutions from itself with specific temperature and truncation settings, then fine-tuning on those raw, unverified samples using standard supervised fine-tuning (cross-entropy loss).</p>
+            <p>This paper introduces <em>simple self-distillation</em> (SSD), a method where an <a href="/notes/llm/">LLM</a> improves its own code generation by sampling solutions from itself with specific temperature and truncation settings, then fine-tuning on those raw, unverified samples using standard <a href="/notes/supervised_fine_tuning/">supervised fine-tuning</a> (cross-entropy loss).</p>
             <p>Crucially, SSD requires no external teacher model, no verifier (as opposed to <a href="/notes/reinforcement_learning_with_verifiable_rewards/">Reinforcement learning with verifiable rewards</a>), no execution environment, no reward model, and no reinforcement learning. This technique requires only the model itself and a set of problem prompts.</p>
             <p>SSD achieves substantial gains: Qwen3-30B-Instruct improves from 42.4% to 55.3% pass@1 on LiveCodeBench v6, a +30% relative improvement. The method generalizes across both Qwen and Llama model families at 4B, 8B, and 30B scale, including both instruct and thinking variants. Gains concentrate on harder problems, and pass@5 often improves more than pass@1, suggesting SSD preserves generation diversity rather than collapsing to a single mode.</p>
             <p>The paper provides a compelling mechanistic explanation through the <em>precision-exploration conflict</em>: code generation interleaves “lock” positions (where the correct token is clear and distractors must be suppressed) and “fork” positions (where multiple valid algorithmic approaches exist and diversity should be preserved). A single global decoding temperature cannot satisfy both simultaneously. SSD resolves this by reshaping token distributions in a context-dependent way — performing <em>support compression</em> (trimming diffuse tails) and <em>within-support reshaping</em> (redistributing mass among viable tokens). The authors validate this through toy simulations, real-model analysis on Qwen3-30B-Instruct, and a formal theoretical decomposition of the SSD objective into three interpretable terms (Equation 4).</p>
@@ -180,6 +180,9 @@
             <ul class="m-0 pl-5 text-sm">
               <li>
                 <a href="/notes/hubotterreinforcementlearningselfdistillation2026/">Notes on: Reinforcement Learning via Self-Distillation by Hübotter, J., Lübeck, F., Behric, L., Baumann, A., Bagatella, M., Marta, D., Hakimi, I., Shenfeld, I., Kleine Buening, T., Guestrin, C. & Krause, A. (2026)</a>
+              </li>
+              <li>
+                <a href="/notes/shenfeldselfdistillationcontinual2026/">Notes on: Self-Distillation Enables Continual Learning by Idan Shenfeld, Mehul Damani, Jonas Hübotter, Pulkit Agrawal (2026)</a>
               </li>
             </ul>
           </div>

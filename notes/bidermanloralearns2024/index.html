@@ -11,7 +11,7 @@
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
   <meta property="article:published_time" content="0001-01-01T00:00:00Z">
-  <meta property="article:modified_time" content="2026-04-19T11:50:00+02:00">
+  <meta property="article:modified_time" content="2026-04-26T13:53:00+02:00">
   <meta property="article:tag" content="LLM">
   <meta property="article:tag" content="Continual learning">
   <meta property="article:tag" content="Catastrophic forgetting">
@@ -55,7 +55,7 @@
   function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/bidermanloralearns2024\/"},"headline":"Notes on: LoRA Learns Less and Forgets Less by Dan Biderman, Jacob Portes, Jose Javier Gonzalez Ortiz, …","description":"tags LLM, Continual learning, Catastrophic forgetting, Transfer learning, Language modeling source (Biderman et al. 2024) Summary This paper provides a rigorous …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2026-04-19T11:50:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":851,"keywords":["LLM","Continual learning","Catastrophic forgetting","Transfer learning","Language modeling"]}
+  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/bidermanloralearns2024\/"},"headline":"Notes on: LoRA Learns Less and Forgets Less by Dan Biderman, Jacob Portes, Jose Javier Gonzalez Ortiz, …","description":"tags LLM, Continual learning, Catastrophic forgetting, Transfer learning, Language modeling source (Biderman et al. 2024) Summary This paper provides a rigorous …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2026-04-26T13:53:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":851,"keywords":["LLM","Continual learning","Catastrophic forgetting","Transfer learning","Language modeling"]}
   </script>
 </head>
 <body>
@@ -153,7 +153,7 @@
             <h2 id="comments">Comments</h2>
             <p>This paper is a useful corrective to optimistic LoRA folklore inherited from the original <a href="/notes/llm/">LLM</a> adaptation literature, where the targets (GLUE, MNLI on RoBERTa-340M) were trivially close to the pretraining distribution. Once the target domain genuinely demands new capability — Python code, formal math — the low-rank inductive bias of LoRA acts as a real constraint. The framing of LoRA as a knob on the learning–forgetting Pareto frontier (rather than as “free” parameter efficiency) is the most useful contribution: it makes the tradeoff explicit and gives a principled reason to choose LoRA when source-domain preservation matters (e.g. continual instruction following).</p>
             <p>The SVD analysis (Section 4.6) is the most mechanistically interesting piece. That full finetuning produces \(\Delta\) with rank \(\sim d/2\), while typical LoRA uses \(r \le 64 \ll d=4096\), gives a clean explanation for the underperformance: LoRA can’t physically express the perturbation that full finetuning finds. The fact that MLPs need higher rank than attention modules is a structural hint about <strong>where</strong> continual learning happens in transformers — an angle worth following in the <a href="/notes/continual_learning/">continual learning</a> literature.</p>
-            <p>A limitation worth flagging: all results are on Llama-2-7B with one round of finetuning. Modern post-training pipelines stack many stages (SFT → DPO → RLHF), and the cumulative forgetting picture under repeated LoRA vs full updates is left open. Also, the “forgetting” metric is a fixed average of three classical NLU benchmarks; richer evaluations (instruction following, factuality, safety) might shift the tradeoff.</p>
+            <p>A limitation worth flagging: all results are on Llama-2-7B with one round of finetuning. Modern post-training pipelines stack many stages (<a href="/notes/supervised_fine_tuning/">SFT</a> → DPO → RLHF), and the cumulative forgetting picture under repeated LoRA vs full updates is left open. Also, the “forgetting” metric is a fixed average of three classical NLU benchmarks; richer evaluations (instruction following, factuality, safety) might shift the tradeoff.</p>
             <h2 id="connections">Connections</h2>
             <ul>
               <li>Related to <a href="/notes/catastrophic_forgetting/">Catastrophic forgetting</a> — the paper is essentially a careful empirical study of forgetting under two finetuning paradigms, and shows LoRA acts as an implicit regulariser against it.
@@ -173,8 +173,18 @@
             </ol>
           </div>
         </div>
+        <div class="bl-section px-5 sm:px-6 py-4 border-t border-zinc-200 dark:border-zinc-600">
+          <h2 class="text-sm font-semibold mb-2 mt-0 text-zinc-500 dark:text-zinc-400">Links to this note</h2>
+          <div class="backlinks">
+            <ul class="m-0 pl-5 text-sm">
+              <li>
+                <a href="/notes/shenfeldselfdistillationcontinual2026/">Notes on: Self-Distillation Enables Continual Learning by Idan Shenfeld, Mehul Damani, Jonas Hübotter, Pulkit Agrawal (2026)</a>
+              </li>
+            </ul>
+          </div>
+        </div>
         <div class="border-t border-zinc-200 dark:border-zinc-600 px-5 sm:px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400 text-center" style="font-variant-caps:all-small-caps">
-          Last changed <a class="u-url" href="https://hugocisneros.com/notes/bidermanloralearns2024/"><time itemprop="datePublished" class="dt-published" datetime="2026-04-19T11:50:00+0200">2026.04.19</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/bidermanloralearns2024/"><time itemprop="datePublished" class="dt-published" datetime="2026-04-26T13:53:00+0200">2026.04.26</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
         </div>
       </div>
     </article>

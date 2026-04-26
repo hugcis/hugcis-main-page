@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
+  <link rel="canonical" href="https://hugocisneros.com/notes/shenfeldselfdistillationcontinual2026/">
+  <title>Notes on: Self-Distillation Enables Continual Learning by Idan Shenfeld, Mehul Damani, Jonas Hübotter, Pulkit Agrawal (2026) - Hugo Cisneros</title>
+  <meta property="og:title" content="Notes on: Self-Distillation Enables Continual Learning by Idan Shenfeld, Mehul Damani, Jonas Hübotter, Pulkit Agrawal (2026) - Hugo Cisneros">
+  <meta property="og:site_name" content="Hugo Cisneros">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="0001-01-01T00:00:00Z">
+  <meta property="article:modified_time" content="2026-04-26T13:50:00+02:00">
+  <meta property="article:tag" content="Continual learning">
+  <meta property="article:tag" content="Catastrophic forgetting">
+  <meta property="article:tag" content="Distillation">
+  <meta property="article:author" content="Hugo Cisneros">
+  <meta property="og:image" content="https://hugocisneros.com/img/main.jpeg">
+  <meta property="og:image:width" content="400">
+  <meta property="og:image:height" content="400">
+  <meta property="og:image:alt" content="Notes on: Self-Distillation Enables Continual Learning by Idan Shenfeld, Mehul Damani, Jonas Hübotter, Pulkit Agrawal (2026)">
+  <meta property="og:url" content="https://hugocisneros.com/notes/shenfeldselfdistillationcontinual2026/">
+  <meta property="og:description" content="Notes about Self-Distillation Enables Continual Learning by Idan Shenfeld, Mehul Damani, Jonas Hübotter, Pulkit Agrawal (2026)">
+  <meta name="Description" property="description" content="Notes about Self-Distillation Enables Continual Learning by Idan Shenfeld, Mehul Damani, Jonas Hübotter, Pulkit Agrawal (2026)">
+  <link rel="me" href="https://twitter.com/@cisne_hug">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@cisne_hug">
+  <meta name="twitter:creator" content="@cisne_hug">
+  <meta name="twitter:title" content="Notes on: Self-Distillation Enables Continual Learning by Idan Shenfeld, Mehul Damani, Jonas Hübotter, Pulkit Agrawal (2026)">
+  <meta name="twitter:description" content="tags Continual learning, Catastrophic forgetting, Distillation, In-context learning, Large language models source (Shenfeld et al. 2026) Summary This paper introduces Self-Distillation Fine-Tuning …">
+  <meta name="twitter:image" content="https://hugocisneros.com/img/main.jpeg">
+  <link rel="me" href="https://scholar.social/@hugcis">
+  <link rel="me" href="https://github.com/hugcis">
+  <meta name="keywords" content="continual learning,catastrophic forgetting,distillation">
+  <link rel="webmention" href="https://webmention.io/hugocisneros.com/webmention">
+  <link rel="pingback" href="https://webmention.io/hugocisneros.com/xmlrpc">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Source+Sans+3:ital,wght@0,300..900;1,300..900&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Source+Sans+3:ital,wght@0,300..900;1,300..900&amp;display=swap" media="print" onload='this.media="all"'><noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Source+Sans+3:ital,wght@0,300..900;1,300..900&amp;display=swap"></noscript>
+  <link rel="stylesheet" href="https://hugocisneros.com/css/style.min.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link href="https://hugocisneros.com/index.xml" type="application/atom+xml" rel="alternate" title="Sitewide Atom feed">
+  <meta name="theme-color" content="#f5f5f5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#27272a" media="(prefers-color-scheme: dark)">
+  <script>
+  function updateMode(){localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function toggleMode(){localStorage.theme==="dark"?localStorage.theme="light":localStorage.theme="dark",updateMode()}window.onload=updateMode();function toggleMenu(){let e=document.getElementById("navbar-default");e.classList.contains("hidden")?e.classList.remove("hidden"):e.classList.add("hidden")}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hugocisneros.com\/notes\/shenfeldselfdistillationcontinual2026\/"},"headline":"Notes on: Self-Distillation Enables Continual Learning by Idan Shenfeld, Mehul Damani, Jonas Hübotter, Pulkit …","description":"tags Continual learning, Catastrophic forgetting, Distillation, In-context learning, Large language models source (Shenfeld et al. 2026) Summary This paper …","datePublished":"0001-01-01T00:00:00Z","dateModified":"2026-04-26T13:50:00\u002b02:00","author":{"@type":"Person","name":"[Hugo Cisneros]","url":"https:\/\/hugocisneros.com\/"},"publisher":{"@type":"Person","name":"Hugo Cisneros","url":"https:\/\/hugocisneros.com\/"},"wordCount":1104,"keywords":["Continual learning","Catastrophic forgetting","Distillation"]}
+  </script>
+</head>
+<body>
+  <header class="md:px-0 px-2">
+    <nav>
+      <div class="container flex flex-wrap justify-between items-center mx-auto">
+        <div class="nav-main my-2.5">
+          <a href="https://hugocisneros.com/" class="nav-title py-2.5 text-2xl font-serif text-zinc-600 dark:text-zinc-300 no-underline-anim">Hugo Cisneros</a>
+        </div><button type="button" onclick="toggleMenu()" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-6 h-6" aria-hidden="true" fill="currentcolor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul class="grid md:grid-flow-col items-center justify-between text-lg my-2.5 grid-cols-1 pl-0 text-center">
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 no-underline-anim transition-colors duration-150" href="/blog/">Blog</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none border-b-2 border-accent">
+              <a class="text-zinc-600 dark:text-zinc-300 no-underline-anim transition-colors duration-150 text-accent dark:text-accent-light font-medium" href="/notes/">Notes</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 no-underline-anim transition-colors duration-150" href="/projects/">Projects</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 no-underline-anim transition-colors duration-150" href="/resume/">Resume</a>
+            </li>
+            <li class="p-2.5 md:first:pl-0 md:border-none border-b dark:border-zinc-500 list-none">
+              <a class="text-zinc-600 dark:text-zinc-300 no-underline-anim transition-colors duration-150" href="/contact/">Contact</a>
+            </li>
+            <li class="h-7 pl-2.5 pr-0 list-none"><button type="button" onclick="toggleMode()" class="h-full" aria-label="Toggle between dark and light mode"><svg class="h-5 w-5 hidden dark:inline text-zinc-300 hover:text-accent-light transition-colors" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg><svg class="h-5 w-5 inline dark:hidden text-zinc-500 hover:text-accent transition-colors" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path></svg></button></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="content h-card container mt-2 m-auto leading-loose md:px-0 px-2 z-0" role="main">
+    <nav aria-label="Breadcrumb" class="breadcrumb text-sm text-gray-500 dark:text-gray-400 mb-4">
+      <ol class="flex flex-wrap items-center" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="flex items-center">
+          <a itemprop="item" href="https://hugocisneros.com/" class="border-none hover:text-gray-700 dark:hover:text-gray-200"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1"><span class="mx-2">/</span>
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="flex items-center">
+          <a itemprop="item" href="https://hugocisneros.com/notes/" class="border-none hover:text-gray-700 dark:hover:text-gray-200"><span itemprop="name">Notes</span></a>
+          <meta itemprop="position" content="2"><span class="mx-2">/</span>
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="flex items-center">
+          <span itemprop="name" class="text-gray-900 dark:text-gray-100 font-medium" aria-current="page">Notes on: Self-Distillation Enables Continual …</span>
+          <meta itemprop="item" content="https://hugocisneros.com/notes/shenfeldselfdistillationcontinual2026/">
+          <meta itemprop="position" content="3">
+        </li>
+      </ol>
+    </nav>
+    <article class="article h-entry" itemprop="mainEntity" itemscope itemtype="http://schema.org/BlogPosting">
+      <div class="note-page bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg mb-6 overflow-hidden">
+        <div class="p-5 sm:p-6">
+          <h1 class="text-xl sm:text-2xl font-semibold mb-4 p-name text-zinc-900 dark:text-zinc-100" itemprop="name">Self-Distillation Enables Continual Learning by Idan Shenfeld, Mehul Damani, Jonas Hübotter, Pulkit Agrawal (2026)</h1>
+          <div class="bg-amber-50 dark:bg-amber-950 border border-amber-200 dark:border-amber-800 rounded-md p-3 mb-4 text-sm text-amber-800 dark:text-amber-200">
+            This note was initially drafted with LLM assistance. Generated notes are periodically reviewed and revised by the author.
+          </div>
+          <div class="article-content e-content p-name prose dark:prose-invert max-w-none" itemprop="articleBody">
+            <dl>
+              <dt>tags</dt>
+              <dd>
+                <a href="/notes/continual_learning/">Continual learning</a>, <a href="/notes/catastrophic_forgetting/">Catastrophic forgetting</a>, <a href="/notes/distillation/">Distillation</a>, <a href="/notes/in_context_learning/">In-context learning</a>, <a href="/notes/llm/">Large language models</a>
+              </dd>
+              <dt>source</dt>
+              <dd>
+                (<a href="#shenfeldSelfDistillationContinual2026"><cite itemprop="citation" itemscope itemid="key:shenfeldSelfDistillationContinual2026">Shenfeld et al. 2026</cite></a>)
+              </dd>
+            </dl>
+            <h2 id="summary">Summary</h2>
+            <p>This paper introduces <strong>Self-Distillation Fine-Tuning (SDFT)</strong>, an on-policy alternative to <a href="/notes/supervised_fine_tuning/">supervised fine-tuning</a> (SFT) for <a href="/notes/continual_learning/">continual learning</a> from expert demonstrations. The motivation is a known asymmetry in post-training: on-policy <a href="/notes/reinforcement_learning/">reinforcement learning</a> reduces <a href="/notes/catastrophic_forgetting/">catastrophic forgetting</a> but requires explicit reward functions, while SFT works from cheap demonstrations but is inherently off-policy and tends to overwrite prior capabilities. SDFT closes this gap by exploiting the model’s own <a href="/notes/in_context_learning/">in-context learning</a> ability — the same <a href="/notes/llm/">LLM</a>, conditioned on a demonstration \(c\), acts as a <em>teacher</em> producing \(\pi(\cdot \mid x, c)\), while the unconditioned model acts as a <em>student</em> producing \(\pi_\theta(\cdot \mid x)\). Training samples responses on-policy from the student and minimizes the reverse KL divergence \(D_{\mathrm{KL}}(\pi_\theta(\cdot \mid x) \,\|\, \pi(\cdot \mid x, c))\), yielding token-level on-policy updates without any external reward.</p>
+            <p>A central theoretical contribution is the <strong>In-Context Assumption</strong>: a model conditioned on a demonstration approximates the unknown optimal post-update policy, \(\pi^*_{k+1}(y \mid x) \approx \pi(y \mid x, c)\). Under this assumption, SDFT is mathematically equivalent to on-policy RL with an implicit reward \(r(y, x, c) = \log \pi(y \mid x, c) - \log \pi(y \mid x)\) — placing the method in the <a href="/notes/reinforcement_learning/">inverse-reinforcement-learning</a> family but with the reward extracted by in-context conditioning rather than learned from preference data or trajectory classifiers. Empirical validation on ToolAlpaca shows the demonstration-aware teacher reaches 100% reward and stays roughly half as far in KL from the base policy as the SFT-trained model (0.68 vs 1.26 nats), satisfying both optimality and minimal-deviation conditions.</p>
+            <p>Across three skill-learning tasks (Tool Use, Science Q&amp;A, Medical reasoning) and a Knowledge Acquisition setting (Wikipedia articles on 2025 natural disasters, after the model’s knowledge cutoff), SDFT consistently dominates SFT on the new-task / prior-task Pareto frontier, beating CPT, SFT, SFT+Re-invoke, and offline distillation from the same teacher. In a sequential three-task experiment, SDFT accumulates Tool Use, Science Q&amp;A, and Medical skills without regression, while SFT exhibits oscillatory forgetting. Gains scale with model size (Qwen2.5 3B → 7B → 14B widens the gap from −3.3 to +6.9 points on Science Q&amp;A) and pass@k improves uniformly across \(k\) up to 128, ruling out entropy-collapse explanations. SDFT also enables training of reasoning models (Olmo-3-7B-Think) on answer-only datasets without collapsing chain-of-thought length — SFT degrades 31.2% → 23.5% on the medical task, SDFT improves to 43.7% while preserving response length.</p>
+            <h2 id="key-ideas">Key Ideas</h2>
+            <ul>
+              <li><strong>SDFT objective:</strong> sample \(y \sim \pi_\theta(\cdot \mid x)\), minimize reverse KL to the demonstration-conditioned teacher; teacher uses an EMA of student weights to stabilize training.</li>
+              <li><strong>In-Context Assumption:</strong> the demonstration-conditioned policy \(\pi(\cdot \mid x, c)\) approximates the unknown optimal next policy \(\pi^*_{k+1}\) — verified empirically on ToolAlpaca (100% teacher accuracy, half the KL-from-base of SFT).</li>
+              <li><strong>Implicit IRL:</strong> the SDFT gradient is mathematically equivalent to on-policy policy-gradient RL with reward \(r(y,x,c) = \log \pi(y \mid x, c) - \log \pi(y \mid x)\), no reward model required.</li>
+              <li><strong>Token-level signal:</strong> the loss decomposes per-token, providing dense credit assignment compared to trajectory-level RL methods like GRPO.</li>
+              <li><strong>Continual-learning result:</strong> on a sequential 3-task curriculum, a single SDFT model accumulates skills without performance regression on previously learned tasks; SFT shows severe forgetting.</li>
+              <li><strong>Knowledge acquisition:</strong> on Wikipedia articles after the cutoff, SDFT reaches 89% strict / 100% lenient / 98% OOD accuracy, nearly matching oracle-RAG and far exceeding SFT (80/95/80) and CPT (9/37/7).</li>
+              <li><strong>Scale matters:</strong> gap to SFT widens with model size, since stronger ICL gives a higher-quality teacher signal; 3B is too weak to be its own teacher.</li>
+              <li><strong>Reasoning preservation:</strong> SDFT preserves long chain-of-thought when training on answer-only data because the demonstration-conditioned teacher still generates reasoning; SFT collapses CoT to match the short targets.</li>
+              <li><strong>Pass@k uniformity:</strong> gains over base/SFT are flat in \(k\) up to 128 — SDFT acquires new skills rather than sharpening existing ones.</li>
+              <li><strong>Cost:</strong> ~2.5× FLOPs and ~4× wall-clock vs SFT due to on-policy generation, but eliminates the need for a follow-up restoration phase like Re-invoke.</li>
+              <li><strong>Failure mode:</strong> student can inherit teacher’s framing artifacts (“Based on the example…”); masking the loss over the first few tokens is an effective heuristic.</li>
+            </ul>
+            <h2 id="comments">Comments</h2>
+            <p>The conceptual contribution is more interesting than the algorithm. Framing in-context conditioning as a way to <em>extract a per-instance reward from a demonstration</em> is a clean unification of three previously separate ideas: <a href="/notes/in_context_learning/">in-context learning</a>, on-policy <a href="/notes/distillation/">distillation</a>, and inverse RL. It also explains why SFT forgets: SFT trains on off-policy targets that may be far from the base policy, while SDFT explicitly enforces minimal deviation through the trust-region structure inherited from the IRL derivation.</p>
+            <p>The relationship to <a href="/notes/hubotterreinforcementlearningselfdistillation2026/">Hübotter et al.’s SDPO</a> (RL via Self-Distillation) is striking — Shenfeld and Hübotter are coauthors here, and the two papers form a natural pair. SDPO uses <em>rich tokenized feedback</em> (e.g., runtime errors) as the conditioning signal \(c\) to extract a reward from a verifiable RL setting; SDFT uses <em>demonstrations</em> as the conditioning signal in a setting without rewards. Both reduce to on-policy reverse-KL distillation against a self-conditioned teacher. This suggests a more general “self-conditioned distillation” template where any auxiliary information that improves the model’s predictions can be turned into a training signal.</p>
+            <p>The knowledge-acquisition result is the most surprising finding. CPT (the classical recipe for ingesting new factual content) gets 9% strict accuracy; SDFT gets 89%, nearly matching oracle RAG. If this replicates, it would substantially change the post-training pipeline for keeping foundation models current — currently dominated by retrieval-augmentation precisely because parametric updates were thought to be inefficient.</p>
+            <p>The main caveat is the dependency on strong ICL: at 3B, SDFT underperforms SFT, so the approach is gated on serving large enough base models. Also, the “reasoning models without reasoning data” claim relies on the base model already producing CoT — SDFT preserves a behavior that already exists rather than inducing new behaviors.</p>
+            <h2 id="connections">Connections</h2>
+            <ul>
+              <li>Closely related to <a href="/notes/hubotterreinforcementlearningselfdistillation2026/">Reinforcement Learning via Self-Distillation (Hübotter et al. 2026)</a> — same author group (Shenfeld is a coauthor of both); SDPO is the RL/verifiable-reward analogue of SDFT.
+              </li>
+              <li>Related to <a href="/notes/zhangembarrassinglysimpleselfdistillation2026/">Embarrassingly Simple Self-Distillation (Zhang et al. 2026)</a> — another self-distillation approach, but offline, with no demonstration conditioning, and aimed at unlocking latent capability rather than continual learning.
+              </li>
+              <li>Related to <a href="/notes/bidermanloralearns2024/">LoRA Learns Less and Forgets Less (Biderman et al. 2024)</a> — alternative mitigation of forgetting via parameter-efficient updates; SDFT shows on-policy distribution alignment is a complementary mechanism.
+              </li>
+              <li>Related to <a href="/notes/hudrinkingfirehosecontinual2020/">Drinking from a Firehose (Hu et al. 2020)</a> — earlier large-scale continual-learning study in a different regime.
+              </li>
+              <li>Builds on the framework of <a href="/notes/reinforcement_learning_with_verifiable_rewards/">reinforcement learning with verifiable rewards</a> by removing the verifiability requirement; orthogonal to <a href="/notes/reinforcement_learning_with_human_feedback/">RLHF</a> which uses preference data to learn the reward.
+              </li>
+            </ul>
+            <h2 id="bibliography">Bibliography</h2>
+            <ol class="biblio-list pl-0">
+              <li class="list-none my-4 mx-2"><span itemprop="citation" itemscope itemtype="https://schema.org/ScholarlyArticle" id="shenfeldSelfDistillationContinual2026"><span itemprop="author">Idan Shenfeld, Mehul Damani, Jonas Hübotter, Pulkit Agrawal</span>. <time datetime="2026" itemprop="datePublished">January 27, 2026</time>. "<span itemprop="name">Self-Distillation Enables Continual Learning</span>". <a itemprop="sameAs" href="https://arxiv.org/abs/2601.19897">https://arxiv.org/abs/2601.19897</a>.</span></li>
+            </ol>
+          </div>
+        </div>
+        <div class="border-t border-zinc-200 dark:border-zinc-600 px-5 sm:px-6 py-3 text-sm text-zinc-500 dark:text-zinc-400 text-center" style="font-variant-caps:all-small-caps">
+          Last changed <a class="u-url" href="https://hugocisneros.com/notes/shenfeldselfdistillationcontinual2026/"><time itemprop="datePublished" class="dt-published" datetime="2026-04-26T13:50:00+0200">2026.04.26</time></a> | authored by <a href="https://hugocisneros.com/" rel="author" class="p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Hugo Cisneros</span></a>
+        </div>
+      </div>
+    </article>
+    <section id="comments-container" class="comments-section" data-slug="/notes/shenfeldselfdistillationcontinual2026"></section>
+    <h3>Comments</h3>
+    <div id="comments-list" class="comments-list">
+      <p id="comments-loading" class="comments-loading">Loading comments...</p>
+    </div>
+    <p id="comments-error" class="comments-error" style="display:none"></p>
+    <form id="comment-form" class="comment-form" name="comment-form">
+      <h4>Leave a comment</h4>
+      <div class="form-group">
+        <label for="comment-name">Name <span class="required">*</span></label> <input type="text" id="comment-name" name="name" required="" maxlength="100" placeholder="Your name">
+      </div>
+      <div class="form-group">
+        <label for="comment-email">Email <span class="optional">(optional, not displayed)</span></label> <input type="email" id="comment-email" name="email" maxlength="254" placeholder="your@email.com">
+      </div>
+      <div class="form-group">
+        <label for="comment-content">Comment <span class="required">*</span></label> 
+        <textarea id="comment-content" name="content" required="" maxlength="10000" rows="4" placeholder="Write your comment..."></textarea>
+      </div>
+      <div id="turnstile-container" class="turnstile-container"></div><input type="hidden" id="turnstile-token" name="turnstile_token">
+      <p id="form-error" class="form-error" style="display:none"></p>
+      <p id="form-success" class="form-success" style="display:none"></p><button type="submit" class="comment-submit-btn">Post Comment</button>
+    </form>
+    <script src="/js/comments.js" defer></script> <a href="/notes#shenfeldselfdistillationcontinual2026" class="inline-flex items-center gap-2 mt-4 px-4 py-2 text-sm font-medium text-inherit bg-white dark:bg-zinc-700 border border-zinc-200 dark:border-zinc-600 rounded-lg hover:border-zinc-400 dark:hover:border-zinc-500 hover:shadow-md transition-all duration-150"><svg class="inline-block" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path></svg>Back to Notes</a>
+  </main>
+  <footer class="footer container text-center mt-1 py-6">
+    <hr class="my-4">
+    <div class="flex items-center justify-center gap-4 mb-3">
+      <a href="https://github.com/hugcis" class="text-zinc-500 dark:text-zinc-400 hover:text-accent dark:hover:text-accent-light no-underline-anim" aria-label="GitHub" title="GitHub"><svg class="w-5 h-5" viewbox="0 0 24 24" fill="currentcolor">
+      <path d="M12 0C5.37.0.0 5.37.0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57.0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925.0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18.0.0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225.0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22.0 1.605-.015 2.895-.015 3.3.0.315.225.69.825.57A12.02 12.02.0 0024 12c0-6.63-5.37-12-12-12z"></path></svg></a><a href="https://scholar.google.com/citations?user=_uSIl-0AAAAJ&amp;hl=en" class="text-zinc-500 dark:text-zinc-400 hover:text-accent dark:hover:text-accent-light no-underline-anim" aria-label="Google Scholar" title="Google Scholar"><svg class="w-5 h-5" viewbox="0 0 24 24" fill="currentcolor">
+      <path d="M5.242 13.769.0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977.0-5.548 1.748-6.758 4.269zM12 10a7 7 0 100 14 7 7 0 000-14z"></path></svg></a><a href="https://scholar.social/@hugcis" rel="me" class="text-zinc-500 dark:text-zinc-400 hover:text-accent dark:hover:text-accent-light no-underline-anim" aria-label="Mastodon" title="Mastodon"><svg class="w-5 h-5" viewbox="0 0 24 24" fill="currentcolor">
+      <path d="M23.268 5.313c-.35-2.578-2.617-4.61-5.304-5.004C17.51.242 15.792.0 11.813.0h-.03c-3.98.0-4.835.242-5.288.309C3.882.692 1.496 2.518.917 5.127.64 6.412.61 7.837.661 9.143c.074 1.874.088 3.745.26 5.611.118 1.24.325 2.47.62 3.68.55 2.237 2.777 4.098 4.96 4.857 2.336.792 4.849.923 7.256.38.265-.061.527-.132.786-.213.585-.184 1.27-.39 1.774-.753a.057.057.0 00.023-.043v-1.809a.052.052.0 00-.02-.041.053.053.0 00-.046-.01 20.282 20.282.0 01-4.709.545c-2.73.0-3.463-1.284-3.674-1.818a5.593 5.593.0 01-.319-1.433.053.053.0 01.066-.054 19.648 19.648.0 004.581.536c.394.0.787.0 1.183-.014 2.136-.064 4.411-.132 6.426-.78a.077.077.0 00.055-.032c.803-1.267 1.074-3.06 1.08-4.634a18.22 18.22.0 00-.021-.57zM19.5 9.412v5.493h-2.178V9.607c0-1.148-.466-1.735-1.443-1.735-1.065.0-1.596.691-1.596 2.06v2.922H12.12V9.932c0-1.37-.532-2.06-1.597-2.06-.977.0-1.443.587-1.443 1.735v5.298H6.9V9.412c0-1.147.29-2.06.876-2.736.603-.676 1.392-1.022 2.375-1.022 1.137.0 1.997.432 2.567 1.297L12 8.078l1.282-1.127c.57-.865 1.431-1.297 2.567-1.297.983.0 1.773.346 2.375 1.022.585.676.876 1.589.876 2.736z"></path></svg></a>
+    </div>
+    <ul class="pl-0 mt-1">
+      <li class="first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="rss-link inline-block text-neutral-800 dark:text-neutral-400 no-underline-anim" href="https://hugocisneros.com/blog/index.xml" type="application/rss+xml" target="_blank">Blog <img class="rss-icon w-4 inline-block" src="https://hugocisneros.com/img/RSS.svg" alt="RSS feed icon" width="16" height="16"></a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] inline-block list-none">
+        <a class="ml-2 text-neutral-800 dark:text-neutral-400 no-underline-anim" href="https://github.com/hugcis/hugo-astatine-theme">Code</a>
+      </li>
+      <li class="ml-2 first:before:content-none before:content-['•'] text-neutral-800 dark:text-neutral-400 inline-block list-none"><span class="ml-2">© Hugo Cisneros 2026</span></li>
+    </ul>
+  </footer>
+  <link rel="stylesheet" href="/js/katex/katex.min.css">
+  <script src="/js/katex/katex.min.js"></script> 
+  <script src="/js/katex/contrib/auto-render.min.js"></script> 
+  <script>
+  document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"\\[",right:"\\]",display:!0},{left:"\\begin{align}",right:"\\end{align}",display:!0},{left:"$$",right:"$$",display:!0},{left:"\\begin{equation}",right:"\\end{equation}",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1}]})})
+  </script>
+  <script data-goatcounter="https://stats.hugocisneros.com/count" async src="//stats.hugocisneros.com/count.js"></script>
+</body>
+</html>
